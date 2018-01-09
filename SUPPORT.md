@@ -1,7 +1,3 @@
-# Kendo UI for React
-
-Kendo UI for React uses GitHub Issues as a bug tracker. This repository is here for that purpose&mdash;it does not contain the actual components source code.
-
 ## How do I&hellip;?
 
 1. Check out the [**Components** &nearr;](http://www.telerik.com/kendo-react-ui/components/)or the [**FAQ** &nearr;](http://www.telerik.com/kendo-react-ui/components/faq/) and [**Troubleshooting** &nearr;](http://www.telerik.com/kendo-react-ui/components/troubleshooting/) pages.
