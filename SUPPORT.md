@@ -19,14 +19,14 @@
 
 1. Find an example in [the documentation](http://www.telerik.com/kendo-react-ui/components/) that looks similar to your case.
 1. Open it in StackBlitz by using the **OPEN IN STACKBLITZ** button.
-1. Fork the project by using the blue **FORK** button at the top.
+1. Fork the project by using the **FORK** button at the top.
 1. Modify the project, so that the issue is reproducible in it. Try to include the minimum possible amount of code.
-1. Save the project by using the blue Save button at the top.
+1. Save the project by using the **SAVE** button at the top.
 1. Copy the link from the address bar of the browser.
 1. [Open a new issue](https://github.com/telerik/kendo-react/issues/new) and add the StackBlitz link in the description.
 1. Provide any additional information necessary for us to reproduce the problem such as browser version, steps to perform, etc.
 
-We might not be able to act on issues **without a runnable demo**.
+> We might not be able to act on issues without a runnable demo.
 
 If you need assistance on troubleshooting or isolating a problem, you can request a remote assistance session through our [Support Ticket](https://www.telerik.com/account/support-tickets) system. Remote Assistance is included in the [DevCraft Ultimate](http://www.telerik.com/purchase/kendo-ui) subscription.
 
