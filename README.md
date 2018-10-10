@@ -1,11 +1,11 @@
-# Kendo UI for React
+# KendoReact
 
-Kendo UI for React uses GitHub Issues as a bug tracker. This repository is here for that purpose&mdash;it does not contain the actual components source code.
+KendoReact uses GitHub Issues as a bug tracker. This repository is here for that purpose&mdash;it does not contain the actual components source code.
 
 ## How do I&hellip;?
 
 1. Check out the [**Components** &nearr;](http://www.telerik.com/kendo-react-ui/components/)or the [**FAQ** &nearr;](http://www.telerik.com/kendo-react-ui/components/faq/) and [**Troubleshooting** &nearr;](http://www.telerik.com/kendo-react-ui/components/troubleshooting/) pages.
-1. Browse the [kendo-ui-react &nearr;](http://stackoverflow.com/questions/tagged/kendo-ui-react) questions on Stack Overflow. If you haven't found what you are looking for there, pose a question for the Stack Overflow community to follow or answer.
+1. Browse the [kendo-react-ui &nearr;](http://stackoverflow.com/questions/tagged/kendo-react-ui) questions on Stack Overflow. If you haven't found what you are looking for there, pose a question for the Stack Overflow community to follow or answer.
 1. Use our official support channel and [submit a support ticket &nearr;](https://www.telerik.com/account/support-tickets).
 
 ## When do you plan on releasing Feature X?
@@ -38,4 +38,4 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 Our aim is to provide the most versatile and proven set of application building blocks. Still, there is some assembly required depending on the desired functionality.
 
-The [Progress Services](https://www.progress.com/services) team is available to assist in building functional blocks or complete applications according to your specification. They will help you make the best out of Kendo UI while freeing you to work on the real business problems.
+The [Progress Services](https://www.progress.com/services) team is available to assist in building functional blocks or complete applications according to your specification. They will help you make the best out of KendoReact while freeing you to work on the real business problems.
