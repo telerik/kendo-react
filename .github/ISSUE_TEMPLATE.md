@@ -6,7 +6,7 @@
 ## I'm submitting a...
 <!--
   Please submit:
-  * Feature requests to our UserVoice Portal at https://goo.gl/HsVr7R.
+  * Feature requests to our Feedback Portal at https://feedback.telerik.com/kendo-react-ui.
   * Support requests to https://www.telerik.com/account/support-tickets.
 -->
 
@@ -27,12 +27,12 @@
 
 ## Minimal reproduction of the problem with instructions
 <!--
-For bug reports, please provide the **STEPS TO REPRODUCE** and, if possible, a **MINIMAL DEMO** of the issue. You can use https://plnkr.co or share your project in a public repository.
+For bug reports, please provide the **STEPS TO REPRODUCE** and, if possible, a **MINIMAL DEMO** of the issue. You can use https://stackblitz.com or share your project in a public repository.
 
-  1. Find an example in [the documentation](http://www.telerik.com/kendo-angular-ui/components/) that looks similar to your case.
-  2. Open it in Plunker by using the **OPEN AS PLUNKER** button.
-  3. Modify the plunk, so that the issue is reproducible in it. Try to include the minimum possible amount of code.
-  4. Save the plunk by using the blue **Save** button at the top.
+  1. Find an example in [the documentation](http://www.telerik.com/kendo-react-ui/components/) that looks similar to your case.
+  2. Open it in Stackblitz by using the **OPEN IN STACKBLITZ** button.
+  3. Modify the example, so that the issue is reproducible in it. Try to include the minimum possible amount of code.
+  4. Save the example by using the blue **Save** button at the top.
   5. Copy the link from the address bar of the browser.
 -->
 
