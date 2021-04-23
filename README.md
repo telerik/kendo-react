@@ -732,15 +732,6 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 ## Sample Applications
 
-### Financial Portfolio Application
-
-The [React Finance Portfolio Application](https://www.telerik.com/kendo-react-ui/components/sample-applications/finance-application/) shows how to create fast, beautiful and dynamic financial dashboards. It takes full advantage of React's fast rendering and shows dynamic data updates in real time which allows monitoring data with no visible delay.
-
-* [Live demo](https://telerik.github.io/kendo-react-finance-portfolio)
-* [Source code](https://github.com/telerik/kendo-react-finance-portfolio/)
-
-![Financial portfolio sample](images/financial-portfolio.png)
-
 ### React Dashboard Application
 
 We created the [React Dashboard Application](https://www.telerik.com/kendo-react-ui/components/sample-applications/react-coffee-warehouse-dashboard/) following the best practices of building with KendoReact components, which makes it a fantastic learning resource. You can see how easy it is to set up complex components such as the Data Grid (Table), Charts, Scheduler or Forms.
@@ -749,6 +740,15 @@ We created the [React Dashboard Application](https://www.telerik.com/kendo-react
 * [Source code](https://github.com/telerik/react-coffee-warehouse)
 
 ![Coffee warehouse sample](images/coffee-warehouse.png)
+
+### Financial Portfolio Application
+
+The [React Finance Portfolio Application](https://www.telerik.com/kendo-react-ui/components/sample-applications/finance-application/) shows how to create fast, beautiful and dynamic financial dashboards. It takes full advantage of React's fast rendering and shows dynamic data updates in real time which allows monitoring data with no visible delay.
+
+* [Live demo](https://telerik.github.io/kendo-react-finance-portfolio)
+* [Source code](https://github.com/telerik/kendo-react-finance-portfolio/)
+
+![Financial portfolio sample](images/financial-portfolio.png)
 
 ### GitHub Issues Grid
 
@@ -765,8 +765,8 @@ The [React GitHub Issues Application](https://www.telerik.com/kendo-react-ui/com
 * [Changelog](https://www.telerik.com/kendo-react-ui/components/changelogs/ui-for-react/) — A full list of what’s changed in KendoReact releases.
 * [Resources hub](https://www.telerik.com/kendo-react-ui/resources/) — A helpful list of KendoReact tutorials, blogs, videos, and more.
 * [Support hub](https://www.telerik.com/kendo-react-ui/support/) — Technical resources and how-to articles.
-* [Virtual Classroom](https://www.telerik.com/support/virtual-classroom) — On-demand technical training, free with a trial or license.
-* [Pricing](https://www.telerik.com/purchase.aspx) — Learn more about what you get with a KendoReact license.
+* [Virtual Classroom](https://learn.telerik.com/learn/course/external/view/elearning/14/kendoreact) — On-demand technical training, free with a trial or license.
+* [Pricing](https://www.telerik.com/kendo-react-ui/pricing/) — Learn more about what you get with a KendoReact license.
 * [React Wednesdays](https://www.telerik.com/react-wednesdays) — A weekly chat show with the best and brightest from the React world, hosted by KendoReact Developer Advocate TJ VanToll.
 
 ## Licensing
