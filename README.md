@@ -8,7 +8,7 @@
 
 ***
 
-[![Try Kendo UI](images/banner.png)](https://www.telerik.com/kendo-react-ui/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme&utm_content=banner)
+[![Try KendoReact](images/banner.png)](https://www.telerik.com/kendo-react-ui/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme&utm_content=banner)
 
 ## Table of Contents
 
@@ -16,7 +16,7 @@
   * [Where can I find help?](#where-can-i-find-help)
   * [How do I report a bug?](#how-do-i-report-a-bug)
   * [When do you plan to release feature X?](#when-do-you-plan-to-release-feature-x)
-* [React Components](#react-components)
+* [React UI Components](#react-ui-components)
 * [Sample Applications](#sample-applications)
   * [Financial Portfolio](#financial-portfolio)
   * [Coffee Warehouse Dashboard](#coffee-warehouse-dashboard)
@@ -46,14 +46,14 @@ If want to bug a bug with KendoReact, please start by reviewing [this repo’s i
 
 > We might not be able to act on issues without a runnable demo.
 
-If you need assistance on troubleshooting or isolating a problem, you can request a remote assistance session through our [Support Ticket](https://www.telerik.com/account/support-tickets) system. Remote Assistance is included in our [DevCraft Ultimate](http://www.telerik.com/purchase/kendo-ui) subscription.
+If you need assistance on troubleshooting or isolating a problem, you can request a remote assistance session through our [Support Ticket](https://www.telerik.com/account/support-tickets) system. Remote Assistance is included in our [DevCraft Ultimate](http://www.telerik.com/purchase/kendo-ui?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) subscription.
 
 ### When do you plan to release feature X?
 
 1. Check the [KendoReact Roadmap](http://www.telerik.com/kendo-react-ui/roadmap/) to see a list of features we have planned.
 1. If your feature isn’t listed there, [check our feedback portal](http://kendoui-feedback.telerik.com/forums/555517-kendo-ui-for-react-feedback). If you don’t see your feature on our portal, you can request the feature there.
 
-## React Components
+## React UI Components
 
 ### Animations
 
@@ -84,12 +84,12 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 </tr>
 <tr>
   <td><b>Chip</b></td>
-  <td>--</td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/chip/">React Chip Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/buttons/chip/">Documentation & Demos</td>
 </tr>
 <tr>
   <td><b>ChipList</b></td>
-  <td>--</td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/chiplist/">React ChipList Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/buttons/chiplist/">Documentation & Demos</td>
 </tr>
 <tr>
@@ -99,7 +99,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 </tr>
 <tr>
   <td><b>FloatingActionButton</b></td>
-  <td>--</td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/floatingactionbutton/">React Floating Action Button Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/buttons/floatingactionbutton/">Documentation & Demos</td>
 </tr>
 <tr>
@@ -277,12 +277,12 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 </tr>
 <tr>
   <td><b>DropDownTree</b></td>
-  <td>--</td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/dropdowntree/">React DropDownTree Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/dropdowns/dropdowntree/">Documentation & Demos</td>
 </tr>
 <tr>
   <td><b>MultiColumnComboBox</b></td>
-  <td>--</td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/multicolumncombobox/">React MultiColumn ComboBox Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/dropdowns/multicolumncombobox/">Documentation & Demos</td>
 </tr>
 <tr>
@@ -347,7 +347,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 <table><tbody>
 <tr>
   <td><b>Gantt</b></td>
-  <td>--</td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/gantt-chart/">React Gantt Chart Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/gantt/">Documentation & Demos</td>
 </tr>
 </tbody></table>
@@ -393,12 +393,12 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 <table><tbody>
 <tr>
   <td><b>Badge</b></td>
-  <td>--</td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/badge/">React Badge Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/indicators/badge/">Documentation & Demos</td>
 </tr>
 <tr>
   <td><b>Loader</b></td>
-  <td>--</td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/loader/">React Loader Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/indicators/loader/">Documentation & Demos</td>
 </tr>
 </tbody></table>
@@ -460,7 +460,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 </tr>
 <tr>
   <td><b>Rating</b></td>
-  <td>--</td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/rating/">React Rating Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/inputs/rating/">Documentation & Demos</td>
 </tr>
 <tr>
@@ -475,7 +475,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 </tr>
 <tr>
   <td><b>TextArea</b></td>
-  <td>--</td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/textarea/">React TextArea Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/inputs/textarea/">Documentation & Demos</td>
 </tr>
 </tbody></table>
@@ -514,7 +514,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 <table><tbody>
 <tr>
   <td><b>AppBar</b></td>
-  <td>--</td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/appbar/">React AppBar Features</a>-</td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/layout/appbar/">Documentation & Demos</td>
 </tr>
 <tr>
@@ -524,7 +524,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 </tr>
 <tr>
   <td><b>BottomNavigation</b></td>
-  <td>--</td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/bottomnavigation/">React Bottom Navigation Features</a>-</td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/layout/bottomnavigation/">Documentation & Demos</td>
 </tr>
 <tr>
@@ -564,7 +564,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 </tr>
 <tr>
   <td><b>TileLayout</b></td>
-  <td>--</td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/tilelayout/">React TileLayout Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/layout/tilelayout/">Documentation & Demos</td>
 </tr>
 </tbody></table>
@@ -576,7 +576,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 <table><tbody>
 <tr>
   <td><b>ListBox</b></td>
-  <td>--</td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/listbox/">React ListBox Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/listbox/">Documentation & Demos</td>
 </tr>
 </tbody></table>
@@ -730,11 +730,50 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 </tr>
 </tbody></table>
 
+## Design-to-Development Support
+
+### 3 Design Themes
+
+<table><tbody>
+<tr>
+  <td><b>KendoReact Default Theme</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/styling/theme-default/">KendoReact Default Theme</a></td>
+</tr>
+<tr>
+  <td><b>KendoReact Material Theme</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/styling/theme-material/">KendoReact Material Theme</a></td>
+</tr>
+<tr>
+  <td><b>KendoReact Bootstrap Theme</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/styling/theme-bootstrap/">KendoReact Bootstrap Theme</a></td>
+</tr>
+</tbody></table>
+
+### Design Kits
+
+<table><tbody>
+<tr>
+  <td><b>3 Kendo UI Design Kits for Figma</b></td>
+   <td><a href="https://www.telerik.com/kendo-react-ui/figma-design-kits/">Kendo UI Figma Design Kits</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/styling/figma-ui-kits/">Documentation</td>
+</tr>
+</tbody></table>
+
+### Customize the KendoReact Themes to Match Your Brand
+
+<table><tbody>
+<tr>
+  <td><b>KendoReact ThemeBuilder</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/themebuilder-brand-colors/">Apply Your Brand Colors</a></td>
+  <td><a href="https://themebuilder.telerik.com/kendo-react-ui">KendoReact ThemeBuilder App</a></td>
+</tr>
+</tbody></table>
+
 ## Sample Applications
 
 ### React Dashboard Application
 
-We created the [React Dashboard Application](https://www.telerik.com/kendo-react-ui/components/sample-applications/react-coffee-warehouse-dashboard/) following the best practices of building with KendoReact components, which makes it a fantastic learning resource. You can see how easy it is to set up complex components such as the Data Grid (Table), Charts, Scheduler or Forms.
+We created the [React Dashboard Application](https://www.telerik.com/kendo-react-ui/components/sample-applications/react-coffee-warehouse-dashboard/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) following the best practices of building UI with KendoReact components, which makes it a fantastic learning resource. You can see how easy it is to set up complex components such as the Data Grid (Table), Charts, Scheduler or Forms.
 
 * [Live demo](https://telerik.github.io/react-coffee-warehouse)
 * [Source code](https://github.com/telerik/react-coffee-warehouse)
@@ -743,7 +782,7 @@ We created the [React Dashboard Application](https://www.telerik.com/kendo-react
 
 ### Financial Portfolio Application
 
-The [React Finance Portfolio Application](https://www.telerik.com/kendo-react-ui/components/sample-applications/finance-application/) shows how to create fast, beautiful and dynamic financial dashboards. It takes full advantage of React's fast rendering and shows dynamic data updates in real time which allows monitoring data with no visible delay.
+The [React Financial Portfolio Application](https://www.telerik.com/kendo-react-ui/components/sample-applications/finance-application/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) shows how to create fast, beautiful and dynamic financial dashboards. It takes full advantage of React's fast rendering and shows dynamic data updates in real time which allows monitoring data with no visible delay.
 
 * [Live demo](https://telerik.github.io/kendo-react-finance-portfolio)
 * [Source code](https://github.com/telerik/kendo-react-finance-portfolio/)
@@ -752,7 +791,7 @@ The [React Finance Portfolio Application](https://www.telerik.com/kendo-react-ui
 
 ### GitHub Issues Grid
 
-The [React GitHub Issues Application](https://www.telerik.com/kendo-react-ui/components/sample-applications/issues-grid/) shows off how to use a KendoReact Grid to manage a large data set—in this case, all issues in the main Facebook React and GraphQL repositories.
+The [React GitHub Issues Application](https://www.telerik.com/kendo-react-ui/components/sample-applications/issues-grid/) shows off how to use a KendoReact Data Grid to manage a large data set—in this case, all issues in the main Facebook React and GraphQL repositories.
 
 * [Live demo](https://telerik.github.io/kendo-react-homepage-demo/)
 * [Source code](https://github.com/telerik/kendo-react-homepage-demo)
@@ -761,18 +800,17 @@ The [React GitHub Issues Application](https://www.telerik.com/kendo-react-ui/com
 
 ## Useful Links
 
-* [Roadmap](https://www.telerik.com/kendo-react-ui/roadmap/) — See what’s coming to KendoReact.
-* [Changelog](https://www.telerik.com/kendo-react-ui/components/changelogs/ui-for-react/) — A full list of what’s changed in KendoReact releases.
-* [Resources hub](https://www.telerik.com/kendo-react-ui/resources/) — A helpful list of KendoReact tutorials, blogs, videos, and more.
-* [Support hub](https://www.telerik.com/kendo-react-ui/support/) — Technical resources and how-to articles.
-* [Virtual Classroom](https://learn.telerik.com/learn/course/external/view/elearning/14/kendoreact) — On-demand technical training, free with a trial or license.
-* [Pricing](https://www.telerik.com/kendo-react-ui/pricing/) — Learn more about what you get with a KendoReact license.
-* [React Wednesdays](https://www.telerik.com/react-wednesdays) — A weekly chat show with the best and brightest from the React world, hosted by KendoReact Developer Advocate TJ VanToll.
+* [Roadmap](https://www.telerik.com/kendo-react-ui/roadmap/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) — See what’s coming to KendoReact.
+* [Changelog](https://www.telerik.com/kendo-react-ui/components/changelogs/ui-for-react/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) — A full list of what’s changed in KendoReact releases.
+* [React Resources hub](https://www.telerik.com/kendo-react-ui/resources/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) — A helpful list of KendoReact tutorials, blogs, videos, and more.
+* [Support hub](https://www.telerik.com/kendo-react-ui/support/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) — Technical resources and how-to articles.
+* [Virtual Classroom](https://learn.telerik.com/learn/course/external/view/elearning/14/kendoreact?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) — On-demand technical training, free with a trial or license.
+* [Pricing](https://www.telerik.com/kendo-react-ui/pricing/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) — Learn more about what you get with a KendoReact license.
+* [React Blogs](https://www.telerik.com/blogs/tag/react?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) — Explore many helpful expert-written blogs and tutorials on everything React, including KendoReact-specific guides.
+* [React Wednesdays](https://www.telerik.com/react-wednesdays?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) — A weekly chat show with the best and brightest from the React world, hosted by TJ VanToll.
 
 ## Licensing
 
-KendoReact is a commercial UI library. You will need to install a license key when adding the package to your project. For more information, please refer to the [KendoReact My License page](https://www.telerik.com/kendo-react-ui/my-license/).
+KendoReact is a commercial UI library. You will need to install a license key when adding the package to your project. To receive a license key, you need to either purchase a license or register for a free trial. Doing so indicates that you accept the KendoReact License Agreement. For more information, please refer to the [KendoReact My License page](https://www.telerik.com/kendo-react-ui/my-license/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme).
 
-To receive a license key, you need to either purchase a license or register for a free trial. Doing so indicates that you accept the KendoReact License Agreement.
-
-The 30-day free trial gives you access to all the KendoReact components and their full functionality. Additionally, for the period of your license, you get access to our legendary technical support provided directly by the KendoReact dev team!
+The 30-day free trial gives you access to all KendoReact components and their full functionality. Additionally, for the period of your license, you get access to our legendary technical support provided directly by the KendoReact dev team!
