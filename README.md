@@ -515,7 +515,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 <table><tbody>
 <tr>
   <td><b>AppBar</b></td>
-  <td><a href="https://www.telerik.com/kendo-react-ui/appbar/">React AppBar Features</a>-</td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/appbar/">React AppBar Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/layout/appbar/">Documentation & Demos</td>
 </tr>
 <tr>
@@ -525,7 +525,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 </tr>
 <tr>
   <td><b>BottomNavigation</b></td>
-  <td><a href="https://www.telerik.com/kendo-react-ui/bottomnavigation/">React Bottom Navigation Features</a>-</td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/bottomnavigation/">React Bottom Navigation Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/layout/bottomnavigation/">Documentation & Demos</td>
 </tr>
 <tr>
