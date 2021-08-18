@@ -17,6 +17,7 @@
   * [How do I report a bug?](#how-do-i-report-a-bug)
   * [When do you plan to release feature X?](#when-do-you-plan-to-release-feature-x)
 * [React UI Components](#react-ui-components)
+* [Design-to-Development Support](#design-to-development-support)
 * [Sample Applications](#sample-applications)
   * [Financial Portfolio](#financial-portfolio)
   * [Coffee Warehouse Dashboard](#coffee-warehouse-dashboard)
