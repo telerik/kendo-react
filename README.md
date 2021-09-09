@@ -51,7 +51,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 ### When do you plan to release feature X?
 
-1. Check the [KendoReact Roadmap](http://www.telerik.com/kendo-react-ui/roadmap/) to see a list of features we have planned.
+1. Check the [KendoReact Roadmap](https://www.telerik.com/support/whats-new/kendo-react-ui/roadmap/) to see a list of features we have planned.
 1. If your feature isn’t listed there, [check our feedback portal](http://kendoui-feedback.telerik.com/forums/555517-kendo-ui-for-react-feedback). If you don’t see your feature on our portal, you can request the feature there.
 
 ## React UI Components
@@ -801,7 +801,7 @@ The [React GitHub Issues Application](https://www.telerik.com/kendo-react-ui/com
 
 ## Useful Links
 
-* [Roadmap](https://www.telerik.com/kendo-react-ui/roadmap/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) — See what’s coming to KendoReact.
+* [Roadmap](https://www.telerik.com/support/whats-new/kendo-react-ui/roadmap/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) — See what’s coming to KendoReact.
 * [Changelog](https://www.telerik.com/kendo-react-ui/components/changelogs/ui-for-react/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) — A full list of what’s changed in KendoReact releases.
 * [React Resources hub](https://www.telerik.com/kendo-react-ui/resources/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) — A helpful list of KendoReact tutorials, blogs, videos, and more.
 * [Support hub](https://www.telerik.com/kendo-react-ui/support/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) — Technical resources and how-to articles.

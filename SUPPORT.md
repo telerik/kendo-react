@@ -6,7 +6,7 @@
 
 ## When do you plan on releasing Feature X?
 
-1. Check the [Roadmap](http://www.telerik.com/kendo-react-ui/roadmap/) for the planned items.
+1. Check the [Roadmap](https://www.telerik.com/support/whats-new/kendo-react-ui/roadmap/) for the planned items.
 1. If the item you need is not present there, [check our feedback portal](http://kendoui-feedback.telerik.com/forums/555517-kendo-ui-for-react-feedback). If someone has already posted it there, you can upvote it. If nobody has requested it so far, you can post a new idea.
 
 ## I think I found a bug
