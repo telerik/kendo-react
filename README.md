@@ -881,6 +881,8 @@ The [React File Manager Application](https://www.telerik.com/kendo-react-ui/comp
 * [Live demo](https://telerik.github.io/kendo-react-file-manager)
 * [Source code](https://github.com/telerik/kendo-react-file-manager)
 
+![React FileManager Template App](images/React-FileManager-Template-App.png)
+
 ### GitHub Issues Grid
 
 The [React GitHub Issues Application](https://www.telerik.com/kendo-react-ui/components/sample-applications/issues-grid/) shows off how to use a KendoReact Data Grid to manage a large data set—in this case, all issues in the main Facebook React and GraphQL repositories.
