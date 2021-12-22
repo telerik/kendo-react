@@ -120,15 +120,37 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 ![](https://img.shields.io/npm/v/@progress/kendo-react-charts)
 
 <table><tbody>
-<tr>
+ <tr>
   <td><b>Chart</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/charts/">React Chart Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/">Documentation & Demos</td>
 </tr>
 <tr>
+  <td><b>Heatmap</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/heatmap/">React Heatmap Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/heatmap/">Documentation & Demos</td>
+</tr>
+ <tr>
   <td><b>Sparkline</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/sparkline/">React Sparkline Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/sparkline/">Documentation & Demos</td>
+</tr>
+</tbody></table>
+
+### Common Utilities
+
+![](https://img.shields.io/npm/v/@progress/kendo-react-conversational-ui)
+
+<table><tbody>
+<tr>
+  <td><b>Typography</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/typography/">React Typography Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/utils/typography/">Documentation & Demos</td>
+</tr>
+ <tr>
+  <td><b>Icon & SVG Icon</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/icon-svgicon/">React Icon & SVG Icon Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/utils/icon/">Documentation & Demos</td>
 </tr>
 </tbody></table>
 
@@ -141,6 +163,18 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
   <td><b>Conversational UI</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/conversationalui/">React Conversational UI Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/conversationalui/">Documentation & Demos</td>
+</tr>
+</tbody></table>
+
+### Data Grid
+
+![](https://img.shields.io/npm/v/@progress/kendo-react-grid)
+
+<table><tbody>
+<tr>
+  <td><b>Data Grid</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/grid/">React Data Grid Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/grid/">Documentation & Demos</td>
 </tr>
 </tbody></table>
 
@@ -250,8 +284,8 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>Drawing</b></td>
-  <td><a href="https://www.telerik.com/kendo-react-ui/drawing/">React Drawing Features</a></td>
+  <td><b>Drawing Library</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/drawing/">React Drawing Library Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/drawing/">Documentation & Demos</td>
 </tr>
 </tbody></table>
@@ -290,6 +324,11 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
   <td><b>MultiSelect</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/multiselect/">React MultiSelect Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/dropdowns/multiselect/">Documentation & Demos</td>
+</tr>
+ <tr>
+  <td><b>MultiSelect Tree</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/multiselecttree/">React MultiSelect Tree Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/dropdowns/multiselecttree/">Documentation & Demos</td>
 </tr>
 </tbody></table>
 
@@ -339,6 +378,21 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
   <td><a href="https://www.telerik.com/kendo-react-ui/form/">React Form Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/form/">Documentation & Demos</td>
 </tr>
+ <tr>
+  <td><b>FieldArray</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/FieldArray/">React FieldArray Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/form/validation/#toc-fieldarray-validation">Documentation & Demos</td>
+</tr>
+ <tr>
+  <td><b>FieldWrapper</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/FieldWrapper/">React FieldWrapper Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/form/api/FieldWrapper/">Documentation & Demos</td>
+</tr>
+ <tr>
+  <td><b>FormElement</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/form/formelement/">React FormElement Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/form/api/FormElement/">Documentation & Demos</td>
+</tr>
 </tbody></table>
 
 ### Gantt
@@ -359,31 +413,24 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>ArcGauge</b></td>
-  <td><a href="https://www.telerik.com/kendo-react-ui/arcgauge/">React ArcGauge Features</a></td>
+  <td><b>Arc Gauge</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/arcgauge/">React Arc Gauge Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/gauges/arcgauge/">Documentation & Demos</td>
 </tr>
+ <tr>
+  <td><b>Circular Gauge</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/circulargauge/">React Circular Gauge Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/gauges/circulargauge/">Documentation & Demos</td>
+</tr>
 <tr>
-  <td><b>LinearGauge</b></td>
-  <td><a href="https://www.telerik.com/kendo-react-ui/lineargauge/">React LinearGauge Features</a></td>
+  <td><b>Linear Gauge</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/lineargauge/">React Linear Gauge Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/gauges/lineargauge/">Documentation & Demos</td>
 </tr>
 <tr>
-  <td><b>RadialGauge</b></td>
-  <td><a href="https://www.telerik.com/kendo-react-ui/radialgauge/">React RadialGauge Features</a></td>
+  <td><b>Radial Gauge</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/radialgauge/">React Radial Gauge Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/gauges/radialgauge/">Documentation & Demos</td>
-</tr>
-</tbody></table>
-
-### Grid
-
-![](https://img.shields.io/npm/v/@progress/kendo-react-grid)
-
-<table><tbody>
-<tr>
-  <td><b>Grid</b></td>
-  <td><a href="https://www.telerik.com/kendo-react-ui/grid/">React Grid Features</a></td>
-  <td><a href="https://www.telerik.com/kendo-react-ui/components/grid/">Documentation & Demos</td>
 </tr>
 </tbody></table>
 
@@ -401,6 +448,11 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
   <td><b>Loader</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/loader/">React Loader Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/indicators/loader/">Documentation & Demos</td>
+</tr>
+ <tr>
+  <td><b>Skeleton</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/skeleton/">React Skeleton Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/indicators/skeleton/">Documentation & Demos</td>
 </tr>
 </tbody></table>
 
@@ -467,7 +519,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 <tr>
   <td><b>Slider</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/slider/">React Slider Features</a></td>
-  <td><a href="">Documentation & Demos</td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/inputs/slider/">Documentation & Demos</td>
 </tr>
 <tr>
   <td><b>Switch</b></td>
@@ -528,6 +580,11 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
   <td><a href="https://www.telerik.com/kendo-react-ui/bottomnavigation/">React Bottom Navigation Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/layout/bottomnavigation/">Documentation & Demos</td>
 </tr>
+ <tr>
+  <td><b>Breadcrumb</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/breadcrumb/">React Breadcrumb Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/layout/breadcrumb/">Documentation & Demos</td>
+</tr>
 <tr>
   <td><b>Card</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/card/">React Card Features</a></td>
@@ -537,6 +594,11 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
   <td><b>Drawer</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/drawer/">React Drawer Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/layout/drawer/">Documentation & Demos</td>
+</tr>
+ <tr>
+  <td><b>Grid Layout</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/gridlayout/">React Grid Layout Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/layout/gridlayout/">Documentation & Demos</td>
 </tr>
 <tr>
   <td><b>Menu</b></td>
@@ -552,6 +614,11 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
   <td><b>Splitter</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/splitter/">React Splitter Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/layout/splitter/">Documentation & Demos</td>
+</tr>
+ <tr>
+  <td><b>Stack Layout</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/stacklayout/">React Stack Layout Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/layout/stacklayout/">Documentation & Demos</td>
 </tr>
 <tr>
   <td><b>Stepper</b></td>
@@ -615,6 +682,18 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
   <td><b>PDF Generator</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/pdfprocessing/">React PDF Generator Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/pdfprocessing/">Documentation & Demos</td>
+</tr>
+</tbody></table>
+
+### Pivot Grid
+
+![](https://img.shields.io/npm/v/@progress/kendo-react-pdf)
+
+<table><tbody>
+<tr>
+  <td><b>PDF Generator</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/pivotgrid/">React Pivot Grid Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/pivotgrid/">Documentation & Demos</td>
 </tr>
 </tbody></table>
 
@@ -725,9 +804,14 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>Upload</b></td>
-  <td><a href="https://www.telerik.com/kendo-react-ui/upload/">React Upload Features</a></td>
+  <td><b>External Drop Zone</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/upload/">React External Drop Zone Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/upload/">Documentation & Demos</td>
+</tr>
+ <tr>
+  <td><b>Upload</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/external-drop-zone/">React Upload Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/upload/external-drop-zone/">Documentation & Demos</td>
 </tr>
 </tbody></table>
 
@@ -737,15 +821,15 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>KendoReact Default Theme</b></td>
+  <td><b>Default Theme</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/styling/theme-default/">KendoReact Default Theme</a></td>
 </tr>
 <tr>
-  <td><b>KendoReact Material Theme</b></td>
+  <td><b> Material Theme</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/styling/theme-material/">KendoReact Material Theme</a></td>
 </tr>
 <tr>
-  <td><b>KendoReact Bootstrap Theme</b></td>
+  <td><b>Bootstrap Theme</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/styling/theme-bootstrap/">KendoReact Bootstrap Theme</a></td>
 </tr>
 </tbody></table>
@@ -789,6 +873,13 @@ The [React Financial Portfolio Application](https://www.telerik.com/kendo-react-
 * [Source code](https://github.com/telerik/kendo-react-finance-portfolio/)
 
 ![Financial portfolio sample](images/financial-portfolio.png)
+
+### File Manager Template Application
+
+The [React File Manager Application](https://www.telerik.com/kendo-react-ui/components/sample-applications/file-manager/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) is an Explorer-like application built entirely with KendoReact components that enables you to manage files and folders. You can show additional information about the selected file in a template-customizable Preview Pane, which you can show or hide through a switch button.
+
+* [Live demo](https://telerik.github.io/kendo-react-file-manager)
+* [Source code](https://github.com/telerik/kendo-react-file-manager)
 
 ### GitHub Issues Grid
 
