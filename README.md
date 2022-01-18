@@ -883,6 +883,15 @@ The [React File Manager Application](https://www.telerik.com/kendo-react-ui/comp
 
 ![React FileManager Template App](images/React-FileManager-Template-App.png)
 
+### React Data Grid with NodeJS / ASP.NET Core Server Example
+
+You can take advantage of two full stack sample applications built with the KendoReact Data Grid on the frontend and **Node.js** and **ASP.NET Core** on the backend to use as a reference when building your own applications. We hope they help to reduce the complexity of hooking up a server to our React Data Table component.
+
+* [See the React Data Grid with NodeJS Express Server sample app](https://www.telerik.com/kendo-react-ui/components/sample-applications/nodejs-express/)
+* [See the React Data Grid with ASP.NET Core Server sample app](https://www.telerik.com/kendo-react-ui/components/sample-applications/asp-net-core/)
+
+![React-Data-Grid-ASPNET-Core-Nodejs-backend-demo](images/React-Data-Grid-ASPNET-Core-Nodejs-backend-demo.jpg)
+
 ### GitHub Issues Grid
 
 The [React GitHub Issues Application](https://www.telerik.com/kendo-react-ui/components/sample-applications/issues-grid/) shows off how to use a KendoReact Data Grid to manage a large data set—in this case, all issues in the main Facebook React and GraphQL repositories.
