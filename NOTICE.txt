@@ -1,0 +1,111 @@
+Progress KendoReact 2022
+
+Copyright © 2018-2022 Progress Software Corporation and/or one of its subsidiaries or affiliates. All rights reserved.
+
+Portions of the Product include certain open source and commercial third-party components listed below (ìThird-Party Componentsî). The authors of the Third-Party Components require Progress Software Corporation (ìPSCî) to include the following notices and additional licensing terms as a condition of PSCís use of such Third-Party Components.  You acknowledge that the authors of the Third-Party Components have no obligation to provide support to you for the Third-Party Components or the Product.  You hereby undertake to comply with all licenses related to the applicable Third-Party Components.  Notwithstanding anything to the contrary, to the extent that any of the terms and conditions of the Product Agreement conflict, vary, or are in addition to the terms and conditions of the aforementioned third-party licenses for these technologies, such terms and conditions are offered by Progress alone and not by any other party.
+
+-------------------------------------------------------------------------
+SUMMARY OF COMPONENTS:
+
+VendorName | ComponentName | VersionName | LicenseType
+
+Axios | Axios | 0.18.1 - Open Source | MIT-style License
+DefinitelyTyped.org | @types/prosemirror-commands | 1.0.4 - Open Source | MIT-style License
+DefinitelyTyped.org | @types/prosemirror-dropcursor | 1.0.1 - Open Source | MIT-style License
+DefinitelyTyped.org | @types/prosemirror-gapcursor | 1.0.2 - Open Source | MIT-style License
+DefinitelyTyped.org | @types/prosemirror-history | 1.0.2 - Open Source | MIT-style License
+DefinitelyTyped.org | @types/prosemirror-inputrules | 1.0.2 - Open Source | MIT-style License
+DefinitelyTyped.org | @types/prosemirror-keymap | 1.0.2 - Open Source | MIT-style License
+DefinitelyTyped.org | @types/prosemirror-model | 1.11.2 - Open Source | MIT-style License
+DefinitelyTyped.org | @types/prosemirror-schema-list | 1.0.2 - Open Source | MIT-style License
+DefinitelyTyped.org | @types/prosemirror-state | 1.2.4 - Open Source | MIT-style License
+DefinitelyTyped.org | @types/prosemirror-tables | 0.9.1 - Open Source | MIT-style License
+DefinitelyTyped.org | @types/prosemirror-transform | 1.2.9 - Open Source | MIT-style License
+DefinitelyTyped.org | @types/prosemirror-view | 1.11.4 - Open Source | MIT-style License
+Facebook, Inc. | prop-types | 15.6.0 - Open Source | MIT-style License
+Facebook, Inc. | react-transition-group | 2.2.0 - Open Source | BSD-style License
+Progress Software Corporation | Kendo UI Licensing CLI | 1.1 - Proprietary | 
+Progress Software Corporation | jszip-esm | 1.0.0 - Open Source | MIT-style License
+Progress Software Corporation | pako-esm | 1.0.0 - Open Source | MIT-style License
+ProseMirror | prosemiror-inputrules | 1.0.1 - Open Source | MIT-style License
+ProseMirror | prosemirror-commands | 1.0.7 - Open Source | MIT-style License
+ProseMirror | prosemirror-gapcursor | 1.0.2 - Open Source | MIT-style License
+ProseMirror | prosemirror-history | 1.0.2 - Open Source | MIT-style License
+ProseMirror | prosemirror-keymap | 1.0.1 - Open Source | MIT-style License
+ProseMirror | prosemirror-model | 1.6.1 - Open Source | MIT-style License
+ProseMirror | prosemirror-schema-list | 1.0.1 - Open Source | MIT-style License
+ProseMirror | prosemirror-state | 1.2.2 - Open Source | MIT-style License
+ProseMirror | prosemirror-tables | 0.7.10 - Open Source | MIT-style License
+ProseMirror | prosemirror-transform | 1.1.3 - Open Source | MIT-style License
+ProseMirror | prosemirror-view | 1.5.2 - Open Source | MIT-style License
+-------------------------------------------------------------------------
+  
+1.	Special Notices Regarding Open-Source Third-Party Components incorporated into the Product:
+
+(1) BSD-Style Licenses:
+
+(a) Progress KendoReact 2022 incorporates React-Transition-Group v2.2.0.  Such technology is subject to the following terms and conditions:
+BSD 3-Clause License
+Copyright (c) 2018, React Community
+Forked from React (https://github.com/facebook/react) Copyright 2013-present, Facebook, Inc.
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+* Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+(2) MIT-Style Licenses:
+
+(a) Progress KendoReact 2022 incorporates @types/prosemirror-commands v1*, @types/prosemirror-dropcursor v1*, @types/prosemirror-gapcursor v1*, @types/prosemirror-history v1*, @types/prosemirror-inputrules v1*, @types/prosemirror-keymap v1*, @types/prosemirror-model v1*, @types/prosemirror-schema-list v1*, @types/prosemirror-state v1*, @types/prosemirror-tables v0.9*, @types/prosemirror-transform v1*, and @types/prosemirror-view v1*.  Such technologies are subject to the following terms and conditions: 
+This project is licensed under the MIT license.
+Copyrights are respective of each contributor listed at the beginning of each definition file.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+(b) Progress KendoReact 2022 incorporates prop-types v15*.  Such technology is subject to the following terms and conditions:  
+MIT License
+Copyright (c) 2013-present, Facebook, Inc.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+(c) Progress KendoReact 2022 incorporates Axios v0.18.1. Such technology is subject to the following terms and conditions:  
+Copyright (c) 2014-present Matt Zabriskie
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+(d) Progress KendoReact 2022 incorporates pako-esm v1.0.0.  Such technology is subject to the following terms and conditions:  
+Copyright © 2020 Progress Software Corporation and/or one of its subsidiaries or affiliates. All rights reserved. (as modified) 
+Copyright (C) 2014-2017 by Vitaly Puzrin and Andrei Tuputcyn 
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+(e) Progress KendoReact 2022 incorporates jszip-esm v1.0.0.  Such technology is subject to the following terms and conditions:
+Copyright © 2020 Progress Software Corporation and/or one of its subsidiaries or affiliates. All rights reserved. (as modified)
+Copyright (c) 2009-2016 Stuart Knightley, David Duponchel, Franz Buchinger, AntÛnio Afonso
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+(f) Progress KendoReact 2022 incorporates prosemirror-commands v1*, prosemirror-gapcursor v1*, prosemirror-history v1*, prosemirror-inputrules v1*, prosemirror-keymap v1*, prosemirror-model v1*, prosemirror-schema-list v1*, prosemirror-state v1*, prosemirror-tables v0.9*,  prosemirror-transform v1*, and prosemirror-view v1*.  Such technologies are subject to the following terms and conditions:
+Copyright (C) 2015-2017 by Marijn Haverbeke <marijnh@gmail.com> and others 
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  
+2.	Special Notices Regarding Commercially Licensed Third-Party Components incorporated into the Product:  NONE
+
+3.	Special Notices Regarding Progress Products incorporated into the Product:  
+
+(a) Progress KendoReact 2022 incorporates Kendo UI Licensing CLI v1.1 from Progress Software Corporation. See NOTICE.txt text file within product for third-party license information. 
+ 
+NOTICE FROM PROGRESS SOFTWARE CORPORATION: Additional notices may be included in the release notes or other documentation that accompanies updates received in connection with support of the Product.
+
+
+Updated 1/6/2022
