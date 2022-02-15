@@ -49,12 +49,12 @@ If want to bug a bug with KendoReact, please start by reviewing [this repo’s i
 
 > We might not be able to act on issues without a runnable demo.
 
-If you need assistance on troubleshooting or isolating a problem, you can request a remote assistance session through our [Support Ticket](https://www.telerik.com/account/support-tickets) system. Remote Assistance is included in our [DevCraft Ultimate](http://www.telerik.com/purchase/kendo-ui?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) subscription.
+If you need assistance on troubleshooting or isolating a problem, you can request a remote assistance session through our [Support Ticket](https://www.telerik.com/account/support-tickets) system. Remote Assistance is included in our [Ultimate Support](https://www.telerik.com/kendo-react-ui/pricing/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) subscription.
 
 ### When do you plan to release feature X?
 
 1. Check the [KendoReact Roadmap](https://www.telerik.com/support/whats-new/kendo-react-ui/roadmap/) to see a list of features we have planned.
-1. If your feature isn’t listed there, [check our feedback portal](http://kendoui-feedback.telerik.com/forums/555517-kendo-ui-for-react-feedback). If you don’t see your feature on our portal, you can request the feature there.
+1. If your feature isn’t listed there, [check our feedback portal](https://feedback.telerik.com/kendo-react-ui). If you don’t see your feature on our portal, you can request the feature there.
 
 ## React UI Components
 
@@ -67,6 +67,23 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
   <td><b>Animation</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/animation/">React Animation Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/animation/">Documentation & Demos</td>
+</tr>
+</tbody></table>
+
+### Barcodes
+
+![](https://img.shields.io/npm/v/@progress/kendo-react-barcodes)
+
+<table><tbody>
+<tr>
+  <td><b>Barcode</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/barcode/">React Barcode Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/barcodes/barcode/">Documentation & Demos</td>
+</tr>
+ <tr>
+  <td><b>QR Code</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/qrcode/">React QR Code Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/barcodes/qrcode/">Documentation & Demos</td>
 </tr>
 </tbody></table>
 
@@ -145,6 +162,11 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
+  <td><b>Drag&Drop Utilities</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/drag-and-drop/">React Drag&Drop Utilities Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/utils/drag-and-drop/">Documentation & Demos</td>
+</tr>
+ <tr>
   <td><b>Typography</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/typography/">React Typography Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/utils/typography/">Documentation & Demos</td>
@@ -483,6 +505,11 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
   <td><a href="https://www.telerik.com/kendo-react-ui/colorpicker/">React ColorPicker Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/inputs/colorpicker/">Documentation & Demos</td>
 </tr>
+ <tr>
+  <td><b>FlatColorPicker</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/flatcolorpicker/">React FlatColorPicker Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/inputs/flatcolorpicker/">Documentation & Demos</td>
+</tr>
 <tr>
   <td><b>Input</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/input/">React Input Features</a></td>
@@ -596,6 +623,11 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
   <td><b>Drawer</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/drawer/">React Drawer Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/layout/drawer/">Documentation & Demos</td>
+</tr>
+ <tr>
+  <td><b>ExpansionPanel</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/expansionpanel/">React ExpansionPanel Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/layout/expansionpanel/">Documentation & Demos</td>
 </tr>
  <tr>
   <td><b>Grid Layout</b></td>
@@ -752,6 +784,18 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 </tr>
 </tbody></table>
 
+### ScrollView (Carousel)
+
+![](https://img.shields.io/npm/v/@progress/kendo-react-scrollview)
+
+<table><tbody>
+<tr>
+  <td><b>ScrollView</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/scrollview/">React ScrollView (Carousel) Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/scrollview/">Documentation & Demos</td>
+</tr>
+</tbody></table>
+
 ### Sortable
 
 ![](https://img.shields.io/npm/v/@progress/kendo-react-sortable)
@@ -764,7 +808,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 </tr>
 </tbody></table>
 
-### Tooltip
+### Tooltips
 
 ![](https://img.shields.io/npm/v/@progress/kendo-react-tooltip)
 
@@ -773,6 +817,11 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
   <td><b>Tooltip</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/tooltip/">React Tooltip Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/tooltip/">Documentation & Demos</td>
+</tr>
+ <tr>
+  <td><b>Popover</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/popover/">React Popover Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/tooltip/popover/">Documentation & Demos</td>
 </tr>
 </tbody></table>
 
