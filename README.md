@@ -95,7 +95,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 <tr>
   <td><b>Button</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/button">React Button Features</a></td>
-  <td><a href="https://www.telerik.com/kendo-react-ui/components/button/">Documentation & Demos</td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/buttons/">Documentation & Demos</td>
 </tr>
 <tr>
   <td><b>ButtonGroup</b></td>
