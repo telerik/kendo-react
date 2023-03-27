@@ -38,6 +38,6 @@ The second step will be to create a template that will take advantage of the new
 This is an example showcasing how to limit the value:
  
 {% meta height:760 %}
-{% embed_file grid/listview-grouping/main.jsx preview %} 
-{% embed_file grid/listview-grouping/products.json preview %} 
+{% embed_file listview/listview-grouping/main.jsx preview %} 
+{% embed_file listview/listview-grouping/products.json preview %} 
 {% endmeta %}
