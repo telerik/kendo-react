@@ -8,8 +8,7 @@ const App = () => {
   const calculateWidth = (field) => {
     let maxWidth = 0;
     products.forEach((item) => {
-      const size = getTextWidth(item[field], 'normal 14px sans-serif');
-      console.log(size);
+      const size = getTextWidth(item[field], 'normal 14px sans-serif') + 12;
       if (size > maxWidth) {
         maxWidth = size;
       }
