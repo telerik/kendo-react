@@ -31,7 +31,7 @@ I want to preserve the Grid state between page reloads.
 
 ## Solution
 
-You can achieve this by saving the DataState to the localStorage. In the onDataStateChange event handler, you can save the Grid state to the localStorage, and when the component loads, you can get the state and pass it as an initial state to the Grid.
+You can achieve this by saving the DataState to the localStorage. When the dataState changes, store it in the localStore, and when the component loads, set the previously saved dataState from the localStorage.
 
 {% meta id:index height:760 %}
 {% embed_file grid/grid-save-datastate-to-localstorage/main.jsx preview %}
