@@ -17,6 +17,7 @@ let initialDataState = {
 
 const App = () => {
   const [dataState, setDataState] = React.useState(initialDataState);
+
   React.useEffect(() => {
     let gridState = localStorage.getItem('gridState');
     if (gridState) {
@@ -24,9 +25,11 @@ const App = () => {
       setDataState(initialDataState);
     }
   }, []);
+
   React.useEffect(() => {
     localStorage.setItem('gridState', JSON.stringify(dataState));
   }, [dataState]);
+  
   return (
     <Grid
       pageable={true}
