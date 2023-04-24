@@ -3,6 +3,7 @@ import * as ReactDOM from 'react-dom';
 import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
 import { process } from '@progress/kendo-data-query';
 import products from './products.json';
+
 let initialDataState = {
   sort: [
     {
@@ -14,13 +15,18 @@ let initialDataState = {
   skip: 0,
 };
 
-let gridState = localStorage.getItem('gridState');
-if (gridState) {
-  initialDataState = JSON.parse(gridState);
-}
-
 const App = () => {
   const [dataState, setDataState] = React.useState(initialDataState);
+  React.useEffect(() => {
+    let gridState = localStorage.getItem('gridState');
+    if (gridState) {
+      initialDataState = JSON.parse(gridState);
+      setDataState(initialDataState);
+    }
+  }, []);
+  React.useEffect(() => {
+    localStorage.setItem('gridState', JSON.stringify(dataState));
+  }, [dataState]);
   return (
     <Grid
       pageable={true}
@@ -32,7 +38,6 @@ const App = () => {
       data={process(products, dataState)}
       {...dataState}
       onDataStateChange={(e) => {
-        localStorage.setItem('gridState', JSON.stringify(e.dataState));
         setDataState(e.dataState);
       }}
     >
