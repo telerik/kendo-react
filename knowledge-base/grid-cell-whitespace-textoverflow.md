@@ -36,17 +36,20 @@ You can achieve this by using either the Grid `cellRender` prop, or the GridCell
 # Using CSS
 
 {% meta id:index height:400 %}
-
+{% embed_file grid/grid-whitespace-textoverflow/CSS/main.jsx preview %}
+{% embed_file grid/grid-whitespace-textoverflow/shared/products.json %}
 {% endmeta %}
 
 # Using cell
 
 {% meta id:index height:400 %}
-
+{% embed_file grid/grid-whitespace-textoverflow/cell/main.jsx preview %}
+{% embed_file grid/grid-whitespace-textoverflow/shared/products.json %}
 {% endmeta %}
 
 # Using cellRender
 
 {% meta id:index height:400 %}
-
+{% embed_file grid/grid-whitespace-textoverflow/cellRender/main.jsx preview %}
+{% embed_file grid/grid-whitespace-textoverflow/shared/products.json %}
 {% endmeta %}
