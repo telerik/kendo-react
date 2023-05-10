@@ -8,6 +8,7 @@ const App = () => {
       <td
         style={{
           whiteSpace: 'nowrap',
+          textOverflow: 'clip'
         }}
       >
         {props.dataItem.ProductName}

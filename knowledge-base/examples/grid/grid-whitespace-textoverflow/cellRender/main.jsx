@@ -4,7 +4,16 @@ import { Grid, GridColumn } from '@progress/kendo-react-grid';
 import products from './products.json';
 const App = () => {
   const CellRender = (props) => {
-    return <td style={{ whiteSpace: 'nowrap' }}>{props.props.children}</td>;
+    return (
+      <td
+        style={{
+          whiteSpace: 'nowrap',
+          textOverflow: 'clip'
+        }}
+      >
+        {props.props.children}
+      </td>
+    );
   };
   return (
     <Grid
