@@ -4,8 +4,8 @@ description: An example of how to add two horizontal scrollbars to the Grid
 type: how-to
 page_title: An example of how to add two horizontal scrollbars to the Grid - KendoReact Grid
 slug: grid-two-horizontal-scrollbars
-tags: dropdownlist, clear, value
-ticketid: 1544377
+tags: grid, horizontal, scrollbars
+ticketid: 1587839
 res_type: kb
 category: knowledge-base
 ---
@@ -36,5 +36,5 @@ This can be achieved by adding an external scrollbar and handling the [`onScroll
 
 {% meta id height:760 %}
 {% embed_file grid/grid-two-horizontal-scrollbars/main.jsx preview %}
-{% embed_file grid/grid-two-horizontal-scrollbars/sample-products.jsx preview %}
+{% embed_file grid/grid-two-horizontal-scrollbars/sample-products.jsx %}
 {% endmeta %}

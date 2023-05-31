@@ -4,7 +4,7 @@ description: An example of how to make an API request after ten items are scroll
 type: how-to
 page_title: Make an API request on every ten scrolled items in the DropDownList - KendoReact DropDownList
 slug: request-every-ten-items
-tags: dropdownlist, clear, value
+tags: dropdownlist, scrolling, api, request
 ticketid: 1544377
 res_type: kb
 category: knowledge-base
