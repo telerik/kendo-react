@@ -40,6 +40,12 @@ This can be done with [the KendoReact Multiselect component]({% slug overview_mu
 This is an example showcasing this in action:
 
 {% meta id:index height:760 %}
-{% embed_file multiselect/multiselect-select-all-checkbox/main.jsx preview %}
+{% variant title:Hooks %}
+{% embed_file multiselect/multiselect-select-all-checkbox/func/main.jsx preview %}
 {% embed_file shared/countries.js %}
+{% endvariant %}
+{% variant title:Classes %}
+{% embed_file multiselect/multiselect-select-all-checkbox/class/main.jsx preview %}
+{% embed_file shared/countries.js %}
+{% endvariant %}
 {% endmeta %}
