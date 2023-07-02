@@ -34,7 +34,7 @@ For achieving the desired result a custom Popup must be defined for the DateRang
 
 This is an example showcasing how to limit the value:
  
-{% meta height:760 %}
+{% meta id:index height:760 %}
 {% embed_file dateinputs/daterangepicker-predefined-ranges/main.jsx preview %}  
-{% embed_file dateinputs/daterangepicker-predefined-ranges/styles.css preview %} 
+{% embed_file dateinputs/daterangepicker-predefined-ranges/styles.css  %} 
 {% endmeta %}
