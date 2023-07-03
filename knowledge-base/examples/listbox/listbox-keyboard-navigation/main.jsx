@@ -62,13 +62,16 @@ const App = () => {
     if (e.key === 'ArrowUp') {
       newSelectedIndex = selectedIndex - 1;
       if (newSelectedIndex >= 0) {
-        newData[newSelectedIndex + 1].selected = false;
+        if (newSelectedIndex + 1 < newData.length) {
+          newData[newSelectedIndex + 1].selected = false;
+        }
         newData[newSelectedIndex].selected = true;
         updateState(newSelectedIndex, newData);
       }
     }
     if (e.key === 'Enter') {
       handleToolBarClick('', 'transferTo');
+      newData[selectedIndex].selected = false;
     }
   };
 
