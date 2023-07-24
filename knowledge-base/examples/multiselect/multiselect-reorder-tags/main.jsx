@@ -16,9 +16,9 @@ const SortableItemUI = (props) => {
     props;
 
   return (
-    <li ref={forwardRef} {...attributes} className={'k-button'} {...attributes} style={...style}>
+    <li ref={forwardRef} {...attributes} className={'k-button'} {...attributes} style={style}>
       <span>{dataItem.text}</span>
-    </li>
+    </li> 
   );
 };
 
