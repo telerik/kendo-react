@@ -34,6 +34,6 @@ Set custom visual for ChartSeriesItem and draw custom shape with border radius.
 
 This is an example demonstrating the above approach:
  
-{% meta height:760 %}
-{% embed_file charts/chart-heatmap-custom-series-item/main.jsx preview %}  
+{% meta height:760 %} 
+{% embed_file charts/heatmap-custom-series-item/main.jsx preview %}  
 {% endmeta %}
