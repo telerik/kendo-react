@@ -38,5 +38,5 @@ This is an example demonstrating the implementation:
 
 {% meta id:index height:760 %}
 {% embed_file grid/unique-groups/main.jsx preview %}
-{% embed_file grid/shared/products.json %}
+{% embed_file shared/products.json %}
 {% endmeta %}
