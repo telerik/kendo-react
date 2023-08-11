@@ -1,59 +1,46 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-
-import {
-  Grid,
-  GridColumn as Column,
-  GridDataStateChangeEvent,
-  GridExpandChangeEvent,
-} from '@progress/kendo-react-grid';
-import { DataResult, process, State } from '@progress/kendo-data-query';
-
+import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
+import { groupBy } from '@progress/kendo-data-query';
 import {
   setExpandedState,
   setGroupIds,
 } from '@progress/kendo-react-data-tools';
-
 import products from './products.json';
-import { Product } from './interfaces';
-
-const initialDataState: State = {
-  take: 10,
-  skip: 0,
-  group: [{ field: 'Category.CategoryName' }, { field: 'ProductName' }],
-};
-
-const processWithGroups = (data: Product[], dataState: State) => {
-  const newDataState = process(data, dataState);
-
-  setGroupIds({ data: newDataState.data, group: dataState.group });
-
+const initialGroup = [
+  {
+    field: 'UnitsInStock',
+  },
+  {
+    field: 'ProductName',
+  },
+];
+const processWithGroups = (data, group) => {
+  const newDataState = groupBy(data, group);
+  setGroupIds({
+    data: newDataState,
+    group: group,
+  });
   return newDataState;
 };
 
 const CustomCell = (props) => {
-  console.log(props.td2Props);
   return (
-    <>
-      {props.tdProps && (
-        <td
-          {...props.tdProps}
-          style={{
-            backgroundColor: props.color,
-            whiteSpace: 'nowrap',
-            ...props.tdProps.style,
-          }}
-        >
-          {props.children && (
-            <p className="k-reset">
-              {props.children.props.children[0]}
-              {props.dataItem[props.field] + ' custom'}
-            </p>
-          )}
-        </td>
-      )}
-      {props.td2Props && <td {...props.td2Props} />}
-    </>
+    props.tdProps && (
+      <td
+        {...props.tdProps}
+        style={{
+          backgroundColor: props.color,
+        }}
+      >
+        {props.children && (
+          <p className="k-reset">
+            {props.children.props.children[0]}
+            {props.dataItem.items.length}:{props.dataItem[props.field]}
+          </p>
+        )}
+      </td>
+    )
   );
 };
 
@@ -62,85 +49,58 @@ const GroupMyHeaderCustomCell = (props) => (
 );
 
 const App = () => {
-  const [dataState, setDataState] = React.useState<State>(initialDataState);
-  const [resultState, setResultState] = React.useState<DataResult>(
-    processWithGroups(products, initialDataState)
+  const [group, setGroup] = React.useState(initialGroup);
+  const [resultState, setResultState] = React.useState(
+    processWithGroups(products, initialGroup)
   );
-  const [collapsedState, setCollapsedState] = React.useState<string[]>([]);
-
-  const onDataStateChange = React.useCallback(
-    (event: GridDataStateChangeEvent) => {
-      const newDataState = processWithGroups(products, event.dataState);
-
-      setDataState(event.dataState);
+  const [collapsedState, setCollapsedState] = React.useState([]);
+  const onGroupChange = React.useCallback(
+    (event) => {
+      const newDataState = processWithGroups(products, event.group);
+      setGroup(event.group);
       setResultState(newDataState);
     },
-    []
+    [group]
   );
-
   const onExpandChange = React.useCallback(
-    (event: GridExpandChangeEvent) => {
+    (event) => {
       const item = event.dataItem;
-
       if (item.groupId) {
-        const collapsedIds = !event.value
+        const newCollapsedIds = !event.value
           ? [...collapsedState, item.groupId]
           : collapsedState.filter((groupId) => groupId !== item.groupId);
-        setCollapsedState(collapsedIds);
+        setCollapsedState(newCollapsedIds);
       }
     },
     [collapsedState]
   );
-
   const newData = setExpandedState({
-    data: resultState.data,
+    data: resultState,
     collapsedIds: collapsedState,
   });
-
   return (
     <Grid
-      style={{ height: '520px', width: '850px' }}
-      pageable={{ pageSizes: true }}
+      style={{
+        height: '520px',
+      }}
       groupable={true}
-      lockGroups={true}
       data={newData}
-      total={resultState.total}
-      onDataStateChange={onDataStateChange}
-      {...dataState}
+      onGroupChange={onGroupChange}
+      group={group}
       onExpandChange={onExpandChange}
       expandField="expanded"
       cells={{
         group: {
           groupHeader: GroupMyHeaderCustomCell,
-          /*           data: GroupMyDataCustomCell,
-          groupFooter: GroupMyFooterCustomCell, */
         },
       }}
     >
-      <Column
-        field="ProductName"
-        title="Product Name"
-        width="250px"
-        locked={true}
-      />
-      <Column
-        field="Category.CategoryName"
-        title="Category Name"
-        width="150px"
-        locked={true}
-      />
-      <Column field="Discontinued" title="Discontinued" width="140px" />
-      <Column field="UnitPrice" title="Unit Price" width="120px" />
-      <Column field="UnitsInStock" title="Units In Stock" width="150px" />
-      <Column field="QuantityPerUnit" title="Quantity Per Unit" width="200px" />
-      <Column
-        field="Category.Description"
-        title="Category Description"
-        width="400px"
-      />
-      <Column field="UnitsOnOrder" title="Units on Order" width="150px" />
+      <Column field="ProductID" filterable={false} title="ID" width="50px" />
+      <Column field="ProductName" title="Product Name" />
+      <Column field="UnitPrice" title="Unit Price" filter="numeric" />
+      <Column field="UnitsInStock" title="Units In Stock" filter="numeric" />
+      <Column field="Category.CategoryName" title="Category Name" />
     </Grid>
   );
 };
-
 ReactDOM.render(<App />, document.querySelector('my-app'));
