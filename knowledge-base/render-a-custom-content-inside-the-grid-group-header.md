@@ -16,7 +16,7 @@ category: knowledge-base
     <tbody>
 	    <tr>
 	    	<td>Product Version</td>
-	    	<td>3.0.0</td>
+	    	<td>5.16.1</td>
 	    </tr>
 	    <tr>
 	    	<td>Product</td>
@@ -28,10 +28,19 @@ category: knowledge-base
 
 ## Description
 
-I want to implement a customized `IconCell` that renders an icon and when I group the Grid by that `IconColmn`, I want to display a small icon inside the group header row. How can I achieve this in the KendoReact Grid?
+I want to customize the content of the Grid group header.
 
 ## Solution
 
+In order to achieve this, it is currently recommended to use the ['groupHeader`]({% slug api_grid_gridcellssettings %}#toc-groupheader) property.
+
+{% meta id:index height:760 %}
+{% embed_file grid/group-header-render/cells-header/main.jsx preview %}
+{% embed_file shared/products.json %}
+{% embed_file shared/interfaces.ts %}
+{% endmeta %}
+
+This can also be achieved using the Grid `cellRender` property
 1. Use the [`cellRender`]({% slug api_grid_gridprops %}#toc-cellrender) prop.
 1. Return a modified `td` element with the desired icon or other custom elements for the specific header.
 
