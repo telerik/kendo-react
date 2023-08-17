@@ -12,14 +12,20 @@ class AppComponent extends React.Component {
   }
 
   componentDidMount() {
-    document.body.addEventListener('click', (e) => {
-      if (!e.target.className.includes('k-popup')) {
-        this.setState({
-          show: false,
-        });
-      }
-    });
+    document.body.addEventListener('click', this.handleBodyClick);
   }
+
+  componentWillUnmount() {
+    document.body.removeEventListener('click', this.handleBodyClick);
+  }
+
+  handleBodyClick = () => {
+    if (this.state.show) {
+      this.setState({
+        show: false,
+      });
+    }
+  };
 
   render() {
     return (
@@ -44,7 +50,8 @@ class AppComponent extends React.Component {
     );
   }
 
-  onClick = () => {
+  onClick = (e) => {
+    e.stopPropagation();
     this.setState({ show: !this.state.show });
   };
 }
