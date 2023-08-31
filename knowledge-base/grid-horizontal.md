@@ -27,7 +27,7 @@ category: knowledge-base
 
 ## Description
 
-I want to create a horizontal Grid.
+I want to create a horizontal Grid where the column headers are displayed in the first column on separate rows. In addition, the corresponding cell data of each column header should be displayed on the same row of the header.
 
 ## Solution
 
