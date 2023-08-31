@@ -2,7 +2,7 @@
 title: Disable list items in the MultiSelect component.
 description: An example on how to disable list items in the KendoReact MultiSelect.
 type: how-to
-page_title: Disable items - KendoReact Grid
+page_title: Disable items - KendoReact MultiSelect
 slug: multiselect-disable-items
 tags: disable, list, multiselect
 ticketid: 1620902
@@ -32,8 +32,8 @@ How can I disable specific items based on a certain condition?
 
 ## Solution
 
-You can achieve this using the itemRender property where you can add set the CSS styles `pointer-event: none` and `opacity: 0.7` for certain items.
-In addition, when clicking a disabled item, the click event will happen on the <ul> list ( `k-list-ul` ) and this would close the Popup by default. Therefore, it is required to handle the component in controlled mode in this case such that in the onClose event.
+You can achieve this using the `itemRender` property where you can set the CSS styles `pointer-events: none` and `opacity: 0.7` for certain items.
+In addition, when clicking on a disabled item, the click event will happen on the <ul> element ( `k-list-ul` ) and this would close the Popup by default. Therefore, it is required to handle the component in controlled mode such that the `onClose` event does not close the component when the item returned in the SyntheticEvent is `k-list-ul`.
 
 This is an example demonstrating this implementation where the `Albania` item is disabled:
 
