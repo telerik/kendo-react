@@ -34,5 +34,5 @@ I want to set the title of the RangeSlider to its dragged value.
 You can achieve this by passing a ref to the RangeSlider component. Use this ref to get the reference of the slider's dots, and set their title to the start and end values each time they are changed.
 
 {% meta id:index height:400 %}
-{% embed_file rangeslider/rangeslider-slider-dots-title/main.jsx preview %}
+{% embed_file inputs/rangeslider/rangeslider-slider-dots-title/main.jsx preview %}
 {% endmeta %}
