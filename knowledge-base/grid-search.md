@@ -33,7 +33,7 @@ How can I implement a search bar in the Grid?
 
 This can be achieved by creating a custom input.
 
-{% meta id height:760 %}
+{% meta id height:500 %}
 {% embed_file grid/grid-search-bar/main.tsx preview %}
 {% embed_file grid/grid-search-bar/sample-products.tsx preview %}
 {% endmeta %}

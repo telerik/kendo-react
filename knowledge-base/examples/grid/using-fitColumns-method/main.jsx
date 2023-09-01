@@ -46,7 +46,7 @@ const App = () => {
       ref={gridRef}
       resizable={true}
       style={{
-        height: '400px',
+        height: '300px',
       }}
       data={products}
     >

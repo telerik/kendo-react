@@ -36,7 +36,7 @@ The items in the resources data array have "text" property which accepts string 
 
 This is an example demonstrating the implementation:
 
-{% meta id:index height:760 %}
+{% meta id:index height:700 %}
 {% embed_file scheduler/icon-in-group-header/main.jsx preview %}
 {% embed_file scheduler/icon-in-group-header/data.js %}
 {% endmeta %}

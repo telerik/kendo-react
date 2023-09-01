@@ -35,6 +35,6 @@ How to make an API call only once ten items have been scrolled in the DropDownLi
 This can be achieved by creating a shouldRequestData function that checks if the skip is divisible by ten
 
 
-{% meta id height:760 %}
+{% meta id height:480 %}
 {% embed_file dropdownlist/request-every-ten-items/main.tsx preview %}
 {% endmeta %}

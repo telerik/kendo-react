@@ -38,6 +38,6 @@ The can be controlled by updating the focus date in the internal state of the Mu
 	this.MultiViewCalendarRef.setState({ focusedDate : newFocusDate });
 ```
 
-{% meta id:index height:760 %}
+{% meta id:index height:600 %}
 {% embed_file dateinputs/multiviewcalendar-control-focus-date/main.jsx preview %}
 {% endmeta %}

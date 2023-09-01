@@ -33,7 +33,7 @@ I want the popup of the ComboBox to open on click or when tabbing to it.
 Handle the onFocus event of the ComboBox and within a setTimeout function check the opened state and if the popup is not opened, call the "toggleBtnClick" method.
 
 Here is an example demonstrating this approach:
- 
-{% meta height:760 %}
-{% embed_file dropdowns/combobox-open-on-focus-and-tab/main.jsx preview %}   
+
+{% meta id height:560 %}
+{% embed_file dropdowns/combobox-open-on-focus-and-tab/main.jsx preview %}
 {% endmeta %}

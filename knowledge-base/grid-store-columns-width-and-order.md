@@ -36,7 +36,7 @@ Handle the onColumnResize and onColumnReorder to get reference to the updated co
 
 Following is an example demonstrating this approach:
  
- 
-{% meta id height:760 %}
+
+{% meta id height:500 %}
 {% embed_file grid/store-columns-width-and-order/main.jsx preview %}
 {% endmeta %}

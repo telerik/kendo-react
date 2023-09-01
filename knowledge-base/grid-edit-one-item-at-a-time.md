@@ -35,8 +35,8 @@ For tracking which item will have enabled buttons we add disableEdit property to
 
 This is an example showcasing how to limit the value:
 
-{% meta height:760 %}
-{% embed_file grid/grid-edit-one-item-at-a-time/main.jsx preview %} 
+{% meta height:580 %}
+{% embed_file grid/grid-edit-one-item-at-a-time/main.jsx preview %}
 {% embed_file grid/grid-edit-one-item-at-a-time/myCommandCell.jsx preview %}
 {% embed_file grid/grid-edit-one-item-at-a-time/sample-products.jsx preview %}
 {% embed_file grid/grid-edit-one-item-at-a-time/services.js preview %}

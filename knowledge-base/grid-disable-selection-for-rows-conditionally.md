@@ -38,5 +38,5 @@ Following is an example with the described approach:
 
 {% meta height:450 %}
 {% embed_file grid/disable-selection-for-rows-conditionally/main.jsx preview %}
-{% embed_file grid/disable-selection-for-rows-conditionally/products.json  %}
+{% embed_file grid/disable-selection-for-rows-conditionally/products.json %}
 {% endmeta %} 

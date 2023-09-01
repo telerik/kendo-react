@@ -33,6 +33,6 @@ The "title" property of the TabStripTab accepts string value and React Node and 
 
 Following is an example demonstrating the approach:
 
-{% meta id height:760 %}
-{% embed_file layout/tabstrip-button-in-tabs/main.jsx %}
+{% meta id height:500 %}
+{% embed_file layout/tabstrip-button-in-tabs/main.jsx preview %}
 {% endmeta %}

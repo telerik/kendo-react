@@ -37,6 +37,6 @@ Pass custom properties to the Field component and access them within the custom 
 Following is an example demonstrating this approach:
 
 
-{% meta id height:760 %}
+{% meta id height:360 %}
 {% embed_file form/getting-editor-ref-and-keydown/main.jsx preview %}
 {% endmeta %}

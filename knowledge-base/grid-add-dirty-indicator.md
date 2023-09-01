@@ -37,9 +37,9 @@ The custom style for the dirty cells is within the "styles.css" file targeting t
 
 This is an example showcasing this approach:
 
-{% meta id:index height:760 %}
+{% meta id:index height:480 %}
 {% embed_file grid/grid-add-dirty-indicator/main.jsx preview %}
-{% embed_file grid/grid-add-dirty-indicator/sample-products.json %} 
-{% embed_file grid/grid-add-dirty-indicator/renderers.jsx %} 
-{% embed_file grid/grid-add-dirty-indicator/styles.css %} 
+{% embed_file grid/grid-add-dirty-indicator/sample-products.json %}
+{% embed_file grid/grid-add-dirty-indicator/renderers.jsx %}
+{% embed_file grid/grid-add-dirty-indicator/styles.css %}
 {% endmeta %}

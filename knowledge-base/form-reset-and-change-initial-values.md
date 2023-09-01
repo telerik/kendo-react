@@ -39,6 +39,6 @@ The same technique can be used for changing the initial value by first changing 
 Following is an example demonstrating this approach:
 
 
-{% meta id height:760 %}
+{% meta id height:460 %}
 {% embed_file form/form-reset-and-change-initial-values/main.jsx preview %}
 {% endmeta %}

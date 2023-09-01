@@ -43,6 +43,6 @@ This will require the following setup:
 
 This is an example showcasing this:
 
-{% meta id:index height:760 %}
+{% meta id:index height:650 %}
 {% embed_file upload/paste-image/main.jsx preview %}
 {% endmeta %}

@@ -32,6 +32,6 @@ Set custom content for the select button through the "selectMessageUI" and place
 
 This is an example showcasing this:
 
-{% meta id:index height:760 %}
+{% meta id:index height:360 %}
 {% embed_file upload/upload-icon-for-upload-button/main.jsx preview %}
 {% endmeta %}

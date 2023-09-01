@@ -37,7 +37,7 @@ Create a custom tool that changes the background color of the cell:
 ![Editor Change Cell Background Color](examples/editor/change-background-color-of-cell/editor-cell-color.gif)
 
 
-{% meta id:index height:760 %}
+{% meta id:index height:460 %}
 {% embed_file editor/change-background-color-of-cell/main.tsx preview %}
 {% embed_file editor/change-background-color-of-cell/CellBackColorTool.tsx preview %}
 {% embed_file editor/change-background-color-of-cell/content-overview.ts preview %}

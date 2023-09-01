@@ -33,8 +33,8 @@ I want to add buttons in the DateRangePicker's popup for setting predefined rang
 For achieving the desired result a custom Popup must be defined for the DateRangePicker, where the custom buttons can be added. Since the custom Popup of the DateRangePicker provides the default children elements, they can be re-used.
 
 This is an example showcasing how to limit the value:
- 
-{% meta id:index height:760 %}
-{% embed_file dateinputs/daterangepicker-predefined-ranges/main.jsx preview %}  
-{% embed_file dateinputs/daterangepicker-predefined-ranges/styles.css  %} 
+
+{% meta id:index height:560 %}
+{% embed_file dateinputs/daterangepicker-predefined-ranges/main.jsx preview %}
+{% embed_file dateinputs/daterangepicker-predefined-ranges/styles.css %}
 {% endmeta %}

@@ -33,7 +33,7 @@ This requires setting the columns inside the ExcelExport, then sorting and updat
 
 This is an example showcasing this approach:
 
-{% meta id:index height:760 %}
+{% meta id:index height:600 %}
 {% embed_file grid/excel-export-with-column-reorder/main.jsx preview %}
 {% embed_file grid/excel-export-with-column-reorder/products.json %}
 {% endmeta %}

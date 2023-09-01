@@ -37,6 +37,6 @@ The onPageChange event contains the nativeEvent and storing its target scrollTop
 Following is an example demonstrating this approach:
 
 
-{% meta id height:760 %}
+{% meta id height:500 %}
 {% embed_file grid/virtual-scrolling-pagechange-event/main.jsx preview %}
 {% endmeta %}

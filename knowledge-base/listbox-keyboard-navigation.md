@@ -34,6 +34,6 @@ I want to implement keyboard navigation for the ListBox component.
 
 In order to implement the keyboard navigation functionality for the ListBox, wrap it with a `div` element and handle the `onKeyDown` event of the `div`. Inside the `onKeyDown` event handler, move the items and change their selection based on the pressed keys.
 
-{% meta height:700 %}
+{% meta height:500 %}
 {% embed_file listbox/listbox-keyboard-navigation/main.jsx preview %}
 {% endmeta %}

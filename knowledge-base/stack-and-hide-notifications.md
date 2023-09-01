@@ -33,7 +33,7 @@ How to stack Notifications of the same type on Grid Row click and hide them auto
 In order to have multiple notifications of the same type, they need to be initialized separately from each other. For example, each individual notification can be kept as a separate element in an array. The Notifications would then be dynamically generated using the JavaScript Array.map() method.
 Hiding notifications can currently be done using the setTimeout function as shown in the example below.
 
-{% meta id:index height:760 %}
+{% meta id:index height:480 %}
 {% embed_file notification/stack-and-hide-after/main.jsx preview %}
 {% endmeta %}
 

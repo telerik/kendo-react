@@ -31,10 +31,10 @@ How can I use MultiSelect for filtering a column?
 Configure custom filterCell for the column where you want to use the MultiSelect. Either pass the data that will populate the MultiSelect from the main component or load it within the custom filterCell. Since there is no built-in filter operator for handling the array with multiple value that the MultiSelect will return, a custom operator must be defined.
 
 Here is an example demonstrating this approach:
- 
-{% meta height:760 %}
-{% embed_file grid/multiselect-filter-cell/main.jsx preview %}   
-{% embed_file grid/multiselect-filter-cell/multiSelectFilterCell.jsx %}   
-{% embed_file grid/multiselect-filter-cell/products.json %}   
+
+{% meta id height:650 %}
+{% embed_file grid/multiselect-filter-cell/main.jsx preview %}
+{% embed_file grid/multiselect-filter-cell/multiSelectFilterCell.jsx %}
+{% embed_file grid/multiselect-filter-cell/products.json %}
 {% endmeta %}
  

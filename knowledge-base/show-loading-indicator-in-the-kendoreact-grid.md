@@ -32,6 +32,6 @@ How to show a loading indicator when loading data from the server.
 ## Solution
 Currently, this can be done using the loading panel element. This element can be shown and hidden conditionally.
 
-{% meta id:index height:760 %}
+{% meta id:index height:500 %}
 {% embed_file grid/show-loading-indicator/main.jsx preview %}
 {% endmeta %}

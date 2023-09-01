@@ -37,7 +37,7 @@ For achieving the desired result, define a timelineHeaderCell for the GanttWeekV
 Following is an example demonstrating this approach:
 
 
-{% meta id height:760 %}
+{% meta id height:660 %}
 {% embed_file gantt/scroll-to-today/main.jsx preview %}
 {% embed_file gantt/scroll-to-today/data.js %}
 {% endmeta %}

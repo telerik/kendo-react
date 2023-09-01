@@ -37,7 +37,7 @@ For setting a placeholder text for the built-in Grid filters a combination of us
 Following is an example demonstrating how to set a placeholder for NumericTextBox, DatePicker and simple inputs for the filter components in the Grid: 
 
 
-{% meta id height:760 %}
+{% meta id height:480 %}
 {% embed_file grid/grid-show-placeholder-for-filters/main.jsx preview %}
 {% embed_file grid/grid-show-placeholder-for-filters/grid-with-filtering.jsx %}
 {% embed_file grid/grid-show-placeholder-for-filters/sample-products.js %}

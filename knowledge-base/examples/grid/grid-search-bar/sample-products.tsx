@@ -9,6 +9,7 @@ export const sampleProducts = [{
     "UnitsOnOrder" : 0,
     "ReorderLevel" : 10,
     "Discontinued" : false,
+    "FirstOrderedOn": new Date(),
     "Category" : {
         "CategoryID" : 1,
         "CategoryName" : "Beverages",
@@ -39,6 +40,7 @@ export const sampleProducts = [{
     "UnitPrice" : 10.0000,
     "UnitsInStock" : 13,
     "UnitsOnOrder" : 70,
+    "FirstOrderedOn": new Date(),
     "ReorderLevel" : 25,
     "Discontinued" : false,
     "Category" : {

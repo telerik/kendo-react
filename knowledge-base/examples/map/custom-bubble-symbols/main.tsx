@@ -76,6 +76,8 @@ const App = () => {
 };
 
 ReactDOM.render(
-    <App />,
-    document.getElementById('app')
-);
+    <React.Fragment>
+      <App />
+    </React.Fragment>,
+    document.querySelector('my-app')
+  );

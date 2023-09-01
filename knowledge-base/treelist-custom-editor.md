@@ -31,7 +31,7 @@ I want to change the default editor for the TreeList with one that supports maxL
 ## Solution
 The TreeList columns have editCell that accepts not only the default editors that are provided in the package, but also a custom component. The following example shows how to define custom editor with input element where the maxLength attribute is set for limiting the number of characters:
 
-{% meta id height:760 %}
+{% meta id height:580 %}
 {% embed_file treelist/treelist-custom-editor/main.jsx preview %}
 {% embed_file treelist/treelist-custom-editor/data.js preview %}
 {% embed_file treelist/treelist-custom-editor/my-command-cell.jsx preview %}

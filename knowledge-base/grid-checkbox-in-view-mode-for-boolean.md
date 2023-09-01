@@ -31,11 +31,11 @@ How can I display a boolean value in CheckBox in view mode and editable CheckBox
 Add custom cell for the boolean column and render disabled CheckBox for view mode of the cell and enabled CheckBox when the dataItem is in edit mode.
 
 Here is an example demonstrating this approach:
- 
-{% meta height:760 %}
-{% embed_file grid/checkbox-in-view-mode-for-boolean/main.jsx preview %}   
-{% embed_file grid/checkbox-in-view-mode-for-boolean/ExternalGridCell.jsx %}   
-{% embed_file grid/checkbox-in-view-mode-for-boolean/sample-products.jsx %}   
+
+{% meta id height:760 %}
+{% embed_file grid/checkbox-in-view-mode-for-boolean/main.jsx preview %}
+{% embed_file grid/checkbox-in-view-mode-for-boolean/ExternalGridCell.jsx %}
+{% embed_file grid/checkbox-in-view-mode-for-boolean/sample-products.jsx %}
 {% endmeta %}
  
 The example is using an extended Grid cell (ExternalGridCell) which adds all class names and attributes to the TD elements and allows changing only the content of the cell. This extended Grid cell is useful for every scenario with custom cells. 

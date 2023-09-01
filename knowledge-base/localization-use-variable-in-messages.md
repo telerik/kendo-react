@@ -33,7 +33,7 @@ Extend the LocalizationProvider by providing an option for executing a ${variabl
 
 This is an example showcasing this approach:
  
-{% meta height:760 %}
+{% meta height:320 %}
 {% embed_file localization/use-variable-in-messages/main.jsx preview %} 
 {% embed_file localization/use-variable-in-messages/Chooser.jsx %} 
 {% embed_file localization/use-variable-in-messages/Message.jsx %} 

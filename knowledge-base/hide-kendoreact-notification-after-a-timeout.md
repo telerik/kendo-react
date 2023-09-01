@@ -32,7 +32,7 @@ How to hide the Notification component automatically after a specific timeout.
 ## Solution
 Currently, this can be done using the setTimeout function as shown in the example below.
 
-{% meta id:index height:760 %}
+{% meta id:index height:300 %}
 {% embed_file notification/hide-after/main.jsx preview %}
 {% endmeta %}
 

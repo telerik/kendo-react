@@ -33,7 +33,7 @@ To handle the click event, add event listener to the document for the "mousedown
 
 The following example demonstrates this approach:
 
-{% meta id height:760 %}
+{% meta id height:460 %}
 {% embed_file layout/drawer-close-on-click/main.jsx preview%}
 {% embed_file layout/drawer-close-on-click/styles.css %}
 {% endmeta %}

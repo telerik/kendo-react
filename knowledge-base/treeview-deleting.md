@@ -31,6 +31,7 @@ Create custom item rendering through TreeView's "item" property. Define the cust
 Since the delete function will be within the main component where the TreeView is rendered, use React Context for passing reference to the function to the nodes. Within the custom item add a delete icon/button and on its onClick event, return the props (where the item info is accessible).
 
 Following is an example demonstrating the approach:
-{% meta id:index height:760 %}
+
+{% meta id:index height:480 %}
 {% embed_file treeview/treeview-deleting/main.jsx preview %}
-{% endmeta %}
+{% endmeta %} 

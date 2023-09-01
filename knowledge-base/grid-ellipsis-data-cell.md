@@ -33,7 +33,7 @@ This can be achieved by wrapping the content of the data cells in a DIV element 
 
 This is an example showcasing how to limit the value:
 
-{% meta height:760 %}
-{% embed_file grid/grid-ellipsis-data-cell/main.jsx preview %} 
+{% meta height:600 %}
+{% embed_file grid/grid-ellipsis-data-cell/main.jsx preview %}
 {% embed_file grid/grid-ellipsis-data-cell/styles.css preview %}
 {% endmeta %}
