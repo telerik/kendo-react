@@ -37,6 +37,6 @@ The Grid's API has fitColumns method that will change the width of a given colum
 Following is an example demonstrating this approach:
  
 
-{% meta id height:760 %}
+{% meta id height:450 %}
 {% embed_file grid/using-fitColumns-method/main.jsx preview %}
 {% endmeta %}

@@ -39,6 +39,6 @@ This requires the following:
 
 This can be seen in action in the following example:
 
-{% meta id height:760 %}
+{% meta id height:500 %}
 {% embed_file treelist/drag-and-drop/main.jsx preview %}
 {% endmeta %}

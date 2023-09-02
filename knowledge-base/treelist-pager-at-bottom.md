@@ -27,7 +27,7 @@ category: knowledge-base
 
 
 ## Description
-
+ 
 How can I make the pager stick to the bottom of the TreeList, even if the page size is smaller?
 
 ## Solution
@@ -35,7 +35,7 @@ How can I make the pager stick to the bottom of the TreeList, even if the page s
 A custom [`Pager`]({% slug pi_datatools_pagerprops %}) should be rendered below the TreeList component and the [`onPageChange`]({% slug api_datatools_pagerprops %}#toc-onpagechange) event should be handled to update accordingly the data visible on the current page.
 
 
-{% meta id height:760 %}
+{% meta id height:650 %}
 {% embed_file treelist/pager-at-bottom/main.jsx preview %}
 {% embed_file treelist/pager-at-bottom/pager.jsx %}
 {% embed_file shared/treelist-data.js %}

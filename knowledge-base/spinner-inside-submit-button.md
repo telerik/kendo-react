@@ -33,6 +33,6 @@ This can be achieved by using the iconClass props and conditionally changing the
 
 ![Spinner Inside Submit Button](examples/form/spinner-inside-submit-button/spinner-inside-submit-button.gif)
 
-{% meta id:index height:760 %}
+{% meta id:index height:500 %}
 {% embed_file form/spinner-inside-submit-button/main.jsx preview %}
 {% endmeta %}

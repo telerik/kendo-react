@@ -33,7 +33,7 @@ Handle the "headerCellRender" of the Grid to customize the header cells and if t
 
 This is an example showcasing this approach:
 
-{% meta id:index height:760 %}
+{% meta id:index height:500 %}
 {% embed_file grid/remove-select-all/main.jsx preview %}
 {% embed_file grid/remove-select-all/products.json %}
 {% endmeta %}

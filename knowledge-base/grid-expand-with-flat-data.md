@@ -33,6 +33,6 @@ Add a column with custom "cell" for rendering the expand/collapse icons. Within 
 
 Following is an example demonstrating how to simulate hierarchy with flat data where the order of the items in the 'data' are in the correct order and the parent items have ParentID equal to 0. 
 
-{% meta height:760 %}
+{% meta height:480 %}
 {% embed_file grid/expand-with-flat-data/main.jsx preview %} 
 {% endmeta %}

@@ -25,11 +25,11 @@ const App = () => {
     if (tagText.includes('Event')) {
       backgroundColor = 'red';
     } else if (tagText.includes('Visit')) {
-      backgroundColor = 'yellow';
+      backgroundColor = '#599e0e';
     }
 
     const tagStyle = {
-      background: backgroundColor,
+      backgroundColor: backgroundColor,
       display: 'inline-block',
       padding: '2px 8px',
       borderRadius: '4px',

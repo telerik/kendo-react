@@ -40,7 +40,7 @@ This can be done by:
 
 This is an example showcasing this:
 
-{% meta id:index height:760 %}
+{% meta id:index height:300 %}
 {% embed_file popup/close-on-blur/main.jsx preview %}
 {% endmeta %}
 

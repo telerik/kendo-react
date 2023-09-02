@@ -35,6 +35,6 @@ How to clear the value of a DropDownList?
 A custom clear button can be added by inserting children elements and passing them to the [`valueRender`]({% slug api_dropdowns_dropdownlistprops %}#toc-valuerender) prop.
 
 
-{% meta id height:760 %}
+{% meta id height:460 %}
 {% embed_file dropdownlist/dropdownlist-clear-value/main.tsx preview %}
 {% endmeta %}

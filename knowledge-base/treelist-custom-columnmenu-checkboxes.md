@@ -33,7 +33,7 @@ How can I create a custom column menu filter with checkboxes for a column in the
 
 A custom column menu should be created through the [`filterContent`]({% slug api_datatools_columnmenuprops %}#toc-filtercontent) property to the custom filter we want to create. In the custom filter we can render a list with checkboxes, whose onChange event calls the onColumnMenuFilterChange event, which sets the state of the filter and updates the TreeList accordingly.
 
-{% meta id height:760 %}
+{% meta id height:580 %}
 {% embed_file treelist/custom-columnmenu-checkboxes/main.jsx preview %}
 {% embed_file treelist/custom-columnmenu-checkboxes/checkboxFilterColumnMenu.jsx %}
 {% embed_file treelist/custom-columnmenu-checkboxes/data.js %}

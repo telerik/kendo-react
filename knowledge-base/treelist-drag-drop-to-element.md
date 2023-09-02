@@ -31,7 +31,7 @@ How can I drag and drop item from TreeList to a DIV element?
 
 ## Solution
 
-This requires the following:
+This requires the following: 
 
 1. Use the [rowRender]({% slug api_treelist_treelistprops %}#toc-rowrender) property of the TreeList to add the dragStart event to the rows.
 1. Save the dragged item in the state during the [onDragStart](https://developer.mozilla.org/en-US/docs/Web/API/Document/dragstart_event) event.
@@ -39,7 +39,7 @@ This requires the following:
 
 Following is an example with the described approach:
 
-{% meta id height:760 %}
+{% meta id height:700 %}
 {% embed_file treelist/drag-drop-to-element/main.jsx preview %}
 {% embed_file treelist/drag-drop-to-element/data.js  %}
 {% endmeta %}

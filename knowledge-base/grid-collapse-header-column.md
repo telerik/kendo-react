@@ -36,7 +36,7 @@ How can I collapse the columns inside the Grid header?
 
 This can be achieved by toggling a flag variable in the state that will determine whether or not the nested columns will render.
 
-{% meta id height:760 %}
+{% meta id height:560 %}
 {% embed_file grid/collapse-header-column/main.jsx preview %}
 {% embed_file grid/collapse-header-column/products.json %}
 {% endmeta %}

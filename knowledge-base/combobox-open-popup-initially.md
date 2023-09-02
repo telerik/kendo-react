@@ -33,7 +33,7 @@ I want the popup of the ComboBox to open when the component is initialized
 For manually opening the popup of the ComboBox after the initialization we can use its "ref" within React.useEffect and use "toggleBtnClick" to simulate a click and trigger the opening.
 
 Here is an example demonstrating this approach:
- 
-{% meta height:760 %}
-{% embed_file dropdowns/combobox-open-popup-initially/main.jsx preview %}   
+
+{% meta id height:480 %}
+{% embed_file dropdowns/combobox-open-popup-initially/main.jsx preview %}
 {% endmeta %}

@@ -33,7 +33,7 @@ Set className to the TabStrip and apply custom styles for changing the overflow 
 
 Following is an example with two TabStrips. The first one introduces scrollbar for the tabs and the content and the second one is with scrollbar only for the tabs.
 
-{% meta id height:760 %}
-{% embed_file layout/tabstrip-scrollbar-for-tabs/main.jsx %}
+{% meta id height:500 %}
+{% embed_file layout/tabstrip-scrollbar-for-tabs/main.jsx preview %}
 {% embed_file layout/tabstrip-scrollbar-for-tabs/styles.css %}
 {% endmeta %}

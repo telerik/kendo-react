@@ -33,7 +33,7 @@ This can be achieved by using the drawDom and exportPDF from the @progress/kendo
 
 This is an example showcasing this approach:
 
-{% meta id:index height:760 %}
+{% meta id:index height:500 %}
 {% embed_file grid/grid-pdf-export-with-watermark/main.jsx preview %}
 {% embed_file grid/grid-pdf-export-with-watermark/products.json %}
 {% endmeta %}

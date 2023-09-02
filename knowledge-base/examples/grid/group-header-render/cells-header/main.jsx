@@ -74,7 +74,7 @@ const App = () => {
     },
     [collapsedState]
   );
-  const newData = setExpandedState({
+  const newData = setExpandedState({ 
     data: resultState,
     collapsedIds: collapsedState,
   });

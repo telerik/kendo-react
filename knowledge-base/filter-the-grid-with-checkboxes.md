@@ -38,7 +38,7 @@ This is already a built-in option of the Grid and the example can be observed [h
 
 In KendoReact, you can programmatically implement the data filtering with checkboxes for the Grid by using the [ColumnMenu]({% slug column_menu_grid %}) component.
 
-{% meta id:index height:760 %}
+{% meta id:index height:580 %}
 {% embed_file grid/grid-filter-checkbox/main.jsx preview %}
 {% embed_file grid/grid-filter-checkbox/customColumnMenu.jsx %}
 {% embed_file shared/products.json %}

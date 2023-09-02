@@ -32,6 +32,6 @@ I use custom headerCell for one of the Grid columns, but the sorting icon and th
 ## Solution
 Following is an example demonstrating the correct headerCell structure for rendering the sort and the columnMenu icons:
 
-{% meta height:480 %}
+{% meta height:420 %}
 {% embed_file grid/custom-header-cell-with-sorting-and-columnmenu/main.jsx preview %}
 {% endmeta %}

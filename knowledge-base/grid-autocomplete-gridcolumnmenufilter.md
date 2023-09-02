@@ -41,7 +41,7 @@ The values of the DropDownLists that contain the filter operators should be kept
 The onChange event handlers of the AutoComplete components will be the ones that call the firstFilterProps.onChange and secondFilterProps.onChange events and will pass the operators from the state and the value from the event.
 
 
-{% meta id height:760 %}
+{% meta id height:520 %}
 {% embed_file grid/columnmenufilter-with-autocomplete/main.jsx preview %}
 {% embed_file grid/columnmenufilter-with-autocomplete/customFilterUI.jsx %}
 {% embed_file shared/products.json %}

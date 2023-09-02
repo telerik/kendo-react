@@ -33,7 +33,7 @@ I want to set the DateRangePicker to invalid state or show error message if the 
 Set the "valid" property of the DateRangePicker to a state variable that can be changed to "true" or "false" within the onChange event of the DateRangePicker based on the "start" and "end" values.
 
 This is an example showcasing the approach:
- 
-{% meta height:760 %}
-{% embed_file dateinputs/daterangepicker-validate-range/main.jsx preview %}  
+
+{% meta id height:560 %}
+{% embed_file dateinputs/daterangepicker-validate-range/main.jsx preview %}
 {% endmeta %}

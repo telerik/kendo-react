@@ -48,7 +48,7 @@ const linkMarker = (map: Map, marker: MapMarker) => {
 }
 
 const reset = (args: ResetEvent) => {
-    const map = args.sender;
+    const map = args.target;
     const layer = map.layers[2];
 
     for (let marker of layer.items) {
@@ -79,6 +79,8 @@ const App = () => (
 );
 
 ReactDOM.render(
-    <App />,
-    document.getElementById('app')
-);
+    <React.Fragment>
+      <App />
+    </React.Fragment>,
+    document.querySelector('my-app')
+  );

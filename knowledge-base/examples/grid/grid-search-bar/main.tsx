@@ -3,49 +3,83 @@ import * as ReactDOM from 'react-dom';
 import {
   Grid,
   GridColumn as Column,
-  GridFilterChangeEvent,
-  GridFilterOperators,
   GridToolbar,
 } from '@progress/kendo-react-grid';
-import {
-  process,
-} from '@progress/kendo-data-query';
+import { process } from '@progress/kendo-data-query';
 import { sampleProducts } from './sample-products';
 import { Input } from '@progress/kendo-react-inputs';
-const filterOperators: GridFilterOperators = {
-  text: [{ text: 'grid.filterContainsOperator', operator: 'contains' }],
-  numeric: [{ text: 'grid.filterEqOperator', operator: 'eq' }],
-  date: [{ text: 'grid.filterEqOperator', operator: 'eq' }],
-  boolean: [{ text: 'grid.filterEqOperator', operator: 'eq' }],
-};
+
+export function getNestedValue(fieldName, dataItem) {
+  const path = (fieldName || '').split('.');
+  let data = dataItem;
+  path.forEach((p) => {
+    data = data ? data[p] : undefined;
+  });
+  return data;
+}
+
+function highlightSearchTextInReactChildren(children, searchText) {
+  function highlightInNode(node) {
+    if (typeof node === 'string') {
+      const modifiedContent = node.replace(
+        new RegExp(`(${searchText})`, 'gi'),
+        '<span style="background-color:#a8edb3">$1</span>'
+      );
+      if (node !== modifiedContent) {
+        return (
+          <span
+            dangerouslySetInnerHTML={{
+              __html: modifiedContent,
+            }}
+          />
+        );
+      }
+    } else if (React.isValidElement(node)) {
+      if (!node.props.children.map) {
+        return React.cloneElement(
+          node,
+          {},
+          highlightInNode(node.props.children)
+        );
+      } else {
+        return React.cloneElement(
+          node,
+          {},
+          node.props.children?.map((ch) => highlightInNode(ch))
+        );
+      }
+    }
+    return node;
+  }
+  return React.Children.map(children, (child) => {
+    return highlightInNode(child);
+  });
+}
 
 const App = () => {
   const [filterValue, setFilterValue] = React.useState();
   const [filteredSampleProducts, setFilteredSampleProducts] =
     React.useState(sampleProducts);
-
   const [dataState, setDataState] = React.useState({
     skip: 0,
     take: 10,
   });
-
   const [dataResult, setDataResult] = React.useState(
     process(filteredSampleProducts, dataState)
   );
-
   const dataStateChange = (event) => {
     setDataResult(process(filteredSampleProducts, event.dataState));
     setDataState(event.dataState);
   };
-
   const expandChange = (event) => {
     const isExpanded =
       event.dataItem.expanded === undefined
         ? event.dataItem.aggregates
         : event.dataItem.expanded;
     event.dataItem.expanded = !isExpanded;
-
-    setDataResult({ ...dataResult });
+    setDataResult({
+      ...dataResult,
+    });
   };
   const onFilterChange = (ev) => {
     let value = ev.value;
@@ -71,52 +105,48 @@ const App = () => {
       return match;
     });
     setFilteredSampleProducts(newData);
-    let clearedPagerDataState = { ...dataState, take: 10, skip: 0 };
+    let clearedPagerDataState = {
+      ...dataState,
+      take: 10,
+      skip: 0, 
+    };
     let processedData = process(newData, clearedPagerDataState);
     setDataResult(processedData);
     setDataState(clearedPagerDataState);
   };
 
-  const getHighlight = (value, filter) => {
-    let index = value
-      .toLocaleLowerCase()
-      .indexOf(filterValue.toLocaleLowerCase());
-    if (index >= 0) {
-      let left = value.substr(0, index);
-      let right = value.substring(index + filter.length, value.length);
-      return (
-        <React.Fragment>
-          {left}
-          <span className="highligth">
-            {value.substr(index, filter.length)}
-          </span>
-          {getHighlight(right, filter)}
-        </React.Fragment>
-      );
-    }
-    return value;
-  };
   const cellRender = React.useCallback(
     (td, props) => {
-      const value = td.props.children;
-      if (
-        filterValue &&
-        filterValue.length > 0 &&
-        value.substr &&
-        value.toLocaleLowerCase().indexOf(filterValue.toLocaleLowerCase()) >= 0
-      ) {
-        const children = getHighlight(value, filterValue.toLocaleLowerCase());
-        return React.cloneElement(td, [props], [children]);
+      if (props.rowType === 'data') {
+        const value = getNestedValue(props.field, props.dataItem)?.toString();
+        if (!value) {
+          return td;
+        }
+        if (
+          filterValue &&
+          filterValue.length > 0 &&
+          value.toLocaleLowerCase().indexOf(filterValue.toLocaleLowerCase()) >=
+            0
+        ) {
+          const children = highlightSearchTextInReactChildren(
+            td.props.children,
+            filterValue
+          );
+          return React.cloneElement(td, [props], [children]);
+        }
       }
       return td;
     },
     [filterValue]
   );
+
   return (
     <div>
       <Grid
         cellRender={cellRender}
-        style={{ height: '420px' }}
+        style={{
+          height: '420px',
+        }}
         data={dataResult}
         {...dataState}
         onDataStateChange={dataStateChange}
@@ -126,7 +156,13 @@ const App = () => {
       >
         <GridToolbar>
           <div>
-            <span style={{ padding: '5px' }}>Search: </span>
+            <span
+              style={{
+                padding: '5px',
+              }}
+            >
+              Search:{' '}
+            </span>
             <span>
               <Input
                 value={filterValue}
@@ -158,5 +194,4 @@ const App = () => {
     </div>
   );
 };
-
 ReactDOM.render(<App />, document.querySelector('my-app'));

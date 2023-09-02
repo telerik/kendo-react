@@ -36,7 +36,7 @@ The GridFilterCellProps passed to the filterCell contain a collection with all o
 
 Following is an example demonstrating how to add a DropDownList for the operators in a filterCell:
 
-{% meta id:index height:760 %}
+{% meta id:index height:520 %}
 {% embed_file grid/add-operators-dropdown-for-custom-filtercell/main.jsx preview %}
 {% embed_file grid/add-operators-dropdown-for-custom-filtercell/InputFilterCell.jsx preview %}
 {% embed_file grid/add-operators-dropdown-for-custom-filtercell/sample-products.jsx preview %}

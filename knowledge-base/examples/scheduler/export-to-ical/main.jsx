@@ -27,7 +27,7 @@ const getISOString = (date, toUTC) => {
 };
 
 const App = () => {
-    const [data, setData] = React.useState(sampleData);giut
+    const [data, setData] = React.useState(sampleData);
 
     const customHeader = props => {
         return (

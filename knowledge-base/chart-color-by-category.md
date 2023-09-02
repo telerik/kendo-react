@@ -33,8 +33,8 @@ I want to have different colors per category value for the ChartSeriesItem
 The color property of the ChartSeriesItem accepts function where the dataItem is accessible. Using the category value we can create a random color per each category (or use predefined colors) and store it in an array or an object, so it can be re-used for other items with the same category. 
 
 This is an example showcasing how to limit the value:
- 
-{% meta height:760 %}
-{% embed_file charts/chart-color-by-category/main.jsx preview %}  
-{% embed_file charts/chart-color-by-category/bubble-data.json preview %}  
+
+{% meta id:index height:760 %}
+{% embed_file charts/chart-color-by-category/main.jsx preview %}
+{% embed_file charts/chart-color-by-category/bubble-data.json preview %}
 {% endmeta %}

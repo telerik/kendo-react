@@ -39,6 +39,6 @@ In the following example, when you double-click a recurring item, a Window compo
 {% embed_file scheduler/recurring-event-form-editor/custom-dialog.jsx %}
 {% embed_file scheduler/recurring-event-form-editor/custom-form.jsx %}
 {% embed_file scheduler/recurring-event-form-editor/custom-item.jsx %}
-{% embed_file scheduler/recurring-event-form-editor/editor.jsx %}
+{% embed_file scheduler/recurring-event-form-editor/editors.jsx %}
 {% embed_file scheduler/recurring-event-form-editor/data.js %}
 {% endmeta %}

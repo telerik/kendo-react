@@ -35,6 +35,6 @@ How can I use the Upload component inside a Form?
 In order to achieve this, the Upload files data has to be added to the Form data and then submitted programmatically to the server.
 
 
-{% meta id height:760 %}
+{% meta id height:460 %}
 {% embed_file form/file-upload/main.jsx preview %}
 {% endmeta %}

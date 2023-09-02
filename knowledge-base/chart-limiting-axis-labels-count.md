@@ -33,7 +33,8 @@ I have a Chart with many points and rendering the axis labels for each point mak
 Limiting the number of the axis labels can be achieved by setting the "ChartCategoryAxisItem.labels.step" property. For example, setting the "step" property to "10" will render every 10th label.
 
 Here is an example with the described approach:
- 
-{% meta height:760 %}
-{% embed_file charts/limiting-axis-labels-count/main.jsx preview %}   
+
+{% meta id height:340 %}
+{% embed_file charts/limiting-axis-labels-count/main.jsx preview %}
 {% endmeta %}
+

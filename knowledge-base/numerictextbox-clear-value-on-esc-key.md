@@ -33,6 +33,6 @@ Within React.useEffect, after the initialization of the component, add event lis
 
 Following is an example demonstrating this approach: 
 
-{% meta height:760 %}
+{% meta height:300 %}
 {% embed_file inputs/numerictextbox-clear-value-on-esc-key/main.jsx preview %} 
 {% endmeta %}

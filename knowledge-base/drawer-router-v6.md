@@ -32,11 +32,11 @@ I want to use KendoReact Drawer with React Router version 6
 The following example demonstrates how to use React Router version 6.0.1 with KendoReact Drawer:
 
 {% meta id height:760 %}
-{% embed_file layout/drawer-router-v6/main.jsx preview%}
+{% embed_file layout/drawer-router-v6/main.jsx preview %}
 {% embed_file layout/drawer-router-v6/styles.css %}
 {% embed_file layout/drawer-router-v6/About.jsx %}
 {% embed_file layout/drawer-router-v6/DrawerContainer.jsx %}
-{% embed_file layout/drawer-router-v6/Home.jsx %} 
+{% embed_file layout/drawer-router-v6/Home.jsx %}
 {% embed_file layout/drawer-router-v6/Products.jsx %}
 {% embed_file layout/drawer-router-v6/Team.jsx %}
 {% endmeta %}

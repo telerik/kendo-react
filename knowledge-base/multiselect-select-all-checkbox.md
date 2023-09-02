@@ -39,7 +39,7 @@ This can be done with [the KendoReact Multiselect component]({% slug overview_mu
 
 This is an example showcasing this in action:
 
-{% meta id:index height:760 %}
+{% meta id:index height:480 %}
 {% variant title:Hooks %}
 {% embed_file multiselect/multiselect-select-all-checkbox/func/main.jsx preview %}
 {% embed_file shared/countries.js %}

@@ -34,6 +34,6 @@ How can I close the Popup by clicking outside?
 
 Attach a global click handler that checks if the clicked element is the Popup and then  close it programmatically:
 
-{% meta id:index height:760 %}
+{% meta id:index height:300 %}
 {% embed_file popup/close-on-click-outside/main.jsx preview %}
 {% endmeta %}

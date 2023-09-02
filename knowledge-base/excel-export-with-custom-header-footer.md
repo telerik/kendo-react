@@ -40,7 +40,7 @@ The following example shows how to:
 2. Apply [additional settings](https://www.telerik.com/kendo-react-ui/components/excelexport/api/KendoOoxml/) to the cells.
 3. Freeze the first two rows in order to have the header and the column titles to be visible when scrolling.
 
-{% meta id:index height:760 %}
+{% meta id:index height:640 %}
 {% embed_file grid/excel-export-header-footer/main.jsx preview %}
 {% embed_file shared/products.json %}
 {% endmeta %}

@@ -8,7 +8,6 @@ import {
   getSelectedStateFromKeyDown,
 } from '@progress/kendo-react-grid';
 import { getter } from '@progress/kendo-react-common';
-import * as React from 'react';
 import { useTableKeyboardNavigation } from '@progress/kendo-react-data-tools';
 
 export const CustomCell = (props) => {
