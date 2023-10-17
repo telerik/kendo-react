@@ -16,7 +16,7 @@ category: knowledge-base
 	<tbody>
 		<tr>
 			<td>Product Version</td>
-			<td>5.12.0</td>
+			<td>6.0.2</td>
 		</tr>
 		<tr>
 			<td>Product</td>
@@ -45,9 +45,20 @@ This will required the following setup:
 
 ## Enabling the drag and drop on mobile devices
 
-The native Drag & Drop API does not support touch events by default. It is possible to enable the drag and drop functionality on mobile devices by using a polyfill:
+This can be achieved by using the KendoReact [Drag&Drop](https://www.telerik.com/kendo-react-ui/components/utils/drag-and-drop/) utility with a custom `DragHandleCell` with touchAction set to `none`:
 
 {% meta id:index height:900 %}
-{% embed_file scheduler/dnd-from-grid-mobile/main.jsx preview %}
+{% embed_file scheduler/dnd-from-grid-mobile/draggable/main.jsx preview %}
+{% embed_file scheduler/dnd-from-grid-mobile/draggable/drag-handle-cell.jsx %}
+{% embed_file scheduler/dnd-from-grid-mobile/draggable/draggable-row.jsx %}
+{% embed_file shared/data.js %}
+{% embed_file shared/products.json %}
+{% endmeta %}
+
+
+The native Drag & Drop API does not support touch events by default. It is possible to enable the drag and drop functionality on mobile devices by using a polyfill as well:
+
+{% meta id:index height:900 %}
+{% embed_file scheduler/dnd-from-grid-mobile/polyfill/main.jsx preview %}
 {% embed_file shared/data.js %}
 {% endmeta %}
