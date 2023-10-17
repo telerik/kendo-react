@@ -44,11 +44,11 @@ const App = () => {
     let startDate = new Date(parseInt(start));
     let endDate = new Date(parseInt(end));
     let newEvent = {
-        id: guid(),
-        title: dragItem.title,
-        StartTimezone: null,
-        start: startDate,
-        end: endDate
+      id: guid(),
+      title: dragItem.title,
+      StartTimezone: null,
+      start: startDate,
+      end: endDate,
     };
     setData([newEvent, ...data]);
   };
@@ -76,7 +76,7 @@ const App = () => {
         defaultDate={new Date('2013/6/13')}
         ref={MyScheduler}
       >
-        <WeekView showWorkHours={false} />
+        <WeekView />
         <MonthView />
       </Scheduler>
       <hr />
