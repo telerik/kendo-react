@@ -1,0 +1,95 @@
+.orders-demo.card-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.orders-demo .custom-card-header {
+    min-width: 48px;
+}
+
+.orders-demo .custom-card-header .k-skeleton {
+    opacity: 1;
+}
+
+.orders-demo .custom-card-header-action {
+    width: 20px;
+    height: 20px;
+}
+
+.orders-demo .custom-card {
+    width: 712px;
+    height: 350px;
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.08);
+}
+
+.orders-demo .k-skeleton {
+    opacity: 0.4;
+}
+
+.orders-demo .k-h4,
+.orders-demo .k-i-chart-pie {
+    opacity: 0.2;
+}
+
+.orders-demo .k-i-chart-pie {
+    font-size: 52px;
+}
+
+.orders-demo .skeleton-text-small {
+    width: 124px;
+    height: 15px;
+}
+
+.orders-demo .skeleton-text-medium {
+    height: 30px;
+}
+
+.orders-demo .skeleton-text-large {
+    height: 88px;
+}
+
+.orders-demo .padding-top-5 {
+    padding-top: 5px;
+}
+
+.contact-image {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 559px) {
+    .orders-demo .card-image-column {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 359px) {
+    .orders-demo .custom-card {
+        flex-direction: column !important;
+        height: 358px;
+        width: 359px;
+    }
+
+    .orders-demo .card-content {
+        padding: 16px;
+        box-sizing: border-box;
+    }
+
+    .orders-demo .custom-card-header {
+        width: 100%;
+        height: 40px;
+    }
+
+    .orders-demo .card-actions-container {
+        flex-direction: row;
+        padding: 10px 16px;
+    }
+
+    .orders-demo .skeleton-text-large {
+        height: 64px;
+    }
+}
