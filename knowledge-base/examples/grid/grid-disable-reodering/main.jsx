@@ -10,10 +10,7 @@ const App = () => {
   const handleClick = () => {
     setLocked(!locked);
   };
-
-  const onColumnReorder = (ev) => {
-    // debugger;
-  };
+  
   return (
     <div>
       <div className="mb-3">
@@ -40,7 +37,6 @@ const App = () => {
         }}
         data={products}
         reorderable={true}
-        onColumnReorder={onColumnReorder}
       >
         <Column
           field="ProductID"
