@@ -35,4 +35,5 @@ This can be achieved by limiting the input on the [onFilterChange](https://www.t
 
 {% meta id:index height:900 %}
 {% embed_file multiselect/multiselect-limit-input/main.jsx preview %}
+{% embed_file shared/countries.js %}
 {% endmeta %}
