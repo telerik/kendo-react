@@ -557,3 +557,13 @@ a {
         }
     }
 }
+
+.custom-toolbar {
+    padding: 15px 5px;
+    display: flex;
+    align-items: center;
+
+    h3 {
+        margin-left: 8px;
+    }
+}

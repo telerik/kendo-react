@@ -12,6 +12,7 @@ import { locales } from "./../resources/locales";
 
 import headerBg from "../assets/header-bg.png";
 import userAvatar from "../assets/user-avatar.jpg";
+import DrawerLayout from "../drawer/layout";
 const noMessage = "message not defined";
 
 export const Header = (props) => {
@@ -37,12 +38,8 @@ export const Header = (props) => {
   }, []);
 
   return (
-    <header className="header" style={{ backgroundImage: `url(${headerBg})` }}>
+    <header className="header">
       <div className="nav-container">
-        <div className="menu-button">
-          <span className={"k-icon k-i-menu"} onClick={onButtonClick} />
-        </div>
-
         <div className="title">
           <h1>
             {localizationService.toLanguageString(

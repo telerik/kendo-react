@@ -1,7 +1,7 @@
-'use client';
+"use client";
+
 import React from "react";
 
-import { countries } from "./resources/countries";
 import {
   IntlProvider,
   load,
@@ -39,13 +39,23 @@ load(
   esNumbers,
   esLocalCurrency,
   esCaGregorian,
-  esDateFields
+  esDateFields,
+  usNumbers,
+  usLocalCurrency,
+  usCaGregorian,
+  usDateFields,
+  frNumbers,
+  frLocalCurrency,
+  frCaGregorian,
+  frDateFields
 )
 
 loadMessages(esMessages, 'es-ES');
+loadMessages(enMessages, 'en-US');
+loadMessages(frMessages, 'fr-FR');
 
 //import 'hammerjs';
-//import './App.scss';
+import './App.scss';
 
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -73,8 +83,11 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <LocalizationProvider language={'es-ES'}>
-          <IntlProvider locale={'es-ES'}><Header/>{children}</IntlProvider>
+        <LocalizationProvider language={'en-US'}>
+          <IntlProvider locale={'en-US'}>
+            <Header/>
+            {children}
+          </IntlProvider>
         </LocalizationProvider>
       </body>
     </html>

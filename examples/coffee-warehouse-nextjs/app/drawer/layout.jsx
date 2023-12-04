@@ -1,4 +1,5 @@
 "use client";
+
 import * as React from "react";
 import { useRouter } from "next/navigation";
 import {
@@ -22,11 +23,6 @@ const items = [
     route: "/drawer/planning",
   },
   {
-    text: "Profile",
-    svgIcon: userIcon,
-    route: "/drawer/profile",
-  },
-  {
     separator: true,
   },
   {
@@ -40,7 +36,9 @@ export default function DrawerLayout(props) {
   const children = props.children;
   const [expanded, setExpanded] = React.useState(true);
   const [selected, setSelected] = React.useState("/drawer/dashboard");
+
   const router = useRouter();
+
   const handleClick = () => {
     setExpanded(!expanded);
   };
@@ -51,6 +49,7 @@ export default function DrawerLayout(props) {
       return currentPath.text;
     }
   };
+
   const onSelect = (e) => {
     router.push(e.itemTarget.props.route);
     setSelected(e.itemTarget.props.route);
@@ -59,10 +58,10 @@ export default function DrawerLayout(props) {
   const selectedItem = setSelectedItem(selected);
 
   return (
-    <div>
+    <>
       <div className="custom-toolbar">
         <Button svgIcon={menuIcon} fillMode="flat" onClick={handleClick} />
-        <span className="mail-box">Mail Box</span>
+        <h3>Settings</h3>
       </div>
       <Drawer
         expanded={expanded}
@@ -77,6 +76,6 @@ export default function DrawerLayout(props) {
       >
         <DrawerContent>{children}</DrawerContent>
       </Drawer>
-    </div>
+    </>
   );
 }

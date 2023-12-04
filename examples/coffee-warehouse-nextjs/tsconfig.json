@@ -19,7 +19,10 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@styles/*": [
+        "./app/styles/*"
+      ],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/drawer/dashboard/page.jsx", "app/drawer/planning/page.jsx", "app/drawer/info/page.jsx", "app/drawer/profile/page.jsx"],

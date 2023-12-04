@@ -1,5 +1,5 @@
 
-'use client';
+"use client";
 import * as React from 'react';
 
 import { useLocalization } from '@progress/kendo-react-intl';
