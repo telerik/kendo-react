@@ -1,0 +1,52 @@
+{
+  "name": "coffee-warehouse-dashboard-nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@progress/kendo-data-query": "^1.7.0",
+    "@progress/kendo-date-math": "^1.5.12",
+    "@progress/kendo-drawing": "^1.19.0",
+    "@progress/kendo-licensing": "^1.3.3",
+    "@progress/kendo-react-buttons": "6.1.1",
+    "@progress/kendo-react-charts": "6.1.1",
+    "@progress/kendo-react-data-tools": "6.1.1",
+    "@progress/kendo-react-dateinputs": "6.1.1",
+    "@progress/kendo-react-dialogs": "6.1.1",
+    "@progress/kendo-react-dropdowns": "6.1.1",
+    "@progress/kendo-react-editor": "6.1.1",
+    "@progress/kendo-react-excel-export": "6.1.1",
+    "@progress/kendo-react-form": "6.1.1",
+    "@progress/kendo-react-grid": "6.1.1",
+    "@progress/kendo-react-indicators": "6.1.1",
+    "@progress/kendo-react-inputs": "6.1.1",
+    "@progress/kendo-react-intl": "6.1.1",
+    "@progress/kendo-react-layout": "6.1.1",
+    "@progress/kendo-react-pdf": "6.1.1",
+    "@progress/kendo-react-progressbars": "6.1.1",
+    "@progress/kendo-react-scheduler": "6.1.1",
+    "@progress/kendo-react-treeview": "6.1.1",
+    "@progress/kendo-react-upload": "6.1.1",
+    "cldr-core": "44.0.1",
+    "cldr-dates-full": "^44.0.1",
+    "cldr-numbers-full": "^44.0.1",
+    "hammerjs": "^2.0.8",
+    "next": "14.0.3",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.3",
+    "sass": "^1.69.5",
+    "typescript": "^5"
+  }
+}

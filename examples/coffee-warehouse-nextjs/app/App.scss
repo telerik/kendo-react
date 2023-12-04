@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+html,
+body {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@import "./styles/main.scss";
