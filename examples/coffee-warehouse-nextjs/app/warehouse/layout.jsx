@@ -8,19 +8,25 @@ import {
   DrawerSelectEvent,
 } from "@progress/kendo-react-layout";
 import { Button } from "@progress/kendo-react-buttons";
-import { calendarIcon, menuIcon, userIcon, infoCircleIcon, gridIcon } from "@progress/kendo-svg-icons";
+import {
+  calendarIcon,
+  menuIcon,
+  userIcon,
+  infoCircleIcon,
+  gridIcon,
+} from "@progress/kendo-svg-icons";
 
 const items = [
   {
     text: "DashBoard",
     svgIcon: gridIcon,
     selected: true,
-    route: "/drawer/dashboard",
+    route: "/warehouse/dashboard",
   },
   {
     text: "Planning",
     svgIcon: calendarIcon,
-    route: "/drawer/planning",
+    route: "/warehouse/planning",
   },
   {
     separator: true,
@@ -28,14 +34,14 @@ const items = [
   {
     text: "Info",
     svgIcon: infoCircleIcon,
-    route: "/drawer/info",
+    route: "/warehouse/info",
   },
 ];
 
 export default function DrawerLayout(props) {
   const children = props.children;
   const [expanded, setExpanded] = React.useState(true);
-  const [selected, setSelected] = React.useState("/drawer/dashboard");
+  const [selected, setSelected] = React.useState("/warehouse/dashboard");
 
   const router = useRouter();
 

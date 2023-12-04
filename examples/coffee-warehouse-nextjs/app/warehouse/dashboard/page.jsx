@@ -18,8 +18,6 @@ import {
   CurrencyCell,
 } from "../../components/GridCells";
 
-//import { AppContext } from './../AppContext'
-
 import { employees } from "../../resources/employees";
 import { teams } from "../../resources/teams";
 import { orders } from "../../resources/orders";
@@ -38,7 +36,6 @@ export default function DashBoard() {
     isChartChangeRef.current = false;
   });
 
-  //const { teamId } = React.useContext(AppContext);
   const teamId = "1";
   const gridFilterExpression = isMyTeam
     ? {

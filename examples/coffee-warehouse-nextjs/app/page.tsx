@@ -5,9 +5,7 @@ import { useEffect } from "react";
 export default function Home() {
   const router = useRouter();
   useEffect(() => {
-    router.push("/drawer");
-  }, []);
-  return (
-    <main>{''}</main>
-  );
+    router.push("/warehouse");
+  }, [router]);
+  return <main>{""}</main>;
 }

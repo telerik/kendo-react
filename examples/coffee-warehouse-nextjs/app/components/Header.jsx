@@ -7,34 +7,31 @@ import { Avatar } from "@progress/kendo-react-layout";
 import { useLocalization } from "@progress/kendo-react-intl";
 
 import { locales } from "./../resources/locales";
+import Image from "next/image";
 
-//import { AppContext } from './../AppContext'
-
-import headerBg from "../assets/header-bg.png";
-import userAvatar from "../assets/user-avatar.jpg";
-import DrawerLayout from "../drawer/layout";
+import userAvatar from "../assets/teammember-04.png";
 const noMessage = "message not defined";
 
 export const Header = (props) => {
   const { onButtonClick } = props;
-  //const { avatar, localeId, onLanguageChange } = React.useContext(AppContext);
+  const [currentLanguage, setCurrentLanguage] = React.useState({
+    locale: "English",
+    localeId: "en",
+  });
   const localizationService = useLocalization();
 
-  const currentLanguage = "es";
-
   const imgRef = React.useRef(null);
-  //const hasImage = avatar && avatar.length > 0;
+
+  const onLanguageChange = (event) => {
+    setCurrentLanguage(event.value);
+    onButtonClick(event);
+  };
 
   React.useEffect(() => {
-    //if (hasImage) {
     var reader = new FileReader();
-
     reader.onload = function (e) {
       imgRef.current.setAttribute("src", e.target.result);
     };
-
-    //reader.readAsDataURL(avatar[0].getRawFile());
-    //}
   }, []);
 
   return (
@@ -57,11 +54,12 @@ export const Header = (props) => {
             dataItemKey={"localeId"}
             data={locales}
             value={currentLanguage}
-            //onChange={onLanguageChange}
+            defaultValue={"es"}
+            onChange={onLanguageChange}
           />
         </div>
         <Avatar type={"image"} shape={"circle"}>
-          {<img src={userAvatar} alt="user-avatar" />}
+          {<Image src={userAvatar} alt="user-avatar" />}
         </Avatar>
       </div>
     </header>
