@@ -3,7 +3,7 @@ import React from "react";
 import "./App.scss";
 
 import type { Metadata } from "next";
-import { GlobalizationTest } from "./globalization-and-header";
+import { GlobalizationAndHeader } from "./globalization-and-header";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,7 +25,7 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <GlobalizationTest>{children}</GlobalizationTest>
+        <GlobalizationAndHeader>{children}</GlobalizationAndHeader>
       </body>
     </html>
   );

@@ -56,7 +56,7 @@ loadMessages(frMessages, "fr");
 
 import { Header } from "./components/Header";
 
-export function GlobalizationTest(props) {
+export function GlobalizationAndHeader(props) {
   const [language, setLanguage] = React.useState("en");
   const onButtonClick = (event) => {
     setLanguage(event.value.localeId);
