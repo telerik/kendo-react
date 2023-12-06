@@ -6,7 +6,7 @@ export default async function Page() {
   );
 
   const getEmployees = async() => {
-    await delay(3000);
+    await delay(1000);
     return employees;
   }
   const data = await getEmployees();
