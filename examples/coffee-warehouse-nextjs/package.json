@@ -32,6 +32,7 @@
     "@progress/kendo-react-scheduler": "6.1.1",
     "@progress/kendo-react-treeview": "6.1.1",
     "@progress/kendo-react-upload": "6.1.1",
+    "@progress/kendo-theme-default": "^7.0.2",
     "cldr-core": "44.0.1",
     "cldr-dates-full": "^44.0.1",
     "cldr-numbers-full": "^44.0.1",
