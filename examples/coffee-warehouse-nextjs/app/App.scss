@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+html,
+body {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+header {
+    background-image: url('./assets/header-bg.png');
+}
