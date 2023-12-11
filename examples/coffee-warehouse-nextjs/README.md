@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and is deployed to [Vercel](https://vercel.com/). You can check the deployment by visiting the link below:
+
+- https://kendo-react-coffee-warehouse.vercel.app/
 
 ## The following KendoReact components are used in the sample application:
 
