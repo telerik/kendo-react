@@ -1,5 +1,3 @@
-"use client";
-
 import { Loader } from "@progress/kendo-react-indicators";
 import { Fragment } from "react";
 

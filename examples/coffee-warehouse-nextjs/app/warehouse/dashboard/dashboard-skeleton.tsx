@@ -1,5 +1,3 @@
-"use client";
-
 import { Fragment } from "react";
 import { Skeleton } from "@progress/kendo-react-indicators";
 
