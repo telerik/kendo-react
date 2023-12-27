@@ -164,17 +164,17 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 <tr>
   <td><b>Drag&Drop Utilities</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/drag-and-drop">React Drag&Drop Utilities Features</a></td>
-  <td><a href="https://www.telerik.com/kendo-react-ui/components/utils/drag-and-drop/">Documentation & Demos</td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/common/drag-and-drop/">Documentation & Demos</td>
 </tr>
  <tr>
   <td><b>Typography</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/typography">React Typography Features</a></td>
-  <td><a href="https://www.telerik.com/kendo-react-ui/components/utils/typography/">Documentation & Demos</td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/common/typography/">Documentation & Demos</td>
 </tr>
  <tr>
   <td><b>Icon & SVG Icon</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/icon-svgicon">React Icon & SVG Icon Features</a></td>
-  <td><a href="https://www.telerik.com/kendo-react-ui/components/utils/icon/">Documentation & Demos</td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/common/icon/">Documentation & Demos</td>
 </tr>
 </tbody></table>
 
