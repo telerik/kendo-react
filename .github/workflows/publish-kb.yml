@@ -1,0 +1,44 @@
+name: Publish Knowledge Base Article
+on:
+  repository_dispatch:
+    types: [publish-kb]
+
+run-name: Publish Knowledge Base Article ${{ github.event.client_payload.name }} ${{ github.event.client_payload.id }}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: '${{ github.workflow }} ${{ github.event.client_payload.id }}'
+  cancel-in-progress: true
+
+jobs:
+  publish_kb:
+    runs-on: windows-latest
+    steps:
+     - name: Checkout
+       uses: actions/checkout@v3
+
+     - name: configure git
+       run: |
+            git config --global user.email "kb-bot@telerik.com"
+            git config --global user.name "KB Bot"
+     - name: Create branch
+       run: |
+          git checkout -b "new-kb-$($env:name)-$($env:id)"
+          cd $env:folder
+          echo $env:content > "$($env:name).md"
+          git add "$($env:name).md"
+          git commit -m "Added new kb article $($env:name)"
+          git push -u origin "new-kb-$($env:name)-$($env:id)"
+       env:
+          name: ${{ github.event.client_payload.name }}
+          content: ${{ github.event.client_payload.content }}
+          folder: ${{ github.event.client_payload.folder }}
+          id: ${{ github.event.client_payload.id }}
+
+     - name: Create pull request
+       run: gh pr create --fill
+       env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
