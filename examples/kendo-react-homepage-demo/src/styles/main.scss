@@ -1,0 +1,107 @@
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/grid";
+
+
+@import "~@progress/kendo-theme-material/dist/all.scss";
+
+@import "./fonts.scss";
+
+html,
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+.img-circle {
+  border: 1px solid $primary;
+  border-radius: 2rem;
+  margin-right: 0.5rem;
+}
+
+#root {
+  height: 100%;
+}
+
+.k-grid {
+  p {
+    margin-bottom: 0;
+  }
+  .k-hierarchy-cell,
+  .k-detail-cell {
+    background: white !important;
+  }
+
+  .k-detail-cell {
+    padding-left: 0 !important;
+  }
+  .assign-to-container {
+    margin: 0.25rem 0;
+  }
+
+  .issue-description {
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+
+    /* Opera doesn't support this in the shorthand */
+    background-attachment: local, local, scroll, scroll;
+  }
+
+  .k-grid-container {
+    // max-height: 490px;
+  }
+
+  .k-grid-pager {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+.k-tabstrip .k-animation-container,
+.k-tabstrip .k-child-animation-container,
+div[role="tabpanel"],
+div[role="tabpanel"] > div {
+  height: 100%;
+}
+
+.demo-heading {
+  // position: absolute;
+  font-family: "Metric";
+  color: $primary;
+  display: flex;
+  position: absolute;
+  left: 1rem;
+  justify-content: flex-end;
+  font-size: 1.75rem;
+  margin-top: 7px;
+  margin-bottom: auto;
+}
+
+.k-i-loading {
+  min-height: 400px;
+  width: 100%;
+}
+
+.k-tabstrip {
+  height: 100%;
+  position: relative;
+
+  .k-tabstrip-items {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .k-content {
+    padding: 0;
+  }
+
+  .k-animation-container {
+    display: block;
+    widows: 100%;
+  }
+}
