@@ -1,0 +1,65 @@
+{
+  "name": "kendo-react-file-manager",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://telerik.github.io/kendo-react-file-manager",
+  "dependencies": {
+    "@progress/kendo-data-query": "^1.7.0",
+    "@progress/kendo-drawing": "^1.19.0",
+    "@progress/kendo-licensing": "^1.3.3",
+    "@progress/kendo-react-buttons": "^7.0.2",
+    "@progress/kendo-react-data-tools": "^7.0.2",
+    "@progress/kendo-react-dateinputs": "^7.0.2",
+    "@progress/kendo-react-dialogs": "^7.0.2",
+    "@progress/kendo-react-dropdowns": "^7.0.2",
+    "@progress/kendo-react-grid": "^7.0.2",
+    "@progress/kendo-react-inputs": "^7.0.2",
+    "@progress/kendo-react-intl": "^7.0.2",
+    "@progress/kendo-react-labels": "^7.0.2",
+    "@progress/kendo-react-layout": "^7.0.2",
+    "@progress/kendo-react-progressbars": "^7.0.2",
+    "@progress/kendo-react-treeview": "^7.0.2",
+    "@progress/kendo-react-upload": "^7.0.2",
+    "@progress/kendo-svg-icons": "^2.0.0",
+    "@progress/kendo-theme-default": "^7.0.2",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.1.2",
+    "@testing-library/user-event": "^14.5.1",
+    "@types/react": "^18.2.39",
+    "@types/react-dom": "^18.2.17",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.0.0",
+    "web-vitals": "^3.5.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.0"
+  }
+}
