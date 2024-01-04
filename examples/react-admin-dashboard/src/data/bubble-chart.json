@@ -1,0 +1,87 @@
+[
+   {
+     "x": -2500,
+     "y": 50000,
+     "size": 500000,
+     "category": "APAC",
+     "color": "#78D237"
+   },
+   {
+     "x": 500,
+     "y": 110000,
+     "size": 7600000,
+     "category": "EMA",
+     "color": "#78D237"
+   },
+   {
+     "x": 7000,
+     "y": 19000,
+     "size": 700000,
+     "category": "APAC",
+     "color": "#78D237"
+   },
+   {
+     "x": 1400,
+     "y": 150000,
+     "size": 700000,
+     "category": "CALA",
+     "color": "#FFD246"
+   },
+   {
+     "x": 2400,
+     "y": 30000,
+     "size": 300000,
+     "category": "CALA",
+     "color": "#FFD246"
+   },
+   {
+     "x": 2450,
+     "y": 34000,
+     "size": 90000,
+     "category": "CALA",
+     "color": "#2D73F5"
+   },
+   {
+     "x": 2700,
+     "y": 34000,
+     "size": 400000,
+     "category": "EMEA",
+     "color": "#FF6358"
+   },
+   {
+     "x": 2900,
+     "y": 40000,
+     "size": 450000,
+     "category": "NA",
+     "color": "#FF6358"
+   },
+   {
+     "x": 3000,
+     "y": 55000,
+     "size": 900000,
+     "category": "NA",
+     "color": "#FF6358"
+   },
+   {
+     "x": 3000,
+     "y": 967,
+     "size": 900000,
+     "category": "EMEA",
+     "color": "#FF6358"
+   },
+   {
+     "x": 7000,
+     "y": 2100,
+     "size": 900000,
+     "category": "EMEA",
+     "color": "#FF6358"
+   },
+   {
+     "x": 8000,
+     "y": 2222,
+     "size": 9000000,
+     "category": "APAC",
+     "color": "#FF6358"
+   }
+ ]
+ 
