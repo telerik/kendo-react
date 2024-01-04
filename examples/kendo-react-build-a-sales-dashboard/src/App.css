@@ -1,0 +1,63 @@
+h1 {
+  color:rgb(63, 81, 181);
+  font-weight: bold;
+}
+.buttons-right>button {
+  float: right;
+  margin: 5px;
+}
+.app-container {
+  padding: 25px;
+}
+
+.percentage-number {
+  color: rgb(63, 81, 181);
+  font-size: 50px;
+  font-weight: bold;
+}
+.percentage-sign {
+  color: rgb(63, 81, 181);
+  font-size: 40px;
+}
+.percentage-container {
+  text-align: center;
+}
+.percentage-container:first-child {
+  padding-bottom: 3em;
+}
+
+.teammate:after {
+  content: ".";
+  display: block;
+  height: 0;
+  line-height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.teammate h2 {
+  font-size: 1.3em;
+  font-weight: normal;
+  padding-top: 17px;
+  margin: 0;
+}
+.teammate p {
+  margin: 0;
+  font-size: .7em;
+}
+.teammate img {
+  display: inline-block;
+  vertical-align: top;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+.mate-info {
+  display: inline-block;
+  vertical-align: top;
+}
+.panelbar-wrapper {
+  max-width: 300px;
+  margin: 0 auto;
+}
