@@ -1,0 +1,38 @@
+name: CI
+
+on:
+    workflow_dispatch:
+    schedule:
+        - cron: "0 0 * * *"
+    push:
+        branches-ignore:
+            - master
+            - develop
+            - release-*
+
+jobs:
+    build:
+        strategy:
+            matrix:
+                version: [16, 18, 20]
+
+        runs-on: ubuntu-latest
+
+        concurrency:
+            group: ${{ github.ref }}-build-${{ matrix.version }}
+            cancel-in-progress: true
+
+        steps:
+            - name: Setup NodeJS
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.version }}
+
+            - name: Check out repository
+              uses: actions/checkout@v3
+
+            - name: Install Modules
+              run: npm ci
+
+            - name: Build
+              run: npm run build
