@@ -1,0 +1,43 @@
+.list-item {
+  color: black;
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
+
+  &.list-item-selected {
+    font-weight: bold;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      display: block;
+      height: 0.25rem;
+      background-color: #007bff;
+    }
+  }
+}
+
+.ddl-list-item {
+  svg path {
+    fill: #007bff;
+  }
+
+  &.k-selected {
+    svg path {
+      fill: white;
+    }
+  }
+}
+
+.stock {
+  z-index: 1040;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.75rem;
+  line-height: 1;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  transform: translateY(0.25rem);
+}

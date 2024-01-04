@@ -1,0 +1,30 @@
+@import "../../styles/variables";
+
+.symbol-cell {
+  color: $primary;
+  font-weight: bold !important;
+}
+
+.name-cell {
+  color: $text-base;
+}
+
+.price-cell {
+  font-weight: bold !important;
+}
+
+.negative-cell {
+  color: $negative-value;
+}
+
+.positive-cell {
+  color: $positive-value;
+}
+
+.multiline-header-cell {
+  & > small {
+    display: block;
+    font-weight: 300;
+    font-size: 11px;
+  }
+}

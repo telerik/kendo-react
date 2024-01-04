@@ -1,0 +1,129 @@
+// colors
+$accent: #1c7cd5;
+
+// buttons
+$button-bg: white;
+
+//splitter
+$splitter-bg: white;
+$splitter-hovered-text: white;
+$splitter-hovered-bg: white;
+$splitter-selected-text: white;
+$splitter-selected-bg: white;
+
+// dropdownlist
+$dropdownlist-bg: transparent;
+$dropdownlist-hovered-bg: transparent;
+$dropdownlist-focused-bg: transparent;
+$dropdownlist-focused-border: transparent;
+$dropdownlist-focused-shadow: none;
+$dropdownlist-hovered-border: none;
+$dropdownlist-border: transparent;
+
+// inputs
+$input-focused-border: $accent;
+
+// grid
+$grid-padding-x: 0.4rem;
+$grid-padding-y: 0.4rem;
+$grid-alt-bg: transparent;
+$grid-cell-vertical-border-width: 0;
+$grid-cell-horizontal-border-width: 1px;
+$grid-header-bg: #eceeef;
+$grid-header-text: #55595c;
+$grid-sorting-index-font-size: 20px;
+
+// dialog
+$dialog-buttongroup-padding-x: 15px;
+$dialog-buttongroup-padding-y: 15px;
+
+// popup
+$popup-padding-y: 0;
+
+@import "~@progress/kendo-theme-bootstrap/scss/button/_index.scss";
+@import "~@progress/kendo-theme-bootstrap/scss/grid/_index.scss";
+@import "~@progress/kendo-theme-bootstrap/scss/splitter/_index.scss";
+@import "~@progress/kendo-theme-bootstrap/scss/input/_index.scss";
+@import "~@progress/kendo-theme-bootstrap/scss/checkbox/_index.scss";
+@import "~@progress/kendo-theme-bootstrap/scss/calendar/_index.scss";
+@import "~@progress/kendo-theme-bootstrap/scss/datetimepicker/_index.scss";
+@import "~@progress/kendo-theme-bootstrap/scss/dropdownlist/_index.scss";
+@import "~@progress/kendo-theme-bootstrap/scss/autocomplete/_index.scss";
+@import "~@progress/kendo-theme-bootstrap/scss/dataviz/_index.scss";
+@import "~@progress/kendo-theme-bootstrap/scss/tooltip/_index.scss";
+@import "~@progress/kendo-theme-bootstrap/scss/popup/_index.scss";
+@import "~@progress/kendo-theme-bootstrap/scss/numerictextbox/_index.scss";
+@import "~@progress/kendo-theme-bootstrap/scss/common/_index.scss";
+
+.k-widget.k-splitter {
+  background-color: rgba(236, 238, 239, 0.5);
+}
+
+.k-splitbar {
+  box-shadow: 5px 5px 5px rgba(black, 0.2);
+  background: white;
+}
+
+.k-splitbar-draggable-vertical .k-resize-handle {
+  display: none;
+}
+
+.k-pane:first-child {
+  background-color: white;
+}
+
+.k-grid th.k-header {
+  color: $text-light;
+  font-weight: bold;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.k-splitbar {
+  &:active {
+    background-color: transparent;
+  }
+}
+
+.dropdown-icon-before {
+  border-radius: 4px;
+}
+.dropdown-icon-before .k-select {
+  order: -1;
+}
+
+.k-animation-container {
+  display: block;
+}
+.popup-animation {
+  z-index: 107;
+}
+.k-child-animation-container {
+  display: inline-block;
+}
+.k-calendar.k-calendar-infinite .k-button.k-next-view,
+.k-calendar.k-calendar-infinite .k-button.k-prev-view {
+  display: none;
+}
+
+.k-master-row .k-grid-content-sticky,
+.k-alt-row .k-grid-content-sticky {
+  color: #55595c;
+  background: white;
+  opacity: 1;
+  z-index: 106;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.k-grid .k-master-row:hover .k-grid-content-sticky,
+.k-grid .k-alt-row:hover .k-grid-content-sticky {
+  background-color: #f0f0f1;
+}
+
+.k-grid .k-master-row.k-selected .k-grid-content-sticky {
+  background-color: #CADEF5;
+}
+
+.k-grid .k-master-row.k-selected:hover .k-grid-content-sticky {
+  background-color: #BFD3EB;
+}
