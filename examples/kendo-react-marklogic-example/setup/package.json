@@ -1,0 +1,19 @@
+{
+  "name": "ml-demo-app-setup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "setup.js",
+  "scripts": {
+    "start": "node setup.js",
+    "test": "jest --detectOpenHandles"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "press-any-key": "^0.1.1",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
+  },
+  "devDependencies": {
+    "jest": "^29.4.3"
+  }
+}
