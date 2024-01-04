@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<search:options xml:lang="zxx" xmlns:search="http://marklogic.com/appservices/search">
+  <search:constraint name="Collection">
+    <search:collection/>
+  </search:constraint>
+  <search:constraint name="product">
+    <search:container>
+      <search:json-property>product</search:json-property>
+    </search:container>
+  </search:constraint>
+
+  <!--
+Uncomment to return no results for a blank search, rather than the default of all results
+ <search:term
+  xmlns:search="http://marklogic.com/appservices/search"><search:empty apply="no-results"/></search:term>-->
+  <search:values name="uris">
+    <search:uri/>
+  </search:values>
+  <!--
+Change to 'filtered' to exclude false-positives in certain searches
+-->
+  <search:search-option>unfiltered</search:search-option>
+  <!--
+Modify document extraction to change results returned
+-->
+  <search:extract-document-data selected="include">
+    <search:extract-path xmlns:oex="http://example.org/">//(product)</search:extract-path>
+  </search:extract-document-data>
+  <!--
+Change or remove this additional-query to broaden search beyond entity instance documents
+-->
+  <!--
+To return facets, change this option to 'true' and edit constraints
+-->
+  <search:return-facets>true</search:return-facets>
+  <search:return-query>true</search:return-query>
+  <!--
+To return snippets, comment out or remove this option
+-->
+  <search:transform-results apply="snippet">
+    <per-match-tokens>30</per-match-tokens>
+    <max-matches>4</max-matches>
+    <max-snippet-chars>200</max-snippet-chars>
+  </search:transform-results>
+</search:options>

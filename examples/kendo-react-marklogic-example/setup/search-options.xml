@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<options xmlns="http://marklogic.com/appservices/search">
+  <constraint name="Collection">
+    <collection/>
+  </constraint>
+  <constraint name="person">
+    <container>
+      <json-property>person</json-property>
+    </container>
+  </constraint>
+  <constraint name="state">
+    <range type="xs:string" facet="true" collation="http://marklogic.com/collation/codepoint">
+      <path-index xmlns:es="http://www.w3.org/2000/xmlns/">/person/addresses/address/state</path-index>
+      <facet-option>limit=100</facet-option>
+      <facet-option>frequency-order</facet-option>
+      <facet-option>descending</facet-option>
+    </range>
+  </constraint>
+  <values name="uris">
+    <uri/>
+  </values>
+  <search-option>unfiltered</search-option>
+  <extract-document-data selected="include">
+    <extract-path xmlns:oex="http://example.org/">//(person)</extract-path>
+  </extract-document-data>
+  <return-facets>true</return-facets>
+  <return-query>true</return-query>
+  <transform-results apply="snippet">
+    <per-match-tokens xmlns="">30</per-match-tokens>
+    <max-matches xmlns="">4</max-matches>
+    <max-snippet-chars xmlns="">200</max-snippet-chars>
+  </transform-results>
+</options>
