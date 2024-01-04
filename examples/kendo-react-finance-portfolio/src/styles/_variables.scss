@@ -1,0 +1,68 @@
+$accent: #1c7cd5;
+$primary: #007BFF;
+
+// typography
+$roboto: "Roboto", Helvetica, Arial, sans-serif;
+$ubunto: "Ubuntu", sans-serif;
+
+$font-weight-200: 200;
+
+// colors
+$white: #fff;
+$white-50: rgba(255, 255, 255, 0.5);
+$text-base: #373a3c;
+$text-light: #55595C;
+$border-base: #ddd;
+$active-state-base: #1c7cd5;
+$hover-bg: #e6e6e6;
+$negative-value: #d9534f;
+$positive-value: #5cb85c;
+$body-base-bg: rgba(236, 238, 239, 0.5);
+
+// margins
+$margin-sm: 4px;
+
+// fonts
+$font-size-default: 16px;
+
+// header
+$header-height: 140px;
+$header-title-padding: 0.5rem;
+$profile-image-width: 58px;
+$profile-image-height: 58px;
+$profile-image-margin-top: 2rem;
+
+// footer
+$footer-padding: 10px;
+$footer-height: 43px;
+$footer-font-size: $font-size-default;
+$progress-logo-height: 20px;
+$progress-logo-width: 100px;
+
+// dropdownlist
+$dropdownlist-font-size: $font-size-default;
+$dropdownlist-item-selected-bg: #e9ecef;
+$dropdownlist-item-selected-text: $active-state-base;
+
+$dropownlist-add-new-padding: 8px;
+$dropownlist-add-new-width: 125px;
+$dropownlist-add-new-height: 40px;
+
+// grid
+$grid-header-subtitle: 13px;
+$grid-row-selection-bg: #007bff;
+$grid-cell-positive-color: $positive-value;
+$grid-cell-negative-color: $negative-value;
+$grid-sorting-icon-margin: $margin-sm;
+$grid-sorting-icon-right-position: 20px;
+
+// buttons
+$nav-button-width: 150px;
+$nav-button-active-bg: $active-state-base;
+
+// badge
+$badge-padding: 10px;
+$badge-height: 22px;
+
+// heatmap
+$heatmap-base-bg: $body-base-bg;

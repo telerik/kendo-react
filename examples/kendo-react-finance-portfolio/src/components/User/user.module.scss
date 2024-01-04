@@ -1,0 +1,53 @@
+@import "../../styles/variables";
+
+.wrapper-profile {
+  background-color: white;
+}
+
+.close-icon {
+    cursor: pointer;
+    text-align: right;
+}
+
+.user-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+}
+
+.symbol-cell {
+    color: $primary;
+    font-weight: bold !important;
+  }
+  
+
+.table-small {
+  width: 100%;
+  tr {
+    td {
+      text-align: left;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    & > td:nth-child(1) {
+      color: $text-light;
+      font-weight: 300;
+    }
+    & > td:nth-child(2) {
+      padding-left: 1rem;
+    }
+  }
+}
+.large {
+  font-size: 2em;
+  font-weight: bold;
+  padding: 0;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}

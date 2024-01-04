@@ -1,0 +1,25 @@
+@import "../../styles/variables";
+
+.stock-item {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  cursor: pointer;
+  &:hover {
+      background-color: $hover-bg;
+  }
+}
+
+.stock-item-symbol {
+  line-height: 1;
+  display: block;
+  font-size: 14px;
+  color: $primary;
+}
+
+.stock-item-name {
+  line-height: 1;
+  display: block;
+
+  font-size: 11px;
+  color: $text-light;
+}
