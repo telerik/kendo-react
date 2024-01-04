@@ -1,0 +1,154 @@
+@import './styles/bootstrap-custom.scss';
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.app-header>.project-name{
+  text-align: left;
+  letter-spacing: 0;
+  color: #000000;
+  opacity: 1;
+}
+
+.app-header>.nav{
+  float: right;
+}
+
+.content {
+  min-height: 100vh;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.welcome {
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: 0;
+  color: #000000;
+  opacity: 1;
+}
+
+.message{
+  text-align: center;
+}
+
+.sub-header {
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #919191;
+  opacity: 1;
+  margin-bottom: 4rem;
+}
+
+.get-started {
+  text-align: center;
+  font-weight: 900;
+  font-size: 78px;
+  letter-spacing: 0;
+  color: #000000;
+  opacity: 1;
+  margin-bottom: 1rem;
+}
+
+.kendoka {
+  width: 12.5rem;
+  height: 12.5rem;
+  opacity: 1;
+}
+
+.change-theme {
+  font-size: 14px;
+  color: #9098A5;
+}
+
+.components-list>p>a {
+  margin-left: 0.6em;
+}
+.components-list>p>img {
+  width: 1.25rem;
+  height: 1.3125rem;
+}
+.footer {
+  font-size: 11px;
+  background: #646871 0% 0% no-repeat padding-box;
+  opacity: 1;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.footer .links {
+  text-align: left;
+  letter-spacing: 0.33px;
+  color: #FFFFFF;
+  font-weight: 700;
+  opacity: 1;
+}
+.divider {
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
+  opacity: 0.2;
+}
+
+.copyright{
+  letter-spacing: 0.33px;
+  color: #FFFFFF;
+  opacity: 0.6;
+}
+
+.k-widget.k-menu {
+  height: 100%;
+}
+
+.k-widget.k-dropdown, .k-list .k-item {
+  text-transform: uppercase;
+}
+
+.social img {
+  margin-left: 3rem;
+}
+
+.k-menu:not(.k-context-menu)>.k-item>.k-link::before {
+  pointer-events: none;
+}
+a, a:visited {
+  color: inherit;
+  font-weight: 500;
+}
+.k-tooltip {
+  width: 15rem;
+}
