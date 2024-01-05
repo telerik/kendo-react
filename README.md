@@ -1034,7 +1034,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 We created the [React Dashboard Application](https://www.telerik.com/kendo-react-ui/components/sample-applications/react-coffee-warehouse-dashboard/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) following the best practices of building UI with KendoReact components, which makes it a fantastic learning resource. You can see how easy it is to set up complex components such as the Data Grid (Table), Charts, Scheduler or Forms.
 
 * [Live demo](https://telerik.github.io/react-coffee-warehouse)
-* [Source code](https://github.com/telerik/react-coffee-warehouse)
+* [Source code](https://github.com/telerik/kendo-react/tree/master/examples/react-coffee-warehouse)
 
 ![Coffee warehouse sample](images/coffee-warehouse.png)
 
@@ -1043,7 +1043,7 @@ We created the [React Dashboard Application](https://www.telerik.com/kendo-react
 The [React Financial Portfolio Application](https://www.telerik.com/kendo-react-ui/components/sample-applications/finance-application/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) shows how to create fast, beautiful and dynamic financial dashboards. It takes full advantage of React's fast rendering and shows dynamic data updates in real time which allows monitoring data with no visible delay.
 
 * [Live demo](https://telerik.github.io/kendo-react-finance-portfolio)
-* [Source code](https://github.com/telerik/kendo-react-finance-portfolio/)
+* [Source code](https://github.com/telerik/kendo-react/tree/master/examples/kendo-react-finance-portfolio)
 
 ![Financial portfolio sample](images/financial-portfolio.png)
 
@@ -1052,7 +1052,7 @@ The [React Financial Portfolio Application](https://www.telerik.com/kendo-react-
 The [React File Manager Application](https://www.telerik.com/kendo-react-ui/components/sample-applications/file-manager/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) is an Explorer-like application built entirely with KendoReact components that enables you to manage files and folders. You can show additional information about the selected file in a template-customizable Preview Pane, which you can show or hide through a switch button.
 
 * [Live demo](https://telerik.github.io/kendo-react-file-manager)
-* [Source code](https://github.com/telerik/kendo-react-file-manager)
+* [Source code](https://github.com/telerik/kendo-react/tree/master/examples/kendo-react-file-manager)
 
 ![React FileManager Template App](images/React-FileManager-Template-App.png)
 
@@ -1070,7 +1070,7 @@ You can take advantage of two full stack sample applications built with the Kend
 The [React GitHub Issues Application](https://www.telerik.com/kendo-react-ui/components/sample-applications/issues-grid/) shows off how to use a KendoReact Data Grid to manage a large data set—in this case, all issues in the main Facebook React and GraphQL repositories.
 
 * [Live demo](https://telerik.github.io/kendo-react-homepage-demo/)
-* [Source code](https://github.com/telerik/kendo-react-homepage-demo)
+* [Source code](https://github.com/telerik/kendo-react/tree/master/examples/kendo-react-homepage-demo)
 
 ![GitHub issues sample](images/github-issues.png)
 
