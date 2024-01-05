@@ -31,12 +31,12 @@
 
 ### Where can I find help?
 
-1. For community support we recommend asking questions on Stack Overflow using the [kendo-react-ui tag](http://stackoverflow.com/questions/tagged/kendo-react-ui).
+1. For community support we recommend asking questions on our [public forum](https://www.telerik.com/forums/kendo-ui-react) or Stack Overflow using the [kendo-react-ui tag](http://stackoverflow.com/questions/tagged/kendo-react-ui).
 1. KendoReact license holders can use our official support channel to [submit support tickets](https://www.telerik.com/account/support-tickets).
 
 ### How do I report a bug?
 
-If want to bug a bug with KendoReact, please start by reviewing [this repo’s issue tracker](https://github.com/telerik/kendo-react/issues) to make sure your issue hasn’t already been reported. If you can’t find your issue there, please follow the following reproduction steps.
+If you want to report a bug with KendoReact, please start by reviewing [this repo’s issue tracker](https://github.com/telerik/kendo-react/issues) to make sure your issue has not already been reported. If you can’t find your issue there, please follow the following reproduction steps:
 
 1. Find an example in [the KendoReact documentation](https://www.telerik.com/kendo-react-ui/components/) that looks similar to your use case.
 1. Open that example in StackBlitz by using the **EDIT IN STACKBLITZ** button.
@@ -153,6 +153,71 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
   <td><b>Sparkline</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/sparkline">React Sparkline Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/sparkline/">Documentation & Demos</td>
+</tr>
+ <tr>
+  <td><b>Area Chart</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/area-chart">React Area Chart Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/area/">Documentation & Demos</td>
+</tr>
+ <tr>
+  <td><b>Bar Chart</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/bar-chart">React Bar Chart Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/bar/">Documentation & Demos</td>
+</tr>
+ <tr>
+  <td><b>Box Plot</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/box-plot">React Box Plot Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/box-plot/">Documentation & Demos</td>
+</tr>
+ <tr>
+  <td><b>Bubble Chart</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/bubble-chart">React Bubble Chart Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/bubble/">Documentation & Demos</td>
+</tr>
+ <tr>
+  <td><b>Donut Chart</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/donut-chart">React Donut Chart Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/donut/">Documentation & Demos</td>
+</tr>
+<tr>
+  <td><b>Funnel Chart</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/funnel-chart">React Funnel Chart Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/funnel/">Documentation & Demos</td>
+</tr>
+<tr>
+  <td><b>Line Chart</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/line-chart">React Line Chart Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/line/">Documentation & Demos</td>
+</tr>
+<tr>
+  <td><b>Pie Chart</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/pie-chart">React Pie Chart Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/pie/">Documentation & Demos</td>
+</tr>
+<tr>
+  <td><b>Polar Chart</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/polar-chart">React Polar Chart Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/polar/">Documentation & Demos</td>
+</tr>
+<tr>
+  <td><b>Pyramid Chart</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/pyramid-chart">React Pyramid Chart Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/pyramid/">Documentation & Demos</td>
+</tr>
+<tr>
+  <td><b>Radar Chart</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/radar-chart">React Radar Chart Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/radar/">Documentation & Demos</td>
+</tr>
+<tr>
+  <td><b>Range Area Chart</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/range-area-chart">React Range Area Chart Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/range-area/">Documentation & Demos</td>
+</tr>
+<tr>
+  <td><b>Scatter Chart</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/scatter-chart">React Scatter Chart Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/scatter/">Documentation & Demos</td>
 </tr>
 </tbody></table>
 
@@ -669,6 +734,11 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
   <td><a href="https://www.telerik.com/kendo-react-ui/tilelayout">React TileLayout Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/layout/tilelayout/">Documentation & Demos</td>
 </tr>
+<tr>
+  <td><b>TimeLine</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/timeline">React TimeLine Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/layout/timeline/">Documentation & Demos</td>
+</tr>
 </tbody></table>
 
 ### ListBox
@@ -725,7 +795,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>PDF Generator</b></td>
+  <td><b>PivotGrid</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/pivotgrid">React Pivot Grid Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/pivotgrid/">Documentation & Demos</td>
 </tr>
@@ -866,6 +936,54 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 </tr>
 </tbody></table>
 
+### OrgChart
+
+![](https://img.shields.io/npm/v/@progress/kendo-react-orgchart)
+
+<table><tbody>
+<tr>
+  <td><b>OrgChart</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/orgchart">React OrgChart Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/orgchart/">Documentation & Demos</td>
+</tr>
+</tbody></table>
+
+### SpreadSheet
+
+![](https://img.shields.io/npm/v/@progress/kendo-react-spreadsheet)
+
+<table><tbody>
+<tr>
+  <td><b>SpreadSheet</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/spreadsheet">React SpreadSheet Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/spreadsheet/">Documentation & Demos</td>
+</tr>
+</tbody></table>
+
+### PDFViewer
+
+![](https://img.shields.io/npm/v/@progress/kendo-react-pdf-viewer)
+
+<table><tbody>
+<tr>
+  <td><b>PDFViewer</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/pdfviewer">React PDFViewer Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/pdf-viewer/">Documentation & Demos</td>
+</tr>
+</tbody></table>
+
+### TaskBoard
+
+![](https://img.shields.io/npm/v/@progress/kendo-react-taskboard)
+
+<table><tbody>
+<tr>
+  <td><b>TaskBoard</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/taskboard">React TaskBoard Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/taskboard/">Documentation & Demos</td>
+</tr>
+</tbody></table>
+
 ## Design-to-Development Support
 
 ### 3 Design Themes
@@ -882,6 +1000,10 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 <tr>
   <td><b>Bootstrap Theme</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/styling/theme-bootstrap/">KendoReact Bootstrap Theme</a></td>
+</tr>
+<tr>
+  <td><b>Fluent Theme</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/styling/theme-fluent/">KendoReact Fluent Theme</a></td>
 </tr>
 </tbody></table>
 
@@ -912,7 +1034,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 We created the [React Dashboard Application](https://www.telerik.com/kendo-react-ui/components/sample-applications/react-coffee-warehouse-dashboard/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) following the best practices of building UI with KendoReact components, which makes it a fantastic learning resource. You can see how easy it is to set up complex components such as the Data Grid (Table), Charts, Scheduler or Forms.
 
 * [Live demo](https://telerik.github.io/react-coffee-warehouse)
-* [Source code](https://github.com/telerik/react-coffee-warehouse)
+* [Source code](https://github.com/telerik/kendo-react/tree/master/examples/react-coffee-warehouse)
 
 ![Coffee warehouse sample](images/coffee-warehouse.png)
 
@@ -921,7 +1043,7 @@ We created the [React Dashboard Application](https://www.telerik.com/kendo-react
 The [React Financial Portfolio Application](https://www.telerik.com/kendo-react-ui/components/sample-applications/finance-application/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) shows how to create fast, beautiful and dynamic financial dashboards. It takes full advantage of React's fast rendering and shows dynamic data updates in real time which allows monitoring data with no visible delay.
 
 * [Live demo](https://telerik.github.io/kendo-react-finance-portfolio)
-* [Source code](https://github.com/telerik/kendo-react-finance-portfolio/)
+* [Source code](https://github.com/telerik/kendo-react/tree/master/examples/kendo-react-finance-portfolio)
 
 ![Financial portfolio sample](images/financial-portfolio.png)
 
@@ -930,7 +1052,7 @@ The [React Financial Portfolio Application](https://www.telerik.com/kendo-react-
 The [React File Manager Application](https://www.telerik.com/kendo-react-ui/components/sample-applications/file-manager/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) is an Explorer-like application built entirely with KendoReact components that enables you to manage files and folders. You can show additional information about the selected file in a template-customizable Preview Pane, which you can show or hide through a switch button.
 
 * [Live demo](https://telerik.github.io/kendo-react-file-manager)
-* [Source code](https://github.com/telerik/kendo-react-file-manager)
+* [Source code](https://github.com/telerik/kendo-react/tree/master/examples/kendo-react-file-manager)
 
 ![React FileManager Template App](images/React-FileManager-Template-App.png)
 
@@ -948,7 +1070,7 @@ You can take advantage of two full stack sample applications built with the Kend
 The [React GitHub Issues Application](https://www.telerik.com/kendo-react-ui/components/sample-applications/issues-grid/) shows off how to use a KendoReact Data Grid to manage a large data set—in this case, all issues in the main Facebook React and GraphQL repositories.
 
 * [Live demo](https://telerik.github.io/kendo-react-homepage-demo/)
-* [Source code](https://github.com/telerik/kendo-react-homepage-demo)
+* [Source code](https://github.com/telerik/kendo-react/tree/master/examples/kendo-react-homepage-demo)
 
 ![GitHub issues sample](images/github-issues.png)
 
