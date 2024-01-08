@@ -1,0 +1,120 @@
+# Builds and tests example applications
+name: CI
+
+on:
+  push:
+    branches-ignore:
+      - master
+
+env:
+  NODE_OPTIONS: --max_old_space_size=6144
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Use NodeJS v18
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+            fetch-depth: 0 # Fetch all branches
+
+      - name: Build Coffee warehouse nextjs app
+        working-directory: ./examples/coffee-warehouse-nextjs
+        run: |
+          npm ci
+          npm run build
+
+      - name: Build A Sales Dashboard app
+        working-directory: ./examples/kendo-react-build-a-sales-dashboard
+        run: |
+          npm ci
+          npm run build
+
+      - name: Build File Manager app
+        working-directory: ./examples/kendo-react-file-manager
+        run: |
+          npm ci
+          npm run build
+
+      - name: Build Finance Portfolio app
+        working-directory: ./examples/kendo-react-finance-portfolio
+        run: |
+          npm ci
+          npm run build
+
+      - name: Build Homepage demo app
+        working-directory: ./examples/kendo-react-homepage-demo
+        run: |
+          npm ci
+          npm run build
+
+    #   - name: Build Marklogic app
+    #     working-directory: ./examples/kendo-react-marklogic-example
+    #     run: |
+    #       cd setup
+    #       npm i
+    #       cd ../server
+    #       npm i
+    #       cd ../ui
+    #       npm i
+    #       npm run build
+
+      - name: Build React Nextjs app
+        working-directory: ./examples/kendo-react-nextjs
+        run: |
+          npm ci
+          npm run build    
+
+      - name: Build React Nodejs Express app
+        working-directory: ./examples/kendo-react-nodejs-express
+        run: |
+          cd server
+          npm i
+          cd ../client    
+          npm i
+          npm run build
+
+      - name: Build React Sales Dashboard app
+        working-directory: ./examples/kendo-react-sales-dashboard
+        run: |
+          npm ci
+          CI= npm run build 
+
+      - name: Build React SSR app
+        working-directory: ./examples/kendo-react-ssr
+        run: |
+          npm ci
+          npm run build  
+
+      - name: Build React Stackblitz app
+        working-directory: ./examples/kendo-react-stackblitz-app
+        run: |
+          npm ci
+          npm run build  
+
+      - name: Build React Admin Dashboard app
+        working-directory: ./examples/react-admin-dashboard
+        run: |
+          npm ci
+          npm run build  
+
+      - name: Build React Coffee Warehouse app
+        working-directory: ./examples/react-coffee-warehouse
+        run: |
+          npm ci
+          npm run build
+
+      - name: Build React Grid Live Data app
+        working-directory: ./examples/react-grid-live-data
+        run: |
+          npm ci
+          npm run build
+
+      - name: Cleanup
+        run: git clean -xdf
