@@ -37,7 +37,7 @@ export interface OrderShipAddress {
     street: string,
     city: string,
     region: string,
-    postalCode: number,
+    postalCode: number | string,
     country: string
 }
 
@@ -52,9 +52,9 @@ export interface Order {
     OrderID?: number,
     customerID: string,
     employeeID: number,
-    orderDate?: Date,
-    requiredDate: Date,
-    shippedDate?: Date,
+    orderDate?: Date | string,
+    requiredDate: Date | string,
+    shippedDate?: Date | string,
     shipVia: number,
     freight: number,
     shipName: string,

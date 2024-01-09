@@ -28,7 +28,7 @@ const intl = new IntlService('en');
 
 orders.forEach((o: Order) => {
   o.orderDate = intl.parseDate(
-    o.orderDate ? o.orderDate : '20/20/2020',
+    o.orderDate ? o.orderDate.toString() : '20/20/2020',
     DATE_FORMAT
   );
 
