@@ -6,7 +6,7 @@ import {
   getSelectedState,
 } from '@progress/kendo-react-grid';
 import { getter } from '@progress/kendo-react-common';
-import { isMobile } from 'react-device-detect';
+import { useDeviceType } from './isMobile.jsx';
 import products from './products.json';
 const DATA_ITEM_KEY = 'ProductID';
 const SELECTED_FIELD = 'selected';
@@ -44,6 +44,7 @@ const App = () => {
     });
     setSelectedState(newSelectedState);
   }, []);
+
   return (
     <div>
       <Grid
@@ -57,7 +58,7 @@ const App = () => {
         dataItemKey={DATA_ITEM_KEY}
         selectedField={SELECTED_FIELD}
         selectable={
-          isMobile
+          useDeviceType() === 'Mobile' || useDeviceType() === 'Tablet'
             ? null
             : {
                 enabled: true,
