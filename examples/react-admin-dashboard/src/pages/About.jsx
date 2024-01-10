@@ -20,7 +20,6 @@ export const About = () => {
       </p>
       </div> 
   
-      <p>
 
         <br></br>
         <br></br>
@@ -59,7 +58,6 @@ export const About = () => {
               </li>
           </ul>
       </div>
-      </p>
       <a className="k-link  k-button k-button-md k-button-rectangle k-rounded-md k-button-solid k-button-solid-primary" href="https://github.com/telerik/admin-dashboard">
           <svg className="k-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" focusable="false">
               <title>GitHub</title>
