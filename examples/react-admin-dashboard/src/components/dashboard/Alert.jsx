@@ -87,7 +87,7 @@ let contacts = [
         }}
       >
         <div className="col-2 avatar-container">
-          <Avatar type="img">
+          <Avatar type="image">
             <img
              src={item.image}
              alt="name"
