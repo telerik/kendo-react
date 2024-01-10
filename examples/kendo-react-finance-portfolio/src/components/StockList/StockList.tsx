@@ -94,6 +94,7 @@ export const StockList: React.FunctionComponent = () => {
         }, 500)
 
         return () => window.clearInterval(intv);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [sector, symbols, data]);
 
     const chartCell = React.useMemo(

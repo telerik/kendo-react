@@ -5,6 +5,7 @@ import { classNames } from '@progress/kendo-react-common';
 
 export const AvgVolumeHeaderCell = (_props: GridHeaderCellProps) => {
     return (
+        // eslint-disable-next-line jsx-a11y/anchor-is-valid
         <a className={classNames(styles["multiline-header-cell"], "k-link")}>
             Avg Vol
             <small>
