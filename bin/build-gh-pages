@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# Builds example projects and deploys them to GH Pages
+STANDALONE_PROJECTS=(kendo-react-finance-portfolio react-coffee-warehouse react-admin-dashboard kendo-react-homepage-demo kendo-react-file-manager react-grid-live-data)
+
+set -e
+
+# Standalone Projects
+for PROJECT in "${STANDALONE_PROJECTS[@]}"
+do
+  pushd ./examples/${PROJECT} > /dev/null
+
+  echo Building ${PROJECT}
+  npm ci
+  rm -rf dist
+  npm run build
+  mkdir -p ../../dist/${PROJECT}
+  mv -v dist/* ../../dist/${PROJECT}
+
+  popd > /dev/null
+done

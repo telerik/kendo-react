@@ -1,4 +1,4 @@
-# Builds and tests example applications
+# Builds and tests sample applications
 name: CI
 
 on:
