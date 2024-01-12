@@ -8,7 +8,7 @@ on:
 
 defaults:
   run:
-    working-directory: ./examples
+    working-directory: ./live
 
 env:
   NODE_OPTIONS: --max_old_space_size=6144
@@ -27,7 +27,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build
-        run: ../bin/build-gh-pages
+        run: ./bin/build-gh-pages
         env:
           KENDO_UI_LICENSE: ${{ secrets.KENDO_UI_LICENSE }}
 
@@ -35,6 +35,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ github.token }}
-          publish_dir: ./examples/dist
+          publish_dir: ./live/dist
           user_name: 'kendo-bot'
           user_email: 'kendouiteam@progress.com'

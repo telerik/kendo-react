@@ -8,14 +8,17 @@ set -e
 # Standalone Projects
 for PROJECT in "${STANDALONE_PROJECTS[@]}"
 do
-  pushd ./examples/${PROJECT} > /dev/null
+  pushd ../examples/${PROJECT} > /dev/null
 
   echo Building ${PROJECT}
   npm ci
   rm -rf dist
   npm run build
-  mkdir -p ../../dist/${PROJECT}
-  mv -v dist/* ../../dist/${PROJECT}
+  mkdir -p ../../live/dist/${PROJECT}
+  mv -v dist/* ../../live/dist/${PROJECT}
 
   popd > /dev/null
 done
+
+# Copy static assets
+cp static/* dist
