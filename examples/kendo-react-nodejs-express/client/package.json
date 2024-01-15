@@ -26,6 +26,10 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^3.5.0"
   },
+  "overrides": {
+    "nth-check": ">=2.0.1",
+    "postcss": ">=8.4.31"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

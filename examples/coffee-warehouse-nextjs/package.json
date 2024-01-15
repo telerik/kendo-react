@@ -8,6 +8,9 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "overrides": {
+    "follow-redirects": ">=1.15.4"
+  },
   "dependencies": {
     "@progress/kendo-data-query": "^1.7.0",
     "@progress/kendo-date-math": "^1.5.12",
