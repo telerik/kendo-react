@@ -1,0 +1,20 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/examples"
+    schedule:
+      interval: "daily"
+    groups:
+      kendo-themes:
+        patterns:
+          - '@progress/kendo-theme-*'
+    allow:
+      # Update themes, licenses and other dependencies
+      - dependency-name: '@progress/kendo-*'
+    commit-message:
+      prefix: "chore:"
+    reviewers:
+      - "telerik/kendo-react-devs"
+      - "telerik/kendo-react-support"
+    labels:
+      - "Dependencies"
