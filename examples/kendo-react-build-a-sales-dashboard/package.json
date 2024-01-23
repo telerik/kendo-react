@@ -30,7 +30,7 @@
     "@progress/kendo-react-ripple": "^7.0.2",
     "@progress/kendo-react-treeview": "^7.0.2",
     "@progress/kendo-ripple": "^1.0.2",
-    "@progress/kendo-theme-material": "^7.0.2",
+    "@progress/kendo-theme-material": "^7.2.0",
     "bootstrap-4-grid": "^3.4.0",
     "hammerjs": "^2.0.8",
     "react": "^18.2.0",
