@@ -52,17 +52,6 @@ jobs:
           npm ci
           npm run build
 
-    #   - name: Build Marklogic app
-    #     working-directory: ./examples/kendo-react-marklogic-example
-    #     run: |
-    #       cd setup
-    #       npm i
-    #       cd ../server
-    #       npm i
-    #       cd ../ui
-    #       npm i
-    #       npm run build
-
       - name: Build React Nextjs app
         working-directory: ./examples/kendo-react-nextjs
         run: |
@@ -82,7 +71,7 @@ jobs:
         working-directory: ./examples/kendo-react-sales-dashboard
         run: |
           npm ci
-          CI= npm run build 
+          npm run build 
 
       - name: Build React SSR app
         working-directory: ./examples/kendo-react-ssr
