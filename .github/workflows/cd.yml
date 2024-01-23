@@ -1,0 +1,40 @@
+# Builds and publishes examples to GH pages
+name: CD
+
+on:
+  push:
+    branches:
+      - master
+
+defaults:
+  run:
+    working-directory: ./live
+
+env:
+  NODE_OPTIONS: --max_old_space_size=6144
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Use NodeJS v18
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Build
+        run: ./bin/build-gh-pages
+        env:
+          KENDO_UI_LICENSE: ${{ secrets.KENDO_UI_LICENSE }}
+
+      - name: Deploy to GH Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ github.token }}
+          publish_dir: ./live/dist
+          user_name: 'kendo-bot'
+          user_email: 'kendouiteam@progress.com'

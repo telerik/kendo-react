@@ -22,8 +22,8 @@
   },
   "devDependencies": {
     "react-scripts": "5.0.1",
-    "@progress/kendo-theme-default": "^7.0.2",
-    "@progress/kendo-theme-material": "dev"
+    "@progress/kendo-theme-default": "^7.2.0",
+    "@progress/kendo-theme-material": "^7.2.0"
   },
   "overrides": {
     "follow-redirects": ">=1.15.4",
