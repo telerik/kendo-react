@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/kendo-react-homepage-demo/static/css/main.57e8f0f0.css",
+    "main.js": "/kendo-react-homepage-demo/static/js/main.5d0bccff.js",
+    "static/media/Metric-Bold.otf": "/kendo-react-homepage-demo/static/media/Metric-Bold.e6e4083db85a777cb904.otf",
+    "index.html": "/kendo-react-homepage-demo/index.html",
+    "main.57e8f0f0.css.map": "/kendo-react-homepage-demo/static/css/main.57e8f0f0.css.map",
+    "main.5d0bccff.js.map": "/kendo-react-homepage-demo/static/js/main.5d0bccff.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.57e8f0f0.css",
+    "static/js/main.5d0bccff.js"
+  ]
+}

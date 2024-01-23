@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-admin-dashboard/static/css/main.32e21528.css",
+    "main.js": "/react-admin-dashboard/static/js/main.bfb90a69.js",
+    "static/js/496.9b9320ce.chunk.js": "/react-admin-dashboard/static/js/496.9b9320ce.chunk.js",
+    "static/media/Roboto-Regular.ttf": "/react-admin-dashboard/static/media/Roboto-Regular.03523cf578d69fa92322.ttf",
+    "static/media/lights.png": "/react-admin-dashboard/static/media/lights.034da673c58273345997.png",
+    "static/media/headphones.png": "/react-admin-dashboard/static/media/headphones.debdd1d5266fbb6c7ecf.png",
+    "static/media/chair.png": "/react-admin-dashboard/static/media/chair.644b40712271beefadfe.png",
+    "static/media/open-laptop.png": "/react-admin-dashboard/static/media/open-laptop.8eb4ef19b1fc5a951bdb.png",
+    "static/media/laptop.png": "/react-admin-dashboard/static/media/laptop.e461fad61fda3d06ad67.png",
+    "static/media/kendoka.png": "/react-admin-dashboard/static/media/kendoka.fbdf7c23978afd7cea75.png",
+    "static/media/signin.png": "/react-admin-dashboard/static/media/signin.d1569b675f003eac9004.png",
+    "index.html": "/react-admin-dashboard/index.html",
+    "main.32e21528.css.map": "/react-admin-dashboard/static/css/main.32e21528.css.map",
+    "main.bfb90a69.js.map": "/react-admin-dashboard/static/js/main.bfb90a69.js.map",
+    "496.9b9320ce.chunk.js.map": "/react-admin-dashboard/static/js/496.9b9320ce.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.32e21528.css",
+    "static/js/main.bfb90a69.js"
+  ]
+}

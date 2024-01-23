@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/kendo-react-file-manager/static/css/main.ae5bebe7.css",
+    "main.js": "/kendo-react-file-manager/static/js/main.2c1b7b0b.js",
+    "static/js/496.d7157e1b.chunk.js": "/kendo-react-file-manager/static/js/496.d7157e1b.chunk.js",
+    "index.html": "/kendo-react-file-manager/index.html",
+    "main.ae5bebe7.css.map": "/kendo-react-file-manager/static/css/main.ae5bebe7.css.map",
+    "main.2c1b7b0b.js.map": "/kendo-react-file-manager/static/js/main.2c1b7b0b.js.map",
+    "496.d7157e1b.chunk.js.map": "/kendo-react-file-manager/static/js/496.d7157e1b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ae5bebe7.css",
+    "static/js/main.2c1b7b0b.js"
+  ]
+}

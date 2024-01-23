@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/react-coffee-warehouse/static/css/main.96d96a7c.css",
+    "main.js": "/react-coffee-warehouse/static/js/main.7ab07012.js",
+    "static/media/kendoka.png": "/react-coffee-warehouse/static/media/kendoka.c7095d9ce8e429779438.png",
+    "static/media/Roboto-Regular.ttf": "/react-coffee-warehouse/static/media/Roboto-Regular.03523cf578d69fa92322.ttf",
+    "static/media/header-bg.png": "/react-coffee-warehouse/static/media/header-bg.e62f0e09ea1b70f0f904.png",
+    "static/media/user-avatar.jpg": "/react-coffee-warehouse/static/media/user-avatar.2e5d6e703239d19e8aff.jpg",
+    "static/media/info-background.svg": "/react-coffee-warehouse/static/media/info-background.f6b66c9247a1db7b1e78.svg",
+    "index.html": "/react-coffee-warehouse/index.html",
+    "static/media/github-icon.svg": "/react-coffee-warehouse/static/media/github-icon.966d08444a590b0bca5dd780ad7ff155.svg",
+    "static/media/hamburger-icon.svg": "/react-coffee-warehouse/static/media/hamburger-icon.4a15965e8cb3f506cbbb.svg",
+    "main.96d96a7c.css.map": "/react-coffee-warehouse/static/css/main.96d96a7c.css.map",
+    "main.7ab07012.js.map": "/react-coffee-warehouse/static/js/main.7ab07012.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.96d96a7c.css",
+    "static/js/main.7ab07012.js"
+  ]
+}
