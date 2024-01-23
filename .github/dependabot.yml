@@ -1,16 +1,189 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directory: "/examples"
+    directory: "/examples/coffee-warehouse-nextjs"
     schedule:
       interval: "daily"
     groups:
-      kendo-themes:
+      kendo-dependencies:
         patterns:
-          - '@progress/kendo-theme-*'
-    allow:
-      # Update themes, licenses and other dependencies
-      - dependency-name: '@progress/kendo-*'
+          - '@progress/kendo-*'
+    commit-message:
+      prefix: "chore:"
+    reviewers:
+      - "telerik/kendo-react-devs"
+      - "telerik/kendo-react-support"
+    labels:
+      - "Dependencies"
+
+  - package-ecosystem: "npm"
+    directory: "/examples/kendo-react-build-a-sales-dashboard"
+    schedule:
+      interval: "daily"
+    groups:
+      kendo-dependencies:
+        patterns:
+          - '@progress/kendo-*'
+    commit-message:
+      prefix: "chore:"
+    reviewers:
+      - "telerik/kendo-react-devs"
+      - "telerik/kendo-react-support"
+    labels:
+      - "Dependencies"
+
+  - package-ecosystem: "npm"
+    directory: "/examples/kendo-react-file-manager"
+    schedule:
+      interval: "daily"
+    groups:
+      kendo-dependencies:
+        patterns:
+          - '@progress/kendo-*'
+    commit-message:
+      prefix: "chore:"
+    reviewers:
+      - "telerik/kendo-react-devs"
+      - "telerik/kendo-react-support"
+    labels:
+      - "Dependencies"
+
+  - package-ecosystem: "npm"
+    directory: "/examples/kendo-react-finance-portfolio"
+    schedule:
+      interval: "daily"
+    groups:
+      kendo-dependencies:
+        patterns:
+          - '@progress/kendo-*'
+    commit-message:
+      prefix: "chore:"
+    reviewers:
+      - "telerik/kendo-react-devs"
+      - "telerik/kendo-react-support"
+    labels:
+      - "Dependencies"
+
+  - package-ecosystem: "npm"
+    directory: "/examples/kendo-react-homepage-demo"
+    schedule:
+      interval: "daily"
+    groups:
+      kendo-dependencies:
+        patterns:
+          - '@progress/kendo-*'
+    commit-message:
+      prefix: "chore:"
+    reviewers:
+      - "telerik/kendo-react-devs"
+      - "telerik/kendo-react-support"
+    labels:
+      - "Dependencies"
+
+  - package-ecosystem: "npm"
+    directory: "/examples/kendo-react-nextjs"
+    schedule:
+      interval: "daily"
+    groups:
+      kendo-dependencies:
+        patterns:
+          - '@progress/kendo-*'
+    commit-message:
+      prefix: "chore:"
+    reviewers:
+      - "telerik/kendo-react-devs"
+      - "telerik/kendo-react-support"
+    labels:
+      - "Dependencies"
+
+  - package-ecosystem: "npm"
+    directory: "/examples/kendo-react-sales-dashboard"
+    schedule:
+      interval: "daily"
+    groups:
+      kendo-dependencies:
+        patterns:
+          - '@progress/kendo-*'
+    commit-message:
+      prefix: "chore:"
+    reviewers:
+      - "telerik/kendo-react-devs"
+      - "telerik/kendo-react-support"
+    labels:
+      - "Dependencies"
+
+  - package-ecosystem: "npm"
+    directory: "/examples/kendo-react-ssr"
+    schedule:
+      interval: "daily"
+    groups:
+      kendo-dependencies:
+        patterns:
+          - '@progress/kendo-*'
+    commit-message:
+      prefix: "chore:"
+    reviewers:
+      - "telerik/kendo-react-devs"
+      - "telerik/kendo-react-support"
+    labels:
+      - "Dependencies"
+
+  - package-ecosystem: "npm"
+    directory: "/examples/kendo-react-stackblitz-app"
+    schedule:
+      interval: "daily"
+    groups:
+      kendo-dependencies:
+        patterns:
+          - '@progress/kendo-*'
+    commit-message:
+      prefix: "chore:"
+    reviewers:
+      - "telerik/kendo-react-devs"
+      - "telerik/kendo-react-support"
+    labels:
+      - "Dependencies"
+
+  - package-ecosystem: "npm"
+    directory: "/examples/react-admin-dashboard"
+    schedule:
+      interval: "daily"
+    groups:
+      kendo-dependencies:
+        patterns:
+          - '@progress/kendo-*'
+    commit-message:
+      prefix: "chore:"
+    reviewers:
+      - "telerik/kendo-react-devs"
+      - "telerik/kendo-react-support"
+    labels:
+      - "Dependencies"
+
+  - package-ecosystem: "npm"
+    directory: "/examples/react-coffee-warehouse"
+    schedule:
+      interval: "daily"
+    groups:
+      kendo-dependencies:
+        patterns:
+          - '@progress/kendo-*'
+    commit-message:
+      prefix: "chore:"
+    reviewers:
+      - "telerik/kendo-react-devs"
+      - "telerik/kendo-react-support"
+    labels:
+      - "Dependencies"
+  
+  - package-ecosystem: "npm"
+    directory: "/examples/react-grid-live-data"
+    schedule:
+      interval: "daily"
+    groups:
+      kendo-dependencies:
+        patterns:
+          - '@progress/kendo-*'
     commit-message:
       prefix: "chore:"
     reviewers:
