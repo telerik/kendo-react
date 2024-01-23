@@ -5,6 +5,8 @@ on:
   push:
     branches-ignore:
       - master
+    paths-ignore:
+      - 'knowledge-base/**'
 
 env:
   NODE_OPTIONS: --max_old_space_size=6144
@@ -22,44 +24,59 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Get changed files  
+        uses: dorny/paths-filter@v2
+        id: changes
+        with:
+          filters: |
+            examples:
+              - 'examples/**'    
+
       - name: Build Coffee warehouse nextjs app
         working-directory: ./examples/coffee-warehouse-nextjs
+        if: steps.changes.outputs.examples == 'true'
         run: |
           npm ci
           npm run build
 
       - name: Build A Sales Dashboard app
         working-directory: ./examples/kendo-react-build-a-sales-dashboard
+        if: steps.changes.outputs.examples == 'true'
         run: |
           npm ci
           npm run build
 
       - name: Build File Manager app
         working-directory: ./examples/kendo-react-file-manager
+        if: steps.changes.outputs.examples == 'true'
         run: |
           npm ci
           npm run build
 
       - name: Build Finance Portfolio app
         working-directory: ./examples/kendo-react-finance-portfolio
+        if: steps.changes.outputs.examples == 'true'
         run: |
           npm ci
           npm run build
 
       - name: Build Homepage demo app
         working-directory: ./examples/kendo-react-homepage-demo
+        if: steps.changes.outputs.examples == 'true'
         run: |
           npm ci
           npm run build
 
       - name: Build React Nextjs app
         working-directory: ./examples/kendo-react-nextjs
+        if: steps.changes.outputs.examples == 'true'
         run: |
           npm ci
           npm run build    
 
       - name: Build React Nodejs Express app
         working-directory: ./examples/kendo-react-nodejs-express
+        if: steps.changes.outputs.examples == 'true'
         run: |
           cd server
           npm ci
@@ -69,36 +86,42 @@ jobs:
 
       - name: Build React Sales Dashboard app
         working-directory: ./examples/kendo-react-sales-dashboard
+        if: steps.changes.outputs.examples == 'true'
         run: |
           npm ci
           npm run build 
 
       - name: Build React SSR app
         working-directory: ./examples/kendo-react-ssr
+        if: steps.changes.outputs.examples == 'true'
         run: |
           npm ci
           npm run build  
 
       - name: Build React Stackblitz app
         working-directory: ./examples/kendo-react-stackblitz-app
+        if: steps.changes.outputs.examples == 'true'
         run: |
           npm ci
           npm run build  
 
       - name: Build React Admin Dashboard app
         working-directory: ./examples/react-admin-dashboard
+        if: steps.changes.outputs.examples == 'true'
         run: |
           npm ci
           npm run build  
 
       - name: Build React Coffee Warehouse app
         working-directory: ./examples/react-coffee-warehouse
+        if: steps.changes.outputs.examples == 'true'
         run: |
           npm ci
           npm run build
 
       - name: Build React Grid Live Data app
         working-directory: ./examples/react-grid-live-data
+        if: steps.changes.outputs.examples == 'true'
         run: |
           npm ci
           npm run build
