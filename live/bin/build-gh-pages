@@ -12,13 +12,13 @@ do
 
   echo Building ${PROJECT}
   npm ci
-  rm -rf dist
+  rm -rf build
   npm run build
-  mkdir -p ../../live/dist/${PROJECT}
-  mv -v dist/* ../../live/dist/${PROJECT}
+  mkdir -p ../../live/build/${PROJECT}
+  mv -v build/* ../../live/build/${PROJECT}
 
   popd > /dev/null
 done
 
 # Copy static assets
-cp static/* dist
+cp static/* build
