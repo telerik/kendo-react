@@ -24,8 +24,13 @@ Looking for a drag and drop between KendoReact ListView and KendoReact Scheduler
 To enable drag and drop functionality between a KendoReact ListView and a KendoReact Scheduler, follow these steps:
 
 1. Render a custom ListView item by using the [`item`](https://www.telerik.com/kendo-react-ui/components/listview/api/ListViewProps/#toc-item) prop. This allows you to make the row draggable and obtain the currently dragged item.
-2. Add an `onDropEvent` to the Scheduler container using the [component ref](https://react.dev/reference/react/useRef).
-3. When the user drops an item, add it to the Scheduler data by updating the state.
+1. Add an `onDropEvent` to the Scheduler container using the [component ref](https://react.dev/reference/react/useRef).
+1. When the user drops an item, add it to the Scheduler data by updating the state.
+
+{% meta id:index height:900 %}
+{% embed_file scheduler/dnd-from-listview/main.jsx preview %}
+{% embed_file shared/data.js %}
+{% endmeta %}
 
 ## Notes
 
