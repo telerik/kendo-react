@@ -219,6 +219,11 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
   <td><a href="https://www.telerik.com/kendo-react-ui/scatter-chart">React Scatter Chart Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/scatter/">Documentation & Demos</td>
 </tr>
+ <tr>
+  <td><b>Sankey Chart</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/sankey">React Sankey Chart Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/sankey/">Documentation & Demos</td>
+</tr>
 </tbody></table>
 
 ### Common Utilities
