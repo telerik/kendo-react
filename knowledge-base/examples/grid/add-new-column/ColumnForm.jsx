@@ -3,6 +3,7 @@ import { Dialog } from "@progress/kendo-react-dialogs";
 import { Form, Field, FormElement } from "@progress/kendo-react-form";
 import { Input } from "@progress/kendo-react-inputs";
 import { Dialog } from "@progress/kendo-react-dialogs";
+import { Button } from '@progress/kendo-react-buttons';
 
 const ColumnForm = props => {
   return (
@@ -21,20 +22,20 @@ const ColumnForm = props => {
               </div>
             </fieldset>
             <div className="k-form-buttons">
-              <button
-                type={"submit"}
-                className="k-button k-primary"
+              <Button
+                type="submit"
                 disabled={!formRenderProps.allowSubmit}
+                style={{ width: '50%' }}
               >
                 Update
-              </button>
-              <button
-                type={"submit"}
-                className="k-button"
+              </Button>
+              <Button
+                type="submit"
                 onClick={props.cancelEdit}
+                style={{ width: '50%' }}
               >
                 Cancel
-              </button>
+              </Button>
             </div>
           </FormElement>
         )}
