@@ -29,7 +29,7 @@ category: knowledge-base
 I want to disable only the left part of the SplitButton.
 
 ## Solution
-This can be achieved via CSS by setting `pointer-events-none`:
+You can achieve this by setting `pointer-events` to `none:
 
 ```
 .k-button-group > .k-button:first-child:not(:only-child) {
