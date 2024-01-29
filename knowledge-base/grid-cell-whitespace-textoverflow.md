@@ -35,21 +35,27 @@ You can achieve this by using either the Grid `cellRender` prop, or the GridCell
 
 # Using CSS
 
+Setting className property to the Grid and using that class name as a selector to target only that instance.
+
 {% meta height:500 %}
 {% embed_file grid/grid-whitespace-textoverflow/CSS/main.jsx preview %}
-{% embed_file grid/grid-whitespace-textoverflow/shared/products.json %}
+{% embed_file shared/products.json %}
 {% endmeta %}
 
 # Using cell
 
+Setting custom cell for a column and adding the styles directly to the TD element
+
 {% meta height:500 %}
 {% embed_file grid/grid-whitespace-textoverflow/cell/main.jsx preview %}
-{% embed_file grid/grid-whitespace-textoverflow/shared/products.json %}
+{% embed_file shared/products.json %}
 {% endmeta %}
 
 # Using cellRender
 
+Using the Grid's cellRender for adding the custom styles to all cells
+
 {% meta height:500 %}
 {% embed_file grid/grid-whitespace-textoverflow/cellRender/main.jsx preview %}
-{% embed_file grid/grid-whitespace-textoverflow/shared/products.json %}
+{% embed_file shared/products.json %}
 {% endmeta %}
