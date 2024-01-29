@@ -36,4 +36,5 @@ This can be achieved by adding a `style` element to the iframe content element.
 
 {% meta id:index height:500 %}
 {% embed_file editor/set-maxwidth/main.jsx preview %}
+{% embed_file editor/set-maxwidth/content.js %}
 {% endmeta %}
