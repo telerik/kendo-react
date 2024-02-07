@@ -37,7 +37,7 @@ export const Cards = () => {
                marginTop: '40px',
                color: '#8F8F8F',
                fontSize: '12px'
-            }}>Starter plan for individuals.</p>
+            }}>STARTER PLAN FOR INDIVIDUALS</p>
           </CardBody>
         </Card>
         <Card
