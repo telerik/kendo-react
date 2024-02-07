@@ -87,6 +87,7 @@ const Planning = () => {
                         );
                     })
                 }
+                
                 <div className="card-component" >
                     <Scheduler
                         data={data.filter(event => filterState[event.employeeID])}
