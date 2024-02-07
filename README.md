@@ -258,6 +258,11 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
   <td><a href="https://www.telerik.com/kendo-react-ui/conversationalui">React Conversational UI Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/conversationalui/">Documentation & Demos</td>
 </tr>
+ <tr>
+  <td><b>AIPrompt</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/aiprompt">React AIPrompt Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/conversationalui/ai-prompt/">Documentation & Demos</td>
+</tr>
 </tbody></table>
 
 ### Data Grid
