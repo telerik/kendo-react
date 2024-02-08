@@ -37,6 +37,7 @@ export const Header: React.FunctionComponent<any> = () => {
     )
 
     return (
+        
         <header
             className={classNames(styles.header, styles['currency-input'], 'py-3')}
             style={{ background: `url(${headerBg})` }}
