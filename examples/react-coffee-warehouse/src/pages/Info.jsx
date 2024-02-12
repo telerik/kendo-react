@@ -22,7 +22,7 @@ const Info = () => {
                             <Button rounded={"small"} onClick={()=>{window.open("https://www.telerik.com/kendo-react-ui/#pricing")}}>{localizationService.toLanguageString('custom.buyNow')}</Button>
                         </div>
 
-                        <a className="github-link" href="https://github.com/telerik/react-coffee-warehouse">
+                        <a className="github-link" href="https://github.com/telerik/kendo-react/tree/master/examples/react-coffee-warehouse">
                             <img src={github} alt="github icon" />
                             <span className="github-text">
                                 {localizationService.toLanguageString('custom.getSource')}
