@@ -1,7 +1,7 @@
 {
   "name": "admin-dashboard",
   "version": "0.1.0",
-  "homepage": "https://telerik.github.io/react-admin-dashboard",
+  "homepage": "https://telerik.github.io/kendo-react/react-admin-dashboard",
   "private": true,
   "dependencies": {
     "@progress/kendo-data-query": "^1.7.0",
