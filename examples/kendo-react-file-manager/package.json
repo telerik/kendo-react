@@ -2,7 +2,7 @@
   "name": "kendo-react-file-manager",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://telerik.github.io/kendo-react-file-manager",
+  "homepage": "http://telerik.github.io/kendo-react/kendo-react-file-manager",
   "dependencies": {
     "@progress/kendo-data-query": "^1.7.0",
     "@progress/kendo-drawing": "^1.19.0",

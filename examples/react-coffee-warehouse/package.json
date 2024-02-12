@@ -2,7 +2,7 @@
   "name": "coffee-warehouse",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://telerik.github.io/react-coffee-warehouse",
+  "homepage": "http://telerik.github.io/kendo-react/react-coffee-warehouse",
   "dependencies": {
     "@progress/kendo-data-query": "^1.7.0",
     "@progress/kendo-date-math": "^1.5.12",
