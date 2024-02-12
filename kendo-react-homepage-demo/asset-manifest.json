@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/kendo-react-homepage-demo/static/css/main.57e8f0f0.css",
-    "main.js": "/kendo-react-homepage-demo/static/js/main.f0c3a12b.js",
-    "static/media/Metric-Bold.otf": "/kendo-react-homepage-demo/static/media/Metric-Bold.e6e4083db85a777cb904.otf",
-    "index.html": "/kendo-react-homepage-demo/index.html",
-    "main.57e8f0f0.css.map": "/kendo-react-homepage-demo/static/css/main.57e8f0f0.css.map",
-    "main.f0c3a12b.js.map": "/kendo-react-homepage-demo/static/js/main.f0c3a12b.js.map"
+    "main.css": "/kendo-react/kendo-react-homepage-demo/static/css/main.c6b754d5.css",
+    "main.js": "/kendo-react/kendo-react-homepage-demo/static/js/main.7007a463.js",
+    "static/media/Metric-Bold.otf": "/kendo-react/kendo-react-homepage-demo/static/media/Metric-Bold.e6e4083db85a777cb904.otf",
+    "index.html": "/kendo-react/kendo-react-homepage-demo/index.html",
+    "main.c6b754d5.css.map": "/kendo-react/kendo-react-homepage-demo/static/css/main.c6b754d5.css.map",
+    "main.7007a463.js.map": "/kendo-react/kendo-react-homepage-demo/static/js/main.7007a463.js.map"
   },
   "entrypoints": [
-    "static/css/main.57e8f0f0.css",
-    "static/js/main.f0c3a12b.js"
+    "static/css/main.c6b754d5.css",
+    "static/js/main.7007a463.js"
   ]
 }
