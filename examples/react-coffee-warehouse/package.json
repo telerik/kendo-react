@@ -42,7 +42,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-router-dom": "^6.21.3",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "socks": ">=2.7.3"
   },
   "overrides": {
     "follow-redirects": ">=1.15.4",
