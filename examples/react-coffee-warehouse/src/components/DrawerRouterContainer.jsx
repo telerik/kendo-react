@@ -8,7 +8,7 @@ import { Header } from './Header.jsx';
 import { gridIcon, calendarIcon, userIcon, infoCircleIcon} from '@progress/kendo-svg-icons'
 
 const items = [
-    { name: 'dashboard', svgIcon: gridIcon, route: '/react-coffee-warehouse', selected: true },
+    { name: 'dashboard', svgIcon: gridIcon, route: '/', selected: true },
     { name: 'planning', svgIcon: calendarIcon, route: '/planning', selected: false },
     { name: 'profile', svgIcon: userIcon, route: '/profile', selected: false },
     { separator: true },

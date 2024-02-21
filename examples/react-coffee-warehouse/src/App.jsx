@@ -88,10 +88,10 @@ const App = () => {
             <LocalizationProvider language={contextState.localeId}>
                 <IntlProvider locale={contextState.localeId}>
                     <AppContext.Provider value={{ ...contextState, onLanguageChange, onProfileChange }}>
-                        <BrowserRouter>
+                        <BrowserRouter basename="/kendo-react/react-coffee-warehouse">
                             <DrawerRouterContainer>
                                 <Routes> 
-                                    <Route path="/react-coffee-warehouse" element={<Dashboard />} />
+                                    <Route path="/" element={<Dashboard />} />
                                     <Route path="/planning" element={<Planning />} />
                                     <Route path="/profile" element={<Profile />} />
                                     <Route path="/info" element={<Info />} />
