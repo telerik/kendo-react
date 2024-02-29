@@ -6,29 +6,36 @@ import { DatePicker } from '@progress/kendo-react-dateinputs';
 
 import { sampleProducts } from './sample-products';
 
-const categories = Array.from(
-  new Set(sampleProducts.map(p => p.Category.CategoryName))
-);
+const defaultValue = new Date(1996, 8, 19);
 
 class App extends React.Component {
-  CategoryFilterCell;
-  minDateFilter = undefined;
-  maxDateFilter = undefined;
   constructor(props) {
     super(props);
+
+    const defaultFilter = {
+      logic: 'and',
+      filters: [
+        {
+          field: 'FirstOrderedOn',
+          operator: 'gte',
+          value: defaultValue,
+        },
+      ],
+    };
+
     this.state = {
       data: sampleProducts.slice(),
-      filter: []
+      filter: defaultFilter,
     };
   }
 
-  filterChange = event => {
+  filterChange = (event) => {
     this.setState({ filter: event.filter });
   };
 
   handleClearDateFilter = () => {
     let currentFilters = { ...this.state.filter };
-    let newFilter = currentFilters.filters.filter(filter => {
+    let newFilter = currentFilters.filters.filter((filter) => {
       return filter.field !== 'FirstOrderedOn';
     });
     currentFilters.filters = newFilter;
@@ -37,7 +44,7 @@ class App extends React.Component {
     this.setState({ filter: currentFilters });
   };
 
-  handleDateFilterChange = event => {
+  handleDateFilterChange = (event) => {
     let currentFilters = { ...this.state.filter };
     if (event.operator === 'gt') {
       this.minDateFilter = event.value;
@@ -45,7 +52,7 @@ class App extends React.Component {
       this.maxDateFilter = event.value;
     }
     if (currentFilters.filters) {
-      let newFilter = currentFilters.filters.filter(filter => {
+      let newFilter = currentFilters.filters.filter((filter) => {
         return !(
           filter.field === 'FirstOrderedOn' &&
           filter.operator === event.operator
@@ -55,7 +62,7 @@ class App extends React.Component {
       currentFilters.filters.push({
         field: 'FirstOrderedOn',
         operator: event.operator,
-        value: event.value
+        value: event.value,
       });
     } else {
       currentFilters.filters = [];
@@ -63,20 +70,44 @@ class App extends React.Component {
       currentFilters.filters.push({
         field: 'FirstOrderedOn',
         operator: event.operator,
-        value: event.value
+        value: event.value,
       });
     }
     this.setState({ filter: currentFilters });
   };
 
-  MyDateFilterCell = props => (
-    <DateRangeFilter
-      {...props}
-      min={this.minDateFilter}
-      max={this.maxDateFilter}
-      onDateFilterChange={this.handleDateFilterChange}
-      onDateFilterClear={this.handleClearDateFilter}
-    />
+  MyDateFilterCell = (props) => (
+    <div className="k-filtercell">
+      <DatePicker
+        format={'MMMM yyyy'}
+        defaultValue={defaultValue}
+        value={props.min}
+        onChange={(e) => {
+          this.handleDateFilterChange({
+            value: e.target.value,
+            operator: 'gt',
+          });
+        }}
+      />
+      <DatePicker
+        format={'MMMM yyyy'}
+        value={props.max}
+        onChange={(e) => {
+          this.handleDateFilterChange({
+            value: e.target.value,
+            operator: 'lt',
+          });
+        }}
+      />
+      <button
+        className="k-button k-button-icon k-clear-button-visible"
+        title="Clear"
+        disabled={!(props.min || props.max)}
+        onClick={() => this.handleClearDateFilter()}
+      >
+        <span className="k-icon k-i-filter-clear" />
+      </button>
+    </div>
   );
 
   render() {
@@ -92,7 +123,7 @@ class App extends React.Component {
         <Column
           filter="date"
           field="FirstOrderedOn"
-          format={'{0:dd/MM/yyy}'}
+          format={'{0:dd/MM/yyyy}'}
           width={300}
           filterCell={this.MyDateFilterCell}
         />
@@ -103,41 +134,6 @@ class App extends React.Component {
           width="240px"
         />
       </Grid>
-    );
-  }
-}
-
-class DateRangeFilter extends React.Component {
-  render() {
-    return (
-      <div className="k-filtercell">
-        <DatePicker
-          value={this.props.min}
-          onChange={e => {
-            this.props.onDateFilterChange({
-              value: e.target.value,
-              operator: 'gt'
-            });
-          }}
-        />
-        <DatePicker
-          value={this.props.max}
-          onChange={e => {
-            this.props.onDateFilterChange({
-              value: e.target.value,
-              operator: 'lt'
-            });
-          }}
-        />
-        <button
-          className="k-button k-button-icon k-clear-button-visible"
-          title="Clear"
-          disabled={!(this.props.min || this.props.max)}
-          onClick={() => this.props.onDateFilterClear()}
-        >
-          <span className="k-icon k-i-filter-clear" />
-        </button>
-      </div>
     );
   }
 }
