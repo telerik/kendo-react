@@ -43,11 +43,16 @@ You can configure a stateful KendoReact Data Grid to perform paging, sorting, fi
 The stateful Grid performs its data operations by using the `process` method of the [`DataQuery`]({% slug overview_dataquery %}) library. To apply the changes and to save the current state of the grid data when a data operation is performed, handle the [`onDataStateChange`]({% slug api_grid_gridprops %}#toc-ondatachange) event.
 
 ```jsx-no-run
-    onDataStateChange={(e) => {
-        this.setState({
-            result: process(this.state.unprocessedData ? this.state.unprocessedData : this.props.data, e.data),
-            dataState:e.data});
-        }}
+    const onDataStateChange = (event) => {
+      const updatedState = {
+        ...gridState,
+        skip: event.dataState?.skip,
+        take: event.dataState?.take,
+        sort: event.dataState?.sort,
+        filter: event.dataState?.filter,
+      };
+      setGridState(updatedState);
+    };
 ```
 
 #### Editing
@@ -59,40 +64,47 @@ To configure the stateful Grid for editing:
     > If the stateful Grid is not intended to be groupable, you can use only one data collection.
 
     ```jsx-no-run
-        this.state = {
-            result: process(this.props.data,{skip:0}),
-            dataState: {skip: 0},
-            unprocessedData: this.props.data };
+        const [state, setState] = useState({
+        result: process(props.data, {skip: 0}),
+        dataState: { skip: 0 },
+        unprocessedData: props.data
+        });
     ```
 
 1. Handle the [`onItemChange`]({% slug api_grid_gridprops %}#toc-onitemchange) event which will fire each time the user updates any of the editors.
 
     ```jsx-no-run
-        itemChange = (event) => {
-            var data = this.state.unprocessedData
-            var currentDataState = data;
+        const onItemChange = (event) => {
+        let data = [...state.unprocessedData]; // Clone to avoid direct mutation
+        let currentDataState = { ...state.dataState };
 
-            if (event.field === this.props.editField && event.value === 'delete') {
-                data.splice(data.findIndex(d => d === event.dataItem), 1);
-            } else {
-                event.dataItem[event.field] = event.value;
-            }
-            this.setState({ result: process(data,this.state.dataState), unprocessedData: data });
-        };
+        if (event.field === props.editField && event.value === 'delete') {
+        data.splice(data.findIndex(d => d === event.dataItem), 1);
+         } else {
+        const index = data.findIndex(d => d === event.dataItem);
+        data[index] = { ...data[index], [event.field]: event.value };
+        }
+        
+        setState({
+         ...state,
+        result: process(data, currentDataState),
+        unprocessedData: data
+        });
+    };
     ```
 
 1. Add items to the collection by using a function which you can call from a button click either inside the Grid toolbar or outside the Grid.
 
     ```jsx-no-run
-        addNew = () => {
-            var data = this.state.unprocessedData
-            data.unshift({[this.props.editField]: true, Discontinued: false, ProductID: 0})
-            this.setState({
-                result: process(data, this.props.pageable ? {group:this.state.dataState.group, take: this.state.dataState.take,filter: this.state.dataState.filter , skip: 0, sort:this.state.dataState.sort } : this.state.dataState),
-                unprocessedData: data,
-                dataState: this.props.pageable ? {group:this.state.dataState.group, take: this.state.dataState.take,filter: this.state.dataState.filter skip: 0, sort:this.state.dataState.sort } : this.state.dataState
-            });
-        };
+        const addNew = () => {
+        let data = [...state.unprocessedData];
+        data.unshift({ [props.editField]: true, Discontinued: false, ProductID: 0 });
+        setState({
+        ...state,
+        result: process(data, state.dataState),
+        unprocessedData: data
+        });
+    };
     ```
 
 #### Local Data Operations with HOC
