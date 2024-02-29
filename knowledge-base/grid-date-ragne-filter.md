@@ -30,11 +30,11 @@ category: knowledge-base
 
 How can I filter date ranges in the Grid.
 
-Also, how to make Grid custom range filter working with Odata.
+Also, how to make Grid custom range filter working with Odata and show default value and a different format?
 
 ## Solution
 
-This requires using the [filterCell]({% slug api_grid_gridcolumnprops %}#toc-filterCell) property of the Grid column to add two DatePickers/DateInputs that will allow the user to select a start and an end date.
+This requires using the [filterCell]({% slug api_grid_gridcolumnprops %}#toc-filterCell) property of the Grid column to add two DatePickers/DateInputs that will allow the user to select a start and an end date. The format can be changed by configuring the [format]({% slug api_dateinputs_datepickerprops %}#toc-format). Use the [defaultValue]({% slug api_dateinputs_datepickerprops %}#toc-defaultValue) to pass a default value for the custom DatePicker component.
 
 {% meta height:450 %}
 {% embed_file grid/date-range-filter/main.jsx preview %}
