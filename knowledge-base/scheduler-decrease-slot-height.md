@@ -1,6 +1,6 @@
 ---
 title: Decrease the KendoReact Scheduler slot height below 40px
-description: An example on how to decrease the slot height of the KendoReact Scheduler below 40px
+description: An example on how to decrease the slot height of the KendoReact Scheduler below 40px.
 type: how-to
 page_title: Slot Height - KendoReact Scheduler
 slug: scheduler-slot-height

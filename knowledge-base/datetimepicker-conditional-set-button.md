@@ -1,6 +1,6 @@
 ---
 title: DateTimePicker disable Set button based on the selected date
-description: An example on how to disable and enable the Set button based on the chosen date in the KendoReact DateTimePicker
+description: An example on how to disable and enable the Set button based on the chosen date in the KendoReact DateTimePicker.
 type: how-to
 page_title: Disable Set Button - KendoReact DateTimePicker
 slug: datetimepicker-disable-set-button
