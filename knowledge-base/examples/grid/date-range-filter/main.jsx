@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
 import { filterBy } from '@progress/kendo-data-query';
 import { DatePicker } from '@progress/kendo-react-dateinputs';
+import { Button } from '@progress/kendo-react-buttons';
 
 import { sampleProducts } from './sample-products';
 
@@ -99,14 +100,13 @@ class App extends React.Component {
           });
         }}
       />
-      <button
-        className="k-button k-button-icon k-clear-button-visible"
+      <Button
         title="Clear"
-        disabled={!(props.min || props.max)}
-        onClick={() => this.handleClearDateFilter()}
+        disabled={!(this.props.min || this.props.max)}
+        onClick={() => this.props.onDateFilterClear()}
       >
-        <span className="k-icon k-i-filter-clear" />
-      </button>
+        Clear
+      </Button>
     </div>
   );
 
