@@ -1,8 +1,8 @@
 ---
-title: Show MaxLength and number of typed characters in the KendoReact Chat
+title: Show maxLength and number of typed characters in the KendoReact Chat
 description: An example on how to make the Chat show number of typed characters and maxLength of input
 type: how-to
-page_title: Show MaxLength and number of typed characters- KendoReact Chat
+page_title: Show maxLength and number of typed characters- KendoReact Chat
 slug: chat-maxlength-char-count
 tags: chat, maxlength, count chars, count
 res_type: kb
