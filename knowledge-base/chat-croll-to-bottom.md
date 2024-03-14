@@ -1,9 +1,9 @@
 ---
-title: Scroll KendoReact Conversational UI to the bottom automatically
-description: An example on how to make the Conversational UI scroll to the bottom automatically
+title: Scroll KendoReact Chat to the bottom automatically
+description: An example on how to make the Chat scroll to the bottom automatically
 type: how-to
 page_title: Scroll to the bottom of each message automatically - KendoReact Conversational UI
-slug: chat-scroll-to-bottom-automatically
+slug: conversational-ui-scroll-to-bottom-automatically
 tags: conversational-ui, chat, scroll, scroll to bottom, automatically, scroll automatically
 ticketid: 1615928
 res_type: kb
