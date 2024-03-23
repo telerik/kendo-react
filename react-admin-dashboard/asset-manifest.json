@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/kendo-react/react-admin-dashboard/static/css/main.7da45bc3.css",
-    "main.js": "/kendo-react/react-admin-dashboard/static/js/main.66090b1b.js",
+    "main.js": "/kendo-react/react-admin-dashboard/static/js/main.ec8196c5.js",
     "static/js/496.9b9320ce.chunk.js": "/kendo-react/react-admin-dashboard/static/js/496.9b9320ce.chunk.js",
     "static/media/Roboto-Regular.ttf": "/kendo-react/react-admin-dashboard/static/media/Roboto-Regular.03523cf578d69fa92322.ttf",
     "static/media/lights.png": "/kendo-react/react-admin-dashboard/static/media/lights.034da673c58273345997.png",
@@ -13,11 +13,11 @@
     "static/media/signin.png": "/kendo-react/react-admin-dashboard/static/media/signin.d1569b675f003eac9004.png",
     "index.html": "/kendo-react/react-admin-dashboard/index.html",
     "main.7da45bc3.css.map": "/kendo-react/react-admin-dashboard/static/css/main.7da45bc3.css.map",
-    "main.66090b1b.js.map": "/kendo-react/react-admin-dashboard/static/js/main.66090b1b.js.map",
+    "main.ec8196c5.js.map": "/kendo-react/react-admin-dashboard/static/js/main.ec8196c5.js.map",
     "496.9b9320ce.chunk.js.map": "/kendo-react/react-admin-dashboard/static/js/496.9b9320ce.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7da45bc3.css",
-    "static/js/main.66090b1b.js"
+    "static/js/main.ec8196c5.js"
   ]
 }
