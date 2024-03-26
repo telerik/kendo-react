@@ -9,8 +9,9 @@ ticketid: 1624402
 res_type: kb
 category: knowledge-base
 ---
- 
+
 ## Environment
+
 <table>
     <tbody>
 	    <tr> 
@@ -23,7 +24,6 @@ category: knowledge-base
 	    </tr>
     </tbody>
 </table>
-
 
 ## Description
 
@@ -39,17 +39,17 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link
-        rel="stylesheet"
-        data-kendo="true"
-        href={`https://cdn.kendostatic.com/themes/7.2.1/default/default-main.css`}
+          rel="stylesheet"
+          data-kendo="true"
+          href={`https://cdn.kendostatic.com/themes/7.2.1/default/default-main.css`}
         />
       </head>
-      <body className='k-body'>
-      <ThemeSwitcher />
-      {children}
+      <body className="k-body">
+        <ThemeSwitcher />
+        {children}
       </body>
     </html>
-  )
+  );
 }
 ```
 
@@ -59,16 +59,14 @@ Basically, the main idea in this `ThemeSwitcher` component is to change the `hre
 
 ```jsx
 const handleChange = (event) => {
-        const link = document.head.querySelector("link[data-kendo");
-        if (link) {
-            link.setAttribute(
-                "href",
-                `https://cdn.kendostatic.com/themes/7.2.1/${event.target.value.swatch}.css`
-            )
-        }
-    }
+  const link = document.head.querySelector("link[data-kendo");
+  if (link) {
+    link.setAttribute(
+      "href",
+      `https://cdn.kendostatic.com/themes/7.2.1/${event.target.value.swatch}.css`
+    );
+  }
+};
 ```
 
-
 This approach is demonstrated in [this StackBlitz example](https://stackblitz.com/edit/stackblitz-starters-ajmsqv?description=The%20React%20framework%20for%20production&file=app%2Fcomponents%2FThemeSwitcher.jsx&title=Next.js%20Starter).
-
