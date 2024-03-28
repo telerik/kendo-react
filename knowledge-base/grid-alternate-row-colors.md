@@ -1,5 +1,5 @@
 ---
-title: Alternate the KendoReact Data Grid row colors
+title: Alternate the KendoReact Data Grid row colors with CSS
 description: An example on how to alternate the row colors of the KendoReact Data Grid.
 type: how-to
 page_title: Alternate row colors - KendoReact Grid
@@ -68,6 +68,11 @@ As an example, the following will set the background of the alt rows to `red` an
 </div>
 ```
 
+{% meta id:index height:480 %}
+{% embed_file grid-row-colors/alternate-colors/main.jsx preview %}
+{% embed_file shared/products.json %}
+{% endmeta %}
+
 You can also set the background color to specific rows using the [nth-child](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child) pseudo class.
 
 ```css
@@ -75,3 +80,8 @@ You can also set the background color to specific rows using the [nth-child](htt
   background: lightblue;
 }
 ```
+
+{% meta id:index height:480 %}
+{% embed_file grid-row-colors/single-row-color/main.jsx preview %}
+{% embed_file shared/products.json %}
+{% endmeta %}
