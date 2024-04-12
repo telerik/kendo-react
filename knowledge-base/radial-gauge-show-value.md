@@ -5,7 +5,7 @@ type: how-to
 page_title: Show RadialGauge Value - KendoReact RadialGauge
 slug: radial-gauge-show-value
 position:
-tags: radial, gauge, value
+tags: radialgauge, gauge, value
 ticketid: 1645522
 res_type: kb
 category: knowledge-base
