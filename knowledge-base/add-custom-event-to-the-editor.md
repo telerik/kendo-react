@@ -35,5 +35,6 @@ The desired DOM events can be attached to the EditorView object using the [onMou
 This is an example showcasing how to attach the onColumnMenu, onBlur and onClick events:
 
 {% meta height:340 %}
+{% embed_file editor/attach-events/app.jsx preview %}
 {% embed_file editor/attach-events/main.jsx preview %}
 {% endmeta %}
