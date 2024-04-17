@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 
 import { Editor, EditorTools, ProseMirror } from '@progress/kendo-react-editor';
 import { Menu, MenuItem } from '@progress/kendo-react-layout';
@@ -74,8 +73,5 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <App />,
-  document.querySelector('my-app')
-);
+export default App;
 
