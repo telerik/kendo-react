@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@progress/kendo-theme-default/dist/default-ocean-blue.scss';
+
+div.examples-list {
+    max-height: none;
+}
+
+div.examples-list .k-grid {
+    max-height: 900px;
+    overflow: scroll;
+    width: 100%;
+}
+
+div.examples-list .k-grid a {
+    color: blue;
+    text-decoration: underline;
+}
+
+div.examples-list .k-grid .k-alt {
+    background-color: #eee;
+}
