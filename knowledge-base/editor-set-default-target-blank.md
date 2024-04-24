@@ -4,7 +4,6 @@ description: An example on how to set by default target blank for all links in t
 type: how-to
 page_title: Set Default Target Blank for All Links inside the Editor - KendoReact Editor
 slug: editor-set-default-target-blank
-ticketid: 1646724,
 tags: editor, kendoreact, target, blank
 ticketid: 1646724
 res_type: kb
