@@ -31,7 +31,7 @@ How can I apply different bullet styles to different indentation levels in the K
 
 ## Solution
 
-This can be achieved by adding a [style element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style) to the iframe document that contains the required [list-style-type](https://www.w3schools.com/cssref/pr_list-style-type.php)
+You can achieve this by adding a [style element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style) to the iframe document that contains the required [list-style-type](https://www.w3schools.com/cssref/pr_list-style-type.php)
 
 {% meta id:index height:330 %}
 {% embed_file editor/editor-multilevel-list-styles/main.jsx preview %}
