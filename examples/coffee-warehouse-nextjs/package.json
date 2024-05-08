@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@progress/kendo-data-query": "^1.7.0",
-    "@progress/kendo-date-math": "^1.5.12",
+    "@progress/kendo-date-math": "^1.5.13",
     "@progress/kendo-drawing": "^1.20.1",
     "@progress/kendo-licensing": "^1.3.5",
     "@progress/kendo-react-buttons": "^7.4.0",
@@ -35,7 +35,7 @@
     "@progress/kendo-react-scheduler": "^7.4.0",
     "@progress/kendo-react-treeview": "^7.0.2",
     "@progress/kendo-react-upload": "^7.4.0",
-    "@progress/kendo-theme-default": "^7.2.1",
+    "@progress/kendo-theme-default": "^8.0.0",
     "cldr-core": "44.0.1",
     "cldr-dates-full": "44.0.1",
     "cldr-numbers-full": "44.0.1",
