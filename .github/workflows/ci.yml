@@ -151,7 +151,7 @@ jobs:
           npm run build
           
       - name: Build Knowledge Base Vite app
-        working-directory: ./knowledge-base/examples
+        working-directory: ./docs/knowledge-base
         if: steps.changes.outputs.examples == 'true'
         run: |
           npm ci
