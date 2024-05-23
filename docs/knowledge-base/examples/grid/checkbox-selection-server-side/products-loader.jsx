@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+
 import { toODataString } from '@progress/kendo-data-query';
 
 export class ProductsLoader extends React.Component {

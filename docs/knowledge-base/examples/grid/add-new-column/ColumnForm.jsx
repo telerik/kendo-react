@@ -2,7 +2,6 @@ import * as React from "react";
 import { Dialog } from "@progress/kendo-react-dialogs";
 import { Form, Field, FormElement } from "@progress/kendo-react-form";
 import { Input } from "@progress/kendo-react-inputs";
-import { Dialog } from "@progress/kendo-react-dialogs";
 import { Button } from '@progress/kendo-react-buttons';
 
 const ColumnForm = props => {

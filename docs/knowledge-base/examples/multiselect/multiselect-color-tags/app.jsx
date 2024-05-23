@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { MultiSelect } from '@progress/kendo-react-dropdowns';
 
 const sizes = [
