@@ -38,5 +38,5 @@ A custom [`Pager`]({% slug pi_datatools_pagerprops %}) should be rendered below 
 {% meta id height:650 %}
 {% embed_file treelist/pager-at-bottom/main.jsx preview %}
 {% embed_file treelist/pager-at-bottom/pager.jsx %}
-{% embed_file shared/treelist-data.js %}
+{% embed_file shared/shared-treelist-data.js %}
 {% endmeta %}

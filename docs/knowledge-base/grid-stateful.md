@@ -116,5 +116,5 @@ The following example demonstrates how to create a [higher-order component (HOC)
 {% meta id:stateful height:700 %}
 {% embed_file grid/stateful/main.jsx preview %}
 {% embed_file grid/stateful/with-state.jsx %}
-{% embed_file shared/products.json %}
+{% embed_file shared/shared-products.json %}
 {% endmeta %}

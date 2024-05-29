@@ -34,5 +34,5 @@ This is an example showcasing this approach where the filter expression is logge
 {% meta id:index height:700 %}
 {% embed_file grid/checkboxfilter-outside-grid/main.jsx preview %}
 {% embed_file grid/checkboxfilter-outside-grid/columnMenu.jsx %} 
-{% embed_file shared/products.json %} 
+{% embed_file shared/shared-products.json %} 
 {% endmeta %}

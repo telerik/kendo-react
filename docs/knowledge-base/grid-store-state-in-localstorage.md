@@ -35,5 +35,5 @@ You can achieve this by saving the DataState to the localStorage. When the dataS
 
 {% meta id:index height:480 %}
 {% embed_file grid/grid-save-datastate-to-localstorage/main.jsx preview %}
-{% embed_file shared/products.json %}
+{% embed_file shared/shared-products.json %}
 {% endmeta %}

@@ -37,5 +37,5 @@ In order to achieve this, the Columns of the Grid should be rendered dynamically
 
 {% meta id height:650 %}
 {% embed_file grid/show-hide-columns/main.jsx preview %}
-{% embed_file shared/products.json %}
+{% embed_file shared/shared-products.json %}
 {% endmeta %}

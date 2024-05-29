@@ -36,5 +36,5 @@ Use the [`rowRender`]({% slug api_grid_gridprops %}#toc-rowrender) prop of the G
 
 {% meta id height:760 %}
 {% embed_file grid/drag-drop-between-grids/main.jsx preview %}
-{% embed_file shared/products.json %}
+{% embed_file shared/shared-products.json %}
 {% endmeta %}

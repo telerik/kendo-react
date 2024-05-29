@@ -39,7 +39,7 @@ Setting className property to the Grid and using that class name as a selector t
 
 {% meta height:500 %}
 {% embed_file grid/grid-whitespace-textoverflow/CSS/main.jsx preview %}
-{% embed_file shared/products.json %}
+{% embed_file shared/shared-products.json %}
 {% endmeta %}
 
 # Using cell
@@ -48,7 +48,7 @@ Setting custom cell for a column and adding the styles directly to the TD elemen
 
 {% meta height:500 %}
 {% embed_file grid/grid-whitespace-textoverflow/cell/main.jsx preview %}
-{% embed_file shared/products.json %}
+{% embed_file shared/shared-products.json %}
 {% endmeta %}
 
 # Using cellRender
@@ -57,5 +57,5 @@ Using the Grid's cellRender for adding the custom styles to all cells
 
 {% meta height:500 %}
 {% embed_file grid/grid-whitespace-textoverflow/cellRender/main.jsx preview %}
-{% embed_file shared/products.json %}
+{% embed_file shared/shared-products.json %}
 {% endmeta %}

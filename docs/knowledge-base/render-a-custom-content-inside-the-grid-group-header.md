@@ -36,7 +36,7 @@ In order to achieve this, it is currently recommended to use the ['groupHeader`]
 
 {% meta id:index height:760 %}
 {% embed_file grid/group-header-render/cells-header/main.jsx preview %}
-{% embed_file shared/products.json %}
+{% embed_file shared/shared-products.json %}
 {% endmeta %}
 
 This can also be achieved using the Grid `cellRender` property
@@ -47,5 +47,5 @@ The following example demonstrates how to modify the `groupHeader` of the Grid.
 
 {% meta id:index height:760 %}
 {% embed_file grid/group-header-render/main.jsx preview %}
-{% embed_file shared/products.json %}
+{% embed_file shared/shared-products.json %}
 {% endmeta %}

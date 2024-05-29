@@ -70,7 +70,7 @@ As an example, the following will set the background of the alt rows to `red` an
 
 {% meta id:index height:480 %}
 {% embed_file grid-row-colors/alternate-colors/main.jsx preview %}
-{% embed_file shared/products.json %}
+{% embed_file shared/shared-products.json %}
 {% endmeta %}
 
 You can also set the background color to specific rows using the [nth-child](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child) pseudo class.
@@ -83,5 +83,5 @@ You can also set the background color to specific rows using the [nth-child](htt
 
 {% meta id:index height:480 %}
 {% embed_file grid-row-colors/single-row-color/main.jsx preview %}
-{% embed_file shared/products.json %}
+{% embed_file shared/shared-products.json %}
 {% endmeta %}

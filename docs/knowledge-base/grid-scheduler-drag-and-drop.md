@@ -40,5 +40,5 @@ This will required the following setup:
 
 {% meta id:index height:900 %}
 {% embed_file scheduler/dnd-from-grid/main.jsx preview %}
-{% embed_file shared/data.js %}
+{% embed_file shared/shared-data.js %}
 {% endmeta %}

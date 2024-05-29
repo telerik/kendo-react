@@ -39,5 +39,5 @@ Following is an example demonstrating this approach
 {% meta id:index height:520 %}
 {% embed_file grid/grid-columnmenu-pass-data-with-context/main.jsx preview %}
 {% embed_file grid/grid-columnmenu-pass-data-with-context/columnMenu.jsx %}
-{% embed_file shared/products.json %}
+{% embed_file shared/shared-products.json %}
 {% endmeta %}

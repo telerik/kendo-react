@@ -39,5 +39,5 @@ This is an example demonstrating this implementation:
 {% meta id:index height:560 %}
 {% embed_file grid/ignore-diacritics/main.jsx preview %}
 {% embed_file grid/ignore-diacritics/inputFilterCell.jsx %}
-{% embed_file shared/sample-products.js %}
+{% embed_file shared/shared-sample-products.js %}
 {% endmeta %}

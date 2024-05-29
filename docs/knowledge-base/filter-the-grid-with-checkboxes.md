@@ -41,5 +41,5 @@ In KendoReact, you can programmatically implement the data filtering with checkb
 {% meta id:index height:580 %}
 {% embed_file grid/grid-filter-checkbox/main.jsx preview %}
 {% embed_file grid/grid-filter-checkbox/customColumnMenu.jsx %}
-{% embed_file shared/products.json %}
+{% embed_file shared/shared-products.json %}
 {% endmeta %}

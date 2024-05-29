@@ -38,5 +38,5 @@ This is an example demonstrating the implementation:
 
 {% meta id:index height:760 %}
 {% embed_file scheduler/export-to-ical/main.jsx preview %}
-{% embed_file shared/events-utc.js preview %}
+{% embed_file shared/shared-events-utc.js preview %}
 {% endmeta %}

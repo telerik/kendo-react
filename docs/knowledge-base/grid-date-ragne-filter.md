@@ -38,5 +38,5 @@ This requires using the [filterCell]({% slug api_grid_gridcolumnprops %}#toc-fil
 
 {% meta height:450 %}
 {% embed_file grid/date-range-filter/main.jsx preview %}
-{% embed_file shared/sample-products.js preview %}
+{% embed_file shared/shared-sample-products.js preview %}
 {% endmeta %}

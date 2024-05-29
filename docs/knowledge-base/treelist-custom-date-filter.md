@@ -37,5 +37,5 @@ We set the default operators through the [`initialFilter`]({% slug api_datatools
 {% meta id height:580 %}
 {% embed_file treelist/custom-columnmenu-date-filter/main.jsx preview %}
 {% embed_file treelist/custom-columnmenu-date-filter/dateColumnMenu.jsx %}
-{% embed_file shared/treeListData.js %}
+{% embed_file shared/shared-treeListData.js %}
 {% endmeta %}

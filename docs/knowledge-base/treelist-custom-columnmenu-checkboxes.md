@@ -37,5 +37,5 @@ A custom column menu should be created through the [`filterContent`]({% slug api
 {% embed_file treelist/custom-columnmenu-checkboxes/main.jsx preview %}
 {% embed_file treelist/custom-columnmenu-checkboxes/checkboxFilterColumnMenu.jsx %}
 {% embed_file treelist/custom-columnmenu-checkboxes/data.js %}
-{% embed_file shared/treeListData.js %}
+{% embed_file shared/shared-treeListData.js %}
 {% endmeta %}

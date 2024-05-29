@@ -30,5 +30,5 @@ Add titles to the cells of the Grid by setting the [`cell`]({% slug api_grid_gri
 
 {% meta height:450 %}
 {% embed_file grid/with-tooltip/main.jsx preview %}
-{% embed_file shared/products.json preview %}
+{% embed_file shared/shared-products.json preview %}
 {% endmeta %}

@@ -39,5 +39,5 @@ Following is an example demonstrates this approach:
 
 {% meta id height:500 %}
 {% embed_file scheduler/start-end-dates/main.jsx preview %}
-{% embed_file shared/events-utc.js preview %}
+{% embed_file shared/shared-events-utc.js preview %}
 {% endmeta %}

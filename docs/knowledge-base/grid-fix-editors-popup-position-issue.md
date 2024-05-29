@@ -38,5 +38,5 @@ This is an example showcasing this approach:
 {% embed_file grid/fix-editors-popup-position-issue/myCommandCell.jsx %}
 {% embed_file grid/fix-editors-popup-position-issue/myDropDownCell.jsx %}
 {% embed_file grid/fix-editors-popup-position-issue/services.js %}
-{% embed_file shared/sample-products.js %} 
+{% embed_file shared/shared-sample-products.js %} 
 {% endmeta %}

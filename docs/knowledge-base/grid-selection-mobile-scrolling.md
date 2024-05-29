@@ -36,7 +36,7 @@ Here is an example with the described approach, where we are importing the `useD
 {% meta id height:550 %}
 {% embed_file grid/grid-selection-mobile-scrolling/main.jsx preview %}
 {% embed_file grid/grid-selection-mobile-scrolling/isMobile.jsx %}
-{% embed_file shared/products.json %}
+{% embed_file shared/shared-products.json %}
 {% endmeta %}
 
 For more information about enabling checkbox selection, check the following example from the Grid Selection article:

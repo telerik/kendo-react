@@ -35,5 +35,5 @@ This is an example showcasing this approach:
 
 {% meta id:index height:760 %}
 {% embed_file grid/grid-hide-grouped-columns/main.jsx preview %}
-{% embed_file shared/products.json %} 
+{% embed_file shared/shared-products.json %} 
 {% endmeta %}

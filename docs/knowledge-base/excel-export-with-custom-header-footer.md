@@ -42,7 +42,7 @@ The following example shows how to:
 
 {% meta id:index height:640 %}
 {% embed_file grid/excel-export-header-footer/main.jsx preview %}
-{% embed_file shared/products.json %}
+{% embed_file shared/shared-products.json %}
 {% endmeta %}
 
 

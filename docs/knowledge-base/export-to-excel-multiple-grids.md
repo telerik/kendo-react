@@ -32,5 +32,5 @@ Set the second Grid sheet as the second sheet of the first document and export o
 
 {% meta id:index height:760 %}
 {% embed_file grid/multiple-grid-export-excel/main.jsx preview %}
-{% embed_file shared/products.json %}
+{% embed_file shared/shared-products.json %}
 {% endmeta %}

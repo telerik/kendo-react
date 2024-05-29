@@ -69,5 +69,5 @@ The following example demonstrates the full implementation of the suggested appr
 
 {% meta height:480 %}
 {% embed_file grid/context-menu/main.jsx preview %}
-{% embed_file shared/products.json %}
+{% embed_file shared/shared-products.json %}
 {% endmeta %}

@@ -42,10 +42,10 @@ This is an example showcasing this in action:
 {% meta id:index height:480 %}
 {% variant title:Hooks %}
 {% embed_file multiselect/multiselect-select-all-checkbox/func/main.jsx preview %}
-{% embed_file shared/countries.js %}
+{% embed_file shared/shared-countries.js %}
 {% endvariant %}
 {% variant title:Classes %}
 {% embed_file multiselect/multiselect-select-all-checkbox/class/main.jsx preview %}
-{% embed_file shared/countries.js %}
+{% embed_file shared/shared-countries.js %}
 {% endvariant %}
 {% endmeta %}

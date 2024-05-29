@@ -38,7 +38,7 @@ In order to automatically calculate the column width, we can suggest using the C
 
 {% meta id:index height:560 %}
 {% embed_file grid/auto-width/canvas/main.jsx preview %}
-{% embed_file shared/products.json %}
+{% embed_file shared/shared-products.json %}
 {% endmeta %}
 
 ### Using calculate-size
@@ -47,5 +47,5 @@ Another approach would be to use a package called [calculate-size](https://www.n
 
 {% meta id:index height:560 %}
 {% embed_file grid/auto-width/calculate-size/main.jsx preview %}
-{% embed_file shared/products.json %}
+{% embed_file shared/shared-products.json %}
 {% endmeta %}

@@ -40,7 +40,7 @@ This will required the following setup:
 
 {% meta id:index height:900 %}
 {% embed_file scheduler/dnd-from-grid/main.jsx preview %}
-{% embed_file shared/data.js %}
+{% embed_file shared/shared-data.js %}
 {% endmeta %}
 
 ## Enabling the drag and drop on mobile devices
@@ -51,8 +51,8 @@ This can be achieved by using the KendoReact [Drag&Drop](https://www.telerik.com
 {% embed_file scheduler/dnd-from-grid-mobile/draggable/main.jsx preview %}
 {% embed_file scheduler/dnd-from-grid-mobile/draggable/drag-handle-cell.jsx %}
 {% embed_file scheduler/dnd-from-grid-mobile/draggable/draggable-row.jsx %}
-{% embed_file shared/data.js %}
-{% embed_file shared/products.json %}
+{% embed_file shared/shared-data.js %}
+{% embed_file shared/shared-products.json %}
 {% endmeta %}
 
 
@@ -60,5 +60,5 @@ The native Drag & Drop API does not support touch events by default. It is possi
 
 {% meta id:index height:900 %}
 {% embed_file scheduler/dnd-from-grid-mobile/polyfill/main.jsx preview %}
-{% embed_file shared/data.js %}
+{% embed_file shared/shared-data.js %}
 {% endmeta %}

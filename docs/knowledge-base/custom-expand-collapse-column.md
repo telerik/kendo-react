@@ -41,5 +41,5 @@ Following is an example demonstrating this approach:
 
 {% meta id height:540 %}
 {% embed_file grid/custom-expand-collapse-column/main.jsx preview %}
-{% embed_file shared/products.json %}
+{% embed_file shared/shared-products.json %}
 {% endmeta %}

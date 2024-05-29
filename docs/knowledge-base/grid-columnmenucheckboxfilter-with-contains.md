@@ -41,5 +41,5 @@ Following is an example demonstrating this approach:
 {% meta id:index height:520 %}
 {% embed_file grid/grid-columnmenucheckboxfilter-with-contains/main.jsx preview %}
 {% embed_file grid/grid-columnmenucheckboxfilter-with-contains/columnMenu.jsx %}
-{% embed_file shared/products.json %}
+{% embed_file shared/shared-products.json %}
 {% endmeta %}

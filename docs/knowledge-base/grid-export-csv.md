@@ -33,5 +33,5 @@ This is an example showcasing this approach:
 
 {% meta id:index height:700 %}
 {% embed_file grid/grid-csv-export/main.jsx preview %}
-{% embed_file shared/products.json %} 
+{% embed_file shared/shared-products.json %} 
 {% endmeta %}

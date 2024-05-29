@@ -41,5 +41,5 @@ By following the steps in the articles in our documentation regarding how to app
 {% meta id height:650 %}
 {% embed_file grid/multiple-functionalities/main.jsx preview %}
 {% embed_file grid/multiple-functionalities/editForm.jsx %}
-{% embed_file shared/products.json %}
+{% embed_file shared/shared-products.json %}
 {% endmeta %}

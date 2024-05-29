@@ -41,5 +41,5 @@ This is an example demonstrating this implementation where the `Albania` item is
 
 {% meta id:index height:760 %}
 {% embed_file multiselect/multiselect-disable-items/main.jsx preview %}
-{% embed_file shared/countries.js %}
+{% embed_file shared/shared-countries.js %}
 {% endmeta %}

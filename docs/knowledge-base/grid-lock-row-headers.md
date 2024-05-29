@@ -43,6 +43,6 @@ The following example showcase this in action:
 
 {% meta id height:760 %}
 {% embed_file grid/lock-row-headers/main.jsx preview %}
-{% embed_file shared/products-with-sections.json %}
+{% embed_file shared/shared-products-with-sections.json %}
 {% endmeta %}
 
