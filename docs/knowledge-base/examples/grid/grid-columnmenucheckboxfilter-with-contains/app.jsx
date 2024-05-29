@@ -3,7 +3,7 @@ import * as React from 'react';
 import { process } from '@progress/kendo-data-query';
 import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
 import { ColumnMenu, ProductNameolumnMenuCheckboxFilter } from './columnMenu';
-import products from './products.json';
+import products from './shared-products.json';
 
 const createDataState = (dataState) => {
   return {

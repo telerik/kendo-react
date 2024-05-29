@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ComboBox, ComboBoxChangeEvent } from '@progress/kendo-react-dropdowns';
+import { ComboBox } from '@progress/kendo-react-dropdowns';
 
 const sports = [
   { text: 'Basketball', id: 1 },

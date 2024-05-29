@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
-import products from './products.json';
+import products from './shared-products.json';
 import { IconWrap } from '@progress/kendo-react-common';
 import { minusIcon, plusIcon } from '@progress/kendo-svg-icons';
 const DetailComponent = (props) => {

@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
 import { Button } from '@progress/kendo-react-buttons';
-import products from './products-with-sections.json';
+import products from './shared-products-with-sections.json';
 import { filterBy } from '@progress/kendo-data-query';
 
 const rowHeight = 50;

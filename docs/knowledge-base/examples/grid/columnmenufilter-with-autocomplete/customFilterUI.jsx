@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { AutoComplete, DropDownList } from '@progress/kendo-react-dropdowns';
-import products from './products.json';
+import products from './shared-products.json';
 
 
 export const CustomFilterUI = (props) => {

@@ -7,7 +7,7 @@ import {
   WeekView,
   MonthView,
 } from '@progress/kendo-react-scheduler';
-import { sampleData, displayDate } from './events-utc';
+import { sampleData, displayDate } from './shared-events-utc';
 
 const App = () => {
   const [start, setStart] = React.useState('');

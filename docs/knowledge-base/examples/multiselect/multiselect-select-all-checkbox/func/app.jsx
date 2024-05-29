@@ -1,6 +1,6 @@
 import React from 'react';
 import { MultiSelect } from '@progress/kendo-react-dropdowns';
-import countries from './countries';
+import countries from './shared-countries';
 
 const App = () => {
   const [state, setState] = React.useState({ value: [], allSelected: true });

@@ -9,7 +9,7 @@ import {
 
 import { ColumnMenuCustomDateColumn } from "./dateColumnMenu.jsx";
 
-import employees from "./treeListData";
+import employees from "./shared-treeListData";
 
 const subItemsField = "employees";
 const expandField = "expanded";

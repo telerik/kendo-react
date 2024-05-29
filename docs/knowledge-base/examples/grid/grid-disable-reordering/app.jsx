@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
 import { Button } from '@progress/kendo-react-buttons';
-import products from './products.json';
+import products from './shared-products.json';
 
 const App = () => {
   const [locked, setLocked] = React.useState(false);

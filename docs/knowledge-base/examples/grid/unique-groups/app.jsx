@@ -6,7 +6,7 @@ import {
   setExpandedState,
   setGroupIds,
 } from '@progress/kendo-react-data-tools';
-import products from './products.json';
+import products from './shared-products.json';
 const initialGroup = [
   {
     field: 'UnitsInStock',

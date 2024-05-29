@@ -4,7 +4,6 @@ import {
   Grid,
   GridColumn as Column,
   getSelectedState,
-  GridHeaderCell,
 } from '@progress/kendo-react-grid';
 import { getter } from '@progress/kendo-react-common';
 import products from './products.json';

@@ -8,7 +8,7 @@ import {
 import { Grid, GridColumn } from '@progress/kendo-react-grid';
 import { guid } from '@progress/kendo-react-common';
 
-import gridData from './data.js';
+import gridData from './shared-data';
 
 const App = () => {
   const MyScheduler = React.createRef();

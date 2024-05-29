@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { Grid, GridColumn } from '@progress/kendo-react-grid';
-import products from './products.json';
+import products from './shared-products.json';
 const App = () => {
   const CellRender = (props) => {
     return (

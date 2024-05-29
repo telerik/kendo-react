@@ -4,7 +4,7 @@ import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
 import { filterBy } from '@progress/kendo-data-query';
 import { NumericTextBox } from '@progress/kendo-react-inputs';
 
-import products from './products.json';
+import products from './shared-products.json';
 
 export const RangeFilterCell = (props) => {
   let minTextBox;

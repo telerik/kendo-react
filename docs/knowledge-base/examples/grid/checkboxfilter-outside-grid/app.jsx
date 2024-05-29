@@ -1,10 +1,8 @@
 import * as React from 'react';
-import { process } from '@progress/kendo-data-query';
-import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
-import { ColumnMenu } from './columnMenu';
+
 import { GridColumnMenuCheckboxFilter } from '@progress/kendo-react-grid';
 import { Popup } from '@progress/kendo-react-popup';
-import products from './products.json';
+import products from './shared-products.json';
 
 
 const CheckboxListMenu = (props) => {

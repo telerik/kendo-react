@@ -1,7 +1,7 @@
 import * as React from "react";
 import { TileLayout } from "@progress/kendo-react-layout";
 import { Grid } from "@progress/kendo-react-grid";
-import products from "./products.json";
+import products from "./shared-products.json";
 const initialDataState = {
   skip: 0,
   take: 10,

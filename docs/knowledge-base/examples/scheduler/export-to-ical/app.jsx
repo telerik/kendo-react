@@ -4,7 +4,7 @@ import {
     WeekView,
     SchedulerHeader,
 } from "@progress/kendo-react-scheduler";
-import { sampleData, displayDate } from "./events-utc.js";
+import { sampleData, displayDate } from "./shared-events-utc";
 
 
 import ICAL from "ical.js";

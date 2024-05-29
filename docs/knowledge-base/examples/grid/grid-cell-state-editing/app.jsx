@@ -6,7 +6,7 @@ import {
   getSelectedState,
 } from '@progress/kendo-react-grid';
 import { getter } from '@progress/kendo-react-common';
-import products from './products.json';
+import products from './shared-products.json';
 
 import { NumericTextBox, Input } from '@progress/kendo-react-inputs';
 

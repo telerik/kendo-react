@@ -1,6 +1,14 @@
 import * as React from 'react';
 import { PanelBar, PanelBarItem } from '@progress/kendo-react-layout';
-import { withRouter } from 'react-router-dom';
+import { useNavigate } from 'react-router';
+
+export const withRouter = (Component) =>{
+    const Wrapper = (props) =>{
+        const history = useNavigate();
+        return <Component history={history} {...props}/>
+    } 
+    return Wrapper;
+}
 
 const CustomPanelBarItem = (props) => {
   return (

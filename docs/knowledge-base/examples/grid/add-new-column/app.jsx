@@ -7,7 +7,7 @@ import {
 import { Button } from '@progress/kendo-react-buttons';
 import ColumnForm from './ColumnForm.jsx';
 
-import products from './products.json';
+import products from './shared-products.json';
 
 const App = () => {
   const columns = Object.keys(products[0]);

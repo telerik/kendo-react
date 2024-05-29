@@ -6,7 +6,7 @@ import {
 } from "@progress/kendo-react-notification";
 import { Fade } from "@progress/kendo-react-animation";
 
-import products from "./products.json";
+import products from "./shared-products.json";
 
 class App extends React.Component {
   state = {

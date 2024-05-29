@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
 
-import products from './products.json';
+import products from './shared-products.json';
 
 const updateItem = (item) => {
   let index = products.findIndex(

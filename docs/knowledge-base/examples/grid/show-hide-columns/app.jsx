@@ -1,9 +1,8 @@
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
 import { Grid, GridColumn as Column } from "@progress/kendo-react-grid";
 
-import products from "./products.json";
+import products from "./shared-products.json";
 
 class App extends React.Component {
   state = {

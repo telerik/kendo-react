@@ -14,7 +14,6 @@ import {
 } from '@progress/kendo-react-data-tools';
 
 import products from './products.json';
-import { Product } from './interfaces';
 
 const initialDataState = {
   take: 10,

@@ -2,7 +2,7 @@ import * as React from 'react';
 
 
 import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
-import { ProductsLoader } from './products-loader.jsx';
+import { ProductsLoader } from './shared-products-loader.jsx';
 
 class App extends React.Component {
     constructor(props) {

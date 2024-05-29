@@ -3,7 +3,6 @@ import { useInternationalization } from '@progress/kendo-react-intl';
 import { useTableKeyboardNavigation } from '@progress/kendo-react-data-tools';
 import {
   GRID_COL_INDEX_ATTRIBUTE,
-  GridTdAttributes,
 } from '@progress/kendo-react-grid';
 import { classNames } from '@progress/kendo-react-common';
 

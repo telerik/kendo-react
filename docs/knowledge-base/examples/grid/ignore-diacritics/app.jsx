@@ -4,7 +4,7 @@ import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
 import { filterBy } from '@progress/kendo-data-query';
 
 import { InputFilterCell } from './inputFilterCell';
-import { sampleProducts } from './sample-products';
+import { sampleProducts } from './shared-sample-products';
 const categories = Array.from(
   new Set(
     sampleProducts.map((p) => (p.Category ? p.Category.CategoryName : ''))

@@ -4,11 +4,8 @@ import {
   GRID_COL_INDEX_ATTRIBUTE,
   GridColumn as Column,
   GridToolbar,
-  GridSelectionChangeEvent,
-  GridKeyDownEvent,
   getSelectedState,
   getSelectedStateFromKeyDown,
-  GridSelectableMode,
 } from '@progress/kendo-react-grid';
 
 import { getter } from '@progress/kendo-react-common';
@@ -19,8 +16,6 @@ import {
 } from '@progress/kendo-react-data-tools';
 import {
   ExcelExport,
-  ExcelExportColumn,
-  ExcelExportColumnGroup,
 } from '@progress/kendo-react-excel-export';
 import products from './products.json';
 const DATA_ITEM_KEY = 'ProductID';

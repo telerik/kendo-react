@@ -7,7 +7,7 @@ import {
 
 import { Grid, GridColumn } from '@progress/kendo-react-grid';
 
-import gridData from './data.js';
+import gridData from './shared-data';
 
 const handleDragOver = (e) => {
   e.preventDefault();

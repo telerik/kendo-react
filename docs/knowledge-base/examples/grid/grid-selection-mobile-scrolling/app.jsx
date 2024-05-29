@@ -7,7 +7,7 @@ import {
 } from '@progress/kendo-react-grid';
 import { getter } from '@progress/kendo-react-common';
 import { useDeviceType } from './isMobile.jsx';
-import products from './products.json';
+import products from './shared-products.json';
 const DATA_ITEM_KEY = 'ProductID';
 const SELECTED_FIELD = 'selected';
 const idGetter = getter(DATA_ITEM_KEY);

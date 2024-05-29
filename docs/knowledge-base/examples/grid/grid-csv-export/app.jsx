@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { Grid, GridColumn } from '@progress/kendo-react-grid';
 import { CSVDownload, CSVLink } from 'react-csv';
-import products from './products.json';
+import products from './shared-products.json';
 const initialDataState = {
   skip: 0,
   take: 10,

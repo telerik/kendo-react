@@ -3,7 +3,7 @@ import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
 import { Popup } from '@progress/kendo-react-popup';
 import { Menu, MenuItem } from '@progress/kendo-react-layout';
 
-import products from './products.json';
+import products from './shared-products.json';
 
 class App extends React.Component {
     state = {

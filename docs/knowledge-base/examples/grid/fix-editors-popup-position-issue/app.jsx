@@ -4,11 +4,11 @@ import {
   GridColumn as Column,
   GridToolbar,
 } from '@progress/kendo-react-grid';
-import { sampleProducts } from './sample-products';
+import { sampleProducts } from './shared-sample-products';
 import { MyCommandCell } from './myCommandCell';
 import { DropDownCell } from './myDropDownCell';
 import { insertItem, getItems, updateItem, deleteItem } from './services';
-import { Popup, PopupPropsContext } from '@progress/kendo-react-popup';
+import { PopupPropsContext } from '@progress/kendo-react-popup';
 
 const App = () => {
   const editField = 'inEdit';

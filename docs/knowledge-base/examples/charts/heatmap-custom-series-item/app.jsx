@@ -10,7 +10,7 @@ import {
   ChartXAxisItem,
 } from '@progress/kendo-react-charts';
 
-import { Point, Path } from '@progress/kendo-drawing';
+import { Path } from '@progress/kendo-drawing';
 //Data generator
 function makeDataObjects(rows, cols) {
   const data = [];

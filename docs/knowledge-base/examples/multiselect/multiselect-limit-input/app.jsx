@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { MultiSelect } from "@progress/kendo-react-dropdowns";
 import { filterBy } from "@progress/kendo-data-query";
-import countries from "./countries";
+import countries from "./shared-countries";
 
 const App = () => {
   const [data, setData] = useState(countries.slice());

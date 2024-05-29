@@ -5,7 +5,7 @@ import {
   GridToolbar,
 } from '@progress/kendo-react-grid';
 import { sampleProducts } from './sample-products';
-import { Checkbox } from '@progress/kendo-react-inputs/dist/es/checkbox/Checkbox';
+import { Checkbox } from '@progress/kendo-react-inputs';
 import { ExtendedGridCell } from './ExtendedGridCell';
 
 //Custom cell for displaying disabled Checkbox in view mode of the cell

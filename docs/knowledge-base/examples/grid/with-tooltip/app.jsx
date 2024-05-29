@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { Tooltip } from '@progress/kendo-react-tooltip';
 import { Grid, GridColumn } from '@progress/kendo-react-grid';
-import products from './products.json';
+import products from './shared-products.json';
 
 class ProductNameCell extends React.Component {
     render() {

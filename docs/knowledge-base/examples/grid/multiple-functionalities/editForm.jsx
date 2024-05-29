@@ -4,7 +4,7 @@ import { Form, Field, FormElement } from "@progress/kendo-react-form";
 import { Input, NumericTextBox } from "@progress/kendo-react-inputs";
 import { DropDownList } from "@progress/kendo-react-dropdowns";
 import { Error } from "@progress/kendo-react-labels";
-import products from "./products.json";
+import products from "./shared-products.json";
 
 const minValueValidator = value =>
   value >= 0 ? "" : "The value must be 0 or higher";

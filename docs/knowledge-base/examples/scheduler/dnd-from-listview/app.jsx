@@ -4,11 +4,9 @@ import {
   WeekView,
   MonthView,
 } from '@progress/kendo-react-scheduler';
-import { ListView, ListViewItemProps } from '@progress/kendo-react-listview';
+import { ListView } from '@progress/kendo-react-listview';
 
-import { Grid, GridColumn } from '@progress/kendo-react-grid';
-
-import gridData from './data.js';
+import gridData from './shared-data';
 
 const handleDragOver = (e) => {
   e.preventDefault();

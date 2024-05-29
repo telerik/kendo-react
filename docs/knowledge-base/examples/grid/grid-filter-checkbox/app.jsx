@@ -7,7 +7,7 @@ import {
 
 import { CustomColumnMenu } from './customColumnMenu';
 
-import products from './products.json';
+import products from './shared-products.json';
 
 const createDataState = (dataState) => {
   return {

@@ -1,11 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { saveAs } from '@progress/kendo-file-saver';
 import {
   drawDOM,
   exportPDF,
-  DrawOptions,
-  Group
 } from '@progress/kendo-drawing';
 import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
 

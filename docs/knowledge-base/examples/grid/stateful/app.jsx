@@ -1,8 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import { withState } from "./with-state";
 import { GridColumn, Grid } from "@progress/kendo-react-grid";
-import products from "./products.json";
+import products from "./shared-products.json";
 
 const StatefulGrid = withState(Grid);
 

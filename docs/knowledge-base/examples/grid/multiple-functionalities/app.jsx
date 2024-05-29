@@ -1,11 +1,9 @@
 import * as React from "react";
-import * as ReactDOM from "react-dom";
-
 import { Grid, GridColumn as Column } from "@progress/kendo-react-grid";
 import { process } from "@progress/kendo-data-query";
 import EditForm from "./editForm.jsx";
 
-import products from "./products.json";
+import products from "./shared-products.json";
 
 const EditCommandCell = props => {
   return (

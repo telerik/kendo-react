@@ -4,7 +4,7 @@ import { filterBy } from '@progress/kendo-data-query';
 import { DatePicker } from '@progress/kendo-react-dateinputs';
 import { Button } from '@progress/kendo-react-buttons';
 
-import { sampleProducts } from './sample-products';
+import { sampleProducts } from './shared-sample-products';
 
 const defaultValue = new Date(1996, 8, 19);
 

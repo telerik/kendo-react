@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { DateRangePicker } from '@progress/kendo-react-dateinputs';
-import { CustomPopup } from './customPopup';
 import { Popup } from '@progress/kendo-react-popup';
 import './styles.css';
 

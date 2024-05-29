@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useLocation, useNavigate, history } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Drawer, DrawerContent } from '@progress/kendo-react-layout';
 import { Button } from '@progress/kendo-react-buttons';
 

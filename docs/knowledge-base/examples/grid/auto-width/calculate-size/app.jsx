@@ -3,7 +3,7 @@ import * as React from 'react';
 import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
 import calculateSize from 'calculate-size';
 
-import products from './products.json';
+import products from './shared-products.json';
 
 class App extends React.Component {
   state = {

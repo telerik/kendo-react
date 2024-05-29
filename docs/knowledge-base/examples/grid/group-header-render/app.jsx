@@ -4,7 +4,7 @@ import * as React from 'react';
 import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
 import { process } from '@progress/kendo-data-query';
 
-import products from './products.json';
+import products from './shared-products.json';
 
 class App extends React.PureComponent {
   state = this.createAppState({

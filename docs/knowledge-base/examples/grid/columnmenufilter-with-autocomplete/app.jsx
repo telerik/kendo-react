@@ -9,7 +9,7 @@ import {
     GridColumnMenuFilter
 } from '@progress/kendo-react-grid';
 
-import products from './products.json';
+import products from './shared-products.json';
 
 class App extends React.Component {
     constructor(props) {

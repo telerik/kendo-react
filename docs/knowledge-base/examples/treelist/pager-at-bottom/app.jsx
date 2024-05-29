@@ -7,7 +7,7 @@ import {
 
 import { TreeListPager } from "./pager.jsx";
 
-import { generateData } from "./treelist-data";
+import { generateData } from "./shared-treelist-data";
 
 const numberOfColumns = 4;
 const columnWidth = 200;

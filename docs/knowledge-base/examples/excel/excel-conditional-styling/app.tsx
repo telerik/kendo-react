@@ -5,7 +5,7 @@ import {
   WorkbookOptions,
 } from '@progress/kendo-react-excel-export';
 
-import products from './products.json';
+import products from './shared-products.json';
 
 const data = products;
 const modifiedData = data.map((item) => ({

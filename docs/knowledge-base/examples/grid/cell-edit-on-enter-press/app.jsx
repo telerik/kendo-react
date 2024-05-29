@@ -6,7 +6,6 @@ import {
 } from '@progress/kendo-react-grid';
 import { sampleProducts } from './sample-products';
 import { CellRender, RowRender } from './renderers';
-import { applyFormatIcon } from '@progress/kendo-svg-icons';
 const EDIT_FIELD = 'inEdit';
 
 const App = () => {

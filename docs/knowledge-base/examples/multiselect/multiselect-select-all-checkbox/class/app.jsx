@@ -1,8 +1,6 @@
 import React from 'react';
 import { MultiSelect } from '@progress/kendo-react-dropdowns';
-import countries from './countries';
-import App from '../../../grid/dropdown-filter-for-array-field/app';
-
+import countries from './shared-countries';
 class AppComponent extends React.Component {
   state = { value: [], allSelected: true };
 

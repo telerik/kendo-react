@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { createPortal } from 'react-dom';
-import { ReorderContext } from './main';
+import { ReorderContext } from './app';
 import { useDraggable } from '@progress/kendo-react-common';
 
 export const DraggableRow = (props) => {
