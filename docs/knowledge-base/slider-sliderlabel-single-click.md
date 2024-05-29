@@ -37,5 +37,6 @@ This can achieved by handling the component in controlled mode and handling the 
 This is an example demonstrating this implementation:
 
 {% meta id:index height:760 %}
-{% embed_file inputs/slider-label-single-click/main.jsx preview %}
+{% embed_file inputs/slider-label-single-click/app.jsx preview %}
+{% embed_file inputs/slider-label-single-click/main.jsx %}
 {% endmeta %}

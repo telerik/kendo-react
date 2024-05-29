@@ -34,6 +34,7 @@ For saving the scroll position, handle the onScroll event of the Grid and save t
 This is an example showcasing this approach:
 
 {% meta id:index height:500 %}
-{% embed_file grid/save-scroll-position-in-tabstrip/main.jsx preview %}
+{% embed_file grid/save-scroll-position-in-tabstrip/app.jsx preview %}
+{% embed_file grid/save-scroll-position-in-tabstrip/main.jsx %}
 {% embed_file grid/save-scroll-position-in-tabstrip/products.json %}
 {% endmeta %} 

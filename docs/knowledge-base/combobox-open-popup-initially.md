@@ -35,5 +35,6 @@ For manually opening the popup of the ComboBox after the initialization we can u
 Here is an example demonstrating this approach:
 
 {% meta id height:480 %}
-{% embed_file dropdowns/combobox-open-popup-initially/main.jsx preview %}
+{% embed_file dropdowns/combobox-open-popup-initially/app.jsx preview %}
+{% embed_file dropdowns/combobox-open-popup-initially/main.jsx %}
 {% endmeta %}

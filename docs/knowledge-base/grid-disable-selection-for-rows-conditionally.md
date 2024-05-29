@@ -37,6 +37,7 @@ Use the cellRender of the Grid to modify the TD element for the select column wh
 Following is an example with the described approach:
 
 {% meta height:450 %}
-{% embed_file grid/disable-selection-for-rows-conditionally/main.jsx preview %}
+{% embed_file grid/disable-selection-for-rows-conditionally/app.jsx preview %}
+{% embed_file grid/disable-selection-for-rows-conditionally/main.jsx %}
 {% embed_file grid/disable-selection-for-rows-conditionally/products.json %}
 {% endmeta %} 

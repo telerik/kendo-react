@@ -41,7 +41,8 @@ The following example shows how to:
 3. Freeze the first two rows in order to have the header and the column titles to be visible when scrolling.
 
 {% meta id:index height:640 %}
-{% embed_file grid/excel-export-header-footer/main.jsx preview %}
+{% embed_file grid/excel-export-header-footer/app.jsx preview %}
+{% embed_file grid/excel-export-header-footer/main.jsx %}
 {% embed_file shared/shared-products.json %}
 {% endmeta %}
 

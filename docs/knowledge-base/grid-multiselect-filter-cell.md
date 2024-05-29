@@ -33,7 +33,8 @@ Configure custom filterCell for the column where you want to use the MultiSelect
 Here is an example demonstrating this approach:
 
 {% meta id height:650 %}
-{% embed_file grid/multiselect-filter-cell/main.jsx preview %}
+{% embed_file grid/multiselect-filter-cell/app.jsx preview %}
+{% embed_file grid/multiselect-filter-cell/main.jsx %}
 {% embed_file grid/multiselect-filter-cell/multiSelectFilterCell.jsx %}
 {% embed_file grid/multiselect-filter-cell/products.json %}
 {% endmeta %}

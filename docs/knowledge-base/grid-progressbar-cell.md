@@ -34,6 +34,7 @@ This can be achieved by defining custom cell for the column and rendering a Prog
 This is an example showcasing this approach:
 
 {% meta id:index height:500 %}
-{% embed_file grid/grid-progressbar-cell/main.jsx preview %}
+{% embed_file grid/grid-progressbar-cell/app.jsx preview %}
+{% embed_file grid/grid-progressbar-cell/main.jsx %}
 {% embed_file grid/grid-progressbar-cell/products.json %}
 {% endmeta %}

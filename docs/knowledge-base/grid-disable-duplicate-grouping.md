@@ -37,6 +37,7 @@ In the `onGroupChange` event handler, you can check if the newly added group exi
 This is an example demonstrating the implementation:
 
 {% meta id:index height:680 %}
-{% embed_file grid/unique-groups/main.jsx preview %}
+{% embed_file grid/unique-groups/app.jsx preview %}
+{% embed_file grid/unique-groups/main.jsx %}
 {% embed_file shared/shared-products.json %}
 {% endmeta %}

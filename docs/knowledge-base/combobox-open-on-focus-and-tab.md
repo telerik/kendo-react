@@ -35,5 +35,6 @@ Handle the onFocus event of the ComboBox and within a setTimeout function check 
 Here is an example demonstrating this approach:
 
 {% meta id height:560 %}
-{% embed_file dropdowns/combobox-open-on-focus-and-tab/main.jsx preview %}
+{% embed_file dropdowns/combobox-open-on-focus-and-tab/app.jsx preview %}
+{% embed_file dropdowns/combobox-open-on-focus-and-tab/main.jsx %}
 {% endmeta %}

@@ -35,7 +35,8 @@ You can achieve this by custom rendering the date inputs which allows you to get
 Here is an example demonstrating this approach:
 
 {% meta id height:480 %}
-{% embed_file dropdowns/daterangepicker-validation/main.jsx preview %}
+{% embed_file dropdowns/daterangepicker-validation/app.jsx preview %}
+{% embed_file dropdowns/daterangepicker-validation/main.jsx %}
 {% embed_file dropdowns/daterangepicker-validation/customStartDateInput.jsx %}
 {% embed_file dropdowns/daterangepicker-validation/customEndDateInput.jsx %}
 {% endmeta %}

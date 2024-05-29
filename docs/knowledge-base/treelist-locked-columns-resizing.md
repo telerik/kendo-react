@@ -37,6 +37,7 @@ Set the width of the TreeList through "tableProps.style.width" and set a "ref". 
 Following is an example demonstrating such implementation
 
 {% meta id height:650 %} 
-{% embed_file treelist/treelist-locked-columns-resizing/main.jsx preview %}
+{% embed_file treelist/treelist-locked-columns-resizing/app.jsx preview %}
+{% embed_file treelist/treelist-locked-columns-resizing/main.jsx %}
 {% embed_file treelist/treelist-locked-columns-resizing/data.js %}
 {% endmeta %}

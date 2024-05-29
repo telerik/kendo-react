@@ -35,6 +35,7 @@ How can I merge rows in the KendoReact Data Grid?
 Use a [`cellRender`]({% slug api_grid_gridprops %}#toc-cellrender) and add `rowSpan` to the cells that need it.
 
 {% meta id:index height:760 %}
-{% embed_file grid/merge-rows/main.jsx preview %}
+{% embed_file grid/merge-rows/app.jsx preview %}
+{% embed_file grid/merge-rows/main.jsx %}
 {% embed_file shared/shared-products.json %}
 {% endmeta %}

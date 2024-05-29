@@ -34,5 +34,6 @@ For achieving the desired result a Button component can be placed within the Gri
 This is an example showcasing how to limit the value:
 
 {% meta height:360 %}
-{% embed_file grid/grid-add-clear-filters-button/main.jsx preview %}
+{% embed_file grid/grid-add-clear-filters-button/app.jsx preview %}
+{% embed_file grid/grid-add-clear-filters-button/main.jsx %}
 {% endmeta %}

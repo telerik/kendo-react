@@ -39,5 +39,6 @@ The can be controlled by updating the focus date in the internal state of the Mu
 ```
 
 {% meta id:index height:600 %}
-{% embed_file dateinputs/multiviewcalendar-control-focus-date/main.jsx preview %}
+{% embed_file dateinputs/multiviewcalendar-control-focus-date/app.jsx preview %}
+{% embed_file dateinputs/multiviewcalendar-control-focus-date/main.jsx %}
 {% endmeta %}

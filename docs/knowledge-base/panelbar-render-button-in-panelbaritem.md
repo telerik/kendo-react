@@ -32,5 +32,6 @@ I want to add a button in PanelBarItem but without selecting the item and withou
 Add a Button in the PanelBarItem and within the onClick event use preventDefault and stopPropagation over the event to stop the propagation to the PanelBar.
 
 {% meta id height:760 %}
-{% embed_file layout/panelbar-render-button-in-panelbaritem/main.jsx preview %}
+{% embed_file layout/panelbar-render-button-in-panelbaritem/app.jsx preview %}
+{% embed_file layout/panelbar-render-button-in-panelbaritem/main.jsx %}
 {% endmeta %}

@@ -33,7 +33,8 @@ Add custom cell for the boolean column and render disabled CheckBox for view mod
 Here is an example demonstrating this approach:
 
 {% meta id height:760 %}
-{% embed_file grid/checkbox-in-view-mode-for-boolean/main.jsx preview %}
+{% embed_file grid/checkbox-in-view-mode-for-boolean/app.jsx preview %}
+{% embed_file grid/checkbox-in-view-mode-for-boolean/main.jsx %}
 {% embed_file grid/checkbox-in-view-mode-for-boolean/ExternalGridCell.jsx %}
 {% embed_file grid/checkbox-in-view-mode-for-boolean/sample-products.jsx %}
 {% endmeta %}

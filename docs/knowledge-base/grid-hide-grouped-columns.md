@@ -34,6 +34,7 @@ Columns in the Grid can be dynamically removed if we have the columns collection
 This is an example showcasing this approach:
 
 {% meta id:index height:760 %}
-{% embed_file grid/grid-hide-grouped-columns/main.jsx preview %}
+{% embed_file grid/grid-hide-grouped-columns/app.jsx preview %}
+{% embed_file grid/grid-hide-grouped-columns/main.jsx %}
 {% embed_file shared/shared-products.json %} 
 {% endmeta %}

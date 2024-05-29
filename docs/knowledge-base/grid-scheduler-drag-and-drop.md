@@ -39,6 +39,7 @@ This will required the following setup:
 1. When the user drops an item we add it to the Scheduler data updating the state.
 
 {% meta id:index height:900 %}
-{% embed_file scheduler/dnd-from-grid/main.jsx preview %}
+{% embed_file scheduler/dnd-from-grid/app.jsx preview %}
+{% embed_file scheduler/dnd-from-grid/main.jsx %}
 {% embed_file shared/shared-data.js %}
 {% endmeta %}

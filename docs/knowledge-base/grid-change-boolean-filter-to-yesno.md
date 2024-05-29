@@ -37,6 +37,7 @@ For changing the text for the boolean operators in the Grid, a LocalizationProvi
 Following is an example demonstrating this approach: 
 
 {% meta id:index height:560 %}
-{% embed_file grid/grid-change-boolean-filter-to-yesno/main.jsx preview %}
+{% embed_file grid/grid-change-boolean-filter-to-yesno/app.jsx preview %}
+{% embed_file grid/grid-change-boolean-filter-to-yesno/main.jsx %}
 {% embed_file grid/grid-change-boolean-filter-to-yesno/sample-products.jsx %}
 {% endmeta %}

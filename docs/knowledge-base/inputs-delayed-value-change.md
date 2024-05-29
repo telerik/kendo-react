@@ -34,5 +34,6 @@ Having a delayed value is possible by introducing a second state variable and tr
 This is an example showcasing how to limit the value:
 
 {% meta height:300 %}
-{% embed_file inputs/inputs-delayed-value-change/main.jsx preview %} 
+{% embed_file inputs/inputs-delayed-value-change/app.jsx preview %} 
+{% embed_file inputs/inputs-delayed-value-change/main.jsx %} 
 {% endmeta %}

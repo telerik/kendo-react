@@ -37,6 +37,7 @@ This can be done using [ical.js](https://mozilla-comm.github.io/ical.js/) to pro
 This is an example demonstrating the implementation:
 
 {% meta id:index height:760 %}
-{% embed_file scheduler/export-to-ical/main.jsx preview %}
+{% embed_file scheduler/export-to-ical/app.jsx preview %}
+{% embed_file scheduler/export-to-ical/main.jsx %}
 {% embed_file shared/shared-events-utc.js preview %}
 {% endmeta %}

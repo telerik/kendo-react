@@ -37,5 +37,6 @@ Find the last TR element within the "rowRender" of the Grid and return React.Fra
 Following is an example demonstrating this approach:
 
 {% meta id height:540 %}
-{% embed_file grid/grid-add-empty-rows/main.jsx preview %}
+{% embed_file grid/grid-add-empty-rows/app.jsx preview %}
+{% embed_file grid/grid-add-empty-rows/main.jsx %}
 {% endmeta %}

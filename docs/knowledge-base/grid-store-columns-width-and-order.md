@@ -38,5 +38,6 @@ Following is an example demonstrating this approach:
  
 
 {% meta id height:500 %}
-{% embed_file grid/store-columns-width-and-order/main.jsx preview %}
+{% embed_file grid/store-columns-width-and-order/app.jsx preview %}
+{% embed_file grid/store-columns-width-and-order/main.jsx %}
 {% endmeta %}

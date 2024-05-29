@@ -37,6 +37,7 @@ Also, how to make Grid custom range filter working with Odata and show default v
 This requires using the [filterCell]({% slug api_grid_gridcolumnprops %}#toc-filterCell) property of the Grid column to add two DatePickers/DateInputs that will allow the user to select a start and an end date. The format can be changed by configuring the [format]({% slug api_dateinputs_datepickerprops %}#toc-format). Use the [defaultValue]({% slug api_dateinputs_datepickerprops %}#toc-defaultValue) to pass a default value for the custom DatePicker component.
 
 {% meta height:450 %}
-{% embed_file grid/date-range-filter/main.jsx preview %}
-{% embed_file shared/shared-sample-products.js preview %}
+{% embed_file grid/date-range-filter/app.jsx preview %}
+{% embed_file grid/date-range-filter/main.jsx %}
+{% embed_file shared/shared-sample-products.js %}
 {% endmeta %}

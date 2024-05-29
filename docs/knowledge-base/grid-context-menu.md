@@ -68,6 +68,7 @@ You can implement a context menu in the Grid by using the [KendoReact Popup comp
 The following example demonstrates the full implementation of the suggested approach. The context menu provides options for moving the rows up and down, and for deleting an item.
 
 {% meta height:480 %}
-{% embed_file grid/context-menu/main.jsx preview %}
+{% embed_file grid/context-menu/app.jsx preview %}
+{% embed_file grid/context-menu/main.jsx %}
 {% embed_file shared/shared-products.json %}
 {% endmeta %}

@@ -35,6 +35,7 @@ How can I retain the selection of checkbox in the KendoReact Grid when I navigat
 Keep the selected items by their ids inside the state.
 
 {% meta id:index height:500 %}
-{% embed_file grid/checkbox-selection-server-side/main.jsx preview %}
+{% embed_file grid/checkbox-selection-server-side/app.jsx preview %}
+{% embed_file grid/checkbox-selection-server-side/main.jsx %}
 {% embed_file grid/checkbox-selection-server-side/products-loader.jsx %}
 {% endmeta %}

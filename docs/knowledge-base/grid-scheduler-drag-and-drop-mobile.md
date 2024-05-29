@@ -39,7 +39,8 @@ This will required the following setup:
 1. When the user drops an item we add it to the Scheduler data updating the state.
 
 {% meta id:index height:900 %}
-{% embed_file scheduler/dnd-from-grid/main.jsx preview %}
+{% embed_file scheduler/dnd-from-grid/app.jsx preview %}
+{% embed_file scheduler/dnd-from-grid/main.jsx %}
 {% embed_file shared/shared-data.js %}
 {% endmeta %}
 
@@ -48,7 +49,8 @@ This will required the following setup:
 This can be achieved by using the KendoReact [Drag&Drop](https://www.telerik.com/kendo-react-ui/components/utils/drag-and-drop/) utility with a custom `DragHandleCell` with touchAction set to `none`:
 
 {% meta id:index height:900 %}
-{% embed_file scheduler/dnd-from-grid-mobile/draggable/main.jsx preview %}
+{% embed_file scheduler/dnd-from-grid-mobile/draggable/app.jsx preview %}
+{% embed_file scheduler/dnd-from-grid-mobile/draggable/main.jsx %}
 {% embed_file scheduler/dnd-from-grid-mobile/draggable/drag-handle-cell.jsx %}
 {% embed_file scheduler/dnd-from-grid-mobile/draggable/draggable-row.jsx %}
 {% embed_file shared/shared-data.js %}
@@ -59,6 +61,7 @@ This can be achieved by using the KendoReact [Drag&Drop](https://www.telerik.com
 The native Drag & Drop API does not support touch events by default. It is possible to enable the drag and drop functionality on mobile devices by using a polyfill as well:
 
 {% meta id:index height:900 %}
-{% embed_file scheduler/dnd-from-grid-mobile/polyfill/main.jsx preview %}
+{% embed_file scheduler/dnd-from-grid-mobile/polyfill/app.jsx preview %}
+{% embed_file scheduler/dnd-from-grid-mobile/polyfill/main.jsx %}
 {% embed_file shared/shared-data.js %}
 {% endmeta %}

@@ -35,5 +35,6 @@ Set the "valid" property of the DateRangePicker to a state variable that can be 
 This is an example showcasing the approach:
 
 {% meta id height:560 %}
-{% embed_file dateinputs/daterangepicker-validate-range/main.jsx preview %}
+{% embed_file dateinputs/daterangepicker-validate-range/app.jsx preview %}
+{% embed_file dateinputs/daterangepicker-validate-range/main.jsx %}
 {% endmeta %}

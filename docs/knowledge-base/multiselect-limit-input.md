@@ -34,6 +34,7 @@ How to Limit the user to be able to enter only two characters in the MultiSelect
 This can be achieved by limiting the input on the [onFilterChange](https://www.telerik.com/kendo-react-ui/components/dropdowns/api/MultiSelectProps/#toc-onfilterchange) event:
 
 {% meta id:index height:900 %}
-{% embed_file multiselect/multiselect-limit-input/main.jsx preview %}
+{% embed_file multiselect/multiselect-limit-input/app.jsx preview %}
+{% embed_file multiselect/multiselect-limit-input/main.jsx %}
 {% embed_file shared/shared-countries.js %}
 {% endmeta %}

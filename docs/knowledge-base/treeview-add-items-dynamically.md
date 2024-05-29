@@ -35,5 +35,6 @@ I want to dynamically add child Nodes to the KendoReact TreeView.
 You can achieve this by rendering an external Button under the TreeView which opens a Window component. In the Window component, you can render an Input and update the data with the entered input value.
 
 {% meta id:index height:500 %}
-{% embed_file treeview/treeview-adding-nodes/main.jsx preview %}
+{% embed_file treeview/treeview-adding-nodes/app.jsx preview %}
+{% embed_file treeview/treeview-adding-nodes/main.jsx %}
 {% endmeta %}

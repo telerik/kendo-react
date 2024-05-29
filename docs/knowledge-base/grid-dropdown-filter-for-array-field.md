@@ -37,6 +37,7 @@ The first step is to create a custom filter with a DropDownList for the array co
 Following is an example with the described approach:
 
 {% meta height:450 %}
-{% embed_file grid/dropdown-filter-for-array-field/main.jsx preview %}
+{% embed_file grid/dropdown-filter-for-array-field/app.jsx preview %}
+{% embed_file grid/dropdown-filter-for-array-field/main.jsx %}
 {% embed_file grid/dropdown-filter-for-array-field/dropdownFilterCell.jsx %}
 {% endmeta %}

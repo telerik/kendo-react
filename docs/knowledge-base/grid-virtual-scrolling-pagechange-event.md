@@ -38,5 +38,6 @@ Following is an example demonstrating this approach:
 
 
 {% meta id height:500 %}
-{% embed_file grid/virtual-scrolling-pagechange-event/main.jsx preview %}
+{% embed_file grid/virtual-scrolling-pagechange-event/app.jsx preview %}
+{% embed_file grid/virtual-scrolling-pagechange-event/main.jsx %}
 {% endmeta %}

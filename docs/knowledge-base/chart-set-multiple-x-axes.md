@@ -35,5 +35,6 @@ How can I set multiple x-axes for a chart?
 Use the [axisCrossingValue](https://www.telerik.com/kendo-react-ui/components/charts/api/ChartCategoryAxisItemProps/#toc-axiscrossingvalue) in order to pass the values for the overlapping axes:
 
 {% meta id:index height:600 %}
-{% embed_file charts/set-multiple-x-axes/main.jsx preview %}
+{% embed_file charts/set-multiple-x-axes/app.jsx preview %}
+{% embed_file charts/set-multiple-x-axes/main.jsx %}
 {% endmeta %}

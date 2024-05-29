@@ -34,7 +34,8 @@ The issue in question is caused by the fact that all Popup components are render
 This is an example showcasing this approach:
 
 {% meta id:index height:760 %} 
-{% embed_file grid/fix-editors-popup-position-issue/main.jsx preview %}
+{% embed_file grid/fix-editors-popup-position-issue/app.jsx preview %}
+{% embed_file grid/fix-editors-popup-position-issue/main.jsx %}
 {% embed_file grid/fix-editors-popup-position-issue/myCommandCell.jsx %}
 {% embed_file grid/fix-editors-popup-position-issue/myDropDownCell.jsx %}
 {% embed_file grid/fix-editors-popup-position-issue/services.js %}

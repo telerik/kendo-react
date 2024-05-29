@@ -35,6 +35,7 @@ Limiting the number of the axis labels can be achieved by setting the "ChartCate
 Here is an example with the described approach:
 
 {% meta id height:340 %}
-{% embed_file charts/limiting-axis-labels-count/main.jsx preview %}
+{% embed_file charts/limiting-axis-labels-count/app.jsx preview %}
+{% embed_file charts/limiting-axis-labels-count/main.jsx %}
 {% endmeta %}
 

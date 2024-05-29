@@ -35,5 +35,6 @@ Changing the rendering of the Chart elements can be achieved by defining custom 
 This is an example showcasing how to limit the value:
 
 {% meta id height:540 %}
-{% embed_file charts/chart-rounded-bar-corners/main.jsx preview %}
+{% embed_file charts/chart-rounded-bar-corners/app.jsx preview %}
+{% embed_file charts/chart-rounded-bar-corners/main.jsx %}
 {% endmeta %}

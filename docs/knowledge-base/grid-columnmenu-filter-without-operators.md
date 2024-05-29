@@ -37,7 +37,8 @@ Wrap the GridColumnMenuFilter in a DIV element with specific className and use t
 Following is an example demonstrating this approach
 
 {% meta id:index height:360 %} 
-{% embed_file grid/grid-columnmenu-filter-without-operators/main.jsx preview %}
+{% embed_file grid/grid-columnmenu-filter-without-operators/app.jsx preview %}
+{% embed_file grid/grid-columnmenu-filter-without-operators/main.jsx %}
 {% embed_file grid/grid-columnmenu-filter-without-operators/columnMenu.jsx %}
 {% embed_file grid/grid-columnmenu-filter-without-operators/styles.css.jsx %}
 {% endmeta %}

@@ -34,7 +34,8 @@ For displaying a clue indicator for the drop position the onDragOver event shoul
 Within the onDrop and on each onDragOver we are clearing the class name that was previously added.
  
 {% meta height:500 %} 
-{% embed_file listbox/show-drag-clue/main.jsx preview %} 
+{% embed_file listbox/show-drag-clue/app.jsx preview %} 
+{% embed_file listbox/show-drag-clue/main.jsx %} 
 {% embed_file listbox/show-drag-clue/products.json  %} 
 {% embed_file listbox/show-drag-clue/styles.css  %} 
 {% endmeta %}

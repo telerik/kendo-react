@@ -35,7 +35,8 @@ A custom column menu should be created through which we set the [`filterContent`
 We set the default operators through the [`initialFilter`]({% slug api_datatools_columnmenuprops %}#toc-initialfilter) property to match those of the filter we want to create, in this case greater than and equal to ("gte") and less than and equal to ("lte").
 
 {% meta id height:580 %}
-{% embed_file treelist/custom-columnmenu-date-filter/main.jsx preview %}
+{% embed_file treelist/custom-columnmenu-date-filter/app.jsx preview %}
+{% embed_file treelist/custom-columnmenu-date-filter/main.jsx %}
 {% embed_file treelist/custom-columnmenu-date-filter/dateColumnMenu.jsx %}
 {% embed_file shared/shared-treeListData.js %}
 {% endmeta %}

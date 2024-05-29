@@ -34,6 +34,7 @@ For achieving the desired result the rowRender of the TreeList can used for sett
 Following is an example demonstrating such implementation
 
 {% meta id height:580 %} 
-{% embed_file treelist/different-row-color-per-level/main.jsx preview %}
+{% embed_file treelist/different-row-color-per-level/app.jsx preview %}
+{% embed_file treelist/different-row-color-per-level/main.jsx %}
 {% embed_file treelist/different-row-color-per-level/data.js %}
 {% endmeta %}

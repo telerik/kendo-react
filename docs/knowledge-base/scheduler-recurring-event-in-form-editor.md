@@ -34,7 +34,8 @@ You can add recurring events to a custom form editor by referencing the `recurre
 In the following example, when you double-click a recurring item, a Window component appears asking if you want to edit the current occurrence or the whole series
 
 {% meta id:index height:760 %}
-{% embed_file scheduler/recurring-event-form-editor/main.jsx preview%}
+{% embed_file scheduler/recurring-event-form-editor/app.jsx preview %}
+{% embed_file scheduler/recurring-event-form-editor/main.jsx %}
 {% embed_file scheduler/recurring-event-form-editor/custom-form-editor.jsx %}
 {% embed_file scheduler/recurring-event-form-editor/custom-dialog.jsx %}
 {% embed_file scheduler/recurring-event-form-editor/custom-form.jsx %}

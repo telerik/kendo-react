@@ -36,5 +36,6 @@ The Grid is designed to display the data in a vertical way but you can still ach
 The following example showcases this approach:
  
 {% meta height:760 %} 
-{% embed_file grid/transpose-data/main.jsx preview %} 
+{% embed_file grid/transpose-data/app.jsx preview %} 
+{% embed_file grid/transpose-data/main.jsx %} 
 {% endmeta %}

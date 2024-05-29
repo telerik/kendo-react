@@ -36,7 +36,8 @@ In addition, the loadingPanel is added to the MultiSelectTree element using Reac
 Moreover, in the `onExpandChange` method, set a 1000ms timeout in order to simulate an API call. Inside the `setTimeout` method, set the new expanded state and `loading` variable to false:
 
 {% meta id height:580 %}
-{% embed_file multiselecttree/multiselecttree-lazy-loading/main.jsx preview %}
+{% embed_file multiselecttree/multiselecttree-lazy-loading/app.jsx preview %}
+{% embed_file multiselecttree/multiselecttree-lazy-loading/main.jsx %}
 {% embed_file multiselecttree/multiselecttree-lazy-loading/multiselecttree-data-operations.jsx %}
 {% embed_file multiselecttree/multiselecttree-lazy-loading/style.css %}
 {% embed_file multiselecttree/multiselecttree-lazy-loading/tree-data.js %}

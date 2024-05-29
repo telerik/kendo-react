@@ -36,7 +36,8 @@ For simple scenarios where the data needs to be merged for single column, rowSpa
 For this scenario, use a [`cellRender`]({% slug api_grid_gridprops %}#toc-cellrender) and compare the previous cell and previous row data to remove the content of the cell if it duplicate. You can also add different colors of the cell based on the values (suitable for boolean values for example), so they can be distinguished visually. 
 
 {% meta id:index height:760 %}
-{% embed_file grid/merge-rows-and-cells/main.jsx preview %}
+{% embed_file grid/merge-rows-and-cells/app.jsx preview %}
+{% embed_file grid/merge-rows-and-cells/main.jsx %}
 {% embed_file grid/merge-rows-and-cells/products.json %} 
 {% endmeta %}
  

@@ -37,6 +37,7 @@ Can I reorder the selected values/tags in the MultiSelect?
 This is an example showcasing this in action:
 
 {% meta id:index height:280 %}
-{% embed_file multiselect/multiselect-reorder-tags/main.jsx preview %}
+{% embed_file multiselect/multiselect-reorder-tags/app.jsx preview %}
+{% embed_file multiselect/multiselect-reorder-tags/main.jsx %}
 {% embed_file multiselect/multiselect-reorder-tags/styles.css %} 
 {% endmeta %}

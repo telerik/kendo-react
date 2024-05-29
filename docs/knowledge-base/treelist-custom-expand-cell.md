@@ -32,6 +32,7 @@ I want to define custom cell for the first column and I need the expand/collapse
 For achieving the desired result the custom cell should include logic for rendering the expand/collapse icon based on the props.dataItem.SUB_ITEM_FIELD length, props.expanded value and the level of the current cell. The level length is used for the empty space (based on the current level)
 
 {% meta id height:580 %}
-{% embed_file treelist/treelist-custom-expand-cell/main.jsx preview %}
-{% embed_file treelist/treelist-custom-expand-cell/data.js preview %}
+{% embed_file treelist/treelist-custom-expand-cell/app.jsx preview %}
+{% embed_file treelist/treelist-custom-expand-cell/main.jsx %}
+{% embed_file treelist/treelist-custom-expand-cell/data.js %}
 {% endmeta %}

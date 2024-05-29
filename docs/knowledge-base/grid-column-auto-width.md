@@ -37,7 +37,8 @@ How can I set the width of the Grid column based on the content. I want the colu
 In order to automatically calculate the column width, we can suggest using the Canvas API [measureText](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/measureText) function that can calculate the text width based on the font weight, size, and family. Then we can use that information to dynamically set the width of the column.
 
 {% meta id:index height:560 %}
-{% embed_file grid/auto-width/canvas/main.jsx preview %}
+{% embed_file grid/auto-width/canvas/app.jsx preview %}
+{% embed_file grid/auto-width/canvas/main.jsx %}
 {% embed_file shared/shared-products.json %}
 {% endmeta %}
 
@@ -46,6 +47,7 @@ In order to automatically calculate the column width, we can suggest using the C
 Another approach would be to use a package called [calculate-size](https://www.npmjs.com/package/calculate-size) or similar which will calculate the size of the text based on the font.
 
 {% meta id:index height:560 %}
-{% embed_file grid/auto-width/calculate-size/main.jsx preview %}
+{% embed_file grid/auto-width/calculate-size/app.jsx preview %}
+{% embed_file grid/auto-width/calculate-size/main.jsx %}
 {% embed_file shared/shared-products.json %}
 {% endmeta %}

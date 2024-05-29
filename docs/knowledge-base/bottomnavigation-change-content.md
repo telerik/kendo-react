@@ -32,5 +32,6 @@ I want to change the main content when the BottomNavigation selection changes
 For achieving the desired result the onSelect event of the BottomNavigation can be used for determining which item was selected. Based on that selection the main rendered content (component) can be changed
 
 {% meta id height:360 %}
-{% embed_file layout/bottomnavigation-change-content/main.jsx preview %}
+{% embed_file layout/bottomnavigation-change-content/app.jsx preview %}
+{% embed_file layout/bottomnavigation-change-content/main.jsx %}
 {% endmeta %}

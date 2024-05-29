@@ -37,7 +37,8 @@ You can achieve this by rendering a custom filter cell and normalizing the passe
 This is an example demonstrating this implementation:
 
 {% meta id:index height:560 %}
-{% embed_file grid/ignore-diacritics/main.jsx preview %}
+{% embed_file grid/ignore-diacritics/app.jsx preview %}
+{% embed_file grid/ignore-diacritics/main.jsx %}
 {% embed_file grid/ignore-diacritics/inputFilterCell.jsx %}
 {% embed_file shared/shared-sample-products.js %}
 {% endmeta %}

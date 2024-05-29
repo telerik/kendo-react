@@ -32,7 +32,8 @@ You can use the GridColumnMenuCheckboxFilter as a separate component for returni
 This is an example showcasing this approach where the filter expression is logged to the console:
 
 {% meta id:index height:700 %}
-{% embed_file grid/checkboxfilter-outside-grid/main.jsx preview %}
+{% embed_file grid/checkboxfilter-outside-grid/app.jsx preview %}
+{% embed_file grid/checkboxfilter-outside-grid/main.jsx %}
 {% embed_file grid/checkboxfilter-outside-grid/columnMenu.jsx %} 
 {% embed_file shared/shared-products.json %} 
 {% endmeta %}

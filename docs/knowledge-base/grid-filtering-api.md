@@ -33,5 +33,6 @@ How do I filter the Grid using `useEffect` with dummy API endpoint using JSON pl
 This can be achieved by fetching the data inside the `useEffect` hook and then filtering it using the `filterBy` helper function and passing the filtered collection to the [`data`]({% slug api_grid_gridprops %}#toc-data) prop.
 
 {% meta id:index height:700 %}
-{% embed_file grid-filtering-api/main.tsx preview %}
+{% embed_file grid-filtering-api/app.tsx preview %}
+{% embed_file grid-filtering-api/main.tsx %}
 {% endmeta %}

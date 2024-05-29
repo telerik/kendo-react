@@ -35,6 +35,7 @@ The color property of the ChartSeriesItem accepts function where the dataItem is
 This is an example showcasing how to limit the value:
 
 {% meta id:index height:760 %}
-{% embed_file charts/chart-color-by-category/main.jsx preview %}
-{% embed_file charts/chart-color-by-category/bubble-data.json preview %}
+{% embed_file charts/chart-color-by-category/app.jsx preview %}
+{% embed_file charts/chart-color-by-category/main.jsx %}
+{% embed_file charts/chart-color-by-category/bubble-data.json %}
 {% endmeta %}

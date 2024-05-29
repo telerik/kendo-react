@@ -40,5 +40,6 @@ Following is an example demonstrating this approach:
 
 
 {% meta id height:460 %}
-{% embed_file form/form-reset-and-change-initial-values/main.jsx preview %}
+{% embed_file form/form-reset-and-change-initial-values/app.jsx preview %}
+{% embed_file form/form-reset-and-change-initial-values/main.jsx %}
 {% endmeta %}

@@ -35,6 +35,7 @@ The [orderIndex]({% slug api_grid_gridcolumnprops %}#toc-orderIndex) property to
 The following example demonstrates the above approach:
 
 {% meta id:index height:560 %}
-{% embed_file grid/grid-disable-reordering/main.jsx preview %}
+{% embed_file grid/grid-disable-reordering/app.jsx preview %}
+{% embed_file grid/grid-disable-reordering/main.jsx %}
 {% embed_file shared/shared-products.json %}
 {% endmeta %}

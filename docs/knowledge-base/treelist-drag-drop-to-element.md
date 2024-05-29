@@ -40,6 +40,7 @@ This requires the following:
 Following is an example with the described approach:
 
 {% meta id height:700 %}
-{% embed_file treelist/drag-drop-to-element/main.jsx preview %}
+{% embed_file treelist/drag-drop-to-element/app.jsx preview %}
+{% embed_file treelist/drag-drop-to-element/main.jsx %}
 {% embed_file treelist/drag-drop-to-element/data.js  %}
 {% endmeta %}

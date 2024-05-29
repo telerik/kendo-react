@@ -28,7 +28,8 @@ To enable drag and drop functionality between a KendoReact ListView and a KendoR
 1. When the user drops an item, add it to the Scheduler data by updating the state.
 
 {% meta id:index height:900 %}
-{% embed_file scheduler/dnd-from-listview/main.jsx preview %}
+{% embed_file scheduler/dnd-from-listview/app.jsx preview %}
+{% embed_file scheduler/dnd-from-listview/main.jsx %}
 {% embed_file shared/shared-data.js %}
 {% endmeta %}
 

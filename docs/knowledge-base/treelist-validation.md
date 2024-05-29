@@ -36,7 +36,8 @@ In order to add validation to the cell that is being edited, render a custom edi
 The example below demonstrates this approach where the variable `isValid` is set to `false` when the input length is less or equal to 4. Based on its value, the `valid` prop of the KendoReact Input component is set and shows a validation message. In addition, in the `save` function, the state is set only when `isValid` is set to true:
 
 {% meta id:index height:500 %}
-{% embed_file treelist/treelist-inline-editing-validation/main.jsx preview %}
+{% embed_file treelist/treelist-inline-editing-validation/app.jsx preview %}
+{% embed_file treelist/treelist-inline-editing-validation/main.jsx %}
 {% embed_file treelist/treelist-inline-editing-validation/my-command-cell.jsx %}
 {% embed_file treelist/treelist-inline-editing-validation/data.js %}
 {% endmeta %}

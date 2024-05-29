@@ -36,5 +36,6 @@ This can be achieved by creating a shouldRequestData function that checks if the
 
 
 {% meta id height:480 %}
-{% embed_file dropdownlist/request-every-ten-items/main.tsx preview %}
+{% embed_file dropdownlist/request-every-ten-items/app.tsx preview %}
+{% embed_file dropdownlist/request-every-ten-items/main.tsx %}
 {% endmeta %}

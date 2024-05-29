@@ -33,5 +33,6 @@ Since the delete function will be within the main component where the TreeView i
 Following is an example demonstrating the approach:
 
 {% meta id:index height:480 %}
-{% embed_file treeview/treeview-deleting/main.jsx preview %}
+{% embed_file treeview/treeview-deleting/app.jsx preview %}
+{% embed_file treeview/treeview-deleting/main.jsx %}
 {% endmeta %} 

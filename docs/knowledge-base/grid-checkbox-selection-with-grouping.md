@@ -37,6 +37,7 @@ When a group expression is applied to the Grid's data, the parent items in the d
 Following is an example demonstrating this approach: 
 
 {% meta id:index height:560 %}
-{% embed_file grid/checkbox-selection-with-grouping/main.jsx preview %}
+{% embed_file grid/checkbox-selection-with-grouping/app.jsx preview %}
+{% embed_file grid/checkbox-selection-with-grouping/main.jsx %}
 {% embed_file grid/checkbox-selection-with-grouping/products.json %}
 {% endmeta %}

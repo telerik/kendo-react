@@ -34,6 +34,7 @@ For achieving the desired result, the dataItem for which the button is clicked m
 This is an example showcasing this approach:
 
 {% meta id:index height:480 %}
-{% embed_file grid/grid-show-details-in-popover/main.jsx preview %}
+{% embed_file grid/grid-show-details-in-popover/app.jsx preview %}
+{% embed_file grid/grid-show-details-in-popover/main.jsx %}
 {% embed_file grid/grid-show-details-in-popover/myCommandCell.jsx %}
 {% endmeta %}

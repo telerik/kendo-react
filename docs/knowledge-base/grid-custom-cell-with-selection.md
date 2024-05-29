@@ -35,5 +35,6 @@ Add the selected class name to the custom cell conditionally based on the "props
 Following is an example demonstrating how to keep the Grid selection functionality with custom cell:
 
 {% meta height:480 %}
-{% embed_file grid/grid-custom-cell-with-selection/main.jsx preview %}
+{% embed_file grid/grid-custom-cell-with-selection/app.jsx preview %}
+{% embed_file grid/grid-custom-cell-with-selection/main.jsx %}
 {% endmeta %}

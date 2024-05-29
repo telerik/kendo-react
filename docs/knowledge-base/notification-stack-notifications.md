@@ -35,6 +35,7 @@ Use an array state variable where the data for the notifications will be added a
 Here is an example with the above approach:
 
 {% meta id:index height:500 %}
-{% embed_file notification/stack-notifications/main.jsx preview %}
+{% embed_file notification/stack-notifications/app.jsx preview %}
+{% embed_file notification/stack-notifications/main.jsx %}
 {% embed_file notification/stack-notifications/styles.css %}
 {% endmeta %}

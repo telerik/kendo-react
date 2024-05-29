@@ -40,5 +40,6 @@ How can I add some title text for the shapes in the Map?
 The following example demonstrates how to add title text for Map shapes that are loaded from GeoJSON.
 
 {% meta height:700 %}
-{% embed_file map/add-shape-titles/main.jsx preview %}
+{% embed_file map/add-shape-titles/app.jsx preview %}
+{% embed_file map/add-shape-titles/main.jsx %}
 {% endmeta %}

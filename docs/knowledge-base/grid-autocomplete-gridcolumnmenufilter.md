@@ -42,7 +42,8 @@ The onChange event handlers of the AutoComplete components will be the ones that
 
 
 {% meta id height:520 %}
-{% embed_file grid/columnmenufilter-with-autocomplete/main.jsx preview %}
+{% embed_file grid/columnmenufilter-with-autocomplete/app.jsx preview %}
+{% embed_file grid/columnmenufilter-with-autocomplete/main.jsx %}
 {% embed_file grid/columnmenufilter-with-autocomplete/customFilterUI.jsx %}
 {% embed_file shared/shared-products.json %}
 {% endmeta %}

@@ -40,6 +40,7 @@ In addition, when clicking on a disabled item, the click event will happen on th
 This is an example demonstrating this implementation where the `Albania` item is disabled:
 
 {% meta id:index height:760 %}
-{% embed_file multiselect/multiselect-disable-items/main.jsx preview %}
+{% embed_file multiselect/multiselect-disable-items/app.jsx preview %}
+{% embed_file multiselect/multiselect-disable-items/main.jsx %}
 {% embed_file shared/shared-countries.js %}
 {% endmeta %}

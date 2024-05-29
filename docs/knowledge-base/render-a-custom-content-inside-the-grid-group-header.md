@@ -35,7 +35,8 @@ I want to customize the content of the Grid group header.
 In order to achieve this, it is currently recommended to use the ['groupHeader`]({% slug api_grid_gridcellssettings %}#toc-groupheader) property.
 
 {% meta id:index height:760 %}
-{% embed_file grid/group-header-render/cells-header/main.jsx preview %}
+{% embed_file grid/group-header-render/cells-header/app.jsx preview %}
+{% embed_file grid/group-header-render/cells-header/main.jsx %}
 {% embed_file shared/shared-products.json %}
 {% endmeta %}
 
@@ -46,6 +47,7 @@ This can also be achieved using the Grid `cellRender` property
 The following example demonstrates how to modify the `groupHeader` of the Grid.
 
 {% meta id:index height:760 %}
-{% embed_file grid/group-header-render/main.jsx preview %}
+{% embed_file grid/group-header-render/app.jsx preview %}
+{% embed_file grid/group-header-render/main.jsx %}
 {% embed_file shared/shared-products.json %}
 {% endmeta %}

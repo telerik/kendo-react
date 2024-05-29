@@ -34,7 +34,8 @@ In order to have multiple notifications of the same type, they need to be initia
 Hiding notifications can currently be done using the setTimeout function as shown in the example below.
 
 {% meta id:index height:480 %}
-{% embed_file notification/stack-and-hide-after/main.jsx preview %}
+{% embed_file notification/stack-and-hide-after/app.jsx preview %}
+{% embed_file notification/stack-and-hide-after/main.jsx %}
 {% endmeta %}
 
 Also, there is a feature request for having a property that sets the timeout of the notifications in our portal and I can suggest voting for it as it will increase its chances of being implemented as a built-in feature:

@@ -32,5 +32,6 @@ The below example demonstrates this approach where the `tags` property is used t
 The tags are stored in the `tags` state variable where the first one stores the count of the selected items. When new items are added, in the `handleChange` event handler, they are pushed to the `tags` state variable. On the other had, when an item is removed by clicking on the item from the popup again, they are removed from the `tags` state variable using the `filter` method. In addition, the `tagRender` event handler renders a font icon depending in the `tagData.text` value.
 
 {% meta id:index height:700 %}
-{% embed_file multiselect/multiselect-tags-and-tagrender/main.jsx preview %}
+{% embed_file multiselect/multiselect-tags-and-tagrender/app.jsx preview %}
+{% embed_file multiselect/multiselect-tags-and-tagrender/main.jsx %}
 {% endmeta %}

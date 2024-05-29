@@ -41,6 +41,7 @@ This can be done by:
 This is an example showcasing this:
 
 {% meta id:index height:300 %}
-{% embed_file popup/close-on-blur/main.jsx preview %}
+{% embed_file popup/close-on-blur/app.jsx preview %}
+{% embed_file popup/close-on-blur/main.jsx %}
 {% endmeta %}
 

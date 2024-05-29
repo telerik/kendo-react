@@ -37,7 +37,8 @@ First we need to make the Grid navigatable by setting the [navigatable](https://
 Create a custom cell component, attach the onKeyDown event and pass it to the [cellRender](https://www.telerik.com/kendo-react-ui/components/grid/api/GridProps/#toc-cellrender) prop:
 
 {% meta id:index height:520 %}
-{% embed_file grid/cell-edit-on-enter-press/main.jsx preview %}
-{% embed_file grid/cell-edit-on-enter-press/renderers.jsx preview %}
-{% embed_file grid/cell-edit-on-enter-press/sample-products.jsx preview %}
+{% embed_file grid/cell-edit-on-enter-press/app.jsx preview %}
+{% embed_file grid/cell-edit-on-enter-press/main.jsx %}
+{% embed_file grid/cell-edit-on-enter-press/renderers.jsx %}
+{% embed_file grid/cell-edit-on-enter-press/sample-products.jsx %}
 {% endmeta %}

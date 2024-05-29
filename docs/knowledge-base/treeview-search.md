@@ -31,5 +31,6 @@ How can I enable the search through the data of the KendoReact TreeView?
 You need to have an external input and based on that input value, you can then filter the data of the TreeView.
 
 {% meta id:index height:500 %}
-{% embed_file treeview/treeview-search/main.jsx preview %}
+{% embed_file treeview/treeview-search/app.jsx preview %}
+{% embed_file treeview/treeview-search/main.jsx %}
 {% endmeta %}

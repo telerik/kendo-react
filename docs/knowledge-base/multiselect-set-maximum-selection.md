@@ -35,5 +35,6 @@ How to restrict the number of selected items in a KendoReact MultiSelect?
 This can be achieved by using the slice method and passing the number of items we wish to limit as an argument:
 
 {% meta id:index height:450 %}
-{% embed_file multiselect/multiselect-set-maximum-selection/main.jsx preview %}
+{% embed_file multiselect/multiselect-set-maximum-selection/app.jsx preview %}
+{% embed_file multiselect/multiselect-set-maximum-selection/main.jsx %}
 {% endmeta %}

@@ -51,7 +51,8 @@ if (date1 <= date2) {
 This is an example that demonstrates this approach.
 
 {% meta id height:560 %}
-{% embed_file dateinputs/datetimepicker-conditional-set-button/main.jsx preview %}
+{% embed_file dateinputs/datetimepicker-conditional-set-button/app.jsx preview %}
+{% embed_file dateinputs/datetimepicker-conditional-set-button/main.jsx %}
 {% endmeta %}
 
 For more information on customizing the Calendar of the DateTimePicker, and using its `valid` prop, check the following article respectively:

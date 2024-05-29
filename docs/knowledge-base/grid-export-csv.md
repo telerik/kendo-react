@@ -32,6 +32,7 @@ You can export the Grid data to a CSV format using the [react-csv](https://www.n
 This is an example showcasing this approach:
 
 {% meta id:index height:700 %}
-{% embed_file grid/grid-csv-export/main.jsx preview %}
+{% embed_file grid/grid-csv-export/app.jsx preview %}
+{% embed_file grid/grid-csv-export/main.jsx %}
 {% embed_file shared/shared-products.json %} 
 {% endmeta %}

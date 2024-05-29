@@ -38,5 +38,6 @@ Following is an example demonstrating this approach:
  
 
 {% meta id height:450 %}
-{% embed_file grid/using-fitColumns-method/main.jsx preview %}
+{% embed_file grid/using-fitColumns-method/app.jsx preview %}
+{% embed_file grid/using-fitColumns-method/main.jsx %}
 {% endmeta %}

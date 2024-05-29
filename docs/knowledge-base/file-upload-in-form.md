@@ -36,5 +36,6 @@ In order to achieve this, the Upload files data has to be added to the Form data
 
 
 {% meta id height:460 %}
-{% embed_file form/file-upload/main.jsx preview %}
+{% embed_file form/file-upload/app.jsx preview %}
+{% embed_file form/file-upload/main.jsx %}
 {% endmeta %}

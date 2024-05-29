@@ -38,7 +38,8 @@ You can achieve this by using either the Grid `cellRender` prop, or the GridCell
 Setting className property to the Grid and using that class name as a selector to target only that instance.
 
 {% meta height:500 %}
-{% embed_file grid/grid-whitespace-textoverflow/CSS/main.jsx preview %}
+{% embed_file grid/grid-whitespace-textoverflow/CSS/app.jsx preview %}
+{% embed_file grid/grid-whitespace-textoverflow/CSS/main.jsx %}
 {% embed_file shared/shared-products.json %}
 {% endmeta %}
 
@@ -47,7 +48,8 @@ Setting className property to the Grid and using that class name as a selector t
 Setting custom cell for a column and adding the styles directly to the TD element
 
 {% meta height:500 %}
-{% embed_file grid/grid-whitespace-textoverflow/cell/main.jsx preview %}
+{% embed_file grid/grid-whitespace-textoverflow/cell/app.jsx preview %}
+{% embed_file grid/grid-whitespace-textoverflow/cell/main.jsx %}
 {% embed_file shared/shared-products.json %}
 {% endmeta %}
 
@@ -56,6 +58,7 @@ Setting custom cell for a column and adding the styles directly to the TD elemen
 Using the Grid's cellRender for adding the custom styles to all cells
 
 {% meta height:500 %}
-{% embed_file grid/grid-whitespace-textoverflow/cellRender/main.jsx preview %}
+{% embed_file grid/grid-whitespace-textoverflow/cellRender/app.jsx preview %}
+{% embed_file grid/grid-whitespace-textoverflow/cellRender/main.jsx %}
 {% embed_file shared/shared-products.json %}
 {% endmeta %}

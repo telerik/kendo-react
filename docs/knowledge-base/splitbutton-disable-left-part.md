@@ -38,6 +38,7 @@ You can achieve this by setting `pointer-events` to `none:
  ```
 
 {% meta id:index height:500 %}
-{% embed_file splitbutton/disable-left-part/main.jsx preview %}
+{% embed_file splitbutton/disable-left-part/app.jsx preview %}
+{% embed_file splitbutton/disable-left-part/main.jsx %}
 {% embed_file splitbutton/disable-left-part/styles.css  %}
 {% endmeta %}

@@ -35,5 +35,6 @@ This requires using a chain of Promises to request the data for all child Grids 
 This is an example showcasing this. The example contains comments for the most specific parts:
 
 {% meta id:index height:760 %}
-{% embed_file grid/excel-export-parent-child/main.jsx preview %}
+{% embed_file grid/excel-export-parent-child/app.jsx preview %}
+{% embed_file grid/excel-export-parent-child/main.jsx %}
 {% endmeta %}

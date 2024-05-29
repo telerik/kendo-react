@@ -38,5 +38,6 @@ Following is an example demonstrating this approach:
 
 
 {% meta id height:360 %}
-{% embed_file form/getting-editor-ref-and-keydown/main.jsx preview %}
+{% embed_file form/getting-editor-ref-and-keydown/app.jsx preview %}
+{% embed_file form/getting-editor-ref-and-keydown/main.jsx %}
 {% endmeta %}

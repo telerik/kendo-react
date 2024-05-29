@@ -34,5 +34,6 @@ Creating a custom component that uses NumericTextBox as a filter and setting the
 This is an example showcasing how to limit the value:
 
 {% meta height:480 %}
-{% embed_file grid/limit-numeric-filter-value/main.jsx preview %}
+{% embed_file grid/limit-numeric-filter-value/app.jsx preview %}
+{% embed_file grid/limit-numeric-filter-value/main.jsx %}
 {% endmeta %}

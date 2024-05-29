@@ -34,6 +34,7 @@ For achieving the desired result we need to ensure that all items grouped by fie
 This is an example showcasing this approach:
 
 {% meta id:index height:520 %}
-{% embed_file grid/grid-show-different-field-in-group/main.jsx preview %}
+{% embed_file grid/grid-show-different-field-in-group/app.jsx preview %}
+{% embed_file grid/grid-show-different-field-in-group/main.jsx %}
 {% embed_file grid/grid-show-different-field-in-group/products.json %} 
 {% endmeta %}

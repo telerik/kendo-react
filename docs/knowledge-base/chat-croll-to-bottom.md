@@ -34,5 +34,6 @@ When the user sends the first message, the Conversational UI scrolls to the bott
 This can be achieved by adjusting the scrollTop of the `.k-message-list` container on the [onMessageSend](https://www.telerik.com/kendo-react-ui/components/conversationalui/api/ChatProps/#toc-onmessagesend) event:
 
 {% meta id:index height:900 %}
-{% embed_file conversational-ui/chat-scroll-to-bottom/main.jsx preview %}
+{% embed_file conversational-ui/chat-scroll-to-bottom/app.jsx preview %}
+{% embed_file conversational-ui/chat-scroll-to-bottom/main.jsx %}
 {% endmeta %}

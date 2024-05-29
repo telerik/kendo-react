@@ -34,5 +34,6 @@ How to color the selected tags of the MultiSelect based on a condition?
 This can be achieved by using the [`tagRender`]({% slug api_dropdowns_multiselectprops %}#toc-tagrender) property and setting the background color based on the required condition.
 
 {% meta id:index height:320 %}
-{% embed_file multiselect/multiselect-color-tags/main.jsx preview %}
+{% embed_file multiselect/multiselect-color-tags/app.jsx preview %}
+{% embed_file multiselect/multiselect-color-tags/main.jsx %}
 {% endmeta %}

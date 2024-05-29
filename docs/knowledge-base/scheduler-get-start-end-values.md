@@ -38,6 +38,7 @@ First, retrieve the first and last slots using the `.k-scheduler-body .k-schedul
 Following is an example demonstrates this approach:
 
 {% meta id height:500 %}
-{% embed_file scheduler/start-end-dates/main.jsx preview %}
+{% embed_file scheduler/start-end-dates/app.jsx preview %}
+{% embed_file scheduler/start-end-dates/main.jsx %}
 {% embed_file shared/shared-events-utc.js preview %}
 {% endmeta %}

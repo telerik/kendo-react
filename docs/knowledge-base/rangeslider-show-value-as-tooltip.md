@@ -34,5 +34,6 @@ By default, the RangeSlider start and end points will show a tooltip with "Drag"
 This is an example showcasing how to limit the value:
 
 {% meta height:760 %}
-{% embed_file inputs/rangeslider-show-value-as-tooltip/main.jsx preview %} 
+{% embed_file inputs/rangeslider-show-value-as-tooltip/app.jsx preview %} 
+{% embed_file inputs/rangeslider-show-value-as-tooltip/main.jsx %} 
 {% endmeta %}

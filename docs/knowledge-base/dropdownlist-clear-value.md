@@ -36,5 +36,6 @@ A custom clear button can be added by inserting children elements and passing th
 
 
 {% meta id height:460 %}
-{% embed_file dropdownlist/dropdownlist-clear-value/main.tsx preview %}
+{% embed_file dropdownlist/dropdownlist-clear-value/app.tsx preview %}
+{% embed_file dropdownlist/dropdownlist-clear-value/main.tsx %}
 {% endmeta %}

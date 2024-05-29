@@ -37,7 +37,8 @@ For achieving the desired result the React Context can be used by wrapping it ar
 Following is an example demonstrating this approach
 
 {% meta id:index height:520 %}
-{% embed_file grid/grid-columnmenu-pass-data-with-context/main.jsx preview %}
+{% embed_file grid/grid-columnmenu-pass-data-with-context/app.jsx preview %}
+{% embed_file grid/grid-columnmenu-pass-data-with-context/main.jsx %}
 {% embed_file grid/grid-columnmenu-pass-data-with-context/columnMenu.jsx %}
 {% embed_file shared/shared-products.json %}
 {% endmeta %}

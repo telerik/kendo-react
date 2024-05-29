@@ -114,7 +114,8 @@ You can sort, filter, or page the local data to which the KendoReact Data Grid i
 The following example demonstrates how to create a [higher-order component (HOC)](https://reactjs.org/docs/higher-order-components.html) which uses the `process()` Data Query method to manage the local data operations. The HOC has its own state and adds the `filter`, `sort`, `total`, and `skip` props to the Grid to handle its [`onDataStateChange`]({% slug api_grid_gridprops %}#toc-ondatastatechange) event. The HOC function is then applied for binding two Grids to different sets of data without the need for you to write any logic for the filtering, sorting, and paging operations.
 
 {% meta id:stateful height:700 %}
-{% embed_file grid/stateful/main.jsx preview %}
+{% embed_file grid/stateful/app.jsx preview %}
+{% embed_file grid/stateful/main.jsx %}
 {% embed_file grid/stateful/with-state.jsx %}
 {% embed_file shared/shared-products.json %}
 {% endmeta %}

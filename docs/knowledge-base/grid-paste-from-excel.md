@@ -40,5 +40,6 @@ This will require wrapping the Grid in a div element and attaching an `onPaste` 
 This can be seen in the following example:
 
 {% meta id:index height:700 %}
-{% embed_file grid/paste-from-excel/main.jsx preview %}
+{% embed_file grid/paste-from-excel/app.jsx preview %}
+{% embed_file grid/paste-from-excel/main.jsx %}
 {% endmeta %}

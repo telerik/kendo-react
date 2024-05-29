@@ -34,7 +34,8 @@ Use checkbox selection instead. You can enable checkbox selection only when the 
 Here is an example with the described approach, where we are importing the `useDeviceType` method from the `isMobile.jsx` file. This method is used when setting the `selectable` property of the Grid such that it is set to `null` when the device type is either a mobile or tablet. This leaves us with only the checkbox selection:
 
 {% meta id height:550 %}
-{% embed_file grid/grid-selection-mobile-scrolling/main.jsx preview %}
+{% embed_file grid/grid-selection-mobile-scrolling/app.jsx preview %}
+{% embed_file grid/grid-selection-mobile-scrolling/main.jsx %}
 {% embed_file grid/grid-selection-mobile-scrolling/isMobile.jsx %}
 {% embed_file shared/shared-products.json %}
 {% endmeta %}

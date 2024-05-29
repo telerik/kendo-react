@@ -35,6 +35,7 @@ I need to be able to drag and drop rows from one Grid to another.
 Use the [`rowRender`]({% slug api_grid_gridprops %}#toc-rowrender) prop of the Grid to attach the [onDragStart](https://developer.mozilla.org/en-US/docs/Web/API/Document/dragstart_event) and onDrop(https://developer.mozilla.org/en-US/docs/Web/API/Document/drop_event) events to the row.
 
 {% meta id height:760 %}
-{% embed_file grid/drag-drop-between-grids/main.jsx preview %}
+{% embed_file grid/drag-drop-between-grids/app.jsx preview %}
+{% embed_file grid/drag-drop-between-grids/main.jsx %}
 {% embed_file shared/shared-products.json %}
 {% endmeta %}

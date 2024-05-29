@@ -35,6 +35,7 @@ KendoReact Grid looses cell alignment when using the cell prop with grouping.
 In this case, the issue occurs because when the `rowType` is `groupHeader` the cell has to return null.
 
 {% meta id:index height:600 %}
-{% embed_file grid/grouping-with-custom-cell/main.jsx preview %}
+{% embed_file grid/grouping-with-custom-cell/app.jsx preview %}
+{% embed_file grid/grouping-with-custom-cell/main.jsx %}
 {% embed_file shared/shared-products.json %}
 {% endmeta %}

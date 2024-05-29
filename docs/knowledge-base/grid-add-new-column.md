@@ -38,7 +38,8 @@ The idea here is to have a button that opens up a Form, which when submitted upd
 
 
 {% meta id height:760 %}
-{% embed_file grid/add-new-column/main.jsx preview %}
+{% embed_file grid/add-new-column/app.jsx preview %}
+{% embed_file grid/add-new-column/main.jsx %}
 {% embed_file grid/add-new-column/ColumnForm.jsx %}
 {% embed_file shared/shared-products.json %}
 {% endmeta %}

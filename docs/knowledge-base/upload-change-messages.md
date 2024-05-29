@@ -33,5 +33,6 @@ Use the KendoReact Localization feature and its "loadMessages" and "Localization
 This is an example showcasing this:
 
 {% meta id:index height:400 %}
-{% embed_file upload/upload-change-messages/main.jsx preview %}
+{% embed_file upload/upload-change-messages/app.jsx preview %}
+{% embed_file upload/upload-change-messages/main.jsx %}
 {% endmeta %}

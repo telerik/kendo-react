@@ -38,7 +38,8 @@ Following is an example demonstrating how to set a placeholder for NumericTextBo
 
 
 {% meta id height:480 %}
-{% embed_file grid/grid-show-placeholder-for-filters/main.jsx preview %}
+{% embed_file grid/grid-show-placeholder-for-filters/app.jsx preview %}
+{% embed_file grid/grid-show-placeholder-for-filters/main.jsx %}
 {% embed_file grid/grid-show-placeholder-for-filters/grid-with-filtering.jsx %}
 {% embed_file grid/grid-show-placeholder-for-filters/sample-products.js %}
 {% endmeta %}

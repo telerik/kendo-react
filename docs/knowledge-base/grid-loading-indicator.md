@@ -41,7 +41,8 @@ In such cases, a loading indicator is suitable to indicate that the Grid is prop
 The following example demonstrates how to render a loading indicator once a request is made and hide it when the request is finished successfully.
 
 {% meta id:loading-indicator height:650 %}
-{% embed_file grid/odata-server-operations/main.jsx preview %}
+{% embed_file grid/odata-server-operations/app.jsx preview %}
+{% embed_file grid/odata-server-operations/main.jsx %}
 {% embed_file shared/shared-products-loader.jsx %}
 {% endmeta %}
 

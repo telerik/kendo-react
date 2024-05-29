@@ -41,5 +41,6 @@ Optional: In order to avoid the Chart to play animations each time the PlotBands
 
 
 {% meta id height:520 %}
-{% embed_file charts/set-plotbands-on-plot-area-click/main.jsx preview %}
+{% embed_file charts/set-plotbands-on-plot-area-click/app.jsx preview %}
+{% embed_file charts/set-plotbands-on-plot-area-click/main.jsx %}
 {% endmeta %}
