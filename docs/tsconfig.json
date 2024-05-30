@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "allowJs": false,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "types": ["vite/client"],
+    "baseUrl": ".",
+    "paths": {
+      "./shared-*": ["knowledge-base/examples/shared/shared-*"],
+    },
+  },
+  "include": ["**/**/*.js", "**/**/*.jsx", "**/**/*.ts", "**/**/*.tsx"],
+  "exclude": ["*.tsx"]
+}
