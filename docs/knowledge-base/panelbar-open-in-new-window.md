@@ -36,7 +36,7 @@ The browser displays the "Open in new window" option on right-click when the ele
 {% embed_file layout/panelbar-open-in-new-window/main.jsx %}
 {% embed_file layout/panelbar-open-in-new-window/About.jsx %} 
 {% embed_file layout/panelbar-open-in-new-window/Home.jsx %} 
-{% embed_file layout/panelbar-open-in-new-window/PanelBarNavContainer.jsx preview%}
+{% embed_file layout/panelbar-open-in-new-window/PanelBarNavContainer.jsx preview %}
 {% embed_file layout/panelbar-open-in-new-window/Products.jsx %}
 {% embed_file layout/panelbar-open-in-new-window/Team.jsx %}
 {% endmeta %}

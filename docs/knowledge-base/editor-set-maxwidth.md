@@ -35,7 +35,7 @@ I want to set margins/max width inside of the Kendo text editor.
 This can be achieved by adding a `style` element to the iframe content element.
 
 {% meta id:index height:500 %}
-{% embed_file editor/set-maxwidth/апп.jsx preview %}
+{% embed_file editor/set-maxwidth/app.jsx preview %}
 {% embed_file editor/set-maxwidth/main.jsx %}
 {% embed_file editor/set-maxwidth/content.js %}
 {% endmeta %}

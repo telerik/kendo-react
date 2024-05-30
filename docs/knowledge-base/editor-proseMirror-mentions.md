@@ -31,7 +31,7 @@ How can I use @mentions and #hashtags inside the KendoReact Editor?
 You can use the [`proseMirror-mentions`](https://github.com/joelewis/prosemirror-mentions) plugin to provide a `@mentions` and `#hashtags` functionality for the KendoReact Editor.
 
 {% meta id:index height:330 %}
-{% embed_file editor/prose-mirror-mentions/апп.jsx preview %}
+{% embed_file editor/prose-mirror-mentions/app.jsx preview %}
 {% embed_file editor/prose-mirror-mentions/main.jsx %}
 {% embed_file editor/prose-mirror-mentions/style.css %}
 {% endmeta %}
