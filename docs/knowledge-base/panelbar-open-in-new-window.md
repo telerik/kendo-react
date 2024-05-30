@@ -32,6 +32,7 @@ I want to have the option to open on right-click the PanelBarItem target in new 
 The browser displays the "Open in new window" option on right-click when the element has "href", so in order to allow this for the PanelBarItem we need to add an anchor element with "href". This can be achieved by setting a custom "title" for the PanelBarItem that will render the anchor element.
 
 {% meta id height:650 %}
+{% embed_file layout/panelbar-open-in-new-window/app.jsx %}
 {% embed_file layout/panelbar-open-in-new-window/main.jsx %}
 {% embed_file layout/panelbar-open-in-new-window/About.jsx %} 
 {% embed_file layout/panelbar-open-in-new-window/Home.jsx %} 
