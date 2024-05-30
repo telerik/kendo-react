@@ -33,8 +33,8 @@ The TreeList columns have editCell that accepts not only the default editors tha
 
 {% meta id height:580 %}
 {% embed_file treelist/treelist-custom-editor/app.jsx preview %}
-{% embed_file treelist/treelist-custom-editor/main.jsx %}
-{% embed_file treelist/treelist-custom-editor/data.js %}
-{% embed_file treelist/treelist-custom-editor/my-command-cell.jsx %}
-{% embed_file treelist/treelist-custom-editor/MyCustomTreeListTextEditor.js %}
+{% embed_file treelist/treelist-custom-editor/main.jsx preview %}
+{% embed_file treelist/treelist-custom-editor/data.js preview %}
+{% embed_file treelist/treelist-custom-editor/my-command-cell.jsx preview %}
+{% embed_file treelist/treelist-custom-editor/MyCustomTreeListTextEditor.js preview %}
 {% endmeta %}
