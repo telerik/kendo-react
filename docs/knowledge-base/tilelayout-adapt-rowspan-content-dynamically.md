@@ -34,4 +34,5 @@ To dynamically adjust the `rowSpan` value based on the content height, create a 
 {% meta id height:500 %}
 {% embed_file layout/tilelayout-adapt-rowspan-content-dynamically/app.jsx preview %}
 {% embed_file layout/tilelayout-adapt-rowspan-content-dynamically/main.jsx %}
+{% embed_file shared/shared-products.json %}
 {% endmeta %}

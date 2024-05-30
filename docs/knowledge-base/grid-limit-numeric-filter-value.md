@@ -36,4 +36,5 @@ This is an example showcasing how to limit the value:
 {% meta height:480 %}
 {% embed_file grid/limit-numeric-filter-value/app.jsx preview %}
 {% embed_file grid/limit-numeric-filter-value/main.jsx %}
+{% embed_file shared/shared-products.json %}
 {% endmeta %}

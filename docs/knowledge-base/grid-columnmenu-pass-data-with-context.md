@@ -40,5 +40,5 @@ Following is an example demonstrating this approach
 {% embed_file grid/grid-columnmenu-pass-data-with-context/app.jsx preview %}
 {% embed_file grid/grid-columnmenu-pass-data-with-context/main.jsx %}
 {% embed_file grid/grid-columnmenu-pass-data-with-context/columnMenu.jsx %}
-{% embed_file shared/shared-products.json %}
+{% embed_file grid/grid-columnmenu-pass-data-with-context/products.json %}
 {% endmeta %}

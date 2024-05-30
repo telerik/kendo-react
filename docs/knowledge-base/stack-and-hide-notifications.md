@@ -36,6 +36,7 @@ Hiding notifications can currently be done using the setTimeout function as show
 {% meta id:index height:480 %}
 {% embed_file notification/stack-and-hide-after/app.jsx preview %}
 {% embed_file notification/stack-and-hide-after/main.jsx %}
+{% embed_file shared/shared-products.json %}
 {% endmeta %}
 
 Also, there is a feature request for having a property that sets the timeout of the notifications in our portal and I can suggest voting for it as it will increase its chances of being implemented as a built-in feature:
