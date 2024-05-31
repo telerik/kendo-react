@@ -36,6 +36,7 @@ This can be achieved by implementing a custom editor tool which applies [text-de
 
 
 {% meta id:index height:900 %}
-{% embed_file editor-double-underilne/main.tsx preview %}
+{% embed_file editor-double-underilne/app.tsx preview %}
+{% embed_file editor-double-underilne/main.tsx %}
 {% embed_file editor-double-underilne/doubleUnderlineTool.tsx %}
 {% endmeta %}

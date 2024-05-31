@@ -35,5 +35,6 @@ How can I show the value of the RadialGauge in the center?
 This can be achieved by rendering a custom label element with the value inside that is relatively positioned:
 
 {% meta id height:480 %}
-{% embed_file radialgauge/main.tsx preview %}
+{% embed_file radialgauge/app.tsx preview %}
+{% embed_file radialgauge/main.tsx %}
 {% endmeta %}

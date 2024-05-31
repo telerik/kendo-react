@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import ReactDOM from 'react-dom';
 import { Editor, EditorTools } from '@progress/kendo-react-editor';
 
 const {
@@ -107,4 +106,4 @@ const App = () => {
   );
 };
 
-ReactDOM.render(<App />, document.querySelector('my-app'));
+export default App;
