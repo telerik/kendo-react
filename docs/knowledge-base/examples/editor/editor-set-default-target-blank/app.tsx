@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import {
   Editor,
   EditorMountEvent,
@@ -41,4 +40,4 @@ const App = () => {
   );
 };
 
-ReactDOM.render(<App />, document.querySelector('my-app'));
+export default App;

@@ -1,9 +1,8 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 
 import { RadialGauge } from '@progress/kendo-react-gauges';
 
-const RadialGaugeComponent = () => {
+const App = () => {
   const [value, setValue] = React.useState(0);
 
   React.useEffect(() => {
@@ -51,4 +50,4 @@ const RadialGaugeComponent = () => {
   );
 };
 
-ReactDOM.render(<RadialGaugeComponent />, document.querySelector('my-app'));
+export default App;

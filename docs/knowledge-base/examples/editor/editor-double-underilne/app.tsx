@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 
 import { Editor } from '@progress/kendo-react-editor';
 import doubleUnderlineTool from './doubleUnderlineTool';
@@ -18,4 +17,4 @@ const App = () => {
   );
 };
 
-ReactDOM.render(<App />, document.querySelector('my-app'));
+export default App;

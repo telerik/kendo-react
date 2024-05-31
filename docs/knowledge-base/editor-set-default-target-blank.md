@@ -35,7 +35,8 @@ How to set by default `target='_blank'` for all the urls present in editor?
 This can be achieved by changing the default `target` value in the link mark implementation of the [Editor schema](https://www.telerik.com/kendo-react-ui/components/editor/schema/) and applying the new one:
 
 {% meta id height:480 %}
-{% embed_file editor/editor-set-default-target-blank/main.tsx preview %}
+{% embed_file editor/editor-set-default-target-blank/app.tsx preview %}
+{% embed_file editor/editor-set-default-target-blank/main.tsx %}
 {% embed_file editor/editor-set-default-target-blank/content.ts %}
 {% embed_file editor/editor-set-default-target-blank/schema-utils.ts %}
 {% embed_file editor/editor-set-default-target-blank/schema.ts %}
