@@ -215,3 +215,21 @@ updates:
       - "telerik/kendo-react-support"
     labels:
       - "Dependencies"
+
+  - package-ecosystem: "npm"
+    directory: "/docs"
+    schedule:
+      interval: "daily"
+    groups:
+      kendo-dependencies:
+        patterns:
+          - '@progress/kendo-*'
+    allow:
+      - dependency-name: '@progress/kendo-*'
+    commit-message:
+      prefix: "chore:"
+    reviewers:
+      - "telerik/kendo-react-devs"
+      - "telerik/kendo-react-support"
+    labels:
+      - "Dependencies"
