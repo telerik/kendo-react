@@ -28,7 +28,7 @@ jobs:
       - name: Create branch
         run: |
           git checkout -b "new-kb-$name-$id"
-          cd $folder
+          cd docs/knowledge-base
           echo "$content" > "$name.md"
           git add "$name.md"
           git commit -m "Added new kb article $name"
