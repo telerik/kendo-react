@@ -10,7 +10,7 @@ import {
   GridToolbar,
 } from "@progress/kendo-react-grid";
 import { Button } from "@progress/kendo-react-buttons";
-import { GridPDFExport } from "@progress/kendo-react-pdf";
+//import { GridPDFExport } from "@progress/kendo-react-pdf";
 import { ExcelExport } from "@progress/kendo-react-excel-export";
 import { process } from "@progress/kendo-data-query";
 import { Input } from "@progress/kendo-react-inputs";
@@ -220,7 +220,7 @@ export const Grid = (props) => {
       <ExcelExport data={data} ref={excelExportRef}>
         {GridElement}
       </ExcelExport>
-      <GridPDFExport ref={pdfExportRef}>{GridElement}</GridPDFExport>
+{/*       <GridPDFExport ref={pdfExportRef}>{GridElement}</GridPDFExport> */}
     </>
   );
 };

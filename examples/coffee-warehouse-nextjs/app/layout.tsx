@@ -3,8 +3,8 @@ import React from "react";
 import "./App.scss";
 
 import type { Metadata } from "next";
-import "@progress/kendo-theme-default/dist/all.css"
 import { GlobalizationAndHeader } from "./globalization-and-header";
+import "@progress/kendo-theme-default/dist/all.css"
 
 export const metadata: Metadata = {
   title: "KendoReact Coffee WareHouse DashBoard",

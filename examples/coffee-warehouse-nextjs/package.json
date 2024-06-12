@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "turbo": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -36,13 +37,14 @@
     "@progress/kendo-react-treeview": "^8.0.0",
     "@progress/kendo-react-upload": "^8.0.0",
     "@progress/kendo-theme-default": "^8.0.1",
+    "babel-plugin-react-compiler": "^0.0.0-experimental-938cd9a-20240601",
     "cldr-core": "44.0.1",
     "cldr-dates-full": "44.0.1",
     "cldr-numbers-full": "44.0.1",
     "hammerjs": "^2.0.8",
-    "next": "14.0.4",
-    "react": "^18",
-    "react-dom": "^18"
+    "next": "^15.0.0-rc.0",
+    "react": "^19.0.0-rc-a26e3f403e-20240611",
+    "react-dom": "^19.0.0-rc-a26e3f403e-20240611"
   },
   "devDependencies": {
     "@types/node": "^20",
