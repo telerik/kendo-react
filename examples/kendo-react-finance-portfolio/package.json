@@ -33,7 +33,7 @@
     "@progress/kendo-react-treelist": "^8.1.1",
     "@progress/kendo-react-treeview": "^8.0.0",
     "@progress/kendo-svg-icons": "^3.0.0",
-    "@progress/kendo-theme-bootstrap": "^8.0.1",
+    "@progress/kendo-theme-bootstrap": "^8.1.0",
     "@progress/kendo-ui": "^2024.2.514",
     "@svgr/webpack": "^8.1.0",
     "@types/jest": "^29.5.11",
