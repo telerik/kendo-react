@@ -14,7 +14,7 @@
     "@progress/kendo-react-inputs": "^8.0.0",
     "@progress/kendo-react-intl": "^8.0.0",
     "@progress/kendo-react-layout": "^8.0.0",
-    "@progress/kendo-theme-material": "^8.2.1",
+    "@progress/kendo-theme-material": "^9.0.0",
     "bootstrap": "5.2.1",
     "dotenv": "^16.3.2",
     "graphql": "^16.8.1",
