@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/kendo-react/react-grid-live-data/static/css/main.5469871f.css",
-    "main.js": "/kendo-react/react-grid-live-data/static/js/main.44917801.js",
+    "main.js": "/kendo-react/react-grid-live-data/static/js/main.459c5f55.js",
     "static/js/496.47c2e962.chunk.js": "/kendo-react/react-grid-live-data/static/js/496.47c2e962.chunk.js",
     "static/media/SHIB-lg.png": "/kendo-react/react-grid-live-data/static/media/SHIB-lg.ab75a889709b539aa7da.png",
     "static/media/XEC-lg.png": "/kendo-react/react-grid-live-data/static/media/XEC-lg.5814aaaddcd37df5399d.png",
@@ -11,11 +11,11 @@
     "static/media/EUR-lg.png": "/kendo-react/react-grid-live-data/static/media/EUR-lg.9bc38832d0b6f77e279c.png",
     "index.html": "/kendo-react/react-grid-live-data/index.html",
     "main.5469871f.css.map": "/kendo-react/react-grid-live-data/static/css/main.5469871f.css.map",
-    "main.44917801.js.map": "/kendo-react/react-grid-live-data/static/js/main.44917801.js.map",
+    "main.459c5f55.js.map": "/kendo-react/react-grid-live-data/static/js/main.459c5f55.js.map",
     "496.47c2e962.chunk.js.map": "/kendo-react/react-grid-live-data/static/js/496.47c2e962.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5469871f.css",
-    "static/js/main.44917801.js"
+    "static/js/main.459c5f55.js"
   ]
 }
