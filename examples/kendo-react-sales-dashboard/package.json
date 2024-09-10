@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@progress/kendo-data-query": "^1.7.0",
-    "@progress/kendo-drawing": "^1.20.2",
+    "@progress/kendo-drawing": "^1.20.3",
     "@progress/kendo-react-buttons": "^8.2.0",
     "@progress/kendo-react-charts": "^8.2.0",
     "@progress/kendo-react-dateinputs": "^8.2.0",
