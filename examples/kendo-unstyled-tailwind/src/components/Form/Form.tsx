@@ -90,7 +90,7 @@ const FormDatePicker = (fieldRenderProps: FieldRenderProps) => {
 
 
 
-const App = (_props: React.HTMLAttributes<HTMLDivElement>) => {
+const App = () => {
   return (
       <section className="grid px-5 py-10 md:grid-cols-2 grid-cols-1 gap-y-10 gap-x-6">
         <div className="flex flex-col gap-6">
