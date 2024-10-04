@@ -1,7 +1,7 @@
 # Using KendoReact components in Unstyled mode and TailwindCSS
 
 ## The scenario
-The client already works with TailwindCSS to style their application and wants to include our KendoReact components in their project. They want to continue using the same styling technique with Tailwind everywhere without the need to add KendoTheme.
+The client already works with TailwindCSS to style their application and wants to include our KendoReact components in their project. They want to continue using the same styling technique with Tailwind without the need to add KendoTheme.
 
 ## The solution
 We can use KendoReact components in Unstyled mode and use Tailwind classes to style the components as it is done in the sample `tailwind-preset.ts` file.
