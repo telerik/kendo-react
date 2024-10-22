@@ -1,0 +1,10 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ThankYou from '../components/ThankYou';
+---
+
+<Layout title="Thank You">
+  <main>
+    <ThankYou client:only="react" />
+  </main>
+</Layout>

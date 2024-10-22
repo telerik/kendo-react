@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactsComponent from '../components/Contacts'; 
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+---
+
+<Layout title="Contacts">
+<main>
+  <Header client:load />
+  <ContactsComponent client:only="react" /> 
+  <Footer client:load />
+</main>
+</Layout>

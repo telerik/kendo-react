@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PaymentDetails from '../components/PaymentDetails';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+---
+
+<Layout title="Contacts">
+<main>
+  <Header client:load />
+  <PaymentDetails client:only="react" />
+  <Footer client:load />
+</main>
+</Layout>

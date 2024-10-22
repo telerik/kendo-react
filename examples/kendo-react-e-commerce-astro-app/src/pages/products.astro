@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AllProductsListView from '../components/AllProductsListView';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+---
+
+<Layout title="Products">
+  <Header client:load />
+<main>
+  <AllProductsListView client:only="react" />
+</main>
+  <Footer client:load />
+</Layout>   

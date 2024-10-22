@@ -1,0 +1,10 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ShoppingCartList from '../components/ShoppingCartList';
+---
+
+<Layout title="Shopping Cart">
+  <main>
+    <ShoppingCartList client:only="react" />
+  </main>
+</Layout>

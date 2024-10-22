@@ -1,10 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Template from '../components/Form/Form.tsx';
+import Home from '../components/Home';
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<Template client:load />
-	</main>
+    <main>
+      <Home client:load />
+    </main>
 </Layout>

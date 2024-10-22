@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".", 
+    "jsx": "react-jsx",
+		"jsxImportSource": "react",
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"allowImportingTsExtensions": true,
+		"noEmit": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+    "paths": {
+      "@astro-layouts/*": ["src/layouts/*"], 
+      "@astro-components/*": ["src/components/*"]
+    }
+  }
+}

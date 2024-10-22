@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProductDetails from '../../components/ProductDetails';
+import listData from '../../data/listData';
+import { ListDataDescriptor } from '../../data/types';
+
+export async function getStaticPaths() {
+  return listData.map((product: ListDataDescriptor) => ({
+    params: { id: String(product.id) },
+  }));
+}
+
+const { id } = Astro.params;
+const product = listData.find((item: ListDataDescriptor) => String(item.id) === id);
+---
+
+<Layout title={`Product ${id}`}>
+  <main>
+    {product ? (
+      <ProductDetails id={id} product={product} client:only="react" />
+    ) : (
+      <div>Product not found</div>
+    )}
+  </main>
+</Layout>
