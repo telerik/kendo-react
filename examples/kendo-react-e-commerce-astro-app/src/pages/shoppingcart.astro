@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ShoppingCartList from '../components/ShoppingCartList';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+---
+
+<Layout title="Products">
+<main>
+  <Header client:load />
+  <ShoppingCartList client:only="react" />
+  <Footer client:load />
+</main>
+</Layout>   

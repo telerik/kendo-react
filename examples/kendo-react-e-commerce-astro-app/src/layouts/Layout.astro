@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet"
+    href=`https://unpkg.com/@progress/kendo-theme-default@${import.meta.env.DEV
+    ? 'dev' : 'latest'}/dist/all.css`> <link rel="stylesheet"
+    href=`https://unpkg.com/@progress/kendo-theme-utils@${import.meta.env.DEV ?
+    'dev' : 'latest'}/dist/all.css`>
+    <style is:global>
+      /* Reset styles */
+      *,
+      ::before,
+      ::after {
+        box-sizing: border-box;
+      }
+
+      /* move to reset css */
+      p,
+      ul,
+      ol,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      pre,
+      blockquote {
+        margin: 0;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: inherit;
+        font-weight: inherit;
+      }
+      ol,
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      hr {
+        height: 0;
+        border-top-width: 1px;
+        border-bottom-width: 0;
+      }
+
+      .k-menu-popup {
+       position: fixed;
+       top: auto;
+       z-index: 1000; 
+      }
+
+      .sized-parent{
+        max-width: 1280px;
+        margin: auto;
+      }
+      
+    </style>
+    <slot name="head" />
+  </head>
+  <body class="k-body sized-parent">
+    <slot />
+  </body>
+</html>
