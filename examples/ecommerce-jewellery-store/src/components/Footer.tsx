@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
               </InputSuffix>
             )}
           />
-          <p className="k-mt-6 k-font-weight-bold">Follow us:</p>  
+          <p className="k-mt-6">Follow us:</p>  
           <div className="k-d-flex k-gap-2 k-align-items-center">
             <p className="k-d-flex k-align-items-center" style={{ gap: '10px' }}>
               <SvgIcon icon={facebookIcon} size="xlarge" /> Facebook
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="k-flex-basis-200 k-flex-grow-1 k-d-flex k-flex-col k-gap-2 k-mt-6">  
+        <div className="k-flex-basis-200 k-flex-grow-1 k-d-flex k-flex-col k-gap-4 k-mt-6 k-text-align-center">  
           <h4 className="k-color-primary k-font-bold">Customer Care</h4>
           <a href="#" className="k-link">Contact Us</a>
           <a href="#" className="k-link">Shopping Online</a>
@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
           <a href="#" className="k-link">Help</a>
         </div>
 
-        <div className="k-flex-basis-200 k-flex-grow-1 k-d-flex k-flex-col k-gap-2 k-mt-6">  
+        <div className="k-flex-basis-200 k-flex-grow-1 k-d-flex k-flex-col k-gap-4 k-mt-6 k-text-align-center">  
           <h4 className="k-color-primary k-font-bold">Our Company</h4>
           <a href="#" className="k-link">Prominent Locations</a>
           <a href="#" className="k-link">Careers</a>
@@ -65,20 +65,13 @@ const Footer: React.FC = () => {
           <a href="#" className="k-link">Society Care</a>
         </div>
 
-        <div className="k-flex-basis-200 k-flex-grow-1 k-d-flex k-flex-col k-gap-2 k-mt-6" style={{marginRight: '150px'}}>  
+        <div className="k-flex-basis-200 k-flex-grow-1 k-d-flex k-flex-col k-gap-4 k-mt-6 k-text-align-center" style={{marginRight: '150px'}}>  
           <h4 className="k-color-primary k-font-bold">Legal & Privacy</h4>
-          <div className="k-d-flex k-gap-2">
-            <p className="k-m-0">Prominent Locations</p>
-          </div>
-          <div className="k-d-flex k-gap-2">
-            <p className="k-m-0">Careers</p>
-          </div>
-          <div className="k-d-flex k-gap-2">
-            <p className="k-m-0">Corporate Responsibility</p>
-          </div>
-          <div className="k-d-flex k-gap-2">
-            <p className="k-m-0">Sustainability</p>
-          </div>
+          <a href="#" className="k-link">Terms of Use</a>
+          <a href="#" className="k-link">Conditions of Sale</a>
+          <a href="#" className="k-link">Return Policy</a>
+          <a href="#" className="k-link">Privacy Policy</a>
+          <a href="#" className="k-link">Cookie Policy</a>
         </div>
       </div>
     </section>
