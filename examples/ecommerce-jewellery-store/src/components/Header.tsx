@@ -24,7 +24,10 @@ import {
 const Header: React.FC = () => {
   return (
     <>
-      <AppBar themeColor="inherit">
+      <AppBar className='k-pt-3 k-pb-3 k-col-span-12' themeColor="inherit" style={{
+        height: "52.2px",
+        zIndex: 10000
+      }}>
         <AppBarSection className="k-d-flex k-align-items-center" style={{ paddingLeft: '50px' }}>
           <a href="#" className="k-d-sm-flex" style={{ marginRight: '50px' }}>
             <img src={viloraLogo} alt="Logo" />
