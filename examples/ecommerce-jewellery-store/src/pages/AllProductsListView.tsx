@@ -1,10 +1,22 @@
-import { OrderedImgText } from "../components/OrderedImageCard";
+import * as React from "react";
+
 import bracelets from "../assets/bracelets.png?url";
 import necklace from "../assets/necklace_1.jfif?url";
 import ring from "../assets/ring_1.jfif?url";
 import jewel from "../assets/1111.jfif?url";
+
 import { Layout } from "../components/Layout";
-import { Button } from "@progress/kendo-react-buttons";
+import { OrderedImgText } from "../components/OrderedImageCard";
+import { CustomSection } from "../components/CustomizedSection";
+
+import { Breadcrumb } from "@progress/kendo-react-layout";
+import { SvgIcon } from "@progress/kendo-react-common";
+import { Button, ButtonGroup } from "@progress/kendo-react-buttons";
+import { listData } from "../data/listData";
+import { Badge, BadgeContainer } from "@progress/kendo-react-indicators";
+import { cartIcon, layout2By2Icon, gridLayoutIcon, filterIcon, sortAscIcon } from "@progress/kendo-svg-icons"
+import { MultiSelect, DropDownList } from "@progress/kendo-react-dropdowns";
+
 
 export const AllProductsListView = () => {
   const title = "Fine Selection";
@@ -13,10 +25,18 @@ export const AllProductsListView = () => {
     "Jewelry is a meaningful form of self-expression that enhances personal style and adds beauty to any occasion.";
   const order = "first";
 
+  const chips: string[] = ["Status", "Category", "Material", "Gemstones", "Price"]
+
+  const [msValue, setMSValue] = React.useState<string[]>(["Status", "Category", "Material", "Gemstones", "Price"])
+
   type CardDescriptor = {
     img: string;
     collectionText: string;
   };
+
+  type DataModel = {
+    text: string;
+  }
 
   const cards: CardDescriptor[] = [
     {
@@ -32,6 +52,13 @@ export const AllProductsListView = () => {
       collectionText: "RAVINA",
     },
   ];
+
+  const BreakcrumbData: DataModel[] = [{
+    text: "Home"
+  },
+  {
+    text: "Jewelry"
+  }]
 
   return (
     <>
@@ -52,7 +79,7 @@ export const AllProductsListView = () => {
         </section>
       </Layout>
       <Layout>
-        <section className="k-d-grid k-grid-cols-12 k-col-span-12 k-justify-content-center">
+        <CustomSection>
           <div className="k-h2 k-font-bold k-text-black k-col-span-12 k-text-center">
             Our Collections
           </div>
@@ -76,7 +103,7 @@ export const AllProductsListView = () => {
                   />
                   <span
                     className="k-pt-md"
-                    
+
                   >
                     Collection "{card.collectionText}"
                   </span>
@@ -93,7 +120,89 @@ export const AllProductsListView = () => {
               );
             })}
           </div>
+        </CustomSection>
+      </Layout>
+      <Layout>
+        <section className="k-d-flex k-justify-content-between">
+          <Breadcrumb data={BreakcrumbData}></Breadcrumb>
+          <ButtonGroup>
+            <Button fillMode={"flat"} svgIcon={gridLayoutIcon}></Button>
+            <Button fillMode={"flat"} svgIcon={layout2By2Icon}></Button>
+          </ButtonGroup>
         </section>
+      </Layout>
+      <Layout>
+        <section className="k-d-flex k-justify-content-between k-align-items-center">
+          <span>
+            <span>
+              <SvgIcon icon={filterIcon}></SvgIcon>
+              Filter:
+            </span>
+
+            <span>
+              <MultiSelect fillMode={"flat"} data={chips} value={msValue}></MultiSelect>
+            </span>
+          </span>
+          <span>
+            <span>
+              <SvgIcon icon={sortAscIcon}></SvgIcon>
+              Sort by:
+            </span>
+            <span>
+              <span><DropDownList value={"Recommended"}></DropDownList></span>
+            </span>
+          </span>
+
+        </section>
+      </Layout>
+      <Layout>
+        <CustomSection>
+          {
+            listData.map((item) => {
+              return (
+                <div className="k-col-span-3 k-text-center">
+                  {item.status != null ? (
+                    <BadgeContainer>
+                      <div className="k-d-flex k-justify-content-center k-align-items-center k-rounded-lg" style={{
+                        backgroundImage: `url(${item.img})`,
+                        width: "278px",
+                        height: "236px"
+                      }}>
+                      </div>
+
+                      <Badge themeColor="primary" className="k-text-uppercase" position={"inside"} align={{
+                        horizontal: "start",
+                        vertical: "top"
+                      }}>{item.status}</Badge>
+                    </BadgeContainer>
+                  ) : (
+                    <div className="k-d-flex k-justify-content-center k-align-items-center k-rounded-lg" style={{
+                      backgroundImage: `url(${item.img})`,
+                      width: "278px",
+                      height: "236px"
+                    }}>
+                    </div>
+                  )}
+
+                  <div>{item.title}</div>
+                  <div className="k-d-flex k-justify-content-center k-gap-xl">
+                    <span>
+                      {item.oldPrice && <span className="k-text-line-through" style={{
+                        paddingRight: "8px"
+                      }}>{`$${item.oldPrice}`}</span>}
+                      <span style={{
+                        color: "red"
+                      }}>{`$${item.newPrice}`}</span>
+                    </span>
+                    <span>
+                      <Button fillMode={"outline"} svgIcon={cartIcon}>Buy</Button>
+                    </span>
+                  </div>
+                </div>
+              );
+            })
+          }
+        </CustomSection>
       </Layout>
     </>
   );

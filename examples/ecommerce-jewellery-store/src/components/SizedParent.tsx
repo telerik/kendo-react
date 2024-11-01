@@ -1,13 +1,14 @@
+
+import "../styles.css"
+
+
 export type SizedParentProps = {
   children: React.ReactNode;
 };
 
 export const SizedParent = (props: SizedParentProps) => {
   return (
-    <div
-      style={{
-        maxWidth: "1280px",
-      }}
+    <div className="kr-mw-1280"
     >
       {props.children}
     </div>

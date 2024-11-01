@@ -15,6 +15,7 @@ export const BackgroundImage = (props: BackgroundImageProps) => {
       className="k-d-grid k-grid-cols-12 k-justify-content-center k-align-items-center k-col-span-12 k-bg-cover"
       style={{
         backgroundImage: `url(${img})`,
+        position: ""
         height: "757.8px",
       }}
     >

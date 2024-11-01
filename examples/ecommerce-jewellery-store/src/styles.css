@@ -4,8 +4,17 @@ html, body {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
   }
   
 .header {
   background-color: #FAFAFA;
+}
+
+.kr-p-r-l-b-60{
+  padding: 0px 60px 60px 60px;
+}
+
+.kr-mw-1280{
+  max-width: 1280px;
 }
