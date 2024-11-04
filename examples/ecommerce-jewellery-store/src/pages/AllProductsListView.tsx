@@ -152,7 +152,7 @@ export const AllProductsListView = () => {
         </section>
       </Layout>
       <Layout>
-        <CustomSection>
+        <section className="k-d-grid k-grid-cols-12 k-col-span-12 k-justify-content-center k-align-items-center k-gap-3">
           {
             listData.map((item) => {
               return (
@@ -183,8 +183,8 @@ export const AllProductsListView = () => {
                     </div>
                   )}
                   <div>
-                    <div>{item.title}</div>
-                    <div className="k-d-flex k-justify-content-center k-gap-xl k-align-items-center">
+                    <div className="k-pt-2">{item.title}</div>
+                    <div className="k-d-flex k-justify-content-center k-gap-xl k-align-items-center k-pt-2">
                       <span>
                         {item.oldPrice && <span className="k-text-line-through" style={{
                           paddingRight: "8px"
@@ -202,7 +202,7 @@ export const AllProductsListView = () => {
               );
             })
           }
-        </CustomSection>
+        </section>
       </Layout>
     </>
   );
