@@ -10,7 +10,6 @@ import Home from "@/pages/Home";
 import "@progress/kendo-theme-default/dist/all.css";
 import "@progress/kendo-theme-utils/dist/all.scss";
 import { SizedParent } from "./components/SizedParent";
-
 function App() {
   return (
     <Router>

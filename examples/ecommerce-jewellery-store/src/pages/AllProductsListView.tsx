@@ -133,24 +133,20 @@ export const AllProductsListView = () => {
       </Layout>
       <Layout>
         <section className="k-d-flex k-justify-content-between k-align-items-center">
-          <span>
-            <span>
+          <span className="k-d-flex k-align-items-center">
+            <span className="k-d-flex k-align-items-center k-pr-2">
               <SvgIcon icon={filterIcon}></SvgIcon>
               Filter:
             </span>
-
-            <span>
-              <MultiSelect fillMode={"flat"} data={chips} value={msValue}></MultiSelect>
-            </span>
+            <MultiSelect fillMode={"flat"} data={chips} value={msValue}></MultiSelect>
           </span>
-          <span>
-            <span>
+
+          <span className="k-d-flex k-align-items-center">
+            <span className="k-d-flex k-align-items-center k-pr-2">
               <SvgIcon icon={sortAscIcon}></SvgIcon>
               Sort by:
             </span>
-            <span>
-              <span><DropDownList value={"Recommended"}></DropDownList></span>
-            </span>
+            <span><DropDownList value={"Recommended"}></DropDownList></span>
           </span>
 
         </section>
@@ -160,13 +156,16 @@ export const AllProductsListView = () => {
           {
             listData.map((item) => {
               return (
-                <div className="k-col-span-3 k-text-center">
+                <div className="k-col-span-3 k-text-center k-border k-border-primary k-gap-1 k-pb-5">
                   {item.status != null ? (
                     <BadgeContainer>
                       <div className="k-d-flex k-justify-content-center k-align-items-center k-rounded-lg" style={{
                         backgroundImage: `url(${item.img})`,
                         width: "278px",
-                        height: "236px"
+                        height: "236px",
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        backgroundRepeat: "no-repeat"
                       }}>
                       </div>
 
@@ -183,20 +182,21 @@ export const AllProductsListView = () => {
                     }}>
                     </div>
                   )}
-
-                  <div>{item.title}</div>
-                  <div className="k-d-flex k-justify-content-center k-gap-xl">
-                    <span>
-                      {item.oldPrice && <span className="k-text-line-through" style={{
-                        paddingRight: "8px"
-                      }}>{`$${item.oldPrice}`}</span>}
-                      <span style={{
-                        color: "red"
-                      }}>{`$${item.newPrice}`}</span>
-                    </span>
-                    <span>
-                      <Button fillMode={"outline"} svgIcon={cartIcon}>Buy</Button>
-                    </span>
+                  <div>
+                    <div>{item.title}</div>
+                    <div className="k-d-flex k-justify-content-center k-gap-xl k-align-items-center">
+                      <span>
+                        {item.oldPrice && <span className="k-text-line-through" style={{
+                          paddingRight: "8px"
+                        }}>{`$${item.oldPrice}`}</span>}
+                        <span style={{
+                          color: "red"
+                        }}>{`$${item.newPrice}`}</span>
+                      </span>
+                      <span>
+                        <Button fillMode={"outline"} svgIcon={cartIcon}>Buy</Button>
+                      </span>
+                    </div>
                   </div>
                 </div>
               );
