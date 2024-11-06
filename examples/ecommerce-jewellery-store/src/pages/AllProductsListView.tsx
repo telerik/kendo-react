@@ -10,12 +10,12 @@ import { OrderedImgText } from "../components/OrderedImageCard";
 import { CustomSection } from "../components/CustomizedSection";
 
 import { Breadcrumb } from "@progress/kendo-react-layout";
-import { SvgIcon } from "@progress/kendo-react-common";
 import { Button, ButtonGroup } from "@progress/kendo-react-buttons";
 import { listData } from "../data/listData";
 import { Badge, BadgeContainer } from "@progress/kendo-react-indicators";
-import { cartIcon, layout2By2Icon, gridLayoutIcon, filterIcon, sortAscIcon } from "@progress/kendo-svg-icons"
-import { MultiSelect, DropDownList } from "@progress/kendo-react-dropdowns";
+import { cartIcon, layout2By2Icon, gridLayoutIcon } from "@progress/kendo-svg-icons"
+import { FilterComponent } from "../components/FilterComponent";
+import { process, State } from "@progress/kendo-data-query";
 
 
 export const AllProductsListView = () => {
@@ -25,9 +25,13 @@ export const AllProductsListView = () => {
     "Jewelry is a meaningful form of self-expression that enhances personal style and adds beauty to any occasion.";
   const order = "first";
 
-  const chips: string[] = ["Status", "Category", "Material", "Gemstones", "Price"]
-
-  const [msValue, setMSValue] = React.useState<string[]>(["Status", "Category", "Material", "Gemstones", "Price"])
+  const [data, setData] = React.useState(listData);
+  
+  const updateUI = (newState: State) => {
+    const newData = process(listData, newState)
+    console.log(newState)
+    setData(newData.data)
+  };
 
   type CardDescriptor = {
     img: string;
@@ -89,9 +93,9 @@ export const AllProductsListView = () => {
             Enjoy an excellent selection of fine jewelry
           </div>
           <div className="k-d-grid k-grid-cols-12 k-col-span-12">
-            {cards.map((card) => {
+            {cards.map((card, index) => {
               return (
-                <div className="k-col-span-4 k-text-center">
+                <div key={index} className="k-col-span-4 k-text-center">
                   <img
                     width={"360px"}
                     height={"319px"}
@@ -132,31 +136,14 @@ export const AllProductsListView = () => {
         </section>
       </Layout>
       <Layout>
-        <section className="k-d-flex k-justify-content-between k-align-items-center">
-          <span className="k-d-flex k-align-items-center">
-            <span className="k-d-flex k-align-items-center k-pr-2">
-              <SvgIcon icon={filterIcon}></SvgIcon>
-              Filter:
-            </span>
-            <MultiSelect fillMode={"flat"} data={chips} value={msValue}></MultiSelect>
-          </span>
-
-          <span className="k-d-flex k-align-items-center">
-            <span className="k-d-flex k-align-items-center k-pr-2">
-              <SvgIcon icon={sortAscIcon}></SvgIcon>
-              Sort by:
-            </span>
-            <span><DropDownList value={"Recommended"}></DropDownList></span>
-          </span>
-
-        </section>
+        <FilterComponent updateUI={updateUI}></FilterComponent>
       </Layout>
       <Layout>
         <section className="k-d-grid k-grid-cols-12 k-col-span-12 k-justify-content-center k-align-items-center k-gap-3">
           {
-            listData.map((item) => {
+            data.map((item, index) => {
               return (
-                <div className="k-col-span-3 k-text-center k-border k-border-primary k-gap-1 k-pb-5">
+                <div key={index} className="k-col-span-3 k-text-center k-border k-border-primary k-gap-1 k-pb-5">
                   {item.status != null ? (
                     <BadgeContainer>
                       <div className="k-d-flex k-justify-content-center k-align-items-center k-rounded-lg" style={{
