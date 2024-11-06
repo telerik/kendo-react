@@ -30,7 +30,7 @@ const DropDownSettings: DropDownsPopupSettings = {
 };
 
 export const FilterComponent = (props: any) => {
-  const [categoryValue, setCategoryValue] = React.useState<string[]>(["Category"]);
+  const [categoryValue, setCategoryValue] = React.useState<string[]>([]);
   const [statusValue, setStatusValue] = React.useState<string>("Recommended");
   const [materialValue, setMaterialValue] = React.useState<string>("Material");
 
@@ -113,6 +113,7 @@ export const FilterComponent = (props: any) => {
             fillMode={"flat"}
             data={chips}
             value={categoryValue}
+            placeholder="Category"
             onChange={onMsChange}
           ></MultiSelect>
           </span>
