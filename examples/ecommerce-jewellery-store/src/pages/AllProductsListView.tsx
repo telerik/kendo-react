@@ -12,8 +12,7 @@ import { CustomSection } from "../components/CustomizedSection";
 import { Breadcrumb } from "@progress/kendo-react-layout";
 import { Button, ButtonGroup } from "@progress/kendo-react-buttons";
 import { listData } from "../data/listData";
-import { Badge, BadgeContainer } from "@progress/kendo-react-indicators";
-import { cartIcon, layout2By2Icon, gridLayoutIcon } from "@progress/kendo-svg-icons"
+import { layout2By2Icon, gridLayoutIcon } from "@progress/kendo-svg-icons"
 import { FilterComponent } from "../components/FilterComponent";
 import { process, State } from "@progress/kendo-data-query";
 import { CardsList } from "../components/CardsList";
