@@ -10,6 +10,7 @@ import Home from "@/pages/Home";
 import "@progress/kendo-theme-default/dist/all.css";
 import "@progress/kendo-theme-utils/dist/all.scss";
 import { SizedParent } from "./components/SizedParent";
+import { DetailedCategory } from './pages/DetailedCategory';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/thankyou" element={<ThankYou />} />
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/products" element={<AllProductsListView />} />
+          <Route path="/category" element={<DetailedCategory />} />
         </Routes>
         <Footer />
       </SizedParent>

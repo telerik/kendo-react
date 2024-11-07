@@ -1,67 +1,53 @@
-import * as React from "react";
-
-import bracelets from "../assets/bracelets.png?url";
-import necklace from "../assets/necklace_1.jfif?url";
-import ring from "../assets/ring_1.jfif?url";
-import jewel from "../assets/1111.jfif?url";
-
 import { Layout } from "../components/Layout";
 import { OrderedImgText } from "../components/OrderedImageCard";
+import aureliaImg from "../assets/aurelia-detail-page.png";
 import { CustomSection } from "../components/CustomizedSection";
-
-import { Breadcrumb } from "@progress/kendo-react-layout";
 import { Button, ButtonGroup } from "@progress/kendo-react-buttons";
-import { listData } from "../data/listData";
+import { Breadcrumb } from "@progress/kendo-react-layout";
 import { layout2By2Icon, gridLayoutIcon } from "@progress/kendo-svg-icons"
-import { FilterComponent } from "../components/FilterComponent";
-import { process, State } from "@progress/kendo-data-query";
-import { CardsList } from "../components/CardsList";
 
+import necklace from "../assets/necklace_1.jfif?url";
+import jewel from "../assets/1111.jfif?url";
+import tolos from "../assets/tolosCollection.jfif";
 
-export const AllProductsListView = () => {
-  const title = "Fine Selection";
-  const subtitle = "Enjoy the real craftsmanship";
-  const contentText =
-    "Jewelry is a meaningful form of self-expression that enhances personal style and adds beauty to any occasion.";
-  const order = "first";
+type CardDescriptor = {
+  img: string;
+  collectionText: string;
+};
 
-  const [data, setData] = React.useState(listData);
-  
-  const updateUI = (newState: State) => {
-    const newData = process(listData, newState)
-    setData(newData.data)
-  };
-
-  type CardDescriptor = {
-    img: string;
-    collectionText: string;
-  };
-
-  type DataModel = {
-    text: string;
-  }
-
-  const cards: CardDescriptor[] = [
-    {
-      img: necklace,
-      collectionText: "SERENE",
-    },
-    {
-      img: ring,
-      collectionText: "AURELIA",
-    },
-    {
-      img: jewel,
-      collectionText: "RAVINA",
-    },
-  ];
-
-  const BreakcrumbData: DataModel[] = [{
-    text: "Home"
+const cards: CardDescriptor[] = [
+  {
+    img: necklace,
+    collectionText: "SERENE",
   },
   {
-    text: "Jewelry"
-  }]
+    img: jewel,
+    collectionText: "RAVINA",
+  },
+  {
+    img: tolos,
+    collectionText: "TOLOS",
+  },
+];
+type DataModel = {
+  text: string;
+};
+
+const BreakcrumbData: DataModel[] = [
+  {
+    text: "Home",
+  },
+  {
+    text: "Jewelry",
+  },
+];
+
+export const DetailedCategory = () => {
+  const title = "AURELIA Collection";
+  const subtitle = "Unique handmade rings";
+  const contentText =
+    "Rings are versatile jewelry pieces that symbolize personal style, suitable for both special occasions and everyday wear.";
+  const order = "first";
 
   return (
     <>
@@ -76,7 +62,7 @@ export const AllProductsListView = () => {
             title={title}
             subtitle={subtitle}
             contentText={contentText}
-            img={bracelets}
+            img={aureliaImg}
             order={order}
           />
         </section>
@@ -86,9 +72,12 @@ export const AllProductsListView = () => {
           <div className="k-h2 k-font-bold k-text-black k-col-span-12 k-text-center">
             Our Collections
           </div>
-          <div className="k-font-size-xl k-p-5 k-col-span-12 k-text-center" style={{
-            paddingBottom: "1rem"
-          }}>
+          <div
+            className="k-font-size-xl k-p-5 k-col-span-12 k-text-center"
+            style={{
+              paddingBottom: "1rem",
+            }}
+          >
             Enjoy an excellent selection of fine jewelry
           </div>
           <div className="k-d-grid k-grid-cols-12 k-col-span-12">
@@ -100,14 +89,11 @@ export const AllProductsListView = () => {
                     height={"319px"}
                     style={{
                       minWidth: "360px",
-                      paddingBottom: "1rem"
+                      paddingBottom: "1rem",
                     }}
                     src={card.img}
                   />
-                  <span
-                    className="k-pt-md"
-
-                  >
+                  <span className="k-pt-md">
                     Collection "{card.collectionText}"
                   </span>
                   <div
@@ -133,12 +119,6 @@ export const AllProductsListView = () => {
             <Button fillMode={"flat"} svgIcon={layout2By2Icon}></Button>
           </ButtonGroup>
         </section>
-      </Layout>
-      <Layout>
-        <FilterComponent updateUI={updateUI}></FilterComponent>
-      </Layout>
-      <Layout>
-        <CardsList data={data}></CardsList>
       </Layout>
     </>
   );
