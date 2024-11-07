@@ -51,3 +51,14 @@ export type SizedParentProps = {
 export type CategoryListProps = {
     data: any[];
 }
+
+export type ProductCardProps = {
+    breadCrumbItem: DataModel[];
+    title: string | undefined;
+    image: string | null | undefined;
+    subtitle: string | undefined;
+    rating: number | undefined;
+    reviews: string | undefined;
+    price: number | undefined;
+    description: string | undefined;
+}

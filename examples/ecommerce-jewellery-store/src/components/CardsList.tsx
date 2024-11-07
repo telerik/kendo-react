@@ -2,8 +2,16 @@ import { Badge, BadgeContainer } from "@progress/kendo-react-indicators";
 import { Button } from "@progress/kendo-react-buttons";
 import { cartIcon } from "@progress/kendo-svg-icons"
 import { CardListProps } from "../data/types";
+import { useNavigate } from "react-router-dom";
 
 export const CardsList = (props: CardListProps) => {
+  const navigate = useNavigate();
+
+
+  const onButtonClick = (index: number) => {
+    navigate(`/product/${index + 1}`);
+  }
+
   return (
     <section className="k-d-grid k-grid-cols-12 k-col-span-12 k-justify-content-center k-align-items-center k-gap-3">
       {props.data.map((item, index) => {
@@ -67,7 +75,7 @@ export const CardsList = (props: CardListProps) => {
                   >{`$${item.newPrice}`}</span>
                 </span>
                 <span>
-                  <Button fillMode={"outline"} svgIcon={cartIcon}>
+                  <Button fillMode={"outline"} svgIcon={cartIcon} onClick={() => onButtonClick(index)}>
                     Buy
                   </Button>
                 </span>

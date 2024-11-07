@@ -20,6 +20,7 @@ import stainlessSteelWatch from "../assets/listViewImages/stainlessSteelWatch.pn
 import goldEarringsGarnet from "../assets/listViewImages/goldEarringsGarnet.png";
 
 type ListDataDescriptor = {
+    id: number;
     img: string | null;
     status: string | null;
     title: string;
@@ -27,6 +28,7 @@ type ListDataDescriptor = {
     material: "Silver" | "Gold";
     oldPrice: number | null;
     newPrice: number;
+    rating: number;
 };
 
 export const listData: ListDataDescriptor[] = [{
@@ -190,4 +192,4 @@ export const listData: ListDataDescriptor[] = [{
     title: "Gold Earrings with Garnet",
     oldPrice: null,
     newPrice: 270
-},]
+},].map((item, index) => ({ ...item, id: index + 1, rating: Math.floor(Math.random() * 5) + 1 }));

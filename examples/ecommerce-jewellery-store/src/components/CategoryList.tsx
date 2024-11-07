@@ -7,7 +7,7 @@ import { CardDescriptor } from "../data/types";
 export const CategoryList = (props: CategoryListProps) => {
     const navigate = useNavigate();
     const onNavigate = (card: CardDescriptor) => {
-        if(card.collectionText === "AURELIA"){
+        if (card.collectionText === "AURELIA") {
             navigate("/category")
         }
     }
