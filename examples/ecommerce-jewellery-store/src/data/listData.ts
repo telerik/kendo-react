@@ -192,4 +192,4 @@ export const listData: ListDataDescriptor[] = [{
     title: "Gold Earrings with Garnet",
     oldPrice: null,
     newPrice: 270
-},].map((item, index) => ({ ...item, id: index + 1, rating: Math.floor(Math.random() * 5) + 1 }));
+},].map((item, index) => ({ ...item, id: index + 1, rating: Math.floor(Math.random() * 5) + 3 }));

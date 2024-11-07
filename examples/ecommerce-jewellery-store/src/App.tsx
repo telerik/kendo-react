@@ -19,7 +19,7 @@ function App() {
       <SizedParent>
         <Header />
         <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
           <Route path="/paymentdetails" element={<PaymentDetails />} />
           <Route path="/shoppingcart" element={<ShoppingCart />} />
           <Route path="/thankyou" element={<ThankYou />} />

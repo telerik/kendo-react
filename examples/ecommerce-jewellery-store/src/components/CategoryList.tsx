@@ -4,8 +4,9 @@ import { CategoryListProps } from "../data/types";
 import { Button } from "@progress/kendo-react-buttons";
 import { CardDescriptor } from "../data/types";
 
-export const CategoryList = (props: CategoryListProps) => {
+export const CategoryList: React.FC<CategoryListProps> = ({data, title, subtitle, colSpan=4}) => {
     const navigate = useNavigate();
+
     const onNavigate = (card: CardDescriptor) => {
         if (card.collectionText === "AURELIA") {
             navigate("/category")
@@ -15,7 +16,7 @@ export const CategoryList = (props: CategoryListProps) => {
     return (
         <>
             <div className="k-h2 k-font-bold k-text-black k-col-span-12 k-text-center">
-                Our Collections
+                {title}
             </div>
             <div
                 className="k-font-size-xl k-p-5 k-col-span-12 k-text-center"
@@ -23,15 +24,15 @@ export const CategoryList = (props: CategoryListProps) => {
                     paddingBottom: "1rem",
                 }}
             >
-                Enjoy an excellent selection of fine jewelry
+                {subtitle}
             </div>
-            <div className="k-d-grid k-grid-cols-12 k-col-span-12">
-                {props.data.map((card, index) => {
+            <div className="k-d-grid k-grid-cols-12 k-col-span-12 k-gap-5">
+                {data.map((card, index) => {
                     return (
-                        <div key={index} className="k-col-span-4 k-text-center">
+                        <div key={index} className={`k-col-span-${colSpan} k-text-center`}>
                             <img
-                                width={"360px"}
                                 height={"319px"}
+                                width={"100%"}
                                 style={{
                                     minWidth: "360px",
                                     paddingBottom: "1rem",
@@ -39,7 +40,7 @@ export const CategoryList = (props: CategoryListProps) => {
                                 src={card.img}
                             />
                             <span className="k-pt-md">
-                                Collection "{card.collectionText}"
+                                {card.collectionText}
                             </span>
                             <div
                                 style={{

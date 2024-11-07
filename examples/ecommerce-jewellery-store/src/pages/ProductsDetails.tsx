@@ -3,6 +3,12 @@ import { ProductCard } from "../components/ProductCard";
 import { listData } from "../data/listData";
 import { DataModel } from "../data/types";
 import { Layout } from "../components/Layout";
+import { CategoryList } from "../components/CategoryList";
+import { CardDescriptor } from "../data/types";
+import homemadePinkDiamondRing from "../assets/homemadePinkDiamondRing.jpg"
+import diamondRingPinkRuby from "../assets/diamondRingPinkRuby.jpg"
+import whiteSandDiamondRing from "../assets/whiteSandDiamondRing.jpg"
+import { CustomSection } from "../components/CustomizedSection";
 
 export const ProductDetails = () => {
     const { id } = useParams();
@@ -11,14 +17,31 @@ export const ProductDetails = () => {
 
     const product = listData.find(item => item.id === productId);
 
+    const data: CardDescriptor[] = [
+        {
+            img: diamondRingPinkRuby,
+            collectionText: "Diamond Ring with Pink Ruby"
+        },
+        {
+            img: whiteSandDiamondRing,
+            collectionText: "White Sand Diamond Ring"
+        },
+        {
+            img: homemadePinkDiamondRing,
+            collectionText: "Handmade Pink Diamond Ring"
+        },
+    ];
+
     const BreakcrumbData: DataModel[] = [{
         text: "Home"
     },
     {
         text: "Jewelry"
-    }, {
+    },
+    {
         text: product?.category
-    }]
+    }];
+
     return (
         <>
             <Layout>
@@ -28,9 +51,14 @@ export const ProductDetails = () => {
                     breadCrumbItem={BreakcrumbData}
                     rating={product?.rating}
                     reviews="208 reviews"
-                    price={product?.newPrice} 
+                    price={product?.newPrice}
                     description={descriptionText}>
                 </ProductCard>
+            </Layout>
+            <Layout>
+                <CustomSection>
+                    <CategoryList title="You May Also Like" subtitle="Enjoy an excellent selection of fine jewelry" data={data}></CategoryList>
+                </CustomSection>
             </Layout>
         </>
     );

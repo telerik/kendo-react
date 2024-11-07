@@ -1,7 +1,8 @@
+import { Button } from "@progress/kendo-react-buttons";
 import { OrderedImgTextProps } from "../data/types";
 
 export const OrderedImgText = (props: OrderedImgTextProps) => {
-  const { title, subtitle, contentText, img, order } = props;
+  const { title, subtitle, contentText, img, order, link } = props;
 
   return (
     <>
@@ -18,6 +19,12 @@ export const OrderedImgText = (props: OrderedImgTextProps) => {
         <div className="k-h2 k-font-bold k-text-black">{title}</div>
         <div className="k-font-size-xl k-p-5">{subtitle}</div>
         <span className="k-font-size-md">{contentText}</span>
+
+        {link && (
+          <div className="k-pt-5">
+            <Button fillMode={"link"}>{link}</Button>
+          </div>
+        )}
       </span>
     </>
   );

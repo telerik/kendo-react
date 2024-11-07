@@ -37,15 +37,15 @@ export const AllProductsListView = () => {
   const cards: CardDescriptor[] = [
     {
       img: necklace,
-      collectionText: "SERENE",
+      collectionText: 'Collection \"SERENE\"',
     },
     {
       img: ring,
-      collectionText: "AURELIA",
+      collectionText: 'Collection \"AURELIA\"',
     },
     {
       img: jewel,
-      collectionText: "RAVINA",
+      collectionText: 'Collection \"RAVINA\"',
     },
   ];
 
@@ -71,12 +71,13 @@ export const AllProductsListView = () => {
             contentText={contentText}
             img={bracelets}
             order={order}
+            link={null}
           />
         </section>
       </Layout>
       <Layout>
         <CustomSection>
-          <CategoryList data={cards}></CategoryList>
+          <CategoryList title="Our Collections" subtitle="Enjoy an excellent selection of fine jewelry" data={cards}></CategoryList>
         </CustomSection>
       </Layout>
       <Layout>

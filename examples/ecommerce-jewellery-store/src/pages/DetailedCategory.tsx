@@ -74,12 +74,13 @@ export const DetailedCategory = () => {
             contentText={contentText}
             img={aureliaImg}
             order={order}
+            link={null}
           />
         </section>
       </Layout>
       <Layout>
         <CustomSection>
-          <CategoryList data={cards}></CategoryList>
+          <CategoryList title="Our Collections" subtitle='Enjoy an excellent selection of fine jewelry' data={cards}></CategoryList>
         </CustomSection>
       </Layout>
       <Layout>

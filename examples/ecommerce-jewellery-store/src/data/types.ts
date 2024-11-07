@@ -42,6 +42,7 @@ export type OrderedImgTextProps = {
     contentText: string;
     img: string;
     order: string;
+    link: string | null;
 };
 
 export type SizedParentProps = {
@@ -50,6 +51,9 @@ export type SizedParentProps = {
 
 export type CategoryListProps = {
     data: any[];
+    title: string;
+    subtitle: string;
+    colSpan?: number;
 }
 
 export type ProductCardProps = {
