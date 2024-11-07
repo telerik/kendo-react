@@ -8,15 +8,17 @@ import jewel from "../assets/1111.jfif?url";
 import { Layout } from "../components/Layout";
 import { OrderedImgText } from "../components/OrderedImageCard";
 import { CustomSection } from "../components/CustomizedSection";
+import { listData } from "../data/listData";
+import { FilterComponent } from "../components/FilterComponent";
+import { CardsList } from "../components/CardsList";
+import { CategoryList } from "../components/CategoryList";
+import { CardDescriptor } from "../data/types";
+import { DataModel } from "../data/types";
 
 import { Breadcrumb } from "@progress/kendo-react-layout";
 import { Button, ButtonGroup } from "@progress/kendo-react-buttons";
-import { listData } from "../data/listData";
-import { layout2By2Icon, gridLayoutIcon } from "@progress/kendo-svg-icons"
-import { FilterComponent } from "../components/FilterComponent";
+import { layout2By2Icon, gridLayoutIcon } from "@progress/kendo-svg-icons";
 import { process, State } from "@progress/kendo-data-query";
-import { CardsList } from "../components/CardsList";
-
 
 export const AllProductsListView = () => {
   const title = "Fine Selection";
@@ -31,15 +33,6 @@ export const AllProductsListView = () => {
     const newData = process(listData, newState)
     setData(newData.data)
   };
-
-  type CardDescriptor = {
-    img: string;
-    collectionText: string;
-  };
-
-  type DataModel = {
-    text: string;
-  }
 
   const cards: CardDescriptor[] = [
     {
@@ -83,46 +76,7 @@ export const AllProductsListView = () => {
       </Layout>
       <Layout>
         <CustomSection>
-          <div className="k-h2 k-font-bold k-text-black k-col-span-12 k-text-center">
-            Our Collections
-          </div>
-          <div className="k-font-size-xl k-p-5 k-col-span-12 k-text-center" style={{
-            paddingBottom: "1rem"
-          }}>
-            Enjoy an excellent selection of fine jewelry
-          </div>
-          <div className="k-d-grid k-grid-cols-12 k-col-span-12">
-            {cards.map((card, index) => {
-              return (
-                <div key={index} className="k-col-span-4 k-text-center">
-                  <img
-                    width={"360px"}
-                    height={"319px"}
-                    style={{
-                      minWidth: "360px",
-                      paddingBottom: "1rem"
-                    }}
-                    src={card.img}
-                  />
-                  <span
-                    className="k-pt-md"
-
-                  >
-                    Collection "{card.collectionText}"
-                  </span>
-                  <div
-                    style={{
-                      paddingTop: "1rem",
-                    }}
-                  >
-                    <Button themeColor={"primary"} size={"large"}>
-                      Buy Now
-                    </Button>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          <CategoryList data={cards}></CategoryList>
         </CustomSection>
       </Layout>
       <Layout>

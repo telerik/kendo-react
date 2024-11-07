@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { Layout } from "../components/Layout";
 import { OrderedImgText } from "../components/OrderedImageCard";
 import aureliaImg from "../assets/aurelia-detail-page.png";
@@ -9,11 +10,13 @@ import { layout2By2Icon, gridLayoutIcon } from "@progress/kendo-svg-icons"
 import necklace from "../assets/necklace_1.jfif?url";
 import jewel from "../assets/1111.jfif?url";
 import tolos from "../assets/tolosCollection.jfif";
-
-type CardDescriptor = {
-  img: string;
-  collectionText: string;
-};
+import { CategoryList } from "../components/CategoryList";
+import { FilterComponent } from "../components/FilterComponent";
+import { CardsList } from "../components/CardsList";
+import { listData } from '../data/listData';
+import { process, State } from '@progress/kendo-data-query';
+import { CardDescriptor } from '../data/types';
+import { DataModel } from '../data/types';
 
 const cards: CardDescriptor[] = [
   {
@@ -29,9 +32,6 @@ const cards: CardDescriptor[] = [
     collectionText: "TOLOS",
   },
 ];
-type DataModel = {
-  text: string;
-};
 
 const BreakcrumbData: DataModel[] = [
   {
@@ -40,14 +40,24 @@ const BreakcrumbData: DataModel[] = [
   {
     text: "Jewelry",
   },
+  {
+    text: "Rings"
+  }
 ];
 
+
 export const DetailedCategory = () => {
+  const [data, setData] = React.useState(listData);
   const title = "AURELIA Collection";
   const subtitle = "Unique handmade rings";
   const contentText =
     "Rings are versatile jewelry pieces that symbolize personal style, suitable for both special occasions and everyday wear.";
   const order = "first";
+
+  const updateUI = (newState: State) => {
+    const newData = process(listData, newState)
+    setData(newData.data)
+  };
 
   return (
     <>
@@ -69,46 +79,7 @@ export const DetailedCategory = () => {
       </Layout>
       <Layout>
         <CustomSection>
-          <div className="k-h2 k-font-bold k-text-black k-col-span-12 k-text-center">
-            Our Collections
-          </div>
-          <div
-            className="k-font-size-xl k-p-5 k-col-span-12 k-text-center"
-            style={{
-              paddingBottom: "1rem",
-            }}
-          >
-            Enjoy an excellent selection of fine jewelry
-          </div>
-          <div className="k-d-grid k-grid-cols-12 k-col-span-12">
-            {cards.map((card, index) => {
-              return (
-                <div key={index} className="k-col-span-4 k-text-center">
-                  <img
-                    width={"360px"}
-                    height={"319px"}
-                    style={{
-                      minWidth: "360px",
-                      paddingBottom: "1rem",
-                    }}
-                    src={card.img}
-                  />
-                  <span className="k-pt-md">
-                    Collection "{card.collectionText}"
-                  </span>
-                  <div
-                    style={{
-                      paddingTop: "1rem",
-                    }}
-                  >
-                    <Button themeColor={"primary"} size={"large"}>
-                      Buy Now
-                    </Button>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          <CategoryList data={cards}></CategoryList>
         </CustomSection>
       </Layout>
       <Layout>
@@ -119,6 +90,12 @@ export const DetailedCategory = () => {
             <Button fillMode={"flat"} svgIcon={layout2By2Icon}></Button>
           </ButtonGroup>
         </section>
+      </Layout>
+      <Layout>
+        <FilterComponent updateUI={updateUI}></FilterComponent>
+      </Layout>
+      <Layout>
+        <CardsList data={data}></CardsList>
       </Layout>
     </>
   );

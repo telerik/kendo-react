@@ -1,11 +1,5 @@
 import { Button } from "@progress/kendo-react-buttons";
-
-type BackgroundImageProps = {
-  title: string;
-  subtitle: string;
-  buttonText: string;
-  img: string;
-};
+import { BackgroundImageProps } from "../data/types";
 
 export const BackgroundImage = (props: BackgroundImageProps) => {
   const { img, title, subtitle, buttonText } = props;

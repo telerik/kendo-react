@@ -1,11 +1,7 @@
 import { Badge, BadgeContainer } from "@progress/kendo-react-indicators";
 import { Button } from "@progress/kendo-react-buttons";
 import { cartIcon } from "@progress/kendo-svg-icons"
-
-
-type CardListProps = {
-    data: any[];
-}
+import { CardListProps } from "../data/types";
 
 export const CardsList = (props: CardListProps) => {
   return (

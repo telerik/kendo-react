@@ -93,7 +93,7 @@ export const FilterComponent = (props: any) => {
     };
 
     props.updateUI(customCompositeFilters);
-    setCategoryValue(["Category"]);
+    setCategoryValue([]);
   };
 
   return (

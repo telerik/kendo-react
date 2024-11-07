@@ -1,10 +1,6 @@
 
 import "../styles.css"
-
-
-export type SizedParentProps = {
-  children: React.ReactNode;
-};
+import { SizedParentProps } from "../data/types";
 
 export const SizedParent = (props: SizedParentProps) => {
   return (

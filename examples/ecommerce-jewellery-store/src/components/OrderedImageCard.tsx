@@ -1,12 +1,4 @@
-type OrderedImgTextProps = {
-  title: string;
-  subtitle: string;
-  contentText: string;
-  img: string;
-  order: string;
-};
-
-//k-d-flex k-flex-wrap k-flex-row k-w-full k-h-full k-justify-content-center k-align-items-center k-gap-5px
+import { OrderedImgTextProps } from "../data/types";
 
 export const OrderedImgText = (props: OrderedImgTextProps) => {
   const { title, subtitle, contentText, img, order } = props;
