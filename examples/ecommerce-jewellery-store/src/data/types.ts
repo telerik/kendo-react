@@ -66,3 +66,10 @@ export type ProductCardProps = {
     price: number | undefined;
     description: string | undefined;
 }
+
+export type TestemonialsDataDescriptor = {
+    image: string;
+    name: string;
+    description: string;
+    rating: number;
+}

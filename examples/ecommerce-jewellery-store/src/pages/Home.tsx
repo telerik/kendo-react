@@ -18,6 +18,7 @@ import brownWatch from '../assets/brownWatch.jpg'
 import vitageWatch from '../assets/vitageWatch.jpg'
 import casualSilverWatch from "../assets/listViewImages/casualSilverWatch.png"
 import homeServicesImage from '../assets/homeServicesImage.png'
+import { Testemonials } from '../components/Testemonials';
 
 
 
@@ -99,9 +100,9 @@ const Home: React.FC = () => {
       <Layout>
         <CustomSection>
           <OrderedImgText
-            title='Timeless Classics'
+            title='Fine Jewelry'
             subtitle='Get our unique handmade collections'
-            contentText='Jewelry enhances style and adds elegance, with each piece telling a unique story.'
+            contentText="Jewelry elevates one's style and brings sophistication, with every piece narrating a distinct tale."
             img={homeModel3}
             order='last'
             link="Shop Now"
@@ -141,6 +142,9 @@ const Home: React.FC = () => {
             link="Learn More"
           ></OrderedImgText>
         </CustomSection>
+      </Layout>
+      <Layout>
+        <Testemonials></Testemonials>
       </Layout>
     </>
   );
