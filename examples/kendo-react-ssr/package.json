@@ -29,7 +29,7 @@
     "@progress/kendo-react-progressbars": "^8.0.0",
     "@progress/kendo-react-tooltip": "^8.5.0",
     "@progress/kendo-react-treeview": "^8.0.0",
-    "@progress/kendo-theme-default": "^9.1.0",
+    "@progress/kendo-theme-default": "^10.0.1",
     "@testing-library/jest-dom": "^6.2.1",
     "@testing-library/react": "^14.1.2",
     "@testing-library/user-event": "^14.5.1",
