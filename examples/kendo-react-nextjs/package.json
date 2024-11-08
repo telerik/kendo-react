@@ -22,8 +22,8 @@
     "@progress/kendo-react-intl": "^8.0.0",
     "@progress/kendo-react-popup": "^8.0.0",
     "@progress/kendo-react-treeview": "^8.0.0",
-    "@progress/kendo-svg-icons": "^3.1.0",
-    "@progress/kendo-theme-default": "^9.1.0",
+    "@progress/kendo-svg-icons": "^4.0.0",
+    "@progress/kendo-theme-default": "^10.0.1",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"
