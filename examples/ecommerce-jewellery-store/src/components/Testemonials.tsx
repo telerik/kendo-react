@@ -29,7 +29,7 @@ const testemonialsData: TestemonialsDataDescriptor[] = [
 
 export const Testemonials = () => {
     return (
-        <div className="k-d-flex k-flex-col k-align-items-center k-py-12 k-px-10 k-mx-auto k-bg-surface">
+        <div className="k-d-flex k-flex-col k-align-items-center k-py-12 k-px-10 k-mx-auto">
             <div className="k-d-flex k-flex-col k-align-items-center k-gap-4 k-mb-10">
                 <h2 className="k-h2">Customers words</h2>
                 <p className="k-font-size-xl k-color-subtle">
@@ -37,8 +37,8 @@ export const Testemonials = () => {
                 </p>
             </div>
             <div className="k-d-grid k-grid-cols-3 k-gap-5 k-mb-6">
-                {testemonialsData.map((item) => (
-                    <div className="k-d-flex k-flex-col k-border-solid k-border k-bg-app-surface k-rounded-lg k-border-border">
+                {testemonialsData.map((item, index) => (
+                    <div key={index} className="k-d-flex k-flex-col k-border-solid k-border k-bg-surface k-bg-app-surface k-rounded-lg k-border-border">
                         <div className="k-d-grid k-grid-cols-3 k-justify-items-center k-px-4 k-py-3 k-gap-y-3">
                             <div className="k-col-start-1 k-col-end-4 k-d-grid k-grid-cols-3 k-justify-items-center k-w-full">
                                 <Avatar

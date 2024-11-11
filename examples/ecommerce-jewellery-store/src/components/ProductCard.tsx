@@ -5,6 +5,8 @@ import { Button } from "@progress/kendo-react-buttons";
 
 export const ProductCard = (props: ProductCardProps) => {
 
+    const onAddToCartClick = () => {
+    }
 
     return (
         <>
@@ -54,7 +56,7 @@ export const ProductCard = (props: ProductCardProps) => {
                         <NumericTextBox spinners={true} style={{
                             width: "84px"
                         }} value={1}></NumericTextBox>
-                        <Button themeColor={"primary"}>Add to Cart</Button>
+                        <Button themeColor={"primary"} onClick={onAddToCartClick}>Add to Cart</Button>
                     </div>
 
                 </div>

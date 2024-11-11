@@ -4,7 +4,7 @@ import { CategoryListProps } from "../data/types";
 import { Button } from "@progress/kendo-react-buttons";
 import { CardDescriptor } from "../data/types";
 
-export const CategoryList: React.FC<CategoryListProps> = ({data, title, subtitle, colSpan=4}) => {
+export const CategoryList: React.FC<CategoryListProps> = ({ data, title, subtitle, colSpan = 4 }) => {
     const navigate = useNavigate();
 
     const onNavigate = (card: CardDescriptor) => {

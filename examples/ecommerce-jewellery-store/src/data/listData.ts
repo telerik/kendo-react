@@ -18,18 +18,7 @@ import handmadeDiamongRing from "../assets/listViewImages/handmadeDiamongRing.pn
 import diamondRingRuby from "../assets/listViewImages/diamondRingRuby.png";
 import stainlessSteelWatch from "../assets/listViewImages/stainlessSteelWatch.png";
 import goldEarringsGarnet from "../assets/listViewImages/goldEarringsGarnet.png";
-
-type ListDataDescriptor = {
-    id: number;
-    img: string | null;
-    status: string | null;
-    title: string;
-    category: "Bracelets" | "Earrings" | "Rings" | "Watches" | "Necklaces";
-    material: "Silver" | "Gold";
-    oldPrice: number | null;
-    newPrice: number;
-    rating: number;
-};
+import { ListDataDescriptor } from "./types";
 
 export const listData: ListDataDescriptor[] = [{
     img: diamongWeddingRing,
@@ -83,7 +72,7 @@ export const listData: ListDataDescriptor[] = [{
 }, {
     img: diamondWeddingBands,
     status: "recommended",
-    title: "Diamong Wedding Bands",
+    title: "Diamond Wedding Bands",
     material: "Gold",
     category: "Rings",
     oldPrice: null,

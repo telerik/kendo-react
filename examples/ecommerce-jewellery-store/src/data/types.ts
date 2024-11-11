@@ -73,3 +73,22 @@ export type TestemonialsDataDescriptor = {
     description: string;
     rating: number;
 }
+
+export type CartItemDescriptor = {
+    id: number;
+    image: string;
+    title: string;
+    description: string;
+    price: number;
+    quantity: number;
+    total: number;
+}
+
+export type CartContextProps = {
+    children: React.ReactNode;
+}
+
+export type CartContextDescriptor = {
+    id: number;
+    quantity: number;
+}
