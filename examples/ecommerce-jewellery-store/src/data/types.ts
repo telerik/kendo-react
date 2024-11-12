@@ -8,6 +8,7 @@ export type DataModel = {
 }
 
 export type ListDataDescriptor = {
+    id?: number;
     img: string | null;
     status: string | null;
     title: string;
@@ -65,6 +66,7 @@ export type ProductCardProps = {
     reviews: string | undefined;
     price: number | undefined;
     description: string | undefined;
+    addToCart: () => void;
 }
 
 export type TestemonialsDataDescriptor = {
@@ -89,6 +91,6 @@ export type CartContextProps = {
 }
 
 export type CartContextDescriptor = {
-    id: number;
+    product: ListDataDescriptor;
     quantity: number;
 }

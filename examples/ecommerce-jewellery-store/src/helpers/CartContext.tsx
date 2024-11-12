@@ -1,36 +1,48 @@
 import { createContext, useState, useContext, ReactNode } from 'react';
-import { CartContextDescriptor } from '../data/types';
+import { CartContextDescriptor, ListDataDescriptor } from '../data/types';
+import React from 'react';
 
 interface CartContextType {
     cart: CartContextDescriptor[];
-    addItemToCart: (item: CartContextDescriptor) => void;
+    addItemToCart: (product: ListDataDescriptor) => void;
+    updateIndividualCartItem: (cart: CartContextDescriptor) => void;
 }
 
 const ShoppingCartContext = createContext<CartContextType | null>(null);
 
 interface CartProviderProps {
     children: ReactNode;
-}
+}   
 
 export const CartProvider = ({ children }: CartProviderProps) => {
     const [shoppingCart, setShoppingCart] = useState<CartContextDescriptor[]>([]);
 
-    const addItemToCart = (item: CartContextDescriptor) => {
-        const itemExists = shoppingCart.some(x => x.id === item.id);
+    const addItemToCart = (product: ListDataDescriptor) => {
+        const itemExists = shoppingCart.some(cartItem => cartItem.product.id === product.id);
 
         if (itemExists) {
             setShoppingCart(shoppingCart.map(cartItem =>
-                cartItem.id === item.id
-                    ? { ...cartItem, quantity: cartItem?.quantity + 1 }
+                cartItem.product.id === product.id
+                    ? { ...cartItem, quantity: cartItem.quantity + 1 }
                     : cartItem
             ));
         } else {
-            setShoppingCart([...shoppingCart, { ...item, quantity: 1 }]);
+            setShoppingCart([...shoppingCart, { product, quantity: 1 }]);
         }
     };
 
+    const updateCartItem = React.useCallback((id: any) => {
+        setShoppingCart(shoppingCart.map(item => {
+            if (item.product.id === Number(id)) {
+                return {...item, quantity: item.quantity + 1};
+            }
+
+            return item
+        }))
+    }, [shoppingCart]);
+
     return (
-        <ShoppingCartContext.Provider value={{ cart: shoppingCart, addItemToCart }}>
+        <ShoppingCartContext.Provider value={{ cart: shoppingCart, addItemToCart, updateIndividualCartItem: updateCartItem }}>
             {children}
         </ShoppingCartContext.Provider>
     );
