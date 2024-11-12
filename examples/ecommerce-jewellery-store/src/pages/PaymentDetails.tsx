@@ -1,6 +1,5 @@
 import React from 'react';
 import { Layout } from "@/components/Layout";
-import { CustomSection } from "@/components/CustomizedSection";
 import CardNumber from "@/components/CardNumber";
 import ExpiryDate from "@/components/ExpiryDate";
 import PasswordInput from "@/components/PasswordInput";

@@ -23,16 +23,15 @@ export const BackgroundImage = (props: BackgroundImageProps) => {
         height: "100%"
       }}>
         <div className="k-text-center k-text-white k-pt-25">
-          <h1
-            className="k-h1 k-font-bold"
-          >
+          <h1 className="k-h1 k-font-bold">
             {title}
           </h1>
           <p className="k-font-size-lg k-mb-4 k-font-bold k-text-uppercase">{subtitle}</p>
-          <span className="k-gap-9"></span>
-          <Button themeColor="primary" className="k-mb-4" onClick={onButtonClick}>
-            {buttonText}
-          </Button>
+          {buttonText && (
+            <Button themeColor="primary" className="k-mb-4" onClick={onButtonClick}>
+              {buttonText}
+            </Button>
+          )}
         </div>
       </div>
     </section>
