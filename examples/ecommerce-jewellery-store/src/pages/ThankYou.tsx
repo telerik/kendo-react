@@ -18,7 +18,7 @@ const ThankYou: React.FC = () => {
         <div className="k-d-flex k-flex-col k-justify-content-center k-align-items-center k-h-100 k-text-center">
           <h1>Thank You For Your Order!</h1>
           <p>You have submitted your order</p>
-          <Button className="k-mt-6" onClick={onBacktoShoppingClick}>Back to Shopping</Button>
+          <Button className="k-mt-6" onClick={onBacktoShoppingClick} themeColor={"primary"} size={"large"}>Back to Shopping</Button>
         </div>
       </Layout>
     </>

@@ -75,7 +75,7 @@ const PaymentDetails: React.FC = () => {
                 </FormElement>
               )}
             />
-            <Button className="k-mt-6" onClick={onSubmitClick}>Submit Order</Button>
+            <Button className="k-mt-6" onClick={onSubmitClick} themeColor={"primary"}>Submit Order</Button>
           </div>
           <div className="k-col-span-5 k-col-start-8 k-d-flex k-flex-col k-align-items-start">
             <h2 className="k-mb-4">Sub total</h2>
