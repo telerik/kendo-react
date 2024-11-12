@@ -272,11 +272,6 @@ export const ShoppingCartList: React.FC = () => {
               </p>
             </div>
           </div>
-          <div>
-            <Button fillMode="flat" themeColor="primary">
-              See all
-            </Button>
-          </div>
         </div>
       </Layout>
     </>
