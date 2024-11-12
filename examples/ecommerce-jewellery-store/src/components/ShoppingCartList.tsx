@@ -35,6 +35,10 @@ export const ShoppingCartList: React.FC = () => {
     navigate("/products");
   };
 
+  const onProceedClick = () => {
+    navigate("/paymentdetails")
+  }
+
   const updateQuantity = (event) => {
     const target = event.target.element;
     const id = target.getAttribute("id");
@@ -174,7 +178,7 @@ export const ShoppingCartList: React.FC = () => {
                       </FieldWrapper>
                     </fieldset>
                     <div className="k-form-buttons">
-                      <Button themeColor={"primary"} size={"large"}>
+                      <Button themeColor={"primary"} size={"large"} onClick={onProceedClick}>
                         Proceed to Checkout
                       </Button>
                     </div>
@@ -196,6 +200,11 @@ export const ShoppingCartList: React.FC = () => {
           </section>
         </Layout>
       ) : null}
+      <Layout>
+        <div className="k-d-grid">
+
+        </div>
+      </Layout>
     </>
   );
 };
