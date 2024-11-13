@@ -36,15 +36,15 @@ export const AllProductsListView = () => {
   const cards: CardDescriptor[] = [
     {
       img: necklace,
-      collectionText: 'Collection \"SERENE\"',
+      collectionText: 'Collection "SERENE"',
     },
     {
       img: ring,
-      collectionText: 'Collection \"AURELIA\"',
+      collectionText: 'Collection "AURELIA"',
     },
     {
       img: jewel,
-      collectionText: 'Collection \"RAVINA\"',
+      collectionText: 'Collection "RAVINA"',
     },
   ];
 

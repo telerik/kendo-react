@@ -14,7 +14,6 @@ import {
   searchIcon,
   userIcon,
   cartIcon,
-  paletteIcon,
 } from "@progress/kendo-svg-icons";
 import viloraLogo from "@/assets/vilora-logo.png";
 import items from "../data/items";
@@ -25,7 +24,7 @@ import { AppBar, AppBarSection } from "@progress/kendo-react-layout";
 const Header: React.FC = () => {
   return (
     <>
-      <AppBar themeColor="inherit">
+      <AppBar themeColor="inherit k-justfity-content-center">
         <AppBarSection
           className="k-align-items-center"
           style={{ paddingLeft: "50px" }}
@@ -36,6 +35,8 @@ const Header: React.FC = () => {
           <Menu items={items}>
           </Menu>
         </AppBarSection>
+
+        <AppBarSpacer style={{ width: 32 }} />
 
         <AppBarSection>
           <TextBox
@@ -55,7 +56,6 @@ const Header: React.FC = () => {
           <div style={{ marginLeft: "20px" }}>
             <Button svgIcon={userIcon} fillMode="flat" className="k-ml-2" />
             <Button svgIcon={cartIcon} fillMode="flat" className="k-ml-2" />
-            <Button svgIcon={paletteIcon} fillMode="flat" className="k-ml-2" />
           </div>
         </AppBarSection>
 
