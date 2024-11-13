@@ -26,7 +26,7 @@ const statuses: string[] = ["Sale", "Recommended", "Must Have"];
 const materials: string[] = ["Gold", "Silver"];
 
 const DropDownSettings: DropDownsPopupSettings = {
-  minWidth: "119px",
+  width: "119px",
 };
 
 export const FilterComponent = (props: any) => {

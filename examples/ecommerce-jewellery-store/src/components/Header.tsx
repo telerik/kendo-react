@@ -1,8 +1,7 @@
 import React from "react";
-import { Menu, AppBarSpacer, MenuItem } from "@progress/kendo-react-layout";
+import { Menu, AppBarSpacer } from "@progress/kendo-react-layout";
 import { Button } from "@progress/kendo-react-buttons";
 import { SvgIcon } from "@progress/kendo-react-common";
-import { useNavigate } from "react-router-dom";
 
 import {
   InputPrefix,
@@ -24,8 +23,6 @@ import languageItems from "@/data/language-items";
 import { AppBar, AppBarSection } from "@progress/kendo-react-layout";
 
 const Header: React.FC = () => {
-  const navigate = useNavigate();
-
   return (
     <>
       <AppBar themeColor="inherit">

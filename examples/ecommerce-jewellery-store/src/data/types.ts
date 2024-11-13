@@ -4,16 +4,17 @@ export type CardDescriptor = {
 };
 
 export type DataModel = {
-    text: string;
+    text: string | undefined;
 }
 
 export type ListDataDescriptor = {
     id?: number;
-    img: string | null;
+    img: string | undefined;
     status: string | null;
     title: string;
-    category: "Bracelets" | "Earrings" | "Rings" | "Watches" | "Necklaces";
-    material: "Silver" | "Gold";
+    rating?: number;
+    category: string;
+    material: string;
     oldPrice: number | null;
     newPrice: number;
 };
@@ -21,7 +22,7 @@ export type ListDataDescriptor = {
 export type BackgroundImageProps = {
     title: string;
     subtitle: string;
-    buttonText: string;
+    buttonText?: string;
     img: string;
 };
 

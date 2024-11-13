@@ -11,7 +11,6 @@ import {
   Form,
   Field,
   FormElement,
-  FormRenderProps,
   FieldWrapper,
 } from "@progress/kendo-react-form";
 import {
@@ -50,7 +49,7 @@ const PaymentDetails: React.FC = () => {
               </div>
             </div>
             <Form
-              render={(formRenderProps: FormRenderProps) => (
+              render={() => (
                 <FormElement>
                   <div className="k-form-layout k-d-grid k-gap-y-6 k-gap-x-4">
                     <FieldWrapper className="k-col-span-1">

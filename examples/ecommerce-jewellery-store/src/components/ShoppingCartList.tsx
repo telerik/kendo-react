@@ -11,14 +11,15 @@ import {
   Field,
   FormElement,
   FieldRenderProps,
-  FormRenderProps,
   FieldWrapper,
 } from "@progress/kendo-react-form";
 import { Error } from "@progress/kendo-react-labels";
 import { Input } from "@progress/kendo-react-inputs";
 import { Button } from "@progress/kendo-react-buttons";
 import { useCart } from "../helpers/CartContext";
-import { NumericTextBox } from "@progress/kendo-react-inputs";
+import {
+  NumericTextBox
+} from "@progress/kendo-react-inputs";
 import { useNavigate } from "react-router-dom";
 import { Layout } from "./Layout";
 import shoppingCartImage from "../assets/shoppingCartImg.png";
@@ -48,18 +49,13 @@ export const ShoppingCartList: React.FC = () => {
   };
 
   const updateQuantity = (event) => {
+    console.log(typeof event);
     const target = event.target.element;
     const id = target.getAttribute("id");
 
     updateIndividualCartItem(id);
   };
 
-  const onResetClick = (event) => {
-    const target = event.target.element;
-    const id = target.getAttribute("id");
-
-    updateIndividualCartItem(id);
-  };
   return (
     <>
       <Layout>
@@ -89,8 +85,8 @@ export const ShoppingCartList: React.FC = () => {
             >
               <img
                 className="k-rounded-lg"
-                src={isCartItem ? item.product.img : null}
-                alt={isCartItem ? item.product.title : null}
+                src={isCartItem ? item.product.img : undefined}
+                alt={isCartItem ? item.product.title : undefined}
                 style={{
                   maxHeight: "120px",
                 }}
@@ -112,18 +108,12 @@ export const ShoppingCartList: React.FC = () => {
                   ) : (
                     <span>Quantity not available</span>
                   )}
-                  <Button
-                    svgIcon={trashIcon}
-                    fillMode={"flat"}
-                    onClick={onResetClick}
-                  ></Button>
+                  <Button svgIcon={trashIcon} fillMode={"flat"}></Button>
                 </span>
                 <span>
-                  {isCartItem
-                    ? `$${(
-                        item.quantity * item.product.newPrice
-                      ).toLocaleString()}`
-                    : `$${item.product.newPrice.toLocaleString()}`}
+                  {`$${(
+                    item.quantity * item.product.newPrice
+                  ).toLocaleString()}`}
                 </span>
               </div>
             </div>
@@ -135,7 +125,7 @@ export const ShoppingCartList: React.FC = () => {
           <section className="k-d-flex k-justify-content-between k-align-items-center">
             <div className="k-col-span-3">
               <Form
-                render={(formRenderProps: FormRenderProps) => (
+                render={() => (
                   <FormElement style={{ maxWidth: 650 }}>
                     <fieldset className={"k-form-fieldset"}>
                       <legend className={"k-h2"}>Order Details</legend>

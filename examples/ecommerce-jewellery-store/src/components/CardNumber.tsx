@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 import { MaskedTextBox } from '@progress/kendo-react-inputs';
 
 const CardNumber = () => {

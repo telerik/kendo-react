@@ -12,10 +12,10 @@ import { CustomSection } from "../components/CustomizedSection";
 import { useCart } from "../helpers/CartContext";
 import { useNavigate } from "react-router-dom";
 
-
 export const ProductDetails = () => {
   const { id } = useParams();
-  const productId = parseInt(id, 10);
+  const productId = id ? parseInt(id, 10) : null;
+
   const descriptionText =
     "Elegant wedding bands featuring lustrous pearls, beautifully set in sleek, timeless bands. These rings offer a unique blend of classic charm and modern sophistication, making them a perfect symbol of everlasting love. The delicate pearls add a touch of grace, creating a refined and distinctive look that’s perfect for a memorable occasion.";
   const { addItemToCart } = useCart();
@@ -23,9 +23,11 @@ export const ProductDetails = () => {
   const navigate = useNavigate();
 
   const addToCart = () => {
-    addItemToCart(productToAdd);
-    navigate("/shoppingcart")
-  }
+    if (productToAdd) {
+      addItemToCart(productToAdd);
+    }
+    navigate("/shoppingcart");
+  };
 
   const data: CardDescriptor[] = [
     {

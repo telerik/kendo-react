@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 import { DateInput } from "@progress/kendo-react-dateinputs";
 
 const ExpiryDate = () => {
