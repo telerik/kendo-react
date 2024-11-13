@@ -1,9 +1,9 @@
 import React from 'react';
-import { Layout } from "@/components/Layout";
-import CardNumber from "@/components/CardNumber";
-import ExpiryDate from "@/components/ExpiryDate";
-import PasswordInput from "@/components/PasswordInput";
-import CardHolder from "@/components/CardHolder";
+import { Layout } from "../components/Layout";
+import CardNumber from "../components/CardNumber";
+import ExpiryDate from "../components/ExpiryDate";
+import PasswordInput from "../components/PasswordInput";
+import CardHolder from "../components/CardHolder";
 import { Button } from "@progress/kendo-react-buttons";
 import { useNavigate } from 'react-router-dom';
 

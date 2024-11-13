@@ -1,10 +1,9 @@
 import * as React from "react";
 
-import bracelets from "../assets/bracelets.png?url";
-import necklace from "../assets/necklace_1.jfif?url";
-import ring from "../assets/ring_1.jfif?url";
-import jewel from "../assets/1111.jfif?url";
-
+import bracelets from "@/assets/bracelets.png?url";
+import necklace from "@/assets/necklace_1.jfif?url";
+import ring from "@/assets/ring_1.jfif?url";
+import jewel from "@/assets/1111.jfif?url";
 import { Layout } from "../components/Layout";
 import { OrderedImgText } from "../components/OrderedImageCard";
 import { CustomSection } from "../components/CustomizedSection";

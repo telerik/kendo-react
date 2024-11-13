@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout } from "@/components/Layout";
+import { Layout } from "../components/Layout";
 import { BackgroundImage } from '../components/BackgroundImage';
 import present from "@/assets/present.png";
 import { Button } from "@progress/kendo-react-buttons";

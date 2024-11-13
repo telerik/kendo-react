@@ -48,7 +48,7 @@ export const ShoppingCartList: React.FC = () => {
     navigate("/paymentdetails");
   };
 
-  const updateQuantity = (event) => {
+  const updateQuantity = (event: any) => {
     console.log(typeof event);
     const target = event.target.element;
     const id = target.getAttribute("id");

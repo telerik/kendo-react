@@ -17,8 +17,8 @@ import {
   paletteIcon,
 } from "@progress/kendo-svg-icons";
 import viloraLogo from "@/assets/vilora-logo.png";
-import items from "@/data/items";
-import languageItems from "@/data/language-items";
+import items from "../data/items";
+import languageItems from "../data/language-items";
 
 import { AppBar, AppBarSection } from "@progress/kendo-react-layout";
 
