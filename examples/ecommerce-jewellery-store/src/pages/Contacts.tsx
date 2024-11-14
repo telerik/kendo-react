@@ -1,8 +1,5 @@
 import React from 'react';
 import { Layout } from '../components/Layout';
-import CardNumber from '../components/CardNumber';
-import ExpiryDate from '../components/ExpiryDate';
-import PasswordInput from '../components/PasswordInput';
 import EmailInput from '../components/EmailInput';
 import CardHolder from '../components/CardHolder';
 import CityInput from '../components/CityInput';
@@ -10,7 +7,6 @@ import PhoneInput from '../components/PhoneInput';
 import AppointmentInput from '../components/AppointmentInput';
 import DateChooserInput from '../components/DateChooserInput';
 import ContactsRadioButtons from '../components/ContactsRadioButtons'
-import { BackgroundImage } from '../components/BackgroundImage';
 import contactsImage from '@/assets/contactsImage.png';
 import { Button } from '@progress/kendo-react-buttons';
 import { useNavigate } from 'react-router-dom';
@@ -21,10 +17,7 @@ import {
   FormElement,
   FieldWrapper,
 } from '@progress/kendo-react-form';
-import { RadioButton } from '@progress/kendo-react-inputs';
 import { Label } from '@progress/kendo-react-labels';
-
-import creditCards from '../assets/creditCards.png';
 
 const Contacts: React.FC = () => {
   const navigate = useNavigate();

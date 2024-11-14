@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Menu, AppBarSpacer, MenuSelectEvent } from "@progress/kendo-react-layout";
+import { Menu, MenuSelectEvent } from "@progress/kendo-react-layout";
 import { Button } from "@progress/kendo-react-buttons";
 import { SvgIcon } from "@progress/kendo-react-common";
 import { InputPrefix, InputSeparator, TextBox, Switch } from "@progress/kendo-react-inputs";
