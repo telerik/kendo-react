@@ -19,7 +19,6 @@ import { orderBy } from '@progress/kendo-data-query';
 import { chartAreaStackedIcon } from '@progress/kendo-svg-icons';
 import { sampleData } from '../data/shared-gd-sampleChartData';
 import { Pager, PageChangeEvent } from '@progress/kendo-react-data-tools';
-import { SampleDataItem } from '../data/types';
 
 interface SampleDataItem {
   ID: string;
