@@ -17,8 +17,21 @@ import {
 import { Button } from '@progress/kendo-react-buttons';
 import { orderBy, groupBy } from '@progress/kendo-data-query';
 import { chartAreaStackedIcon } from '@progress/kendo-svg-icons';
-import { sampleData, SampleDataItem } from '../data/shared-gd-sampleChartData';
+import { sampleData } from '../data/shared-gd-sampleChartData';
 import { Pager, PageChangeEvent } from '@progress/kendo-react-data-tools';
+
+interface SampleDataItem {
+  ID: string;
+  Product: string;
+  SKU: string;
+  Category: string;
+  Price: number;
+  Sales: number;
+  Status: string;
+  Quantity: number;
+  URL: string;
+}
+
 
 const DATA_ITEM_KEY = 'ID';
 const SELECTED_FIELD = 'selected';
