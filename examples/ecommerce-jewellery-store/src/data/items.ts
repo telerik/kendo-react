@@ -8,10 +8,8 @@ const items = [
       "items": [{ "text": "Bracelets" }, { "text": "Rings" }, { "text": "Earings" }, { "text": "Watches" },{ "text": "All" }],
     },
     {
-      "text": "Blog"
-    },
-    {
-      "text": "Contacts"
+      "text": "Contacts",
+      "url": "/contacts"
     }
   ];
   

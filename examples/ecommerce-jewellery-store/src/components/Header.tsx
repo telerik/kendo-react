@@ -1,44 +1,59 @@
 import React from "react";
-import { Menu, AppBarSpacer } from "@progress/kendo-react-layout";
+import { useNavigate } from "react-router-dom";
+import { Menu, AppBarSpacer, MenuSelectEvent } from "@progress/kendo-react-layout";
 import { Button } from "@progress/kendo-react-buttons";
 import { SvgIcon } from "@progress/kendo-react-common";
-
-import {
-  InputPrefix,
-  InputSeparator,
-  TextBox,
-  Switch,
-} from "@progress/kendo-react-inputs";
-
-import {
-  searchIcon,
-  userIcon,
-  cartIcon,
-} from "@progress/kendo-svg-icons";
+import { InputPrefix, InputSeparator, TextBox, Switch } from "@progress/kendo-react-inputs";
+import { searchIcon, userIcon, cartIcon } from "@progress/kendo-svg-icons";
 import viloraLogo from "@/assets/vilora-logo.png";
 import items from "../data/items";
 import languageItems from "../data/language-items";
-
 import { AppBar, AppBarSection } from "@progress/kendo-react-layout";
+import { useAdminContext } from "../helpers/AdminContext";
+import { useCategoriesContext } from "../helpers/CategoriesContext"; // Import CategoriesContext
 
 const Header: React.FC = () => {
+  const navigate = useNavigate();
+  const { isAdmin, toggleRole } = useAdminContext();
+  const { setSelectedCategory } = useCategoriesContext();
+
+  const handleCartClick = () => {
+    navigate("/shoppingcart");
+  };
+
+  const handleSwitchChange = () => {
+    toggleRole(); 
+  };
+
+  const handleMenuSelect = (event: MenuSelectEvent) => {
+    const selectedItem = event.item;
+
+    if (selectedItem.url) {
+      navigate(selectedItem.url);
+      return;
+    }
+
+    const selectedCategory = selectedItem.text;
+    if (selectedCategory === "All") {
+      setSelectedCategory(null); 
+    } else {
+      setSelectedCategory(selectedCategory); 
+      navigate("/category"); 
+    }
+  };
+
+
   return (
     <>
-      <AppBar themeColor="inherit k-justfity-content-center">
-        <AppBarSection
-          className="k-align-items-center"
-          style={{ paddingLeft: "50px" }}
-        >
+      <AppBar themeColor="inherit">
+        <AppBarSection className="k-flex-basis-0 k-flex-grow k-gap-2 k-align-items-center" style={{ paddingLeft: "50px" }}>
           <a href="#" className="k-d-sm-flex" style={{ marginRight: "50px" }}>
             <img src={viloraLogo} alt="Logo" />
           </a>
-          <Menu items={items}>
-          </Menu>
+          <Menu items={items} onSelect={handleMenuSelect} />
         </AppBarSection>
 
-        <AppBarSpacer style={{ width: 32 }} />
-
-        <AppBarSection>
+        <AppBarSection className="k-flex-basis-0 k-flex-grow k-justify-content-end k-gap-1.5">
           <TextBox
             placeholder="Search"
             prefix={() => (
@@ -53,17 +68,19 @@ const Header: React.FC = () => {
             )}
             style={{ width: 300 }}
           />
-          <div style={{ marginLeft: "20px" }}>
-            <Button svgIcon={userIcon} fillMode="flat" className="k-ml-2" />
-            <Button svgIcon={cartIcon} fillMode="flat" className="k-ml-2" />
-          </div>
-        </AppBarSection>
-
-        <AppBarSpacer style={{ width: 4 }} />
-
-        <AppBarSection style={{ marginRight: "50px" }}>
-          <Switch />
-          <Menu items={languageItems} />
+          <Button svgIcon={userIcon} fillMode="flat" className="k-ml-2" />
+          <Button
+            svgIcon={cartIcon}
+            fillMode="flat"
+            className="k-ml-2"
+            onClick={handleCartClick}
+          />
+          <Switch
+            onLabel="Admin"
+            offLabel="Client"
+            onChange={handleSwitchChange}
+          />
+          <Menu items={languageItems} onSelect={handleMenuSelect} />
         </AppBarSection>
       </AppBar>
     </>

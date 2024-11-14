@@ -1,3 +1,4 @@
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -12,27 +13,34 @@ import { SizedParent } from "./components/SizedParent";
 import { DetailedCategory } from "./pages/DetailedCategory";
 import { ProductDetails } from "./pages/ProductsDetails";
 import { CartProvider } from "./helpers/CartContext";
-import { ShoppingCartList } from "./components/ShoppingCartList";
+import { AdminProvider } from './helpers/AdminContext';
+import { CategoriesProvider } from './helpers/CategoriesContext';
+import { ShoppingCartList } from "./components/ShoppingCartList"; // Adjust path if necessary
 
 function App() {
   return (
     <CartProvider>
-      <Router>
-        <Header />
-        <SizedParent>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/paymentdetails" element={<PaymentDetails />} />
-            <Route path="/thankyou" element={<ThankYou />} />
-            <Route path="/contacts" element={<Contacts />} />
-            <Route path="/products" element={<AllProductsListView />} />
-            <Route path="/category" element={<DetailedCategory />} />
-            <Route path="/product/:id" element={<ProductDetails />} />
-            <Route path="/shoppingcart" element={<ShoppingCartList />} />
-          </Routes>
-        </SizedParent>
-        <Footer />
-      </Router>
+      <AdminProvider>
+        <CategoriesProvider>
+          <Router>
+            <Header />
+            <SizedParent>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/paymentdetails" element={<PaymentDetails />} />
+                <Route path="/thankyou" element={<ThankYou />} />
+                <Route path="/contacts" element={<Contacts />} />
+                <Route path="/products" element={<AllProductsListView />} />
+                <Route path="/category" element={<DetailedCategory />} />
+                <Route path="/product/:id" element={<ProductDetails />} />
+                <Route path="/shoppingcart" element={<ShoppingCartList />} />
+                <Route path="/contacts" element={<Contacts />} />
+              </Routes>
+            </SizedParent>
+            <Footer />
+          </Router>
+        </CategoriesProvider>
+      </AdminProvider>
     </CartProvider>
   );
 }

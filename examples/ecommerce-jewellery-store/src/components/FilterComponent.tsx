@@ -1,43 +1,63 @@
-import * as React from "react";
-import { filterIcon, sortAscIcon } from "@progress/kendo-svg-icons";
-import {
-  MultiSelect,
-  DropDownList,
-  DropDownsPopupSettings,
-  DropDownListChangeEvent,
-  MultiSelectChangeEvent,
-} from "@progress/kendo-react-dropdowns";
+import React, { useEffect } from "react";
+import { MultiSelect, DropDownList } from "@progress/kendo-react-dropdowns";
 import { SvgIcon } from "@progress/kendo-react-common";
-import {
-  FilterDescriptor,
-  SortDescriptor,
-  State,
-} from "@progress/kendo-data-query";
+import { filterIcon, sortAscIcon } from "@progress/kendo-svg-icons";
+import { FilterDescriptor, State } from "@progress/kendo-data-query";
+import { useCategoriesContext } from "../helpers/CategoriesContext";
 
-const chips: string[] = [
-  "Bracelets",
-  "Rings",
-  "Earrings",
-  "Watches",
-  "Necklaces",
-];
+const chips = ["Bracelets", "Rings", "Earrings", "Watches", "Necklaces"];
+const statuses = ["Sale", "Recommended", "Must Have"];
+const materials = ["Gold", "Silver"];
 
-const statuses: string[] = ["Sale", "Recommended", "Must Have"];
-const materials: string[] = ["Gold", "Silver"];
+interface FilterComponentProps {
+  updateUI: (state: State) => void;
+}
 
-const DropDownSettings: DropDownsPopupSettings = {
-  width: "119px",
-};
-
-export const FilterComponent = (props: any) => {
+export const FilterComponent: React.FC<FilterComponentProps> = ({ updateUI }) => {
+  const { selectedCategory, setSelectedCategory } = useCategoriesContext();
   const [categoryValue, setCategoryValue] = React.useState<string[]>([]);
   const [statusValue, setStatusValue] = React.useState<string>("Recommended");
   const [materialValue, setMaterialValue] = React.useState<string>("Material");
 
-  const onStatusChange = (e: DropDownListChangeEvent) => {
+  useEffect(() => {
+    if (selectedCategory) {
+      setCategoryValue([selectedCategory]); 
+      applyCategoryFilter([selectedCategory]);
+    } else {
+      setCategoryValue([]); 
+      applyCategoryFilter([]);
+    }
+  }, [selectedCategory]);
+
+  const applyCategoryFilter = (categories: string[]) => {
+    const filters = categories.map((category) => ({
+      field: "category",
+      operator: "eq",
+      value: category,
+    }));
+
+    const customCompositeFilters: State = {
+      filter: {
+        logic: "or",
+        filters,
+      },
+      sort: undefined,
+    };
+
+    updateUI(customCompositeFilters);
+  };
+
+  const onCategoryChange = (e: any) => {
+    setCategoryValue(e.value);
+    applyCategoryFilter(e.value);
+
+    setSelectedCategory(e.value.length > 0 ? e.value[0] : null);
+  };
+
+  const onStatusChange = (e: any) => {
     setStatusValue(e.value);
 
-    const newSorts: SortDescriptor[] = [
+    const newSorts = [
       {
         field: "status",
         dir: "desc",
@@ -49,31 +69,10 @@ export const FilterComponent = (props: any) => {
       sort: newSorts,
     };
 
-    props.updateUI(customCompositeFilters);
+    updateUI(customCompositeFilters);
   };
 
-  const onMsChange = (e: MultiSelectChangeEvent) => {
-    setCategoryValue(e.value);
-
-    const newFilters = e.value.map((c: any) => ({
-      field: "category",
-      operator: "eq",
-      value: c,
-    }));
-
-    const customCompositeFilters: State = {
-      filter: {
-        logic: "or",
-        filters: newFilters,
-      },
-      sort: undefined,
-    };
-
-    props.updateUI(customCompositeFilters);
-    setMaterialValue("Material");
-  };
-
-  const onMaterialChange = (e: DropDownListChangeEvent) => {
+  const onMaterialChange = (e: any) => {
     setMaterialValue(e.value);
 
     const newFilter: FilterDescriptor[] = [
@@ -92,54 +91,46 @@ export const FilterComponent = (props: any) => {
       sort: undefined,
     };
 
-    props.updateUI(customCompositeFilters);
+    updateUI(customCompositeFilters);
     setCategoryValue([]);
   };
 
+  const clearFilters = () => {
+    setCategoryValue([]);
+    setStatusValue("Recommended");
+    setMaterialValue("Material");
+    setSelectedCategory(null); // Clear context filter
+    updateUI({ filter: undefined, sort: undefined }); // Clear all filters
+  };
+
   return (
-    <>
-      <section className="k-d-flex k-justify-content-between k-align-items-center">
-        <span className="k-d-flex k-align-items-center">
-          <span className="k-d-flex k-align-items-center k-pr-2">
-            <SvgIcon icon={filterIcon}></SvgIcon>
-            Filter:
-          </span>           
-          <span className="k-pr-2">
+    <section className="k-d-flex k-justify-content-between k-align-items-center">
+      <span className="k-d-flex k-align-items-center">
+        <span className="k-d-flex k-align-items-center k-pr-2">
+          <SvgIcon icon={filterIcon}></SvgIcon> Filter:
+        </span>
+        <span className="k-pr-2">
           <MultiSelect
-            popupSettings={DropDownSettings}
-            style={{
-              minWidth: "119px",
-            }}
-            fillMode={"flat"}
             data={chips}
             value={categoryValue}
             placeholder="Category"
-            onChange={onMsChange}
-          ></MultiSelect>
-          </span>
-            <span className="k-pr-2">
-            <DropDownList
-              value={materialValue}
-              data={materials}
-              onChange={onMaterialChange}
-            ></DropDownList>
-            </span>
+            onChange={onCategoryChange}
+            style={{ minWidth: "119px" }}
+          />
         </span>
-
-        <span className="k-d-flex k-align-items-center">
-          <span className="k-d-flex k-align-items-center k-pr-2">
-            <SvgIcon icon={sortAscIcon}></SvgIcon>
-            Sort by:
-          </span>
-          <span>
-            <DropDownList
-              data={statuses}
-              value={statusValue}
-              onChange={onStatusChange}
-            ></DropDownList>
-          </span>
+        <span className="k-pr-2">
+          <DropDownList value={materialValue} data={materials} onChange={onMaterialChange} />
         </span>
-      </section>
-    </>
+      </span>
+      <span className="k-d-flex k-align-items-center">
+        <span className="k-d-flex k-align-items-center k-pr-2">
+          <SvgIcon icon={sortAscIcon}></SvgIcon> Sort by:
+        </span>
+        <span>
+          <DropDownList data={statuses} value={statusValue} onChange={onStatusChange} />
+        </span>
+      </span>
+      <button className="k-button k-button-flat" onClick={clearFilters}>Clear Filters</button>
+    </section>
   );
 };
