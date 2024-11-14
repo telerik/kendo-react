@@ -6,19 +6,21 @@ import {
   GridSelectionChangeEvent,
   GridHandle,
   getSelectedState,
+  GridPageChangeEvent,
   GridKeyDownEvent,
   getSelectedStateFromKeyDown,
   GridSortChangeEvent,
 } from '@progress/kendo-react-grid';
 import {
   ChartWizard,
+  ChartWizardDataRow,
   getWizardDataFromGridSelection,
 } from '@progress/kendo-react-chart-wizard';
 import { Button } from '@progress/kendo-react-buttons';
 import { orderBy } from '@progress/kendo-data-query';
 import { chartAreaStackedIcon } from '@progress/kendo-svg-icons';
 import { sampleData } from '../data/shared-gd-sampleChartData';
-import { Pager, PageChangeEvent } from '@progress/kendo-react-data-tools';
+import {PagerTargetEvent } from '@progress/kendo-react-data-tools';
 
 interface SampleDataItem {
   ID: string;
@@ -53,13 +55,13 @@ const AdminView: React.FC = () => {
     { field: 'Sales', dir: 'desc' },
   ]);
   const [showChartWizard, setShowChartWizard] = React.useState<boolean>(false);
-  const [chartData, setChartData] = React.useState<SampleDataItem[]>([]);
-  const [top3SalesData, setTop3SalesData] = React.useState<SampleDataItem[]>([]);
+  const [chartData, setChartData] = React.useState<ChartWizardDataRow[]>([]);
+  const [top3SalesData, setTop3SalesData] = React.useState<ChartWizardDataRow[]>([]);
   const [top3Visible, setTop3Visible] = React.useState<boolean>(false);
-  const [page, setPage] = React.useState<PageState>({ skip: 0, take: 4 });
+  const [page, setPage] = React.useState<number | string | undefined>({ skip: 0, take: 4 });
 
-  const pageChange = (event: PageChangeEvent) => {
-    setPage(event.page);
+  const pageChange = (event: GridPageChangeEvent) => {
+    
   };
 
   const data = sampleData.map((item) => ({
@@ -116,8 +118,8 @@ const AdminView: React.FC = () => {
     const sortedTop3Sales = selectedData
       .sort(
         (a, b) =>
-          b.find((field) => field.field === 'Total Sales').value -
-          a.find((field) => field.field === 'Total Sales').value
+          b.find((field) => field.field === 'Total Sales')?.value -
+          a.find((field) => field.field === 'Total Sales')?.value
       )
       .slice(0, 3);
 
@@ -134,31 +136,6 @@ const AdminView: React.FC = () => {
       <td>
         <img src={imageUrl} alt="Product" style={{ width: '100px', height: 'auto' }} />
       </td>
-    );
-  };
-
-  const MyPager: React.FC<{
-    skip: number;
-    take: number;
-    total: number;
-    onPageChange: (event: PageChangeEvent) => void;
-  }> = (props) => {
-    return (
-      <div style={{ overflow: 'hidden', padding: '10px' }}>
-        <Pager
-          responsive={true}
-          skip={props.skip}
-          take={props.take}
-          total={props.total}
-          onPageChange={props.onPageChange}
-          buttonCount={5}
-          info={true}
-          previousNext={true}
-          type="numeric"
-          pageSizes={[4, 10, 15, 20]}
-          pageSizeValue={props.take}
-        />
-      </div>
     );
   };
 
@@ -188,7 +165,6 @@ const AdminView: React.FC = () => {
         total={data.length}
         pageable={true}
         onPageChange={pageChange}
-        pager={(pagerProps) => <MyPager {...pagerProps} />}
         selectable={{
           enabled: true,
           drag: true,
@@ -215,12 +191,6 @@ const AdminView: React.FC = () => {
       {showChartWizard && (
         <ChartWizard
           data={chartData}
-          series={[
-            {
-              field: 'value',
-              categoryField: 'category',
-            },
-          ]}
           onClose={() => setShowChartWizard(false)}
         />
       )}
@@ -228,12 +198,6 @@ const AdminView: React.FC = () => {
       {top3Visible && (
         <ChartWizard
           data={top3SalesData}
-          series={[
-            {
-              field: 1,
-              categoryField: 0,
-            },
-          ]}
           onClose={() => setTop3Visible(false)}
         />
       )}
