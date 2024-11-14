@@ -10,11 +10,11 @@ import items from "../data/items";
 import languageItems from "../data/language-items";
 import { AppBar, AppBarSection } from "@progress/kendo-react-layout";
 import { useAdminContext } from "../helpers/AdminContext";
-import { useCategoriesContext } from "../helpers/CategoriesContext"; // Import CategoriesContext
+import { useCategoriesContext } from "../helpers/CategoriesContext"; 
 
 const Header: React.FC = () => {
   const navigate = useNavigate();
-  const { isAdmin, toggleRole } = useAdminContext();
+  const { toggleRole } = useAdminContext();
   const { setSelectedCategory } = useCategoriesContext();
 
   const handleCartClick = () => {
@@ -27,21 +27,20 @@ const Header: React.FC = () => {
 
   const handleMenuSelect = (event: MenuSelectEvent) => {
     const selectedItem = event.item;
-
+  
     if (selectedItem.url) {
       navigate(selectedItem.url);
       return;
     }
-
+  
     const selectedCategory = selectedItem.text;
     if (selectedCategory === "All") {
       setSelectedCategory(null); 
     } else {
-      setSelectedCategory(selectedCategory); 
+      setSelectedCategory(selectedCategory ?? null); 
       navigate("/category"); 
     }
   };
-
 
   return (
     <>

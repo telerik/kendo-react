@@ -18,3 +18,9 @@ html, body {
 .kr-mw-1280{
   max-width: 1280px;
 }
+
+.k-menu-popup {
+  position: fixed !important; 
+  top: auto !important;
+  z-index: 1000; 
+}

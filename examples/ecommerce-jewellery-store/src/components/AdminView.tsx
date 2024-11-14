@@ -6,10 +6,10 @@ import {
   GridSelectionChangeEvent,
   GridHandle,
   getSelectedState,
-  GridPageChangeEvent,
   GridKeyDownEvent,
   getSelectedStateFromKeyDown,
   GridSortChangeEvent,
+  GridPageChangeEvent,
 } from '@progress/kendo-react-grid';
 import {
   ChartWizard,
@@ -20,7 +20,6 @@ import { Button } from '@progress/kendo-react-buttons';
 import { orderBy } from '@progress/kendo-data-query';
 import { chartAreaStackedIcon } from '@progress/kendo-svg-icons';
 import { sampleData } from '../data/shared-gd-sampleChartData';
-import {PagerTargetEvent } from '@progress/kendo-react-data-tools';
 
 interface SampleDataItem {
   ID: string;
@@ -34,18 +33,12 @@ interface SampleDataItem {
   URL: string;
 }
 
-
 const DATA_ITEM_KEY = 'ID';
 const SELECTED_FIELD = 'selected';
 const idGetter = getter(DATA_ITEM_KEY);
 
 interface SelectedState {
   [id: string]: boolean | number[];
-}
-
-interface PageState {
-  skip: number;
-  take: number;
 }
 
 const AdminView: React.FC = () => {
@@ -58,11 +51,7 @@ const AdminView: React.FC = () => {
   const [chartData, setChartData] = React.useState<ChartWizardDataRow[]>([]);
   const [top3SalesData, setTop3SalesData] = React.useState<ChartWizardDataRow[]>([]);
   const [top3Visible, setTop3Visible] = React.useState<boolean>(false);
-  const [page, setPage] = React.useState<number | string | undefined>({ skip: 0, take: 4 });
-
-  const pageChange = (event: GridPageChangeEvent) => {
-    
-  };
+  const [page, setPage] = React.useState<{ skip: number; take: number }>({ skip: 0, take: 4 });
 
   const data = sampleData.map((item) => ({
     ...item,
@@ -87,6 +76,10 @@ const AdminView: React.FC = () => {
       dataItemKey: DATA_ITEM_KEY,
     });
     setSelectedState(newSelectedState);
+  };
+
+  const onPageChange = (event: GridPageChangeEvent) => {
+    setPage({ skip: event.page.skip, take: event.page.take });
   };
 
   const disabled = Object.keys(selectedState).length === 0;
@@ -131,7 +124,7 @@ const AdminView: React.FC = () => {
     dataItem,
     field,
   }) => {
-    const imageUrl = dataItem[field || 'URL'];
+    const imageUrl = field && field in dataItem ? (dataItem as Record<string, any>)[field] : dataItem.URL;
     return (
       <td>
         <img src={imageUrl} alt="Product" style={{ width: '100px', height: 'auto' }} />
@@ -164,7 +157,7 @@ const AdminView: React.FC = () => {
         take={page.take}
         total={data.length}
         pageable={true}
-        onPageChange={pageChange}
+        onPageChange={onPageChange}
         selectable={{
           enabled: true,
           drag: true,
@@ -176,7 +169,7 @@ const AdminView: React.FC = () => {
         sortable={true}
         sort={sort}
         onSortChange={(e: GridSortChangeEvent) => {
-          setSort(e.sort);
+          setSort(e.sort as { field: string; dir: 'asc' | 'desc' }[]);
         }}
       >
         <GridColumn field="URL" title="Product" cell={URLImageCell} />

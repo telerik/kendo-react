@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { MultiSelect, DropDownList } from "@progress/kendo-react-dropdowns";
 import { SvgIcon } from "@progress/kendo-react-common";
 import { filterIcon, sortAscIcon } from "@progress/kendo-svg-icons";
-import { FilterDescriptor, State } from "@progress/kendo-data-query";
+import { FilterDescriptor, SortDescriptor, State } from "@progress/kendo-data-query";
 import { useCategoriesContext } from "../helpers/CategoriesContext";
 
 const chips = ["Bracelets", "Rings", "Earrings", "Watches", "Necklaces"];
@@ -21,10 +21,10 @@ export const FilterComponent: React.FC<FilterComponentProps> = ({ updateUI }) =>
 
   useEffect(() => {
     if (selectedCategory) {
-      setCategoryValue([selectedCategory]); 
+      setCategoryValue([selectedCategory]);
       applyCategoryFilter([selectedCategory]);
     } else {
-      setCategoryValue([]); 
+      setCategoryValue([]);
       applyCategoryFilter([]);
     }
   }, [selectedCategory]);
@@ -50,14 +50,13 @@ export const FilterComponent: React.FC<FilterComponentProps> = ({ updateUI }) =>
   const onCategoryChange = (e: any) => {
     setCategoryValue(e.value);
     applyCategoryFilter(e.value);
-
     setSelectedCategory(e.value.length > 0 ? e.value[0] : null);
   };
 
   const onStatusChange = (e: any) => {
     setStatusValue(e.value);
 
-    const newSorts = [
+    const newSorts: SortDescriptor[] = [
       {
         field: "status",
         dir: "desc",
@@ -99,8 +98,8 @@ export const FilterComponent: React.FC<FilterComponentProps> = ({ updateUI }) =>
     setCategoryValue([]);
     setStatusValue("Recommended");
     setMaterialValue("Material");
-    setSelectedCategory(null); // Clear context filter
-    updateUI({ filter: undefined, sort: undefined }); // Clear all filters
+    setSelectedCategory(null);
+    updateUI({ filter: undefined, sort: undefined });
   };
 
   return (

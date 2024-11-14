@@ -1,7 +1,5 @@
 import * as React from 'react';
-import { Input, InputChangeEvent } from '@progress/kendo-react-inputs';
-import { Button } from '@progress/kendo-react-buttons';
-import { eyeIcon, eyeSlashIcon } from '@progress/kendo-svg-icons';
+import { Input } from '@progress/kendo-react-inputs';
 
 const EmailInput: React.FC = () => {
  
