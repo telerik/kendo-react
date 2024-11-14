@@ -49,7 +49,6 @@ export const ShoppingCartList: React.FC = () => {
   };
 
   const updateQuantity = (event: any) => {
-    console.log(typeof event);
     const target = event.target.element;
     const id = target.getAttribute("id");
 
@@ -78,7 +77,7 @@ export const ShoppingCartList: React.FC = () => {
           return (
             <div
               className="k-d-flex k-gap-5 k-justify-content-center k-border-y k-align-items-center k-pb-5"
-              key={isCartItem ? item.product.id : null}
+              key={item.product.id}
               style={{
                 height: "120px",
               }}

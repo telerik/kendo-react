@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { DateInput } from '@progress/kendo-react-dateinputs';
+import { DateInput, DateInputChangeEvent } from '@progress/kendo-react-dateinputs';
 
 const DateChooserInput: React.FC  = () => {
     const [value, setValue] = React.useState<Date | null>(new Date(2017, 1, 13));

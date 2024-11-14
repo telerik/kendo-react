@@ -8,8 +8,7 @@ export const CategoryList: React.FC<CategoryListProps> = ({ data, title, subtitl
     const navigate = useNavigate();
 
     const onNavigate = (card: CardDescriptor) => {
-        console.log(card);
-        if (card.collectionText === `Collection \"AURELIA\"`) {
+        if (card.collectionText === `Collection "AURELIA"`) {
             navigate("/category")
         }
     }

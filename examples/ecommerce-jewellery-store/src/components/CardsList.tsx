@@ -19,7 +19,7 @@ export const CardsList = (props: CardListProps) => {
             key={index}
             className="k-col-span-3 k-text-center k-border k-border-primary k-gap-1 k-pb-5"
           >
-            {item.status != null ? (
+            {item.status !== null ? (
               <BadgeContainer>
                 <div
                   className="k-d-flex k-justify-content-center k-align-items-center k-rounded-lg"
