@@ -29,6 +29,8 @@ jobs:
           filters: |
             coffee-warehouse-nextjs:
               - 'examples/coffee-warehouse-nextjs/**'
+            ecommerce-jewellery-store:
+              - 'examples/ecommerce-jewellery-store/**'
             kendo-react-build-a-sales-dashboard:
               - 'examples/kendo-react-build-a-sales-dashboard/**'    
             kendo-react-file-manager:
@@ -59,6 +61,13 @@ jobs:
       - name: Build Coffee warehouse nextjs app
         working-directory: ./examples/coffee-warehouse-nextjs
         if: steps.changes.outputs.coffee-warehouse-nextjs == 'true'
+        run: |
+          npm ci
+          npm run build
+
+      - name: Build Ecommerce jewellery store vite app
+        working-directory: ./examples/ecommerce-jewellery-store
+        if: steps.changes.outputs.ecommerce-jewellery-store == 'true'
         run: |
           npm ci
           npm run build
