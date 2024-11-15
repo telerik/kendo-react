@@ -1,50 +1,40 @@
-# React + TypeScript + Vite
+## The following KendoReact components are used in the sample application:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- [Data Grid](https://www.telerik.com/kendo-react-ui/components/grid/)
 
-Currently, two official plugins are available:
+- [Chart](https://www.telerik.com/kendo-react-ui/components/chart/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [ChartWizard](https://www.telerik.com/kendo-react-ui/components/chart-wizard)
 
-## Expanding the ESLint configuration
+- [DropdownList](https://www.telerik.com/kendo-react-ui/components/dropdowns/dropdownlist)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [Input](https://www.telerik.com/kendo-react-ui/components/inputs/input)
 
-- Configure the top-level `parserOptions` property like this:
+- [MaskedTextBox](https://www.telerik.com/kendo-react-ui/components/inputs/maskedtextbox)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- [Appbar](https://www.telerik.com/kendo-react-ui/components/layout/appbar)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- [Button](https://www.telerik.com/kendo-react-ui/components/buttons/button)
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- [Form](https://www.telerik.com/kendo-react-ui/components/form)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Prerequisites
+
+- Node.js [18.17](https://nodejs.org/en) or later.
+- macOS, Windows (including WSL), and Linux are supported.
+
+## Installation
+
+Run `npm install`
+
+## Available Scripts
+In the project directory, you can run:
+
+### `npm run build`
+Build the application for production usage.
+
+### `npm run dev`
+Start a Vite production server.
+
+### `npm run lint`
+Check for linting errors.
