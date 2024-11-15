@@ -1,0 +1,12 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],  "compilerOptions": {
+    "baseUrl": ".", // This is important to set the base URL for the paths
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
+}
