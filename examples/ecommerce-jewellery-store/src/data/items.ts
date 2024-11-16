@@ -9,7 +9,7 @@ const items = [
     },
     {
       "text": "Contacts",
-      "url": "/contacts"
+      "url": "contacts"
     }
   ];
   

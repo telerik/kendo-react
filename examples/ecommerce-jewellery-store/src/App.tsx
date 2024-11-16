@@ -21,7 +21,7 @@ function App() {
     <CartProvider>
       <AdminProvider>
         <CategoriesProvider>
-          <Router>
+          <Router basename="/kendo-react/ecommerce-jewellery-store">
             <Header />
             <SizedParent>
               <Routes>
@@ -33,7 +33,6 @@ function App() {
                 <Route path="/category" element={<DetailedCategory />} />
                 <Route path="/product/:id" element={<ProductDetails />} />
                 <Route path="/shoppingcart" element={<ShoppingCartList />} />
-                <Route path="/contacts" element={<Contacts />} />
               </Routes>
             </SizedParent>
             <Footer />
