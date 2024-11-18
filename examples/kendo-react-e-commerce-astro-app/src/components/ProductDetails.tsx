@@ -15,20 +15,20 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
     const existingCart = JSON.parse(localStorage.getItem('cart') || '[]');
     const updatedCart = [...existingCart, product];
     localStorage.setItem('cart', JSON.stringify(updatedCart));
-    window.location.href = '/shoppingcart';
+    window.location.href = '/kendo-react/kendo-react-e-commerce-astro-app/shoppingcart';
   };
 
   const data: CardDescriptor[] = [
     {
-      img: '/homemadePinkDiamondRing.jpg',
+      img: '/kendo-react/kendo-react-e-commerce-astro-app/homemadePinkDiamondRing.jpg',
       collectionText: 'Handmade Pink Diamond Ring',
     },
     {
-      img: '/diamondRingPinkRuby.jpg',
+      img: '/kendo-react/kendo-react-e-commerce-astro-app/diamondRingPinkRuby.jpg',
       collectionText: 'Diamond Ring with Pink Ruby',
     },
     {
-      img: '/whiteSandDiamondRing.jpg',
+      img: '/kendo-react/kendo-react-e-commerce-astro-app/whiteSandDiamondRing.jpg',
       collectionText: 'White Sand Diamond Ring',
     },
   ];

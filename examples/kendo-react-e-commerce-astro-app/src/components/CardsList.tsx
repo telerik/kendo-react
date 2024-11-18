@@ -6,7 +6,7 @@ import { CardListProps } from "../data/types";
 export const CardsList = (props: CardListProps) => {
 
   const onButtonClick = (index: number) => {
-    window.location.href=`/product/${index + 1}`;
+    window.location.href=`/kendo-react/kendo-react-e-commerce-astro-app/product/${index + 1}`;
   };
 
   return (

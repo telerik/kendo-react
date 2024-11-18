@@ -21,7 +21,7 @@ import {
 
 const PaymentDetails: React.FC = () => {
   const onSubmitClick = () => {
-    window.location.href = "/thankyou";
+    window.location.href = "/kendo-react/kendo-react-e-commerce-astro-app/thankyou";
   };
 
   return (
@@ -36,7 +36,7 @@ const PaymentDetails: React.FC = () => {
                 <RadioButton value="creditCard" label="Credit Card" />
               </div>
               <img
-                src="/creditCards.png"
+                src="/kendo-react/kendo-react-e-commerce-astro-app/creditCards.png"
                 alt="Credit card options"
                 className="k-mb-4"
                 style={{ width: 'auto', height: 'auto', maxWidth: '100%' }}

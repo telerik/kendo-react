@@ -1,5 +1,5 @@
 import React from "react";
-import { Menu, MenuSelectEvent } from "@progress/kendo-react-layout";
+import { Menu, MenuItemModel, MenuSelectEvent } from "@progress/kendo-react-layout";
 import { Button } from "@progress/kendo-react-buttons";
 import { SvgIcon } from "@progress/kendo-react-common";
 import { InputPrefix, InputSeparator, TextBox, Switch } from "@progress/kendo-react-inputs";
@@ -10,11 +10,15 @@ import { AppBar, AppBarSection } from "@progress/kendo-react-layout";
 import { isAdmin } from "../helpers/adminStore";
 import { useStore } from "@nanostores/react";
 
+interface CustomMenuItemModel extends MenuItemModel {
+    page?: string;
+  }
+
 const Header: React.FC = () => {
   const isAdminValue = useStore(isAdmin);
 
   const handleCartClick = () => {
-    window.location.href = "/shoppingcart";
+    window.location.href = "/kendo-react/kendo-react-e-commerce-astro-app/shoppingcart";
   };
 
   const handleSwitchChange = () => {
@@ -22,18 +26,18 @@ const Header: React.FC = () => {
   };
 
   const handleMenuSelect = (event: MenuSelectEvent) => {
-    const selectedItem = event.item;
+    const selectedItem: CustomMenuItemModel = event.item;
 
-    if (selectedItem.url) {
-      window.location.href = selectedItem.url;
+    if (selectedItem.page) {
+      window.location.href = selectedItem.page;
       return;
     }
 
     const selectedCategory = selectedItem.text;
     if (selectedCategory === "All") {
-      window.location.href = `/products`; // No category filter applied
+      window.location.href = `/kendo-react/kendo-react-e-commerce-astro-app/products`; // No category filter applied
     } else {
-      window.location.href = `/products?category=${encodeURIComponent(selectedCategory)}`;
+      window.location.href = `/kendo-react/kendo-react-e-commerce-astro-app/products?category=${encodeURIComponent(selectedCategory)}`;
     }
   };
 
@@ -41,7 +45,7 @@ const Header: React.FC = () => {
     <AppBar themeColor="inherit">
       <AppBarSection className="k-flex-basis-0 k-flex-grow k-gap-2 k-align-items-center" style={{ paddingLeft: "50px" }}>
         <a href="/" className="k-d-sm-flex" style={{ marginRight: "50px" }}>
-          <img src="/vilora-logo.png" alt="Logo" />
+          <img src="/kendo-react/kendo-react-e-commerce-astro-app/vilora-logo.png" alt="Logo" />
         </a>
         <Menu items={items} onSelect={handleMenuSelect} />
       </AppBarSection>

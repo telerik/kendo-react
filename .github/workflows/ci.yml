@@ -32,7 +32,9 @@ jobs:
             ecommerce-jewellery-store:
               - 'examples/ecommerce-jewellery-store/**'
             kendo-react-build-a-sales-dashboard:
-              - 'examples/kendo-react-build-a-sales-dashboard/**'    
+              - 'examples/kendo-react-build-a-sales-dashboard/**'
+            kendo-react-e-commerce-astro-app:
+              - 'examples/kendo-react-e-commerce-astro-app/**'    
             kendo-react-file-manager:
               - 'examples/kendo-react-file-manager/**'
             kendo-react-finance-portfolio:
@@ -68,6 +70,13 @@ jobs:
       - name: Build Ecommerce jewellery store vite app
         working-directory: ./examples/ecommerce-jewellery-store
         if: steps.changes.outputs.ecommerce-jewellery-store == 'true'
+        run: |
+          npm ci
+          npm run build
+
+      - name: Build Ecommerce Astro app
+        working-directory: ./examples/kendo-react-e-commerce-astro-app
+        if: steps.changes.outputs.kendo-react-e-commerce-astro-app == 'true'
         run: |
           npm ci
           npm run build

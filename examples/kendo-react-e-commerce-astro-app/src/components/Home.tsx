@@ -11,20 +11,20 @@ import { useStore } from '@nanostores/react';
 import AdminView from '../components/AdminView'; 
 
 const data: CardDescriptor[] = [
-  { img: '/listViewImages/silverBraceletOnyx.png', collectionText: "Silver Bracelet with Onyx" },
-  { img: '/listViewImages/weddingBandsPearl.png', collectionText: "Wedding Bands with Pearls" },
-  { img: '/listViewImages/roseGoldEarringsOpal.png', collectionText: "Rose Gold Earrings with Opal" }
+  { img: '/kendo-react/kendo-react-e-commerce-astro-app/listViewImages/silverBraceletOnyx.png', collectionText: "Silver Bracelet with Onyx" },
+  { img: '/kendo-react/kendo-react-e-commerce-astro-app/listViewImages/weddingBandsPearl.png', collectionText: "Wedding Bands with Pearls" },
+  { img: '/kendo-react/kendo-react-e-commerce-astro-app/listViewImages/roseGoldEarringsOpal.png', collectionText: "Rose Gold Earrings with Opal" }
 ];
 
 const ringsData: CardDescriptor[] = [
-  { img: '/listViewImages/diamondWeddingRing.png', collectionText: "Diamond Wedding Ring" },
-  { img: '/listViewImages/diamondWeddingBands.png', collectionText: "Diamond Wedding Bands" }
+  { img: '/kendo-react/kendo-react-e-commerce-astro-app/listViewImages/diamondWeddingRing.png', collectionText: "Diamond Wedding Ring" },
+  { img: '/kendo-react/kendo-react-e-commerce-astro-app/listViewImages/diamondWeddingBands.png', collectionText: "Diamond Wedding Bands" }
 ];
 
 const watchData: CardDescriptor[] = [
-  { img: '/brownWatch.jpg', collectionText: "Brown Leather Watch" },
-  { img: '/listViewImages/casualSilverWatch.png', collectionText: "Casual Silver Watch" },
-  { img: '/vintageWatch.jpg', collectionText: "Vintage Silver Watch" }
+  { img: '/kendo-react/kendo-react-e-commerce-astro-app/brownWatch.jpg', collectionText: "Brown Leather Watch" },
+  { img: '/kendo-react/kendo-react-e-commerce-astro-app/listViewImages/casualSilverWatch.png', collectionText: "Casual Silver Watch" },
+  { img: '/kendo-react/kendo-react-e-commerce-astro-app/vintageWatch.jpg', collectionText: "Vintage Silver Watch" }
 ];
 
 const Home: React.FC = () => {
@@ -39,7 +39,7 @@ const Home: React.FC = () => {
         title={title}
         subtitle={subtitle}
         buttonText={buttonText}
-        img="/model_1.png"
+        img="/kendo-react/kendo-react-e-commerce-astro-app/model_1.png"
       />
 
       {isAdminValue ? (
@@ -64,7 +64,7 @@ const Home: React.FC = () => {
                 title='Timeless Classics'
                 subtitle='Get our unique handmade collections'
                 contentText='Jewelry enhances style and adds elegance, with each piece telling a unique story.'
-                img="/homeModel2.png"
+                img="/kendo-react/kendo-react-e-commerce-astro-app/homeModel2.png"
                 order='first'
                 link="Shop Now"
               />
@@ -76,7 +76,7 @@ const Home: React.FC = () => {
                 title='Fine Jewelry'
                 subtitle='Get our unique handmade collections'
                 contentText="Jewelry elevates one's style and brings sophistication, with every piece narrating a distinct tale."
-                img="/homeModel3.png"
+                img="/kendo-react/kendo-react-e-commerce-astro-app/homeModel3.png"
                 order='last'
                 link="Shop Now"
               />
@@ -93,7 +93,7 @@ const Home: React.FC = () => {
                 title='Always On Time'
                 subtitle='Get our unique watches'
                 contentText='High-end gold watches for men are the epitome of luxury, combining precision with sophisticated craftsmanship.'
-                img="/homeWatch1.png"
+                img="/kendo-react/kendo-react-e-commerce-astro-app/homeWatch1.png"
                 order='first'
                 link="Shop Now"
               />
@@ -110,7 +110,7 @@ const Home: React.FC = () => {
                 title='Services'
                 subtitle='Explore expert repairs to elevate your experience'
                 contentText='Vilora provides services like custom designs, repairs, and appraisals to enhance the customer experience.'
-                img="/homeServicesImage.png"
+                img="/kendo-react/kendo-react-e-commerce-astro-app/homeServicesImage.png"
                 order='last'
                 link="Learn More"
               />

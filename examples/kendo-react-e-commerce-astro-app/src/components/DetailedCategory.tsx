@@ -19,7 +19,7 @@ const cart = [
   {
     product: {
       id: 1,
-      img: "/sample-item1.png",
+      img: "/kendo-react/kendo-react-e-commerce-astro-app/sample-item1.png",
       title: "Silver Bracelet with Onyx",
       newPrice: 49.99,
     },
@@ -28,7 +28,7 @@ const cart = [
   {
     product: {
       id: 2,
-      img: "/sample-item2.png",
+      img: "/kendo-react/kendo-react-e-commerce-astro-app/sample-item2.png",
       title: "Diamond Wedding Ring",
       newPrice: 120.0,
     },
@@ -37,7 +37,7 @@ const cart = [
   {
     product: {
       id: 3,
-      img: "/sample-item3.png",
+      img: "/kendo-react/kendo-react-e-commerce-astro-app/sample-item3.png",
       title: "Casual Silver Watch",
       newPrice: 85.0,
     },

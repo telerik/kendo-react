@@ -17,11 +17,11 @@ export const ShoppingCartList: React.FC = () => {
   }, []);
 
   const onBackClick = () => {
-    window.location.href = "/products";
+    window.location.href = "/kendo-react/kendo-react-e-commerce-astro-app/products";
   };
 
   const onProceedClick = () => {
-    window.location.href = "/paymentdetails";
+    window.location.href = "/kendo-react/kendo-react-e-commerce-astro-app/paymentdetails";
   };
 
   const updateQuantity = (index: number, value: number) => {

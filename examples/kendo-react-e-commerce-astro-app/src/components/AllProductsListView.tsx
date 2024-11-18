@@ -30,15 +30,15 @@ export const AllProductsListView = () => {
 
   const cards: CardDescriptor[] = [
     {
-      img: "/necklace_1.jfif",
+      img: "/kendo-react/kendo-react-e-commerce-astro-app/necklace_1.jfif",
       collectionText: 'Collection "SERENE"',
     },
     {
-      img: "/ring_1.jfif",
+      img: "/kendo-react/kendo-react-e-commerce-astro-app/ring_1.jfif",
       collectionText: 'Collection "AURELIA"',
     },
     {
-      img: "/1111.jfif",
+      img: "/kendo-react/kendo-react-e-commerce-astro-app/1111.jfif",
       collectionText: 'Collection "RAVINA"',
     },
   ];
@@ -61,7 +61,7 @@ export const AllProductsListView = () => {
             title={title}
             subtitle={subtitle}
             contentText={contentText}
-            img="/bracelets.png"
+            img="/kendo-react/kendo-react-e-commerce-astro-app/bracelets.png"
             order={order}
             link={null}
           />
