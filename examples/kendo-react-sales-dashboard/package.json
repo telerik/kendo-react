@@ -5,25 +5,25 @@
   "dependencies": {
     "@progress/kendo-data-query": "^1.7.0",
     "@progress/kendo-drawing": "^1.21.1",
-    "@progress/kendo-react-buttons": "^8.5.0",
-    "@progress/kendo-react-charts": "^8.5.0",
-    "@progress/kendo-react-dateinputs": "^8.5.0",
-    "@progress/kendo-react-dialogs": "^8.5.0",
-    "@progress/kendo-react-dropdowns": "^8.5.0",
-    "@progress/kendo-react-grid": "^8.5.0",
-    "@progress/kendo-react-inputs": "^8.0.0",
-    "@progress/kendo-react-intl": "^8.0.0",
-    "@progress/kendo-react-layout": "^8.0.0",
-    "@progress/kendo-react-pdf": "^8.5.0",
-    "@progress/kendo-react-ripple": "^8.5.0",
+    "@progress/kendo-react-buttons": "^9.0.0",
+    "@progress/kendo-react-charts": "^9.0.0",
+    "@progress/kendo-react-dateinputs": "^9.0.0",
+    "@progress/kendo-react-dialogs": "^9.0.0",
+    "@progress/kendo-react-dropdowns": "^9.0.0",
+    "@progress/kendo-react-grid": "^9.0.0",
+    "@progress/kendo-react-inputs": "^9.0.0",
+    "@progress/kendo-react-intl": "^9.0.0",
+    "@progress/kendo-react-layout": "^9.0.0",
+    "@progress/kendo-react-pdf": "^9.0.0",
+    "@progress/kendo-react-ripple": "^9.0.0",
     "hammerjs": "^2.0.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "react-scripts": "5.0.1",
-    "@progress/kendo-theme-default": "^9.1.0",
-    "@progress/kendo-theme-material": "^9.1.0"
+    "@progress/kendo-theme-default": "^10.0.1",
+    "@progress/kendo-theme-material": "^10.0.1"
   },
   "overrides": {
     "follow-redirects": ">=1.15.4",
