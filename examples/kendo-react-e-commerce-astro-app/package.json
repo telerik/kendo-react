@@ -2,12 +2,15 @@
   "name": "kendo-react-e-commerce-astro-app",
   "type": "module",
   "version": "0.0.1",
+  "homepage": "https://telerik.github.io/kendo-react/kendo-react-e-commerce-astro-app/",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -37,6 +40,7 @@
     "@progress/kendo-theme-default": "^10.0.1",
     "@progress/kendo-theme-utils": "^10.0.1",
     "astro": "^4.16.6",
+    "gh-pages": "^6.1.1",
     "nanostores": "^0.11.3",
     "typescript": "^5.6.3"
   }
