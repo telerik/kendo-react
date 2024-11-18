@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Menu, MenuSelectEvent } from "@progress/kendo-react-layout";
+import { Menu, MenuItemModel, MenuSelectEvent } from "@progress/kendo-react-layout";
 import { Button } from "@progress/kendo-react-buttons";
 import { SvgIcon } from "@progress/kendo-react-common";
 import { InputPrefix, InputSeparator, TextBox, Switch } from "@progress/kendo-react-inputs";
@@ -11,6 +11,11 @@ import languageItems from "../data/language-items";
 import { AppBar, AppBarSection } from "@progress/kendo-react-layout";
 import { useAdminContext } from "../helpers/AdminContext";
 import { useCategoriesContext } from "../helpers/CategoriesContext"; 
+
+interface CustomMenuItemModel extends MenuItemModel {
+  page?: string;
+}
+
 
 const Header: React.FC = () => {
   const navigate = useNavigate();
@@ -26,10 +31,10 @@ const Header: React.FC = () => {
   };
 
   const handleMenuSelect = (event: MenuSelectEvent) => {
-    const selectedItem = event.item;
-  
-    if (selectedItem.url) {
-      navigate(selectedItem.url);
+    const selectedItem: CustomMenuItemModel = event.item;
+
+    if (selectedItem.page) {
+      navigate(selectedItem.page);
       return;
     }
   
@@ -43,7 +48,6 @@ const Header: React.FC = () => {
   };
 
   return (
-    <>
       <AppBar themeColor="inherit">
         <AppBarSection className="k-flex-basis-0 k-flex-grow k-gap-2 k-align-items-center" style={{ paddingLeft: "50px" }}>
           <a href="#" className="k-d-sm-flex" style={{ marginRight: "50px" }}>
@@ -75,6 +79,7 @@ const Header: React.FC = () => {
             onClick={handleCartClick}
           />
           <Switch
+            className="switch-width"
             onLabel="Admin"
             offLabel="Client"
             onChange={handleSwitchChange}
@@ -82,7 +87,6 @@ const Header: React.FC = () => {
           <Menu items={languageItems} onSelect={handleMenuSelect} />
         </AppBarSection>
       </AppBar>
-    </>
   );
 };
 
