@@ -19,7 +19,7 @@ import { Label } from '@progress/kendo-react-labels';
 
 const Contacts: React.FC = () => {
   const onSubmitClick = () => {
-    window.location.href = "/thankyou";
+    window.location.href = "/kendo-react/kendo-react-e-commerce-astro-app/thankyou";
   };
 
   return (

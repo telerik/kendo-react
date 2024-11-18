@@ -1,7 +1,7 @@
 const items = [
     {
       "text": "Home",
-      "page": "/"
+      "page": "."
     },
     {
       "text": "Jewelry",
