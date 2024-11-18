@@ -1,108 +1,94 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { MultiSelect, DropDownList } from "@progress/kendo-react-dropdowns";
 import { SvgIcon } from "@progress/kendo-react-common";
 import { filterIcon, sortAscIcon } from "@progress/kendo-svg-icons";
-import { FilterDescriptor, SortDescriptor, State } from "@progress/kendo-data-query";
+import { FilterDescriptor, State } from "@progress/kendo-data-query";
+import { useStore } from "@nanostores/react";
+import { selectedLanguage } from "../helpers/languageStore";
+import enMessages from "../data/messages/en";
+import frMessages from "../data/messages/fr";
+import esMessages from "../data/messages/es";
 
-const chips: string[]= ["Bracelets", "Rings", "Earrings", "Watches", "Necklaces"];
-const statuses:  string[] = ["Sale", "Recommended", "Must Have"];
-const materials: string[] = ["Gold", "Silver"];
+const translations = {
+  en: enMessages,
+  fr: frMessages,
+  es: esMessages,
+};
+
+const getTranslations = (language: string) => {
+  return translations[language] || translations["en"];
+};
 
 interface FilterComponentProps {
   updateUI: (state: State) => void;
 }
 
 export const FilterComponent: React.FC<FilterComponentProps> = ({ updateUI }) => {
+  const language = useStore(selectedLanguage); 
+  const t = getTranslations(language); 
+
   const [categoryValue, setCategoryValue] = useState<string[]>([]);
-  const [statusValue, setStatusValue] = useState<string>("Recommended");
-  const [materialValue, setMaterialValue] = useState<string>("Material");
+  const [statusValue, setStatusValue] = useState<string>(t.statusesData[0]);
+  const [materialValue, setMaterialValue] = useState<string>(t.materialPlaceholder);
+
+  const chips = t.categoriesData || [];
+  const statuses = t.statusesData || [];
+  const materials = t.materialsData || [];
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const category = params.get("category");
+    setCategoryValue([]);
+    setStatusValue(t.statusesData[0]);
+    setMaterialValue(t.materialPlaceholder);
+    updateUI({ filter: undefined, sort: undefined }); 
+  }, [language, t, updateUI]);
 
-    if (category && category !== "All") {
-      setCategoryValue([category]);
-      applyCategoryFilter([category]);
-    } else {
-      setCategoryValue([]);
-      applyCategoryFilter([]);
+  const applyFilters = useCallback(() => {
+    const filters: FilterDescriptor[] = [];
+
+    if (categoryValue.length > 0) {
+      filters.push({
+        field: "category",
+        operator: "eq",
+        value: categoryValue[0], 
+      });
     }
-  }, []);
 
-  const applyCategoryFilter = (categories: string[]) => {
-    if (categories.length === 0) {
-      updateUI({ filter: undefined, sort: undefined });
-      return;
-    }
-
-    const filters = categories.map((category) => ({
-      field: "category",
-      operator: "eq",
-      value: category,
-    }));
-
-    const customCompositeFilters: State = {
-      filter: {
-        logic: "or",
-        filters,
-      },
-      sort: undefined,
-    };
-
-    updateUI(customCompositeFilters);
-  };
-
-  const onCategoryChange = (e: any) => {
-    setCategoryValue(e.value);
-    applyCategoryFilter(e.value);
-  };
-
-  const onStatusChange = (e: any) => {
-    setStatusValue(e.value);
-
-    const newSorts: SortDescriptor[] = [
-      {
+    if (statusValue !== t.statusesData[0]) {
+      filters.push({
         field: "status",
-        dir: "desc",
-      },
-    ];
+        operator: "eq",
+        value: statusValue, 
+      });
+    }
 
-    const customCompositeFilters: State = {
-      filter: undefined,
-      sort: newSorts,
-    };
-
-    updateUI(customCompositeFilters);
-  };
-
-  const onMaterialChange = (e: any) => {
-    setMaterialValue(e.value);
-
-    const newFilter: FilterDescriptor[] = [
-      {
+    if (materialValue !== t.materialPlaceholder) {
+      filters.push({
         field: "material",
         operator: "eq",
-        value: e.value,
-      },
-    ];
+        value: materialValue,
+      });
+    }
 
     const customCompositeFilters: State = {
-      filter: {
-        logic: "or",
-        filters: newFilter,
-      },
+      filter: filters.length > 0 ? { logic: "and", filters } : undefined,
       sort: undefined,
     };
 
     updateUI(customCompositeFilters);
-    setCategoryValue([]);
-  };
+  }, [categoryValue, statusValue, materialValue, t, updateUI]);
+
+  useEffect(() => {
+    applyFilters();
+  }, [categoryValue, statusValue, materialValue, applyFilters]);
+
+  const onCategoryChange = (e: any) => setCategoryValue(e.value);
+  const onStatusChange = (e: any) => setStatusValue(e.value);
+  const onMaterialChange = (e: any) => setMaterialValue(e.value);
 
   const clearFilters = () => {
     setCategoryValue([]);
-    setStatusValue("Recommended");
-    setMaterialValue("Material");
+    setStatusValue(t.statusesData[0]);
+    setMaterialValue(t.materialPlaceholder);
     updateUI({ filter: undefined, sort: undefined });
   };
 
@@ -110,13 +96,13 @@ export const FilterComponent: React.FC<FilterComponentProps> = ({ updateUI }) =>
     <section className="k-d-flex k-justify-content-between k-align-items-center">
       <span className="k-d-flex k-align-items-center">
         <span className="k-d-flex k-align-items-center k-pr-2">
-          <SvgIcon icon={filterIcon}></SvgIcon> Filter:
+          <SvgIcon icon={filterIcon}></SvgIcon> {t.filterLabel}
         </span>
         <span className="k-pr-2">
           <MultiSelect
             data={chips}
             value={categoryValue}
-            placeholder="Category"
+            placeholder={t.categoryPlaceholder}
             onChange={onCategoryChange}
             style={{ minWidth: "119px" }}
           />
@@ -127,14 +113,14 @@ export const FilterComponent: React.FC<FilterComponentProps> = ({ updateUI }) =>
       </span>
       <span className="k-d-flex k-align-items-center">
         <span className="k-d-flex k-align-items-center k-pr-2">
-          <SvgIcon icon={sortAscIcon}></SvgIcon> Sort by:
+          <SvgIcon icon={sortAscIcon}></SvgIcon> {t.sortByLabel}
         </span>
         <span>
           <DropDownList data={statuses} value={statusValue} onChange={onStatusChange} />
         </span>
       </span>
       <button className="k-button k-button-flat" onClick={clearFilters}>
-        Clear Filters
+        {t.clearFiltersButton}
       </button>
     </section>
   );

@@ -136,4 +136,3 @@ export const FilterComponent: React.FC<FilterComponentProps> = ({ updateUI }) =>
     </section>
   );
 };
-

@@ -20,6 +20,17 @@ import { Button } from "@progress/kendo-react-buttons";
 import { orderBy } from "@progress/kendo-data-query";
 import { chartAreaStackedIcon } from "@progress/kendo-svg-icons";
 import { sampleData } from "../data/shared-gd-sampleChartData";
+import { useStore } from "@nanostores/react";
+import { selectedLanguage } from "../helpers/languageStore";
+import enMessages from "../data/messages/en";
+import frMessages from "../data/messages/fr";
+import esMessages from "../data/messages/es";
+
+const translations = {
+  en: enMessages,
+  fr: frMessages,
+  es: esMessages,
+};
 
 const DATA_ITEM_KEY = "ID";
 const SELECTED_FIELD = "selected";
@@ -35,6 +46,8 @@ interface PageState {
 }
 
 const AdminView: React.FC = () => {
+  const language = useStore(selectedLanguage); 
+  const t = translations[language]; 
   const gridRef = React.useRef<GridHandle>(null);
   const [selectedState, setSelectedState] = React.useState<SelectedState>({});
   const [sort, setSort] = React.useState<{ field: string; dir: "asc" | "desc" }[]>([
@@ -134,10 +147,10 @@ const AdminView: React.FC = () => {
           disabled={disabled}
           style={{ marginRight: "10px" }}
         >
-          Chart of Selected Data
+          {t.chartSelectedDataButton}
         </Button>
         <Button svgIcon={chartAreaStackedIcon} onClick={handleTop3Sales}>
-          Top 3 Sales per Category
+          {t.top3SalesButton}
         </Button>
       </div>
       <Grid
@@ -165,13 +178,13 @@ const AdminView: React.FC = () => {
           setSort(e.sort as { field: string; dir: "asc" | "desc" }[]);
         }}
       >
-        <GridColumn field="URL" title="Product" cell={URLImageCell} />
-        <GridColumn field="Product" title="Name" />
-        <GridColumn field="SKU" title="SKU" />
-        <GridColumn field="Category" title="Category" />
-        <GridColumn field="Price" title="Price" />
-        <GridColumn field="Quantity" title="Quantity" />
-        <GridColumn field="Sales" title="Total Sales" />
+        <GridColumn field="URL" title={t.grid.productTitle} cell={URLImageCell} />
+        <GridColumn field="Product" title={t.grid.nameTitle} />
+        <GridColumn field="SKU" title={t.grid.skuTitle} />
+        <GridColumn field="Category" title={t.grid.categoryTitle} />
+        <GridColumn field="Price" title={t.grid.priceTitle} />
+        <GridColumn field="Quantity" title={t.grid.quantityTitle} />
+        <GridColumn field="Sales" title={t.grid.totalSalesTitle} />
       </Grid>
 
       {showChartWizard && (
