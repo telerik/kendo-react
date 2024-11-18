@@ -36,7 +36,7 @@ updates:
     labels:
       - "Dependencies"
 
-    - package-ecosystem: "npm"
+  - package-ecosystem: "npm"
     directory: "/examples/kendo-react-e-commerce-astro-app"
     schedule:
       interval: "daily"
