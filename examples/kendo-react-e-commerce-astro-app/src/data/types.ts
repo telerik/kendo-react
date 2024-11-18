@@ -1,23 +1,31 @@
 export type CardDescriptor = {
     img: string;
-    collectionText: string;
+    collectionText?: string;
+    collectionTextKey?: string;
+
 };
 
 export type DataModel = {
     text: string | undefined;
 }
 
-export type ListDataDescriptor = {
-    id?: number;
-    img: string | undefined;
-    status: string | null;
-    title: string;
-    rating?: number;
+export interface ListDataDescriptor {
+    id: number;
+    img: string;
+    title: string; 
+    description?: string;
+    reviews?: number; 
+    rating: number;
+    titleKey?: string;
     category: string;
+    categoryKey?: string;
+    descriptionKey?: string;
+    status?: string; 
     material: string;
     oldPrice: number | null;
     newPrice: number;
-};
+  }
+  
 
 export type BackgroundImageProps = {
     title: string;
@@ -28,6 +36,7 @@ export type BackgroundImageProps = {
 
 export type CardListProps = {
     data: any[];
+    layout: "grid" | "list";
 }
 
 export type SectionProps = {

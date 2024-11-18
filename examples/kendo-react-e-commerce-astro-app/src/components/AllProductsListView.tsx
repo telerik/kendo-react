@@ -1,94 +1,134 @@
-import * as React from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Layout } from "../components/Layout";
 import { OrderedImgText } from "../components/OrderedImageCard";
 import { CustomSection } from "../components/CustomizedSection";
-import { listData } from "../data/listData";
 import { FilterComponent } from "../components/FilterComponent";
 import { CardsList } from "../components/CardsList";
 import { CategoryList } from "../components/CategoryList";
-import { CardDescriptor } from "../data/types";
-import { DataModel } from "../data/types";
-
 import { Breadcrumb } from "@progress/kendo-react-layout";
 import { Button, ButtonGroup } from "@progress/kendo-react-buttons";
 import { layout2By2Icon, gridLayoutIcon } from "@progress/kendo-svg-icons";
 import { process, State } from "@progress/kendo-data-query";
+import getTranslatedListData from "../data/listData";
+import { useStore } from "@nanostores/react";
+import { selectedLanguage } from "../helpers/languageStore";
+import { loadMessages, LocalizationProvider } from "@progress/kendo-react-intl";
 
-export const AllProductsListView = () => {
-  const title = "Fine Selection";
-  const subtitle = "Enjoy the real craftsmanship";
-  const contentText =
-    "Jewelry is a meaningful form of self-expression that enhances personal style and adds beauty to any occasion.";
-  const order = "first";
+import enMessages from "../data/messages/en";
+import frMessages from "../data/messages/fr";
+import esMessages from "../data/messages/es";
 
-  const [data, setData] = React.useState(listData);
+loadMessages(enMessages, "en");
+loadMessages(frMessages, "fr");
+loadMessages(esMessages, "es");
 
-  const updateUI = (newState: State) => {
-    const newData = process(listData, newState);
-    setData(newData.data);
-  };
+const messages = {
+  en: enMessages,
+  fr: frMessages,
+  es: esMessages,
+};
 
-  const cards: CardDescriptor[] = [
+export const AllProductsListView: React.FC = () => {
+  const language = useStore(selectedLanguage);
+  const t = messages[language];
+
+  const [translatedData, setTranslatedData] = useState(() => getTranslatedListData());
+  const [filteredData, setFilteredData] = useState(translatedData);
+  const [currentLayout, setCurrentLayout] = useState<"grid" | "list">("grid");
+
+  useEffect(() => {
+    const updatedData = getTranslatedListData();
+    setTranslatedData(updatedData);
+    setFilteredData(updatedData);
+  }, [language]);
+
+  const updateUI = useCallback(
+    (newState: State) => {
+      const updatedData = process(translatedData, newState).data;
+      setFilteredData(updatedData);
+    },
+    [translatedData]
+  );
+
+  const cards = [
     {
       img: "/kendo-react/kendo-react-e-commerce-astro-app/necklace_1.jfif",
-      collectionText: 'Collection "SERENE"',
+      collectionText: t.collectionSerene,
     },
     {
       img: "/kendo-react/kendo-react-e-commerce-astro-app/ring_1.jfif",
-      collectionText: 'Collection "AURELIA"',
+      collectionText: t.collectionAurelia,
     },
     {
       img: "/kendo-react/kendo-react-e-commerce-astro-app/1111.jfif",
-      collectionText: 'Collection "RAVINA"',
+      collectionText: t.collectionRavina,
     },
   ];
 
-  const BreakcrumbData: DataModel[] = [
-    { text: "Home" },
-    { text: "Jewelry" },
+  const breadcrumbData = [
+    { text: t.breadcrumbHome },
+    { text: t.breadcrumbJewelry },
   ];
 
   return (
-    <>
-      <Layout>
-        <section
-          className="k-d-grid k-grid-cols-12 k-justify-content-center k-align-items-center k-col-span-12"
-          style={{
-            paddingTop: "60px",
-          }}
-        >
-          <OrderedImgText
-            title={title}
-            subtitle={subtitle}
-            contentText={contentText}
-            img="/kendo-react/kendo-react-e-commerce-astro-app/bracelets.png"
-            order={order}
-            link={null}
-          />
-        </section>
-      </Layout>
-      <Layout>
-        <CustomSection>
-          <CategoryList title="Our Collections" subtitle="Enjoy an excellent selection of fine jewelry" data={cards} />
-        </CustomSection>
-      </Layout>
-      <Layout>
-        <section className="k-d-flex k-justify-content-between">
-          <Breadcrumb data={BreakcrumbData} />
-          <ButtonGroup>
-            <Button fillMode={"flat"} svgIcon={gridLayoutIcon} />
-            <Button fillMode={"flat"} svgIcon={layout2By2Icon} />
-          </ButtonGroup>
-        </section>
-      </Layout>
-      <Layout>
-        <FilterComponent updateUI={updateUI} />
-      </Layout>
-      <Layout>
-        <CardsList data={data} />
-      </Layout>
-    </>
+    <LocalizationProvider language={language}>
+      <>
+        <Layout>
+          <section
+            className="k-d-grid k-grid-cols-12 k-justify-content-center k-align-items-center k-col-span-12"
+            style={{ paddingTop: "60px" }}
+          >
+            <OrderedImgText
+              title={t.allProductsTitle}
+              subtitle={t.allProductsSubtitle}
+              contentText={t.allProductsContentText}
+              img="/kendo-react/kendo-react-e-commerce-astro-app/bracelets.png"
+              order="first"
+              link={null}
+            />
+          </section>
+        </Layout>
+
+        <Layout>
+          <CustomSection>
+            <CategoryList
+              title={t.ourCollectionsTitle}
+              subtitle={t.ourCollectionsSubtitle}
+              data={cards}
+            />
+          </CustomSection>
+        </Layout>
+
+        <Layout>
+          <section className="k-d-flex k-justify-content-between k-align-items-center k-py-4">
+            <Breadcrumb data={breadcrumbData} />
+            <ButtonGroup>
+              <Button
+                fillMode="flat"
+                svgIcon={gridLayoutIcon}
+                selected={currentLayout === "grid"}
+                onClick={() => setCurrentLayout("grid")}
+              />
+              <Button
+                fillMode="flat"
+                svgIcon={layout2By2Icon}
+                selected={currentLayout === "list"}
+                onClick={() => setCurrentLayout("list")}
+              />
+            </ButtonGroup>
+          </section>
+        </Layout>
+
+        <Layout>
+          <FilterComponent updateUI={updateUI} />
+        </Layout>
+
+        <Layout>
+          <CardsList data={filteredData} layout={currentLayout} />
+        </Layout>
+      </>
+    </LocalizationProvider>
   );
 };
 
-export default AllProductsListView
+export default AllProductsListView;
