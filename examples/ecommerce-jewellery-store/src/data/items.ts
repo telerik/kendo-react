@@ -1,7 +1,7 @@
 const items = [
     {
       "text": "Home",
-      "url": "/"
+      "page": "/"
     },
     {
       "text": "Jewelry",
@@ -9,7 +9,7 @@ const items = [
     },
     {
       "text": "Contacts",
-      "url": "contacts"
+      "page": "contacts"
     }
   ];
   

@@ -24,3 +24,7 @@ html, body {
   top: auto !important;
   z-index: 1000; 
 }
+
+.switch-width {
+  width: 72px !important;
+}
