@@ -2,7 +2,7 @@ import { ListDataDescriptor } from "./types.ts";
 
 export const listData: ListDataDescriptor[] = [
   {
-    img: "/listViewImages/diamondWeddingRing.png",      
+    img: "/kendo-react/kendo-react-e-commerce-astro-app/listViewImages/diamondWeddingRing.png",      
     status: "sale",
     title: "Diamond Wedding Ring",
     category: "Rings",
@@ -11,7 +11,7 @@ export const listData: ListDataDescriptor[] = [
     newPrice: 890,
   },
   {
-    img: "/listViewImages/silverBraceletCross.png",
+    img: "/kendo-react/kendo-react-e-commerce-astro-app/listViewImages/silverBraceletCross.png",
     status: "recommended",
     category: "Bracelets",
     material: "Silver",
@@ -20,7 +20,7 @@ export const listData: ListDataDescriptor[] = [
     newPrice: 270,
   },
   {
-    img: "/listViewImages/pinkSilverBracelet.png",
+    img: "/kendo-react/kendo-react-e-commerce-astro-app/listViewImages/pinkSilverBracelet.png",
     status: null,
     category: "Bracelets",
     material: "Silver",
@@ -29,7 +29,7 @@ export const listData: ListDataDescriptor[] = [
     newPrice: 460,
   },
   {
-    img: "/listViewImages/yellowGoldEarrings.png",
+    img: "/kendo-react/kendo-react-e-commerce-astro-app/listViewImages/yellowGoldEarrings.png",
     status: "sale",
     category: "Earrings",
     material: "Silver",
@@ -38,7 +38,7 @@ export const listData: ListDataDescriptor[] = [
     newPrice: 380,
   },
   {
-    img: "/listViewImages/necklace.png",
+    img: "/kendo-react/kendo-react-e-commerce-astro-app/listViewImages/necklace.png",
     status: null,
     category: "Necklaces",
     material: "Silver",
@@ -47,7 +47,7 @@ export const listData: ListDataDescriptor[] = [
     newPrice: 400,
   },
   {
-    img: "/listViewImages/handmadeSilverEarrings.png",
+    img: "/kendo-react/kendo-react-e-commerce-astro-app/listViewImages/handmadeSilverEarrings.png",
     status: null,
     category: "Earrings",
     material: "Silver",
@@ -56,7 +56,7 @@ export const listData: ListDataDescriptor[] = [
     newPrice: 650,
   },
   {
-    img: "/listViewImages/diamondWeddingBands.png",
+    img: "/kendo-react/kendo-react-e-commerce-astro-app/listViewImages/diamondWeddingBands.png",
     status: "recommended",
     title: "Diamond Wedding Bands",
     material: "Gold",
@@ -65,7 +65,7 @@ export const listData: ListDataDescriptor[] = [
     newPrice: 4290,
   },
   {
-    img: "/listViewImages/casualSilverWatch.png",
+    img: "/kendo-react/kendo-react-e-commerce-astro-app/listViewImages/casualSilverWatch.png",
     status: null,
     title: "Casual Silver Watch",
     category: "Watches",
@@ -74,7 +74,7 @@ export const listData: ListDataDescriptor[] = [
     newPrice: 390,
   },
   {
-    img: "/listViewImages/silverBraceletOnyx.png",
+    img: "/kendo-react/kendo-react-e-commerce-astro-app/listViewImages/silverBraceletOnyx.png",
     status: "sale",
     title: "Silver Bracelet with Onyx",
     material: "Silver",
@@ -83,7 +83,7 @@ export const listData: ListDataDescriptor[] = [
     newPrice: 770,
   },
   {
-    img: "/listViewImages/weddingBandsPearl.png",
+    img: "/kendo-react/kendo-react-e-commerce-astro-app/listViewImages/weddingBandsPearl.png",
     status: "must have",
     title: "Wedding Bands with Pearls",
     material: "Gold",
@@ -92,7 +92,7 @@ export const listData: ListDataDescriptor[] = [
     newPrice: 900,
   },
   {
-    img: "/listViewImages/silverWeddingBands.png",
+    img: "/kendo-react/kendo-react-e-commerce-astro-app/listViewImages/silverWeddingBands.png",
     status: null,
     title: "Silver Wedding Bands",
     material: "Silver",
@@ -101,7 +101,7 @@ export const listData: ListDataDescriptor[] = [
     newPrice: 250,
   },
   {
-    img: "/listViewImages/handmadeYellowGoldRing.png",
+    img: "/kendo-react/kendo-react-e-commerce-astro-app/listViewImages/handmadeYellowGoldRing.png",
     status: null,
     category: "Rings",
     material: "Silver",
@@ -110,7 +110,7 @@ export const listData: ListDataDescriptor[] = [
     newPrice: 560,
   },
   {
-    img: "/listViewImages/diamondRingSapphire.png",
+    img: "/kendo-react/kendo-react-e-commerce-astro-app/listViewImages/diamondRingSapphire.png",
     status: "must have",
     title: "Diamond Ring with Sapphire",
     category: "Rings",
@@ -119,7 +119,7 @@ export const listData: ListDataDescriptor[] = [
     newPrice: 3590,
   },
   {
-    img: "/listViewImages/silverHeartBracelet.png",
+    img: "/kendo-react/kendo-react-e-commerce-astro-app/listViewImages/silverHeartBracelet.png",
     status: null,
     title: "Silver Heart Bracelet",
     category: "Bracelets",
@@ -128,7 +128,7 @@ export const listData: ListDataDescriptor[] = [
     newPrice: 430,
   },
   {
-    img: "/listViewImages/roseGoldEarringsOpal.png",
+    img: "/kendo-react/kendo-react-e-commerce-astro-app/listViewImages/roseGoldEarringsOpal.png",
     status: "Sale",
     title: "Rose Gold Earrings with Opal",
     category: "Earrings",
@@ -137,7 +137,7 @@ export const listData: ListDataDescriptor[] = [
     newPrice: 690,
   },
   {
-    img: "/listViewImages/silverBraceletTopaz.png",
+    img: "/kendo-react/kendo-react-e-commerce-astro-app/listViewImages/silverBraceletTopaz.png",
     status: null,
     category: "Bracelets",
     material: "Silver",
@@ -146,7 +146,7 @@ export const listData: ListDataDescriptor[] = [
     newPrice: 580,
   },
   {
-    img: "/listViewImages/handmadeDiamongRing.png",
+    img: "/kendo-react/kendo-react-e-commerce-astro-app/listViewImages/handmadeDiamongRing.png",
     status: null,
     category: "Rings",
     material: "Gold",
@@ -155,7 +155,7 @@ export const listData: ListDataDescriptor[] = [
     newPrice: 1100,
   },
   {
-    img: "/listViewImages/diamondRingRuby.png",
+    img: "/kendo-react/kendo-react-e-commerce-astro-app/listViewImages/diamondRingRuby.png",
     status: "must have",
     category: "Rings",
     material: "Gold",
@@ -164,7 +164,7 @@ export const listData: ListDataDescriptor[] = [
     newPrice: 5560,
   },
   {
-    img: "/listViewImages/stainlessSteelWatch.png",
+    img: "/kendo-react/kendo-react-e-commerce-astro-app/listViewImages/stainlessSteelWatch.png",
     status: null,
     material: "Silver",
     category: "Watches",
@@ -173,7 +173,7 @@ export const listData: ListDataDescriptor[] = [
     newPrice: 270,
   },
   {
-    img: "/listViewImages/goldEarringsGarnet.png",
+    img: "/kendo-react/kendo-react-e-commerce-astro-app/listViewImages/goldEarringsGarnet.png",
     status: null,
     category: "Earrings",
     material: "Gold",

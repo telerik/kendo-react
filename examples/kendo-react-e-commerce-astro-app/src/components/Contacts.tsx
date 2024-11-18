@@ -73,7 +73,7 @@ const Contacts: React.FC = () => {
           </div>
           <div className="k-col-span-5 k-col-start-8 k-d-flex k-flex-col k-align-items-start">
             <img
-              src="/contactsImage.png"
+              src="/kendo-react/kendo-react-e-commerce-astro-app/contactsImage.png"
               alt="Contacts"
               style={{
                 maxWidth: '630px',

@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
       <div className="k-d-flex k-flex-wrap k-justify-content-between k-gap-8 k-text-align-left">
         <div className="k-flex-basis-250 k-flex-grow-1 k-mb-4 k-mt-6" style={{marginLeft: '50px'}}> 
           <a href="#" className="k-d-block k-mb-4 k-text-align-center">
-          <img src="/vilora-logo.png" alt="Logo" />
+          <img src="/kendo-react/kendo-react-e-commerce-astro-app/vilora-logo.png" alt="Logo" />
           </a>
           <p className="k-m-0">We use cookies to improve your experience.</p> 
           <p className="k-m-0">All rights reserved.</p>

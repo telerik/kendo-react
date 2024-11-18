@@ -5,7 +5,7 @@ export const BackgroundImage = (props: BackgroundImageProps) => {
   const { img, title, subtitle, buttonText } = props;
 
   const onButtonClick = () => {
-    window.location.href="/products"
+    window.location.href="/kendo-react/kendo-react-e-commerce-astro-app/products"
   }
 
   return (

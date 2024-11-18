@@ -6,12 +6,12 @@ import { Button } from "@progress/kendo-react-buttons";
 const ThankYou: React.FC = () => {
 
   const onBacktoShoppingClick = () => {
-    window.location.href = "/products";
+    window.location.href = "/kendo-react/kendo-react-e-commerce-astro-app/products";
   };
 
   return (
     <>
-    <BackgroundImage img="/present.png" title="" subtitle="" />
+    <BackgroundImage img="/kendo-react/kendo-react-e-commerce-astro-app/present.png" title="" subtitle="" />
       <Layout>
         <div className="k-d-flex k-flex-col k-justify-content-center k-align-items-center k-h-100 k-text-center">
           <h1>Thank You For Your Order!</h1>

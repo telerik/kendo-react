@@ -21,7 +21,7 @@ import {
 
 const PaymentDetails: React.FC = () => {
   const onSubmitClick = () => {
-    window.location.href = "/thankyou";
+    window.location.href = "/kendo-react/kendo-react-e-commerce-astro-app/thankyou";
   };
 
   return (

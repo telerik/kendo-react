@@ -4,19 +4,19 @@ import { TestemonialsDataDescriptor } from '../data/types';
 
 const testemonialsData: TestemonialsDataDescriptor[] = [
     {
-        image: '/testemonials1.jpg',
+        image: '/kendo-react/kendo-react-e-commerce-astro-app/testemonials1.jpg',
         name: "Erica Moore",
         rating: 5,
         description: "Vilora exceeded all my expectations! The craftsmanship of my diamond necklace is absolutely stunning, and the attention to detail is unparalleled. From the moment I placed my order to the day it arrived, the entire experience was flawless."
     },
     {
-        image: '/testemonials2.jpg',
+        image: '/kendo-react/kendo-react-e-commerce-astro-app/testemonials2.jpg',
         name: "Kelvin Hettinger",
         rating: 4.5,
         description: "I couldn't be happier with my custom engagement ring from Vilora. The team helped me design the perfect piece, and the final result was even more beautiful than I imagined. Their service, quality, and dedication to excellence make Vilora my go-to for all fine jewelry."
     },
     {
-        image: '/testemonials3.jpg',
+        image: '/kendo-react/kendo-react-e-commerce-astro-app/testemonials3.jpg',
         name: "Karen Brooks",
         rating: 5,
         description: "Vilora’s collection is nothing short of breathtaking. I recently purchased a white sapphire ring, and it’s become my favorite piece. The elegance and brilliance of the jewelry reflect their impeccable taste and high standards. Highly recommend!"
