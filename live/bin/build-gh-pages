@@ -15,7 +15,12 @@ do
   rm -rf build
   npm run build
   mkdir -p ../../live/build/${PROJECT}
-  mv -v build/* ../../live/build/${PROJECT}
+
+if [ "$PROJECT" = "kendo-react-e-commerce-astro-app" ]; then
+  mv -v dist/* "../../live/build/${PROJECT}"
+else
+  mv -v build/* "../../live/build/${PROJECT}"
+fi
 
   popd > /dev/null
 done
