@@ -29,8 +29,8 @@ const Header: React.FC = () => {
     const selectedItem: CustomMenuItemModel = event.item;
 
     if (selectedItem.page) {
-      window.location.href = selectedItem.page;
-      return;
+        window.location.href = '/kendo-react/kendo-react-e-commerce-astro-app/' + selectedItem.page;
+        return;
     }
 
     const selectedCategory = selectedItem.text;
