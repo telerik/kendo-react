@@ -84,7 +84,7 @@ const Header: React.FC = () => {
             offLabel="Client"
             onChange={handleSwitchChange}
           />
-          <Menu items={languageItems} onSelect={handleMenuSelect} />
+          {/* <Menu items={languageItems} onSelect={handleMenuSelect} /> */}
         </AppBarSection>
       </AppBar>
   );
