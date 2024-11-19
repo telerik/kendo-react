@@ -44,7 +44,7 @@ const Header: React.FC = () => {
   return (
     <AppBar themeColor="inherit">
       <AppBarSection className="k-flex-basis-0 k-flex-grow k-gap-2 k-align-items-center" style={{ paddingLeft: "50px" }}>
-        <a href="/" className="k-d-sm-flex" style={{ marginRight: "50px" }}>
+        <a href="." className="k-d-sm-flex" style={{ marginRight: "50px" }}>
           <img src="/kendo-react/kendo-react-e-commerce-astro-app/vilora-logo.png" alt="Logo" />
         </a>
         <Menu items={items} onSelect={handleMenuSelect} />
@@ -67,7 +67,7 @@ const Header: React.FC = () => {
         <Button svgIcon={userIcon} fillMode="flat" className="k-ml-2" />
         <Button svgIcon={cartIcon} fillMode="flat" className="k-ml-2" onClick={handleCartClick} />
         <Switch onLabel="Admin" offLabel="Client" checked={isAdminValue} onChange={handleSwitchChange} />
-        <Menu items={languageItems} onSelect={handleMenuSelect} />
+        {/* <Menu items={languageItems} onSelect={handleMenuSelect} /> */}
       </AppBarSection>
     </AppBar>
   );
