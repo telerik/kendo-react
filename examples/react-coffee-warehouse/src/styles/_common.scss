@@ -55,12 +55,14 @@ a {
 
     .card-ranges {
         .k-daterangepicker {
+            justify-content: end;
+            
             .k-textbox-container, .k-floating-label-container {
                 padding-top: 0; 
                 min-width: 105px;
             }
 
-            .k-label {
+            .k-floating-label {
                 display: none;
             }
         }
