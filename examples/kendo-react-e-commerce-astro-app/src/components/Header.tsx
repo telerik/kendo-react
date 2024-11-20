@@ -66,7 +66,6 @@ const Header: React.FC = () => {
         <Button svgIcon={userIcon} fillMode="flat" className="k-ml-2" />
         <Button svgIcon={cartIcon} fillMode="flat" className="k-ml-2" onClick={handleCartClick} />
         <Switch onLabel="Admin" offLabel="Client" checked={isAdminValue} onChange={handleSwitchChange} />
-        {/* <Menu items={languageItems} onSelect={handleMenuSelect} /> */}
       </AppBarSection>
     </AppBar>
   );
