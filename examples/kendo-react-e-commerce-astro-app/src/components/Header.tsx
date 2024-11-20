@@ -5,7 +5,6 @@ import { SvgIcon } from "@progress/kendo-react-common";
 import { InputPrefix, InputSeparator, TextBox, Switch } from "@progress/kendo-react-inputs";
 import { searchIcon, userIcon, cartIcon } from "@progress/kendo-svg-icons";
 import items from "../data/items";
-import languageItems from "../data/language-items";
 import { AppBar, AppBarSection } from "@progress/kendo-react-layout";
 import { isAdmin } from "../helpers/adminStore";
 import { useStore } from "@nanostores/react";
