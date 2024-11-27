@@ -1,5 +1,4 @@
 import * as React from "react";
-
 import bracelets from "@/assets/bracelets.png?url";
 import necklace from "@/assets/necklace_1.jfif?url";
 import ring from "@/assets/ring_1.jfif?url";
@@ -7,92 +6,105 @@ import jewel from "@/assets/1111.jfif?url";
 import { Layout } from "../components/Layout";
 import { OrderedImgText } from "../components/OrderedImageCard";
 import { CustomSection } from "../components/CustomizedSection";
-import { listData } from "../data/listData";
 import { FilterComponent } from "../components/FilterComponent";
 import { CardsList } from "../components/CardsList";
 import { CategoryList } from "../components/CategoryList";
-import { CardDescriptor } from "../data/types";
-import { DataModel } from "../data/types";
-
 import { Breadcrumb } from "@progress/kendo-react-layout";
 import { Button, ButtonGroup } from "@progress/kendo-react-buttons";
 import { layout2By2Icon, gridLayoutIcon } from "@progress/kendo-svg-icons";
 import { process, State } from "@progress/kendo-data-query";
+import { useLanguageContext } from "../helpers/LanguageContext";
+import { useTranslatedListData } from "../data/listData";
+import { CardDescriptor, DataModel } from "../data/types";
 
 export const AllProductsListView = () => {
-  const title = "Fine Selection";
-  const subtitle = "Enjoy the real craftsmanship";
-  const contentText =
-    "Jewelry is a meaningful form of self-expression that enhances personal style and adds beauty to any occasion.";
-  const order = "first";
+  const { t } = useLanguageContext();
+  const translatedListData = useTranslatedListData();
 
-  const [data, setData] = React.useState(listData);
-  
+  const [data, setData] = React.useState(translatedListData);
+  const [currentLayout, setCurrentLayout] = React.useState<"grid" | "list">("grid");
+
   const updateUI = (newState: State) => {
-    const newData = process(listData, newState)
-    setData(newData.data)
+    const newData = process(translatedListData, newState);
+    setData(newData.data);
   };
+
+  const BreakcrumbData: DataModel[] = [
+    { text: t.breadcrumbHome },
+    { text: t.breadcrumbJewelry },
+  ];
 
   const cards: CardDescriptor[] = [
     {
       img: necklace,
-      collectionText: 'Collection "SERENE"',
+      collectionText: t.collectionSerene,
     },
     {
       img: ring,
-      collectionText: 'Collection "AURELIA"',
+      collectionText: t.collectionAurelia,
     },
     {
       img: jewel,
-      collectionText: 'Collection "RAVINA"',
+      collectionText: t.collectionRavina,
     },
   ];
 
-  const BreakcrumbData: DataModel[] = [{
-    text: "Home"
-  },
-  {
-    text: "Jewelry"
-  }]
+  
 
   return (
     <>
       <Layout>
         <section
           className="k-d-grid k-grid-cols-12 k-justify-content-center k-align-items-center k-col-span-12"
-          style={{
-            paddingTop: "60px",
-          }}
+          style={{ paddingTop: "60px" }}
         >
           <OrderedImgText
-            title={title}
-            subtitle={subtitle}
-            contentText={contentText}
+            title={t.allProductsTitle}
+            subtitle={t.allProductsSubtitle}
+            contentText={t.allProductsContentText}
             img={bracelets}
-            order={order}
+            order="first"
             link={null}
           />
         </section>
       </Layout>
+
       <Layout>
         <CustomSection>
-          <CategoryList title="Our Collections" subtitle="Enjoy an excellent selection of fine jewelry" data={cards}></CategoryList>
+          <CategoryList
+            title={t.ourCollectionsTitle}
+            subtitle={t.ourCollectionsSubtitle}
+            data={cards}
+          />
         </CustomSection>
       </Layout>
+
       <Layout>
-        <section className="k-d-flex k-justify-content-between">
-          <Breadcrumb data={BreakcrumbData}></Breadcrumb>
+        <section className="k-d-flex k-justify-content-between k-align-items-center k-py-4">
+          <Breadcrumb data={BreakcrumbData} />
           <ButtonGroup>
-            <Button fillMode={"flat"} svgIcon={gridLayoutIcon}></Button>
-            <Button fillMode={"flat"} svgIcon={layout2By2Icon}></Button>
+            <Button
+              fillMode="flat"
+              svgIcon={gridLayoutIcon}
+              selected={currentLayout === "grid"}
+              onClick={() => setCurrentLayout("grid")}
+            />
+            <Button
+              fillMode="flat"
+              svgIcon={layout2By2Icon}
+              selected={currentLayout === "list"}
+              onClick={() => setCurrentLayout("list")}
+            />
           </ButtonGroup>
         </section>
       </Layout>
+
       <Layout>
-        <FilterComponent updateUI={updateUI}></FilterComponent>
+        <FilterComponent updateUI={updateUI} />
       </Layout>
+
       <Layout>
-        <CardsList data={data}></CardsList>
+        <CardsList data={data} layout={currentLayout} />
       </Layout>
     </>
   );

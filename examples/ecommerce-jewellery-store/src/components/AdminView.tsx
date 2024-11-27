@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { getter } from '@progress/kendo-react-common';
+import * as React from "react";
+import { getter } from "@progress/kendo-react-common";
 import {
   Grid,
   GridColumn,
@@ -10,16 +10,21 @@ import {
   getSelectedStateFromKeyDown,
   GridSortChangeEvent,
   GridPageChangeEvent,
-} from '@progress/kendo-react-grid';
+} from "@progress/kendo-react-grid";
 import {
   ChartWizard,
   ChartWizardDataRow,
   getWizardDataFromGridSelection,
-} from '@progress/kendo-react-chart-wizard';
-import { Button } from '@progress/kendo-react-buttons';
-import { orderBy } from '@progress/kendo-data-query';
-import { chartAreaStackedIcon } from '@progress/kendo-svg-icons';
-import { sampleData } from '../data/shared-gd-sampleChartData';
+} from "@progress/kendo-react-chart-wizard";
+import { Button } from "@progress/kendo-react-buttons";
+import { orderBy } from "@progress/kendo-data-query";
+import { chartAreaStackedIcon } from "@progress/kendo-svg-icons";
+import { sampleData } from "../data/shared-gd-sampleChartData";
+import { useLanguageContext } from "../helpers/LanguageContext";
+import { LocalizationProvider, loadMessages } from "@progress/kendo-react-intl";
+import esMessages from "../data/messages/es";
+import frMessages from "../data/messages/fr";
+import enMessages from "../data/messages/en";
 
 interface SampleDataItem {
   ID: string;
@@ -33,8 +38,8 @@ interface SampleDataItem {
   URL: string;
 }
 
-const DATA_ITEM_KEY = 'ID';
-const SELECTED_FIELD = 'selected';
+const DATA_ITEM_KEY = "ID";
+const SELECTED_FIELD = "selected";
 const idGetter = getter(DATA_ITEM_KEY);
 
 interface SelectedState {
@@ -44,14 +49,26 @@ interface SelectedState {
 const AdminView: React.FC = () => {
   const gridRef = React.useRef<GridHandle>(null);
   const [selectedState, setSelectedState] = React.useState<SelectedState>({});
-  const [sort, setSort] = React.useState<{ field: string; dir: 'asc' | 'desc' }[]>([
-    { field: 'Sales', dir: 'desc' },
+  const [sort, setSort] = React.useState<{ field: string; dir: "asc" | "desc" }[]>([
+    { field: "Sales", dir: "desc" },
   ]);
   const [showChartWizard, setShowChartWizard] = React.useState<boolean>(false);
   const [chartData, setChartData] = React.useState<ChartWizardDataRow[]>([]);
   const [top3SalesData, setTop3SalesData] = React.useState<ChartWizardDataRow[]>([]);
   const [top3Visible, setTop3Visible] = React.useState<boolean>(false);
   const [page, setPage] = React.useState<{ skip: number; take: number }>({ skip: 0, take: 4 });
+
+  const { t, language } = useLanguageContext();
+
+  React.useEffect(() => {
+    if (language === "es") {
+      loadMessages(esMessages, "es");
+    } else if (language === "fr") {
+      loadMessages(frMessages, "fr");
+    } else {
+      loadMessages(enMessages, "en");
+    }
+  }, [language]);
 
   const data = sampleData.map((item) => ({
     ...item,
@@ -96,7 +113,7 @@ const AdminView: React.FC = () => {
       setChartData(chartWizardData);
       setShowChartWizard(true);
     } else {
-      console.error('Grid reference is not available.');
+      console.error("Grid reference is not available.");
     }
   }, [selectedState]);
 
@@ -111,8 +128,8 @@ const AdminView: React.FC = () => {
     const sortedTop3Sales = selectedData
       .sort(
         (a, b) =>
-          b.find((field) => field.field === 'Total Sales')?.value -
-          a.find((field) => field.field === 'Total Sales')?.value
+          b.find((field) => field.field === "Total Sales")?.value -
+          a.find((field) => field.field === "Total Sales")?.value
       )
       .slice(0, 3);
 
@@ -127,29 +144,30 @@ const AdminView: React.FC = () => {
     const imageUrl = field && field in dataItem ? (dataItem as Record<string, any>)[field] : dataItem.URL;
     return (
       <td>
-        <img src={imageUrl} alt="Product" style={{ width: '100px', height: 'auto' }} />
+        <img src={imageUrl} alt="Product" style={{ width: "100px", height: "auto" }} />
       </td>
     );
   };
 
   return (
-    <>
-      <div style={{ marginBottom: '10px' }}>
+    <LocalizationProvider language={language}>
+      <div style={{ marginBottom: "10px" }}>
         <Button
           svgIcon={chartAreaStackedIcon}
           onClick={handleSelectedChart}
           disabled={disabled}
-          style={{ marginRight: '10px' }}
+          style={{ marginRight: "10px" }}
         >
-          Chart of Selected Data
+          {t.chartSelectedDataButton}
         </Button>
         <Button svgIcon={chartAreaStackedIcon} onClick={handleTop3Sales}>
-          Top 3 Sales per Category
+          {t.top3SalesButton}
         </Button>
       </div>
       <Grid
+        key={language} 
         ref={gridRef}
-        style={{ height: '500px' }}
+        style={{ height: "500px" }}
         data={pagedData}
         dataItemKey={DATA_ITEM_KEY}
         selectedField={SELECTED_FIELD}
@@ -161,7 +179,7 @@ const AdminView: React.FC = () => {
         selectable={{
           enabled: true,
           drag: true,
-          mode: 'multiple',
+          mode: "multiple",
         }}
         navigatable={true}
         onSelectionChange={onSelectionChange}
@@ -169,16 +187,16 @@ const AdminView: React.FC = () => {
         sortable={true}
         sort={sort}
         onSortChange={(e: GridSortChangeEvent) => {
-          setSort(e.sort as { field: string; dir: 'asc' | 'desc' }[]);
+          setSort(e.sort as { field: string; dir: "asc" | "desc" }[]);
         }}
       >
-        <GridColumn field="URL" title="Product" cell={URLImageCell} />
-        <GridColumn field="Product" title="Name" />
-        <GridColumn field="SKU" title="SKU" />
-        <GridColumn field="Category" title="Category" />
-        <GridColumn field="Price" title="Price" />
-        <GridColumn field="Quantity" title="Quantity" />
-        <GridColumn field="Sales" title="Total Sales" />
+        <GridColumn field="URL" title={t.grid.productTitle} cell={URLImageCell} />
+        <GridColumn field="Product" title={t.grid.nameTitle} />
+        <GridColumn field="SKU" title={t.grid.skuTitle} />
+        <GridColumn field="Category" title={t.grid.categoryTitle} />
+        <GridColumn field="Price" title={t.grid.priceTitle} />
+        <GridColumn field="Quantity" title={t.grid.quantityTitle} />
+        <GridColumn field="Sales" title={t.grid.totalSalesTitle} />
       </Grid>
 
       {showChartWizard && (
@@ -194,7 +212,7 @@ const AdminView: React.FC = () => {
           onClose={() => setTop3Visible(false)}
         />
       )}
-    </>
+    </LocalizationProvider>
   );
 };
 

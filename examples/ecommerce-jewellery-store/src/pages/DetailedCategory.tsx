@@ -1,11 +1,11 @@
-import * as React from 'react';
+import * as React from "react";
 import { Layout } from "../components/Layout";
 import { OrderedImgText } from "../components/OrderedImageCard";
 import aureliaImg from "../assets/aurelia-detail-page.png";
 import { CustomSection } from "../components/CustomizedSection";
 import { Button, ButtonGroup } from "@progress/kendo-react-buttons";
 import { Breadcrumb } from "@progress/kendo-react-layout";
-import { layout2By2Icon, gridLayoutIcon } from "@progress/kendo-svg-icons"
+import { layout2By2Icon, gridLayoutIcon } from "@progress/kendo-svg-icons";
 
 import necklace from "../assets/necklace_1.jfif?url";
 import jewel from "../assets/1111.jfif?url";
@@ -13,50 +13,48 @@ import tolos from "../assets/tolosCollection.jfif";
 import { CategoryList } from "../components/CategoryList";
 import { FilterComponent } from "../components/FilterComponent";
 import { CardsList } from "../components/CardsList";
-import { listData } from '../data/listData';
-import { process, State } from '@progress/kendo-data-query';
-import { CardDescriptor } from '../data/types';
-import { DataModel } from '../data/types';
-
-const cards: CardDescriptor[] = [
-  {
-    img: necklace,
-    collectionText: "SERENE",
-  },
-  {
-    img: jewel,
-    collectionText: "RAVINA",
-  },
-  {
-    img: tolos,
-    collectionText: "TOLOS",
-  },
-];
-
-const BreakcrumbData: DataModel[] = [
-  {
-    text: "Home",
-  },
-  {
-    text: "Jewelry",
-  },
-  {
-    text: "Rings"
-  }
-];
-
+import { useTranslatedListData } from "../data/listData";
+import { process, State } from "@progress/kendo-data-query";
+import { CardDescriptor } from "../data/types";
+import { DataModel } from "../data/types";
+import { useLanguageContext } from "../helpers/LanguageContext";
 
 export const DetailedCategory = () => {
-  const [data, setData] = React.useState(listData);
-  const title = "AURELIA Collection";
-  const subtitle = "Unique handmade rings";
-  const contentText =
-    "Rings are versatile jewelry pieces that symbolize personal style, suitable for both special occasions and everyday wear.";
-  const order = "first";
+  const { t } = useLanguageContext();
+  const translatedListData = useTranslatedListData();
+  const order = 'first'
+  const [data, setData] = React.useState(translatedListData);
+
+  const cards: CardDescriptor[] = [
+    {
+      img: necklace,
+      collectionText: t.collectionSerene,
+    },
+    {
+      img: jewel,
+      collectionText: t.collectionRavina,
+    },
+    {
+      img: tolos,
+      collectionText: "TOLOS",
+    },
+  ];
+
+  const BreakcrumbData: DataModel[] = [
+    {
+      text: t.breadcrumbHome,
+    },
+    {
+      text: t.breadcrumbJewelry,
+    },
+    {
+      text: t.categories.Rings,
+    },
+  ];
 
   const updateUI = (newState: State) => {
-    const newData = process(listData, newState)
-    setData(newData.data)
+    const newData = process(translatedListData, newState);
+    setData(newData.data);
   };
 
   return (
@@ -69,9 +67,12 @@ export const DetailedCategory = () => {
           }}
         >
           <OrderedImgText
-            title={title}
-            subtitle={subtitle}
-            contentText={contentText}
+            title={t.aureliaTitle || "AURELIA Collection"}
+            subtitle={t.aureliaSubtitle || "Unique handmade rings"}
+            contentText={
+              t.aureliaContent ||
+              "Rings are versatile jewelry pieces that symbolize personal style, suitable for both special occasions and everyday wear."
+            }
             img={aureliaImg}
             order={order}
             link={null}
@@ -80,12 +81,16 @@ export const DetailedCategory = () => {
       </Layout>
       <Layout>
         <CustomSection>
-          <CategoryList title="Our Collections" subtitle='Enjoy an excellent selection of fine jewelry' data={cards}></CategoryList>
+          <CategoryList
+            title={t.ourCollectionsTitle}
+            subtitle={t.ourCollectionsSubtitle}
+            data={cards}
+          />
         </CustomSection>
       </Layout>
       <Layout>
         <section className="k-d-flex k-justify-content-between">
-          <Breadcrumb data={BreakcrumbData}></Breadcrumb>
+          <Breadcrumb data={BreakcrumbData} />
           <ButtonGroup>
             <Button fillMode={"flat"} svgIcon={gridLayoutIcon}></Button>
             <Button fillMode={"flat"} svgIcon={layout2By2Icon}></Button>
@@ -93,10 +98,10 @@ export const DetailedCategory = () => {
         </section>
       </Layout>
       <Layout>
-        <FilterComponent updateUI={updateUI}></FilterComponent>
+        <FilterComponent updateUI={updateUI} />
       </Layout>
       <Layout>
-        <CardsList data={data}></CardsList>
+        <CardsList data={data} layout="grid"/>
       </Layout>
     </>
   );

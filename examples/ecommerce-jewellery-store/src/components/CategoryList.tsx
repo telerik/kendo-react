@@ -1,17 +1,18 @@
-
 import { useNavigate } from "react-router-dom";
 import { CategoryListProps } from "../data/types";
 import { Button } from "@progress/kendo-react-buttons";
 import { CardDescriptor } from "../data/types";
+import { useLanguageContext } from "../helpers/LanguageContext";
 
 export const CategoryList: React.FC<CategoryListProps> = ({ data, title, subtitle, colSpan = 4 }) => {
     const navigate = useNavigate();
+    const { t } = useLanguageContext(); 
 
     const onNavigate = (card: CardDescriptor) => {
         if (card.collectionText === `Collection "AURELIA"`) {
-            navigate("/category")
+            navigate("/category");
         }
-    }
+    };
 
     return (
         <>
@@ -48,7 +49,7 @@ export const CategoryList: React.FC<CategoryListProps> = ({ data, title, subtitl
                                 }}
                             >
                                 <Button themeColor={"primary"} size={"large"} onClick={() => onNavigate(card)}>
-                                    Buy Now
+                                    {t.buyNowButtonText} 
                                 </Button>
                             </div>
                         </div>
@@ -57,4 +58,4 @@ export const CategoryList: React.FC<CategoryListProps> = ({ data, title, subtitl
             </div>
         </>
     );
-}
+};

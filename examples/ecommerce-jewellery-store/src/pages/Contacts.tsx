@@ -6,7 +6,7 @@ import CityInput from '../components/CityInput';
 import PhoneInput from '../components/PhoneInput';
 import AppointmentInput from '../components/AppointmentInput';
 import DateChooserInput from '../components/DateChooserInput';
-import ContactsRadioButtons from '../components/ContactsRadioButtons'
+import ContactsRadioButtons from '../components/ContactsRadioButtons';
 import contactsImage from '@/assets/contactsImage.png';
 import { Button } from '@progress/kendo-react-buttons';
 import { useNavigate } from 'react-router-dom';
@@ -18,9 +18,11 @@ import {
   FieldWrapper,
 } from '@progress/kendo-react-form';
 import { Label } from '@progress/kendo-react-labels';
+import { useLanguageContext } from '../helpers/LanguageContext';
 
 const Contacts: React.FC = () => {
   const navigate = useNavigate();
+  const { t } = useLanguageContext();
 
   const onSubmitClick = () => {
     navigate('/thankyou');
@@ -31,27 +33,27 @@ const Contacts: React.FC = () => {
       <div className="k-d-flex k-flex-col k-align-items-center k-py-12 k-px-4 k-gap-10">
         <div className="k-d-grid k-grid-cols-12 k-gap-8 k-w-full">
           <div className="k-col-span-6 k-col-start-1">
-            <h1>Get in touch</h1>
-            <p>If you have any questions, contact us</p>
+            <h1>{t.getInTouchTitle}</h1>
+            <p>{t.getInTouchSubtitle}</p>
             <Form
               render={() => (
                 <FormElement>
                   <div className="k-form-layout k-d-grid k-gap-y-6 k-gap-x-4">
                     <FieldWrapper className="k-col-span-1">
-                      <Label> Full Name </Label>
+                      <Label>{t.fullNameLabel}</Label>
                       <Field name="fullName" component={CardHolder} />
                     </FieldWrapper>
                     <FieldWrapper className="k-col-span-1">
-                      <Label> Email </Label>
+                      <Label>{t.emailLabel}</Label>
                       <Field name="email" component={EmailInput} />
                     </FieldWrapper>
                     <FieldWrapper className="k-col-span-1">
-                      <Label> Phone Number </Label>
+                      <Label>{t.phoneNumberLabel}</Label>
                       <Field name="phoneNumber" component={PhoneInput} />
                     </FieldWrapper>
                     <div className="k-d-flex k-flex-col k-align-items-start k-gap-4">
-                      <p>Type of customer</p>
-                      <ContactsRadioButtons/>
+                      <p>{t.typeOfCustomerLabel}</p>
+                      <ContactsRadioButtons />
                     </div>
                     <FieldWrapper className="k-col-span-1">
                       <Field name="city" component={CityInput} />
@@ -60,7 +62,7 @@ const Contacts: React.FC = () => {
                       <Field name="appointment" component={AppointmentInput} />
                     </FieldWrapper>
                     <FieldWrapper className="k-col-span-1">
-                      <Label> Date </Label>
+                      <Label>{t.dateLabel}</Label>
                       <Field name="date" component={DateChooserInput} />
                     </FieldWrapper>
                   </div>
@@ -72,13 +74,13 @@ const Contacts: React.FC = () => {
               onClick={onSubmitClick}
               themeColor={'primary'}
             >
-              Book a Slot
+              {t.bookSlotButton}
             </Button>
           </div>
           <div className="k-col-span-5 k-col-start-8 k-d-flex k-flex-col k-align-items-start">
             <img
               src={contactsImage}
-              alt="Contacts"
+              alt={t.contactsImageAlt}
               style={{
                 maxWidth: '630px',
                 maxHeight: '580px',
