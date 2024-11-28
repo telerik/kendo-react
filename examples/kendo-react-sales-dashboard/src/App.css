@@ -1,55 +1,56 @@
-#homepage #homepage-app-demo {
+#homepage-app-demo {
   text-align: left;
 }
 
-#homepage #homepage-app-demo h1 {
+#homepage-app-demo h1 {
   color:rgb(63, 81, 181);
   font-weight: bold;
   font-size: 2rem;
 }
 
-#homepage #homepage-app-demo .buttons-right>button {
+#homepage-app-demo .buttons-right>button {
   float: right;
   margin: 5px;
 }
 
-#homepage #homepage-app-demo {
+#homepage-app-demo {
   padding: 25px;
   position: relative;
 }
 
-#homepage #homepage-app-demo .percentage-number {
+#homepage-app-demo .percentage-number {
   color: rgb(63, 81, 181);
   font-size: 50px;
   font-weight: bold;
 }
 
-#homepage #homepage-app-demo .percentage-sign {
+#homepage-app-demo .percentage-sign {
   color: rgb(63, 81, 181);
   font-size: 40px;
 }
 
-#homepage #homepage-app-demo .percentage-container {
+#homepage-app-demo .percentage-container {
   text-align: center;
 }
-#homepage #homepage-app-demo .percentage-container:first-child {
+#homepage-app-demo .percentage-container:first-child {
   padding-bottom: 3em;
 }
 
-#homepage #homepage-app-demo .teamMate {
+#homepage-app-demo .teamMate {
   cursor: pointer;
+  display: flex;
 }
 
-#homepage #homepage-app-demo .teamMate:hover {
+#homepage-app-demo .teamMate:hover {
   background-color: rgba(0,0,0,.07);
 }
 
-#homepage #homepage-app-demo .teamMate.k-state-selected {
+#homepage-app-demo .teamMate.k-state-selected {
   color: #fff;
   background-color: #3f51b5;
 }
 
-#homepage #homepage-app-demo .teamMate:after {
+#homepage-app-demo .teamMate:after {
     content: ".";
     display: block;
     height: 0;
@@ -57,19 +58,19 @@
     clear: both;
     visibility: hidden;
 }
-#homepage #homepage-app-demo .teamMate h2 {
+#homepage-app-demo .teamMate h2 {
     font-size: 1rem;
     font-weight: normal;
     padding-top: 17px;
     margin: 0;
 }
-#homepage #homepage-app-demo .teamMate p {
+#homepage-app-demo .teamMate p {
     margin: 0;
     font-size: .7rem;
     color: inherit;
 }
 
-#homepage #homepage-app-demo .teamMate img {
+#homepage-app-demo .teamMate img {
     display: inline-block;
     vertical-align: top;
     width: 50px;
@@ -78,18 +79,18 @@
     border: 1px solid #ccc;
     border-radius: 50%;
 }
-#homepage #homepage-app-demo .mate-info {
+#homepage-app-demo .mate-info {
     display: inline-block;
     vertical-align: top;
 }
-#homepage #homepage-app-demo .panelbar-wrapper {
+#homepage-app-demo .panelbar-wrapper {
     max-width: 300px;
     margin: 0 auto;
 }
-#homepage #homepage-app-demo .project-item {
+#homepage-app-demo .project-item {
   padding:0.5em 2em;
 }
-#homepage #homepage-app-demo a.k-link {
+#homepage-app-demo a.k-link {
   font-size: 12px;
 }
 
