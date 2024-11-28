@@ -1,3 +1,13 @@
+@use "@progress/kendo-theme-material/scss/all.scss" as * with(
+  $kendo-font-family: (-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji),
+  $kendo-colors: (
+    "primary": #007bff,
+    "primary-on-surface": #007bff,
+  ),
+  $kendo-tabstrip-content-padding-x: 0,
+  $kendo-tabstrip-content-padding-y: 0,
+);
+
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
@@ -5,10 +15,8 @@
 @import "~bootstrap/scss/reboot";
 @import "~bootstrap/scss/grid";
 
-
-@import "~@progress/kendo-theme-material/dist/all.scss";
-
 @import "./fonts.scss";
+
 
 html,
 body {
@@ -51,10 +59,6 @@ body {
     background-attachment: local, local, scroll, scroll;
   }
 
-  .k-grid-container {
-    // max-height: 490px;
-  }
-
   .k-grid-pager {
     width: 100%;
     position: fixed;
@@ -62,15 +66,7 @@ body {
   }
 }
 
-.k-tabstrip .k-animation-container,
-.k-tabstrip .k-child-animation-container,
-div[role="tabpanel"],
-div[role="tabpanel"] > div {
-  height: 100%;
-}
-
 .demo-heading {
-  // position: absolute;
   font-family: "Metric";
   color: $primary;
   display: flex;
@@ -78,7 +74,7 @@ div[role="tabpanel"] > div {
   left: 1rem;
   justify-content: flex-end;
   font-size: 1.75rem;
-  margin-top: 7px;
+  margin-top: 12px;
   margin-bottom: auto;
 }
 
@@ -87,21 +83,3 @@ div[role="tabpanel"] > div {
   width: 100%;
 }
 
-.k-tabstrip {
-  height: 100%;
-  position: relative;
-
-  .k-tabstrip-items {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .k-content {
-    padding: 0;
-  }
-
-  .k-animation-container {
-    display: block;
-    widows: 100%;
-  }
-}

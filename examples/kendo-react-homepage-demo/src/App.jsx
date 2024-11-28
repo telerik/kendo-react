@@ -27,7 +27,7 @@ class App extends Component {
     return (
       <ApolloProvider client={client}>
         <h1 className="demo-heading">GitHub Issues Demo</h1>
-        <TabStrip selected={this.state.selected} onSelect={this.handleSelect} tabPosition={"top"}>
+        <TabStrip selected={this.state.selected} onSelect={this.handleSelect} tabPosition={"top"} tabAlignment={'end'}>
           <TabStripTab title="React Repo">
             <KendoGridContainer repo="react" />
           </TabStripTab>

@@ -113,7 +113,7 @@ export class KendoGridContainer extends React.Component {
                                     onDataStateChange={(e) => { this.setState(e.dataState); }}
                                     expandField="expanded"
                                     onExpandChange={this.expandChange}
-                                    style={{ height: '100%', overflow: 'auto', paddingBottom: 57 }}
+                                    style={{ height: '100%', overflow: 'auto', borderInline: 0 }}
                                     detail={(props) => <DetailComponent {...props} makeChartData={this.makeChartData} />}
                                 >
                                     <GridColumn field="node.number" title="ID" width={100} />
