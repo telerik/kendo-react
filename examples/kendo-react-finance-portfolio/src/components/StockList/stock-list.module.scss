@@ -1,12 +1,13 @@
-@import "../../styles/variables";
+$negative-value: #d9534f;
+$positive-value: #5cb85c;
 
 .symbol-cell {
-  color: $primary;
+  color: #55595c;
   font-weight: bold !important;
 }
 
 .name-cell {
-  color: $text-base;
+  color: #373a3c;
 }
 
 .price-cell {
@@ -27,4 +28,14 @@
     font-weight: 300;
     font-size: 11px;
   }
+}
+
+.grid thead {
+    background-color: #eceeef !important;
+    color: #55595c !important;
+    line-height: 1;
+    font-weight: bold !important;
+    & > th {
+      vertical-align: middle;
+    }
 }

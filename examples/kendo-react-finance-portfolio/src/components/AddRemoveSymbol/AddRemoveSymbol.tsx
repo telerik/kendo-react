@@ -7,6 +7,7 @@ import { SymbolsContext } from '../../context/SymbolsContext';
 import { SectorContext } from '../../context/SectorContext';
 import { filterBy } from "@progress/kendo-data-query";
 import styles from './add.module.scss';
+import { plusIcon, trashIcon } from '@progress/kendo-svg-icons';
 
 export interface AddRemoveSymbolProps {
     className?: string;
@@ -31,6 +32,7 @@ const customItemRender = (el: any, value: any) => (
 const customValueRender = (el: any) => (
     <el.type
         {...el.props}
+        style={{paddingInline: 0}}
     >
         Add new
     </el.type>)
@@ -81,9 +83,8 @@ export const AddRemoveSymbol = (props: AddRemoveSymbolProps) => {
     return (
         <div className={classNames(props.className)}>
             <DropDownList
-                iconClassName="k-icon k-i-add k-icon-before"
-                style={{ backgroundColor: 'white', width: "110px" }}
-                className="dropdown-icon-before"
+                svgIcon={plusIcon}
+                style={{ backgroundColor: 'white', width: "110px", flexDirection: 'row-reverse' }}
                 value={null}
                 onChange={handleSymbolsAdd}
                 data={filterBy(allSymbols, {
@@ -104,7 +105,7 @@ export const AddRemoveSymbol = (props: AddRemoveSymbolProps) => {
             />
 
             &nbsp;
-            <Button iconClass='k-icon k-i-delete' fillMode={"flat"} style={{ color: '#D9534F' }} onClick={handleRemoveClick}>Remove</Button>
+            <Button svgIcon={trashIcon} fillMode={"flat"} style={{ color: '#D9534F' }} onClick={handleRemoveClick}>Remove</Button>
 
         </div>
     )

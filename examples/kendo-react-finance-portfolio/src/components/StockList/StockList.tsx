@@ -14,6 +14,7 @@ import styles from './stock-list.module.scss';
 import { SectorContext } from '../../context/SectorContext';
 import { SymbolsContext } from '../../context/SymbolsContext';
 import { Symbol } from '../Stock/Symbol';
+import { classNames } from '@progress/kendo-react-common';
 
 
 export const StockList: React.FunctionComponent = () => {
@@ -106,14 +107,15 @@ export const StockList: React.FunctionComponent = () => {
         <>
             <Symbol symbol={symbol || 'SNAP'} data={data.find((i: any) => i.symbol === symbol) || data.find((i: any) => i.symbol === 'SNAP')} />
             <Grid
+                className={classNames(styles["grid"])}
                 data={processed}
                 selectedField="selected"
                 onSelectionChange={handleSelectionChange}
                 onRowClick={handleRowClick}
             >
                 <GridColumn field="selected" headerCell={_ => null} cell={CheckboxCell} width={40} />
-                <GridColumn field="symbol" title="Symbol" className={styles['symbol-cell']} width={70} locked={true} />
-                <GridColumn field="name" title="Name" className={styles['name-cell']} width={200} />
+                <GridColumn field="symbol" title="Symbol" className={styles['symbol-cell']} width={75} />
+                <GridColumn field="name" title="Name" className={styles['name-cell']} width={195} />
                 <GridColumn field="price" title="Price" className={styles['price-cell']} cell={PriceCell} headerCell={PriceHeaderCell} width={80} />
                 <GridColumn field="day_change" title="Change" cell={ChangeCell} width={80} />
                 <GridColumn field="change_pct" title="% Change" cell={ChangeCell} width={90} />
