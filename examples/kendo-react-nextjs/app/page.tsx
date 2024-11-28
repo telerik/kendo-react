@@ -21,7 +21,7 @@ export default function Home() {
         justifyContent: 'center',
         padding: '50px'
       }}>
-        <h3><span>KendoReact </span>with Next.js</h3>
+        <h3>KendoReact with Next.js</h3>
         <Image src="/kendoreact-logo.svg" width={140} height={200} alt="KendoReact logo" />
       </div>
       <div style={{
