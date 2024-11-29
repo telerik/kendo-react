@@ -9,7 +9,7 @@ const Footer = (props) => {
                     <a href="https://www.telerik.com/purchase/license-agreement/progress-kendoreact?utm_medium=cpm&utm_source=stackblitz-app&utm_campaign=kendo-ui-react-awareness-license-agreement">License Agreement</a>
                 </div>
                 <div className='copyright'>
-                    Copyright © 2019 Software Corporation and/or its subsidiaries or affiliates. All Rights Reserved.
+                    Copyright © 2024 Software Corporation and/or its subsidiaries or affiliates. All Rights Reserved.
                 </div>
                 </div>
                 <div className='d-flex ml-auto'>
