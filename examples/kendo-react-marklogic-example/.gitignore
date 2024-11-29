@@ -1,0 +1,8 @@
+# misc
+.DS_Store
+# dependencies
+server/node_modules
+setup/node_modules
+# package-lock file
+server/package-lock.json
+setup/package-lock.json
