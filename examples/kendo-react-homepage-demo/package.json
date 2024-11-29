@@ -29,7 +29,8 @@
   "overrides": {
     "nth-check": ">=2.0.1",
     "postcss": ">=8.4.31",
-    "tough-cookie": ">=4.1.3"
+    "tough-cookie": ">=4.1.3",
+    "typescript": "^5.7.2"
   },
   "scripts": {
     "predeploy": "npm run build",
