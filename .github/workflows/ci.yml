@@ -35,6 +35,8 @@ jobs:
               - 'examples/kendo-react-build-a-sales-dashboard/**'
             kendo-react-e-commerce-astro-app:
               - 'examples/kendo-react-e-commerce-astro-app/**'
+            kendo-react-editor-strict-csp:
+              - 'examples/kendo-react-editor-strict-csp/**'
             kendo-react-file-manager:
               - 'examples/kendo-react-file-manager/**'
             kendo-react-finance-portfolio:
@@ -51,6 +53,8 @@ jobs:
               - 'examples/kendo-react-ssr/**'
             kendo-react-stackblitz-app:
               - 'examples/kendo-react-stackblitz-app/**'
+            kendo-unstyled-tailwind:
+              - 'examples/kendo-unstyled-tailwind/**'
             react-admin-dashboard:
               - 'examples/react-admin-dashboard/**'
             react-coffee-warehouse:
