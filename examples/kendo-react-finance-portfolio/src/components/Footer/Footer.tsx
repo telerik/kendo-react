@@ -11,7 +11,7 @@ export const Footer = () => {
         >
             <div className="container-fluid">
                 <p className="text-center m-0">
-                    Copyright © 2023 Progress Software Corporation and/or its subsidiaries or affiliates. <ProgressLogo />
+                    Copyright © 2024 Progress Software Corporation and/or its subsidiaries or affiliates. <ProgressLogo />
                 </p>
             </div>
         </footer>

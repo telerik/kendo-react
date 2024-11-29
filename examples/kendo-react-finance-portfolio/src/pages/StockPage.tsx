@@ -21,7 +21,7 @@ export const StockPage = () => {
             <Stock />
           </div>
         </div>
-        <div className={classNames("py-3")} style={{ minHeight: 600 }}>
+        <div className={classNames(styles["stock-section"], "py-3")} style={{ minHeight: 600 }}>
           <div className={"container my-3"}>
             <NavigationRow className="row justify-content-center">
               <AddRemoveSymbol

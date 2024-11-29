@@ -28,7 +28,7 @@ export class DetailComponent extends React.Component {
             <div style={{ padding: 0 }}>
                 <div className="row" style={{ height: 300 }}>
                     <div className="col-2" >
-                        <h4><strong>Author:</strong> {dataItem.node.author.login}</h4>
+                        <strong>Author: {dataItem.node.author.login}</strong>
                         <Chart style={{ width: '100%', height: 250 }} transitions={false}>
                             <ChartTitle text="Issue labels" color="black" position='bottom' font="19pt sans-serif" />
                             <ChartTooltip render={defaultTooltipRender} />
@@ -41,7 +41,7 @@ export class DetailComponent extends React.Component {
                         </Chart>
                     </div>
                     <div className="col-10 issue-description" style={{ overflowY: 'scroll', height: '100%' }}>
-                        <h4>Description</h4>
+                        <strong>Description</strong>
                         <ReactMarkDown children={dataItem.node.body} />
                     </div>
                 </div>

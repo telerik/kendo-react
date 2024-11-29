@@ -21,10 +21,10 @@ import dateFields from "cldr-dates-full/main/es/dateFields.json";
 import { process } from "@progress/kendo-data-query";
 import orders from "./data/orders.json";
 import {
-  GridDetailRow,
   Grid,
   GridToolbar,
   GridColumn,
+  GridDetailRowProps,
 } from "@progress/kendo-react-grid";
 import { DropDownList } from "@progress/kendo-react-dropdowns";
 
@@ -51,7 +51,7 @@ orders.forEach((o: any) => {
     o.shippedDate === "NULL" ? undefined : new Date(o.shippedDate);
 });
 
-class DetailComponent extends GridDetailRow {
+class DetailComponent extends React.Component<GridDetailRowProps> {
   render() {
     const dataItem = this.props.dataItem;
     return (

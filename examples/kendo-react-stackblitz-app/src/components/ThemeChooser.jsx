@@ -33,7 +33,7 @@ const ThemeChooser = (props) => {
         { id: 3, text: 'bootstrap', link: "https://unpkg.com/@progress/kendo-theme-bootstrap@latest/dist/all.css" }
     ]
     return (
-        <div className='container-fluid'>
+        <>
             <Tooltip ref={tooltip} position="left" anchorElement='target'/>
             <div className="d-flex my-2" >
                 <div className="ml-auto d-flex">
@@ -50,7 +50,7 @@ const ThemeChooser = (props) => {
                     />
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

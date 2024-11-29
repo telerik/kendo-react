@@ -61,7 +61,7 @@ function App() {
             </BadgeContainer>
           </Button>
           <Avatar type="image">
-            <img src={'https://www.telerik.com/kendo-react-ui-develop/components/images/kendoka-react.png'} alt="KendoReact Layout Kendoka Avatar" />
+            <img src={require('./assets/kendoka.png')} alt="KendoReact Layout Kendoka Avatar" />
           </Avatar>
         </AppBarSection>
       </AppBar>

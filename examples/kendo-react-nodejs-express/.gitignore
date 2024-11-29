@@ -1,3 +1,7 @@
 client/node_modules
 server/node_modules
 **/kendo-ui-license**
+
+# package-lock files
+client/package-lock.json
+server/package-lock.json

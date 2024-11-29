@@ -1,5 +1,3 @@
-@import "../../styles/variables";
-
 .wrapper-profile {
   background-color: white;
 }
@@ -16,7 +14,7 @@
 }
 
 .symbol-cell {
-    color: $primary;
+    color: #007BFF;
     font-weight: bold !important;
   }
   
@@ -30,7 +28,7 @@
       padding-bottom: 1rem;
     }
     & > td:nth-child(1) {
-      color: $text-light;
+      color: #55595C;
       font-weight: 300;
     }
     & > td:nth-child(2) {

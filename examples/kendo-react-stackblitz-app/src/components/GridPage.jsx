@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { sampleProducts } from '../common/sample-products';
 import { MyCommandCell } from './MyCommandCell.jsx';
 import { Grid, GridColumn as Column, GridToolbar } from '@progress/kendo-react-grid';
+import { Button } from '@progress/kendo-react-buttons';
 import { process } from '@progress/kendo-data-query';
 import ThemeChooser from './ThemeChooser';
 
@@ -122,21 +123,20 @@ const GridPage = (props) => {
                         {...dataState} // uncomment to enable data operations
                     >   
                         <GridToolbar>
-                            <button
+                            <Button
                                 title="Add new"
-                                className="k-button k-primary"
+                                themeColor={'primary'}
                                 onClick={addNew}
                             >
                                 Add new
-                            </button>
+                            </Button>
                             {hasEditedItem && (
-                                <button
+                                <Button
                                     title="Cancel current changes"
-                                    className="k-button"
                                     onClick={cancelCurrentChanges}
                                 >
                                     Cancel current changes
-                                </button>
+                                </Button>
                             )}
                         </GridToolbar>
                         <Column field="ProductID" title="Id" width="50px" editable={false} />
