@@ -22,7 +22,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Get changed files  
+      - name: Get changed files
         uses: dorny/paths-filter@v2
         id: changes
         with:
@@ -34,7 +34,7 @@ jobs:
             kendo-react-build-a-sales-dashboard:
               - 'examples/kendo-react-build-a-sales-dashboard/**'
             kendo-react-e-commerce-astro-app:
-              - 'examples/kendo-react-e-commerce-astro-app/**'    
+              - 'examples/kendo-react-e-commerce-astro-app/**'
             kendo-react-file-manager:
               - 'examples/kendo-react-file-manager/**'
             kendo-react-finance-portfolio:
@@ -64,7 +64,7 @@ jobs:
         working-directory: ./examples/coffee-warehouse-nextjs
         if: steps.changes.outputs.coffee-warehouse-nextjs == 'true'
         run: |
-          npm ci
+          npm i
           npm run build
 
       - name: Build Ecommerce jewellery store vite app
@@ -85,7 +85,7 @@ jobs:
         working-directory: ./examples/kendo-react-build-a-sales-dashboard
         if: steps.changes.outputs.kendo-react-build-a-sales-dashboard == 'true'
         run: |
-          npm ci
+          npm i
           npm run build
 
       - name: Build File Manager app
@@ -113,46 +113,46 @@ jobs:
         working-directory: ./examples/kendo-react-nextjs
         if: steps.changes.outputs.kendo-react-nextjs == 'true'
         run: |
-          npm ci
-          npm run build    
+          npm i
+          npm run build
 
       - name: Build React Nodejs Express app
         working-directory: ./examples/kendo-react-nodejs-express
         if: steps.changes.outputs.kendo-react-nodejs-express == 'true'
         run: |
           cd server
-          npm ci
-          cd ../client    
-          npm ci
+          npm i
+          cd ../client
+          npm i
           npm run build
 
       - name: Build React Sales Dashboard app
         working-directory: ./examples/kendo-react-sales-dashboard
         if: steps.changes.outputs.kendo-react-sales-dashboard == 'true'
         run: |
-          npm ci
-          npm run build 
+          npm i
+          npm run build
 
       - name: Build React SSR app
         working-directory: ./examples/kendo-react-ssr
         if: steps.changes.outputs.kendo-react-ssr == 'true'
         run: |
-          npm ci
-          npm run build  
+          npm i
+          npm run build
 
       - name: Build React Stackblitz app
         working-directory: ./examples/kendo-react-stackblitz-app
         if: steps.changes.outputs.kendo-react-stackblitz-app == 'true'
         run: |
-          npm ci
-          npm run build  
+          npm i
+          npm run build
 
       - name: Build React Admin Dashboard app
         working-directory: ./examples/react-admin-dashboard
         if: steps.changes.outputs.react-admin-dashboard == 'true'
         run: |
           npm ci
-          npm run build  
+          npm run build
 
       - name: Build React Coffee Warehouse app
         working-directory: ./examples/react-coffee-warehouse
@@ -167,7 +167,7 @@ jobs:
         run: |
           npm ci
           npm run build
-          
+
       - name: Build Knowledge Base Vite app
         working-directory: ./docs/knowledge-base
         if: steps.changes.outputs.knowledge-base == 'true'
