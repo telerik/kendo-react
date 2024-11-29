@@ -147,6 +147,13 @@ jobs:
           npm i
           npm run build
 
+      - name: Build React Unstyled Tailwind app
+        working-directory: ./examples/kendo-unstyled-tailwind
+        if: steps.changes.outputs.kendo-unstyled-tailwind == 'true'
+        run: |
+          npm i
+          npm run build
+
       - name: Build React Admin Dashboard app
         working-directory: ./examples/react-admin-dashboard
         if: steps.changes.outputs.react-admin-dashboard == 'true'
