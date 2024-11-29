@@ -16,6 +16,7 @@ import {
   InputClearValue,
   RadioGroup,
   TextBox,
+  type TextBoxChangeEvent,
 } from '@progress/kendo-react-inputs';
 import { Label } from '@progress/kendo-react-labels';
 import { xIcon } from '@progress/kendo-svg-icons';
@@ -28,8 +29,8 @@ const radioData = [
 
 const FormTextBox = (fieldRenderProps: FieldRenderProps) => {
   const { name, label, placeholder } = fieldRenderProps;
-  const [value, setValue] = React.useState('');
-  const handleChange = (e) => {
+  const [value, setValue] = React.useState<string | number | readonly string[] | undefined>('');
+  const handleChange = (e: TextBoxChangeEvent) => {
     setValue(e.value);
   };
   const clearClick = () => {
