@@ -12,7 +12,7 @@ import viloraLogo from '@/assets/vilora-logo.png';
 
 const Footer: React.FC = () => {
   return (
-    <section className="k-py-10 k-px-12 header"> 
+    <section className="k-py-10 k-px-12 footer"> 
       <div className="k-d-flex k-flex-wrap k-justify-content-between k-gap-8 k-text-align-left">
         <div className="k-flex-basis-250 k-flex-grow-1 k-mb-4 k-mt-6" style={{marginLeft: '50px'}}> 
           <a href="#" className="k-d-block k-mb-4 k-text-align-center">
