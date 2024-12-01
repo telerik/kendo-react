@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Menu,
   MenuSelectEvent,
@@ -20,16 +20,30 @@ interface CustomMenuItemModel extends MenuItemModel {
 
 const Header: React.FC = () => {
   const isAdminValue = useStore(isAdmin);
-  const [theme, setTheme] = useState(
-    "https://unpkg.com/@progress/kendo-theme-default@10.0.0/dist/default-main.css"
+
+  const [theme, setTheme] = useState<string>(() =>
+    typeof window !== "undefined"
+      ? localStorage.getItem("theme") ||
+        "https://unpkg.com/@progress/kendo-theme-default@10.0.0/dist/default-main.css"
+      : "https://unpkg.com/@progress/kendo-theme-default@10.0.0/dist/default-main.css"
   );
+
+  useEffect(() => {
+    const themeLink = document.getElementById("theme-link") as HTMLLinkElement;
+    if (themeLink) {
+      themeLink.href = theme;
+    } else {
+      console.error("Theme <link> tag not found");
+    }
+  }, [theme]);
 
   const handleThemeChange = (event: any) => {
     const selectedTheme = themeItems.find(
       (item) => item.themeName === event.item.themeName
     );
     if (selectedTheme) {
-      setTheme(selectedTheme.link);
+      setTheme(selectedTheme.link); 
+      localStorage.setItem("theme", selectedTheme.link); 
     }
   };
 
