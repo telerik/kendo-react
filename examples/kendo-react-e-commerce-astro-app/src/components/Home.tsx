@@ -34,7 +34,7 @@ const Home: React.FC = () => {
   const isAdminValue = useStore(isAdmin);
 
   return (
-    <>
+    <div className="k-m-auto" style={{ maxWidth: 1280 }}>
       <BackgroundImage
         title={title}
         subtitle={subtitle}
@@ -121,7 +121,7 @@ const Home: React.FC = () => {
           </Layout>
         </>
       )}
-    </>
+    </div>
   );
 };
 

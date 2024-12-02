@@ -79,7 +79,7 @@ const Header: React.FC = () => {
           className="k-flex-basis-0 k-flex-grow k-gap-2 k-align-items-center"
           style={{ paddingLeft: "50px" }}
         >
-          <a href="/" className="k-d-sm-flex" style={{ marginRight: "50px" }}>
+          <a href="/kendo-react/kendo-react-e-commerce-astro-app/" className="k-d-sm-flex" style={{ marginRight: "50px" }}>
             <img
               src="/kendo-react/kendo-react-e-commerce-astro-app/vilora-logo.png"
               alt="Logo"
