@@ -4,7 +4,6 @@
     $kendo-colors: (
       primary: #1c7cd5
     ),
-
     $kendo-h1-font-family: "Ubuntu",
     $kendo-h1-font-size: 2.5rem,
     $kendo-h1-font-weight: bold,
@@ -36,6 +35,7 @@
     $kendo-grid-padding-y: 0.4rem,
     $kendo-grid-alt-bg: transparent,
     $kendo-grid-header-bg: #eceeef,
+    $kendo-grid-footer-bg: #eceeef,
     $kendo-grid-header-text: #55595c,
     $kendo-grid-header-border: transparent,
 
@@ -45,6 +45,17 @@
     $kendo-popup-padding-y: 0,
 );
 
+:root{
+  --kendo-font-family: "Roboto", Helvetica, Arial, sans-serif;
+}
+
 .k-splitbar {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);
+}
+
+.k-grid-header .k-table-thead {
+  background-color: #eceeef;
+  td {
+    border-color: #eceeef;
+  }
 }

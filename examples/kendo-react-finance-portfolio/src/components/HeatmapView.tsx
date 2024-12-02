@@ -1,8 +1,10 @@
 import React from 'react';
 import { dataService } from '../services';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import $ from 'jquery';
 import '@progress/kendo-ui';
 import { Tooltip } from '@progress/kendo-react-tooltip';
+declare const window: any;
 
 type HeatMapItemType = {
     name : string;
@@ -20,8 +22,8 @@ type TreeDataItem = {
     name: string;
     value: number;
     items: TreeDataItem[];
-    isParentElement?: boolean;    
-} 
+    isParentElement?: boolean;
+}
 
 export const HeatmapView = () => {
     const fetchData = React.useCallback(async () => {
@@ -65,7 +67,7 @@ export const HeatmapView = () => {
             return `<span title=${title}>${props.text}<br/>${props.dataItem.change}%</span>`;
         }
 
-        $("#heatmap").kendoTreeMap({
+        window.$("#heatmap").kendoTreeMap({
             template: renderItem,
             dataSource: new kendo.data.HierarchicalDataSource({
                 transport: {
