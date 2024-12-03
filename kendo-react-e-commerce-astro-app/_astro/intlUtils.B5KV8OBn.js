@@ -1,1 +1,0 @@
-import{a as i,c as e,r as o}from"./package-metadata.Bfn5dV_P.js";function a(n){const t=n.context;return t&&t.intl?t.intl:new e("en")}function s(n){const t=n.context;return t&&t.localization?t.localization:new i}function l(n){n.contextType=o}function r(n){n.contextType=o}export{a,l as p,s,r as v};
