@@ -1,0 +1,23 @@
+.stock-item {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  cursor: pointer;
+  &:hover {
+      background-color: #e6e6e6;
+  }
+}
+
+.stock-item-symbol {
+  line-height: 1;
+  display: block;
+  font-size: 14px;
+  color: #007BFF;
+}
+
+.stock-item-name {
+  line-height: 1;
+  display: block;
+
+  font-size: 11px;
+  color: #55595C;
+}

@@ -202,7 +202,7 @@ export class VirtualizedPage extends React.Component<any, any> {
                     <GridColumn field="freight" filter="numeric" width="200px" />
                     <GridColumn field="shippedDate" filter="date" format="{0:D}" width="300px" />
                     <GridColumn field="employeeID" filter="numeric" width="200px" />
-                    <GridColumn locked field="orderID" filterable={false} title="ID" width="90px" />
+                    <GridColumn field="orderID" filterable={false} title="ID" width="90px" />
                   </Grid>
                 </ExcelExport>
                 <GridPDFExport
@@ -218,7 +218,7 @@ export class VirtualizedPage extends React.Component<any, any> {
                       <GridColumn field="freight" filter="numeric" width="200px" />
                       <GridColumn field="shippedDate" filter="date" format="{0:D}" width="300px" />
                       <GridColumn field="employeeID" filter="numeric" width="200px" />
-                      <GridColumn locked field="orderID" filterable={false} title="ID" width="90px" />
+                      <GridColumn field="orderID" filterable={false} title="ID" width="90px" />
                     </Grid>}
                 </GridPDFExport>
               </div>
