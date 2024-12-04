@@ -9,30 +9,33 @@ import {
   twitterIcon,
 } from '@progress/kendo-svg-icons';
 import viloraLogo from '@/assets/vilora-logo.png';
+import { useLanguageContext } from '../helpers/LanguageContext';
 
 const Footer: React.FC = () => {
+  const { t } = useLanguageContext();
+
   return (
     <section className="k-py-10 k-px-12 footer"> 
       <div className="k-d-flex k-flex-wrap k-justify-content-between k-gap-8 k-text-align-left">
-        <div className="k-flex-basis-250 k-flex-grow-1 k-mb-4 k-mt-6" style={{marginLeft: '50px'}}> 
+        <div className="k-flex-basis-250 k-flex-grow-1 k-mb-4 k-mt-6" style={{ marginLeft: '50px' }}> 
           <a href="#" className="k-d-block k-mb-4 k-text-align-center">
             <img src={viloraLogo} alt="Logo" />
           </a>
-          <p className="k-m-0">We use cookies to improve your experience.</p> 
-          <p className="k-m-0">All rights reserved.</p>
-          <p className="k-mt-4">Subscribe to our Newsletter:</p>
-          <Label editorId="email" className="k-sr-only">Your Email</Label>
+          <p className="k-m-0">{t.cookiesText}</p> 
+          <p className="k-m-0">{t.rightsReservedText}</p>
+          <p className="k-mt-4">{t.subscribeText}</p>
+          <Label editorId="email" className="k-sr-only">{t.emailPlaceholder}</Label>
           <TextBox
-            placeholder="Email"
+            placeholder={t.emailPlaceholder}
             className="k-w-full"
             suffix={() => (
               <InputSuffix>
                 <InputSeparator />
-                <Button themeColor="primary">Subscribe</Button>
+                <Button themeColor="primary">{t.subscribeButtonText}</Button>
               </InputSuffix>
             )}
           />
-          <p className="k-mt-6">Follow us:</p>  
+          <p className="k-mt-6">{t.followUsText}</p>  
           <div className="k-d-flex k-gap-2 k-align-items-center">
             <p className="k-d-flex k-align-items-center" style={{ gap: '10px' }}>
               <SvgIcon icon={facebookIcon} size="xlarge" /> Facebook
@@ -47,31 +50,27 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="k-flex-basis-200 k-flex-grow-1 k-d-flex k-flex-col k-gap-4 k-mt-6 k-text-align-center">  
-          <h4 className="k-color-primary k-font-bold">Customer Care</h4>
-          <a href="#" className="k-link">Contact Us</a>
-          <a href="#" className="k-link">Shopping Online</a>
-          <a href="#" className="k-link">Track Your Order</a>
-          <a href="#" className="k-link">Shipping & Delivery</a>
-          <a href="#" className="k-link">Orders & Payment</a>
-          <a href="#" className="k-link">Help</a>
+          <h4 className="k-color-primary k-font-bold">{t.customerCareTitle}</h4>
+          {Array.isArray(t.customerCareLinks) &&
+            t.customerCareLinks.map((link: string, index: number) => (
+              <a key={index} href="#" className="k-link">{link}</a>
+            ))}
         </div>
 
         <div className="k-flex-basis-200 k-flex-grow-1 k-d-flex k-flex-col k-gap-4 k-mt-6 k-text-align-center">  
-          <h4 className="k-color-primary k-font-bold">Our Company</h4>
-          <a href="#" className="k-link">Prominent Locations</a>
-          <a href="#" className="k-link">Careers</a>
-          <a href="#" className="k-link">Corporate Responsibility</a>
-          <a href="#" className="k-link">Sustainability</a>
-          <a href="#" className="k-link">Society Care</a>
+          <h4 className="k-color-primary k-font-bold">{t.ourCompanyTitle}</h4>
+          {Array.isArray(t.ourCompanyLinks) &&
+            t.ourCompanyLinks.map((link: string, index: number) => (
+              <a key={index} href="#" className="k-link">{link}</a>
+            ))}
         </div>
 
-        <div className="k-flex-basis-200 k-flex-grow-1 k-d-flex k-flex-col k-gap-4 k-mt-6 k-text-align-center" style={{marginRight: '150px'}}>  
-          <h4 className="k-color-primary k-font-bold">Legal & Privacy</h4>
-          <a href="#" className="k-link">Terms of Use</a>
-          <a href="#" className="k-link">Conditions of Sale</a>
-          <a href="#" className="k-link">Return Policy</a>
-          <a href="#" className="k-link">Privacy Policy</a>
-          <a href="#" className="k-link">Cookie Policy</a>
+        <div className="k-flex-basis-200 k-flex-grow-1 k-d-flex k-flex-col k-gap-4 k-mt-6 k-text-align-center" style={{ marginRight: '150px' }}>  
+          <h4 className="k-color-primary k-font-bold">{t.legalPrivacyTitle}</h4>
+          {Array.isArray(t.legalPrivacyLinks) &&
+            t.legalPrivacyLinks.map((link: string, index: number) => (
+              <a key={index} href="#" className="k-link">{link}</a>
+            ))}
         </div>
       </div>
     </section>

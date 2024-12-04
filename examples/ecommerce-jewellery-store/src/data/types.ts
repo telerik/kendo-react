@@ -26,9 +26,62 @@ export type BackgroundImageProps = {
     img: string;
 };
 
+export interface GridTranslations {
+    productTitle: string;
+    nameTitle: string;
+    skuTitle: string;
+    categoryTitle: string;
+    priceTitle: string;
+    quantityTitle: string;
+    totalSalesTitle: string;
+  }
+  
+  export interface Translations {
+    grid: GridTranslations;
+    chartSelectedDataButton: string;
+    top3SalesButton: string;
+    languageSpanish: string;
+    searchPlaceholder: string;
+    adminLabel: string;
+    clientLabel: string;
+    shoppingCartTitle: string;
+    backButtonText: string;
+    emptyCartMessage: string;
+    paymentDetailsTitle: string;
+    paymentDetailsSubtitle: string;
+    fullNameLabel: string;
+    emailLabel: string;
+    phoneNumberLabel: string;
+    proceedToCheckoutButtonText: string;
+    whyChooseUs: string;
+    returnPolicyTitle: string;
+    returnPolicyContent: string;
+    includedGiftWrappingTitle: string;
+    includedGiftWrappingContent: string;
+    discountCodeTitle: string;
+    discountCodeContent: string;
+    testimonialsData: { name: string; rating: number; description: string }[];
+    testimonialsTitle: string;
+    testimonialsSubtitle: string;
+    statuses: { [key: string]: string };
+    categories: { [key: string]: string };
+    materials: { [key: string]: string };
+    diamondWeddingRing: string;
+    silverBraceletWithCross: string;
+    [key: string]: any; 
+  }
+  
+  export type LanguageContextType = {
+    t: Translations;
+    language: "en" | "fr" | "es";
+    setLanguage: React.Dispatch<React.SetStateAction<"en" | "fr" | "es">>;
+  };
+
 export type CardListProps = {
     data: any[];
+    layout: "grid" | "list";
 }
+
 
 export type SectionProps = {
     children: React.ReactNode

@@ -12,9 +12,11 @@ import { AppBar, AppBarSection } from "@progress/kendo-react-layout";
 import { useAdminContext } from "../helpers/AdminContext";
 import { useCategoriesContext } from "../helpers/CategoriesContext";
 import { useThemeContext } from "../helpers/ThemeContext";
+import { useLanguageContext } from "../helpers/LanguageContext";
 
 interface CustomMenuItemModel extends MenuItemModel {
   page?: string;
+  id?: string;
 }
 
 const Header: React.FC = () => {
@@ -22,6 +24,7 @@ const Header: React.FC = () => {
   const { toggleRole } = useAdminContext();
   const { setSelectedCategory } = useCategoriesContext();
   const { theme, setTheme } = useThemeContext();
+  const { setLanguage, t } = useLanguageContext();
 
   const handleThemeChange = (event: any) => {
     const selectedTheme = themeItems.find((item) => item.themeName === event.item.themeName);
@@ -42,7 +45,7 @@ const Header: React.FC = () => {
   };
 
   const handleMenuSelect = (event: MenuSelectEvent) => {
-    const selectedItem: CustomMenuItemModel = event.item;
+    const selectedItem = event.item as CustomMenuItemModel;
 
     if (selectedItem.page) {
       navigate(selectedItem.page);
@@ -50,7 +53,7 @@ const Header: React.FC = () => {
     }
 
     const selectedCategory = selectedItem.text;
-    if (selectedCategory === "All") {
+    if (selectedCategory === t.all) {
       setSelectedCategory(null);
     } else {
       setSelectedCategory(selectedCategory ?? null);
@@ -58,19 +61,52 @@ const Header: React.FC = () => {
     }
   };
 
+  const handleLanguageMenuSelect = (event: MenuSelectEvent) => {
+    const selectedItem = event.item as CustomMenuItemModel;
+    const selectedLanguage = selectedItem.id?.replace("lang-", "") as "en" | "fr" | "es";
+    
+    if (["en", "fr", "es"].includes(selectedLanguage)) {
+      setLanguage(selectedLanguage);
+    } 
+  };
+  
+  const translatedItems = items.map((item) => ({
+    ...item,
+    text: t[`menu${item.text}`] || item.text,
+    items: item.items?.map((subItem) => ({
+      ...subItem,
+      text: t[`menu${subItem.text}`] || subItem.text,
+    })),
+  }));
+
+  const languageMenu = [
+    {
+      text: t.languageMenuTitle,
+      items: [
+        { text: t.languageEnglish, id: "lang-en" },
+        { text: t.languageFrench, id: "lang-fr" },
+        { text: t.languageSpanish, id: "lang-es" },
+      ],
+    },
+  ];
+
   return (
     <>
       <link id="theme-link" rel="stylesheet" href={theme} />
       <AppBar themeColor="inherit">
-        <AppBarSection className="k-flex-basis-0 k-flex-grow k-gap-2 k-align-items-center" style={{ paddingLeft: "50px" }}>
+        <AppBarSection
+          className="k-flex-basis-0 k-flex-grow k-gap-2 k-align-items-center"
+          style={{ paddingLeft: "50px" }}
+        >
           <a href="/" className="k-d-sm-flex" style={{ marginRight: "50px" }}>
             <img src={viloraLogo} alt="Logo" />
           </a>
-          <Menu items={items} onSelect={handleMenuSelect} />
+          <Menu items={translatedItems} onSelect={handleMenuSelect} />
         </AppBarSection>
+
         <AppBarSection className="k-flex-basis-0 k-flex-grow k-justify-content-end k-gap-1.5">
           <TextBox
-            placeholder="Search"
+            placeholder={t.searchPlaceholder}
             prefix={() => (
               <>
                 <InputPrefix orientation="horizontal">
@@ -92,7 +128,13 @@ const Header: React.FC = () => {
             fillMode="flat"
             onItemClick={handleThemeChange}
           />
-          <Switch className="switch-width" onLabel="Admin" offLabel="Client" onChange={handleSwitchChange} />
+          <Switch
+            className="switch-width"
+            onLabel={t.adminLabel}
+            offLabel={t.clientLabel}
+            onChange={handleSwitchChange}
+          />
+          <Menu items={languageMenu} onSelect={handleLanguageMenuSelect} />
         </AppBarSection>
       </AppBar>
     </>

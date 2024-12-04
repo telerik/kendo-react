@@ -21,6 +21,7 @@ import homeServicesImage from '../assets/homeServicesImage.png';
 import { Testemonials } from '../components/Testemonials';
 import { useAdminContext } from "../helpers/AdminContext";
 import AdminView from "../components/AdminView";
+import { useLanguageContext } from "../helpers/LanguageContext";
 
 const data: CardDescriptor[] = [
   { img: silverBraceletOnyx, collectionText: "Silver Bracelet with Onyx" },
@@ -41,16 +42,14 @@ const watchData: CardDescriptor[] = [
 
 const Home: React.FC = () => {
   const { isAdmin } = useAdminContext();
-  const title = "Vilora Jewelry";
-  const subtitle = "we offer exquisite jewelry, each showcasing timeless elegance";
-  const buttonText = "See Collections";
+  const { t } = useLanguageContext(); // Access translations
 
   return (
     <>
       <BackgroundImage
-        title={title}
-        subtitle={subtitle}
-        buttonText={buttonText}
+        title={t.title}
+        subtitle={t.subtitle}
+        buttonText={t.buttonText}
         img={model}
       />
 
@@ -67,65 +66,77 @@ const Home: React.FC = () => {
               className="k-d-grid k-grid-cols-12 k-justify-content-center k-align-items-center k-col-span-12"
               style={{ paddingTop: "60px" }}
             >
-              <CategoryList title='Our Bestsellers' subtitle='Enjoy an excellent selection of fine jewelry' data={data} />
+              <CategoryList
+                title={t.bestsellersTitle}
+                subtitle={t.bestsellersSubtitle}
+                data={data}
+              />
             </section>
           </Layout>
           <Layout>
             <CustomSection>
               <OrderedImgText
-                title='Timeless Classics'
-                subtitle='Get our unique handmade collections'
-                contentText='Jewelry enhances style and adds elegance, with each piece telling a unique story.'
+                title={t.timelessTitle}
+                subtitle={t.timelessSubtitle}
+                contentText={t.timelessContent}
                 img={homeModel2}
-                order='first'
-                link="Shop Now"
-                
+                order="first"
+                link={t.buyNowButtonText}
               />
             </CustomSection>
           </Layout>
           <Layout>
             <CustomSection>
               <OrderedImgText
-                title='Fine Jewelry'
-                subtitle='Get our unique handmade collections'
-                contentText="Jewelry elevates one's style and brings sophistication, with every piece narrating a distinct tale."
+                title={t.fineJewelryTitle}
+                subtitle={t.fineJewelrySubtitle}
+                contentText={t.fineJewelryContent}
                 img={homeModel3}
-                order='last'
-                link="Shop Now"
+                order="last"
+                link={t.buyNowButtonText}
               />
             </CustomSection>
           </Layout>
           <Layout>
             <CustomSection>
-              <CategoryList colSpan={6} title='Our Rings' subtitle='Enjoy an excellent selection of fine rings' data={ringsData} />
+              <CategoryList
+                colSpan={6}
+                title={t.ringsTitle}
+                subtitle={t.ringsSubtitle}
+                data={ringsData}
+              />
             </CustomSection>
           </Layout>
           <Layout>
             <CustomSection>
               <OrderedImgText
-                title='Always On Time'
-                subtitle='Get our unique watches'
-                contentText='High-end gold watches for men are the epitome of luxury, combining precision with sophisticated craftsmanship.'
+                title={t.alwaysOnTimeTitle}
+                subtitle={t.alwaysOnTimeSubtitle}
+                contentText={t.alwaysOnTimeContent}
                 img={homeWatch1}
-                order='first'
-                link="Shop Now"
+                order="first"
+                link={t.buyNowButtonText}
               />
             </CustomSection>
           </Layout>
           <Layout>
             <CustomSection>
-              <CategoryList title='Our Watches' subtitle='Enjoy an excellent selection of watches' data={watchData} />
+              <CategoryList
+                title={t.watchesTitle}
+                subtitle={t.watchesSubtitle}
+                data={watchData}
+              />
             </CustomSection>
           </Layout>
           <Layout>
             <CustomSection>
               <OrderedImgText
-                title='Services'
-                subtitle='Explore expert repairs to elevate your experience'
-                contentText='Vilora provides services like custom designs, repairs, and appraisals to enhance the customer experience.'
+                title={t.servicesTitle}
+                subtitle={t.servicesSubtitle}
+                contentText={t.servicesContent}
                 img={homeServicesImage}
-                order='last'
-                link="Learn More"
+                order="last"
+                link={t.learnMoreButtonText}
               />
             </CustomSection>
           </Layout>
