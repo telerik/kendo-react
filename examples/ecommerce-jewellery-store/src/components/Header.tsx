@@ -67,10 +67,7 @@ const Header: React.FC = () => {
     
     if (["en", "fr", "es"].includes(selectedLanguage)) {
       setLanguage(selectedLanguage);
-      console.log(`Language changed to: ${selectedLanguage}`);
-    } else {
-      console.error(`Invalid language selected: ${selectedLanguage}`);
-    }
+    } 
   };
   
   const translatedItems = items.map((item) => ({
