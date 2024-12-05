@@ -1,7 +1,0 @@
-import{r as o}from"./index.B76fyJ3R.js";import{l as D,n as E,r as h,s as e}from"./index.fyhapWxR.js";import{e as C,a as R,l as p,s as x,L as I}from"./package-metadata.DJUVDG_u.js";import"./package-metadata.TVBBE_0N.js";/**
- * @license
- *-------------------------------------------------------------------------------------------
- * Copyright © 2024 Progress Software Corporation. All rights reserved.
- * Licensed under commercial license. See LICENSE.md in the package root for more information
- *-------------------------------------------------------------------------------------------
- */const u=b=>{D(C);const{id:f,editorId:y,editorRef:t,editorDisabled:r,children:l,editorValid:a,style:$,className:i,optional:g}=b,N=R(),s=g?N.toLanguageString(p,x[p]):"",k=s&&o.createElement("span",{className:"k-label-optional"},s),n=E(),c=n&&n.uLabel,L=o.useCallback(d=>{if(t&&t.current&&!r){t.current.focus&&(d.preventDefault(),t.current.focus());const m=t.current.actionElement;m&&(d.preventDefault(),m.click())}},[t]),v=o.useMemo(()=>h(I.label({c,empty:!l,invalid:a===!1,disabled:r===!0}),i),[c,l,a,r,i]);return o.createElement("label",{id:f,htmlFor:y,onClick:L,style:$,className:v},l,k)};u.propTypes={id:e.string,editorId:e.string,editorRef:e.oneOfType([e.func,e.shape({current:e.any})]),editorValid:e.bool,editorDisabled:e.bool,style:e.object,className:e.string,optional:e.bool};u.displayName="KendoReactLabel";export{u};
