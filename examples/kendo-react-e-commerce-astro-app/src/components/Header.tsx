@@ -84,19 +84,20 @@ const Header: React.FC = () => {
   );
 
   const [theme, setTheme] = useState<string>(
-    () =>
-      typeof window !== "undefined"
-        ? localStorage.getItem("theme") ||
-          "https://unpkg.com/@progress/kendo-theme-default@10.0.0/dist/default-main.css"
-        : "https://unpkg.com/@progress/kendo-theme-default@10.0.0/dist/default-main.css"
+    "https://unpkg.com/@progress/kendo-theme-default@10.0.0/dist/default-main.css"
   );
+
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme) {
+      setTheme(storedTheme);
+    }
+  }, []);
 
   useEffect(() => {
     const themeLink = document.getElementById("theme-link") as HTMLLinkElement;
     if (themeLink) {
       themeLink.href = theme;
-    } else {
-      console.error("Theme <link> tag not found");
     }
   }, [theme]);
 
