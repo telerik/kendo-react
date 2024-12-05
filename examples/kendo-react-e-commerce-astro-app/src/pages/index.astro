@@ -1,14 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Home from '../components/Home';
 import Header from '../components/Header';
+import Home from '../components/Home';
 import Footer from '../components/Footer';
 ---
 
 <Layout>
-  <Header client:load />
+  <Header client:only="react" />
     <main>
-      <Home client:load />
+      <Home client:only="react" />
     </main>
-  <Footer client:load />
+  <Footer client:only="react" />
 </Layout>
