@@ -1,1 +1,0 @@
-import{b6 as i,b7 as e,aP as o}from"./languageStore.CZ3M92k_.js";function c(n){const t=n.context;return t&&t.intl?t.intl:new e("en")}function s(n){const t=n.context;return t&&t.localization?t.localization:new i}function l(n){n.contextType=o}function r(n){n.contextType=o}export{c as a,l as p,s,r as v};
