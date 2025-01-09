@@ -24,7 +24,7 @@
     "@progress/kendo-react-treeview": "^9.0.0",
     "@progress/kendo-svg-icons": "^4.0.0",
     "@progress/kendo-theme-default": "^10.0.1",
-    "next": "latest",
+    "next": "^14.2.21",
     "react": "latest",
     "react-dom": "latest"
   },
@@ -33,5 +33,8 @@
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "typescript": "latest"
+  },
+  "overrides": {
+    "nanoid": "^3.3.8"
   }
 }
