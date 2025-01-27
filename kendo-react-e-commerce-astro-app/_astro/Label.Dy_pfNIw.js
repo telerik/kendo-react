@@ -1,4 +1,4 @@
-import{r as l}from"./index.B76fyJ3R.js";import{l as D,n as E,r as h,e}from"./languageStore.DlX6y5fL.js";import{e as C,a as R,l as p,s as x,L as I}from"./package-metadata.wC0jsHLg.js";/**
+import{r as l}from"./index.B76fyJ3R.js";import{l as D,n as E,r as h,e}from"./languageStore.BsLtLxEP.js";import{e as C,a as R,l as p,s as x,L as I}from"./package-metadata.DVV4lw-W.js";/**
  * @license
  *-------------------------------------------------------------------------------------------
  * Copyright © 2025 Progress Software Corporation. All rights reserved.
