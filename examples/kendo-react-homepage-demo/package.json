@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.8.10",
-    "@progress/kendo-data-query": "^1.7.0",
+    "@progress/kendo-data-query": "^1.7.1",
     "@progress/kendo-drawing": "^1.21.2",
     "@progress/kendo-react-charts": "^9.3.1",
     "@progress/kendo-react-dateinputs": "^9.3.1",
@@ -14,7 +14,7 @@
     "@progress/kendo-react-inputs": "^9.0.0",
     "@progress/kendo-react-intl": "^9.0.0",
     "@progress/kendo-react-layout": "^9.0.0",
-    "@progress/kendo-theme-material": "^10.1.0",
+    "@progress/kendo-theme-material": "^10.2.0",
     "bootstrap": "5.2.1",
     "dotenv": "^16.3.2",
     "graphql": "^16.8.1",
