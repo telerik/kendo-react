@@ -59,7 +59,7 @@ const PriorityCell = (props: GridCustomCellProps) => {
       props.dataItem.Priority === "Urgent" ? "error"
         : props.dataItem.Priority === "Medium priority" ? "warning"
           : props.dataItem.Priority === "Low priority" ? "success"
-            : props.dataItem.Priority === "Routine" ? "info" : "primary"}>
+            : props.dataItem.Priority === "Routine" ? "tertiary" : "primary"}>
       {props.dataItem.Priority}
     </Badge>
   </td>;
