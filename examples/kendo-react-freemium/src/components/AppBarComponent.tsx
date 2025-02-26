@@ -1,3 +1,4 @@
+import React from 'react';
 import { Button } from '@progress/kendo-react-buttons';
 import { InputPrefix, InputSeparator, TextBox } from '@progress/kendo-react-inputs';
 import { AppBar, AppBarSection, Avatar } from "@progress/kendo-react-layout";
@@ -7,13 +8,13 @@ import { SvgIcon } from '@progress/kendo-react-common';
 import logo from '../assets/logo.svg';
 import compactLogo from '../assets/compact-logo.svg';
 import { bellIcon, logoutIcon, searchIcon, slidersIcon } from '@progress/kendo-svg-icons';
-import React from 'react';
+
 
 export default function AppBarComponent() {
     const anchor = React.useRef<HTMLDivElement>(null);
     const [show, setShow] = React.useState(false);
     return (
-        <AppBar positionMode="sticky" className="bg-surface-alt p-4" themeColor='inherit'>
+        <AppBar positionMode="sticky" className="bg-surface-alt !p-4" themeColor='inherit'>
             <AppBarSection className="grow gap-4">
                 <a href="/">
                     <img src={logo} alt="Logo" className="hidden md:flex" />
@@ -48,7 +49,8 @@ export default function AppBarComponent() {
                     show={show}
                     anchor={anchor.current}
                     position={'bottom'}
-                    style={{width: '120px'}}
+                    style={{ width: '120px' }}
+                    className="[&_.k-popover-body]:!p-0"
                 >
                    <div className="k-list k-list-md">
                     <div className="k-list-content">
