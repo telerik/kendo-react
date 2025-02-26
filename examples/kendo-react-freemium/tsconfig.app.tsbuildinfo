@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/components/appbarcomponent.tsx","./src/components/drawercomponent.tsx","./src/pages/home.tsx","./src/pages/projects.tsx","./src/pages/settings.tsx","./src/pages/task.tsx","./src/pages/tasks.tsx","./src/pages/team.tsx","./src/pages/teammanagement.tsx","./src/pages/data.ts","./custom.d.ts"],"version":"5.7.3"}
