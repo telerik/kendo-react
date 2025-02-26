@@ -1,0 +1,119 @@
+.react-logo {
+  width: 889px;
+  position: absolute;
+  right: 0px;
+  top: -205px;
+  z-index: -1;
+  height: 788px;
+}
+
+.section-container {
+  padding: var(--kendo-spacing-8);
+  margin: 0 auto;
+}
+
+.center-section, .cards {
+  margin: 0 auto;
+  max-width: 1154px;
+}
+
+.center-section .section-title {
+  margin: var(--kendo-spacing-2);
+}
+
+.section-container.get-started {
+  margin: 0 auto;
+  text-align: left;
+  padding: 24px 24px 24px 48px;
+}
+
+.section-container.get-started code {
+  padding: 0 4px;
+}
+
+.welcome-title, .welcome-subtitle {
+  margin: 0;
+  font-weight: 300;
+}
+
+.welcome-title {
+  font-size: 84px;
+  line-height: 100px;
+}
+
+.welcome-subtitle {
+  font-size: 42px;
+  line-height: 50px
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 42px;
+  margin: 0;
+}
+
+.cards .section-title {
+  text-align: left;
+  margin-left: var(--kendo-spacing-6);
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.k-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--kendo-spacing-0, 0px);
+  align-items: center;
+  margin: var(--kendo-spacing-6);
+  padding: var(--kendo-spacing-0, 0px);
+  height: 310px;
+  width: 240px;
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.04), 0px 4px 16px 0px rgba(0, 0, 0, 0.12);
+}
+
+.k-card-header {
+  border: none;
+}
+
+.k-card-body {
+  text-align: left;
+}
+
+.card-list {
+  padding: var(--kendo-spacing-0, 0px);
+  margin: 0;
+  list-style-type: disc;
+  text-align: left;
+}
+
+footer {
+  padding: var(--kendo-spacing-4, 16px) 0px;
+  border: 1px solid;
+  border-color: var(--kendo-color-border, rgba(0, 0, 0, 0.08));
+  color: var(--light-theme-text-colors-kendo-subtle-text, #666666);
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .section-container .welcome-title {
+    font-size: 64px;
+    line-height: 84px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-container .welcome-title {
+    font-size: 42px;
+    line-height: 48px;
+  }
+
+  .section-container .welcome-subtitle {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
