@@ -54,7 +54,7 @@ export default function AppBarComponent() {
                 >
                    <div className="k-list k-list-md">
                     <div className="k-list-content">
-                        <ul className="k-list-ul">
+                            <ul className="k-list-ul">
                             <li className="k-list-item">
                                 <SvgIcon icon={slidersIcon}/>
                                 <span className="k-list-item-text">Settings</span>
