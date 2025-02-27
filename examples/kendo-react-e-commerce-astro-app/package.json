@@ -18,7 +18,7 @@
     "@nanostores/react": "^0.8.0",
     "@progress/kendo-data-query": "^1.7.1",
     "@progress/kendo-drawing": "^1.21.2",
-    "@progress/kendo-licensing": "^1.4.0",
+    "@progress/kendo-licensing": "^1.5.0",
     "@progress/kendo-react-animation": "^9.4.1",
     "@progress/kendo-react-buttons": "^9.4.1",
     "@progress/kendo-react-chart-wizard": "^9.4.1",
