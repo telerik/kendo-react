@@ -1,4 +1,4 @@
-import { Avatar, Breadcrumb } from "@progress/kendo-react-layout";
+import { Avatar, Breadcrumb, BreadcrumbLinkMouseEvent } from "@progress/kendo-react-layout";
 import { Button } from "@progress/kendo-react-buttons";
 import { Grid, GridColumn, GridCustomCellProps, GridPageChangeEvent, GridToolbar } from "@progress/kendo-react-grid";
 import { exportIcon, filterClearIcon, filterIcon, homeIcon, plusIcon, printIcon, searchIcon } from "@progress/kendo-svg-icons";
@@ -11,6 +11,7 @@ import { priorities, projectManagers, projectsData } from "./data";
 import { CSVLink } from 'react-csv';
 import { HeaderTdElement, PagerTargetEvent } from "@progress/kendo-react-data-tools";
 import { DropDownList } from "@progress/kendo-react-dropdowns";
+import { useNavigate } from "react-router-dom";
 
 interface DataModel {
   id: string;
@@ -128,12 +129,18 @@ export const getItems = () => {
 };
 
 export default function Projects() {
+   const navigate = useNavigate();
   const [page, setPage] = React.useState<PageState>(initialDataState);
   const [pageSizeValue, setPageSizeValue] = React.useState<number | string | undefined>();
   const [data, setData] = React.useState<any>({ data: [], total: 0 });
   const [edit, setEdit] = React.useState({});
   const [filter, setFilter] = React.useState(initialFilter);
 
+  const handleItemSelect = (e: BreadcrumbLinkMouseEvent) => {
+    if (e.id === 'home') {
+      navigate('/');
+    }
+  }
 
   React.useEffect(() => {
     let newItems = getItems();
@@ -182,7 +189,7 @@ export default function Projects() {
 
   return (
     <div style={{minHeight: 'calc(100vh - 106px)'}} className="flex flex-col p-10 gap-6">
-      <Breadcrumb data={breadcrumbItems} className="!bg-app-surface" />
+      <Breadcrumb data={breadcrumbItems} onItemSelect={handleItemSelect} className="!bg-app-surface" />
 
       <div className="flex flex-wrap items-center justify-between">
           <h1 className="text-4xl">Projects</h1>
