@@ -8,11 +8,16 @@ import { SvgIcon } from '@progress/kendo-react-common';
 import logo from '../assets/logo.svg';
 import compactLogo from '../assets/compact-logo.svg';
 import { bellIcon, logoutIcon, searchIcon, slidersIcon } from '@progress/kendo-svg-icons';
-
+import { useNavigate } from 'react-router-dom';
 
 export default function AppBarComponent() {
+    const navigate = useNavigate();
     const anchor = React.useRef<HTMLDivElement>(null);
     const [show, setShow] = React.useState(false);
+
+    const onNavigate = () => {
+        navigate('/settings');
+    };
     return (
         <AppBar positionMode="sticky" className="bg-surface-alt !p-4" themeColor='inherit'>
             <AppBarSection className="grow gap-4">
@@ -55,7 +60,7 @@ export default function AppBarComponent() {
                    <div className="k-list k-list-md">
                     <div className="k-list-content">
                             <ul className="k-list-ul">
-                            <li className="k-list-item">
+                            <li className="k-list-item" onClick={onNavigate}>
                                 <SvgIcon icon={slidersIcon}/>
                                 <span className="k-list-item-text">Settings</span>
                             </li>
