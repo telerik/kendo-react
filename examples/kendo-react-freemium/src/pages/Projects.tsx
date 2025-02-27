@@ -5,10 +5,10 @@ import { exportIcon, filterClearIcon, filterIcon, homeIcon, plusIcon, printIcon,
 import { SvgIcon } from "@progress/kendo-react-common";
 import { InputPrefix, TextBox } from "@progress/kendo-react-inputs";
 import { Badge } from "@progress/kendo-react-indicators";
-import { process, filterBy, CompositeFilterDescriptor, FilterDescriptor } from "@progress/kendo-data-query";
+import { process, filterBy, CompositeFilterDescriptor } from "@progress/kendo-data-query";
 import React from "react";
-import { priorities, ProjectData, projectManagers, projectsData } from "./data";
-import { CSVDownload, CSVLink } from 'react-csv';
+import { priorities, projectManagers, projectsData } from "./data";
+import { CSVLink } from 'react-csv';
 import { HeaderTdElement, PagerTargetEvent } from "@progress/kendo-react-data-tools";
 import { DropDownList } from "@progress/kendo-react-dropdowns";
 
@@ -225,7 +225,7 @@ export default function Projects() {
           >
               Export to CSV
           </CSVLink>
-          <CSVDownload data={data.data} target="_blank" /></Button>
+          </Button>
             <Button svgIcon={printIcon} fillMode="flat" onClick={print}>Print</Button>
         </GridToolbar>
         <GridColumn field="ProjectName" title="Project Name" width={440} />
