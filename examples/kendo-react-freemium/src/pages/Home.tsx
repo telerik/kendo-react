@@ -71,7 +71,7 @@ export default function Home() {
                             </Card>
                         </div>
                     </CardBody>
-                    <CardFooter className="border-0 !p-2">
+                    <CardFooter className="border-0 p-2">
                         <Button fillMode="flat" themeColor="primary">See all</Button>
                     </CardFooter>
                 </Card>
@@ -122,14 +122,14 @@ export default function Home() {
                             </CardBody>
                         </Card>
                     </CardBody>
-                    <CardFooter className="border-0 !p-2">
+                    <CardFooter className="border-0 p-2">
                         <Button fillMode="flat" themeColor="primary">See all</Button>
                     </CardFooter>
                 </Card>
             </div>
             <div className="col-span-2 lg:col-span-5 xl:col-span-1 h-116">
                 <Card className="rounded-2xl h-full">
-                    <CardHeader className="border-0 !flex !justify-between !items-center">
+                    <CardHeader className="border-0 flex justify-between items-center">
                         <CardTitle className="font-medium">To-Do List</CardTitle>
                         <Button fillMode="flat" themeColor="primary" svgIcon={plusIcon}>Add more tasks</Button>
                     </CardHeader>
@@ -140,7 +140,7 @@ export default function Home() {
             </div>
             <div className="col-span-2 lg:col-span-5 xl:col-span-1 h-116">
                 <Card className="rounded-2xl h-full">
-                    <CardHeader className="border-0 !flex !justify-between !items-center">
+                    <CardHeader className="border-0 flex justify-between items-center">
                         <CardTitle className="font-medium">Tasks</CardTitle>
                     </CardHeader>
                     <CardBody className="h-full overflow-y-hidden">
@@ -149,7 +149,7 @@ export default function Home() {
                             <GridColumn field="status" title="Status" editable={false} filterable={false} />
                         </Grid>
                     </CardBody>
-                    <CardFooter className="border-0 !p-2">
+                    <CardFooter className="border-0 p-2">
                         <Button fillMode="flat" themeColor="primary">See all</Button>
                     </CardFooter>
                 </Card>
