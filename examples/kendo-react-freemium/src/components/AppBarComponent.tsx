@@ -17,6 +17,7 @@ export default function AppBarComponent() {
 
     const onNavigate = () => {
         navigate('/settings');
+        setShow(false);
     };
     return (
         <AppBar positionMode="sticky" className="bg-surface-alt !p-4" themeColor='inherit'>

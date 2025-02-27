@@ -198,44 +198,6 @@
     --kendo-h6-font-weight: 700;
 }
 
-@layer base {
-    h1 {
-      font-size: var(--kendo-h1-font-size);
-      line-height: var( --kendo-h1-line-height);
-      font-weight: var(--kendo-h1-font-weight);
-    }
-
-    h2 {
-        font-size: var(--kendo-h2-font-size);
-        line-height: var( --kendo-h2-line-height);
-        font-weight: var(--kendo-h2-font-weight);
-    }
-
-    h3 {
-        font-size: var(--kendo-h3-font-size);
-        line-height: var( --kendo-h3-line-height);
-        font-weight: var(--kendo-h3-font-weight);
-    }
-
-    h4 {
-        font-size: var(--kendo-h4-font-size);
-        line-height: var( --kendo-h4-line-height);
-        font-weight: var(--kendo-h4-font-weight);
-    }
-
-    h5 {
-        font-size: var(--kendo-h5-font-size);
-        line-height: var( --kendo-h5-line-height);
-        font-weight: var(--kendo-h5-font-weight);
-    }
-
-    h6 {
-        font-size: var(--kendo-h6-font-size);
-        line-height: var( --kendo-h6-line-height);
-        font-weight: var(--kendo-h6-font-weight);
-    }
-}
-
 @theme inline {
     /* Misc */
     --color-app-surface: var( --kendo-color-app-surface );

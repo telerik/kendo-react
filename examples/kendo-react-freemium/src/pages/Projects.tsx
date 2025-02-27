@@ -185,7 +185,7 @@ export default function Projects() {
       <Breadcrumb data={breadcrumbItems} className="!bg-app-surface" />
 
       <div className="flex flex-wrap items-center justify-between">
-          <h1 className="!text-4xl">Projects</h1>
+          <h1 className="text-4xl">Projects</h1>
           <Button themeColor="primary" fillMode="outline" svgIcon={plusIcon} onClick={addNew}>Add new project</Button>
       </div>
 

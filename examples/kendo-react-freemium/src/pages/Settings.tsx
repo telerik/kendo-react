@@ -4,8 +4,9 @@ import { Avatar, Breadcrumb, Stepper, StepperChangeEvent } from "@progress/kendo
 import { FloatingLabel } from "@progress/kendo-react-labels";
 import { homeIcon, listUnorderedIcon, lockIcon, pencilIcon, wrenchIcon, xIcon } from "@progress/kendo-svg-icons";
 import React from "react";
-import { ColorPalette, ColorPaletteChangeEvent, InputSuffix, TextBox } from "@progress/kendo-react-inputs";
+import { ColorPalette, ColorPaletteChangeEvent, InputSuffix, Switch, TextBox } from "@progress/kendo-react-inputs";
 import { Popup } from "@progress/kendo-react-popup";
+import { AutoComplete, DropDownList } from "@progress/kendo-react-dropdowns";
 
 interface DataModel {
   id: string;
@@ -38,6 +39,17 @@ export default function Settings() {
   const [countryValue, setCountryValue] = React.useState('Country');
   const [cityValue, setCityValue] = React.useState('City');
   const [addressValue, setAddresslValue] = React.useState('Address');
+  const [oldPassword, setOldPassword] = React.useState('Old Password');
+  const [newPassword, setNewPassowrd] = React.useState('New Password');
+  const [confirmPassword, setConfirmPassowrd] = React.useState('Confirm New Password');
+  const [question1, setQuestion1] = React.useState('Question 1');
+  const [answer1, setAnswer1] = React.useState('Answer 1');
+  const [question2, setQuestion2] = React.useState('Question 2');
+  const [answer2, setAnswer2] = React.useState('Answer 2');
+  const [question3, setQuestion3] = React.useState('Question 3');
+  const [answer3, setAnswer3] = React.useState('Answer 3');
+  const [lang, setLang] = React.useState('-Select Language-');
+  const [timeZone, setTimeZone] = React.useState('-Select Time Zone-');
   const anchor = React.useRef<any>(null);
   const [show, setShow] = React.useState(false);
   const [color, setColor] = React.useState<string>('');
@@ -59,11 +71,13 @@ export default function Settings() {
     <>
         <div style={{minHeight: 'calc(100vh - 106px)'}} className="flex flex-col p-10 gap-6">
           <Breadcrumb data={breadcrumbItems} className="!bg-app-surface" />
-          <h1 className="!text-4xl">Settings</h1>
+          <h1 className="text-4xl">Settings</h1>
 
         <Stepper items={stepperItems} value={value} onChange={handleChange} />
 
-          <div className="grid grid-cols-2 xl:grid-cols-3">
+        {value === 0 && (
+          <>
+            <div className="grid grid-cols-2 xl:grid-cols-3">
               <div className="col-span-2 flex flex-col gap-6">
                   <span className="text-lg text-subtle font-bold">Details</span>
                   <div className="flex items-center gap-2">
@@ -133,45 +147,106 @@ export default function Settings() {
                       </FloatingLabel>
                   </div>
               </div>
-
-              {/* Accont Security
+            </div>
+            <div className="flex gap-2 mt-4">
+                <Button themeColor="primary" size="large">Save</Button>
+                <Button themeColor="primary" fillMode="outline" size="large">Cancel</Button>
+            </div>
+          </>
+        )}
+        {value === 1 && (
+          <>
+            <div className="grid grid-cols-2 xl:grid-cols-3">
               <div className="col-span-2 flex flex-col gap-6">
                   <span className="text-lg text-subtle font-bold">Password</span>
                   <div className="grid grid-cols-2 gap-6">
-                      <FloatingLabel label="Old Password">
-                          <Textbox type="password" size="large" value="Old Password" />
+                    <FloatingLabel label="Old Password" editorId={'old-password'} editorValue={oldPassword}>
+                        <TextBox type="password" size="large" value={oldPassword} onChange={e => setOldPassword(e.value as string)} suffix={() => {
+                          return (
+                          <InputSuffix>
+                              <SvgIcon icon={xIcon} onClick={() => setOldPassword('')} />
+                          </InputSuffix>)
+                        }} />
+                          </FloatingLabel>
+                      <FloatingLabel label="New Password" editorId={'new-password'} editorValue={newPassword} className="col-start-1">
+                          <TextBox type="password" size="large" value={newPassword} onChange={e => setNewPassowrd(e.value as string)} suffix={() => {
+                            return (
+                            <InputSuffix>
+                                <SvgIcon icon={xIcon} onClick={() => setNewPassowrd('')} />
+                            </InputSuffix>)
+                          }}/>
                       </FloatingLabel>
-                      <FloatingLabel label="New Password" className="col-start-1">
-                          <Textbox type="password" size="large" value="New Password" />
-                      </FloatingLabel>
-                      <FloatingLabel label="Confirm New Password">
-                          <Textbox type="password" size="large" value="Confirm New Password" />
+                      <FloatingLabel label="Confirm New Password" editorId={'confirm-password'} editorValue={confirmPassword}>
+                          <TextBox type="password" size="large" value={confirmPassword} onChange={e => setConfirmPassowrd(e.value as string)} suffix={() => {
+                            return (
+                            <InputSuffix>
+                                <SvgIcon icon={xIcon} onClick={() => setConfirmPassowrd('')} />
+                            </InputSuffix>)
+                          }}/>
                       </FloatingLabel>
                   </div>
                   <span className="text-lg text-subtle font-bold">Security Questions:</span>
                   <div className="grid grid-cols-2 gap-6">
-                      <FloatingLabel label="Question 1">
-                          <Textbox size="large" value="Question 1" />
+                    <FloatingLabel label="Question 1" editorId={'question-1'} editorValue={question1}>
+                        <TextBox size="large" value={question1} onChange={e => setQuestion1(e.value as string)} suffix={() => {
+                          return (
+                          <InputSuffix>
+                              <SvgIcon icon={xIcon} onClick={() => setQuestion1('')} />
+                          </InputSuffix>)
+                        }} />
+                          </FloatingLabel>
+                      <FloatingLabel label="Answer 1" editorId={'answer-1'} editorValue={answer1}>
+                          <TextBox size="large" value={answer1} onChange={e => setAnswer1(e.value as string)} suffix={() => {
+                            return (
+                            <InputSuffix>
+                                <SvgIcon icon={xIcon} onClick={() => setAnswer1('')} />
+                            </InputSuffix>)
+                          }}/>
                       </FloatingLabel>
-                      <FloatingLabel label="Answer 1">
-                          <Textbox type="password" size="large" value="Answer 1" />
+                      <FloatingLabel label="Question 2" editorId={'question-2'} editorValue={question2}>
+                          <TextBox size="large" value={question2} onChange={e => setQuestion2(e.value as string)} suffix={() => {
+                            return (
+                            <InputSuffix>
+                                <SvgIcon icon={xIcon} onClick={() => setQuestion2('')} />
+                            </InputSuffix>)
+                          }}/>
+                    </FloatingLabel>
+                    <FloatingLabel label="Answer 2" editorId={'answer-2'} editorValue={answer2}>
+                        <TextBox size="large" value={answer2} onChange={e => setAnswer2(e.value as string)} suffix={() => {
+                          return (
+                          <InputSuffix>
+                              <SvgIcon icon={xIcon} onClick={() => setAnswer2('')} />
+                          </InputSuffix>)
+                        }} />
+                          </FloatingLabel>
+                      <FloatingLabel label="Question 3" editorId={'question-3'} editorValue={question3}>
+                          <TextBox size="large" value={question3} onChange={e => setQuestion3(e.value as string)} suffix={() => {
+                            return (
+                            <InputSuffix>
+                                <SvgIcon icon={xIcon} onClick={() => setQuestion3('')} />
+                            </InputSuffix>)
+                          }}/>
                       </FloatingLabel>
-                      <FloatingLabel label="Question 2">
-                          <Textbox size="large" value="Question 2" />
-                      </FloatingLabel>
-                      <FloatingLabel label="Answer 2">
-                          <Textbox size="large" type="password" value="Answer 2" />
-                      </FloatingLabel>
-                      <FloatingLabel label="Question 3">
-                          <Textbox size="large" value="Question 3" />
-                      </FloatingLabel>
-                      <FloatingLabel label="Answer 3">
-                          <Textbox size="large" type="password" value="Answer 3" />
+                      <FloatingLabel label="Answer 3" editorId={'answer-3'} editorValue={answer3}>
+                          <TextBox size="large" value={answer3} onChange={e => setAnswer3(e.value as string)} suffix={() => {
+                            return (
+                            <InputSuffix>
+                                <SvgIcon icon={xIcon} onClick={() => setAnswer3('')} />
+                            </InputSuffix>)
+                          }}/>
                       </FloatingLabel>
                   </div>
-              </div> */}
-
-              {/* Preferences
+              </div>
+            </div>
+            <div className="flex gap-2 mt-4">
+                <Button themeColor="primary" size="large">Save</Button>
+                <Button themeColor="primary" fillMode="outline" size="large">Cancel</Button>
+            </div>
+          </>
+        )}
+        {value === 2 && (
+          <>
+            <div className="grid grid-cols-2 xl:grid-cols-3">
               <div className="col-span-1 col-start-1 flex flex-col gap-6">
                   <span className="text-lg text-subtle font-bold">Notification Settings:</span>
                   <div className="grid gap-6">
@@ -189,20 +264,61 @@ export default function Settings() {
                       </div>
                   </div>
                   <span className="text-lg text-subtle font-bold">Language and Localization</span>
-                  <div className="grid gap-6">
-                      <FloatingLabel label="Preferred Language">
-                          <Autocomplete size="large" placeholder="-Select Language-" />
+                <div className="grid gap-6">
+                      <FloatingLabel label="Preferred Language" editorId={'lang'} editorValue={lang}>
+                      <AutoComplete size="large" defaultValue="-Select Language-"
+                        data={["English",
+                          "Spanish",
+                          "French",
+                          "German",
+                          "Chinese",
+                          "Japanese",
+                          "Hindi",
+                          "Arabic",
+                          "Portuguese"]}
+                        value={lang} onChange={e => setLang(e.value as string)}
+                        suffix={() => {
+                            return (
+                            <InputSuffix>
+                                <SvgIcon icon={xIcon} onClick={() => setLang('-Select Language-')} />
+                            </InputSuffix>)
+                          }}/>
                       </FloatingLabel>
-                      <FloatingLabel label="Time Zone">
-                          <DropdownList size="large" placeholder="-Select Time Zone-" />
+                      <FloatingLabel label="Time Zone"editorId={'time-zone'} editorValue={timeZone}>
+                    <DropDownList size="large" defaultValue="-Select Time Zone-"
+                      value={timeZone} onChange={e => setTimeZone(e.value as string)}
+                      data={[
+                        "PST (Pacific Standard Time)",
+                        "EST (Eastern Standard Time)",
+                        "CST (Central Standard Time)",
+                        "MST (Mountain Standard Time)",
+                        "GMT (Greenwich Mean Time)",
+                        "CET (Central European Time)",
+                        "EET (Eastern European Time)",
+                        "IST (Indian Standard Time)",
+                        "JST (Japan Standard Time)",
+                        "AEST (Australian Eastern Standard Time)",
+                        "NZST (New Zealand Standard Time)",
+                        "ART (Argentina Time)",
+                        "BRT (Brazilian Time)",
+                        "WAT (West Africa Time)",
+                        "SAST (South Africa Standard Time)",
+                        "ICT (Indochina Time)",
+                        "MSK (Moscow Time)",
+                        "HST (Hawaii-Aleutian Standard Time)",
+                        "AKST (Alaska Standard Time)",
+                        "UTC"
+                      ]} />
                       </FloatingLabel>
                   </div>
-              </div> */}
-          </div>
-          <div className="flex gap-2">
-              <Button themeColor="primary" size="large">Save</Button>
-              <Button themeColor="primary" fillMode="outline" size="large">Cancel</Button>
-          </div>
+              </div>
+            </div>
+            <div className="flex gap-2 mt-4">
+                <Button themeColor="primary" size="large">Save</Button>
+                <Button themeColor="primary" fillMode="outline" size="large">Cancel</Button>
+            </div>
+          </>
+        )}
       </div>
       <div className="bg-surface-alt color-subtle p-2 text-center">
           <span>Copyright &#169; 2025 Progress Software. All rights reserved.</span>
