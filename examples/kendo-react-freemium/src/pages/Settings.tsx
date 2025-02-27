@@ -1,12 +1,13 @@
 import { Button } from "@progress/kendo-react-buttons";
 import { SvgIcon } from "@progress/kendo-react-common";
-import { Avatar, Breadcrumb, Stepper, StepperChangeEvent } from "@progress/kendo-react-layout";
+import { Avatar, Breadcrumb, BreadcrumbLinkMouseEvent, Stepper, StepperChangeEvent } from "@progress/kendo-react-layout";
 import { FloatingLabel } from "@progress/kendo-react-labels";
 import { homeIcon, listUnorderedIcon, lockIcon, pencilIcon, wrenchIcon, xIcon } from "@progress/kendo-svg-icons";
 import React from "react";
 import { ColorPalette, ColorPaletteChangeEvent, InputSuffix, Switch, TextBox } from "@progress/kendo-react-inputs";
 import { Popup } from "@progress/kendo-react-popup";
 import { AutoComplete, DropDownList } from "@progress/kendo-react-dropdowns";
+import { useNavigate } from 'react-router-dom';
 
 interface DataModel {
   id: string;
@@ -53,6 +54,7 @@ export default function Settings() {
   const anchor = React.useRef<any>(null);
   const [show, setShow] = React.useState(false);
   const [color, setColor] = React.useState<string>('');
+  const navigate = useNavigate();
 
   const handleChange = (e: StepperChangeEvent) => {
       setValue(e.value);
@@ -67,10 +69,16 @@ export default function Settings() {
     setShow(false);
   };
 
+  const handleItemSelect = (e: BreadcrumbLinkMouseEvent) => {
+    if (e.id === 'home') {
+      navigate('/');
+    }
+};
+
   return (
     <>
         <div style={{minHeight: 'calc(100vh - 106px)'}} className="flex flex-col p-10 gap-6">
-          <Breadcrumb data={breadcrumbItems} className="!bg-app-surface" />
+          <Breadcrumb data={breadcrumbItems} onItemSelect={handleItemSelect} className="!bg-app-surface" />
           <h1 className="text-4xl">Settings</h1>
 
         <Stepper items={stepperItems} value={value} onChange={handleChange} />
