@@ -26,8 +26,7 @@ const DrawerComponent: React.FC<DrawerComponentProps> = ({ children }) => {
     <Drawer
       expanded={true}
       mode="push"
-      drawerClassName="!flex-none !sticky !bg-surface-alt !px-2 !py-10 !w-16 md:!w-60 [&_.k-drawer-wrapper]:!w-12 md:[&_.k-drawer-wrapper]:!w-56"
-      style={{ height: 'calc(100vh - 70px)', top: '70px' }}
+      drawerClassName="!flex-none !sticky !bg-surface-alt !px-2 !py-10 !w-16 md:!w-60 [&_.k-drawer-wrapper]:!w-12 md:[&_.k-drawer-wrapper]:!w-56 !top-[70px] !h-[calc(100vh_-_70px)]"
       items={drawerItems.map((item, index) => ({
         ...item,
         selected: index === selected

@@ -1,19 +1,21 @@
 import { Avatar, Breadcrumb } from "@progress/kendo-react-layout";
 import { Button } from "@progress/kendo-react-buttons";
-import { Grid, GridColumn, GridCustomCellProps, GridToolbar } from "@progress/kendo-react-grid";
-import { exportIcon, homeIcon, plusIcon, printIcon, searchIcon } from "@progress/kendo-svg-icons";
+import { Grid, GridColumn, GridCustomCellProps, GridPageChangeEvent, GridToolbar } from "@progress/kendo-react-grid";
+import { exportIcon, filterClearIcon, filterIcon, homeIcon, plusIcon, printIcon, searchIcon } from "@progress/kendo-svg-icons";
 import { SvgIcon } from "@progress/kendo-react-common";
 import { InputPrefix, TextBox } from "@progress/kendo-react-inputs";
 import { Badge } from "@progress/kendo-react-indicators";
-import { process } from "@progress/kendo-data-query";
+import { process, filterBy, CompositeFilterDescriptor, FilterDescriptor } from "@progress/kendo-data-query";
 import React from "react";
-import { projectsData } from "./data";
+import { priorities, ProjectData, projectManagers, projectsData } from "./data";
+import { CSVDownload, CSVLink } from 'react-csv';
+import { HeaderTdElement, PagerTargetEvent } from "@progress/kendo-react-data-tools";
+import { DropDownList } from "@progress/kendo-react-dropdowns";
 
 interface DataModel {
   id: string;
   text?: string;
   icon?: React.ReactNode;
-  iconClass?: string;
 }
 
 const breadcrumbItems: DataModel[] = [
@@ -24,11 +26,7 @@ const breadcrumbItems: DataModel[] = [
   {
       id: "projects",
       text: "Projects"
-  },
-  // {
-  //     id: "project1",
-  //     text: "Online Learning Management System (LMS)"
-  // }
+  }
 ];
 
 const ProjectManagerCell = (props: GridCustomCellProps) => {
@@ -55,7 +53,7 @@ const StakeholderCell = (props: GridCustomCellProps) => {
 
 const PriorityCell = (props: GridCustomCellProps) => {
   return <td {...props.tdProps}>
-    <Badge rounded="full" position="inside" className="!relative" themeColor={
+    <Badge rounded="full" position="inside" className="!relative !z-0" themeColor={
       props.dataItem.Priority === "Urgent" ? "error"
         : props.dataItem.Priority === "Medium priority" ? "warning"
           : props.dataItem.Priority === "Low priority" ? "success"
@@ -65,28 +63,121 @@ const PriorityCell = (props: GridCustomCellProps) => {
   </td>;
 };
 
-const initialDataState = {
-  skip: 0,
-  take: 10
+export const DropdownFilterCell = (props: any) => {
+  const hasValue = (value: any) => Boolean(value && value !== props.defaultItem);
+  const onChange = (event: any) => {
+    const valueHasValue = hasValue(event.target.value);
+    props.onChange({
+      value: valueHasValue ? event.target.value : '',
+      operator: valueHasValue ? 'eq' : '',
+      syntheticEvent: event.syntheticEvent
+    });
+  };
+  const onClearButtonClick = (event: any) => {
+    event.preventDefault();
+    props.onChange({
+      value: '',
+      operator: '',
+      syntheticEvent: event
+    });
+  };
+  return <div className="k-filtercell gap-1">
+        <DropDownList data={props.data} onChange={onChange} value={props.value || props.defaultItem} defaultItem={props.defaultItem} defaultValue={'-Select-'}/>
+        <Button title="Filter" onClick={onChange} svgIcon={filterIcon} />
+        <Button title="Clear" disabled={!hasValue(props.value)} onClick={onClearButtonClick} svgIcon={filterClearIcon} />
+      </div>;
+};
+
+const PriorityFilterCell = (props: any) => {
+  return <HeaderTdElement columnId={props.thProps?.columnId || ''} {...props.thProps}>
+    <DropdownFilterCell {...props} data={priorities} />
+  </HeaderTdElement>;
+};
+
+const ProjectManagerFilterCell = (props: any) => {
+  return <HeaderTdElement columnId={props.thProps?.columnId || ''} {...props.thProps}>
+    <DropdownFilterCell {...props} data={projectManagers} />
+  </HeaderTdElement>;
+};
+
+const StakeholderFilterCell = (props: any) => {
+  return <HeaderTdElement columnId={props.thProps?.columnId || ''} {...props.thProps}>
+    <DropdownFilterCell {...props} data={projectManagers} />
+  </HeaderTdElement>;
+};
+
+const DATA_ITEM_KEY = 'ProjectID';
+
+const initialFilter: CompositeFilterDescriptor = {
+  logic: 'and',
+  filters: [{
+    field: 'ProductName',
+    operator: 'contains',
+    value: 'Chef'
+  }]
+};
+interface PageState {
+  skip: number;
+  take: number;
+}
+
+const initialDataState: PageState = { skip: 0, take: 10 };
+
+export const getItems = () => {
+  return projectsData;
 };
 
 export default function Projects() {
-  const [page, setPage] = React.useState(initialDataState);
-  const [pageSizeValue, setPageSizeValue] = React.useState();
-  const data = process(projectsData, {
-    skip: page.skip,
-    take: page.take
-  });
-  const pageChange = (event: any) => {
-    const targetEvent = event.targetEvent;
+  const [page, setPage] = React.useState<PageState>(initialDataState);
+  const [pageSizeValue, setPageSizeValue] = React.useState<number | string | undefined>();
+  const [data, setData] = React.useState<any>({ data: [], total: 0 });
+  const [edit, setEdit] = React.useState({});
+  const [filter, setFilter] = React.useState(initialFilter);
+
+
+  React.useEffect(() => {
+    let newItems = getItems();
+    filterBy(newItems, filter);
+    setData(process(newItems, { skip: page.skip, take: page.take }));
+  }, []);
+
+  const handleFilterChange = (event: any) => {
+    setFilter(event.filter);
+  };
+
+  const handlePageChange = (event: GridPageChangeEvent) => {
+    const targetEvent = event.targetEvent as PagerTargetEvent;
     const take = targetEvent.value === 'All' ? projectsData.length : event.page.take;
+
     if (targetEvent.value) {
-      setPageSizeValue(targetEvent.value);
+        setPageSizeValue(targetEvent.value);
     }
     setPage({
-      ...event.page,
-      take
+        ...event.page,
+        take
     });
+};
+
+  const itemChange = (event: any) => {
+    const newData = data.map((item: any) =>
+      item.ProjectID === event.dataItem.ProjectID
+        ? {
+            ...item,
+            [event.field || '']: event.value,
+          }
+        : item
+    );
+    setData(newData);
+  };
+  const addNew = () => {
+    const newDataItem = {
+      ProjectID: data.length + 1,
+    };
+    setData([newDataItem as any, ...data]);
+    setEdit((edit) => ({
+      ...edit,
+      [newDataItem.ProjectID]: true,
+    }));
   };
 
   return (
@@ -95,24 +186,30 @@ export default function Projects() {
 
       <div className="flex flex-wrap items-center justify-between">
           <h1 className="!text-4xl">Projects</h1>
-          <Button themeColor="primary" fillMode="outline" svgIcon={plusIcon}>Add new project</Button>
+          <Button themeColor="primary" fillMode="outline" svgIcon={plusIcon} onClick={addNew}>Add new project</Button>
       </div>
 
       <Grid className="k-grid-no-scrollbar"
           data={data}
+          dataItemKey={DATA_ITEM_KEY}
+          edit={edit}
+          editable={true}
+          filterable={true}
+          filter={filter}
           skip={page.skip}
           take={page.take}
           total={projectsData.length}
           pageable={{
               buttonCount: 6,
-              pageSizes: true,
+              pageSizes: [5, 10, 15, 'All'],
               pageSizeValue: pageSizeValue
-            }} onPageChange={pageChange}
+          }}
+          onPageChange={handlePageChange}
+          onFilterChange={handleFilterChange}
+          onItemChange={itemChange}
       >
         <GridToolbar>
             <TextBox
-              // value={filterValue}
-            // onChange={onFilterChange}
               className="k-grid-search"
               placeholder="Search..."
               prefix={() => (
@@ -121,15 +218,21 @@ export default function Projects() {
                 </InputPrefix>
               )}
             />
-            <span className="k-spacer"></span>
-            <Button svgIcon={exportIcon} fillMode="flat">Export to CSV</Button>
-            <Button svgIcon={printIcon} fillMode="flat">Print</Button>
+          <span className="k-spacer"></span>
+          <Button svgIcon={exportIcon} fillMode="flat">
+            <CSVLink
+              data={data.data}
+          >
+              Export to CSV
+          </CSVLink>
+          <CSVDownload data={data.data} target="_blank" /></Button>
+            <Button svgIcon={printIcon} fillMode="flat" onClick={print}>Print</Button>
         </GridToolbar>
-        <GridColumn field="ProjectName" title="Project Name" />
-        <GridColumn field="ProjectManager" title="Project Manager" width={245} cells={{ data: ProjectManagerCell }} />
-        <GridColumn field="Stakeholders" title="Stakeholder(s)" width={245} cells={{ data: StakeholderCell }} />
-        <GridColumn field="DueDate" title="Due Date" width={245} />
-        <GridColumn field="Priority" title="Priority" width={225} cells={{ data: PriorityCell }}/>
+        <GridColumn field="ProjectName" title="Project Name" width={440} />
+        <GridColumn field="ProjectManager" title="Project Manager" width={245} cells={{ data: ProjectManagerCell, filterCell: ProjectManagerFilterCell }} />
+        <GridColumn field="Stakeholders" title="Stakeholder(s)" width={245} cells={{ data: StakeholderCell, filterCell: StakeholderFilterCell }} />
+        <GridColumn field="DueDate" title="Due Date" width={245} format="{0:d}" filter="date" />
+        <GridColumn field="Priority" title="Priority" width={230} cells={{ data: PriorityCell, filterCell: PriorityFilterCell }} />
       </Grid>
     </div>
   )

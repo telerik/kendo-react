@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-@import "tailwindcss";
+
+@import "tailwindcss/theme.css";
+@import "tailwindcss/preflight.css";
+@import "tailwindcss/utilities.css";
 
 :root {
     /* Color System Swatches */
@@ -193,10 +196,45 @@
     --kendo-h4-font-weight: 700;
     --kendo-h5-font-weight: 700;
     --kendo-h6-font-weight: 700;
-
-    --bg-gradient: linear-gradient(119deg, #F8F9FF -1.78%, #F3F2FF 47.75%, #E6F5FF 97.28%);
 }
 
+@layer base {
+    h1 {
+      font-size: var(--kendo-h1-font-size);
+      line-height: var( --kendo-h1-line-height);
+      font-weight: var(--kendo-h1-font-weight);
+    }
+
+    h2 {
+        font-size: var(--kendo-h2-font-size);
+        line-height: var( --kendo-h2-line-height);
+        font-weight: var(--kendo-h2-font-weight);
+    }
+
+    h3 {
+        font-size: var(--kendo-h3-font-size);
+        line-height: var( --kendo-h3-line-height);
+        font-weight: var(--kendo-h3-font-weight);
+    }
+
+    h4 {
+        font-size: var(--kendo-h4-font-size);
+        line-height: var( --kendo-h4-line-height);
+        font-weight: var(--kendo-h4-font-weight);
+    }
+
+    h5 {
+        font-size: var(--kendo-h5-font-size);
+        line-height: var( --kendo-h5-line-height);
+        font-weight: var(--kendo-h5-font-weight);
+    }
+
+    h6 {
+        font-size: var(--kendo-h6-font-size);
+        line-height: var( --kendo-h6-line-height);
+        font-weight: var(--kendo-h6-font-weight);
+    }
+}
 
 @theme inline {
     /* Misc */
