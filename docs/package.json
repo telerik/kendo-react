@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@progress/kendo-drawing": "^1.21.2",
-    "@progress/kendo-licensing": "^1.4.0",
+    "@progress/kendo-licensing": "^1.5.0",
     "@progress/kendo-react-animation": "^9.4.1",
     "@progress/kendo-react-barcodes": "^9.4.1",
     "@progress/kendo-react-buttons": "^9.4.1",
