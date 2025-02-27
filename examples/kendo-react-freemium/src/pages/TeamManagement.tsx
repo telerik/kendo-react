@@ -23,7 +23,7 @@ const breadcrumbItems: DataModel[] = [
   }
 ];
 
-const teams = [
+const teamsChips = [
   { text: "All", value: 'all', disabled: false },
   { text: "Technology and Developement", value: 'technology', disabled: true },
   { text: "Product and Design", value: 'product', disabled: true },
@@ -31,10 +31,141 @@ const teams = [
   { text: "Marketing and Sales", value: 'marketing', disabled: true },
 ];
 
+const teamsData = [
+  {
+    teamCode: 'FE',
+    teamName: 'Frontend team',
+    teamMembers: '10 members',
+    avatarColor: '#9C38FF',
+    group: 'technology'
+  },
+  {
+    teamCode: 'BE',
+    teamName: 'Backend Team',
+    teamMembers: '10 members',
+    avatarColor: '#800000',
+    group: 'technology'
+  },
+  {
+    teamCode: 'DO',
+    teamName: 'DevOps Team',
+    teamMembers: '10 members',
+    avatarColor: '#333333',
+    group: 'technology'
+  },
+  {
+    teamCode: 'QA',
+    teamName: 'QA Team',
+    teamMembers: '10 members',
+    avatarColor: '#218247',
+    group: 'technology'
+  },
+  {
+    teamCode: 'UX',
+    teamName: 'UX/UI Design Team',
+    teamMembers: '10 members',
+    avatarColor: '#DB0000',
+    group: 'product'
+  },
+  {
+    teamCode: 'DB',
+    teamName: 'Database Team',
+    teamMembers: '10 members',
+    avatarColor: '#8F7200',
+    group: 'technology'
+  },
+  {
+    teamCode: 'М',
+    teamName: 'Marketing Team',
+    teamMembers: '10 members',
+    avatarColor: '#008B8B',
+    group: 'marketing'
+  },
+  {
+    teamCode: 'PM',
+    teamName: 'Product Management Team',
+    teamMembers: '10 members',
+    avatarColor: '#C14E34',
+    group: 'product'
+  },
+  {
+    teamCode: 'TS',
+    teamName: 'Technical Support Team',
+    teamMembers: '10 members',
+    avatarColor: '#027EB5',
+    group: 'technology'
+  },
+  {
+    teamCode: 'S',
+    teamName: 'Security Team',
+    teamMembers: '10 members',
+    avatarColor: '#267B92',
+    group: 'technology'
+  },
+  {
+    teamCode: 'DS',
+    teamName: 'Data Science Team',
+    teamMembers: '10 members',
+    avatarColor: '#708090',
+    group: 'technology'
+  },
+  {
+    teamCode: 'IE',
+    teamName: 'Infrastructure Engineering',
+    teamMembers: '10 members',
+    avatarColor: '#191970',
+    group: 'technology'
+  },
+  {
+    teamCode: 'RD',
+    teamName: 'Research and Development',
+    teamMembers: '10 members',
+    avatarColor: '#7B3F00',
+    group: 'technology'
+  },
+  {
+    teamCode: 'BA',
+    teamName: 'Business Analysis Team',
+    teamMembers: '10 members',
+    avatarColor: '#607F1F',
+    group: 'business'
+  },
+  {
+    teamCode: 'TW',
+    teamName: 'Technical Writing Team',
+    teamMembers: '10 members',
+    avatarColor: '#DC147F',
+    group: 'business'
+  },
+  {
+    teamCode: 'S',
+    teamName: 'Sales Team',
+    teamMembers: '10 members',
+    avatarColor: '#5769D2',
+    group: 'marketing'
+  },
+  {
+    teamCode: 'SA',
+    teamName: 'System Administration',
+    teamMembers: '10 members',
+    avatarColor: '#4682B4',
+    group: 'technology'
+  },
+  {
+    teamCode: 'CG',
+    teamName: 'Compliance and Governance',
+    teamMembers: '10 members',
+    avatarColor: '#4B0082',
+    group: 'business'
+  }
+];
+
+
 export default function TeamManagement() {
   const navigate = useNavigate();
-  const [chipValue, setChipValue] = React.useState<string[]>(['All']);
+  const [chipValue, setChipValue] = React.useState<string[]>(['all']);
   const [isGridView, setIsGridView] = React.useState(true);
+  const [teams, setTeams] = React.useState(teamsData);
 
   const handleItemSelect = (e: BreadcrumbLinkMouseEvent) => {
     if (e.id === 'home') {
@@ -43,7 +174,8 @@ export default function TeamManagement() {
   }
 
   const handleChipValueChange = (event: ChipListChangeEvent) => {
-    setChipValue(event.value);
+    setChipValue(event.value.filter((value: any) => value !== 'all'));
+    setTeams(teamsData.filter(team => event.value.includes(team.group)));
   };
 
   const handleViewChange = (view: 'grid' | 'list') => {
@@ -53,6 +185,7 @@ export default function TeamManagement() {
       setIsGridView(false);
     }
   };
+  console.log(chipValue)
 
   return (
     <>
@@ -71,234 +204,32 @@ export default function TeamManagement() {
                     <Button svgIcon={listUnorderedSquareIcon} togglable={true} selected={!isGridView}
                     onClick={() => handleViewChange('list')} />
                 </ButtonGroup>
-                <ChipList className="justify-end" data={teams} selection="multiple" onChange={handleChipValueChange} value={chipValue}
+                <ChipList className="justify-end" data={teamsChips} selection="multiple" onChange={handleChipValueChange} value={chipValue}
                     chip={(props: ChipProps) => (
                       <Chip
                         {...props}
-                        selected={!props.dataItem.disabled}
+                        selected={chipValue.includes(props.dataItem.value)}
                         selectedSvgIcon={checkIcon}
                         fillMode="outline"
                       />
                   )} />
             </div>
 
-            <StackLayout className={`grid grid-cols-${isGridView ? 2 : 1} lg:grid-cols-${isGridView ? 4 : 1}`} orientation="horizontal" style={{gap: "var(--kendo-spacing-4) var(--kendo-spacing-6)"}}>
-                <Card>
+            <StackLayout className={`grid ${isGridView ? 'grid-cols-2' : 'grid-cols-1'} ${isGridView ? 'lg:grid-cols-4' : 'lg:grid-cols-1'}`} orientation="horizontal" style={{gap: "var(--kendo-spacing-4) var(--kendo-spacing-6)"}}>
+                {teams.map((team, index) => {
+                  return <Card key={index}>
                     <CardBody className="flex items-center">
-                        <Avatar className="bg-[#9C38FF]">FE</Avatar>
-                        <div className="overflow-hidden">
-                            <CardTitle className="font-medium truncate">Frontend team</CardTitle>
-                            <CardSubtitle className="text-subtle m-0 truncate">10 members</CardSubtitle>
-                        </div>
+                      <Avatar style={{ background: team.avatarColor }}>{team.teamCode}</Avatar>
+                      <div className="overflow-hidden">
+                        <CardTitle className="font-medium truncate">{team.teamName}</CardTitle>
+                        <CardSubtitle className="text-subtle m-0 truncate">{team.teamMembers}</CardSubtitle>
+                      </div>
                     </CardBody>
                     <CardFooter className="border-0 p-2">
-                        <Button svgIcon={chevronRightIcon} fillMode="flat">Explore team</Button>
+                      <Button svgIcon={chevronRightIcon} fillMode="flat">Explore team</Button>
                     </CardFooter>
-                </Card>
-                <Card>
-                    <CardBody className="flex items-center">
-                        <Avatar className="bg-[#800000]">BE</Avatar>
-                        <div className="overflow-hidden">
-                            <CardTitle className="font-medium truncate">Backend Team</CardTitle>
-                            <CardSubtitle className="text-subtle m-0 truncate">10 members</CardSubtitle>
-                        </div>
-                    </CardBody>
-                    <CardFooter className="border-0 p-2">
-                        <Button svgIcon={chevronRightIcon} fillMode="flat">Explore team</Button>
-                    </CardFooter>
-                </Card>
-                <Card>
-                    <CardBody className="flex items-center">
-                        <Avatar className="bg-[#333333]">DO</Avatar>
-                        <div className="overflow-hidden">
-                            <CardTitle className="font-medium truncate">DevOps Team</CardTitle>
-                            <CardSubtitle className="text-subtle m-0 truncate">10 members</CardSubtitle>
-                        </div>
-                    </CardBody>
-                    <CardFooter className="border-0 p-2">
-                        <Button svgIcon={chevronRightIcon} fillMode="flat">Explore team</Button>
-                    </CardFooter>
-                </Card>
-                <Card>
-                    <CardBody className="flex items-center">
-                        <Avatar className="bg-[#218247]">QA</Avatar>
-                        <div className="overflow-hidden">
-                            <CardTitle className="font-medium truncate">QA Team</CardTitle>
-                            <CardSubtitle className="text-subtle m-0 truncate">10 members</CardSubtitle>
-                        </div>
-                    </CardBody>
-                    <CardFooter className="border-0 p-2">
-                        <Button svgIcon={chevronRightIcon} fillMode="flat">Explore team</Button>
-                    </CardFooter>
-                </Card>
-                <Card>
-                    <CardBody className="flex items-center">
-                        <Avatar className="bg-[#DB0000]">UX</Avatar>
-                        <div className="overflow-hidden">
-                            <CardTitle className="font-medium truncate">UX/UI Design Team</CardTitle>
-                            <CardSubtitle className="text-subtle m-0 truncate">10 members</CardSubtitle>
-                        </div>
-                    </CardBody>
-                    <CardFooter className="border-0 p-2">
-                        <Button svgIcon={chevronRightIcon} fillMode="flat">Explore team</Button>
-                    </CardFooter>
-                </Card>
-                <Card>
-                    <CardBody className="flex items-center">
-                        <Avatar className="bg-[#8F7200]">DB</Avatar>
-                        <div className="overflow-hidden">
-                            <CardTitle className="font-medium truncate">Database Team</CardTitle>
-                            <CardSubtitle className="text-subtle m-0 truncate">10 members</CardSubtitle>
-                        </div>
-                    </CardBody>
-                    <CardFooter className="border-0 p-2">
-                        <Button svgIcon={chevronRightIcon} fillMode="flat">Explore team</Button>
-                    </CardFooter>
-                </Card>
-                <Card>
-                    <CardBody className="flex items-center">
-                        <Avatar className="bg-[#008B8B]">М</Avatar>
-                        <div className="overflow-hidden">
-                            <CardTitle className="font-medium truncate">Marketing Team</CardTitle>
-                            <CardSubtitle className="text-subtle m-0 truncate">10 members</CardSubtitle>
-                        </div>
-                    </CardBody>
-                    <CardFooter className="border-0 p-2">
-                        <Button svgIcon={chevronRightIcon} fillMode="flat">Explore team</Button>
-                    </CardFooter>
-                </Card>
-                <Card>
-                    <CardBody className="flex items-center">
-                        <Avatar className="bg-[#C14E34]">PM</Avatar>
-                        <div className="overflow-hidden">
-                            <CardTitle className="font-medium truncate">Product Management Team</CardTitle>
-                            <CardSubtitle className="text-subtle m-0 truncate">10 members</CardSubtitle>
-                        </div>
-                    </CardBody>
-                    <CardFooter className="border-0 p-2">
-                        <Button svgIcon={chevronRightIcon} fillMode="flat">Explore team</Button>
-                    </CardFooter>
-                </Card>
-                <Card>
-                    <CardBody className="flex items-center">
-                        <Avatar className="bg-[#027EB5]">TS</Avatar>
-                        <div className="overflow-hidden">
-                            <CardTitle className="font-medium truncate">Technical Support Team</CardTitle>
-                            <CardSubtitle className="text-subtle m-0 truncate">10 members</CardSubtitle>
-                        </div>
-                    </CardBody>
-                    <CardFooter className="border-0 p-2">
-                        <Button svgIcon={chevronRightIcon} fillMode="flat">Explore team</Button>
-                    </CardFooter>
-                </Card>
-                <Card>
-                    <CardBody className="flex items-center">
-                        <Avatar className="bg-[#267B92]">S</Avatar>
-                        <div className="overflow-hidden">
-                            <CardTitle className="font-medium truncate">Security Team</CardTitle>
-                            <CardSubtitle className="text-subtle m-0 truncate">10 members</CardSubtitle>
-                        </div>
-                    </CardBody>
-                    <CardFooter className="border-0 p-2">
-                        <Button svgIcon={chevronRightIcon} fillMode="flat">Explore team</Button>
-                    </CardFooter>
-                </Card>
-                <Card>
-                    <CardBody className="flex items-center">
-                        <Avatar className="bg-[#708090]">DS</Avatar>
-                        <div className="overflow-hidden">
-                            <CardTitle className="font-medium truncate">Data Science Team</CardTitle>
-                            <CardSubtitle className="text-subtle m-0 truncate">10 members</CardSubtitle>
-                        </div>
-                    </CardBody>
-                    <CardFooter className="border-0 p-2">
-                        <Button svgIcon={chevronRightIcon} fillMode="flat">Explore team</Button>
-                    </CardFooter>
-                </Card>
-                <Card>
-                    <CardBody className="flex items-center">
-                        <Avatar className="bg-[#191970]">IE</Avatar>
-                        <div className="overflow-hidden">
-                            <CardTitle className="font-medium truncate">Infrastructure Engineering</CardTitle>
-                            <CardSubtitle className="text-subtle m-0 truncate">10 members</CardSubtitle>
-                        </div>
-                    </CardBody>
-                    <CardFooter className="border-0 p-2">
-                        <Button svgIcon={chevronRightIcon} fillMode="flat">Explore team</Button>
-                    </CardFooter>
-                </Card>
-                <Card>
-                    <CardBody className="flex items-center">
-                        <Avatar className="bg-[#7B3F00]">RD</Avatar>
-                        <div className="overflow-hidden">
-                            <CardTitle className="font-medium truncate">Research and Development </CardTitle>
-                            <CardSubtitle className="text-subtle m-0 truncate">10 members</CardSubtitle>
-                        </div>
-                    </CardBody>
-                    <CardFooter className="border-0 p-2">
-                        <Button svgIcon={chevronRightIcon} fillMode="flat">Explore team</Button>
-                    </CardFooter>
-                </Card>
-                <Card>
-                    <CardBody className="flex items-center">
-                        <Avatar className="bg-[#607F1F]">BA</Avatar>
-                        <div className="overflow-hidden">
-                            <CardTitle className="font-medium truncate">FBusiness Analysis Team </CardTitle>
-                            <CardSubtitle className="text-subtle m-0 truncate">10 members</CardSubtitle>
-                        </div>
-                    </CardBody>
-                    <CardFooter className="border-0 p-2">
-                        <Button svgIcon={chevronRightIcon} fillMode="flat">Explore team</Button>
-                    </CardFooter>
-                </Card>
-                <Card>
-                    <CardBody className="flex items-center">
-                        <Avatar className="bg-[#DC147F]">TW</Avatar>
-                        <div className="overflow-hidden">
-                            <CardTitle className="font-medium truncate">Technical Writing Team</CardTitle>
-                            <CardSubtitle className="text-subtle m-0 truncate">10 members</CardSubtitle>
-                        </div>
-                    </CardBody>
-                    <CardFooter className="border-0 p-2">
-                        <Button svgIcon={chevronRightIcon} fillMode="flat">Explore team</Button>
-                    </CardFooter>
-                </Card>
-                <Card>
-                    <CardBody className="flex items-center">
-                        <Avatar className="bg-[#5769D2]">S</Avatar>
-                        <div className="overflow-hidden">
-                            <CardTitle className="font-medium truncate">Sales Team</CardTitle>
-                            <CardSubtitle className="text-subtle m-0 truncate">10 members</CardSubtitle>
-                        </div>
-                    </CardBody>
-                    <CardFooter className="border-0 p-2">
-                        <Button svgIcon={chevronRightIcon} fillMode="flat">Explore team</Button>
-                    </CardFooter>
-                </Card>
-                <Card>
-                    <CardBody className="flex items-center">
-                        <Avatar className="bg-[#4682B4]">SA</Avatar>
-                        <div className="overflow-hidden">
-                            <CardTitle className="font-medium truncate">System Administration</CardTitle>
-                            <CardSubtitle className="text-subtle m-0 truncate">10 members</CardSubtitle>
-                        </div>
-                    </CardBody>
-                    <CardFooter className="border-0 p-2">
-                        <Button svgIcon={chevronRightIcon} fillMode="flat">Explore team</Button>
-                    </CardFooter>
-                </Card>
-                <Card>
-                    <CardBody className="flex items-center">
-                        <Avatar className="bg-[#4B0082]">CG</Avatar>
-                        <div className="overflow-hidden">
-                            <CardTitle className="font-medium truncate">Compliance and Governance</CardTitle>
-                            <CardSubtitle className="text-subtle m-0 truncate">10 members</CardSubtitle>
-                        </div>
-                    </CardBody>
-                    <CardFooter className="border-0 p-2">
-                        <Button svgIcon={chevronRightIcon} fillMode="flat">Explore team</Button>
-                    </CardFooter>
-                </Card>
+                  </Card>
+                })}
             </StackLayout>
 
         </div>
