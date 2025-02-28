@@ -3,5 +3,6 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
+  base: `/kendo-react/kendo-react-freemium/`,
   plugins: [react(), tailwindcss()],
 });

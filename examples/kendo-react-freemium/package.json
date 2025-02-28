@@ -1,12 +1,15 @@
 {
-    "name": "vite-integration",
+    "name": "kendo-react-freemium",
     "private": true,
     "version": "0.0.0",
+    "homepage": "https://telerik.github.io/kendo-react/kendo-react-freemium/",
     "type": "module",
     "scripts": {
         "dev": "vite",
         "build": "tsc -b && vite build",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "dependencies": {
         "@progress/kendo-data-query": "^1.7.1",
@@ -40,6 +43,7 @@
         "@types/react-csv": "^1.1.10",
         "@types/react-dom": "^18.3.0",
         "@vitejs/plugin-react": "^4.3.1",
+        "gh-pages": "^6.1.1",
         "globals": "^15.9.0",
         "react-router-dom": "^6.26.2",
         "sass": "^1.79.1",
