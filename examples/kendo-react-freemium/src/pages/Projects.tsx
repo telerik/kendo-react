@@ -9,6 +9,7 @@ import {
   GridColumn,
   GridCustomCellProps,
   GridFilterChangeEvent,
+  GridItemChangeEvent,
   GridPageChangeEvent,
   GridSearchBox,
   GridToolbar,
@@ -219,6 +220,19 @@ export default function Projects() {
     setData(filterBy(projectsData, event.filter));
   };
 
+  const itemChange = (event: GridItemChangeEvent) => {
+    const newData = data.map((item) =>
+        item.ProjectID === event.dataItem.ProjectID
+            ? {
+                  ...item,
+                  [event.field || '']: event.value
+              }
+            : item
+    );
+
+    setData(newData);
+};
+
   return (
     <div
       style={{ minHeight: "calc(100vh - 106px)" }}
@@ -255,16 +269,21 @@ export default function Projects() {
         filterable={true}
         onFilterChange={filterChange}
         // PAGER
-        pageable={true}
-        //
-        // dataItemKey={DATA_ITEM_KEY}
-        // edit={edit}
-        // editable={true}
-        // pageable={{
-        //     buttonCount: 6,
-        //     pageSizes: [5, 10, 15, 'All'],
-        //     pageSizeValue: pageSizeValue
-        // }}
+        pageable={
+          {
+            buttonCount: 6,
+            pageSizes: [5, 10, 15, 'All'],
+
+          }
+        }
+        onItemChange={itemChange}
+        defaultTake={10}
+        defaultSkip={0}
+
+        // EDITING
+        dataItemKey={"ProjectID"}
+        editable={true}
+
       >
         <GridToolbar>
           <GridSearchBox />
@@ -281,6 +300,8 @@ export default function Projects() {
         <GridColumn
           field="ProjectManager"
           title="Project Manager"
+          editable={false}
+
           width={245}
           cells={{
             data: ProjectManagerCell,
@@ -290,6 +311,7 @@ export default function Projects() {
         <GridColumn
           field="Stakeholders"
           title="Stakeholder(s)"
+          editable={false}
           width={245}
           cells={{ data: StakeholderCell, filterCell: StakeholderFilterCell }}
         />
@@ -298,6 +320,8 @@ export default function Projects() {
           title="Due Date"
           width={245}
           format="{0:d}"
+
+
           filter="date"
         />
         <GridColumn
