@@ -11,7 +11,7 @@ import Team from "./pages/Team";
 export default function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/kendo-react/kendo-react-freemium">
         <AppBarComponent />
         <DrawerComponent>
             <Routes>
