@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Tasks from "./pages/Tasks";
 import Settings from "./pages/Settings";
+import Team from "./pages/Team";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/tasks" element={<Tasks />} />
                 <Route path="/team-management" element={<TeamManagement />} />
+                <Route path="/team-management/:teamId" element={<Team />} />
                 <Route path="/settings" element={<Settings />} />
             </Routes>
         </DrawerComponent>

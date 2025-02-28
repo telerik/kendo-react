@@ -1,10 +1,10 @@
-import { Layout } from "@progress/kendo-drawing";
 import { ButtonGroup, Button, ChipList, Chip, ChipProps, ChipListChangeEvent } from "@progress/kendo-react-buttons";
 import { SvgIcon } from "@progress/kendo-react-common";
 import { Breadcrumb, Card, CardBody, Avatar, CardTitle, CardSubtitle, CardFooter, BreadcrumbLinkMouseEvent, StackLayout } from "@progress/kendo-react-layout";
 import { checkIcon, chevronRightIcon, groupIcon, homeIcon, listUnorderedSquareIcon } from "@progress/kendo-svg-icons";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { teamsChips, teamsData } from "./data";
 
 interface DataModel {
   id: string;
@@ -22,144 +22,6 @@ const breadcrumbItems: DataModel[] = [
       text: "Team Management",
   }
 ];
-
-const teamsChips = [
-  { text: "All", value: 'all', disabled: false },
-  { text: "Technology and Developement", value: 'technology', disabled: true },
-  { text: "Product and Design", value: 'product', disabled: true },
-  { text: "Business Operation", value: 'business', disabled: true },
-  { text: "Marketing and Sales", value: 'marketing', disabled: true },
-];
-
-const teamsData = [
-  {
-    teamCode: 'FE',
-    teamName: 'Frontend team',
-    teamMembers: '10 members',
-    avatarColor: '#9C38FF',
-    group: 'technology'
-  },
-  {
-    teamCode: 'BE',
-    teamName: 'Backend Team',
-    teamMembers: '10 members',
-    avatarColor: '#800000',
-    group: 'technology'
-  },
-  {
-    teamCode: 'DO',
-    teamName: 'DevOps Team',
-    teamMembers: '10 members',
-    avatarColor: '#333333',
-    group: 'technology'
-  },
-  {
-    teamCode: 'QA',
-    teamName: 'QA Team',
-    teamMembers: '10 members',
-    avatarColor: '#218247',
-    group: 'technology'
-  },
-  {
-    teamCode: 'UX',
-    teamName: 'UX/UI Design Team',
-    teamMembers: '10 members',
-    avatarColor: '#DB0000',
-    group: 'product'
-  },
-  {
-    teamCode: 'DB',
-    teamName: 'Database Team',
-    teamMembers: '10 members',
-    avatarColor: '#8F7200',
-    group: 'technology'
-  },
-  {
-    teamCode: 'М',
-    teamName: 'Marketing Team',
-    teamMembers: '10 members',
-    avatarColor: '#008B8B',
-    group: 'marketing'
-  },
-  {
-    teamCode: 'PM',
-    teamName: 'Product Management Team',
-    teamMembers: '10 members',
-    avatarColor: '#C14E34',
-    group: 'product'
-  },
-  {
-    teamCode: 'TS',
-    teamName: 'Technical Support Team',
-    teamMembers: '10 members',
-    avatarColor: '#027EB5',
-    group: 'technology'
-  },
-  {
-    teamCode: 'S',
-    teamName: 'Security Team',
-    teamMembers: '10 members',
-    avatarColor: '#267B92',
-    group: 'technology'
-  },
-  {
-    teamCode: 'DS',
-    teamName: 'Data Science Team',
-    teamMembers: '10 members',
-    avatarColor: '#708090',
-    group: 'technology'
-  },
-  {
-    teamCode: 'IE',
-    teamName: 'Infrastructure Engineering',
-    teamMembers: '10 members',
-    avatarColor: '#191970',
-    group: 'technology'
-  },
-  {
-    teamCode: 'RD',
-    teamName: 'Research and Development',
-    teamMembers: '10 members',
-    avatarColor: '#7B3F00',
-    group: 'technology'
-  },
-  {
-    teamCode: 'BA',
-    teamName: 'Business Analysis Team',
-    teamMembers: '10 members',
-    avatarColor: '#607F1F',
-    group: 'business'
-  },
-  {
-    teamCode: 'TW',
-    teamName: 'Technical Writing Team',
-    teamMembers: '10 members',
-    avatarColor: '#DC147F',
-    group: 'business'
-  },
-  {
-    teamCode: 'S',
-    teamName: 'Sales Team',
-    teamMembers: '10 members',
-    avatarColor: '#5769D2',
-    group: 'marketing'
-  },
-  {
-    teamCode: 'SA',
-    teamName: 'System Administration',
-    teamMembers: '10 members',
-    avatarColor: '#4682B4',
-    group: 'technology'
-  },
-  {
-    teamCode: 'CG',
-    teamName: 'Compliance and Governance',
-    teamMembers: '10 members',
-    avatarColor: '#4B0082',
-    group: 'business'
-  }
-];
-
 
 export default function TeamManagement() {
   const navigate = useNavigate();
@@ -185,7 +47,6 @@ export default function TeamManagement() {
       setIsGridView(false);
     }
   };
-  console.log(chipValue)
 
   return (
     <>
@@ -222,11 +83,11 @@ export default function TeamManagement() {
                       <Avatar style={{ background: team.avatarColor }}>{team.teamCode}</Avatar>
                       <div className="overflow-hidden">
                         <CardTitle className="font-medium truncate">{team.teamName}</CardTitle>
-                        <CardSubtitle className="text-subtle m-0 truncate">{team.teamMembers}</CardSubtitle>
+                        <CardSubtitle className="text-subtle m-0 truncate">{team.teamMembers.length} team members</CardSubtitle>
                       </div>
                     </CardBody>
                     <CardFooter className="border-0 p-2">
-                      <Button svgIcon={chevronRightIcon} fillMode="flat">Explore team</Button>
+                      <Button svgIcon={chevronRightIcon} fillMode="flat" onClick={() => navigate(`/team-management/${team.teamCode}`)}>Explore team</Button>
                     </CardFooter>
                   </Card>
                 })}

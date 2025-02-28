@@ -611,3 +611,338 @@ export const projectsData = [
     AvatarSrc: Avatar9
   }
 ];
+
+export const teamsChips = [
+  { text: "All", value: 'all', disabled: false },
+  { text: "Technology and Developement", value: 'technology', disabled: true },
+  { text: "Product and Design", value: 'product', disabled: true },
+  { text: "Business Operation", value: 'business', disabled: true },
+  { text: "Marketing and Sales", value: 'marketing', disabled: true },
+];
+
+export const teamsData = [
+  {
+    teamCode: 'FE',
+    teamName: 'Frontend team',
+    avatarColor: '#9C38FF',
+    group: 'technology',
+    teamMembers: [
+      { teamMember: "Alex Morgan", title: "Frontend Developer" },
+      { teamMember: "Jordan Lee", title: "Frontend Developer" },
+      { teamMember: "Casey Carter", title: "React Developer" },
+      { teamMember: "Taylor Woods", title: "CSS Specialist" },
+      { teamMember: "Morgan Reed", title: "JavaScript Developer" },
+      { teamMember: "Jordan Parker", title: "Frontend Architect" },
+      { teamMember: "Riley Hayes", title: "Frontend Developer" },
+      { teamMember: "Blake Kim", title: "Angular Developer" },
+      { teamMember: "Sydney Clark", title: "Frontend Developer" },
+      { teamMember: "Chris Bennett", title: "Vue.js Developer" }
+    ]
+  },
+  {
+    teamCode: 'BE',
+    teamName: 'Backend Team',
+    avatarColor: '#800000',
+    group: 'technology',
+    teamMembers: [
+      { teamMember: "James Parker", title: "Backend Developer" },
+      { teamMember: "Maria Garcia", title: "API Developer" },
+      { teamMember: "John Davis", title: "Database Administrator" },
+      { teamMember: "Emily Wilson", title: "DevOps Engineer" },
+      { teamMember: "David Brown", title: "System Architect" },
+      { teamMember: "Daniel Lee", title: "Java Developer" },
+      { teamMember: "Samantha Hall", title: "Python Developer" },
+      { teamMember: "Michael Turner", title: "Ruby on Rails Developer" },
+      { teamMember: "Sophia Adams", title: "Security Engineer" },
+      { teamMember: "Matthew Clark", title: "Cloud Engineer" }
+    ]
+  },
+  {
+    teamCode: 'DO',
+    teamName: 'DevOps Team',
+    avatarColor: '#333333',
+    group: 'technology',
+    teamMembers: [
+      { teamMember: "Alice Green", title: "DevOps Engineer" },
+      { teamMember: "Ethan Scott", title: "Automation Engineer" },
+      { teamMember: "Sophia Taylor", title: "Cloud Infrastructure Engineer" },
+      { teamMember: "Liam White", title: "CI/CD Specialist" },
+      { teamMember: "Olivia Martin", title: "System Administrator" },
+      { teamMember: "Mason Rodriguez", title: "Site Reliability Engineer" },
+      { teamMember: "Charlotte Harris", title: "Release Manager" },
+      { teamMember: "Aiden King", title: "Containerization Expert" },
+      { teamMember: "Amelia Lewis", title: "Monitoring Specialist" },
+      { teamMember: "Lucas Walker", title: "Cloud Solutions Architect" }
+    ]
+  },
+  {
+    teamCode: 'QA',
+    teamName: 'QA Team',
+    avatarColor: '#218247',
+    group: 'product',
+    teamMembers: [
+      { teamMember: "Nina Roberts", title: "QA Engineer" },
+      { teamMember: "Oliver Harris", title: "Automation Tester" },
+      { teamMember: "Ava Miller", title: "Manual Tester" },
+      { teamMember: "Ethan Wilson", title: "Performance Test Engineer" },
+      { teamMember: "Grace Johnson", title: "Test Lead" },
+      { teamMember: "Jack Brown", title: "Quality Analyst" },
+      { teamMember: "Sophia Lee", title: "Mobile QA Engineer" },
+      { teamMember: "Mason Taylor", title: "Security Test Engineer" },
+      { teamMember: "Chloe Davis", title: "Test Automation Architect" },
+      { teamMember: "Liam Martin", title: "Usability Tester" }
+    ]
+  },
+  {
+    teamCode: 'UX',
+    teamName: 'UX/UI Design Team',
+    avatarColor: '#DB0000',
+    group: 'product',
+    teamMembers: [
+      { teamMember: "Isabella White", title: "UX Designer" },
+      { teamMember: "Noah Black", title: "UX Researcher" },
+      { teamMember: "Mia Green", title: "Interaction Designer" },
+      { teamMember: "James Blue", title: "UI/UX Developer" },
+      { teamMember: "Emma Grey", title: "Usability Analyst" },
+      { teamMember: "Lucas Brown", title: "Information Architect" },
+      { teamMember: "Olivia Pink", title: "Product Designer" },
+      { teamMember: "Ethan Red", title: "UX Writer" },
+      { teamMember: "Charlotte Yellow", title: "Visual Designer" },
+      { teamMember: "Jack Orange", title: "UX/UI Research Lead" }
+    ]
+  },
+  {
+    teamCode: 'DB',
+    teamName: 'Database Team',
+    avatarColor: '#8F7200',
+    group: 'technology',
+    teamMembers: [
+      { teamMember: "William Smith", title: "Database Administrator" },
+      { teamMember: "Emily Johnson", title: "Database Architect" },
+      { teamMember: "David Brown", title: "SQL Developer" },
+      { teamMember: "Sophia Wilson", title: "Data Analyst" },
+      { teamMember: "James Taylor", title: "Database Engineer" },
+      { teamMember: "Olivia Martinez", title: "ETL Developer" },
+      { teamMember: "Ethan Lee", title: "Data Modeling Specialist" },
+      { teamMember: "Ava Harris", title: "NoSQL Developer" },
+      { teamMember: "Michael Clark", title: "Database Performance Engineer" },
+      { teamMember: "Liam Lewis", title: "Cloud Database Administrator" }
+    ]
+  },
+  {
+    teamCode: 'М',
+    teamName: 'Marketing Team',
+    avatarColor: '#008B8B',
+    group: 'marketing',
+    teamMembers: [
+      { teamMember: "Edmund Lowe", title: "Chief Marketing Officer" },
+      { teamMember: "Ellis Glover", title: "Marketing Manager" },
+      { teamMember: "Tommy Hudson", title: "Content Marketing Specialist" },
+      { teamMember: "Lester Pouros", title: "Social Media Manager" },
+      { teamMember: "Teri Stanton", title: "SEO Specialist" },
+      { teamMember: "Constance Larkin", title: "Digital Marketing Specialist" },
+      { teamMember: "Sheri Stracke", title: "Graphic Designer" },
+      { teamMember: "Rochelle Toy", title: "Email Marketing Coordinator" },
+      { teamMember: "Lloyd Bashirian", title: "Market Research Analyst" },
+      { teamMember: "Thomas Hane III", title: "Public Relations Manager" }
+    ]
+  },
+  {
+    teamCode: 'PM',
+    teamName: 'Product Management Team',
+    avatarColor: '#C14E34',
+    group: 'product',
+    teamMembers: [
+      { teamMember: "Olivia Davis", title: "Product Manager" },
+      { teamMember: "Ethan Clark", title: "Senior Product Manager" },
+      { teamMember: "Sophia Wilson", title: "Product Owner" },
+      { teamMember: "James Brown", title: "Product Strategy Lead" },
+      { teamMember: "Mia Taylor", title: "Associate Product Manager" },
+      { teamMember: "Liam Harris", title: "Product Marketing Manager" },
+      { teamMember: "Ava Robinson", title: "Product Analyst" },
+      { teamMember: "Noah Lee", title: "Growth Product Manager" },
+      { teamMember: "Charlotte Hall", title: "Product Designer" },
+      { teamMember: "Lucas White", title: "User Experience Product Lead" }
+    ]
+  },
+  {
+    teamCode: 'TS',
+    teamName: 'Technical Support Team',
+    avatarColor: '#027EB5',
+    group: 'business',
+    teamMembers: [
+      { teamMember: "David Miller", title: "Technical Support Engineer" },
+      { teamMember: "Sophia Lewis", title: "Senior Support Specialist" },
+      { teamMember: "James Harris", title: "Support Technician" },
+      { teamMember: "Ava Walker", title: "Customer Support Engineer" },
+      { teamMember: "Ethan Robinson", title: "Technical Account Manager" },
+      { teamMember: "Olivia Clark", title: "Support Analyst" },
+      { teamMember: "Mason White", title: "IT Support Specialist" },
+      { teamMember: "Chloe Adams", title: "Help Desk Technician" },
+      { teamMember: "Liam Carter", title: "Network Support Engineer" },
+      { teamMember: "Isabella Green", title: "Software Support Specialist" }
+    ]
+  },
+  {
+    teamCode: 'S',
+    teamName: 'Security Team',
+    avatarColor: '#267B92',
+    group: 'technology',
+    teamMembers: [
+      { teamMember: "William Scott", title: "Chief Security Officer (CSO)" },
+      { teamMember: "Olivia Anderson", title: "Security Analyst" },
+      { teamMember: "Ethan Baker", title: "Network Security Engineer" },
+      { teamMember: "Sophia Martinez", title: "Cybersecurity Specialist" },
+      { teamMember: "James Wilson", title: "Security Architect" },
+      { teamMember: "Ava Thompson", title: "Incident Response Lead" },
+      { teamMember: "Mason Clark", title: "Penetration Tester" },
+      { teamMember: "Chloe Lewis", title: "Security Compliance Officer" },
+      { teamMember: "Lucas White", title: "Application Security Engineer" },
+      { teamMember: "Emma Harris", title: "Threat Intelligence Analyst" }
+    ]
+  },
+  {
+    teamCode: 'DS',
+    teamName: 'Data Science Team',
+    avatarColor: '#708090',
+    group: 'technology',
+    teamMembers: [
+      { teamMember: "David Johnson", title: "Lead Data Scientist" },
+      { teamMember: "Sophia Martinez", title: "Data Scientist" },
+      { teamMember: "James Lee", title: "Machine Learning Engineer" },
+      { teamMember: "Olivia Brown", title: "Data Analyst" },
+      { teamMember: "Ethan Wilson", title: "Senior Data Engineer" },
+      { teamMember: "Chloe Clark", title: "AI Researcher" },
+      { teamMember: "Mason Rodriguez", title: "Quantitative Analyst" },
+      { teamMember: "Ava Taylor", title: "Data Science Researcher" },
+      { teamMember: "Lucas Anderson", title: "Business Intelligence Developer" },
+      { teamMember: "Emma White", title: "Data Visualization Specialist" }
+    ]
+  },
+  {
+    teamCode: 'IE',
+    teamName: 'Infrastructure Engineering',
+    avatarColor: '#191970',
+    group: 'technology',
+    teamMembers: [
+      { teamMember: "James Taylor", title: "Infrastructure Engineer" },
+      { teamMember: "Olivia Brown", title: "Cloud Infrastructure Engineer" },
+      { teamMember: "Ethan White", title: "Network Engineer" },
+      { teamMember: "Sophia Clark", title: "Systems Architect" },
+      { teamMember: "David Green", title: "DevOps Engineer" },
+      { teamMember: "Ava Harris", title: "Site Reliability Engineer" },
+      { teamMember: "Mason Davis", title: "Storage Solutions Engineer" },
+      { teamMember: "Chloe Wilson", title: "Virtualization Engineer" },
+      { teamMember: "Liam Lewis", title: "Infrastructure Automation Engineer" },
+      { teamMember: "Emma Robinson", title: "Security Infrastructure Engineer" }
+    ]
+  },
+  {
+    teamCode: 'RD',
+    teamName: 'Research and Development',
+    avatarColor: '#7B3F00',
+    group: 'product',
+    teamMembers: [
+      { teamMember: "David King", title: "R&D Director" },
+      { teamMember: "Olivia Johnson", title: "Lead Research Scientist" },
+      { teamMember: "Ethan White", title: "R&D Engineer" },
+      { teamMember: "Sophia Lee", title: "Product Development Specialist" },
+      { teamMember: "James Brown", title: "Innovation Manager" },
+      { teamMember: "Ava Wilson", title: "Research Associate" },
+      { teamMember: "Mason Taylor", title: "Data Scientist" },
+      { teamMember: "Chloe Clark", title: "Prototype Engineer" },
+      { teamMember: "Lucas Harris", title: "Technical Researcher" },
+      { teamMember: "Emma Martinez", title: "R&D Project Manager" }
+    ]
+  },
+  {
+    teamCode: 'BA',
+    teamName: 'Business Analysis Team',
+    avatarColor: '#607F1F',
+    group: 'business',
+    teamMembers: [
+      { teamMember: "William Harris", title: "Lead Business Analyst" },
+      { teamMember: "Olivia Davis", title: "Senior Business Analyst" },
+      { teamMember: "James Smith", title: "Business Systems Analyst" },
+      { teamMember: "Sophia Martinez", title: "Process Improvement Analyst" },
+      { teamMember: "Ethan Clark", title: "Data Analyst" },
+      { teamMember: "Ava Brown", title: "Requirements Analyst" },
+      { teamMember: "Mason Taylor", title: "Product Analyst" },
+      { teamMember: "Chloe Robinson", title: "Business Intelligence Analyst" },
+      { teamMember: "Liam Wilson", title: "Financial Analyst" },
+      { teamMember: "Emma Lee", title: "Junior Business Analyst" }
+    ]
+  },
+  {
+    teamCode: 'TW',
+    teamName: 'Technical Writing Team',
+    avatarColor: '#DC147F',
+    group: 'business',
+    teamMembers: [
+      { teamMember: "David Miller", title: "Lead Technical Writer" },
+      { teamMember: "Olivia White", title: "Senior Technical Writer" },
+      { teamMember: "Ethan Clark", title: "Technical Writing Specialist" },
+      { teamMember: "Sophia Harris", title: "Documentation Engineer" },
+      { teamMember: "James Brown", title: "API Technical Writer" },
+      { teamMember: "Ava Johnson", title: "Content Developer" },
+      { teamMember: "Mason Davis", title: "Technical Editor" },
+      { teamMember: "Chloe Wilson", title: "Instructional Designer" },
+      { teamMember: "Liam Anderson", title: "UX Writer" },
+      { teamMember: "Emma Martinez", title: "Junior Technical Writer" }
+    ]
+  },
+  {
+    teamCode: 'S',
+    teamName: 'Sales Team',
+    avatarColor: '#5769D2',
+    group: 'marketing',
+    teamMembers: [
+      { teamMember: "William Scott", title: "Sales Director" },
+      { teamMember: "Olivia Taylor", title: "Senior Account Executive" },
+      { teamMember: "Ethan Harris", title: "Sales Manager" },
+      { teamMember: "Sophia Davis", title: "Sales Development Representative" },
+      { teamMember: "James Wilson", title: "Account Executive" },
+      { teamMember: "Ava Brown", title: "Regional Sales Manager" },
+      { teamMember: "Mason Green", title: "Sales Operations Specialist" },
+      { teamMember: "Chloe Clark", title: "Customer Success Manager" },
+      { teamMember: "Lucas Johnson", title: "Sales Analyst" },
+      { teamMember: "Emma Lee", title: "Business Development Representative" }
+    ]
+  },
+  {
+    teamCode: 'SA',
+    teamName: 'System Administration',
+    avatarColor: '#4682B4',
+    group: 'technology',
+    teamMembers: [
+      { teamMember: "David Miller", title: "Senior System Administrator" },
+      { teamMember: "Olivia Johnson", title: "System Administrator" },
+      { teamMember: "James Wilson", title: "Network Administrator" },
+      { teamMember: "Sophia Clark", title: "Linux Administrator" },
+      { teamMember: "Ethan Brown", title: "Windows Administrator" },
+      { teamMember: "Ava Martinez", title: "Cloud Systems Administrator" },
+      { teamMember: "Mason Harris", title: "Database Administrator" },
+      { teamMember: "Chloe White", title: "Virtualization Administrator" },
+      { teamMember: "Lucas Anderson", title: "IT Support Specialist" },
+      { teamMember: "Emma Taylor", title: "Junior System Administrator" }
+    ]
+  },
+  {
+    teamCode: 'CG',
+    teamName: 'Compliance and Governance',
+    avatarColor: '#4B0082',
+    group: 'business',
+    teamMembers: [
+      { teamMember: "William Harris", title: "Compliance Officer" },
+      { teamMember: "Olivia Brown", title: "Governance Manager" },
+      { teamMember: "James Taylor", title: "Regulatory Affairs Specialist" },
+      { teamMember: "Sophia Lewis", title: "Risk Management Analyst" },
+      { teamMember: "Ethan Walker", title: "Internal Auditor" },
+      { teamMember: "Ava Clark", title: "Compliance Analyst" },
+      { teamMember: "Mason Scott", title: "Legal and Compliance Advisor" },
+      { teamMember: "Chloe Martinez", title: "Policy and Procedure Analyst" },
+      { teamMember: "Lucas Johnson", title: "Data Privacy Officer" },
+      { teamMember: "Emma Robinson", title: "Corporate Governance Specialist" }
+    ]
+  }
+];
