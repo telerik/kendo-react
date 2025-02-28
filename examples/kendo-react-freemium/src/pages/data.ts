@@ -1,4 +1,5 @@
 
+// @ts-nocheck
 import Avatar0 from '../assets/Avatar.png';
 import Avatar1 from '../assets/Avatar-1.png';
 import Avatar2 from '../assets/Avatar-2.png';
