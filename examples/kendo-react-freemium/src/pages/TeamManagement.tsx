@@ -1,6 +1,6 @@
 import { ButtonGroup, Button, ChipList, Chip, ChipProps, ChipListChangeEvent } from "@progress/kendo-react-buttons";
 import { SvgIcon } from "@progress/kendo-react-common";
-import { Breadcrumb, Card, CardBody, Avatar, CardTitle, CardSubtitle, CardFooter, BreadcrumbLinkMouseEvent, StackLayout } from "@progress/kendo-react-layout";
+import { Breadcrumb, Card, CardBody, Avatar, CardTitle, CardSubtitle, CardFooter, BreadcrumbLinkMouseEvent, GridLayout } from "@progress/kendo-react-layout";
 import { checkIcon, chevronRightIcon, groupIcon, homeIcon, listUnorderedSquareIcon } from "@progress/kendo-svg-icons";
 import React from "react";
 import { useNavigate } from "react-router-dom";
@@ -76,7 +76,7 @@ export default function TeamManagement() {
                   )} />
             </div>
 
-            <StackLayout className={`grid ${isGridView ? 'grid-cols-2' : 'grid-cols-1'} ${isGridView ? 'lg:grid-cols-4' : 'lg:grid-cols-1'}`} orientation="horizontal" style={{gap: "var(--kendo-spacing-4) var(--kendo-spacing-6)"}}>
+            <GridLayout className={`${isGridView ? 'grid-cols-2' : 'grid-cols-1'} ${isGridView ? 'lg:grid-cols-4' : 'lg:grid-cols-1'}`} orientation="horizontal" style={{gap: "var(--kendo-spacing-4) var(--kendo-spacing-6)"}}>
                 {teams.map((team, index) => {
                   return <Card key={index}>
                     <CardBody className="flex items-center">
@@ -91,7 +91,7 @@ export default function TeamManagement() {
                     </CardFooter>
                   </Card>
                 })}
-            </StackLayout>
+            </GridLayout>
 
         </div>
         <div className="bg-surface-alt color-subtle p-2 text-center">

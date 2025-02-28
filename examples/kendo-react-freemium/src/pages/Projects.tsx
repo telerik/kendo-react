@@ -217,7 +217,7 @@ export default function Projects() {
       >
         <GridToolbar>
             <TextBox
-              className="k-grid-search"
+              className="k-grid-search !w-55"
               placeholder="Search..."
               prefix={() => (
                 <InputPrefix>

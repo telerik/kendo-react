@@ -1,9 +1,9 @@
 import { useParams } from "react-router";
 import { useNavigate } from "react-router-dom";
 import { teamsData } from "./data";
-import { ButtonGroup, Button, ChipList, ChipProps, Chip, FloatingActionButton } from "@progress/kendo-react-buttons";
-import { Breadcrumb, StackLayout, Card, CardBody, Avatar, CardTitle, CardSubtitle, CardFooter, BreadcrumbLinkMouseEvent } from "@progress/kendo-react-layout";
-import { groupIcon, listUnorderedSquareIcon, checkIcon, chevronRightIcon, homeIcon, detailSectionIcon, pencilIcon, plusIcon } from "@progress/kendo-svg-icons";
+import { ButtonGroup, Button, FloatingActionButton } from "@progress/kendo-react-buttons";
+import { Breadcrumb, Card, CardBody, Avatar, CardTitle, CardSubtitle, CardFooter, BreadcrumbLinkMouseEvent, GridLayout } from "@progress/kendo-react-layout";
+import { groupIcon, listUnorderedSquareIcon, homeIcon, detailSectionIcon, plusIcon } from "@progress/kendo-svg-icons";
 import { SvgIcon } from "@progress/kendo-react-common";
 import React from "react";
 
@@ -57,6 +57,10 @@ export default function Team() {
     return firstNameInitial + lastNameInitial;
   }
 
+  const openDetailsWindow = () => {
+
+  };
+
   return (
       <>
          <div style={{minHeight: 'calc(100vh - 106px)'}} className="flex flex-col p-10 gap-6">
@@ -76,7 +80,7 @@ export default function Team() {
                    </ButtonGroup>
                </div>
 
-              <StackLayout className={`grid ${isGridView ? 'grid-cols-2' : 'grid-cols-1'} ${isGridView ? 'lg:grid-cols-4' : 'lg:grid-cols-1'}`} orientation="horizontal" style={{ gap: "var(--kendo-spacing-4) var(--kendo-spacing-6)" }}>
+              <GridLayout className={`${isGridView ? 'grid-cols-2' : 'grid-cols-1'} ${isGridView ? 'lg:grid-cols-4' : 'lg:grid-cols-1'}`} orientation="horizontal" style={{ gap: "var(--kendo-spacing-4) var(--kendo-spacing-6)" }}>
                 {team.teamMembers.map((member, index) => {
                     return <Card key={index}>
                     <CardBody className="flex items-center">
@@ -85,14 +89,13 @@ export default function Team() {
                         <CardTitle className="font-medium truncate">{member.teamMember}</CardTitle>
                         <CardSubtitle className="text-subtle m-0 truncate">{member.title}</CardSubtitle>
                       </div>
-                      <Button svgIcon={pencilIcon} fillMode="flat" className="ml-auto" />
                     </CardBody>
                     <CardFooter className="border-0 p-2">
-                      <Button svgIcon={detailSectionIcon} fillMode="flat">Details</Button>
+                        <Button svgIcon={detailSectionIcon} fillMode="flat" onClick={openDetailsWindow}>Details</Button>
                     </CardFooter>
                     </Card>
                 })}
-               </StackLayout>
+               </GridLayout>
 
                <div className="flex justify-end mt-auto">
                     <FloatingActionButton svgIcon={plusIcon} text="Add new member" size="small" alignOffset={{ x: 40, y: 75 }}/>
