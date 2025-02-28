@@ -1,42 +1,87 @@
-
 // @ts-nocheck
-import Avatar0 from '../assets/Avatar.png';
-import Avatar1 from '../assets/Avatar-1.png';
-import Avatar2 from '../assets/Avatar-2.png';
-import Avatar3 from '../assets/Avatar-3.png';
-import Avatar4 from '../assets/Avatar-4.png';
-import Avatar5 from '../assets/Avatar-5.png';
-import Avatar6 from '../assets/Avatar-6.png';
-import Avatar7 from '../assets/Avatar-7.png';
-import Avatar8 from '../assets/Avatar-8.png';
-import Avatar9 from '../assets/Avatar-9.png';
+import Avatar0 from "../assets/Avatar.png";
+import Avatar1 from "../assets/Avatar-1.png";
+import Avatar2 from "../assets/Avatar-2.png";
+import Avatar3 from "../assets/Avatar-3.png";
+import Avatar4 from "../assets/Avatar-4.png";
+import Avatar5 from "../assets/Avatar-5.png";
+import Avatar6 from "../assets/Avatar-6.png";
+import Avatar7 from "../assets/Avatar-7.png";
+import Avatar8 from "../assets/Avatar-8.png";
+import Avatar9 from "../assets/Avatar-9.png";
 
 export const listData = [
   { text: "Review LMS project timelines and milestones." },
   { text: "Research new investment possibilities for your portfolio." },
   { text: "Communicate with stakeholders on project X updates." },
-  { text: "Analyze costs and make recommendations for cost-saving initiatives." },
-  { text: "Attend today’s client meeting to discuss the project X requirements." },
-  { text: "Review current workflows for project X and identify areas for improvement." },
+  {
+    text: "Analyze costs and make recommendations for cost-saving initiatives.",
+  },
+  {
+    text: "Attend today’s client meeting to discuss the project X requirements.",
+  },
+  {
+    text: "Review current workflows for project X and identify areas for improvement.",
+  },
   { text: "Review LMS project timelines and milestones." },
   { text: "Research new investment possibilities for your portfolio." },
   { text: "Communicate with stakeholders on project X updates." },
-  { text: "Analyze costs and make recommendations for cost-saving initiatives." },
-  { text: "Attend today’s client meeting to discuss the project X requirements." },
-  { text: "Review current workflows for project X and identify areas for improvement." }
+  {
+    text: "Analyze costs and make recommendations for cost-saving initiatives.",
+  },
+  {
+    text: "Attend today’s client meeting to discuss the project X requirements.",
+  },
+  {
+    text: "Review current workflows for project X and identify areas for improvement.",
+  },
 ];
 
 export const gridData = [
-  { taskName: "#2213 Define project scope and objectives.", status: "🕒 Postponed" },
-  { taskName: "#2214 Conduct market research to assess existing LMS solutions.", status: "✅ Completed" },
-  { taskName: "#5342 Identify target audience and their specific needs.", status: "⚠ Delayed" },
-  { taskName: "#7211 Create a project timeline with milestones and deliverables.", status: "⏳ In Progress" },
-  { taskName: "#2811 Gather requirements from stakeholders through interviews or surveys.", status: "❌ Cancelled" },
-  { taskName: "#2213 Define project scope and objectives.", status: "🕒 Postponed" },
-  { taskName: "#2214 Conduct market research to assess existing LMS solutions.", status: "✅ Completed" },
-  { taskName: "#5342 Identify target audience and their specific needs.", status: "⚠ Delayed" },
-  { taskName: "#7211 Create a project timeline with milestones and deliverables.", status: "⏳ In Progress" },
-  { taskName: "#2811 Gather requirements from stakeholders through interviews or surveys.", status: "❌ Cancelled" },
+  {
+    taskName: "#2213 Define project scope and objectives.",
+    status: "🕒 Postponed",
+  },
+  {
+    taskName: "#2214 Conduct market research to assess existing LMS solutions.",
+    status: "✅ Completed",
+  },
+  {
+    taskName: "#5342 Identify target audience and their specific needs.",
+    status: "⚠ Delayed",
+  },
+  {
+    taskName:
+      "#7211 Create a project timeline with milestones and deliverables.",
+    status: "⏳ In Progress",
+  },
+  {
+    taskName:
+      "#2811 Gather requirements from stakeholders through interviews or surveys.",
+    status: "❌ Cancelled",
+  },
+  {
+    taskName: "#2213 Define project scope and objectives.",
+    status: "🕒 Postponed",
+  },
+  {
+    taskName: "#2214 Conduct market research to assess existing LMS solutions.",
+    status: "✅ Completed",
+  },
+  {
+    taskName: "#5342 Identify target audience and their specific needs.",
+    status: "⚠ Delayed",
+  },
+  {
+    taskName:
+      "#7211 Create a project timeline with milestones and deliverables.",
+    status: "⏳ In Progress",
+  },
+  {
+    taskName:
+      "#2811 Gather requirements from stakeholders through interviews or surveys.",
+    status: "❌ Cancelled",
+  },
 ];
 
 export interface ProjectData {
@@ -50,25 +95,25 @@ export interface ProjectData {
 }
 
 export const priorities = [
-  { text: "Urgent" },
-  { text: "Medium priority" },
-  { text: "Low priority" },
-  { text: "High priority" },
-  { text: "Routine" },
+"Urgent" ,
+"Medium priority",
+"Low priority",
+"High priority",
+"Routine" ,
 ];
 
 export const projectManagers = [
-  { text: "Marlon66" },
-  { text: "Maegan_Dietrich56" },
-  { text: "Howell69" },
-  { text: "Kory.Lockman" },
-  { text: "Nolan.Kling13" },
-  { text: "Antoinette_Hills" },
-  { text: "Alden_Upton" },
-  { text: "Travis.Gerhold80" },
-  { text: "Jamaal41" },
-  { text: "Fabiola.Cassin90" },
-]
+  "Marlon66",
+  "Maegan_Dietrich56",
+  "Howell69",
+  "Kory.Lockman",
+  "Nolan.Kling13",
+  "Antoinette_Hills",
+  "Alden_Upton",
+  "Travis.Gerhold80",
+  "Jamaal41",
+  "Fabiola.Cassin90",
+];
 
 export const projectsData = [
   {
@@ -78,7 +123,7 @@ export const projectsData = [
     Stakeholders: "Monserrat49",
     DueDate: "08/11/2025",
     Priority: "Routine",
-    AvatarSrc: Avatar0
+    AvatarSrc: Avatar0,
   },
   {
     ProjectID: 2,
@@ -87,7 +132,7 @@ export const projectsData = [
     Stakeholders: "Judy.Beatty",
     DueDate: "21/08/2025",
     Priority: "Medium priority",
-    AvatarSrc: Avatar1
+    AvatarSrc: Avatar1,
   },
   {
     ProjectID: 3,
@@ -96,7 +141,7 @@ export const projectsData = [
     Stakeholders: "Mary.Flatley37",
     DueDate: "17/07/2025",
     Priority: "Urgent",
-    AvatarSrc: Avatar2
+    AvatarSrc: Avatar2,
   },
   {
     ProjectID: 4,
@@ -105,7 +150,7 @@ export const projectsData = [
     Stakeholders: "Lynn_Kunde",
     DueDate: "24/05/2025",
     Priority: "Low priority",
-    AvatarSrc: Avatar3
+    AvatarSrc: Avatar3,
   },
   {
     ProjectID: 5,
@@ -114,7 +159,7 @@ export const projectsData = [
     Stakeholders: "Gabrielle90",
     DueDate: "01/07/2025",
     Priority: "High priority",
-    AvatarSrc: Avatar4
+    AvatarSrc: Avatar4,
   },
   {
     ProjectID: 6,
@@ -123,7 +168,7 @@ export const projectsData = [
     Stakeholders: "Lavina.Grady",
     DueDate: "15/12/2025",
     Priority: "Medium priority",
-    AvatarSrc: Avatar5
+    AvatarSrc: Avatar5,
   },
   {
     ProjectID: 7,
@@ -132,7 +177,7 @@ export const projectsData = [
     Stakeholders: "Lenna_Schmidt30",
     DueDate: "03/05/2025",
     Priority: "Urgent",
-    AvatarSrc: Avatar6
+    AvatarSrc: Avatar6,
   },
   {
     ProjectID: 8,
@@ -141,7 +186,7 @@ export const projectsData = [
     Stakeholders: "Deborah.Stamm",
     DueDate: "05/09/2025",
     Priority: "Routine",
-    AvatarSrc: Avatar7
+    AvatarSrc: Avatar7,
   },
   {
     ProjectID: 9,
@@ -150,7 +195,7 @@ export const projectsData = [
     Stakeholders: "Skylar_Smith65",
     DueDate: "12/07/2025",
     Priority: "High priority",
-    AvatarSrc: Avatar8
+    AvatarSrc: Avatar8,
   },
   {
     ProjectID: 10,
@@ -159,7 +204,7 @@ export const projectsData = [
     Stakeholders: "Richmond_Bruen",
     DueDate: "31/07/2025",
     Priority: "Medium priority",
-    AvatarSrc: Avatar9
+    AvatarSrc: Avatar9,
   },
   {
     ProjectID: 11,
@@ -168,7 +213,7 @@ export const projectsData = [
     Stakeholders: "Judy.Beatty",
     DueDate: "21/08/2025",
     Priority: "Medium priority",
-    AvatarSrc: Avatar1
+    AvatarSrc: Avatar1,
   },
   {
     ProjectID: 12,
@@ -177,7 +222,7 @@ export const projectsData = [
     Stakeholders: "Mary.Flatley37",
     DueDate: "17/07/2025",
     Priority: "Urgent",
-    AvatarSrc: Avatar2
+    AvatarSrc: Avatar2,
   },
   {
     ProjectID: 13,
@@ -186,7 +231,7 @@ export const projectsData = [
     Stakeholders: "Lynn_Kunde",
     DueDate: "24/05/2025",
     Priority: "Low priority",
-    AvatarSrc: Avatar3
+    AvatarSrc: Avatar3,
   },
   {
     ProjectID: 14,
@@ -195,7 +240,7 @@ export const projectsData = [
     Stakeholders: "Monserrat49",
     DueDate: "08/11/2025",
     Priority: "Routine",
-    AvatarSrc: Avatar0
+    AvatarSrc: Avatar0,
   },
   {
     ProjectID: 15,
@@ -204,7 +249,7 @@ export const projectsData = [
     Stakeholders: "Gabrielle90",
     DueDate: "01/07/2025",
     Priority: "High priority",
-    AvatarSrc: Avatar4
+    AvatarSrc: Avatar4,
   },
   {
     ProjectID: 16,
@@ -213,7 +258,7 @@ export const projectsData = [
     Stakeholders: "Lavina.Grady",
     DueDate: "15/12/2025",
     Priority: "Medium priority",
-    AvatarSrc: Avatar5
+    AvatarSrc: Avatar5,
   },
   {
     ProjectID: 17,
@@ -222,7 +267,7 @@ export const projectsData = [
     Stakeholders: "Deborah.Stamm",
     DueDate: "05/09/2025",
     Priority: "Routine",
-    AvatarSrc: Avatar7
+    AvatarSrc: Avatar7,
   },
   {
     ProjectID: 18,
@@ -231,7 +276,7 @@ export const projectsData = [
     Stakeholders: "Skylar_Smith65",
     DueDate: "12/07/2025",
     Priority: "High priority",
-    AvatarSrc: Avatar8
+    AvatarSrc: Avatar8,
   },
   {
     ProjectID: 19,
@@ -240,7 +285,7 @@ export const projectsData = [
     Stakeholders: "Lenna_Schmidt30",
     DueDate: "03/05/2025",
     Priority: "Urgent",
-    AvatarSrc: Avatar6
+    AvatarSrc: Avatar6,
   },
   {
     ProjectID: 20,
@@ -249,7 +294,7 @@ export const projectsData = [
     Stakeholders: "Richmond_Bruen",
     DueDate: "31/07/2025",
     Priority: "Medium priority",
-    AvatarSrc: Avatar9
+    AvatarSrc: Avatar9,
   },
   {
     ProjectID: 21,
@@ -258,7 +303,7 @@ export const projectsData = [
     Stakeholders: "Monserrat49",
     DueDate: "08/11/2025",
     Priority: "Routine",
-    AvatarSrc: Avatar0
+    AvatarSrc: Avatar0,
   },
   {
     ProjectID: 22,
@@ -267,7 +312,7 @@ export const projectsData = [
     Stakeholders: "Mary.Flatley37",
     DueDate: "17/07/2025",
     Priority: "Urgent",
-    AvatarSrc: Avatar2
+    AvatarSrc: Avatar2,
   },
   {
     ProjectID: 23,
@@ -276,7 +321,7 @@ export const projectsData = [
     Stakeholders: "Judy.Beatty",
     DueDate: "21/08/2025",
     Priority: "Medium priority",
-    AvatarSrc: Avatar1
+    AvatarSrc: Avatar1,
   },
   {
     ProjectID: 24,
@@ -285,7 +330,7 @@ export const projectsData = [
     Stakeholders: "Lynn_Kunde",
     DueDate: "24/05/2025",
     Priority: "Low priority",
-    AvatarSrc: Avatar3
+    AvatarSrc: Avatar3,
   },
   {
     ProjectID: 25,
@@ -294,7 +339,7 @@ export const projectsData = [
     Stakeholders: "Gabrielle90",
     DueDate: "01/07/2025",
     Priority: "High priority",
-    AvatarSrc: Avatar4
+    AvatarSrc: Avatar4,
   },
   {
     ProjectID: 26,
@@ -303,16 +348,16 @@ export const projectsData = [
     Stakeholders: "Lenna_Schmidt30",
     DueDate: "03/05/2025",
     Priority: "Urgent",
-    AvatarSrc: Avatar6
+    AvatarSrc: Avatar6,
   },
-  { 
+  {
     ProjectID: 27,
     ProjectName: "Collaborative Agile Project Management Suite",
     ProjectManager: "Travis.Gerhold80",
     Stakeholders: "Deborah.Stamm",
     DueDate: "05/09/2025",
     Priority: "Routine",
-    AvatarSrc: Avatar7
+    AvatarSrc: Avatar7,
   },
   {
     ProjectID: 28,
@@ -321,16 +366,16 @@ export const projectsData = [
     Stakeholders: "Skylar_Smith65",
     DueDate: "12/07/2025",
     Priority: "High priority",
-    AvatarSrc: Avatar8
+    AvatarSrc: Avatar8,
   },
-  { 
+  {
     ProjectID: 29,
     ProjectName: "Telehealth and Health Tracking Application",
     ProjectManager: "Antoinette_Hills",
     Stakeholders: "Lavina.Grady",
     DueDate: "15/12/2025",
     Priority: "Medium priority",
-    AvatarSrc: Avatar5
+    AvatarSrc: Avatar5,
   },
   {
     ProjectID: 30,
@@ -339,7 +384,7 @@ export const projectsData = [
     Stakeholders: "Richmond_Bruen",
     DueDate: "31/07/2025",
     Priority: "Medium priority",
-    AvatarSrc: Avatar9
+    AvatarSrc: Avatar9,
   },
   {
     ProjectID: 31,
@@ -348,7 +393,7 @@ export const projectsData = [
     Stakeholders: "Monserrat49",
     DueDate: "08/11/2025",
     Priority: "Routine",
-    AvatarSrc: Avatar0
+    AvatarSrc: Avatar0,
   },
   {
     ProjectID: 32,
@@ -357,7 +402,7 @@ export const projectsData = [
     Stakeholders: "Judy.Beatty",
     DueDate: "21/08/2025",
     Priority: "Medium priority",
-    AvatarSrc: Avatar1
+    AvatarSrc: Avatar1,
   },
   {
     ProjectID: 33,
@@ -366,7 +411,7 @@ export const projectsData = [
     Stakeholders: "Lynn_Kunde",
     DueDate: "24/05/2025",
     Priority: "Low priority",
-    AvatarSrc: Avatar3
+    AvatarSrc: Avatar3,
   },
   {
     ProjectID: 34,
@@ -375,7 +420,7 @@ export const projectsData = [
     Stakeholders: "Deborah.Stamm",
     DueDate: "05/09/2025",
     Priority: "Routine",
-    AvatarSrc: Avatar7
+    AvatarSrc: Avatar7,
   },
   {
     ProjectID: 35,
@@ -384,7 +429,7 @@ export const projectsData = [
     Stakeholders: "Gabrielle90",
     DueDate: "01/07/2025",
     Priority: "High priority",
-    AvatarSrc: Avatar4
+    AvatarSrc: Avatar4,
   },
   {
     ProjectID: 36,
@@ -393,7 +438,7 @@ export const projectsData = [
     Stakeholders: "Lavina.Grady",
     DueDate: "15/12/2025",
     Priority: "Medium priority",
-    AvatarSrc: Avatar5
+    AvatarSrc: Avatar5,
   },
   {
     ProjectID: 37,
@@ -402,7 +447,7 @@ export const projectsData = [
     Stakeholders: "Mary.Flatley37",
     DueDate: "17/07/2025",
     Priority: "Urgent",
-    AvatarSrc: Avatar2
+    AvatarSrc: Avatar2,
   },
   {
     ProjectID: 38,
@@ -411,7 +456,7 @@ export const projectsData = [
     Stakeholders: "Lenna_Schmidt30",
     DueDate: "03/05/2025",
     Priority: "Urgent",
-    AvatarSrc: Avatar6
+    AvatarSrc: Avatar6,
   },
   {
     ProjectID: 39,
@@ -420,7 +465,7 @@ export const projectsData = [
     Stakeholders: "Skylar_Smith65",
     DueDate: "12/07/2025",
     Priority: "High priority",
-    AvatarSrc: Avatar8
+    AvatarSrc: Avatar8,
   },
   {
     ProjectID: 40,
@@ -429,7 +474,7 @@ export const projectsData = [
     Stakeholders: "Richmond_Bruen",
     DueDate: "31/07/2025",
     Priority: "Medium priority",
-    AvatarSrc: Avatar9
+    AvatarSrc: Avatar9,
   },
   {
     ProjectID: 41,
@@ -438,7 +483,7 @@ export const projectsData = [
     Stakeholders: "Judy.Beatty",
     DueDate: "21/08/2025",
     Priority: "Medium priority",
-    AvatarSrc: Avatar1
+    AvatarSrc: Avatar1,
   },
   {
     ProjectID: 42,
@@ -447,7 +492,7 @@ export const projectsData = [
     Stakeholders: "Mary.Flatley37",
     DueDate: "17/07/2025",
     Priority: "Urgent",
-    AvatarSrc: Avatar2
+    AvatarSrc: Avatar2,
   },
   {
     ProjectID: 43,
@@ -456,7 +501,7 @@ export const projectsData = [
     Stakeholders: "Lynn_Kunde",
     DueDate: "24/05/2025",
     Priority: "Low priority",
-    AvatarSrc: Avatar3
+    AvatarSrc: Avatar3,
   },
   {
     ProjectID: 44,
@@ -465,7 +510,7 @@ export const projectsData = [
     Stakeholders: "Monserrat49",
     DueDate: "08/11/2025",
     Priority: "Routine",
-    AvatarSrc: Avatar0
+    AvatarSrc: Avatar0,
   },
   {
     ProjectID: 45,
@@ -474,7 +519,7 @@ export const projectsData = [
     Stakeholders: "Gabrielle90",
     DueDate: "01/07/2025",
     Priority: "High priority",
-    AvatarSrc: Avatar4
+    AvatarSrc: Avatar4,
   },
   {
     ProjectID: 46,
@@ -483,7 +528,7 @@ export const projectsData = [
     Stakeholders: "Lavina.Grady",
     DueDate: "15/12/2025",
     Priority: "Medium priority",
-    AvatarSrc: Avatar5
+    AvatarSrc: Avatar5,
   },
   {
     ProjectID: 47,
@@ -492,7 +537,7 @@ export const projectsData = [
     Stakeholders: "Deborah.Stamm",
     DueDate: "05/09/2025",
     Priority: "Routine",
-    AvatarSrc: Avatar7
+    AvatarSrc: Avatar7,
   },
   {
     ProjectID: 48,
@@ -501,7 +546,7 @@ export const projectsData = [
     Stakeholders: "Skylar_Smith65",
     DueDate: "12/07/2025",
     Priority: "High priority",
-    AvatarSrc: Avatar8
+    AvatarSrc: Avatar8,
   },
   {
     ProjectID: 49,
@@ -510,7 +555,7 @@ export const projectsData = [
     Stakeholders: "Richmond_Bruen",
     DueDate: "31/07/2025",
     Priority: "Medium priority",
-    AvatarSrc: Avatar9
+    AvatarSrc: Avatar9,
   },
   {
     ProjectID: 50,
@@ -519,7 +564,7 @@ export const projectsData = [
     Stakeholders: "Lenna_Schmidt30",
     DueDate: "03/05/2025",
     Priority: "Urgent",
-    AvatarSrc: Avatar6
+    AvatarSrc: Avatar6,
   },
   {
     ProjectID: 51,
@@ -528,7 +573,7 @@ export const projectsData = [
     Stakeholders: "Judy.Beatty",
     DueDate: "21/08/2025",
     Priority: "Medium priority",
-    AvatarSrc: Avatar1
+    AvatarSrc: Avatar1,
   },
   {
     ProjectID: 52,
@@ -537,7 +582,7 @@ export const projectsData = [
     Stakeholders: "Mary.Flatley37",
     DueDate: "17/07/2025",
     Priority: "Urgent",
-    AvatarSrc: Avatar2
+    AvatarSrc: Avatar2,
   },
   {
     ProjectID: 53,
@@ -546,7 +591,7 @@ export const projectsData = [
     Stakeholders: "Lynn_Kunde",
     DueDate: "24/05/2025",
     Priority: "Low priority",
-    AvatarSrc: Avatar3
+    AvatarSrc: Avatar3,
   },
   {
     ProjectID: 54,
@@ -555,7 +600,7 @@ export const projectsData = [
     Stakeholders: "Monserrat49",
     DueDate: "08/11/2025",
     Priority: "Routine",
-    AvatarSrc: Avatar0
+    AvatarSrc: Avatar0,
   },
   {
     ProjectID: 55,
@@ -564,7 +609,7 @@ export const projectsData = [
     Stakeholders: "Gabrielle90",
     DueDate: "01/07/2025",
     Priority: "High priority",
-    AvatarSrc: Avatar4
+    AvatarSrc: Avatar4,
   },
   {
     ProjectID: 56,
@@ -573,7 +618,7 @@ export const projectsData = [
     Stakeholders: "Lavina.Grady",
     DueDate: "15/12/2025",
     Priority: "Medium priority",
-    AvatarSrc: Avatar5
+    AvatarSrc: Avatar5,
   },
   {
     ProjectID: 57,
@@ -582,7 +627,7 @@ export const projectsData = [
     Stakeholders: "Deborah.Stamm",
     DueDate: "05/09/2025",
     Priority: "Routine",
-    AvatarSrc: Avatar7
+    AvatarSrc: Avatar7,
   },
   {
     ProjectID: 58,
@@ -591,7 +636,7 @@ export const projectsData = [
     Stakeholders: "Skylar_Smith65",
     DueDate: "12/07/2025",
     Priority: "High priority",
-    AvatarSrc: Avatar8
+    AvatarSrc: Avatar8,
   },
   {
     ProjectID: 59,
@@ -600,7 +645,7 @@ export const projectsData = [
     Stakeholders: "Lenna_Schmidt30",
     DueDate: "03/05/2025",
     Priority: "Urgent",
-    AvatarSrc: Avatar6
+    AvatarSrc: Avatar6,
   },
   {
     ProjectID: 60,
@@ -609,24 +654,24 @@ export const projectsData = [
     Stakeholders: "Richmond_Bruen",
     DueDate: "31/07/2025",
     Priority: "Medium priority",
-    AvatarSrc: Avatar9
-  }
+    AvatarSrc: Avatar9,
+  },
 ];
 
 export const teamsChips = [
-  { text: "All", value: 'all', disabled: false },
-  { text: "Technology and Developement", value: 'technology', disabled: true },
-  { text: "Product and Design", value: 'product', disabled: true },
-  { text: "Business Operation", value: 'business', disabled: true },
-  { text: "Marketing and Sales", value: 'marketing', disabled: true },
+  { text: "All", value: "all", disabled: false },
+  { text: "Technology and Developement", value: "technology", disabled: true },
+  { text: "Product and Design", value: "product", disabled: true },
+  { text: "Business Operation", value: "business", disabled: true },
+  { text: "Marketing and Sales", value: "marketing", disabled: true },
 ];
 
 export const teamsData = [
   {
-    teamCode: 'FE',
-    teamName: 'Frontend team',
-    avatarColor: '#9C38FF',
-    group: 'technology',
+    teamCode: "FE",
+    teamName: "Frontend team",
+    avatarColor: "#9C38FF",
+    group: "technology",
     teamMembers: [
       { teamMember: "Alex Morgan", title: "Frontend Developer" },
       { teamMember: "Jordan Lee", title: "Frontend Developer" },
@@ -637,14 +682,14 @@ export const teamsData = [
       { teamMember: "Riley Hayes", title: "Frontend Developer" },
       { teamMember: "Blake Kim", title: "Angular Developer" },
       { teamMember: "Sydney Clark", title: "Frontend Developer" },
-      { teamMember: "Chris Bennett", title: "Vue.js Developer" }
-    ]
+      { teamMember: "Chris Bennett", title: "Vue.js Developer" },
+    ],
   },
   {
-    teamCode: 'BE',
-    teamName: 'Backend Team',
-    avatarColor: '#800000',
-    group: 'technology',
+    teamCode: "BE",
+    teamName: "Backend Team",
+    avatarColor: "#800000",
+    group: "technology",
     teamMembers: [
       { teamMember: "James Parker", title: "Backend Developer" },
       { teamMember: "Maria Garcia", title: "API Developer" },
@@ -655,14 +700,14 @@ export const teamsData = [
       { teamMember: "Samantha Hall", title: "Python Developer" },
       { teamMember: "Michael Turner", title: "Ruby on Rails Developer" },
       { teamMember: "Sophia Adams", title: "Security Engineer" },
-      { teamMember: "Matthew Clark", title: "Cloud Engineer" }
-    ]
+      { teamMember: "Matthew Clark", title: "Cloud Engineer" },
+    ],
   },
   {
-    teamCode: 'DO',
-    teamName: 'DevOps Team',
-    avatarColor: '#333333',
-    group: 'technology',
+    teamCode: "DO",
+    teamName: "DevOps Team",
+    avatarColor: "#333333",
+    group: "technology",
     teamMembers: [
       { teamMember: "Alice Green", title: "DevOps Engineer" },
       { teamMember: "Ethan Scott", title: "Automation Engineer" },
@@ -673,14 +718,14 @@ export const teamsData = [
       { teamMember: "Charlotte Harris", title: "Release Manager" },
       { teamMember: "Aiden King", title: "Containerization Expert" },
       { teamMember: "Amelia Lewis", title: "Monitoring Specialist" },
-      { teamMember: "Lucas Walker", title: "Cloud Solutions Architect" }
-    ]
+      { teamMember: "Lucas Walker", title: "Cloud Solutions Architect" },
+    ],
   },
   {
-    teamCode: 'QA',
-    teamName: 'QA Team',
-    avatarColor: '#218247',
-    group: 'product',
+    teamCode: "QA",
+    teamName: "QA Team",
+    avatarColor: "#218247",
+    group: "product",
     teamMembers: [
       { teamMember: "Nina Roberts", title: "QA Engineer" },
       { teamMember: "Oliver Harris", title: "Automation Tester" },
@@ -691,14 +736,14 @@ export const teamsData = [
       { teamMember: "Sophia Lee", title: "Mobile QA Engineer" },
       { teamMember: "Mason Taylor", title: "Security Test Engineer" },
       { teamMember: "Chloe Davis", title: "Test Automation Architect" },
-      { teamMember: "Liam Martin", title: "Usability Tester" }
-    ]
+      { teamMember: "Liam Martin", title: "Usability Tester" },
+    ],
   },
   {
-    teamCode: 'UX',
-    teamName: 'UX/UI Design Team',
-    avatarColor: '#DB0000',
-    group: 'product',
+    teamCode: "UX",
+    teamName: "UX/UI Design Team",
+    avatarColor: "#DB0000",
+    group: "product",
     teamMembers: [
       { teamMember: "Isabella White", title: "UX Designer" },
       { teamMember: "Noah Black", title: "UX Researcher" },
@@ -709,14 +754,14 @@ export const teamsData = [
       { teamMember: "Olivia Pink", title: "Product Designer" },
       { teamMember: "Ethan Red", title: "UX Writer" },
       { teamMember: "Charlotte Yellow", title: "Visual Designer" },
-      { teamMember: "Jack Orange", title: "UX/UI Research Lead" }
-    ]
+      { teamMember: "Jack Orange", title: "UX/UI Research Lead" },
+    ],
   },
   {
-    teamCode: 'DB',
-    teamName: 'Database Team',
-    avatarColor: '#8F7200',
-    group: 'technology',
+    teamCode: "DB",
+    teamName: "Database Team",
+    avatarColor: "#8F7200",
+    group: "technology",
     teamMembers: [
       { teamMember: "William Smith", title: "Database Administrator" },
       { teamMember: "Emily Johnson", title: "Database Architect" },
@@ -727,14 +772,14 @@ export const teamsData = [
       { teamMember: "Ethan Lee", title: "Data Modeling Specialist" },
       { teamMember: "Ava Harris", title: "NoSQL Developer" },
       { teamMember: "Michael Clark", title: "Database Performance Engineer" },
-      { teamMember: "Liam Lewis", title: "Cloud Database Administrator" }
-    ]
+      { teamMember: "Liam Lewis", title: "Cloud Database Administrator" },
+    ],
   },
   {
-    teamCode: 'М',
-    teamName: 'Marketing Team',
-    avatarColor: '#008B8B',
-    group: 'marketing',
+    teamCode: "М",
+    teamName: "Marketing Team",
+    avatarColor: "#008B8B",
+    group: "marketing",
     teamMembers: [
       { teamMember: "Edmund Lowe", title: "Chief Marketing Officer" },
       { teamMember: "Ellis Glover", title: "Marketing Manager" },
@@ -745,14 +790,14 @@ export const teamsData = [
       { teamMember: "Sheri Stracke", title: "Graphic Designer" },
       { teamMember: "Rochelle Toy", title: "Email Marketing Coordinator" },
       { teamMember: "Lloyd Bashirian", title: "Market Research Analyst" },
-      { teamMember: "Thomas Hane III", title: "Public Relations Manager" }
-    ]
+      { teamMember: "Thomas Hane III", title: "Public Relations Manager" },
+    ],
   },
   {
-    teamCode: 'PM',
-    teamName: 'Product Management Team',
-    avatarColor: '#C14E34',
-    group: 'product',
+    teamCode: "PM",
+    teamName: "Product Management Team",
+    avatarColor: "#C14E34",
+    group: "product",
     teamMembers: [
       { teamMember: "Olivia Davis", title: "Product Manager" },
       { teamMember: "Ethan Clark", title: "Senior Product Manager" },
@@ -763,14 +808,14 @@ export const teamsData = [
       { teamMember: "Ava Robinson", title: "Product Analyst" },
       { teamMember: "Noah Lee", title: "Growth Product Manager" },
       { teamMember: "Charlotte Hall", title: "Product Designer" },
-      { teamMember: "Lucas White", title: "User Experience Product Lead" }
-    ]
+      { teamMember: "Lucas White", title: "User Experience Product Lead" },
+    ],
   },
   {
-    teamCode: 'TS',
-    teamName: 'Technical Support Team',
-    avatarColor: '#027EB5',
-    group: 'business',
+    teamCode: "TS",
+    teamName: "Technical Support Team",
+    avatarColor: "#027EB5",
+    group: "business",
     teamMembers: [
       { teamMember: "David Miller", title: "Technical Support Engineer" },
       { teamMember: "Sophia Lewis", title: "Senior Support Specialist" },
@@ -781,14 +826,14 @@ export const teamsData = [
       { teamMember: "Mason White", title: "IT Support Specialist" },
       { teamMember: "Chloe Adams", title: "Help Desk Technician" },
       { teamMember: "Liam Carter", title: "Network Support Engineer" },
-      { teamMember: "Isabella Green", title: "Software Support Specialist" }
-    ]
+      { teamMember: "Isabella Green", title: "Software Support Specialist" },
+    ],
   },
   {
-    teamCode: 'S',
-    teamName: 'Security Team',
-    avatarColor: '#267B92',
-    group: 'technology',
+    teamCode: "S",
+    teamName: "Security Team",
+    avatarColor: "#267B92",
+    group: "technology",
     teamMembers: [
       { teamMember: "William Scott", title: "Chief Security Officer (CSO)" },
       { teamMember: "Olivia Anderson", title: "Security Analyst" },
@@ -799,14 +844,14 @@ export const teamsData = [
       { teamMember: "Mason Clark", title: "Penetration Tester" },
       { teamMember: "Chloe Lewis", title: "Security Compliance Officer" },
       { teamMember: "Lucas White", title: "Application Security Engineer" },
-      { teamMember: "Emma Harris", title: "Threat Intelligence Analyst" }
-    ]
+      { teamMember: "Emma Harris", title: "Threat Intelligence Analyst" },
+    ],
   },
   {
-    teamCode: 'DS',
-    teamName: 'Data Science Team',
-    avatarColor: '#708090',
-    group: 'technology',
+    teamCode: "DS",
+    teamName: "Data Science Team",
+    avatarColor: "#708090",
+    group: "technology",
     teamMembers: [
       { teamMember: "David Johnson", title: "Lead Data Scientist" },
       { teamMember: "Sophia Martinez", title: "Data Scientist" },
@@ -816,15 +861,18 @@ export const teamsData = [
       { teamMember: "Chloe Clark", title: "AI Researcher" },
       { teamMember: "Mason Rodriguez", title: "Quantitative Analyst" },
       { teamMember: "Ava Taylor", title: "Data Science Researcher" },
-      { teamMember: "Lucas Anderson", title: "Business Intelligence Developer" },
-      { teamMember: "Emma White", title: "Data Visualization Specialist" }
-    ]
+      {
+        teamMember: "Lucas Anderson",
+        title: "Business Intelligence Developer",
+      },
+      { teamMember: "Emma White", title: "Data Visualization Specialist" },
+    ],
   },
   {
-    teamCode: 'IE',
-    teamName: 'Infrastructure Engineering',
-    avatarColor: '#191970',
-    group: 'technology',
+    teamCode: "IE",
+    teamName: "Infrastructure Engineering",
+    avatarColor: "#191970",
+    group: "technology",
     teamMembers: [
       { teamMember: "James Taylor", title: "Infrastructure Engineer" },
       { teamMember: "Olivia Brown", title: "Cloud Infrastructure Engineer" },
@@ -835,14 +883,17 @@ export const teamsData = [
       { teamMember: "Mason Davis", title: "Storage Solutions Engineer" },
       { teamMember: "Chloe Wilson", title: "Virtualization Engineer" },
       { teamMember: "Liam Lewis", title: "Infrastructure Automation Engineer" },
-      { teamMember: "Emma Robinson", title: "Security Infrastructure Engineer" }
-    ]
+      {
+        teamMember: "Emma Robinson",
+        title: "Security Infrastructure Engineer",
+      },
+    ],
   },
   {
-    teamCode: 'RD',
-    teamName: 'Research and Development',
-    avatarColor: '#7B3F00',
-    group: 'product',
+    teamCode: "RD",
+    teamName: "Research and Development",
+    avatarColor: "#7B3F00",
+    group: "product",
     teamMembers: [
       { teamMember: "David King", title: "R&D Director" },
       { teamMember: "Olivia Johnson", title: "Lead Research Scientist" },
@@ -853,14 +904,14 @@ export const teamsData = [
       { teamMember: "Mason Taylor", title: "Data Scientist" },
       { teamMember: "Chloe Clark", title: "Prototype Engineer" },
       { teamMember: "Lucas Harris", title: "Technical Researcher" },
-      { teamMember: "Emma Martinez", title: "R&D Project Manager" }
-    ]
+      { teamMember: "Emma Martinez", title: "R&D Project Manager" },
+    ],
   },
   {
-    teamCode: 'BA',
-    teamName: 'Business Analysis Team',
-    avatarColor: '#607F1F',
-    group: 'business',
+    teamCode: "BA",
+    teamName: "Business Analysis Team",
+    avatarColor: "#607F1F",
+    group: "business",
     teamMembers: [
       { teamMember: "William Harris", title: "Lead Business Analyst" },
       { teamMember: "Olivia Davis", title: "Senior Business Analyst" },
@@ -871,14 +922,14 @@ export const teamsData = [
       { teamMember: "Mason Taylor", title: "Product Analyst" },
       { teamMember: "Chloe Robinson", title: "Business Intelligence Analyst" },
       { teamMember: "Liam Wilson", title: "Financial Analyst" },
-      { teamMember: "Emma Lee", title: "Junior Business Analyst" }
-    ]
+      { teamMember: "Emma Lee", title: "Junior Business Analyst" },
+    ],
   },
   {
-    teamCode: 'TW',
-    teamName: 'Technical Writing Team',
-    avatarColor: '#DC147F',
-    group: 'business',
+    teamCode: "TW",
+    teamName: "Technical Writing Team",
+    avatarColor: "#DC147F",
+    group: "business",
     teamMembers: [
       { teamMember: "David Miller", title: "Lead Technical Writer" },
       { teamMember: "Olivia White", title: "Senior Technical Writer" },
@@ -889,14 +940,14 @@ export const teamsData = [
       { teamMember: "Mason Davis", title: "Technical Editor" },
       { teamMember: "Chloe Wilson", title: "Instructional Designer" },
       { teamMember: "Liam Anderson", title: "UX Writer" },
-      { teamMember: "Emma Martinez", title: "Junior Technical Writer" }
-    ]
+      { teamMember: "Emma Martinez", title: "Junior Technical Writer" },
+    ],
   },
   {
-    teamCode: 'S',
-    teamName: 'Sales Team',
-    avatarColor: '#5769D2',
-    group: 'marketing',
+    teamCode: "S",
+    teamName: "Sales Team",
+    avatarColor: "#5769D2",
+    group: "marketing",
     teamMembers: [
       { teamMember: "William Scott", title: "Sales Director" },
       { teamMember: "Olivia Taylor", title: "Senior Account Executive" },
@@ -907,14 +958,14 @@ export const teamsData = [
       { teamMember: "Mason Green", title: "Sales Operations Specialist" },
       { teamMember: "Chloe Clark", title: "Customer Success Manager" },
       { teamMember: "Lucas Johnson", title: "Sales Analyst" },
-      { teamMember: "Emma Lee", title: "Business Development Representative" }
-    ]
+      { teamMember: "Emma Lee", title: "Business Development Representative" },
+    ],
   },
   {
-    teamCode: 'SA',
-    teamName: 'System Administration',
-    avatarColor: '#4682B4',
-    group: 'technology',
+    teamCode: "SA",
+    teamName: "System Administration",
+    avatarColor: "#4682B4",
+    group: "technology",
     teamMembers: [
       { teamMember: "David Miller", title: "Senior System Administrator" },
       { teamMember: "Olivia Johnson", title: "System Administrator" },
@@ -925,14 +976,14 @@ export const teamsData = [
       { teamMember: "Mason Harris", title: "Database Administrator" },
       { teamMember: "Chloe White", title: "Virtualization Administrator" },
       { teamMember: "Lucas Anderson", title: "IT Support Specialist" },
-      { teamMember: "Emma Taylor", title: "Junior System Administrator" }
-    ]
+      { teamMember: "Emma Taylor", title: "Junior System Administrator" },
+    ],
   },
   {
-    teamCode: 'CG',
-    teamName: 'Compliance and Governance',
-    avatarColor: '#4B0082',
-    group: 'business',
+    teamCode: "CG",
+    teamName: "Compliance and Governance",
+    avatarColor: "#4B0082",
+    group: "business",
     teamMembers: [
       { teamMember: "William Harris", title: "Compliance Officer" },
       { teamMember: "Olivia Brown", title: "Governance Manager" },
@@ -943,7 +994,7 @@ export const teamsData = [
       { teamMember: "Mason Scott", title: "Legal and Compliance Advisor" },
       { teamMember: "Chloe Martinez", title: "Policy and Procedure Analyst" },
       { teamMember: "Lucas Johnson", title: "Data Privacy Officer" },
-      { teamMember: "Emma Robinson", title: "Corporate Governance Specialist" }
-    ]
-  }
+      { teamMember: "Emma Robinson", title: "Corporate Governance Specialist" },
+    ],
+  },
 ];
