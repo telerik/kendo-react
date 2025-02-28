@@ -5,6 +5,7 @@ import { ButtonGroup, Button, FloatingActionButton } from "@progress/kendo-react
 import { Breadcrumb, Card, CardBody, Avatar, CardTitle, CardSubtitle, CardFooter, BreadcrumbLinkMouseEvent, GridLayout } from "@progress/kendo-react-layout";
 import { groupIcon, listUnorderedSquareIcon, homeIcon, detailSectionIcon, plusIcon } from "@progress/kendo-svg-icons";
 import { SvgIcon } from "@progress/kendo-react-common";
+import { Window } from '@progress/kendo-react-dialogs';
 import React from "react";
 
 interface DataModel {
@@ -17,6 +18,8 @@ export default function Team() {
   let params = useParams();
   const navigate = useNavigate();
   const [isGridView, setIsGridView] = React.useState(true);
+  const [openWindow, setOpenWindow] = React.useState(false);
+  const [windowContent, setWindowContent] = React.useState({ teamMember: '', title: '' });
   const team = teamsData.filter(team => team.teamCode === params.teamId)[0];
 
   const breadcrumbItems: DataModel[] = [
@@ -57,8 +60,17 @@ export default function Team() {
     return firstNameInitial + lastNameInitial;
   }
 
-  const openDetailsWindow = () => {
+  const getEmail = (fullName: string) => {
+    const nameParts = fullName.split(" ");
+    return nameParts[0].toLowerCase() + '_' + nameParts[1].toLowerCase() + '@company.com';
+  }
 
+  const openDetailsWindow = (member: { teamMember: string; title: string }) => {
+    setWindowContent({
+      teamMember: member.teamMember,
+      title: member.title,
+    });
+    setOpenWindow(!openWindow);
   };
 
   return (
@@ -68,7 +80,7 @@ export default function Team() {
 
                <div>
                   <h1 className="text-4xl">{teamsData.map(team => { return team.teamCode === params.teamId ? team.teamName : '' })}</h1>
-                  <h5 className="text-subtle">{teamsData.map(team => { return team.teamCode === params.teamId ? team.teamMembers.length : '' })} team members</h5>
+                  <h5 className="text-subtle">{teamsData.map(team => { return team.teamCode === params.teamId ? team.teamMembers.length : '' })} members</h5>
                </div>
 
                <div className="flex justify-between items-start gap-6">
@@ -91,15 +103,46 @@ export default function Team() {
                       </div>
                     </CardBody>
                     <CardFooter className="border-0 p-2">
-                        <Button svgIcon={detailSectionIcon} fillMode="flat" onClick={openDetailsWindow}>Details</Button>
+                        <Button svgIcon={detailSectionIcon} fillMode="flat" onClick={() => openDetailsWindow(member)}>Details</Button>
                     </CardFooter>
                     </Card>
+
+
                 })}
                </GridLayout>
 
                <div className="flex justify-end mt-auto">
-                    <FloatingActionButton svgIcon={plusIcon} text="Add new member" size="small" alignOffset={{ x: 40, y: 75 }}/>
-              </div>
+                  <FloatingActionButton svgIcon={plusIcon} text="Add new member" size="small" alignOffset={{ x: 40, y: 75 }}/>
+               </div>
+
+              {openWindow &&
+                  <Window title={windowContent.teamMember + ' Details'} initialWidth={480} onClose={() => setOpenWindow(false)}>
+                    <div className="flex flex-col gap-4">
+                          <div className="flex gap-2 items-center">
+                              <Avatar className="bg-[#008B8B]">JS</Avatar>
+                              <div className="flex flex-col gap-1">
+                                  <span className="text-lg font-medium">{windowContent.teamMember}</span>
+                                  <span className="text-subtle">{windowContent.title}</span>
+                              </div>
+                          </div>
+                          <div className="flex gap-1">
+                              <span className="color-subtle">Team:</span>
+                              <span className="underline">{team.teamName}</span>
+                          </div>
+                          <div className="flex gap-1">
+                              <span className="color-subtle">Email:</span>
+                              <span className="underline">{getEmail(windowContent.teamMember)}</span>
+                          </div>
+                          <div className="flex gap-1">
+                              <span className="color-subtle">Phone Number:</span>
+                              <span>(436)-256-140-482</span>
+                          </div>
+                          <div className="flex gap-1">
+                              <span className="color-subtle">Reports to:</span>
+                              <span className="underline">{team.teamMembers[0].teamMember}</span>
+                          </div>
+                      </div>
+                    </Window>}
            </div>
            <div className="bg-surface-alt color-subtle p-2 text-center">
                <span>Copyright &#169; 2025 Progress Software. All rights reserved.</span>
