@@ -1,10 +1,10 @@
 import React from 'react';
 import { Drawer, DrawerContent } from "@progress/kendo-react-layout";
 import { folderIcon, homeIcon, listUnorderedSquareIcon, userOutlineIcon } from '@progress/kendo-svg-icons';
-import { To, useNavigate } from 'react-router-dom';
+import { To, useLocation, useNavigate } from 'react-router-dom';
 
 const drawerItems = [
-    { text: "Home", svgIcon: homeIcon, route: '', selected: true, className: "rounded-md [.k-selected]:!bg-primary/8 [.k-selected]:!text-primary" },
+    { text: "Home", svgIcon: homeIcon, route: '/', selected: true, className: "rounded-md [.k-selected]:!bg-primary/8 [.k-selected]:!text-primary" },
     { text: "Projects", svgIcon: folderIcon, route: '/projects', className: "rounded-md [.k-selected]:!bg-primary/8 [.k-selected]:!text-primary"  },
     { text: "Tasks", svgIcon: listUnorderedSquareIcon, route: '/tasks', className: "rounded-md [.k-selected]:!bg-primary/8 [.k-selected]:!text-primary"  },
     { text: "Team Management", svgIcon: userOutlineIcon, route: '/team-management', className: "rounded-md [.k-selected]:!bg-primary/8 [.k-selected]:!text-primary"  }
@@ -16,20 +16,29 @@ interface DrawerComponentProps {
 
 const DrawerComponent: React.FC<DrawerComponentProps> = ({ children }) => {
   const navigate = useNavigate();
-  const [selected, setSelected] = React.useState(drawerItems.findIndex(x => x.selected === true));
+  const location = useLocation();
 
   const onSelect = (e: { itemTarget: { props: { route: To; }; }; itemIndex: React.SetStateAction<number>; }) => {
     navigate(e.itemTarget.props.route);
-    setSelected(e.itemIndex);
   };
+
+  const setSelectedItem = (pathName: string) => {
+    let currentPath = drawerItems.find((item) => item.route === pathName);
+    if (currentPath && currentPath.text) {
+      return currentPath.text;
+    }
+  };
+
+  const selected = setSelectedItem(location.pathname);
+
   return (
     <Drawer
       expanded={true}
       mode="push"
       drawerClassName="!flex-none !sticky !bg-surface-alt !px-2 !py-10 !w-16 md:!w-60 [&_.k-drawer-wrapper]:!w-12 md:[&_.k-drawer-wrapper]:!w-56 !top-[70px] !h-[calc(100vh_-_70px)]"
-      items={drawerItems.map((item, index) => ({
+      items={drawerItems.map(item => ({
         ...item,
-        selected: index === selected
+        selected: item.text === selected,
       }))}
       onSelect={onSelect}
       width={223}

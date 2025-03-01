@@ -10,7 +10,6 @@ import {
   GridCustomCellProps,
   GridFilterChangeEvent,
   GridItemChangeEvent,
-  GridPageChangeEvent,
   GridSearchBox,
   GridToolbar,
 } from "@progress/kendo-react-grid";
@@ -21,22 +20,17 @@ import {
   homeIcon,
   plusIcon,
   printIcon,
-  searchIcon,
 } from "@progress/kendo-svg-icons";
 import { SvgIcon } from "@progress/kendo-react-common";
-import { InputPrefix, TextBox } from "@progress/kendo-react-inputs";
 import { Badge } from "@progress/kendo-react-indicators";
 import {
-  process,
   filterBy,
-  CompositeFilterDescriptor,
 } from "@progress/kendo-data-query";
 import React from "react";
-import { priorities, projectManagers, projectsData } from "./data";
+import { projectsData } from "./data";
 import { CSVLink } from "react-csv";
 import {
   HeaderTdElement,
-  PagerTargetEvent,
 } from "@progress/kendo-react-data-tools";
 import { DropDownList } from "@progress/kendo-react-dropdowns";
 import { useNavigate } from "react-router-dom";
