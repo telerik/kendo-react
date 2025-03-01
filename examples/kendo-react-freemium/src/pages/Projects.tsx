@@ -121,8 +121,6 @@ export const DropdownFilterCell = (props: any) => {
     });
   };
 
-  //  textField="text"
-
   return (
     <div className="k-filtercell gap-1">
       <DropDownList
@@ -191,7 +189,7 @@ const StakeholderFilterCell = (props: any) => {
 
 export default function Projects() {
   const navigate = useNavigate();
-  
+
   const [data, setData] = React.useState<any>(projectsData);
   const [filter, setFilter] = React.useState<any>();
 
@@ -215,7 +213,7 @@ export default function Projects() {
   };
 
   const itemChange = (event: GridItemChangeEvent) => {
-    const newData = data.map((item) =>
+    const newData = data.map((item: any) =>
         item.ProjectID === event.dataItem.ProjectID
             ? {
                   ...item,

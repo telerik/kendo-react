@@ -617,8 +617,7 @@ export const projectsData = [
 // TASKS PAGE
 export const tasksData = [
   {
-    taskId: '#2213',
-    taskName: 'Define project scope and objectives.',
+    taskName: '#2213 Define project scope and objectives.',
     assignedTo: 'Fabiola.Cassin90',
     dueDate: '07/31/2025',
     status: '🕒 Postponed',
@@ -626,8 +625,7 @@ export const tasksData = [
     priority: 'High priority'
   },
   {
-    taskId: '#2213',
-    taskName: 'Conduct market research to assess existing LMS solutions.',
+    taskName: '#2213 Conduct market research to assess existing LMS solutions.',
     assignedTo: 'Marlon66',
     dueDate: '08/11/2025',
     status: '✅ Completed',
@@ -635,8 +633,7 @@ export const tasksData = [
     priority: 'Medium priority'
   },
   {
-    taskId: '#5342',
-    taskName: 'Identify target audience and their specific needs.',
+    taskName: '#5342 Identify target audience and their specific needs.',
     assignedTo: 'Maegan_Dietrich56',
     dueDate: '08/21/2025',
     status: '⚠ Delayed',
@@ -644,8 +641,7 @@ export const tasksData = [
     priority: 'Urgent'
   },
   {
-    taskId: '#7211',
-    taskName: 'Create a project timeline with milestones and deliverables.',
+    taskName: '#7211 Create a project timeline with milestones and deliverables.',
     assignedTo: 'Howell69',
     dueDate: '07/17/2025',
     status: '⏳ In Progress',
@@ -653,8 +649,7 @@ export const tasksData = [
     priority: 'High priority'
   },
   {
-    taskId: '#2213',
-    taskName: 'Review and update the incident response plan to incorporate new threats and vulnerabilities.',
+    taskName: '#2213 Review and update the incident response plan to incorporate new threats and vulnerabilities.',
     assignedTo: 'Kory.Lockman',
     dueDate: '05/24/2025',
     status: '❌ Cancelled',
@@ -662,8 +657,7 @@ export const tasksData = [
     priority: 'Low priority'
   },
   {
-    taskId: '#2811',
-    taskName: 'Gather requirements from stakeholders through interviews or surveys.',
+    taskName: '#2811 Gather requirements from stakeholders through interviews or surveys.',
     assignedTo: 'Nolan.Kling13',
     dueDate: '07/01/2025',
     status: '🔄 Pending Review',
@@ -671,8 +665,7 @@ export const tasksData = [
     priority: 'Medium priority'
   },
   {
-    taskId: '#2811',
-    taskName: 'Set up monitoring tools and analyze system performance metrics to identify and address potential bottlenecks.',
+    taskName: '#2811 Set up monitoring tools and analyze system performance metrics to identify and address potential bottlenecks.',
     assignedTo: 'Antoinette_Hills',
     dueDate: '12/15/2025',
     status: '⚠ Delayed',
@@ -680,8 +673,7 @@ export const tasksData = [
     priority: 'Low priority'
   },
   {
-    taskId: '#3516',
-    taskName: 'Develop a budget for the project, including potential software and hardware needs.',
+    taskName: '#3516 Develop a budget for the project, including potential software and hardware needs.',
     assignedTo: 'Alden_Upton',
     dueDate: '05/03/2025',
     status: '🚧 On Hold',
@@ -689,8 +681,7 @@ export const tasksData = [
     priority: 'Routine'
   },
   {
-    taskId: '#1415',
-    taskName: 'Conduct a SWOT analysis to assess strengths, weaknesses, opportunities, and threats.',
+    taskName: '#1415 Conduct a SWOT analysis to assess strengths, weaknesses, opportunities, and threats.',
     assignedTo: 'Travis.Gerhold80',
     dueDate: '09/05/2025',
     status: '✔ Approved',
@@ -698,8 +689,7 @@ export const tasksData = [
     priority: 'Medium priority'
   },
   {
-    taskId: '#1536',
-    taskName: 'Implement Content Management Features for Instructors.',
+    taskName: '#1536 Implement Content Management Features for Instructors.',
     assignedTo: 'Jamaal41',
     dueDate: '07/12/2025',
     status: '✅ Completed',
@@ -707,8 +697,7 @@ export const tasksData = [
     priority: 'High priority'
   },
   {
-    taskId: '#1541',
-    taskName: 'Select a suitable technology stack or platform for the LMS.',
+    taskName: '#1541 Select a suitable technology stack or platform for the LMS.',
     assignedTo: 'Fabiola.Cassin90',
     dueDate: '07/31/2025',
     status: '🕒 Postponed',
@@ -716,8 +705,7 @@ export const tasksData = [
     priority: 'High priority'
   },
   {
-    taskId: '#2213',
-    taskName: 'Evaluate potential third-party integrations (e.g., payment gateways, content libraries).',
+    taskName: '#2213 Evaluate potential third-party integrations (e.g., payment gateways, content libraries).',
     assignedTo: 'Fabiola.Cassin90',
     dueDate: '08/11/2025',
     status: '✅ Completed',
@@ -725,8 +713,7 @@ export const tasksData = [
     priority: 'Urgent'
   },
   {
-    taskId: '#2213',
-    taskName: 'Create wireframes for user interface (UI) elements and navigation.',
+    taskName: '#2213 Create wireframes for user interface (UI) elements and navigation.',
     assignedTo: 'Marlon66',
     dueDate: '08/21/2025',
     status: '⏳ In Progress',
@@ -734,6 +721,7 @@ export const tasksData = [
     priority: 'Medium priority'
   }
 ];
+
 
 // TEAMS PAGE
 export const teamsChips = [
