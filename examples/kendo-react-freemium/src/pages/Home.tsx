@@ -1,12 +1,14 @@
 import { Button } from "@progress/kendo-react-buttons";
-import { Grid, GridColumn, GridCustomCellProps } from "@progress/kendo-react-grid";
+import { Grid, GridColumn } from "@progress/kendo-react-grid";
 import { Badge } from "@progress/kendo-react-indicators";
 import { Checkbox } from "@progress/kendo-react-inputs";
 import { Avatar, Card, CardBody, CardFooter, CardHeader, CardSubtitle, CardTitle } from "@progress/kendo-react-layout";
 import { Calendar } from "@progress/kendo-react-dateinputs";
 import { ListView, ListViewItemWrapper } from "@progress/kendo-react-listview";
 import { pencilIcon, plusIcon, trashIcon } from "@progress/kendo-svg-icons";
-import { gridData, listData } from "./data";
+import { tasksData, listData, projectsData, teamsData } from "./data";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const ListItemRender = (props: any) => {
   let item = props.dataItem;
@@ -20,13 +22,34 @@ const ListItemRender = (props: any) => {
   </ListViewItemWrapper>;
 };
 
-const TaskNameCells = (props: GridCustomCellProps) => {
-  return <td {...props.tdProps}>
-    <div className="truncate">{props.dataItem.taskName}</div>
-  </td>;
-}
+// const TaskNameCells = (props: GridCustomCellProps) => {
+//   return <td {...props.tdProps}>
+//     <div className="truncate">{props.dataItem.taskName}</div>
+//   </td>;
+// }
 
 export default function Home() {
+    const navigate = useNavigate();
+    const [showAllProjects, setShowAllProjects] = React.useState(false);
+    const [showAllTeams, setShowAllTeams] = React.useState(false);
+    const [showAllTasks, setShowAllTasks] = React.useState(false);
+
+    const handleSeeAllProjectsClick = () => {
+        setShowAllProjects(!showAllProjects);
+    };
+
+    const handleSeeAllTeamsClick = () => {
+        setShowAllTeams(!showAllTeams);
+    };
+
+    const handleSeeAllTasksClick = () => {
+        setShowAllTasks(!showAllTasks);
+    }
+
+    const projectsToShow = showAllProjects ? projectsData : projectsData.slice(0, 5);
+    const teamsToShow = showAllTeams ? teamsData : teamsData.slice(0, 4);
+
+    const tasksToShow = showAllTasks ? tasksData : tasksData.slice(0, 5);
   return (
     <>
       <div style={{ minHeight: 'calc(100vh - 106px)'}} className="bg-linear-[119deg,_#F8F9FF_-1.78%,_#F3F2FF_47.75%,_#E6F5FF_97.28%] p-10">
@@ -38,41 +61,31 @@ export default function Home() {
                         <CardTitle className="font-medium">Projects</CardTitle>
                     </CardHeader>
                     <CardBody>
-                        <div className="grid grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-2">
-                            <Card>
-                                <CardBody className="flex flex-col justify-between">
-                                    <CardTitle className="font-medium line-clamp-5 h-25.5">AI-Powered Bug Tracking and Resolution System</CardTitle>
-                                    <div><Badge themeColor="warning" rounded="full" position={'inside'}  align={{vertical: 'bottom', horizontal: 'start'}} className="relative z-0">Medium priority</Badge></div>
-                                </CardBody>
-                            </Card>
-                            <Card>
-                                <CardBody className="flex flex-col justify-between">
-                                    <CardTitle className="font-medium line-clamp-5 h-25.5">Virtual Reality Training Module for Employee Onboarding</CardTitle>
-                                    <div><Badge themeColor="success" rounded="full" position={'inside'}  align={{vertical: 'bottom', horizontal: 'start'}} className="relative z-0">Low priority</Badge></div>
-                                </CardBody>
-                            </Card>
-                            <Card>
-                                <CardBody className="flex flex-col justify-between">
-                                    <CardTitle className="font-medium line-clamp-5 h-25.5">Online Learning Management System (LMS)</CardTitle>
-                                    <div><Badge themeColor="error" rounded="full" position={'inside'}  align={{vertical: 'bottom', horizontal: 'start'}} className="relative z-0">Urgent</Badge></div>
-                                </CardBody>
-                            </Card>
-                            <Card className="hidden xl:flex">
-                                <CardBody className="flex flex-col justify-between">
-                                    <CardTitle className="font-medium line-clamp-5 h-25.5">Telehealth and Health Tracking Application</CardTitle>
-                                    <div><Badge themeColor="success" rounded="full" position={'inside'}  align={{vertical: 'bottom', horizontal: 'start'}} className="relative z-0">Low priority</Badge></div>
-                                </CardBody>
-                            </Card>
-                            <Card className="hidden 2xl:flex">
-                                <CardBody className="flex flex-col justify-between">
-                                    <CardTitle className="font-medium line-clamp-5 h-25.5">Market Research and Analytics Tool</CardTitle>
-                                    <div><Badge themeColor="success" rounded="full" position={'inside'}  align={{vertical: 'bottom', horizontal: 'start'}} className="relative z-0">Low priority</Badge></div>
-                                </CardBody>
-                            </Card>
+                              <div className="grid grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-2">
+                                  {projectsToShow.map((project, index) => {
+                                      return <Card key={'project-' + index}>
+                                          <CardBody className="flex flex-col justify-between">
+                                              <div onClick={() => navigate('/projects')} className="cursor-pointer">
+                                                <CardTitle className="font-medium line-clamp-5 h-25.5">{project.ProjectName}</CardTitle>
+                                                <div><Badge themeColor={
+                                                    project.Priority === "Urgent"
+                                                    ? "error"
+                                                    : project.Priority === "Medium priority"
+                                                    ? "warning"
+                                                    : project.Priority === "Low priority"
+                                                    ? "success"
+                                                    : project.Priority === "Routine"
+                                                    ? "tertiary"
+                                                    : "primary"
+                                                } rounded="full" position={'inside'} align={{ vertical: 'bottom', horizontal: 'start' }} className="relative z-0">{project.Priority}</Badge></div>
+                                              </div>
+                                          </CardBody>
+                                      </Card>
+                                  })}
                         </div>
                     </CardBody>
                     <CardFooter className="border-0 p-2">
-                        <Button fillMode="flat" themeColor="primary">See all</Button>
+                              <Button fillMode="flat" themeColor="primary" onClick={handleSeeAllProjectsClick}>See all</Button>
                     </CardFooter>
                 </Card>
             </div>
@@ -85,45 +98,22 @@ export default function Home() {
                         <CardTitle className="font-medium">Teams</CardTitle>
                     </CardHeader>
                     <CardBody className="flex flex-col gap-2">
-                        <Card>
-                            <CardBody className="flex items-center">
-                                <Avatar>FE</Avatar>
-                                <div className="hidden lg:block">
-                                    <CardTitle className="m-0 font-medium">Frontend</CardTitle>
-                                    <CardSubtitle className="m-0 truncate text-subtle">10 members</CardSubtitle>
-                                </div>
-                            </CardBody>
-                        </Card>
-                        <Card>
-                            <CardBody className="flex items-center">
-                                <Avatar themeColor="secondary">BE</Avatar>
-                                <div className="hidden lg:block">
-                                    <CardTitle className="m-0 font-medium">Backend</CardTitle>
-                                    <CardSubtitle className="m-0 truncate text-subtle">10 members</CardSubtitle>
-                                </div>
-                            </CardBody>
-                        </Card>
-                        <Card className="hidden lg:flex">
-                            <CardBody className="flex items-center">
-                                <Avatar themeColor="tertiary">DO</Avatar>
-                                <div className="hidden lg:block">
-                                    <CardTitle className="m-0 font-medium">DevOps</CardTitle>
-                                    <CardSubtitle className="m-0 truncate text-subtle">10 members</CardSubtitle>
-                                </div>
-                            </CardBody>
-                        </Card>
-                        <Card className="hidden lg:flex">
-                            <CardBody className="flex items-center">
-                                <Avatar>QA</Avatar>
-                                <div className="hidden lg:block">
-                                    <CardTitle className="m-0 font-medium">QA</CardTitle>
-                                    <CardSubtitle className="m-0 truncate text-subtle">10 members</CardSubtitle>
-                                </div>
-                            </CardBody>
-                        </Card>
+                        {teamsToShow.map((team, index) => {
+                            return <Card key={'team-' + index}>
+                                    <div onClick={() => navigate('/team-management')} className="cursor-pointer">
+                                <CardBody className="flex items-center">
+                                        <Avatar style={{ background: team.avatarColor }}>{team.teamCode}</Avatar>
+                                        <div className="hidden lg:block">
+                                            <CardTitle className="m-0 font-medium">{team.teamName.replace("Team", "")}</CardTitle>
+                                            <CardSubtitle className="m-0 truncate text-subtle">{team.teamMembers.length} members</CardSubtitle>
+                                        </div>
+                                </CardBody>
+                                    </div>
+                            </Card>
+                        })}
                     </CardBody>
                     <CardFooter className="border-0 p-2">
-                        <Button fillMode="flat" themeColor="primary">See all</Button>
+                        <Button fillMode="flat" themeColor="primary" onClick={handleSeeAllTeamsClick}>See all</Button>
                     </CardFooter>
                 </Card>
             </div>
@@ -144,13 +134,15 @@ export default function Home() {
                         <CardTitle className="font-medium">Tasks</CardTitle>
                     </CardHeader>
                     <CardBody className="h-full overflow-y-hidden">
-                        <Grid className="h-full" data={gridData}>
-                            <GridColumn field="taskName" title="Task Name" editable={false} filterable={false} cells={{ data: TaskNameCells }} />
-                            <GridColumn field="status" title="Status" editable={false} filterable={false} />
+                        <Grid className="h-full" data={tasksToShow}>
+                            <GridColumn field="taskName" title="Task Name" 
+                            //   cells={{ data: TaskNameCells }}
+                            />
+                            <GridColumn field="status" title="Status" width={115} />
                         </Grid>
                     </CardBody>
                     <CardFooter className="border-0 p-2">
-                        <Button fillMode="flat" themeColor="primary">See all</Button>
+                        <Button fillMode="flat" themeColor="primary" onClick={handleSeeAllTasksClick}>See all</Button>
                     </CardFooter>
                 </Card>
             </div>
