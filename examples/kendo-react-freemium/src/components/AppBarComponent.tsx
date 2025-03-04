@@ -5,9 +5,7 @@ import { AppBar, AppBarSection, Avatar } from "@progress/kendo-react-layout";
 import { Badge, BadgeContainer } from '@progress/kendo-react-indicators';
 import { Popover } from '@progress/kendo-react-tooltip';
 import { SvgIcon } from '@progress/kendo-react-common';
-// @ts-ignore
-import logo from '../assets/logo.svg';
-// @ts-ignore
+import logo from '../assets/logo-1.svg';
 import compactLogo from '../assets/compact-logo.svg';
 import { bellIcon, logoutIcon, searchIcon, slidersIcon } from '@progress/kendo-svg-icons';
 import { useNavigate } from 'react-router-dom';

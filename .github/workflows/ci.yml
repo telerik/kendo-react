@@ -11,7 +11,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Use NodeJS v18
@@ -115,12 +115,12 @@ jobs:
           npm ci
           npm run build
 
-      # Add a build step (npm run build)
       - name: Build Kendo React Freemium app
         working-directory: ./examples/kendo-react-freemium
         if: steps.changes.outputs.kendo-react-freemium == 'true'
         run: |
           npm ci
+          npm run build
 
       - name: Build Homepage demo app
         working-directory: ./examples/kendo-react-homepage-demo
