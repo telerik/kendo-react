@@ -22,12 +22,6 @@ const ListItemRender = (props: any) => {
   </ListViewItemWrapper>;
 };
 
-// const TaskNameCells = (props: GridCustomCellProps) => {
-//   return <td {...props.tdProps}>
-//     <div className="truncate">{props.dataItem.taskName}</div>
-//   </td>;
-// }
-
 export default function Home() {
     const navigate = useNavigate();
     const [showAllProjects, setShowAllProjects] = React.useState(false);
@@ -50,10 +44,11 @@ export default function Home() {
     const teamsToShow = showAllTeams ? teamsData : teamsData.slice(0, 4);
 
     const tasksToShow = showAllTasks ? tasksData : tasksData.slice(0, 5);
+
   return (
     <>
       <div style={{ minHeight: 'calc(100vh - 106px)'}} className="bg-linear-[119deg,_#F8F9FF_-1.78%,_#F3F2FF_47.75%,_#E6F5FF_97.28%] p-10">
-        <h1 className="text-4xl text-subtle pb-6">Welcome John Doe 👋</h1>
+        <h1 className="text-4xl text-subtle pb-6">Welcome John Porter 👋</h1>
         <div className="grid grid-cols-[360px_1fr] lg:grid-cols-12 xl:grid-cols-[1fr_2fr_360px] gap-6">
             <div className="col-span-2 lg:col-span-6 xl:col-span-2">
                 <Card className="rounded-2xl">
