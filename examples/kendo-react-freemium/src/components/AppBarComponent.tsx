@@ -22,7 +22,7 @@ export default function AppBarComponent() {
     return (
         <AppBar positionMode="sticky" className="bg-surface-alt !p-4" themeColor='inherit'>
             <AppBarSection className="grow gap-4">
-                <a href="/">
+                <a href={"/kendo-react/kendo-react-freemium/"}>
                     <img src={logo} alt="Logo" className="hidden md:flex" />
                     <img src={compactLogo} alt="Logo" className="flex md:hidden" />
                 </a>
