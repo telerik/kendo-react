@@ -34,7 +34,6 @@ export default function Tasks() {
 
   const filterChange = (event: GridFilterChangeEvent) => {
     setFilter(event.filter);
-
     setData(filterBy(tasksData, event.filter));
   };
 
@@ -47,7 +46,6 @@ export default function Tasks() {
               }
             : item
     );
-
     setData(newData);
   };
 

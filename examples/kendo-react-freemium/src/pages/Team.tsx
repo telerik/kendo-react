@@ -158,7 +158,7 @@ export default function Team() {
                           </div>
                       </div>
                   </Window>}
-                
+
                   {openDialog && <Dialog title="Add Member" width={450} onClose={() => setOpenDialog(false)}>
                       <div className="flex flex-col gap-4">
                         <FloatingLabel label="First Name" editorId={'first-name'} editorValue={fNValue}>
