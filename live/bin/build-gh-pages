@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Builds example projects and deploys them to GH Pages
-STANDALONE_PROJECTS=(ecommerce-jewellery-store kendo-react-e-commerce-astro-app kendo-react-finance-portfolio react-coffee-warehouse react-admin-dashboard kendo-react-homepage-demo kendo-react-file-manager react-grid-live-data)
+STANDALONE_PROJECTS=(ecommerce-jewellery-store kendo-react-e-commerce-astro-app kendo-react-finance-portfolio react-coffee-warehouse react-admin-dashboard kendo-react-homepage-demo kendo-react-file-manager react-grid-live-data kendo-react-freemium)
 
 set -e
 
