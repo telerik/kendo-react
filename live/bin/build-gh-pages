@@ -16,7 +16,7 @@ do
   npm run build
   mkdir -p ../../live/build/${PROJECT}
 
-if [ "$PROJECT" = "kendo-react-e-commerce-astro-app" ]; then
+if [ "$PROJECT" = "kendo-react-e-commerce-astro-app" ] || [ "$PROJECT" = "kendo-react-freemium" ]; then
   mv -v dist/* "../../live/build/${PROJECT}"
 else
   mv -v build/* "../../live/build/${PROJECT}"
