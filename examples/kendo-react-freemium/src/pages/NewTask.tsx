@@ -28,16 +28,15 @@ export default function Task() {
   const [priorityExpanded, setPriorityExpanded] = React.useState(true);
   const [statusExpanded, setStatusExpanded] = React.useState(true);
   const [tagsExpanded, setTagsExpanded] = React.useState(true);
-  const projectId = tasksData.filter(task => task.taskId === params.taskId)[0].projectId;
-  const [project, setProject] = React.useState(projectsData.filter(proj => proj.ProjectID === projectId)[0].ProjectName);
-  const [assignee, setAssignee] = React.useState([tasksData.filter(task => task.taskId === params.taskId)[0].assignedTo] as string[]);
-  const [dueDate, setDueDate] = React.useState(new Date(tasksData.filter(task => task.taskId === params.taskId)[0].dueDate));
-  const [priority, setPriority] = React.useState(tasksData.filter(task => task.taskId === params.taskId)[0].priority);
-  const [status, setStatus] = React.useState(tasksData.filter(task => task.taskId === params.taskId)[0].status);
-  const [tag, setTag] = React.useState(tasksData.filter(task => task.taskId === params.taskId)[0].tags as string[]);
+  const [project, setProject] = React.useState<string>();
+  const [assignee, setAssignee] = React.useState<string[]>();
+  const [dueDate, setDueDate] = React.useState<Date>();
+  const [priority, setPriority] = React.useState<string>();
+  const [status, setStatus] = React.useState<string>();
+  const [tag, setTag] = React.useState<string[]>();
   const projects = projectsData.map(proj => { return proj.ProjectName }).slice(0, 10);
   const assignees = tasksData.map(task => { return task.assignedTo });
-  const statuses = tasksData.map(task => { return task.status });;
+  const statuses = tasksData.map(task => { return task.status });
 
   const breadcrumbItems: DataModel[] = [
     {
@@ -50,7 +49,7 @@ export default function Task() {
     },
     {
         id: `${params.taskId}`,
-        text: `${tasksData.filter(task => task.taskId === params.taskId)[0].taskName}`,
+        text: `New Task`,
     }
   ];
 
@@ -145,40 +144,11 @@ export default function Task() {
           <div style={{minHeight: 'calc(100vh - 106px)'}} className="flex flex-col p-10 gap-6">
             <Breadcrumb data={breadcrumbItems} onItemSelect={handleItemSelect} className="!bg-app-surface" />
 
-            <h1 className="text-4xl">{tasksData.map(task => { return task.taskId === params.taskId ? task.taskName : '' })}</h1>
+            <h1 className="text-4xl">New Task</h1>
 
             <div className="grid grid-cols-12 gap-6">
                   <div className="col-span-6 lg:col-span-8">
-                      <TextArea rows={30} className="rounded-t-2xl" value='As part of a learning management system, we need to implement content management features that enable instructors to easily create, manage, and organize their course materials.
-Objectives:
-1. Enhance User Experience: Streamline the process for instructors to create, manage, and distribute course content effectively.
-2. Facilitate Content Accessibility: Ensure that all content management features are user-friendly and accessible to instructors with varying levels of technical expertise.
-3. Boost Engagement: Provide tools that enable instructors to create more engaging and interactive content for students.
-
-Key Responsibilities:
-1. Requirements Gathering: Collaborate with instructors to understand their needs and pain points regarding current content management practices.
-2. Feature Development: Design and implement features such as modular content creation, media embedding, version control, and scheduling for content release.
-3. User Testing: Conduct thorough testing sessions with instructors to ensure the new features meet their expectations and are easy to use.
-4. Documentation and Training: Develop user manuals and training materials to assist instructors in utilizing the new content management features.
-5. Feedback Incorporation: Set up a process for collecting user feedback post-implementation to make adjustments and improvements as necessary.
-
-Deliverables:
-1. Feature Specifications Document: A comprehensive document outlining the requirements, features, and functionalities based on instructor feedback.
-2. Developed Features: A functioning implementation of content management features that includes:
-3. Course content creation tools (text, video, quizzes)
-4. Media upload and embedding options
-5. Version control and history tracking for content changes
-6. Scheduling and automation for content release
-7. User Acceptance Testing (UAT) Report: Document summarizing feedback from testing sessions and any identified issues or suggestions for improvement.
-8. Training Materials: User guides, video tutorials, and training sessions scheduled for instructors to familiarize them with the new features.
-9. Feedback Mechanism: An established method for instructors to provide ongoing feedback on the content management system.
-
-Comments/Notes:
-It’s important to involve a diverse group of instructors in the testing phase to capture a wide range of feedback.
-Consider accessibility best practices to ensure all instructors, including those with disabilities, can effectively utilize the new features.
-Regular check-ins with stakeholders should be scheduled to ensure continued alignment with instructional goals and user needs.
-Monitor key metrics post-launch to evaluate the effectiveness of the content management features in enhancing instructor performance and student engagement.
-                      '/>
+                      <TextArea rows={30} className="rounded-t-2xl"/>
                       <div className="bg-surface-alt border-1 border-t-0 border-border rounded-b-2xl px-4 py-2">
                           <div className="hidden lg:flex gap-1">
                               <Button svgIcon={checkIcon} themeColor="primary" size="large">Save changes</Button>
