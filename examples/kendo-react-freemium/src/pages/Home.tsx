@@ -4,22 +4,9 @@ import { Badge } from "@progress/kendo-react-indicators";
 import { Checkbox } from "@progress/kendo-react-inputs";
 import { Avatar, Card, CardBody, CardFooter, CardHeader, CardSubtitle, CardTitle } from "@progress/kendo-react-layout";
 import { Calendar } from "@progress/kendo-react-dateinputs";
-import { ListView, ListViewItemWrapper } from "@progress/kendo-react-listview";
 import { pencilIcon, plusIcon, trashIcon } from "@progress/kendo-svg-icons";
 import { tasksData, listData, projectsData, teamsData } from "./data";
 import { useNavigate } from "react-router-dom";
-
-const ListItemRender = (props: any) => {
-  let item = props.dataItem;
-  return <ListViewItemWrapper className="!flex !my-2 !gap-2 !p-0.5">
-    <Checkbox rounded="small" />
-    <span>{item.text}</span>
-    <div className="ml-auto shrink-0">
-        <Button svgIcon={pencilIcon} fillMode="flat" />
-        <Button svgIcon={trashIcon} fillMode="flat" themeColor="error" />
-    </div>
-  </ListViewItemWrapper>;
-};
 
 export default function Home() {
     const navigate = useNavigate();
@@ -74,10 +61,10 @@ export default function Home() {
                     </CardFooter>
                 </Card>
             </div>
-            <div className="col-span-1 col-span-md-8 lg:col-span-6 xl:col-span-1">
-                <Calendar className="rounded-2xl" />
+            <div className="col-span-2 sm:col-span-1 lg:col-span-6 xl:col-span-1">
+                <Calendar className="rounded-2xl w-full" />
             </div>
-            <div className="col-span-1 col-span-md-4 lg:col-span-2 xl:col-span-1 h-72.5 lg:h-116">
+            <div className="col-span-2 sm:col-span-1 lg:col-span-3 xl:col-span-1 h-72.5 lg:h-116">
                 <Card className="rounded-2xl overflow-auto max-h-72.5 lg:max-h-116">
                     <CardHeader className="border-0">
                         <CardTitle className="font-medium">Teams</CardTitle>
@@ -86,13 +73,13 @@ export default function Home() {
                         {teamsData.slice(0, 4).map((team, index) => {
                             return <Card key={'team-' + index}>
                                     <div onClick={() => navigate('/team-management')} className="cursor-pointer">
-                                <CardBody className="flex items-center">
-                                        <Avatar style={{ background: team.avatarColor }}>{team.teamCode}</Avatar>
-                                        <div className="hidden lg:block">
-                                            <CardTitle className="m-0 font-medium">{team.teamName.replace("Team", "")}</CardTitle>
-                                            <CardSubtitle className="m-0 truncate text-subtle">{team.teamMembers.length} members</CardSubtitle>
-                                        </div>
-                                </CardBody>
+                                        <CardBody className="flex items-center">
+                                            <Avatar style={{ background: team.avatarColor }}>{team.teamCode}</Avatar>
+                                            <div className="block sm:hidden lg:block">
+                                                <CardTitle className="m-0 font-medium">{team.teamName.replace("Team", "")}</CardTitle>
+                                                <CardSubtitle className="m-0 truncate text-subtle">{team.teamMembers.length} members</CardSubtitle>
+                                            </div>
+                                        </CardBody>
                                     </div>
                             </Card>
                         })}
@@ -102,14 +89,23 @@ export default function Home() {
                     </CardFooter>
                 </Card>
             </div>
-            <div className="col-span-2 lg:col-span-5 xl:col-span-1 h-116">
+            <div className="col-span-2 lg:col-span-4 xl:col-span-1 h-116">
                 <Card className="rounded-2xl h-full">
                     <CardHeader className="border-0 flex justify-between items-center">
                         <CardTitle className="font-medium">To-Do List</CardTitle>
                         <Button fillMode="flat" themeColor="primary" svgIcon={plusIcon}>Add more tasks</Button>
                     </CardHeader>
                     <CardBody className="h-full overflow-y-hidden">
-                        <ListView data={listData} item={ListItemRender} className="h-full overflow-y-auto"/>
+                              <div className="h-full overflow-y-auto">
+                                  {listData.map((item, index) => <div className="!flex !my-2 !gap-2 !p-0.5" key={'list-item-' + index}>
+                                    <Checkbox rounded="small" />
+                                    <span>{item.text}</span>
+                                    <div className="ml-auto shrink-0">
+                                        <Button svgIcon={pencilIcon} fillMode="flat" />
+                                        <Button svgIcon={trashIcon} fillMode="flat" themeColor="error" />
+                                    </div>
+                                </div>)}
+                              </div>
                     </CardBody>
                 </Card>
             </div>
