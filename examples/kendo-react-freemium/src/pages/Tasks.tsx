@@ -32,6 +32,10 @@ export default function Tasks() {
     }
   };
 
+  const addNewTask = () => {
+    navigate("/tasks/new");
+  };
+
   const filterChange = (event: GridFilterChangeEvent) => {
     setFilter(event.filter);
     setData(filterBy(tasksData, event.filter));
@@ -66,7 +70,7 @@ export default function Tasks() {
 
       <div className="flex flex-wrap items-center justify-between">
         <h1 className="text-4xl">Tasks</h1>
-        <Button themeColor="primary" fillMode="outline" svgIcon={plusIcon}>Add new task</Button>
+        <Button themeColor="primary" fillMode="outline" svgIcon={plusIcon} onClick={addNewTask}>Add new task</Button>
       </div>
 
       <Grid

@@ -129,7 +129,7 @@ export default function Settings() {
                   </div>
                   <span className="text-lg text-subtle font-bold">Contacts</span>
                   <div className="grid grid-cols-2 gap-6">
-                      <FloatingLabel label="Country" editorId={'country'} editorValue={countryValue}>
+                      <FloatingLabel label="Country" editorId={'country'} editorValue={countryValue} optional={true}>
                         <TextBox size="large" value={countryValue} onChange={e => setCountryValue(e.value as string)} suffix={() => {
                           return (
                           <InputSuffix>
@@ -137,7 +137,7 @@ export default function Settings() {
                           </InputSuffix>)
                         }} />
                           </FloatingLabel>
-                      <FloatingLabel label="City" editorId={'city'} editorValue={cityValue}>
+                      <FloatingLabel label="City" editorId={'city'} editorValue={cityValue} optional={true}>
                           <TextBox size="large" value={cityValue} onChange={e => setCityValue(e.value as string)} suffix={() => {
                             return (
                             <InputSuffix>
@@ -145,7 +145,7 @@ export default function Settings() {
                             </InputSuffix>)
                           }}/>
                       </FloatingLabel>
-                      <FloatingLabel label="Address" editorId={'address'} editorValue={addressValue}>
+                      <FloatingLabel label="Address" editorId={'address'} editorValue={addressValue} optional={true}>
                           <TextBox size="large" value={addressValue} onChange={e => setAddresslValue(e.value as string)} suffix={() => {
                             return (
                             <InputSuffix>

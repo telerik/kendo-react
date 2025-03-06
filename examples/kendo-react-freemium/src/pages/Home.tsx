@@ -7,7 +7,6 @@ import { Calendar } from "@progress/kendo-react-dateinputs";
 import { ListView, ListViewItemWrapper } from "@progress/kendo-react-listview";
 import { pencilIcon, plusIcon, trashIcon } from "@progress/kendo-svg-icons";
 import { tasksData, listData, projectsData, teamsData } from "./data";
-import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const ListItemRender = (props: any) => {
@@ -24,26 +23,17 @@ const ListItemRender = (props: any) => {
 
 export default function Home() {
     const navigate = useNavigate();
-    const [showAllProjects, setShowAllProjects] = React.useState(false);
-    const [showAllTeams, setShowAllTeams] = React.useState(false);
-    const [showAllTasks, setShowAllTasks] = React.useState(false);
-
     const handleSeeAllProjectsClick = () => {
-        setShowAllProjects(!showAllProjects);
+        navigate('/projects');
     };
 
     const handleSeeAllTeamsClick = () => {
-        setShowAllTeams(!showAllTeams);
+        navigate('/team-management');
     };
 
     const handleSeeAllTasksClick = () => {
-        setShowAllTasks(!showAllTasks);
+        navigate('/tasks');
     }
-
-    const projectsToShow = showAllProjects ? projectsData : projectsData.slice(0, 5);
-    const teamsToShow = showAllTeams ? teamsData : teamsData.slice(0, 4);
-
-    const tasksToShow = showAllTasks ? tasksData : tasksData.slice(0, 5);
 
   return (
     <>
@@ -57,8 +47,8 @@ export default function Home() {
                     </CardHeader>
                     <CardBody>
                               <div className="grid grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-2">
-                                  {projectsToShow.map((project, index) => {
-                                      return <Card key={'project-' + index}>
+                                  {projectsData.slice(0, 5).map((project, index) => {
+                                      return <Card key={'project-' + index} className={`${index === 3 || index === 4 ? 'hidden 2xl:flex' : ''}`}>
                                           <CardBody className="flex flex-col justify-between">
                                               <div onClick={() => navigate('/projects')} className="cursor-pointer">
                                                 <CardTitle className="font-medium line-clamp-5 h-25.5">{project.ProjectName}</CardTitle>
@@ -80,7 +70,7 @@ export default function Home() {
                         </div>
                     </CardBody>
                     <CardFooter className="border-0 p-2">
-                              <Button fillMode="flat" themeColor="primary" onClick={handleSeeAllProjectsClick}>{!showAllProjects ? 'See all' : 'Collapse'}</Button>
+                              <Button fillMode="flat" themeColor="primary" onClick={handleSeeAllProjectsClick}>See all</Button>
                     </CardFooter>
                 </Card>
             </div>
@@ -93,7 +83,7 @@ export default function Home() {
                         <CardTitle className="font-medium">Teams</CardTitle>
                     </CardHeader>
                     <CardBody className="flex flex-col gap-2">
-                        {teamsToShow.map((team, index) => {
+                        {teamsData.slice(0, 4).map((team, index) => {
                             return <Card key={'team-' + index}>
                                     <div onClick={() => navigate('/team-management')} className="cursor-pointer">
                                 <CardBody className="flex items-center">
@@ -108,7 +98,7 @@ export default function Home() {
                         })}
                     </CardBody>
                     <CardFooter className="border-0 p-2">
-                        <Button fillMode="flat" themeColor="primary" onClick={handleSeeAllTeamsClick}>{!showAllTeams ? 'See all' : 'Collapse'}</Button>
+                        <Button fillMode="flat" themeColor="primary" onClick={handleSeeAllTeamsClick}>See all</Button>
                     </CardFooter>
                 </Card>
             </div>
@@ -129,13 +119,13 @@ export default function Home() {
                         <CardTitle className="font-medium">Tasks</CardTitle>
                     </CardHeader>
                     <CardBody className="h-full overflow-y-hidden">
-                        <Grid className="h-full" data={tasksToShow}>
+                        <Grid className="h-full" data={tasksData}>
                             <GridColumn field="taskName" title="Task Name" />
                             <GridColumn field="status" title="Status" width={115} />
                         </Grid>
                     </CardBody>
                     <CardFooter className="border-0 p-2">
-                              <Button fillMode="flat" themeColor="primary" onClick={handleSeeAllTasksClick}>{!showAllTasks ? 'See all' : 'Collapse'}</Button>
+                              <Button fillMode="flat" themeColor="primary" onClick={handleSeeAllTasksClick}>See all</Button>
                     </CardFooter>
                 </Card>
             </div>

@@ -153,6 +153,24 @@ export const projectsData = [
 ];
 
 // TASKS PAGE
+export const taskTags = [
+  "Feature Development",
+  "Phase 1",
+  "Research",
+  "Q1 Release",
+  "Client",
+  "Internal",
+  "Innovation",
+  "Maintenance",
+  "Java",
+  "Python",
+  "JavaScript",
+  "React",
+  "Node.js",
+  "SQL",
+  "Bug Fix"
+];
+
 export const tasksData = [
   {
     taskId: '2213',
