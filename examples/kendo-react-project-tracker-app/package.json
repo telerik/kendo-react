@@ -1,8 +1,8 @@
 {
-    "name": "kendo-react-freemium",
+    "name": "kendo-react-project-tracker-app",
     "private": true,
     "version": "0.0.0",
-    "homepage": "https://telerik.github.io/kendo-react/kendo-react-freemium/",
+    "homepage": "https://telerik.github.io/kendo-react/kendo-react-project-tracker-app/",
     "type": "module",
     "scripts": {
         "dev": "vite",

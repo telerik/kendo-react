@@ -13,7 +13,7 @@ import NewTask from "./pages/NewTask";
 export default function App() {
   return (
     <>
-      <BrowserRouter basename="/kendo-react/kendo-react-freemium">
+      <BrowserRouter basename="/kendo-react/kendo-react-project-tracker-app">
         <AppBarComponent />
         <DrawerComponent>
             <Routes>

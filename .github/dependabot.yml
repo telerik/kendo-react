@@ -109,7 +109,7 @@ updates:
       - "Dependencies"
 
   - package-ecosystem: "npm"
-    directory: "/examples/kendo-react-freemium"
+    directory: "/examples/kendo-react-project-tracker-app"
     schedule:
       interval: "daily"
     groups:
