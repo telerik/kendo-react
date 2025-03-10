@@ -14,7 +14,7 @@
     "dependencies": {
         "@progress/kendo-data-query": "^1.7.1",
         "@progress/kendo-drawing": "^1.21.2",
-        "@progress/kendo-licensing": "^1.5.0",
+        "@progress/kendo-licensing": "^1.5.1",
         "@progress/kendo-react-animation": "^9.5.0",
         "@progress/kendo-react-buttons": "^9.5.0",
         "@progress/kendo-react-common": "^9.5.0",
