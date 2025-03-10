@@ -59,9 +59,10 @@
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "calculate-size": "1.1.1",
+    "hammerjs": "^2.0.8",
+    "ical.js": "^2.0.1",
     "prosemirror-mentions": "^1.0.2",
-    "react-csv": "^2.2.2",
-    "ical.js":"^2.0.1"
+    "react-csv": "^2.2.2"
   },
   "devDependencies": {
     "@types/node": "^20.12.12",
