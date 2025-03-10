@@ -24,7 +24,7 @@ export default function Home() {
 
   return (
     <>
-      <div style={{ minHeight: 'calc(100vh - 106px)'}} className="bg-linear-[119deg,_#F8F9FF_-1.78%,_#F3F2FF_47.75%,_#E6F5FF_97.28%] p-10">
+      <div style={{ minHeight: 'calc(100vh - 106px)'}} className="bg-linear-[119deg,_#F8F9FF_-1.78%,_#F3F2FF_47.75%,_#E6F5FF_97.28%] overflow-auto p-10">
         <h1 className="text-4xl text-subtle pb-6">Welcome John Porter 👋</h1>
         <div className="grid grid-cols-[360px_1fr] lg:grid-cols-12 xl:grid-cols-[1fr_2fr_360px] gap-6">
             <div className="col-span-2 lg:col-span-6 xl:col-span-2">
@@ -71,7 +71,7 @@ export default function Home() {
                     </CardHeader>
                     <CardBody className="flex flex-col gap-2">
                         {teamsData.slice(0, 4).map((team, index) => {
-                            return <Card key={'team-' + index}>
+                            return <Card key={'team-' + index} className={`${index === 2 || index === 3 ? 'hidden lg:flex' : ''}`}>
                                     <div onClick={() => navigate('/team-management')} className="cursor-pointer">
                                         <CardBody className="flex items-center">
                                             <Avatar style={{ background: team.avatarColor }}>{team.teamCode}</Avatar>
@@ -91,7 +91,7 @@ export default function Home() {
             </div>
             <div className="col-span-2 lg:col-span-4 xl:col-span-1 h-116">
                 <Card className="rounded-2xl h-full">
-                    <CardHeader className="border-0 flex justify-between items-center">
+                    <CardHeader className="border-0 flex flex-wrap justify-between items-center gap-2">
                         <CardTitle className="font-medium">To-Do List</CardTitle>
                         <Button fillMode="flat" themeColor="primary" svgIcon={plusIcon}>Add more tasks</Button>
                     </CardHeader>

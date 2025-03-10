@@ -5,8 +5,7 @@ import {
   GridLayout,
 } from "@progress/kendo-react-layout";
 import {
-  homeIcon,
-  searchIcon,
+  homeIcon
 } from "@progress/kendo-svg-icons";
 import { SvgIcon } from "@progress/kendo-react-common";
 import React from "react";
@@ -28,21 +27,11 @@ const breadcrumbItems: DataModel[] = [
 
 export default function Projects() {
   const navigate = useNavigate();
-  const [projects, setProjects] = React.useState(projectsData);
 
   const handleItemSelect = (e: BreadcrumbLinkMouseEvent) => {
     if (e.id === "home") {
       navigate("/");
     }
-  };
-
-  const handleSearchChange = (props: TextBoxChangeEvent) => {
-    const searchValue = (props.value as string).toLowerCase();
-
-    const filteredProjects = projectsData.filter((project) => {
-      return project.ProjectName.toLowerCase().includes(searchValue);
-    });
-    setProjects(filteredProjects);
   };
 
   return (
@@ -58,16 +47,10 @@ export default function Projects() {
 
       <div className="flex flex-wrap items-center justify-between">
         <h1 className="text-4xl">Projects</h1>
-        <TextBox className="w-75" size="large" onChange={handleSearchChange} prefix={() =>
-          <InputPrefix>
-            <SvgIcon icon={searchIcon} />
-            <InputSeparator />
-          </InputPrefix>
-        } placeholder="Search projects" />
       </div>
 
-      <GridLayout className="grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" style={{ gap: "var(--kendo-spacing-4) var(--kendo-spacing-6)" }}>
-        {projects.map((project, index) => {
+      <GridLayout className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" style={{ gap: "var(--kendo-spacing-4) var(--kendo-spacing-6)" }}>
+        {projectsData.map((project, index) => {
           return (
             <div key={index} className="bg-surface-alt border-1 border-border rounded-lg">
               <div className="px-4 py-3">
@@ -96,7 +79,7 @@ export default function Projects() {
                     <Avatar type={'image'} size="small" className="mr-1" border={false}>
                       <img src={project.AvatarSrc} />
                     </Avatar>
-                    <span>Marlon66</span>
+                    <span className="truncate">Marlon66</span>
                   </div>
                 </div>
                 <div>
@@ -105,7 +88,7 @@ export default function Projects() {
                     <Avatar type={'image'} size="small" className="mr-1">
                       <img src={project.AvatarSrc} />
                     </Avatar>
-                    <span>Monserrat49</span>
+                    <span className="truncate">Monserrat49</span>
                   </div>
                 </div>
               </div>

@@ -81,7 +81,7 @@ export default function TeamManagement() {
                   )} />
             </div>
 
-            <GridLayout className={`${isGridView ? 'grid-cols-2' : 'grid-cols-1'} ${isGridView ? 'lg:grid-cols-4' : 'lg:grid-cols-1'}`} style={{gap: "var(--kendo-spacing-4) var(--kendo-spacing-6)"}}>
+            <GridLayout className={`${isGridView ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4' : 'grid-cols-1'}`} style={{gap: "var(--kendo-spacing-4) var(--kendo-spacing-6)"}}>
                 {teams.map((team, index) => {
                   return <Card key={index}>
                     <CardBody className="flex items-center">
