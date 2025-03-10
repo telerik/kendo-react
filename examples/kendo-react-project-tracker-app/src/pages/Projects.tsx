@@ -10,7 +10,6 @@ import {
 import { SvgIcon } from "@progress/kendo-react-common";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { InputPrefix, InputSeparator, TextBox, TextBoxChangeEvent } from "@progress/kendo-react-inputs";
 import { Badge } from "@progress/kendo-react-indicators";
 import { projectsData } from "./data";
 
