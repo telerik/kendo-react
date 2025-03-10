@@ -41,8 +41,8 @@ jobs:
               - 'examples/kendo-react-file-manager/**'
             kendo-react-finance-portfolio:
               - 'examples/kendo-react-finance-portfolio/**'
-            kendo-react-freemium:
-              - 'examples/kendo-react-freemium/**'
+            kendo-react-project-tracker-app:
+              - 'examples/kendo-react-project-tracker-app/**'
             kendo-react-homepage-demo:
               - 'examples/kendo-react-homepage-demo/**'
             kendo-react-nextjs:
@@ -115,9 +115,9 @@ jobs:
           npm ci
           npm run build
 
-      - name: Build Kendo React Freemium app
-        working-directory: ./examples/kendo-react-freemium
-        if: steps.changes.outputs.kendo-react-freemium == 'true'
+      - name: Build Kendo React Project Tracker app
+        working-directory: ./examples/kendo-react-project-tracker-app
+        if: steps.changes.outputs.kendo-react-project-tracker-app == 'true'
         run: |
           npm ci
           npm run build
