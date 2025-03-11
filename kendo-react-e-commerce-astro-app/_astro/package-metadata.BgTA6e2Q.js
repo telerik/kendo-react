@@ -1,4 +1,4 @@
-import{U as t,bn as i,X as d,bo as m,bf as p,bi as x}from"./languageStore.KQiMSkIG.js";import{r as b}from"./index.CAcXRpb3.js";/**
+import{U as t,bn as i,X as d,bo as m,bk as p,bf as x}from"./languageStore.BwrTrYb2.js";import{r as b}from"./index.CAcXRpb3.js";/**
  * @license
  *-------------------------------------------------------------------------------------------
  * Copyright © 2025 Progress Software Corporation. All rights reserved.
@@ -16,10 +16,10 @@ import{U as t,bn as i,X as d,bo as m,bf as p,bi as x}from"./languageStore.KQiMSk
  * Copyright © 2025 Progress Software Corporation. All rights reserved.
  * Licensed under commercial license. See LICENSE.md in the package root for more information
  *-------------------------------------------------------------------------------------------
- */const y="labels.optional",D={[y]:"(Optional)"};/**
+ */const y="labels.optional",k={[y]:"(Optional)"};/**
  * @license
  *-------------------------------------------------------------------------------------------
  * Copyright © 2025 Progress Software Corporation. All rights reserved.
  * Licensed under commercial license. See LICENSE.md in the package root for more information
  *-------------------------------------------------------------------------------------------
- */const U={name:"@progress/kendo-react-labels",productName:"KendoReact",productCode:"KENDOUIREACT",productCodes:["KENDOUIREACT"],publishDate:1740063716,version:"9.4.1",licensingDocsUrl:"https://www.telerik.com/kendo-react-ui/components/my-license/"};export{R as L,U as e,C as g,g as i,y as l,D as o};
+ */const D={name:"@progress/kendo-react-labels",productName:"KendoReact",productCode:"KENDOUIREACT",productCodes:["KENDOUIREACT"],publishDate:1740063716,version:"9.4.1",licensingDocsUrl:"https://www.telerik.com/kendo-react-ui/components/my-license/"};export{R as L,D as e,C as g,g as i,y as l,k as o};
