@@ -1,4 +1,4 @@
-import{r as a}from"./index.CAcXRpb3.js";import{n as Q,e as o,y as D,C as E,b1 as T,D as K,b2 as q,E as P}from"./languageStore.DgQO3fh_.js";import{n as se,a as ie,e as oe}from"./withPropsContext.CGWAPolT.js";import{u as U}from"./CustomizedSection.BPSxYCPK.js";import{D as X,I as re}from"./index.zQUBlHq1.js";import{i as ce}from"./package-metadata.mZgOrXOH.js";/**
+import{r as a}from"./index.CAcXRpb3.js";import{n as Q,e as o,y as D,C as E,b1 as T,D as K,b2 as q,E as P}from"./languageStore.BwrTrYb2.js";import{n as se,a as ie,e as oe}from"./withPropsContext.CGWAPolT.js";import{u as U}from"./CustomizedSection.gKgT1Lim.js";import{D as X,I as re}from"./index.zQUBlHq1.js";import{i as ce}from"./package-metadata.BgTA6e2Q.js";/**
  * @license
  *-------------------------------------------------------------------------------------------
  * Copyright © 2025 Progress Software Corporation. All rights reserved.
