@@ -1,25 +1,27 @@
 # KendoReact
 
-> **NOTE**: We use this repo as a bug tracker, and to list helpful KendoReact resources. This repository does not contain the KendoReact source code.
+> **NOTE**: We use this repo as a bug tracker and to list helpful KendoReact resources. This repository does not contain the KendoReact source code.
 
 ***
 
-[KendoReact](https://www.telerik.com/kendo-react-ui?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme&utm_content=banner) is a professional UI components and data visualization library for React on a mission to help you design and build business apps with React much faster.
+[KendoReact](https://www.telerik.com/kendo-react-ui?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme&utm_content=banner) is an enterprise-grade React UI library with 120+ free and premium components including a rich data visualization library. We're on a mission to help you design and build business apps with React much faster.
 
 ***
 
-[![Try KendoReact](images/banner.png)](https://www.telerik.com/kendo-react-ui?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme&utm_content=banner)
+[![Check Out KendoReact Free](images/kendoreact-github-banner.png)](https://www.telerik.com/kendo-react-ui/components/free?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme&utm_content=banner)
 
 ## Table of Contents
 
 * [Common Support Questions](#common-support-questions)
+  * [Can I use KendoReact for free?](#can-i-use-kendo-react-for-free)
   * [Where can I find help?](#where-can-i-find-help)
   * [How do I report a bug?](#how-do-i-report-a-bug)
   * [When do you plan to release feature X?](#when-do-you-plan-to-release-feature-x)
 * [React UI Components](#react-ui-components)
 * [Design-to-Development Support](#design-to-development-support)
 * [Sample Applications](#sample-applications)
-  * [Coffee Warehouse Dashboard](#user-content-react-dashboard-application)
+  * [Project Tracker Application](#project-tracker-application)
+  * [Coffee Warehouse Dashboard](#react-dashboard-application)
   * [Financial Portfolio](#user-content-financial-portfolio-application)
   * [File Manager](#user-content-file-manager-template-application)
   * [NodeJS/ASP.NET Core Server](#user-content-react-data-grid-with-nodejs--aspnet-core-server-example)
@@ -29,16 +31,22 @@
 
 ## Common Support Questions
 
+### Can I use KendoReact for free?
+
+KendoReact Free is a free version of the [KendoReact component library](https://www.telerik.com/kendo-react-ui?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) that includes over 50 customizable, enterprise-grade components. The free React component library includes essential components such as a performant [React data grid](https://www.telerik.com/kendo-react-ui/components/grid?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme), [React date inputs](https://www.telerik.com/kendo-react-ui/components/dateinputs?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme), dropdowns, buttons and more, with features such as theming, accessibility, and localization.
+
+All components included in KendoReact Free are part of KendoReact (premium) and, with a few exceptions (see [React UI Components with Both Free and Premium Functionality](https://www.telerik.com/kendo-react-ui/components/free#react-ui-components-with-both-free-and-premium-functionality)), each component's full functionality is free.
+
 ### Where can I find help?
 
 1. For community support we recommend asking questions on our [public forum](https://www.telerik.com/forums/kendo-ui-react) or Stack Overflow using the [kendo-react-ui tag](http://stackoverflow.com/questions/tagged/kendo-react-ui).
-1. KendoReact license holders can use our official support channel to [submit support tickets](https://www.telerik.com/account/support-tickets).
+1. KendoReact license holders can use our official support channel to [submit support tickets](https://www.telerik.com/account/support-center/contact-us/technical-support?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme).
 
 ### How do I report a bug?
 
 If you want to report a bug with KendoReact, please start by reviewing [this repo’s issue tracker](https://github.com/telerik/kendo-react/issues) to make sure your issue has not already been reported. If you can’t find your issue there, please follow the following reproduction steps:
 
-1. Find an example in [the KendoReact documentation](https://www.telerik.com/kendo-react-ui/components/) that looks similar to your use case.
+1. Find an example in [the KendoReact documentation](https://www.telerik.com/kendo-react-ui/components/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) that looks similar to your use case.
 1. Open that example in StackBlitz by using the **EDIT IN STACKBLITZ** button.
 1. Fork the StackBlitz project by using the **FORK** button at the top of the StackBlitz interface.
 1. Modify the code in your StackBlitz project so that it shows the issue you’re having with KendoReact. Try to include the minimum possible amount of code.
@@ -53,10 +61,12 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 ### When do you plan to release feature X?
 
-1. Check the [KendoReact Roadmap](https://www.telerik.com/support/whats-new/kendo-react-ui/roadmap) to see a list of features we have planned.
+1. Check the [KendoReact Roadmap](https://www.telerik.com/support/whats-new/kendo-react-ui/roadmap?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) to see a list of features we have planned.
 1. If your feature isn’t listed there, [check our feedback portal](https://feedback.telerik.com/kendo-react-ui). If you don’t see your feature on our portal, you can request the feature there.
 
 ## React UI Components
+
+> Components marked with a purple diamond or `(premium)` require a commercial license or an active trial license. All other components are free, no sign-up or license is required. 
 
 ### Animations
 
@@ -76,12 +86,12 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>Barcode</b></td>
+  <td><b>Barcode (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/barcode">React Barcode Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/barcodes/barcode/">Documentation & Demos</td>
 </tr>
  <tr>
-  <td><b>QR Code</b></td>
+  <td><b>QR Code (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/qrcode">React QR Code Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/barcodes/qrcode/">Documentation & Demos</td>
 </tr>
@@ -113,7 +123,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
   <td><a href="https://www.telerik.com/kendo-react-ui/components/buttons/chiplist/">Documentation & Demos</td>
 </tr>
 <tr>
-  <td><b>DropDownButton</b></td>
+  <td><b>DropDownButton (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/dropdownbutton">React DropDownButton Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/buttons/dropdownbutton/">Documentation & Demos</td>
 </tr>
@@ -123,7 +133,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
   <td><a href="https://www.telerik.com/kendo-react-ui/components/buttons/floatingactionbutton/">Documentation & Demos</td>
 </tr>
 <tr>
-  <td><b>SplitButton</b></td>
+  <td><b>SplitButton (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/splitbutton">React SplitButton Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/buttons/splitbutton/">Documentation & Demos</td>
 </tr>
@@ -140,87 +150,87 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
  <tr>
-  <td><b>Chart</b></td>
+  <td><b>Chart (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/charts">React Chart Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/">Documentation & Demos</td>
 </tr>
 <tr>
-  <td><b>Heatmap</b></td>
+  <td><b>Heatmap (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/heatmap">React Heatmap Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/heatmap/">Documentation & Demos</td>
 </tr>
  <tr>
-  <td><b>Sparkline</b></td>
+  <td><b>Sparkline (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/sparkline">React Sparkline Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/sparkline/">Documentation & Demos</td>
 </tr>
  <tr>
-  <td><b>Area Chart</b></td>
+  <td><b>Area Chart (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/area-chart">React Area Chart Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/area/">Documentation & Demos</td>
 </tr>
  <tr>
-  <td><b>Bar Chart</b></td>
+  <td><b>Bar Chart (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/bar-chart">React Bar Chart Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/bar/">Documentation & Demos</td>
 </tr>
  <tr>
-  <td><b>Box Plot</b></td>
+  <td><b>Box Plot (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/box-plot">React Box Plot Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/box-plot/">Documentation & Demos</td>
 </tr>
  <tr>
-  <td><b>Bubble Chart</b></td>
+  <td><b>Bubble Chart (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/bubble-chart">React Bubble Chart Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/bubble/">Documentation & Demos</td>
 </tr>
  <tr>
-  <td><b>Donut Chart</b></td>
+  <td><b>Donut Chart (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/donut-chart">React Donut Chart Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/donut/">Documentation & Demos</td>
 </tr>
 <tr>
-  <td><b>Funnel Chart</b></td>
+  <td><b>Funnel Chart (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/funnel-chart">React Funnel Chart Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/funnel/">Documentation & Demos</td>
 </tr>
 <tr>
-  <td><b>Line Chart</b></td>
+  <td><b>Line Chart (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/line-chart">React Line Chart Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/line/">Documentation & Demos</td>
 </tr>
 <tr>
-  <td><b>Pie Chart</b></td>
+  <td><b>Pie Chart (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/pie-chart">React Pie Chart Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/pie/">Documentation & Demos</td>
 </tr>
 <tr>
-  <td><b>Polar Chart</b></td>
+  <td><b>Polar Chart (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/polar-chart">React Polar Chart Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/polar/">Documentation & Demos</td>
 </tr>
 <tr>
-  <td><b>Pyramid Chart</b></td>
+  <td><b>Pyramid Chart (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/pyramid-chart">React Pyramid Chart Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/pyramid/">Documentation & Demos</td>
 </tr>
 <tr>
-  <td><b>Radar Chart</b></td>
+  <td><b>Radar Chart (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/radar-chart">React Radar Chart Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/radar/">Documentation & Demos</td>
 </tr>
 <tr>
-  <td><b>Range Area Chart</b></td>
+  <td><b>Range Area Chart (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/range-area-chart">React Range Area Chart Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/range-area/">Documentation & Demos</td>
 </tr>
 <tr>
-  <td><b>Scatter Chart</b></td>
+  <td><b>Scatter Chart (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/scatter-chart">React Scatter Chart Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/scatter/">Documentation & Demos</td>
 </tr>
  <tr>
-  <td><b>Sankey Chart</b></td>
+  <td><b>Sankey Chart (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/sankey">React Sankey Chart Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/charts/sankey/">Documentation & Demos</td>
 </tr>
@@ -232,7 +242,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>Drag&Drop Utilities</b></td>
+  <td><b>Drag&Drop Utilities (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/drag-and-drop">React Drag&Drop Utilities Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/common/drag-and-drop/">Documentation & Demos</td>
 </tr>
@@ -254,12 +264,12 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>Conversational UI</b></td>
+  <td><b>Conversational UI (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/conversationalui">React Conversational UI Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/conversationalui/">Documentation & Demos</td>
 </tr>
  <tr>
-  <td><b>AIPrompt</b></td>
+  <td><b>AIPrompt (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/aiprompt">React AIPrompt Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/conversationalui/ai-prompt/">Documentation & Demos</td>
 </tr>
@@ -271,11 +281,13 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>Data Grid</b></td>
+  <td><b>Data Grid*</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/grid">React Data Grid Features</a></td>
-  <td><a href="https://www.telerik.com/kendo-react-ui/components/grid/">Documentation & Demos</td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/grid/">Documentation & Demos</a><br/><a href="https://www.telerik.com/kendo-react-ui/components/grid/rsc-mode">RSC Mode Documentation</a></td>
 </tr>
 </tbody></table>
+
+\* This is a free React component with premium features such as RSC mode, server-side capabilities, advanced filtering and grouping, and others. The free feature set does not require any sign-up or license. The premium features require a commercial license or an active trial license.
 
 ### Data Query
 
@@ -283,7 +295,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>Data Query</b></td>
+  <td><b>Data Query (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/dataquery">React Data Query Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/dataquery/">Documentation & Demos</td>
 </tr>
@@ -295,7 +307,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>Filter</b></td>
+  <td><b>Filter (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/filter">React Filter Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/datatools/filter/">Documentation & Demos</td>
 </tr>
@@ -327,7 +339,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
   <td><a href="https://www.telerik.com/kendo-react-ui/components/dateinputs/datepicker/">Documentation & Demos</td>
 </tr>
 <tr>
-  <td><b>DateRangePicker</b></td>
+  <td><b>DateRangePicker (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/daterangepicker">React DateRangePicker Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/dateinputs/daterangepicker/">Documentation & Demos</td>
 </tr>
@@ -337,12 +349,12 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
   <td><a href="https://www.telerik.com/kendo-react-ui/components/dateinputs/datetimepicker/">Documentation & Demos</td>
 </tr>
 <tr>
-  <td><b>MultiViewCalendar</b></td>
+  <td><b>MultiViewCalendar (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/multiviewcalendar">React MultiViewCalendar Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/dateinputs/multiviewcalendar/">Documentation & Demos</td>
 </tr>
 <tr>
-  <td><b>TimePicker</b></td>
+  <td><b>TimePicker (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/timepicker">React TimePicker Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/dateinputs/timepicker/">Documentation & Demos</td>
 </tr>
@@ -354,7 +366,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>Date Math</b></td>
+  <td><b>Date Math (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/datemath">React Date Math Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/datemath/">Documentation & Demos</td>
 </tr>
@@ -383,7 +395,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>Drawing Library</b></td>
+  <td><b>Drawing Library (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/drawing">React Drawing Library Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/drawing/">Documentation & Demos</td>
 </tr>
@@ -400,36 +412,38 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
   <td><a href="https://www.telerik.com/kendo-react-ui/components/dropdowns/autocomplete/">Documentation & Demos</td>
 </tr>
 <tr>
-  <td><b>ComboBox</b></td>
+  <td><b>ComboBox (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/combobox">React ComboBox Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/dropdowns/combobox/">Documentation & Demos</td>
 </tr>
 <tr>
-  <td><b>DropDownList</b></td>
+  <td><b>DropDownList**</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/dropdownlist">React DropDownList Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/dropdowns/dropdownlist/">Documentation & Demos</td>
 </tr>
 <tr>
-  <td><b>DropDownTree</b></td>
+  <td><b>DropDownTree (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/dropdowntree">React DropDownTree Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/dropdowns/dropdowntree/">Documentation & Demos</td>
 </tr>
 <tr>
-  <td><b>MultiColumnComboBox</b></td>
+  <td><b>MultiColumnComboBox (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/multicolumncombobox">React MultiColumn ComboBox Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/dropdowns/multicolumncombobox/">Documentation & Demos</td>
 </tr>
 <tr>
-  <td><b>MultiSelect</b></td>
+  <td><b>MultiSelect**</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/multiselect">React MultiSelect Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/dropdowns/multiselect/">Documentation & Demos</td>
 </tr>
  <tr>
-  <td><b>MultiSelect Tree</b></td>
+  <td><b>MultiSelect Tree (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/multiselecttree">React MultiSelect Tree Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/dropdowns/multiselecttree/">Documentation & Demos</td>
 </tr>
 </tbody></table>
+
+\*\* DropDownList and MultiSelect are free React dropdown components with premium filtering and virtualization. The free feature set does not require any sign-up or license. The premium features require a commercial license or an active trial license.
 
 ### Editor
 
@@ -437,7 +451,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>Editor</b></td>
+  <td><b>Editor (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/editor">React Editor Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/editor/">Documentation & Demos</td>
 </tr>
@@ -461,7 +475,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>File Saver</b></td>
+  <td><b>File Saver (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/filesaver">React File Saver Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/filesaver/">Documentation & Demos</td>
 </tr>
@@ -473,22 +487,22 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>Form</b></td>
+  <td><b>Form (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/form">React Form Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/form/">Documentation & Demos</td>
 </tr>
  <tr>
-  <td><b>FieldArray</b></td>
+  <td><b>FieldArray (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/fieldarray">React FieldArray Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/form/validation/#toc-fieldarray-validation">Documentation & Demos</td>
 </tr>
  <tr>
-  <td><b>FieldWrapper</b></td>
+  <td><b>FieldWrapper (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/fieldwrapper">React FieldWrapper Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/form/api/FieldWrapper/">Documentation & Demos</td>
 </tr>
  <tr>
-  <td><b>FormElement</b></td>
+  <td><b>FormElement(premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/formelement">React FormElement Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/form/api/FormElement/">Documentation & Demos</td>
 </tr>
@@ -500,7 +514,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>Gantt</b></td>
+  <td><b>Gantt (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/gantt-chart">React Gantt Chart Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/gantt/">Documentation & Demos</td>
 </tr>
@@ -512,22 +526,22 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>Arc Gauge</b></td>
+  <td><b>Arc Gauge (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/arcgauge">React Arc Gauge Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/gauges/arcgauge/">Documentation & Demos</td>
 </tr>
  <tr>
-  <td><b>Circular Gauge</b></td>
+  <td><b>Circular Gauge (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/circulargauge">React Circular Gauge Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/gauges/circulargauge/">Documentation & Demos</td>
 </tr>
 <tr>
-  <td><b>Linear Gauge</b></td>
+  <td><b>Linear Gauge (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/lineargauge">React Linear Gauge Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/gauges/lineargauge/">Documentation & Demos</td>
 </tr>
 <tr>
-  <td><b>Radial Gauge</b></td>
+  <td><b>Radial Gauge (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/radialgauge">React Radial Gauge Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/gauges/radialgauge/">Documentation & Demos</td>
 </tr>
@@ -566,7 +580,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
   <td><a href="https://www.telerik.com/kendo-react-ui/components/inputs/checkbox/">Documentation & Demos</td>
 </tr>
 <tr>
-  <td><b>ColorGradient</b></td>
+  <td><b>ColorGradient (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/colorgradient">React ColorGradient Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/inputs/colorgradient/">Documentation & Demos</td>
 </tr>
@@ -576,12 +590,12 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
   <td><a href="https://www.telerik.com/kendo-react-ui/components/inputs/colorpalette/">Documentation & Demos</td>
 </tr>
 <tr>
-  <td><b>ColorPicker</b></td>
+  <td><b>ColorPicker (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/colorpicker">React ColorPicker Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/inputs/colorpicker/">Documentation & Demos</td>
 </tr>
  <tr>
-  <td><b>FlatColorPicker</b></td>
+  <td><b>FlatColorPicker (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/flatcolorpicker">React FlatColorPicker Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/inputs/flatcolorpicker/">Documentation & Demos</td>
 </tr>
@@ -611,14 +625,19 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
   <td><a href="https://www.telerik.com/kendo-react-ui/components/inputs/radiogroup/">Documentation & Demos</td>
 </tr>
 <tr>
-  <td><b>RangeSlider</b></td>
+  <td><b>RangeSlider (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/rangeslider">React RangeSlider Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/inputs/rangeslider/">Documentation & Demos</td>
 </tr>
 <tr>
   <td><b>Rating</b></td>
-  <td><a href="https://www.telerik.com/kendo-react-ui/rating">React Rating Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/signature">React Signature Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/inputs/rating/">Documentation & Demos</td>
+</tr>
+<tr>
+  <td><b>Signature (premium)</b></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/rating">React Rating Features</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/inputs/signature">Documentation & Demos</td>
 </tr>
 <tr>
   <td><b>Slider</b></td>
@@ -720,7 +739,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
   <td><a href="https://www.telerik.com/kendo-react-ui/components/layout/panelbar/">Documentation & Demos</td>
 </tr>
 <tr>
-  <td><b>Splitter</b></td>
+  <td><b>Splitter (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/splitter">React Splitter Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/layout/splitter/">Documentation & Demos</td>
 </tr>
@@ -745,7 +764,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
   <td><a href="https://www.telerik.com/kendo-react-ui/components/layout/tilelayout/">Documentation & Demos</td>
 </tr>
 <tr>
-  <td><b>TimeLine</b></td>
+  <td><b>TimeLine (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/timeline">React TimeLine Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/layout/timeline/">Documentation & Demos</td>
 </tr>
@@ -769,7 +788,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>ListView</b></td>
+  <td><b>ListView (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/listview">React ListView Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/listview/">Documentation & Demos</td>
 </tr>
@@ -793,7 +812,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>PDF Generator</b></td>
+  <td><b>PDF Generator (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/pdfprocessing">React PDF Generator Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/pdfprocessing/">Documentation & Demos</td>
 </tr>
@@ -805,7 +824,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>PivotGrid</b></td>
+  <td><b>PivotGrid (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/pivotgrid">React Pivot Grid Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/pivotgrid/">Documentation & Demos</td>
 </tr>
@@ -829,7 +848,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>ChunkProgressBar</b></td>
+  <td><b>ChunkProgressBar (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/chunkprogressbar">React ChunkProgressBar Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/progressbars/chunkprogressbar/">Documentation & Demos</td>
 </tr>
@@ -846,7 +865,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>Ripple</b></td>
+  <td><b>Ripple (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/ripple">React Ripple Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/ripple/">Documentation & Demos</td>
 </tr>
@@ -858,7 +877,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>Scheduler</b></td>
+  <td><b>Scheduler (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/scheduler">React Scheduler Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/scheduler/">Documentation & Demos</td>
 </tr>
@@ -870,7 +889,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>ScrollView</b></td>
+  <td><b>ScrollView (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/scrollview">React ScrollView (Carousel) Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/scrollview/">Documentation & Demos</td>
 </tr>
@@ -882,7 +901,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>Sortable</b></td>
+  <td><b>Sortable (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/sortable">React Sortable Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/sortable/">Documentation & Demos</td>
 </tr>
@@ -911,7 +930,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>TreeList</b></td>
+  <td><b>TreeList (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/treelist">React TreeList Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/treelist/">Documentation & Demos</td>
 </tr>
@@ -923,7 +942,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>TreeView</b></td>
+  <td><b>TreeView (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/treeview">React TreeView Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/treeview/">Documentation & Demos</td>
 </tr>
@@ -935,12 +954,12 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>External Drop Zone</b></td>
+  <td><b>External Drop Zone (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/upload">React External Drop Zone Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/upload/">Documentation & Demos</td>
 </tr>
  <tr>
-  <td><b>Upload</b></td>
+  <td><b>Upload (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/external-drop-zone">React Upload Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/upload/external-drop-zone/">Documentation & Demos</td>
 </tr>
@@ -952,7 +971,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>OrgChart</b></td>
+  <td><b>OrgChart (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/orgchart">React OrgChart Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/orgchart/">Documentation & Demos</td>
 </tr>
@@ -964,7 +983,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>SpreadSheet</b></td>
+  <td><b>SpreadSheet (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/spreadsheet">React SpreadSheet Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/spreadsheet/">Documentation & Demos</td>
 </tr>
@@ -976,7 +995,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>PDFViewer</b></td>
+  <td><b>PDFViewer (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/pdfviewer">React PDFViewer Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/pdf-viewer/">Documentation & Demos</td>
 </tr>
@@ -988,7 +1007,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 <table><tbody>
 <tr>
-  <td><b>TaskBoard</b></td>
+  <td><b>TaskBoard (premium)</b></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/taskboard">React TaskBoard Features</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/taskboard/">Documentation & Demos</td>
 </tr>
@@ -996,7 +1015,7 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 
 ## Design-to-Development Support
 
-### 3 Design Themes
+### Four Design Themes
 
 <table><tbody>
 <tr>
@@ -1017,13 +1036,28 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 </tr>
 </tbody></table>
 
-### Design Kits
+### Four Figma UI Design Kits
 
 <table><tbody>
 <tr>
-  <td><b>3 Kendo UI Design Kits for Figma</b></td>
+  <td><b>Kendo UI Design Kits for Figma</b></td>
    <td><a href="https://www.telerik.com/kendo-react-ui/figma-design-kits">Kendo UI Figma Design Kits</a></td>
   <td><a href="https://www.telerik.com/kendo-react-ui/components/styling/figma-ui-kits/">Documentation</td>
+</tr>
+</tbody></table>
+
+### Page Templates & Building Blocks
+
+<table><tbody>
+<tr>
+  <td><b>Page Templates</b></td>
+   <td><a href="https://www.telerik.com/kendo-react-ui#page-templates">Kendo UI Page Templates</a></td>
+  <td><a href="https://www.telerik.com/design-system/docs/ui-templates/overview/#page-templates">Documentation</td>
+</tr>
+<tr>
+  <td><b>Building Blocks</b></td>
+   <td><a href="https://www.telerik.com/kendo-react-ui#building-blocks">Kendo UI Building Blocks</a></td>
+  <td><a href="https://www.telerik.com/design-system/docs/ui-templates/overview/#building-blocks">Documentation</td>
 </tr>
 </tbody></table>
 
@@ -1032,16 +1066,25 @@ If you need assistance on troubleshooting or isolating a problem, you can reques
 <table><tbody>
 <tr>
   <td><b>KendoReact ThemeBuilder</b></td>
-  <td><a href="https://www.telerik.com/kendo-react-ui/themebuilder-brand-colors">Apply Your Brand Colors</a></td>
-  <td><a href="https://themebuilder.telerik.com/kendo-react-ui">KendoReact ThemeBuilder App</a></td>
+  <td><a href="https://www.telerik.com/kendo-react-ui/components/styling/theme-builder">Implement Design Requirements</td>
+  <td><a href="https://www.telerik.com/themebuilder?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme">ThemeBuilder App</a></td>
 </tr>
 </tbody></table>
 
 ## Sample Applications
 
+### Project Tracker Application
+
+The [Project Tracker Application](https://www.telerik.com/kendo-react-ui/components/sample-applications/project-tracker-with-free-components?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) showcases the free KendoReact UI components and features, including a Data Grid, AppBar, Buttons, Inputs, Dropdowns and Icons. It demonstrates the integration of KendoReact components with Vite and uses Tailwind CSS utility classes.
+
+* [Live demo](https://telerik.github.io/kendo-react/kendo-react-project-tracker-app/)
+* [Source code](https://github.com/telerik/kendo-react/tree/master/examples/kendo-react-project-tracker-app)
+
+![Project Tracker Application](images/kendo-react-free_project_tracker_app.png)
+
 ### React Dashboard Application
 
-We created the [React Dashboard Application](https://www.telerik.com/kendo-react-ui/components/sample-applications/react-coffee-warehouse-dashboard/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) following the best practices of building UI with KendoReact components, which makes it a fantastic learning resource. You can see how easy it is to set up complex components such as the Data Grid (Table), Charts, Scheduler or Forms.
+We created the [React Dashboard Application](https://www.telerik.com/kendo-react-ui/components/sample-applications/react-coffee-warehouse-dashboard/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) following the best practices of building UI with KendoReact components, which makes it a fantastic learning resource. You can see how easy it is to set up complex components such as the React Data Grid (Table), Charts, Scheduler or Forms.
 
 * [Live demo](https://telerik.github.io/react-coffee-warehouse)
 * [Source code](https://github.com/telerik/kendo-react/tree/master/examples/react-coffee-warehouse)
@@ -1086,17 +1129,31 @@ The [React GitHub Issues Application](https://www.telerik.com/kendo-react-ui/com
 
 ## Useful Links
 
-* [Roadmap](https://www.telerik.com/support/whats-new/kendo-react-ui/roadmap?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) — See what’s coming to KendoReact.
-* [Changelog](https://www.telerik.com/kendo-react-ui/components/changelogs/ui-for-react/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) — A full list of what’s changed in KendoReact releases.
-* [React Resources hub](https://www.telerik.com/kendo-react-ui/resources?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) — A helpful list of KendoReact tutorials, blogs, videos, and more.
-* [Support hub](https://www.telerik.com/kendo-react-ui/support?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) — Technical resources and how-to articles.
-* [Virtual Classroom](https://learn.telerik.com/learn/course/external/view/elearning/14/kendoreact?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) — On-demand technical training, free with a trial or license.
-* [Pricing](https://www.telerik.com/kendo-react-ui/pricing?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) — Learn more about what you get with a KendoReact license.
-* [React Blogs](https://www.telerik.com/blogs/tag/react?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) — Explore many helpful expert-written blogs and tutorials on everything React, including KendoReact-specific guides.
-* [React Wednesdays](https://www.telerik.com/react-wednesdays?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) — A weekly chat show with the best and brightest from the React world, hosted by TJ VanToll.
+* [Roadmap](https://www.telerik.com/support/whats-new/kendo-react-ui/roadmap?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme)—See what’s coming to KendoReact.
+* [Changelog](https://www.telerik.com/kendo-react-ui/components/changelogs/ui-for-react/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme)—A full list of what’s changed in KendoReact releases.
+* [KendoReact Free](https://www.telerik.com/kendo-react-ui/components/free?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme)—Check out the differences between the free and premium React component libraries.
+* [Support hub](https://www.telerik.com/kendo-react-ui/support?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme)—Technical resources and how-to articles.
+* [Video Onboarding](https://www.telerik.com/kendo-react-ui/components/getting-started/video-onboarding?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme)—Free on-demand technical training.
+* [Pricing](https://www.telerik.com/kendo-react-ui/pricing?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme)—Learn more about what you get with a KendoReact license.
+* [React Blogs](https://www.telerik.com/blogs/tag/react?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme)—Explore many helpful expert-written blogs and tutorials on everything React, including KendoReact-specific guides.
 
 ## Licensing
 
-[KendoReact](https://www.telerik.com/kendo-react-ui) is a commercial UI library. You will need to install a license key when adding the package to your project. To receive a license key, you need to either purchase a license or register for a free trial. Doing so indicates that you accept the KendoReact License Agreement. For more information, please refer to the [KendoReact My License page](https://www.telerik.com/kendo-react-ui/components/my-license/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme).
+[KendoReact](https://www.telerik.com/kendo-react-ui?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) is an enterprise-grade UI library with 120+ free and premium components offering unmatched value for building business applications, including premium components such as the React Form, React Charts, and React Scheduler, unique features such as the React server components (RSC) data grid mode, as well as legendary support.
+
+The 50+ free React components included in KendoReact Free require no sign-up or license. To use the premium components and features, you will need to [install a license key](https://www.telerik.com/kendo-react-ui/components/my-license?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) when adding the package to your project. To receive a license key, you need to either [purchase a license](https://www.telerik.com/kendo-react-ui/pricing?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme) or register for a [free trial](https://www.telerik.com/try/kendo-react-ui?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme). Doing so indicates that you accept the KendoReact License Agreement. For more information, please refer to the [KendoReact My License page](https://www.telerik.com/kendo-react-ui/components/my-license/?utm_medium=referral&utm_source=github&utm_campaign=kendo-ui-react-trial-gh-public-readme).
 
 The 30-day free trial gives you access to all KendoReact components and their full functionality. Additionally, for the period of your license, you get access to our legendary technical support provided directly by the KendoReact dev team!
+
+|                                  | KendoReact Free    | KendoReact Trial   | KendoReact         |
+| -------------------------------- | ------------------ | ------------------ | ------------------ |
+| React components                 | 50+                | 120+               | 120+               |
+| Four professional themes         | Yes                | Yes                | Yes                |
+| Four Figma UI Kits               | Yes                | Yes                | Yes                |
+| Page Templates & Building Blocks | 1                  | Yes                | Yes                |
+| ThemeBuilder                     | Free\*             | Ultimate           | Ultimate           |
+| Source code                      | No                 | No                 | Yes                |
+| Visual Studio Code extension     | 1 starter template | Full functionality | Full functionality |
+| Legendary customer support       | No                 | Yes (trial)        | Yes                |
+
+\* This service requires a free Telerik account.
