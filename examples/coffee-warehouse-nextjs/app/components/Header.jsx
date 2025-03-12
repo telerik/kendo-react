@@ -9,7 +9,7 @@ import { useLocalization } from "@progress/kendo-react-intl";
 import { locales } from "./../resources/locales";
 import Image from "next/image";
 
-import userAvatar from "../assets/userImage.png";
+import userAvatar from "../assets/userImage.svg";
 const noMessage = "message not defined";
 
 export const Header = (props) => {
