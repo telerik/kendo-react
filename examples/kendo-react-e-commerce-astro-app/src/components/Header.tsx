@@ -84,7 +84,7 @@ const Header: React.FC = () => {
   );
 
   const [theme, setTheme] = useState<string>(
-    "https://unpkg.com/@progress/kendo-theme-default@10.0.0/dist/default-main.css"
+    "https://unpkg.com/@progress/kendo-theme-default@10.3.1/dist/default-main.css"
   );
 
   useEffect(() => {
