@@ -36,7 +36,10 @@
   "overrides": {
     "nth-check": ">=2.0.1",
     "postcss": ">=8.4.31",
-    "path-to-regexp": "^0.1.12"
+    "path-to-regexp": "^0.1.12",
+    "axios": "^1.8.2",
+    "@babel/helpers": "^7.26.10",
+    "@babel/runtime": "7.26.10"
   },
   "scripts": {
     "start": "react-scripts start",

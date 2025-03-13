@@ -38,6 +38,10 @@
         "react-csv": "^2.2.2",
         "tailwindcss": "^4.0.9"
     },
+    "overrides": {
+        "@babel/runtime": "^7.26.10",
+        "@babel/helpers": "^7.26.10"
+    },
     "devDependencies": {
         "@types/react": "^19.0.0",
         "@types/react-dom": "^19.0.0",
