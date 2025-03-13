@@ -6,7 +6,7 @@ interface ThemeContextProps {
 }
 
 const ThemeContext = createContext<ThemeContextProps>({
-  theme: "https://unpkg.com/@progress/kendo-theme-default@10.0.0/dist/default-main.css",
+  theme: "https://unpkg.com/@progress/kendo-theme-default@10.3.1/dist/default-main.css",
   setTheme: () => {},
 });
 
@@ -14,8 +14,8 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const [theme, setThemeState] = useState<string>(() =>
     typeof window !== "undefined"
       ? localStorage.getItem("theme") ||
-        "https://unpkg.com/@progress/kendo-theme-default@10.0.0/dist/default-main.css"
-      : "https://unpkg.com/@progress/kendo-theme-default@10.0.0/dist/default-main.css"
+        "https://unpkg.com/@progress/kendo-theme-default@10.3.1/dist/default-main.css"
+      : "https://unpkg.com/@progress/kendo-theme-default@10.3.1/dist/default-main.css"
   );
 
   const setTheme = (newTheme: string) => {
