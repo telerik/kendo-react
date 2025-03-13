@@ -40,7 +40,6 @@ export const ShoppingCartList: React.FC = () => {
 
   const onProceedClick = () => {
     window.location.href = "/kendo-react/kendo-react-e-commerce-astro-app/paymentdetails";
-    window.location.href = '/products';
   };
 
   const updateQuantity = (index: number, value: number) => {
