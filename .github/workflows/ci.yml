@@ -63,8 +63,6 @@ jobs:
               - 'examples/react-coffee-warehouse/**'
             react-grid-live-data:
               - 'examples/react-grid-live-data/**'
-            knowledge-base:
-                - 'docs/knowledge-base/examples/**'
 
       - name: Build Coffee warehouse nextjs app
         working-directory: ./examples/coffee-warehouse-nextjs
@@ -191,13 +189,6 @@ jobs:
       - name: Build React Grid Live Data app
         working-directory: ./examples/react-grid-live-data
         if: steps.changes.outputs.react-grid-live-data == 'true'
-        run: |
-          npm ci
-          npm run build
-
-      - name: Build Knowledge Base Vite app
-        working-directory: ./docs/knowledge-base
-        if: steps.changes.outputs.knowledge-base == 'true'
         run: |
           npm ci
           npm run build
