@@ -36,7 +36,9 @@
     "follow-redirects": ">=1.15.4",
     "nth-check": ">=2.0.1",
     "postcss": ">=8.4.31",
-    "path-to-regexp": "0.1.12"
+    "path-to-regexp": "0.1.12",
+    "@babel/runtime": "^7.26.10",
+    "@babel/helpers": "^7.26.10"
   },
   "scripts": {
     "start": "react-scripts start",
