@@ -95,15 +95,15 @@ export default function Team() {
 
                <div>
                   <h1 className="text-4xl">{teamsData.map(team => { return team.teamCode === params.teamId ? team.teamName : '' })}</h1>
-                  <h5 className="text-subtle">{teamsData.map(team => { return team.teamCode === params.teamId ? team.teamMembers.length : '' })} members</h5>
+                  <h2 className="text-subtle">{teamsData.map(team => { return team.teamCode === params.teamId ? team.teamMembers.length : '' })} members</h2>
                </div>
 
                <div className="flex justify-between items-start gap-6">
                    <ButtonGroup>
                        <Button svgIcon={groupIcon} togglable={true} selected={isGridView}
-                         onClick={() => handleViewChange('grid')} />
+                         onClick={() => handleViewChange('grid')} title="Grid View button"/>
                        <Button svgIcon={listUnorderedSquareIcon} togglable={true} selected={!isGridView}
-                       onClick={() => handleViewChange('list')} />
+                       onClick={() => handleViewChange('list')} title="List View button" />
                    </ButtonGroup>
                </div>
 
@@ -111,7 +111,7 @@ export default function Team() {
                 {team.teamMembers.map((member, index) => {
                     return <Card key={index}>
                     <CardBody className="flex items-center">
-                      <Avatar className="bg-[#008B8B]">{getInitials(member.teamMember)}</Avatar>
+                      <Avatar className="bg-[#028282]">{getInitials(member.teamMember)}</Avatar>
                       <div className="overflow-hidden">
                         <CardTitle className="font-medium truncate">{member.teamMember}</CardTitle>
                         <CardSubtitle className="text-subtle m-0 truncate">{member.title}</CardSubtitle>
@@ -134,7 +134,7 @@ export default function Team() {
                   <Window title={windowContent.teamMember + ' Details'} initialWidth={480} onClose={() => setOpenWindow(false)}>
                     <div className="flex flex-col gap-4">
                           <div className="flex gap-2 items-center">
-                              <Avatar className="bg-[#008B8B]">JS</Avatar>
+                              <Avatar className="bg-[#028282]">JS</Avatar>
                               <div className="flex flex-col gap-1">
                                   <span className="text-lg font-medium">{windowContent.teamMember}</span>
                                   <span className="text-subtle">{windowContent.title}</span>
@@ -162,30 +162,30 @@ export default function Team() {
                   {openDialog && <Dialog title="Add Member" width={450} onClose={() => setOpenDialog(false)}>
                       <div className="flex flex-col gap-4">
                         <FloatingLabel label="First Name" editorId={'first-name'} editorValue={fNValue}>
-                          <TextBox size="large" value={fNValue} onChange={e => setFNValue(e.value as string)} />
+                          <TextBox aria-label="First Name" size="large" value={fNValue} onChange={e => setFNValue(e.value as string)} />
                             </FloatingLabel>
                         <FloatingLabel label="Last Name" editorId={'last-name'} editorValue={lNValue}>
-                            <TextBox size="large" value={lNValue} onChange={e => setLNValue(e.value as string)} />
+                            <TextBox aria-label="Last Name" size="large" value={lNValue} onChange={e => setLNValue(e.value as string)} />
                         </FloatingLabel>
                         <FloatingLabel label="Job Title" editorId={'job-title'} editorValue={titleValue}>
-                            <TextBox size="large" value={titleValue} onChange={e => setTitleValue(e.value as string)} />
+                            <TextBox aria-label="Job Title" size="large" value={titleValue} onChange={e => setTitleValue(e.value as string)} />
                         </FloatingLabel>
                         <FloatingLabel label="Email" editorId={'email'} editorValue={emailValue}>
-                            <TextBox size="large" value={emailValue} onChange={e => setEmailValue(e.value as string)} />
+                            <TextBox aria-label="Email" size="large" value={emailValue} onChange={e => setEmailValue(e.value as string)} />
                         </FloatingLabel>
                         <FloatingLabel label="Phone Number" editorId={'phone'} editorValue={phoneValue}>
-                            <MaskedTextBox size="large" value={phoneValue} mask="(999) 000-000-000" onChange={e => setPhoneValue(e.value as string)} />
+                            <MaskedTextBox aria-label="Phone Number" size="large" value={phoneValue} mask="(999) 000-000-000" onChange={e => setPhoneValue(e.value as string)} />
                         </FloatingLabel>
                         <FloatingLabel label="Reports to" editorId={'email'} editorValue={emailValue}>
-                            <MultiSelect size="large" data={['William Smith', 'Alex Morgan', 'James Parker', 'Nina Roberts', 'Isabella White']} value={reportsToValue} onChange={e => setReportsToValue([...e.value])} />
+                            <MultiSelect aria-label="Reports to" size="large" data={['William Smith', 'Alex Morgan', 'James Parker', 'Nina Roberts', 'Isabella White']} value={reportsToValue} onChange={e => setReportsToValue([...e.value])} />
                             <Hint>Multiple options could be selected at once.</Hint>
                         </FloatingLabel>
                       </div>
                       <DialogActionsBar>
-                        <Button type="button" themeColor={'primary'} onClick={() => alert('Member added successfully!')}>
+                        <Button type="button" themeColor={'primary'} onClick={() => alert('Member added successfully!')} title="Save button">
                             Save
                         </Button>
-                        <Button type="button" onClick={() => setOpenDialog(false)}>
+                        <Button type="button" onClick={() => setOpenDialog(false)} title="Cancel button">
                             Cancel
                         </Button>
                     </DialogActionsBar>

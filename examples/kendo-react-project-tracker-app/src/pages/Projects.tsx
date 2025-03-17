@@ -2,24 +2,19 @@ import {
   Avatar,
   Breadcrumb,
   BreadcrumbLinkMouseEvent,
+  BreadcrumbLinkProps,
   GridLayout,
 } from "@progress/kendo-react-layout";
 import {
   homeIcon
 } from "@progress/kendo-svg-icons";
 import { SvgIcon } from "@progress/kendo-react-common";
-import React from "react";
+
 import { useNavigate } from "react-router-dom";
 import { Badge } from "@progress/kendo-react-indicators";
 import { projectsData } from "./data";
 
-interface DataModel {
-  id: string;
-  text?: string;
-  icon?: React.ReactNode;
-}
-
-const breadcrumbItems: DataModel[] = [
+const breadcrumbItems: BreadcrumbLinkProps[] = [
   { id: "home", icon: <SvgIcon icon={homeIcon} /> },
   { id: "projects", text: "Projects" },
 ];
@@ -76,7 +71,7 @@ export default function Projects() {
                   <div className="text-sm text-subtle">Project Manager</div>
                   <div className="flex items-center">
                     <Avatar type={'image'} size="small" className="mr-1" border={false}>
-                      <img src={project.AvatarSrc} />
+                      <img src={project.AvatarSrc}  alt={project.ProjectManager} />
                     </Avatar>
                     <span className="truncate">Marlon66</span>
                   </div>
@@ -85,7 +80,7 @@ export default function Projects() {
                   <div className="text-sm text-subtle">Stakeholder(s)</div>
                   <div className="flex items-center">
                     <Avatar type={'image'} size="small" className="mr-1">
-                      <img src={project.AvatarSrc} />
+                      <img src={project.AvatarSrc} alt={project.Stakeholders} />
                     </Avatar>
                     <span className="truncate">Monserrat49</span>
                   </div>

@@ -60,17 +60,17 @@ export default function TeamManagement() {
 
             <div>
                 <h1 className="text-4xl">Team Management</h1>
-                <h5 className="text-subtle">18 teams</h5>
+                <h2 className="text-subtle">18 teams</h2>
             </div>
 
             <div className="flex justify-between items-start gap-6">
                 <ButtonGroup>
                     <Button svgIcon={groupIcon} togglable={true} selected={isGridView}
-                      onClick={() => handleViewChange('grid')} />
+                      onClick={() => handleViewChange('grid')} title="Grid view button" />
                     <Button svgIcon={listUnorderedSquareIcon} togglable={true} selected={!isGridView}
-                    onClick={() => handleViewChange('list')} />
+                    onClick={() => handleViewChange('list')} title="List view button" />
                 </ButtonGroup>
-                <ChipList className="justify-end" data={teamsChips} selection="multiple" onChange={handleChipValueChange} value={chipValue}
+                <ChipList ariaLabel="Filter by Team" className="justify-end" data={teamsChips} selection="multiple" onChange={handleChipValueChange} value={chipValue}
                     chip={(props: ChipProps) => (
                       <Chip
                         {...props}
@@ -92,7 +92,7 @@ export default function TeamManagement() {
                       </div>
                     </CardBody>
                     <CardFooter className="border-0 p-2">
-                      <Button svgIcon={chevronRightIcon} fillMode="flat" onClick={() => navigate(`/team-management/${team.teamCode}`)}>Explore team</Button>
+                      <Button svgIcon={chevronRightIcon} fillMode="flat" onClick={() => navigate(`/team-management/${team.teamCode}`)} title="Explore team">Explore team</Button>
                     </CardFooter>
                   </Card>
                 })}

@@ -70,7 +70,7 @@ export default function Tasks() {
 
       <div className="flex flex-wrap items-center justify-between">
         <h1 className="text-4xl">Tasks</h1>
-        <Button themeColor="primary" fillMode="outline" svgIcon={plusIcon} onClick={addNewTask}>Add new task</Button>
+        <Button themeColor="primary" fillMode="outline" svgIcon={plusIcon} onClick={addNewTask} title="Add new task">Add new task</Button>
       </div>
 
       <Grid
@@ -108,10 +108,10 @@ export default function Tasks() {
           <GridSearchBox />
           <span className="k-toolbar-spacer" />
 
-          <Button svgIcon={exportIcon} fillMode="flat">
+          <Button svgIcon={exportIcon} fillMode="flat" title="Export to CSV button">
             <CSVLink data={data}>Export to CSV</CSVLink>
           </Button>
-          <Button svgIcon={printIcon} fillMode="flat" onClick={print}>
+          <Button svgIcon={printIcon} fillMode="flat" onClick={print} title="Print button">
             Print
           </Button>
         </GridToolbar>

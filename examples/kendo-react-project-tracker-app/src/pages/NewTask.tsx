@@ -151,14 +151,14 @@ export default function Task() {
                       <TextArea rows={30} className="rounded-t-2xl"/>
                       <div className="bg-surface-alt border-1 border-t-0 border-border rounded-b-2xl px-4 py-2">
                           <div className="hidden lg:flex gap-1">
-                              <Button svgIcon={checkIcon} themeColor="primary" size="large">Save changes</Button>
-                              <Button svgIcon={folderIcon} fillMode="flat" size="large" className="ml-auto">Archive Task</Button>
-                              <Button svgIcon={trashIcon} fillMode="flat" themeColor="error" size="large">Delete task</Button>
+                              <Button svgIcon={checkIcon} themeColor="primary" size="large" title="Save changes">Save changes</Button>
+                              <Button svgIcon={folderIcon} fillMode="flat" size="large" className="ml-auto" title="Archive task">Archive Task</Button>
+                              <Button svgIcon={trashIcon} fillMode="flat" themeColor="error" size="large" title="Delete task">Delete task</Button>
                           </div>
                           <div className="flex lg:hidden gap-1">
-                              <Button svgIcon={checkIcon} themeColor="primary" size="large">Save changes</Button>
-                              <Button svgIcon={folderIcon} fillMode="flat" size="large" className="ml-auto">Archive Task</Button>
-                              <Button svgIcon={trashIcon} fillMode="flat" themeColor="error" size="large">Delete task</Button>
+                              <Button svgIcon={checkIcon} themeColor="primary" size="large" title="Save changes">Save changes</Button>
+                              <Button svgIcon={folderIcon} fillMode="flat" size="large" className="ml-auto" title="Archive task">Archive Task</Button>
+                              <Button svgIcon={trashIcon} fillMode="flat" themeColor="error" size="large" title="Delete task">Delete task</Button>
                           </div>
                       </div>
                   </div>

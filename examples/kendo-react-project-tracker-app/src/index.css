@@ -52,7 +52,7 @@
     --kendo-color-tertiary-subtle: #D8F1FD;
     --kendo-color-tertiary-subtle-hover: #C5EAFC;
     --kendo-color-tertiary-subtle-active: #A3DFFB;
-    --kendo-color-tertiary: #03A9F4;
+    --kendo-color-tertiary: oklch(from #03A9F4 calc(l - 0.15) c h);
     --kendo-color-tertiary-hover: #039AE0;
     --kendo-color-tertiary-active: #028CCB;
     --kendo-color-tertiary-emphasis: #61C9F9;
@@ -63,7 +63,7 @@
     --kendo-color-error-subtle: #E05A4D;
     --kendo-color-error-subtle-hover: #DE5143;
     --kendo-color-error-subtle-active: #DC4839;
-    --kendo-color-error: #DC4839;
+    --kendo-color-error: oklch(from #DC4839 calc(l - 0.05) c h);
     --kendo-color-error-hover: #D14436;
     --kendo-color-error-active: #C64133;
     --kendo-color-error-emphasis: #BB3D30;
@@ -74,7 +74,7 @@
     --kendo-color-success-subtle: #4EBE69;
     --kendo-color-success-subtle-hover: #44BB60;
     --kendo-color-success-subtle-active: #39B757;
-    --kendo-color-success: #2FB34E;
+    --kendo-color-success: oklch(from #2FB34E calc(l - 0.15) c h);
     --kendo-color-success-hover: #2DAA4A;
     --kendo-color-success-active: #2AA146;
     --kendo-color-success-emphasis: #289842;
@@ -85,7 +85,7 @@
     --kendo-color-warning-subtle: #F2C34A;
     --kendo-color-warning-subtle-hover: #F2BF3F;
     --kendo-color-warning-subtle-active: #F1BC35;
-    --kendo-color-warning: #F0B82A;
+    --kendo-color-warning: oklch(from #F0B82A calc(l + 0.10) c calc(h + 10));
     --kendo-color-warning-hover: #E4AF28;
     --kendo-color-warning-active: #D8A626;
     --kendo-color-warning-emphasis: #CC9C24;

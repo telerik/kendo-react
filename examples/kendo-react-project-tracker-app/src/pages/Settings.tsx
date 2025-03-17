@@ -90,20 +90,20 @@ export default function Settings() {
                   <span className="text-lg text-subtle font-bold">Details</span>
                   <div className="flex items-center gap-2">
               <Avatar size="large" rounded="full" style={{ background: color }}>JD</Avatar>
-                      <Button svgIcon={pencilIcon} size="large" fillMode="flat" themeColor="primary" ref={anchor} onClick={openPalette}>Change color</Button>
+                      <Button svgIcon={pencilIcon} size="large" fillMode="flat" themeColor="primary" ref={anchor} onClick={openPalette} title="Change color">Change color</Button>
                       <Popup anchor={anchor.current && anchor.current.element} show={show} popupClass={'popup-content'}>
                         <ColorPalette
                           onChange={handleColorChange}
                           columns={9}
                           palette={['#9C38FF', '#800000', '#333333', '#218247', '#DB0000', '#8F7200',
-                            '#008B8B', '#C14E34', '#027EB5', '#267B92', '#708090', '#191970',
-                            '#7B3F00', '#607F1F', '#DC147F', '#5769D2', '#4682B4', '#4B0082']}
+                            '#008B8B', '#C14E34', '#027EB5', '#267B92', '#637282', '#191970',
+                            '#7B3F00', '#607F1F', '#DC147F', '#5769D2', '#3C73A2', '#4B0082']}
                         />
                     </Popup>
                   </div>
                   <div className="grid grid-cols-2 gap-6">
                       <FloatingLabel label="First Name" editorId={'first-name'} editorValue={fNValue}>
-                        <TextBox size="large" value={fNValue} onChange={e => setFNValue(e.value as string)} suffix={() => {
+                        <TextBox aria-label="First Name" size="large" value={fNValue} onChange={e => setFNValue(e.value as string)} suffix={() => {
                           return (
                           <InputSuffix>
                               <SvgIcon icon={xIcon} onClick={() => setFNValue('')} />
@@ -111,7 +111,7 @@ export default function Settings() {
                         }} />
                           </FloatingLabel>
                       <FloatingLabel label="Last Name" editorId={'last-name'} editorValue={lNValue}>
-                          <TextBox size="large" value={lNValue} onChange={e => setLNValue(e.value as string)} suffix={() => {
+                          <TextBox aria-label="Last Name" size="large" value={lNValue} onChange={e => setLNValue(e.value as string)} suffix={() => {
                             return (
                             <InputSuffix>
                                 <SvgIcon icon={xIcon} onClick={() => setLNValue('')} />
@@ -119,7 +119,7 @@ export default function Settings() {
                           }}/>
                       </FloatingLabel>
                       <FloatingLabel label="Email" editorId={'email'} editorValue={emailValue}>
-                          <TextBox size="large" value={emailValue} onChange={e => setEmailValue(e.value as string)} suffix={() => {
+                          <TextBox aria-label="Email" size="large" value={emailValue} onChange={e => setEmailValue(e.value as string)} suffix={() => {
                             return (
                             <InputSuffix>
                                 <SvgIcon icon={xIcon} onClick={() => setEmailValue('')} />
@@ -130,7 +130,7 @@ export default function Settings() {
                   <span className="text-lg text-subtle font-bold">Contacts</span>
                   <div className="grid grid-cols-2 gap-6">
                       <FloatingLabel label="Country" editorId={'country'} editorValue={countryValue} optional={true}>
-                        <TextBox size="large" value={countryValue} onChange={e => setCountryValue(e.value as string)} suffix={() => {
+                        <TextBox aria-label="Country" size="large" value={countryValue} onChange={e => setCountryValue(e.value as string)} suffix={() => {
                           return (
                           <InputSuffix>
                               <SvgIcon icon={xIcon} onClick={() => setCountryValue('')} />
@@ -138,7 +138,7 @@ export default function Settings() {
                         }} />
                           </FloatingLabel>
                       <FloatingLabel label="City" editorId={'city'} editorValue={cityValue} optional={true}>
-                          <TextBox size="large" value={cityValue} onChange={e => setCityValue(e.value as string)} suffix={() => {
+                          <TextBox aria-label="City" size="large" value={cityValue} onChange={e => setCityValue(e.value as string)} suffix={() => {
                             return (
                             <InputSuffix>
                                 <SvgIcon icon={xIcon} onClick={() => setCityValue('')} />
@@ -146,7 +146,7 @@ export default function Settings() {
                           }}/>
                       </FloatingLabel>
                       <FloatingLabel label="Address" editorId={'address'} editorValue={addressValue} optional={true}>
-                          <TextBox size="large" value={addressValue} onChange={e => setAddresslValue(e.value as string)} suffix={() => {
+                          <TextBox aria-label="Address" size="large" value={addressValue} onChange={e => setAddresslValue(e.value as string)} suffix={() => {
                             return (
                             <InputSuffix>
                                 <SvgIcon icon={xIcon} onClick={() => setAddresslValue('')} />
@@ -157,8 +157,8 @@ export default function Settings() {
               </div>
             </div>
             <div className="flex gap-2 mt-4">
-                <Button themeColor="primary" size="large">Save</Button>
-                <Button themeColor="primary" fillMode="outline" size="large">Cancel</Button>
+                <Button themeColor="primary" size="large" title="Save button">Save</Button>
+                <Button themeColor="primary" fillMode="outline" size="large" title="Cancel button">Cancel</Button>
             </div>
           </>
         )}
@@ -169,7 +169,7 @@ export default function Settings() {
                   <span className="text-lg text-subtle font-bold">Password</span>
                   <div className="grid grid-cols-2 gap-6">
                     <FloatingLabel label="Old Password" editorId={'old-password'} editorValue={oldPassword}>
-                        <TextBox type="password" size="large" value={oldPassword} onChange={e => setOldPassword(e.value as string)} suffix={() => {
+                        <TextBox aria-label="Old Password" type="password" size="large" value={oldPassword} onChange={e => setOldPassword(e.value as string)} suffix={() => {
                           return (
                           <InputSuffix>
                               <SvgIcon icon={xIcon} onClick={() => setOldPassword('')} />
@@ -177,7 +177,7 @@ export default function Settings() {
                         }} />
                           </FloatingLabel>
                       <FloatingLabel label="New Password" editorId={'new-password'} editorValue={newPassword} className="col-start-1">
-                          <TextBox type="password" size="large" value={newPassword} onChange={e => setNewPassowrd(e.value as string)} suffix={() => {
+                          <TextBox aria-label="New Password" type="password" size="large" value={newPassword} onChange={e => setNewPassowrd(e.value as string)} suffix={() => {
                             return (
                             <InputSuffix>
                                 <SvgIcon icon={xIcon} onClick={() => setNewPassowrd('')} />
@@ -185,7 +185,7 @@ export default function Settings() {
                           }}/>
                       </FloatingLabel>
                       <FloatingLabel label="Confirm New Password" editorId={'confirm-password'} editorValue={confirmPassword}>
-                          <TextBox type="password" size="large" value={confirmPassword} onChange={e => setConfirmPassowrd(e.value as string)} suffix={() => {
+                          <TextBox aria-label="Confirm New Password" type="password" size="large" value={confirmPassword} onChange={e => setConfirmPassowrd(e.value as string)} suffix={() => {
                             return (
                             <InputSuffix>
                                 <SvgIcon icon={xIcon} onClick={() => setConfirmPassowrd('')} />
@@ -196,7 +196,7 @@ export default function Settings() {
                   <span className="text-lg text-subtle font-bold">Security Questions:</span>
                   <div className="grid grid-cols-2 gap-6">
                     <FloatingLabel label="Question 1" editorId={'question-1'} editorValue={question1}>
-                        <TextBox size="large" value={question1} onChange={e => setQuestion1(e.value as string)} suffix={() => {
+                        <TextBox aria-label="Question 1" size="large" value={question1} onChange={e => setQuestion1(e.value as string)} suffix={() => {
                           return (
                           <InputSuffix>
                               <SvgIcon icon={xIcon} onClick={() => setQuestion1('')} />
@@ -204,7 +204,7 @@ export default function Settings() {
                         }} />
                           </FloatingLabel>
                       <FloatingLabel label="Answer 1" editorId={'answer-1'} editorValue={answer1}>
-                          <TextBox size="large" value={answer1} onChange={e => setAnswer1(e.value as string)} suffix={() => {
+                          <TextBox aria-label="Answer 1" size="large" value={answer1} onChange={e => setAnswer1(e.value as string)} suffix={() => {
                             return (
                             <InputSuffix>
                                 <SvgIcon icon={xIcon} onClick={() => setAnswer1('')} />
@@ -212,7 +212,7 @@ export default function Settings() {
                           }}/>
                       </FloatingLabel>
                       <FloatingLabel label="Question 2" editorId={'question-2'} editorValue={question2}>
-                          <TextBox size="large" value={question2} onChange={e => setQuestion2(e.value as string)} suffix={() => {
+                          <TextBox aria-label="Question 2" size="large" value={question2} onChange={e => setQuestion2(e.value as string)} suffix={() => {
                             return (
                             <InputSuffix>
                                 <SvgIcon icon={xIcon} onClick={() => setQuestion2('')} />
@@ -220,7 +220,7 @@ export default function Settings() {
                           }}/>
                     </FloatingLabel>
                     <FloatingLabel label="Answer 2" editorId={'answer-2'} editorValue={answer2}>
-                        <TextBox size="large" value={answer2} onChange={e => setAnswer2(e.value as string)} suffix={() => {
+                        <TextBox aria-label="Answer 2" size="large" value={answer2} onChange={e => setAnswer2(e.value as string)} suffix={() => {
                           return (
                           <InputSuffix>
                               <SvgIcon icon={xIcon} onClick={() => setAnswer2('')} />
@@ -228,7 +228,7 @@ export default function Settings() {
                         }} />
                           </FloatingLabel>
                       <FloatingLabel label="Question 3" editorId={'question-3'} editorValue={question3}>
-                          <TextBox size="large" value={question3} onChange={e => setQuestion3(e.value as string)} suffix={() => {
+                          <TextBox aria-label="Question 3" size="large" value={question3} onChange={e => setQuestion3(e.value as string)} suffix={() => {
                             return (
                             <InputSuffix>
                                 <SvgIcon icon={xIcon} onClick={() => setQuestion3('')} />
@@ -236,7 +236,7 @@ export default function Settings() {
                           }}/>
                       </FloatingLabel>
                       <FloatingLabel label="Answer 3" editorId={'answer-3'} editorValue={answer3}>
-                          <TextBox size="large" value={answer3} onChange={e => setAnswer3(e.value as string)} suffix={() => {
+                          <TextBox aria-label="Answer 3" size="large" value={answer3} onChange={e => setAnswer3(e.value as string)} suffix={() => {
                             return (
                             <InputSuffix>
                                 <SvgIcon icon={xIcon} onClick={() => setAnswer3('')} />
@@ -247,8 +247,8 @@ export default function Settings() {
               </div>
             </div>
             <div className="flex gap-2 mt-4">
-                <Button themeColor="primary" size="large">Save</Button>
-                <Button themeColor="primary" fillMode="outline" size="large">Cancel</Button>
+                <Button themeColor="primary" size="large" title="Save button">Save</Button>
+                <Button themeColor="primary" fillMode="outline" size="large" title="Cancel button">Cancel</Button>
             </div>
           </>
         )}
@@ -322,8 +322,8 @@ export default function Settings() {
               </div>
             </div>
             <div className="flex gap-2 mt-4">
-                <Button themeColor="primary" size="large">Save</Button>
-                <Button themeColor="primary" fillMode="outline" size="large">Cancel</Button>
+                <Button themeColor="primary" size="large" title="Save button">Save</Button>
+                <Button themeColor="primary" fillMode="outline" size="large" title="Cancel button">Cancel</Button>
             </div>
           </>
         )}
