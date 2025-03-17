@@ -31,6 +31,10 @@ const DrawerComponent: React.FC<DrawerComponentProps> = ({ children }) => {
 
   const selected = setSelectedItem(location.pathname);
 
+  if (document.getElementsByClassName('k-drawer')[0]) {
+    document.getElementsByClassName('k-drawer')[0].setAttribute('role', 'navigation');
+    document.getElementsByClassName('k-drawer')[0].setAttribute('title', 'Drawer title');
+  }
   return (
     <Drawer
       expanded={true}

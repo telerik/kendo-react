@@ -22,33 +22,39 @@ export default function AppBarComponent() {
     return (
         <AppBar positionMode="sticky" className="bg-surface-alt !p-4" themeColor='inherit'>
             <AppBarSection className="grow gap-4">
-                <a href="#" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
-                    <img src={logo} alt="Logo" className="hidden md:flex" />
-                    <img src={compactLogo} alt="Logo" className="flex md:hidden" />
-                </a>
+                <div role="banner">
+                    <a href="#" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
+                        <img src={logo} alt="Logo" className="hidden md:flex" />
+                        <img src={compactLogo} alt="Logo" className="flex md:hidden" />
+                    </a>
+                </div>
                 </AppBarSection>
 
             <AppBarSection className="grow md:grow-0 !hidden sm:!inline-flex">
-                <TextBox prefix={() => (
-                        <>
-                            <InputPrefix>
-                                <SvgIcon icon={searchIcon} />
-                            </InputPrefix>
-                            <InputSeparator />
-                        </>
-                    )}
-                        placeholder="Search"
-                        fillMode="solid"
-                        className="!w-75"
+                <div role="search">
+                    <TextBox prefix={() => (
+                            <>
+                                <InputPrefix>
+                                    <SvgIcon icon={searchIcon} />
+                                </InputPrefix>
+                                <InputSeparator />
+                            </>
+                        )}
+                            placeholder="Search"
+                            fillMode="solid"
+                            className="!w-75"
                     />
+                </div>
             </AppBarSection>
 
             <AppBarSection className="sm:!hidden">
-                <Button fillMode="flat" svgIcon={searchIcon} title="Search button" />
+                <div role="search">
+                    <Button fillMode="flat" svgIcon={searchIcon} title="Search button" />
+                </div>
             </AppBarSection>
 
             <AppBarSection className="gap-2">
-                <div onClick={() => setShow(!show)} ref={anchor}>
+                <div onClick={() => setShow(!show)} ref={anchor} role="contentinfo">
                     <Avatar rounded="full" type="text" themeColor="primary" className="cursor-pointer">JP</Avatar>
                 </div>
                 <Popover
