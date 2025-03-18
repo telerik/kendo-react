@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { GridPDFExport } from '@progress/kendo-react-pdf';
 import { ExcelExport } from '@progress/kendo-react-excel-export';
-import { Input, TextBox } from '@progress/kendo-react-inputs';
+import { TextBox } from '@progress/kendo-react-inputs';
 import { Rating } from '@progress/kendo-react-inputs';
 import {
    Grid,
