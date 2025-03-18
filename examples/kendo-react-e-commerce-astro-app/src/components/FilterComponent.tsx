@@ -8,6 +8,7 @@ import { selectedLanguage } from "../helpers/languageStore";
 import enMessages from "../data/messages/en";
 import frMessages from "../data/messages/fr";
 import esMessages from "../data/messages/es";
+import { Button } from "@progress/kendo-react-buttons";
 
 const translations = {
   en: enMessages,
@@ -28,7 +29,7 @@ export const FilterComponent: React.FC<FilterComponentProps> = ({ updateUI }) =>
   const t = getTranslations(language); 
 
   const [categoryValue, setCategoryValue] = useState<string[]>([]);
-  const [statusValue, setStatusValue] = useState<string>(t.statusesData[0]);
+  const [statusValue, setStatusValue] = useState<string>(t.statusesData[1]);
   const [materialValue, setMaterialValue] = useState<string>(t.materialPlaceholder);
 
   const chips = t.categoriesData || [];
@@ -37,7 +38,7 @@ export const FilterComponent: React.FC<FilterComponentProps> = ({ updateUI }) =>
 
   useEffect(() => {
     setCategoryValue([]);
-    setStatusValue(t.statusesData[0]);
+    setStatusValue(t.statusesData[1]);
     setMaterialValue(t.materialPlaceholder);
     updateUI({ filter: undefined, sort: undefined }); 
   }, [language, t, updateUI]);
@@ -87,7 +88,7 @@ export const FilterComponent: React.FC<FilterComponentProps> = ({ updateUI }) =>
 
   const clearFilters = () => {
     setCategoryValue([]);
-    setStatusValue(t.statusesData[0]);
+    setStatusValue(t.statusesData[1]);
     setMaterialValue(t.materialPlaceholder);
     updateUI({ filter: undefined, sort: undefined });
   };
@@ -116,12 +117,12 @@ export const FilterComponent: React.FC<FilterComponentProps> = ({ updateUI }) =>
           <SvgIcon icon={sortAscIcon}></SvgIcon> {t.sortByLabel}
         </span>
         <span>
-          <DropDownList data={statuses} value={statusValue} onChange={onStatusChange} />
+          <DropDownList data={statuses} value={statusValue} onChange={onStatusChange} style={{minWidth: 150}} />
         </span>
       </span>
-      <button className="k-button k-button-flat" onClick={clearFilters}>
+      <Button fillMode="flat" onClick={clearFilters}>
         {t.clearFiltersButton}
-      </button>
+      </Button>
     </section>
   );
 };

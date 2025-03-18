@@ -39,7 +39,7 @@ export const CardsList: React.FC<CardListProps> = (props) => {
           return (
             <div
               key={index}
-              className="k-col-span-3 k-text-center k-border k-border-primary k-gap-1 k-pb-5"
+              className={`${props.layout === 'grid' ? 'k-col-span-4' : 'k-col-span-3'} k-text-center k-border k-border-primary k-gap-1 k-pb-5`}
             >
               {item.status ? (
                 <BadgeContainer>
@@ -63,6 +63,7 @@ export const CardsList: React.FC<CardListProps> = (props) => {
                         horizontal: 'start',
                         vertical: 'top',
                       }}
+                      style={{zIndex: 1}}
                     >
                       {t.statuses[item.status] || item.status}
                     </Badge>
@@ -70,7 +71,7 @@ export const CardsList: React.FC<CardListProps> = (props) => {
                 </BadgeContainer>
               ) : (
                 <div
-                  className="k-d-flex k-justify-content-center k-align-items-center k-rounded-lg"
+                  className="k-d-inline-block k-justify-content-center k-align-items-center k-rounded-lg"
                   style={{
                     backgroundImage: `url(${item.img})`,
                     width: '278px',
