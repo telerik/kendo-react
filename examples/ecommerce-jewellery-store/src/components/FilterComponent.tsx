@@ -5,6 +5,7 @@ import { filterIcon, sortAscIcon } from "@progress/kendo-svg-icons";
 import { FilterDescriptor, SortDescriptor, State } from "@progress/kendo-data-query";
 import { useCategoriesContext } from "../helpers/CategoriesContext";
 import { useLanguageContext } from "../helpers/LanguageContext";
+import { Button } from "@progress/kendo-react-buttons";
 
 interface FilterComponentProps {
   updateUI: (state: State) => void;
@@ -15,7 +16,7 @@ export const FilterComponent: React.FC<FilterComponentProps> = ({ updateUI }) =>
   const { t } = useLanguageContext();
 
   const [categoryValue, setCategoryValue] = React.useState<string[]>([]);
-  const [statusValue, setStatusValue] = React.useState<string>(t.statusRecommended);
+  const [statusValue, setStatusValue] = React.useState<string>(t.statusesData[1]);
   const [materialValue, setMaterialValue] = React.useState<string>(t.materialPlaceholder);
 
   const chips = t.categoriesData || [];
@@ -99,7 +100,7 @@ export const FilterComponent: React.FC<FilterComponentProps> = ({ updateUI }) =>
 
   const clearFilters = () => {
     setCategoryValue([]);
-    setStatusValue(t.statusRecommended);
+    setStatusValue(t.statusesData[1]);
     setMaterialValue(t.materialPlaceholder);
     setSelectedCategory(null);
     updateUI({ filter: undefined, sort: undefined });
@@ -129,10 +130,10 @@ export const FilterComponent: React.FC<FilterComponentProps> = ({ updateUI }) =>
           <SvgIcon icon={sortAscIcon}></SvgIcon> {t.sortByLabel}
         </span>
         <span>
-          <DropDownList data={statuses} value={statusValue} onChange={onStatusChange} />
+          <DropDownList data={statuses} value={statusValue} onChange={onStatusChange} style={{minWidth: 150}} />
         </span>
       </span>
-      <button className="k-button k-button-flat" onClick={clearFilters}>{t.clearFiltersButton}</button>
+      <Button fillMode="flat" onClick={clearFilters}>{t.clearFiltersButton}</Button>
     </section>
   );
 };

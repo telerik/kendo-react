@@ -21,13 +21,13 @@ const Footer: React.FC = () => {
           <a href="#" className="k-d-block k-mb-4 k-text-align-center">
             <img src={viloraLogo} alt="Logo" />
           </a>
-          <p className="k-m-0">{t.cookiesText}</p> 
-          <p className="k-m-0">{t.rightsReservedText}</p>
-          <p className="k-mt-4">{t.subscribeText}</p>
+          <p>{t.cookiesText}</p> 
+          <p>{t.rightsReservedText}</p>
+          <p>{t.subscribeText}</p>
           <Label editorId="email" className="k-sr-only">{t.emailPlaceholder}</Label>
           <TextBox
             placeholder={t.emailPlaceholder}
-            className="k-w-full"
+            className="k-w-full !k-mb-3"
             suffix={() => (
               <InputSuffix>
                 <InputSeparator />
@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
               </InputSuffix>
             )}
           />
-          <p className="k-mt-6">{t.followUsText}</p>  
+          <p>{t.followUsText}</p>  
           <div className="k-d-flex k-gap-2 k-align-items-center">
             <p className="k-d-flex k-align-items-center" style={{ gap: '10px' }}>
               <SvgIcon icon={facebookIcon} size="xlarge" /> Facebook
