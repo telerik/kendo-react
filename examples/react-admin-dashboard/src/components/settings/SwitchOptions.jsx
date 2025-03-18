@@ -18,9 +18,8 @@ export const SwitchOptions = () => {
      <FormElement
        style={{
          width: '100%',
-         height: '348px',
          background: '#fafafa',
-         padding: '0px 16px 0px 16px',
+         padding: '16px 0',
          border: '1px solid rgba(0, 0, 0, 0.08)',
        }}
      >
@@ -69,9 +68,8 @@ export const SwitchOptions = () => {
      <FormElement
        style={{
          width: '100%',
-         height: '248px',
          background: '#fafafa',
-         padding: '0px 16px 0px 16px',
+         padding: '16px 0',
          border: '1px solid rgba(0, 0, 0, 0.08)',
        }}
      >

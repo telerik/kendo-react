@@ -18,6 +18,7 @@
     "@progress/kendo-react-form": "^10.0.0",
     "@progress/kendo-react-gauges": "^10.0.0",
     "@progress/kendo-react-grid": "^10.0.0",
+    "@progress/kendo-react-indicators": "^10.0.0",
     "@progress/kendo-react-inputs": "^10.0.0",
     "@progress/kendo-react-intl": "^10.0.0",
     "@progress/kendo-react-layout": "^10.0.0",

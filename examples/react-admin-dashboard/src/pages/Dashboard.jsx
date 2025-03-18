@@ -126,7 +126,6 @@ export  const Dashboard = () => {
       body: <DashboardChart/>,
     },
     {
-      header: 'MK Team',
       body: <DashboardGrid/>,
     },
   ];
@@ -142,12 +141,13 @@ export  const Dashboard = () => {
     
     <TileLayout
       columns={2}
-      rowHeight={255}
+      rowHeight={'auto'}
       positions={data}
       gap={{
         rows: 10,
         columns: 10,
-      }}
+        }}
+      className='dasboard-class'
       items={secondSectionTiles}
       onReposition={handleReposition}
     />

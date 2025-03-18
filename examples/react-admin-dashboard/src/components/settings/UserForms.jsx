@@ -48,9 +48,8 @@ export const UserForm = () => {
      <FormElement
        style={{
          width: '100%',
-         height: '148px',
          background: '#fafafa',
-         padding: '0px 16px 0px 16px',
+         padding: '16px 0',
          border: '1px solid rgba(0, 0, 0, 0.08)',
        }}
      >
@@ -106,9 +105,8 @@ export const UserForm = () => {
      <FormElement
        style={{
          width: '100%',
-         height: '148px',
          background: '#fafafa',
-         padding: '0px 16px 0px 16px',
+         padding: '16px 0',
          border: '1px solid rgba(0, 0, 0, 0.08)',
        }}
      >
@@ -172,9 +170,8 @@ export const UserForm = () => {
      <FormElement
        style={{
          width: '100%',
-         height: '400px',
          background: '#fafafa',
-         padding: '0px 16px 0px 16px',
+         padding: '16px 0',
          border: '1px solid rgba(0, 0, 0, 0.08)',
        }}
      >

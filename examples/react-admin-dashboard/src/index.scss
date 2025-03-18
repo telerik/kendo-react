@@ -273,10 +273,10 @@ div.k-form-field:nth-child(3) {
 .right-widget {
   float: right;
   display: flex;
+  gap: 4px;
 }
 
 .alert-container {
-  margin-right: 50px;
    a {
     color: #424242 !important;
    }
@@ -569,7 +569,7 @@ text-align: center;
 
 
 .listbox-card-container {
-   margin-top: 100px;
+   margin-top: 20px;
   .k-listview-content {
     display: flex;
     width: 100%;
@@ -589,7 +589,7 @@ text-align: center;
 
 .input-container {
   text-align: center;
-   margin-top: 50px;
+   margin-top: 20px;
    input {
     width: 500px;
    }
@@ -621,7 +621,8 @@ text-align: center;
 .switch-parent, .f-buttons {
   display: flex;
   justify-content: space-between;
-  margin-top: 70px;
+  padding-top: 10px;
+  padding-inline: 16px;
 }
 
 .date-container {
@@ -718,4 +719,12 @@ text-align: center;
 
 .switch {
   margin-left: 20px;
+}
+
+.k-tilelayout .k-card {
+  border-width: 0px;
+}
+
+.dasboard-class .k-tilelayout-item-header {
+  display: none;
 }

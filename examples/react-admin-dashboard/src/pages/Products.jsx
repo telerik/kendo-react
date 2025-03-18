@@ -158,10 +158,6 @@ export const Products = () => {
       <ListView
         data={filteredList.slice(skip, skip + take)}
         item={MyItemRender}
-        style={{
-          width: '100%',
-          height: '100%',
-        }}
       />
       <Pager
         skip={skip}

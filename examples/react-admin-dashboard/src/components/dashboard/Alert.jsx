@@ -12,6 +12,7 @@ import { Notification } from '@progress/kendo-react-notification';
 import { Button } from '@progress/kendo-react-buttons';
 import { SvgIcon } from '@progress/kendo-react-common';
 import { bellIcon } from '@progress/kendo-svg-icons';
+import { Badge, BadgeContainer } from '@progress/kendo-react-indicators';
 
 let contacts = [
    {
@@ -128,7 +129,10 @@ let contacts = [
          onClick={onClick}
          ref={anchor}
        >
-         <SvgIcon icon={bellIcon} />
+         <BadgeContainer>
+            <SvgIcon icon={bellIcon} />
+            <Badge themeColor="primary" />
+         </BadgeContainer>
        </button>
        <Popup anchor={anchor.current} show={show} popupClass={'popup-content'}>
          <ListView
