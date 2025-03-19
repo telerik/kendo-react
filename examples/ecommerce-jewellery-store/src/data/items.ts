@@ -5,7 +5,7 @@ const items = [
     },
     {
       "text": "Jewelry",
-      "items": [{ "text": "Bracelets" }, { "text": "Rings" }, { "text": "Earings" }, { "text": "Watches" },{ "text": "All" }],
+      "items": [{ "text": "Bracelets" }, { "text": "Rings" }, { "text": "Earrings" }, { "text": "Watches" },{ "text": "Necklaces" }],
     },
     {
       "text": "Contacts",

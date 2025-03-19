@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { GridPDFExport } from '@progress/kendo-react-pdf';
 import { ExcelExport } from '@progress/kendo-react-excel-export';
-import { Input } from '@progress/kendo-react-inputs';
+import { TextBox } from '@progress/kendo-react-inputs';
 import { Rating } from '@progress/kendo-react-inputs';
 import {
    Grid,
@@ -150,9 +150,6 @@ const RatingCell = (props) => {
       <Rating
         value={value === null ? '' : props.dataItem[field].toString()}
         readonly={true}
-        style={{
-          height: '100px',
-        }}
       />
     </td>
   );
@@ -218,7 +215,8 @@ const firstTeamOnClick = React.useCallback(
  );
 
    return   <div className="grid-container">
-            <div className="card-buttons card-buttons-parent">
+     <div className="card-buttons">
+          <p>MK Team</p>
          <ButtonGroup>
          <Button togglable={true} selected={isFirstTeam}  onClick={firstTeamOnClick}>
                My Team
@@ -242,7 +240,13 @@ const firstTeamOnClick = React.useCallback(
    total={dataResult.total}
    {...dataState}
    onDataStateChange={dataStateChange}
-   pageable={true}
+  autoProcessData={true}
+  defaultSkip={0}
+  defaultTake={10}
+  pageable={{
+      buttonCount: 4,
+      pageSizes: [5, 10, 15, 'All']
+  }}
    dataItemKey={DATA_ITEM_KEY}
    selectedField={SELECTED_FIELD}
    selectable={{
@@ -257,14 +261,11 @@ const firstTeamOnClick = React.useCallback(
    <GridToolbar className="toolbar">
     <div>
        <span>
-         <Input
+         <TextBox
            value={filterValue}
            onChange={onFilterChange}
            style={{
-             border: '2px solid #ccc',
-             boxShadow: 'inset 0px 0px 0.5px 0px rgba(0,0,0,0.0.1)',
              width: '200px',
-             height: '24px',
            }}
            defaultValue='Search in all columns'
          />

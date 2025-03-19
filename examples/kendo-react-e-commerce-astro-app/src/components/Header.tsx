@@ -58,7 +58,7 @@ const Header: React.FC = () => {
           { text: t.menuRings, url: "/kendo-react/kendo-react-e-commerce-astro-app/products?category=Rings" },
           { text: t.menuEarrings, url: "/kendo-react/kendo-react-e-commerce-astro-app/products?category=Earrings" },
           { text: t.menuWatches, url: "/kendo-react/kendo-react-e-commerce-astro-app/products?category=Watches" },
-          { text: t.menuAll, url: "/kendo-react/kendo-react-e-commerce-astro-app/products" },
+          { text: t.menuNecklaces, url: "/kendo-react/kendo-react-e-commerce-astro-app/products?category=Necklaces" },
         ],
       },
       {
@@ -185,6 +185,7 @@ const Header: React.FC = () => {
               onItemClick={handleThemeChange}
             />
             <Switch
+              className="switch-width"
               onLabel={t.adminLabel}
               offLabel={t.clientLabel}
               checked={isAdminValue}

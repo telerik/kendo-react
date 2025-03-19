@@ -53,12 +53,8 @@ const Header: React.FC = () => {
     }
 
     const selectedCategory = selectedItem.text;
-    if (selectedCategory === t.all) {
-      setSelectedCategory(null);
-    } else {
       setSelectedCategory(selectedCategory ?? null);
       navigate("/category");
-    }
   };
 
   const handleLanguageMenuSelect = (event: MenuSelectEvent) => {
@@ -98,7 +94,7 @@ const Header: React.FC = () => {
           className="k-flex-basis-0 k-flex-grow k-gap-2 k-align-items-center"
           style={{ paddingLeft: "50px" }}
         >
-          <a href="/" className="k-d-sm-flex" style={{ marginRight: "50px" }}>
+          <a href="#" onClick={(e) => { e.preventDefault(); navigate('/'); }} className="k-d-sm-flex" style={{ marginRight: "50px" }}>
             <img src={viloraLogo} alt="Logo" />
           </a>
           <Menu items={translatedItems} onSelect={handleMenuSelect} />

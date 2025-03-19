@@ -11,37 +11,37 @@ export const PerformanceAndSales = () => {
    const [data, setData] = React.useState([
      {
        col: 1,
+       colSpan: 6,
+       rowSpan: 2,
+     },
+     {
+       col: 1,
        colSpan: 4,
        rowSpan: 2,
      },
      {
        col: 1,
        colSpan: 3,
-       rowSpan: 2,
+       rowSpan: 1,
      },
      {
-       col: 1,
+       col: 5,
        colSpan: 2,
-       rowSpan: 1,
+       rowSpan: 2,
      },
      {
        col: 4,
-       colSpan: 2,
-       rowSpan: 2,
-     },
-     {
-       col: 3,
-       colSpan: 2,
+       colSpan: 3,
        rowSpan: 1,
      },
      {
-       col: 2,
-       colSpan: 3,
+       col: 3,
+       colSpan: 4,
        rowSpan: 2,
      },
      {
        col: 1,
-       colSpan: 1,
+       colSpan: 2,
        rowSpan: 2,
      },
    ]);
@@ -94,8 +94,8 @@ export const PerformanceAndSales = () => {
    };
    return (
      <TileLayout
-       columns={4}
-       rowHeight={255}
+       columns={6}
+       rowHeight={'auto'}
        positions={data}
        gap={{
          rows: 10,

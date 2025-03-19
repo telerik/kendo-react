@@ -86,12 +86,14 @@ export const AllProductsListView = () => {
             <Button
               fillMode="flat"
               svgIcon={gridLayoutIcon}
+              togglable={true}
               selected={currentLayout === "grid"}
               onClick={() => setCurrentLayout("grid")}
             />
             <Button
               fillMode="flat"
               svgIcon={layout2By2Icon}
+              togglable={true}
               selected={currentLayout === "list"}
               onClick={() => setCurrentLayout("list")}
             />

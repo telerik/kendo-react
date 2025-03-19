@@ -17,7 +17,7 @@ export const CardsList = (props: CardListProps) => {
         return (
           <div
             key={index}
-            className="k-col-span-3 k-text-center k-border k-border-primary k-gap-1 k-pb-5"
+            className={`${props.layout === 'grid' ? 'k-col-span-4' : 'k-col-span-3'} k-text-center k-border k-border-primary k-gap-1 k-pb-5`}
           >
             {item.status !== null ? (
               <BadgeContainer>
@@ -41,13 +41,14 @@ export const CardsList = (props: CardListProps) => {
                     horizontal: "start",
                     vertical: "top",
                   }}
+                  style={{zIndex: 1}}
                 >
                   {item.status}
                 </Badge>
               </BadgeContainer>
             ) : (
               <div
-                className="k-d-flex k-justify-content-center k-align-items-center k-rounded-lg"
+                className="k-d-inline-block k-justify-content-center k-align-items-center k-rounded-lg"
                 style={{
                   backgroundImage: `url(${item.img})`,
                   width: "278px",
