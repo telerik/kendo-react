@@ -497,7 +497,7 @@ export const teamsData = [
   {
     teamCode: 'DS',
     teamName: 'Data Science Team',
-    avatarColor: '#708090',
+    avatarColor: '#637282',
     group: 'technology',
     teamMembers: [
       { teamMember: "David Johnson", title: "Lead Data Scientist" },
@@ -605,7 +605,7 @@ export const teamsData = [
   {
     teamCode: 'SA',
     teamName: 'System Administration',
-    avatarColor: '#4682B4',
+    avatarColor: '#3C73A2',
     group: 'technology',
     teamMembers: [
       { teamMember: "David Miller", title: "Senior System Administrator" },

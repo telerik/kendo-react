@@ -7,9 +7,12 @@ import { Calendar } from "@progress/kendo-react-dateinputs";
 import { pencilIcon, plusIcon, trashIcon } from "@progress/kendo-svg-icons";
 import { tasksData, listData, projectsData, teamsData } from "./data";
 import { useNavigate } from "react-router-dom";
+import React from "react";
 
 export default function Home() {
     const navigate = useNavigate();
+    const [date, setDate] = React.useState(new Date());
+
     const handleSeeAllProjectsClick = () => {
         navigate('/projects');
     };
@@ -57,12 +60,12 @@ export default function Home() {
                         </div>
                     </CardBody>
                     <CardFooter className="border-0 p-2">
-                              <Button fillMode="flat" themeColor="primary" onClick={handleSeeAllProjectsClick}>See all</Button>
+                        <Button fillMode="flat" themeColor="primary" onClick={handleSeeAllProjectsClick} title="See all projects">See all</Button>
                     </CardFooter>
                 </Card>
             </div>
             <div className="col-span-2 sm:col-span-1 lg:col-span-6 xl:col-span-1">
-                <Calendar className="rounded-2xl w-full" />
+                <Calendar className="rounded-2xl w-full" value={date} onChange={e => setDate(e.target.value)} tabIndex={0}/>
             </div>
             <div className="col-span-2 sm:col-span-1 lg:col-span-3 xl:col-span-1 h-72.5 lg:h-116">
                 <Card className="rounded-2xl overflow-auto max-h-72.5 lg:max-h-116">
@@ -85,7 +88,7 @@ export default function Home() {
                         })}
                     </CardBody>
                     <CardFooter className="border-0 p-2">
-                        <Button fillMode="flat" themeColor="primary" onClick={handleSeeAllTeamsClick}>See all</Button>
+                        <Button fillMode="flat" themeColor="primary" onClick={handleSeeAllTeamsClick} title="See all teams">See all</Button>
                     </CardFooter>
                 </Card>
             </div>
@@ -93,16 +96,15 @@ export default function Home() {
                 <Card className="rounded-2xl h-full">
                     <CardHeader className="border-0 flex flex-wrap justify-between items-center gap-2">
                         <CardTitle className="font-medium">To-Do List</CardTitle>
-                        <Button fillMode="flat" themeColor="primary" svgIcon={plusIcon}>Add more tasks</Button>
+                        <Button fillMode="flat" themeColor="primary" svgIcon={plusIcon} title="Add more tasks">Add more tasks</Button>
                     </CardHeader>
                     <CardBody className="h-full overflow-y-hidden">
                               <div className="h-full overflow-y-auto">
                                   {listData.map((item, index) => <div className="!flex !my-2 !gap-2 !p-0.5" key={'list-item-' + index}>
-                                    <Checkbox rounded="small" />
-                                    <span>{item.text}</span>
+                                    <Checkbox rounded="small" label={item.text}/>
                                     <div className="ml-auto shrink-0">
-                                        <Button svgIcon={pencilIcon} fillMode="flat" />
-                                        <Button svgIcon={trashIcon} fillMode="flat" themeColor="error" />
+                                        <Button svgIcon={pencilIcon} fillMode="flat" title="Edit button"/>
+                                        <Button svgIcon={trashIcon} fillMode="flat" themeColor="error" title="Delete button"/>
                                     </div>
                                 </div>)}
                               </div>
@@ -115,13 +117,13 @@ export default function Home() {
                         <CardTitle className="font-medium">Tasks</CardTitle>
                     </CardHeader>
                     <CardBody className="h-full overflow-y-hidden">
-                        <Grid className="h-full" data={tasksData}>
+                        <Grid className="h-full" data={tasksData} navigatable={true}>
                             <GridColumn field="taskName" title="Task Name" />
                             <GridColumn field="status" title="Status" width={115} />
                         </Grid>
                     </CardBody>
                     <CardFooter className="border-0 p-2">
-                              <Button fillMode="flat" themeColor="primary" onClick={handleSeeAllTasksClick}>See all</Button>
+                              <Button fillMode="flat" themeColor="primary" onClick={handleSeeAllTasksClick} title="See all tasks">See all</Button>
                     </CardFooter>
                 </Card>
             </div>

@@ -181,14 +181,14 @@ Monitor key metrics post-launch to evaluate the effectiveness of the content man
                       '/>
                       <div className="bg-surface-alt border-1 border-t-0 border-border rounded-b-2xl px-4 py-2">
                           <div className="hidden lg:flex gap-1">
-                              <Button svgIcon={checkIcon} themeColor="primary" size="large">Save changes</Button>
-                              <Button svgIcon={folderIcon} fillMode="flat" size="large" className="ml-auto">Archive Task</Button>
-                              <Button svgIcon={trashIcon} fillMode="flat" themeColor="error" size="large">Delete task</Button>
+                              <Button svgIcon={checkIcon} themeColor="primary" size="large" title="Save changes">Save changes</Button>
+                              <Button svgIcon={folderIcon} fillMode="flat" size="large" className="ml-auto" title="Archive task">Archive Task</Button>
+                              <Button svgIcon={trashIcon} fillMode="flat" themeColor="error" size="large" title="Delete task">Delete task</Button>
                           </div>
                           <div className="flex lg:hidden gap-1">
-                              <Button svgIcon={checkIcon} themeColor="primary" size="large">Save changes</Button>
-                              <Button svgIcon={folderIcon} fillMode="flat" size="large" className="ml-auto">Archive Task</Button>
-                              <Button svgIcon={trashIcon} fillMode="flat" themeColor="error" size="large">Delete task</Button>
+                              <Button svgIcon={checkIcon} themeColor="primary" size="large" title="Save changes">Save changes</Button>
+                              <Button svgIcon={folderIcon} fillMode="flat" size="large" className="ml-auto" title="Archive task">Archive Task</Button>
+                              <Button svgIcon={trashIcon} fillMode="flat" themeColor="error" size="large" title="Delete task">Delete task</Button>
                           </div>
                       </div>
                   </div>
@@ -198,7 +198,7 @@ Monitor key metrics post-launch to evaluate the effectiveness of the content man
                           <Reveal>
                             {projExpanded && <ExpansionPanelContent>
                               <FloatingLabel label="Choose project" editorId={'project'} editorValue={project} className="flex">
-                                  <DropDownList size="large" value={project} onChange={e => setProject(e.value as string)} data={projects} />
+                                  <DropDownList ariaLabel="Choose project" size="large" value={project} onChange={e => setProject(e.value as string)} data={projects} />
                                 </FloatingLabel>
                               </ExpansionPanelContent>}
                           </Reveal>
@@ -207,7 +207,7 @@ Monitor key metrics post-launch to evaluate the effectiveness of the content man
                           <Reveal>
                               {assigneeExpanded && <ExpansionPanelContent>
                                 <FloatingLabel label="Select assignee(s)" editorId={'assignee'} editorValue={assigneeExpanded} className="flex">
-                                    <MultiSelect size="large" data={assignees} value={assignee} onChange={e => setAssignee([...e.value] as string[])} tagRender={tagRender} itemRender={itemRender} />
+                                    <MultiSelect ariaLabel="Select assignee(s)" size="large" data={assignees} value={assignee} onChange={e => setAssignee([...e.value] as string[])} tagRender={tagRender} itemRender={itemRender} />
                                 </FloatingLabel>
                               </ExpansionPanelContent>}
                           </Reveal>
@@ -216,7 +216,7 @@ Monitor key metrics post-launch to evaluate the effectiveness of the content man
                           <Reveal>
                               {dateExpanded && <ExpansionPanelContent>
                                 <FloatingLabel label="Set due date" editorId={'due-date'} editorValue={dateExpanded} className="flex">
-                                    <DateInput size="large" value={dueDate} onChange={e => setDueDate(e.value as Date)} />
+                                    <DateInput ariaLabel="Set Due Date" size="large" value={dueDate} onChange={e => setDueDate(e.value as Date)} />
                                 </FloatingLabel>
                               </ExpansionPanelContent>}
                           </Reveal>
@@ -225,7 +225,7 @@ Monitor key metrics post-launch to evaluate the effectiveness of the content man
                           <Reveal>
                             {priorityExpanded && <ExpansionPanelContent>
                                 <FloatingLabel label="Choose project" editorId={'priority'} editorValue={priority} className="flex">
-                                  <DropDownList size="large" value={priority} onChange={e => setPriority(e.value as string)} data={priorities} valueRender={priorityValueRender} itemRender={priorityItemRender} />
+                                  <DropDownList ariaLabel="Choose Project" size="large" value={priority} onChange={e => setPriority(e.value as string)} data={priorities} valueRender={priorityValueRender} itemRender={priorityItemRender} />
                                 </FloatingLabel>
                               </ExpansionPanelContent>}
                           </Reveal>
@@ -234,7 +234,7 @@ Monitor key metrics post-launch to evaluate the effectiveness of the content man
                           <Reveal>
                               {statusExpanded && <ExpansionPanelContent>
                                 <FloatingLabel label="Select status" editorId={'status'} editorValue={statusExpanded} className="flex">
-                                    <DropDownList size="large" data={statuses} value={status} onChange={e => setStatus(e.value as string)} />
+                                    <DropDownList ariaLabel="Select status" size="large" data={statuses} value={status} onChange={e => setStatus(e.value as string)} />
                                 </FloatingLabel>
                               </ExpansionPanelContent>}
                           </Reveal>
@@ -243,7 +243,7 @@ Monitor key metrics post-launch to evaluate the effectiveness of the content man
                           <Reveal>
                               {tagsExpanded && <ExpansionPanelContent>
                                 <FloatingLabel label="Select tags" editorId={'tags'} editorValue={tagsExpanded} className="flex">
-                                    <MultiSelect size="large" data={taskTags} value={tag} onChange={e => setTag([...e.value] as string[])} />
+                                    <MultiSelect ariaLabel="Select tags" size="large" data={taskTags} value={tag} onChange={e => setTag([...e.value] as string[])} />
                                 </FloatingLabel>
                               </ExpansionPanelContent>}
                           </Reveal>

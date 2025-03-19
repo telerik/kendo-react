@@ -4,10 +4,10 @@ import { folderIcon, homeIcon, listUnorderedSquareIcon, userOutlineIcon } from '
 import { To, useLocation, useNavigate } from 'react-router-dom';
 
 const drawerItems = [
-    { text: "Home", svgIcon: homeIcon, route: '/', selected: true, className: "rounded-md [.k-selected]:!bg-primary/8 [.k-selected]:!text-primary" },
-    { text: "Projects", svgIcon: folderIcon, route: '/projects', className: "rounded-md [.k-selected]:!bg-primary/8 [.k-selected]:!text-primary"  },
-    { text: "Tasks", svgIcon: listUnorderedSquareIcon, route: '/tasks', className: "rounded-md [.k-selected]:!bg-primary/8 [.k-selected]:!text-primary"  },
-    { text: "Team Management", svgIcon: userOutlineIcon, route: '/team-management', className: "rounded-md [.k-selected]:!bg-primary/8 [.k-selected]:!text-primary"  }
+    { text: "Home", svgIcon: homeIcon, route: '/', selected: true, className: "rounded-md [.k-selected]:!bg-primary/8 [.k-selected]:!text-primary-emphasis" },
+    { text: "Projects", svgIcon: folderIcon, route: '/projects', className: "rounded-md [.k-selected]:!bg-primary/8 [.k-selected]:!text-primary-emphasis"  },
+    { text: "Tasks", svgIcon: listUnorderedSquareIcon, route: '/tasks', className: "rounded-md [.k-selected]:!bg-primary/8 [.k-selected]:!text-primary-emphasis"  },
+    { text: "Team Management", svgIcon: userOutlineIcon, route: '/team-management', className: "rounded-md [.k-selected]:!bg-primary/8 [.k-selected]:!text-primary-emphasis"  }
 ];
 
 interface DrawerComponentProps {
@@ -31,6 +31,10 @@ const DrawerComponent: React.FC<DrawerComponentProps> = ({ children }) => {
 
   const selected = setSelectedItem(location.pathname);
 
+  if (document.getElementsByClassName('k-drawer')[0]) {
+    document.getElementsByClassName('k-drawer')[0].setAttribute('role', 'navigation');
+    document.getElementsByClassName('k-drawer')[0].setAttribute('title', 'Drawer title');
+  }
   return (
     <Drawer
       expanded={true}
@@ -44,7 +48,9 @@ const DrawerComponent: React.FC<DrawerComponentProps> = ({ children }) => {
       width={223}
     >
       <DrawerContent>
-        {children}
+        <div role="main">
+          {children}
+        </div>
       </DrawerContent>
     </Drawer>
   );
