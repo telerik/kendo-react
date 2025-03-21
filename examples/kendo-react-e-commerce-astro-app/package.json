@@ -37,7 +37,7 @@
     "@progress/kendo-react-progressbars": "^10.0.0",
     "@progress/kendo-react-treeview": "^10.0.0",
     "@progress/kendo-svg-icons": "^4.0.0",
-    "@progress/kendo-theme-default": "^10.3.1",
+    "@progress/kendo-theme-default": "^10.4.0",
     "@progress/kendo-theme-utils": "^10.0.1",
     "astro": "^4.16.18",
     "gh-pages": "^6.1.1",
