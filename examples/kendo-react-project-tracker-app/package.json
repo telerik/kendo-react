@@ -31,7 +31,7 @@
         "@progress/kendo-react-popup": "^10.0.0",
         "@progress/kendo-react-tooltip": "^10.0.0",
         "@progress/kendo-svg-icons": "^4.0.0",
-        "@progress/kendo-theme-default": "^10.3.1",
+        "@progress/kendo-theme-default": "^10.4.0",
         "@tailwindcss/vite": "^4.0.9",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
