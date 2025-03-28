@@ -15,7 +15,7 @@ body:
     description: Select the product plan related to the issue.
     options:
       - KendoReact
-      - KendoReact: Free
+      - KendoReact Free
     default: 1
   validations:
     required: true
