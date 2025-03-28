@@ -19,10 +19,6 @@ body:
     default: 1
   validations:
     required: true
-  on_change:
-    - if: "{{ value == 'KendoReact: Free' }}"
-      add_labels:
-        - KendoReact: Free
 - type: textarea
   attributes:
     label: Steps To Reproduce
