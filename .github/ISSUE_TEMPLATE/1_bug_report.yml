@@ -11,8 +11,8 @@ body:
     required: true
 - type: dropdown
   attributes:
-    label: Product
-    description: Select the product related to the issue.
+    label: Plan
+    description: Select the product plan related to the issue.
     options:
       - KendoReact
       - KendoReact: Free
