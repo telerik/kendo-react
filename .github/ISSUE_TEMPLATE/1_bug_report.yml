@@ -1,5 +1,7 @@
 name: 🐞 Bug Report
 description: Please provide a detailed description and include all relevant information about the issue. If you have any doubts, consult our documentation.
+labels:
+  - KendoReact
 body:
 - type: textarea
   attributes:
@@ -7,6 +9,20 @@ body:
     description: Add a concise description of the issue and any relevant information.
   validations:
     required: true
+- type: dropdown
+  attributes:
+    label: Plan
+    description: Select the product plan related to the issue.
+    options:
+      - KendoReact
+      - KendoReact: Free
+    default: 1
+  validations:
+    required: true
+  on_change:
+    - if: "{{ value == 'KendoReact: Free' }}"
+      add_labels:
+        - KendoReact: Free
 - type: textarea
   attributes:
     label: Steps To Reproduce
