@@ -1,0 +1,229 @@
+@import 'tailwindcss';
+
+:root {
+    /* Custom variables */
+    --custom-tw-blue: #3d57d8;
+    --custom-tw-red: #eb0249;
+    --custom-tw-info: #225eff;
+    /* Override kendo variables */
+    --kendo-color-info: var(--custom-tw-info);
+}
+
+/* Customize kendo component styles */
+.k-card.header-card {
+    border: var(--custom-tw-blue) solid 1px;
+}
+
+.action-button {
+    --kendo-color-primary: var(--custom-tw-red);
+}
+
+@theme inline {
+    /* Custom classes */
+    --color-accent: var(--custom-color-accent);
+
+    /* Misc */
+    --color-app-surface: var(--kendo-color-app-surface);
+    --color-on-app-surface: var(--kendo-color-on-app-surface);
+    --color-subtle: var(--kendo-color-subtle);
+    --color-surface: var(--kendo-color-surface);
+    --color-surface-alt: var(--kendo-color-surface-alt);
+    --color-border: var(--kendo-color-border);
+    --color-border-alt: var(--kendo-color-border-alt);
+    /* Base */
+    --color-base-subtle: var(--kendo-color-base-subtle);
+    --color-base-subtle-hover: var(--kendo-color-base-subtle-hover);
+    --color-base-subtle-active: var(--kendo-color-base-subtle-active);
+    --color-base: var(--kendo-color-base);
+    --color-base-hover: var(--kendo-color-base-hover);
+    --color-base-active: var(--kendo-color-base-active);
+    --color-base-emphasis: var(--kendo-color-base-emphasis);
+    --color-base-on-subtle: var(--kendo-color-base-on-subtle);
+    --color-on-base: var(--kendo-color-on-base);
+    --color-base-on-surface: var(--kendo-color-base-on-surface);
+    /* Primary */
+    --color-primary-subtle: var(--kendo-color-primary-subtle);
+    --color-primary-subtle-hover: var(--kendo-color-primary-subtle-hover);
+    --color-primary-subtle-active: var(--kendo-color-primary-subtle-active);
+    --color-primary: var(--kendo-color-primary);
+    --color-primary-hover: var(--kendo-color-primary-hover);
+    --color-primary-active: var(--kendo-color-primary-active);
+    --color-primary-emphasis: var(--kendo-color-primary-emphasis);
+    --color-primary-on-subtle: var(--kendo-color-primary-on-subtle);
+    --color-on-primary: var(--kendo-color-on-primary);
+    --color-primary-on-surface: var(--kendo-color-primary-on-surface);
+    /* Secondary */
+    --color-secondary-subtle: var(--kendo-color-secondary-subtle);
+    --color-secondary-subtle-hover: var(--kendo-color-secondary-subtle-hover);
+    --color-secondary-subtle-active: var(--kendo-color-secondary-subtle-active);
+    --color-secondary: var(--kendo-color-secondary);
+    --color-secondary-hover: var(--kendo-color-secondary-hover);
+    --color-secondary-active: var(--kendo-color-secondary-active);
+    --color-secondary-emphasis: var(--kendo-color-secondary-emphasis);
+    --color-secondary-on-subtle: var(--kendo-color-secondary-on-subtle);
+    --color-on-secondary: var(--kendo-color-on-secondary);
+    --color-secondary-on-surface: var(--kendo-color-secondary-on-surface);
+    /* Tertiary */
+    --color-tertiary-subtle: var(--kendo-color-tertiary-subtle);
+    --color-tertiary-subtle-hover: var(--kendo-color-tertiary-subtle-hover);
+    --color-tertiary-subtle-active: var(--kendo-color-tertiary-subtle-active);
+    --color-tertiary: var(--kendo-color-tertiary);
+    --color-tertiary-hover: var(--kendo-color-tertiary-hover);
+    --color-tertiary-active: var(--kendo-color-tertiary-active);
+    --color-tertiary-emphasis: var(--kendo-color-tertiary-emphasis);
+    --color-tertiary-on-subtle: var(--kendo-color-tertiary-on-subtle);
+    --color-on-tertiary: var(--kendo-color-on-tertiary);
+    --color-tertiary-on-surface: var(--kendo-color-tertiary-on-surface);
+    /* Info */
+    --color-info-subtle: var(--kendo-color-info-subtle);
+    --color-info-subtle-hover: var(--kendo-color-info-subtle-hover);
+    --color-info-subtle-active: var(--kendo-color-info-subtle-active);
+    --color-info: var(--kendo-color-info);
+    --color-info-hover: var(--kendo-color-info-hover);
+    --color-info-active: var(--kendo-color-info-active);
+    --color-info-emphasis: var(--kendo-color-info-emphasis);
+    --color-info-on-subtle: var(--kendo-color-info-on-subtle);
+    --color-on-info: var(--kendo-color-on-info);
+    --color-info-on-surface: var(--kendo-color-info-on-surface);
+    /* Success */
+    --color-success-subtle: var(--kendo-color-success-subtle);
+    --color-success-subtle-hover: var(--kendo-color-success-subtle-hover);
+    --color-success-subtle-active: var(--kendo-color-success-subtle-active);
+    --color-success: var(--kendo-color-success);
+    --color-success-hover: var(--kendo-color-success-hover);
+    --color-success-active: var(--kendo-color-success-active);
+    --color-success-emphasis: var(--kendo-color-success-emphasis);
+    --color-success-on-subtle: var(--kendo-color-success-on-subtle);
+    --color-on-success: var(--kendo-color-on-success);
+    --color-success-on-surface: var(--kendo-color-success-on-surface);
+    /* Warning */
+    --color-warning-subtle: var(--kendo-color-warning-subtle);
+    --color-warning-subtle-hover: var(--kendo-color-warning-subtle-hover);
+    --color-warning-subtle-active: var(--kendo-color-warning-subtle-active);
+    --color-warning: var(--kendo-color-warning);
+    --color-warning-hover: var(--kendo-color-warning-hover);
+    --color-warning-active: var(--kendo-color-warning-active);
+    --color-warning-emphasis: var(--kendo-color-warning-emphasis);
+    --color-warning-on-subtle: var(--kendo-color-warning-on-subtle);
+    --color-on-warning: var(--kendo-color-on-warning);
+    --color-warning-on-surface: var(--kendo-color-warning-on-surface);
+    /* Error */
+    --color-error-subtle: var(--kendo-color-error-subtle);
+    --color-error-subtle-hover: var(--kendo-color-error-subtle-hover);
+    --color-error-subtle-active: var(--kendo-color-error-subtle-active);
+    --color-error: var(--kendo-color-error);
+    --color-error-hover: var(--kendo-color-error-hover);
+    --color-error-active: var(--kendo-color-error-active);
+    --color-error-emphasis: var(--kendo-color-error-emphasis);
+    --color-error-on-subtle: var(--kendo-color-error-on-subtle);
+    --color-on-error: var(--kendo-color-on-error);
+    --color-error-on-surface: var(--kendo-color-error-on-surface);
+    /* Light */
+    --color-light-subtle: var(--kendo-color-light-subtle);
+    --color-light-subtle-hover: var(--kendo-color-light-subtle-hover);
+    --color-light-subtle-active: var(--kendo-color-light-subtle-active);
+    --color-light: var(--kendo-color-light);
+    --color-light-hover: var(--kendo-color-light-hover);
+    --color-light-active: var(--kendo-color-light-active);
+    --color-light-emphasis: var(--kendo-color-light-emphasis);
+    --color-light-on-subtle: var(--kendo-color-light-on-subtle);
+    --color-on-light: var(--kendo-color-on-light);
+    --color-light-on-surface: var(--kendo-color-light-on-surface);
+    /* Dark */
+    --color-dark-subtle: var(--kendo-color-dark-subtle);
+    --color-dark-subtle-hover: var(--kendo-color-dark-subtle-hover);
+    --color-dark-subtle-active: var(--kendo-color-dark-subtle-active);
+    --color-dark: var(--kendo-color-dark);
+    --color-dark-hover: var(--kendo-color-dark-hover);
+    --color-dark-active: var(--kendo-color-dark-active);
+    --color-dark-emphasis: var(--kendo-color-dark-emphasis);
+    --color-dark-on-subtle: var(--kendo-color-dark-on-subtle);
+    --color-on-dark: var(--kendo-color-on-dark);
+    --color-dark-on-surface: var(--kendo-color-dark-on-surface);
+    /* Inverse */
+    --color-inverse-subtle: var(--kendo-color-inverse-subtle);
+    --color-inverse-subtle-hover: var(--kendo-color-inverse-subtle-hover);
+    --color-inverse-subtle-active: var(--kendo-color-inverse-subtle-active);
+    --color-inverse: var(--kendo-color-inverse);
+    --color-inverse-hover: var(--kendo-color-inverse-hover);
+    --color-inverse-active: var(--kendo-color-inverse-active);
+    --color-inverse-emphasis: var(--kendo-color-inverse-emphasis);
+    --color-inverse-on-subtle: var(--kendo-color-inverse-on-subtle);
+    --color-on-inverse: var(--kendo-color-on-inverse);
+    --color-inverse-on-surface: var(--kendo-color-inverse-on-surface);
+    /* Series A */
+    --color-series-a: var(--kendo-color-series-a);
+    --color-series-a-bold: var(--kendo-color-series-a-bold);
+    --color-series-a-bolder: var(--kendo-color-series-a-bolder);
+    --color-series-a-subtle: var(--kendo-color-series-a-subtle);
+    --color-series-a-subtler: var(--kendo-color-series-a-subtler);
+    /* Series B */
+    --color-series-b: var(--kendo-color-series-b);
+    --color-series-b-bold: var(--kendo-color-series-b-bold);
+    --color-series-b-bolder: var(--kendo-color-series-b-bolder);
+    --color-series-b-subtle: var(--kendo-color-series-b-subtle);
+    --color-series-b-subtler: var(--kendo-color-series-b-subtler);
+    /* Series C */
+    --color-series-c: var(--kendo-color-series-c);
+    --color-series-c-bold: var(--kendo-color-series-c-bold);
+    --color-series-c-bolder: var(--kendo-color-series-c-bolder);
+    --color-series-c-subtle: var(--kendo-color-series-c-subtle);
+    --color-series-c-subtler: var(--kendo-color-series-c-subtler);
+    /* Series D */
+    --color-series-d: var(--kendo-color-series-d);
+    --color-series-d-bold: var(--kendo-color-series-d-bold);
+    --color-series-d-bolder: var(--kendo-color-series-d-bolder);
+    --color-series-d-subtle: var(--kendo-color-series-d-subtle);
+    --color-series-d-subtler: var(--kendo-color-series-d-subtler);
+    /* Series E */
+    --color-series-e: var(--kendo-color-series-e);
+    --color-series-e-bold: var(--kendo-color-series-e-bold);
+    --color-series-e-bolder: var(--kendo-color-series-e-bolder);
+    --color-series-e-subtle: var(--kendo-color-series-e-subtle);
+    --color-series-e-subtler: var(--kendo-color-series-e-subtler);
+    /* Series F */
+    --color-series-f: var(--kendo-color-series-f);
+    --color-series-f-bold: var(--kendo-color-series-f-bold);
+    --color-series-f-bolder: var(--kendo-color-series-f-bolder);
+    --color-series-f-subtle: var(--kendo-color-series-f-subtle);
+    --color-series-f-subtler: var(--kendo-color-series-f-subtler);
+
+    /* Typography */
+    --font-sans: var(--kendo-font-family-sans);
+    --font-serif: var(--kendo-font-family-sans-serif);
+    --font-mono: var(--kendo-font-family-monospace);
+    --text-xs: var(--kendo-font-size-xs);
+    --text-xs--line-height: var(--kendo-line-height-xs);
+    --text-sm: var(--kendo-font-size-sm);
+    --text-sm--line-height: var(--kendo-line-height-sm);
+    --text-base: var(--kendo-font-size);
+    --text-base--line-height: var(--kendo-line-height);
+    --text-lg: var(--kendo-font-size-lg);
+    --text-lg--line-height: var(--kendo-line-height-lg);
+
+    --radius-none: var(--kendo-border-radius-none);
+    --radius-xs: var(--kendo-border-radius-xs);
+    --radius-sm: var(--kendo-border-radius-sm);
+    --radius-md: var(--kendo-border-radius-md);
+    --radius-lg: var(--kendo-border-radius-lg);
+    --radius-xl: var(--kendo-border-radius-xl);
+    --radius-2xl: var(--kendo-border-radius-xxl);
+    --radius-3xl: var(--kendo-border-radius-xxxl);
+    --radius-4xl: 1.5rem;
+    --radius-full: var(--kendo-border-radius-full);
+
+    /* Breakpoints */
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-2xl: 1400px;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+}
