@@ -2,12 +2,14 @@
     "name": "kendo-react-tailwind",
     "private": true,
     "version": "0.0.0",
+    "homepage": "https://telerik.github.io/kendo-react/kendo-react-tailwind/",
     "type": "module",
     "scripts": {
         "dev": "vite",
         "build": "tsc -b && vite build",
         "lint": "eslint .",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "deploy": "gh-pages -d build"
     },
     "dependencies": {
         "@progress/kendo-react-buttons": "^10.2.0",
@@ -27,6 +29,7 @@
         "eslint": "^9.22.0",
         "eslint-plugin-react-hooks": "^5.2.0",
         "eslint-plugin-react-refresh": "^0.4.19",
+        "gh-pages": "^6.1.1",
         "globals": "^16.0.0",
         "typescript": "~5.7.2",
         "typescript-eslint": "^8.26.1",
