@@ -15,7 +15,7 @@
         "@progress/kendo-react-buttons": "^10.2.0",
         "@progress/kendo-react-common": "^10.2.0",
         "@progress/kendo-react-layout": "^10.2.0",
-        "@progress/kendo-theme-default": "^10.6.0",
+        "@progress/kendo-theme-default": "^11.0.2",
         "@tailwindcss/vite": "^4.1.5",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
