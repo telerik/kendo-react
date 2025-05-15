@@ -16,7 +16,7 @@
     "@progress/kendo-react-layout": "^10.0.0",
     "@progress/kendo-react-pdf": "^10.0.0",
     "@progress/kendo-react-ripple": "^10.0.0",
-    "@progress/kendo-theme-material": "^10.0.1",
+    "@progress/kendo-theme-material": "^11.0.1",
     "hammerjs": "^2.0.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
