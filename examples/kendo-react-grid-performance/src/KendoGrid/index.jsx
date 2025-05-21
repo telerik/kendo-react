@@ -274,9 +274,9 @@ export const KendoGrid = (props) => {
                             >
                                 <GridColumn field={'Stock'} width={110} />
                                 <GridColumn field={'Open Price'} width={120} filter={'numeric'} format="{0:c4}" />
-                                <GridColumn field={'Price'} width={130} filter={'numeric'} cell={PriceCell} />
-                                <GridColumn field={'Change'} width={90} className={'numeric change'} filter={'numeric'} headerClassName={'headerAlignStyle'} cell={ChangeCell} />
-                                <GridColumn field={'Change(%)'} width={90} className={'numeric change'} filter={'numeric'} cell={ChangePercentCell} />
+                                <GridColumn field={'Price'} width={130} filter={'numeric'} cells={{ data: PriceCell }} />
+                                <GridColumn field={'Change'} width={90} className={'numeric change'} filter={'numeric'} headerClassName={'headerAlignStyle'} cells={{ data: ChangeCell }} />
+                                <GridColumn field={'Change(%)'} width={90} className={'numeric change'} filter={'numeric'} cells={{ data: ChangePercentCell }} /> 
                                 <GridColumn field={'Buy'} width={110} filter={'numeric'} format={'{0:c4}'} />
                                 <GridColumn field={'Sell'} width={110} filter={'numeric'} format={'{0:c4}'} />
                                 <GridColumn field={'Spread'} width={110} filter={'numeric'} format={'{0:c4}'} />
@@ -286,7 +286,7 @@ export const KendoGrid = (props) => {
                                 <GridColumn field={'High(Y)'} width={110} filter={'numeric'} format={'{0:c4}'} />
                                 <GridColumn field={'Low(Y)'} width={110} filter={'numeric'} format={'{0:c4}'} />
                                 <GridColumn field={'Start(Y)'} width={110} filter={'numeric'} format={'{0:c4}'} />
-                                <GridColumn field={'Chart'} width={60} className={'center-text'} cell={ChartCell} />
+                                <GridColumn field={'Chart'} width={60} className={'center-text'} cells={{ data: ChartCell }} />
                                 <GridColumn field={'Country'} width={110} />
                                 <GridColumn field={'City'} width={100} />
                                 <GridColumn field={'Category'} width={120} />
