@@ -1,0 +1,80 @@
+{
+  "name": "kendo-react-getting-started",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@progress/kendo-data-query": "^1.6.0",
+    "@progress/kendo-drawing": "^1.16.3",
+    "@progress/kendo-licensing": "^1.2.2",
+    "@progress/kendo-react-animation": "^5.4.0",
+    "@progress/kendo-react-buttons": "^5.4.0",
+    "@progress/kendo-react-charts": "^5.4.0",
+    "@progress/kendo-react-conversational-ui": "^5.4.0",
+    "@progress/kendo-react-data-tools": "^5.4.0",
+    "@progress/kendo-react-dateinputs": "^5.4.0",
+    "@progress/kendo-react-dialogs": "^5.4.0",
+    "@progress/kendo-react-dropdowns": "^5.4.0",
+    "@progress/kendo-react-editor": "^5.4.0",
+    "@progress/kendo-react-excel-export": "^5.4.0",
+    "@progress/kendo-react-form": "^5.4.0",
+    "@progress/kendo-react-gantt": "^5.4.0",
+    "@progress/kendo-react-gauges": "^5.4.0",
+    "@progress/kendo-react-grid": "^5.4.0",
+    "@progress/kendo-react-indicators": "^5.4.0",
+    "@progress/kendo-react-inputs": "^5.4.0",
+    "@progress/kendo-react-intl": "^5.4.0",
+    "@progress/kendo-react-labels": "^5.4.0",
+    "@progress/kendo-react-layout": "^5.4.0",
+    "@progress/kendo-react-listbox": "^5.4.0",
+    "@progress/kendo-react-listview": "^5.4.0",
+    "@progress/kendo-react-notification": "^5.4.0",
+    "@progress/kendo-react-pdf": "^5.4.0",
+    "@progress/kendo-react-pivotgrid": "^5.4.0",
+    "@progress/kendo-react-popup": "^5.4.0",
+    "@progress/kendo-react-progressbars": "^5.4.0",
+    "@progress/kendo-react-ripple": "^5.4.0",
+    "@progress/kendo-react-scheduler": "^5.4.0",
+    "@progress/kendo-react-sortable": "^5.4.0",
+    "@progress/kendo-react-tooltip": "^5.4.0",
+    "@progress/kendo-react-treelist": "^5.4.0",
+    "@progress/kendo-react-treeview": "^5.4.0",
+    "@progress/kendo-react-upload": "^5.4.0",
+    "@progress/kendo-theme-bootstrap": "^5.5.0",
+    "@progress/kendo-theme-default": "^5.5.0",
+    "@progress/kendo-theme-material": "^5.5.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "sass": "^1.53.0"
+  }
+}
