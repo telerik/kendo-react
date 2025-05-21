@@ -76,16 +76,16 @@ class App extends Component {
 
         <Grid
           data={process(products, this.state.gridDataState)}
+          {...this.state.gridDataState}
+          style={{ height: "446px" }}
           pageable={true}
           sortable={true}
-          {...this.state.gridDataState}
           onDataStateChange={this.handleGridDataStateChange}
-          style={{ height: "400px" }}
           onRowClick={this.handleGridRowClick}>
           <GridColumn field="ProductName" title="Product Name" />
           <GridColumn field="UnitPrice" title="Price" format="{0:c}" />
           <GridColumn field="UnitsInStock" title="Units in Stock" />
-          <GridColumn field="Discontinued" cell={checkboxColumn} />
+          <GridColumn field="Discontinued" cells={{ data: checkboxColumn }} />
         </Grid>
 
         {this.state.windowVisible &&
