@@ -1,0 +1,8 @@
+.editor-content {
+  box-sizing: border-box;
+  overflow-Y: scroll;
+  padding: 0 4px;
+  height: 300px;
+  border: 1px solid rgba(0,0,0,0.12);
+  outline: 0;
+}
