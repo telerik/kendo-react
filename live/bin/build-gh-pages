@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Builds example projects and deploys them to GH Pages
-STANDALONE_PROJECTS=(ecommerce-jewellery-store kendo-react-e-commerce-astro-app kendo-react-finance-portfolio react-coffee-warehouse react-admin-dashboard kendo-react-homepage-demo kendo-react-file-manager react-grid-live-data kendo-react-project-tracker-app kendo-react-tailwind)
+STANDALONE_PROJECTS=(ecommerce-jewellery-store kendo-react-e-commerce-astro-app kendo-react-finance-portfolio react-coffee-warehouse react-admin-dashboard kendo-react-homepage-demo kendo-react-file-manager react-grid-live-data kendo-react-project-tracker-app kendo-react-tailwind kendo-react-personal-finance)
 
 set -e
 
@@ -16,7 +16,7 @@ do
   npm run build
   mkdir -p ../../live/build/${PROJECT}
 
-if [ "$PROJECT" = "kendo-react-e-commerce-astro-app" ] || [ "$PROJECT" = "kendo-react-project-tracker-app" ] || [ "$PROJECT" = "kendo-react-tailwind" ]; then
+if [ "$PROJECT" = "kendo-react-e-commerce-astro-app" ] || [ "$PROJECT" = "kendo-react-project-tracker-app" ] || [ "$PROJECT" = "kendo-react-tailwind" ] || [ "$PROJECT" = "kendo-react-personal-finance" ]; then
   mv -v dist/* "../../live/build/${PROJECT}"
 else
   mv -v build/* "../../live/build/${PROJECT}"

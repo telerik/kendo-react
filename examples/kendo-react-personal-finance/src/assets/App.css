@@ -1,0 +1,155 @@
+@import 'https://fonts.googleapis.com/css2?family=Outfit:wght@200..900&display=swap';
+
+body {
+    background-color: var(--kendo-color-app-surface);
+    color: #ffffff;
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.overlay-active {
+    opacity: 0.2;
+}
+
+.k-drawer {
+    background: var(--kendo-color-surface-alt, #212121);
+}
+
+.k-drawer-item{
+    white-space: nowrap;
+}
+
+.positive {
+    color: #86B079;
+}
+
+.negative {
+    color: #B05768;
+}
+
+.k-grid td {
+    border-color: #2a2a2a;
+    padding: 12px;
+}
+
+.k-select-checkbox {
+    border: none;
+    background-color: #E0E0E0;
+    opacity: 0.1;
+}
+
+header .k-picker-solid {
+    border-bottom-right-radius: 6px !important;
+    border-bottom-left-radius: 6px !important;
+}
+
+.separator {
+    width: 2px;
+    height: 50px;
+    background-color: #525252;
+    margin: 0 15px;
+}
+
+
+.stock-tabs{
+    overflow: hidden;
+}
+
+.k-expander-title {
+    font-weight: bold;
+    text-transform: none;
+    color: var(--kendo-color-primary)
+}
+
+@media (min-width: 768px) {
+    .top-bar {
+        align-items: center;
+    }
+}
+
+.k-table-row > .k-table-td:first-child {
+    background-color: #E0E0E01A !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+}
+
+.k-table-row > th:first-child, .k-table-row > .k-table-td.k-selected:first-child{
+    background-color: #E0E0E01A !important;
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+}
+
+.k-table-row > th:not(:first-child) {
+    border-right: 1px solid #FFFFFF33 !important;
+}
+
+.k-table-row > .k-table-td input[type="checkbox"], .k-table-row > th input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    padding: 2px;
+    border-width: 1px;
+    background: var(--kendo-color-opacity-sorted, #E0E0E01A);
+    border: 1px solid #00000014
+}
+
+.k-chip-label {
+    font-size: 10px;
+    font-weight: 400;
+}
+.k-table-th.k-header {
+    justify-items: center;
+}
+.k-table-row .k-table-td {
+    text-align: center;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+}
+
+.k-listview-content{
+    display: grid;
+    gap: 16px !important;
+}
+
+.k-listview {
+    line-height: unset;
+}
+.k-tabstrip-top>.k-tabstrip-items-wrapper {
+    border-bottom-width: 0px !important;
+}
+
+.k-prompt-suggestion {
+    background-color: var(--kendo-color-surface-alt);
+
+}
+.k-calendar {
+    border-width: 0px;
+    border-style: none;
+}
+
+.k-tabstrip-content > .k-animation-container {
+    width: 100%;
+}
+
+@media (max-width: 820px) {
+    .k-justify-content-sm-start {
+        justify-content: flex-start;
+    }
+}
+
+.k-form-md .k-form-field {
+    margin-top: 0px;
+}
+
+.k-grid .k-chip {
+    padding-inline: 2px !important;
+    min-width: 80px;
+}
+
+.k-drawer-content {
+    min-height: 92vh; 
+    margin-left: 80px;
+}
