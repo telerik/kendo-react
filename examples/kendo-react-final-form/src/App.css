@@ -1,0 +1,32 @@
+.header {
+  position: relative;
+  text-align: center;
+}
+.header h5 {
+  color: #888888;
+  display: inline-block;
+  position: relative;
+  /* margin: 0 0 10px; */
+  padding: 0 10px;
+  background: #fff;
+  text-transform: uppercase;
+}
+.header:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 18px;
+  border-top: 1px solid #e8ecef;
+}
+.k-form, .k-widget:not(.k-switch) {
+  width: 100%;
+}
+.k-form fieldset {
+  border-top-width: 0;
+}
+.k-textbox-container {
+  width: 100%;
+}
+

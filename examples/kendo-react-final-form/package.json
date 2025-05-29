@@ -1,0 +1,25 @@
+{
+  "name": "kendo-react-inputs-in-react-final-form",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@progress/kendo-react-dateinputs": "^2.0.0",
+    "@progress/kendo-react-dropdowns": "^2.0.0",
+    "@progress/kendo-react-inputs": "^2.0.0",
+    "@progress/kendo-react-intl": "^2.0.0",
+    "@progress/kendo-react-buttons": "^2.0.0",
+    "@progress/kendo-theme-default": "^2.50.0",
+    "prop-types": "^15.6.1",
+    "final-form": "^4.4.0",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-final-form": "^3.1.5",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
