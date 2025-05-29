@@ -88,7 +88,8 @@ class FinalForm extends Component {
     render() {
         return (
             <div className="row">
-                <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12 container mt-3 border border-light active shadow">
+                <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12 container mt-3 border border-light active shadow" 
+                        style={{ height: '470px' }}>
                     <div className="header mt-3">
                         <h5>Flight Search</h5>
                     </div>
@@ -126,7 +127,7 @@ class FinalForm extends Component {
                                         offLabel={"NO"}
                                         label="Only direct flights" />
                                     <div className="buttons float-right">
-                                        <Button type="submit" primary={true} disabled={submitting || !valid}>
+                                        <Button type="submit" themeColor={'primary'} disabled={submitting || !valid}>
                                             Search flights
                                         </Button>
                                         &nbsp;
