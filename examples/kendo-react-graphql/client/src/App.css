@@ -1,0 +1,27 @@
+.header {
+  position: relative;
+}
+.header h5 {
+  color: #888888;
+  display: inline-block;
+  position: relative;
+  margin: 0 0 10px;
+  padding: 0 10px 0 0;
+  background: #fff;
+  text-transform: uppercase;
+}
+.header:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 18px;
+  border-top: 1px solid #e8ecef;
+}
+.k-grid {
+  margin-bottom: 20px;
+}
+.k-form fieldset {
+  border-top-width: 0;
+}
