@@ -119,8 +119,8 @@ export const FileManagerToolbar = (props) => {
             onRemove={handleFileChange}
             onProgress={handleFileChange}
             onStatusChange={handleFileChange}
-            saveUrl={'https://demos.telerik.com/kendo-ui/service-v4/upload/save'}
-            removeUrl={'https://demos.telerik.com/kendo-ui/service-v4/upload/remove'}
+            saveUrl={'https://demos.telerik.com/service/v2/odata/upload/save'}
+            removeUrl={'https://demos.telerik.com/service/v2/odata/upload/remove'}
           />
           <DialogActionsBar layout={'end'}>
             <Button onClick={handleUploadClearList} > Clear List</Button>
