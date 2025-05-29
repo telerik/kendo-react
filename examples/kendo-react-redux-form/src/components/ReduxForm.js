@@ -87,7 +87,7 @@ let ReduxProductsForm = props => {
                     ]}
                 />
                 <div className="text-right">
-                    <Button type="submit" onClick={handleSubmit} primary={true}>
+                    <Button type="submit" onClick={handleSubmit} themeColor={"primary"} >
                         Submit
             </Button>
                     <Button onClick={reset} >
