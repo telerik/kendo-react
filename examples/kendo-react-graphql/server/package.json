@@ -9,10 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.4",
-    "express": "^4.16.3",
-    "express-graphql": "^0.6.12",
-    "graphql": "^0.13.2",
-    "uuid": "^3.2.1"
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "graphql-http": "^1.22.4",
+    "graphql": "^16.11.0",
+    "uuid": "^11.1.0"
   }
 }

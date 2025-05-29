@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
-import { Grid, GridColumn, GridToolbar } from '@progress/kendo-react-grid';
+import { Grid, GridColumn, GridToolbar, GridToolbarFilter, GridToolbarColumnsChooser } from '@progress/kendo-react-grid';
+import { gearIcon } from '@progress/kendo-svg-icons';
 import MyCommandCell from './MyCommandCell'
-import { graphql, compose } from 'react-apollo';
 import { getProductsQuery, deleteProductMutation } from '../queries/queries';
-
+import { graphql } from '@apollo/client/react/hoc';
+import flowRight from 'lodash.flowright';
 
 class GridContainer extends Component {
 
@@ -39,28 +40,27 @@ class GridContainer extends Component {
                 <Grid data={this.props.getProductsQuery.loading === true ? [] : this.props.getProductsQuery.products}
                     onRowClick={this.handleRowClick}
                     style={{ maxHeight: "600px" }}
+                    adaptive={true}
+                    dataItemKey="ProductID"
+                    autoProcessData={true}
+                    navigatable={true}
                 >
                     <GridToolbar>
-                        <button
-                            title="Add new"
-                            className="k-button k-primary"
-                            onClick={this.handleAddItem}
-                            disabled={!this.props.inEdit}
-                        >Add new
-                        </button>
+                        <GridToolbarFilter svgIcon={gearIcon} />
+                        <GridToolbarColumnsChooser />
                     </GridToolbar>
-                    <GridColumn field="ProductID" title="ID" width="300"/>
+                    <GridColumn field="ProductID" title="ID" width="100px" />
                     <GridColumn field="ProductName" title="Product Name"/>
-                    <GridColumn field="UnitPrice" title="Unit Price" width="150px"/>
+                    <GridColumn field="UnitPrice" title="Unit Price" width="150px" />
                     <GridColumn field="UnitsInStock" title="Units in Stock" width="150px"/>
-                    <GridColumn cell={this.CommandCell} width="120px" />
+                    <GridColumn cells={{ data: this.CommandCell }} width="120px" />
                 </Grid>
             </div>
         );
     }
 }
 
-export default compose(
+export default flowRight(
     graphql(getProductsQuery, { name: "getProductsQuery" }),
     graphql(deleteProductMutation, { name: "deleteProductMutation" })
-)(GridContainer);
+  )(GridContainer);

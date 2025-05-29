@@ -4,14 +4,14 @@ import 'bootstrap';
 import './App.css';
 import GridContainer from './components/GridContainer'
 import ProductsForm from './components/ProductForm'
-import ApolloClient from 'apollo-boost';
-import { ApolloProvider } from 'react-apollo';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
 
 // apollo client setup
 const client = new ApolloClient({
-  uri: 'http://localhost:4000/graphql'
-})
+  uri: 'http://localhost:4000/graphql',
+  cache: new InMemoryCache(),
+});
 
 class App extends Component {
 

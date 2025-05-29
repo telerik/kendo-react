@@ -1,6 +1,6 @@
-import { gql } from 'apollo-boost';
+import { gql } from '@apollo/client';
 
-const getProductsQuery = gql `
+const getProductsQuery = gql`
 {
     products {
         ProductID

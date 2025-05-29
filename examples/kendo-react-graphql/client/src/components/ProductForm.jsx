@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import { NumericTextBox } from '@progress/kendo-react-inputs';
-import { graphql, compose } from 'react-apollo';
+import { Button } from '@progress/kendo-react-buttons';
+import { Input } from '@progress/kendo-react-inputs';
+import { Label } from '@progress/kendo-react-labels';
+import { graphql } from '@apollo/client/react/hoc';
+import flowRight from 'lodash.flowright'; 
 import { addProductMutation, getProductsQuery, updateProductMutation} from '../queries/queries';
 
 class ProductsForm extends Component {
@@ -78,9 +82,9 @@ class ProductsForm extends Component {
                 </div>
                     <form className="k-form" onSubmit={this.handleSubmit}>
                         <fieldset>
-                            <label className="k-form-field">
+                            <Label className="k-form-field">
                                 <span>Product Name</span>
-                                <input
+                                <Input
                                     required
                                     className="k-textbox"
                                     placeholder="Product Name"
@@ -88,8 +92,8 @@ class ProductsForm extends Component {
                                     onChange={(e) => {
                                     this.setState({ProductName: e.target.value, internalUpdate: true})
                                 }}/>
-                            </label>
-                            <label className="k-form-field">
+                            </Label>
+                            <Label className="k-form-field">
                                 <span>Unit Price</span>
                                 <NumericTextBox
                                     style={{width: "100%"}}
@@ -97,8 +101,8 @@ class ProductsForm extends Component {
                                     onChange={(e) => {
                                     this.setState({UnitPrice: e.value, internalUpdate: true})
                                 }}/>
-                            </label>
-                            <label className="k-form-field">
+                            </Label>
+                            <Label className="k-form-field">
                                 <span>Units in Stock</span>
                                 <NumericTextBox
                                     value={this.state.UnitsInStock}
@@ -106,13 +110,13 @@ class ProductsForm extends Component {
                                     onChange={(e) => {
                                     this.setState({UnitsInStock: e.value, internalUpdate: true})
                                 }}/>
-                            </label>
+                            </Label>
                         </fieldset>
                     <div className="text-right">
-                        <button type="button" className="k-button k-primary" type="submit">{!this.props.inEdit
+                        <Button className="k-button k-primary" type="submit">{!this.props.inEdit
                             ? "Add new product"
                             : "Update"
-                            }</button>
+                            }</Button>
                     </div>
                 </form>
             </div>
@@ -120,9 +124,8 @@ class ProductsForm extends Component {
     }
 }
 
-export default compose(
-    graphql(addProductMutation, {name: "addProductMutation"}),
+export default flowRight(
+    graphql(addProductMutation, { name: "addProductMutation" }),
     graphql(getProductsQuery, { name: "getProductsQuery" }),
     graphql(updateProductMutation, { name: "updateProductMutation" })
-
 )(ProductsForm);

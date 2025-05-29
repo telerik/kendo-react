@@ -1,5 +1,5 @@
 const graphql = require('graphql');
-const uuidv1 = require('uuid/v1');
+const { v1: uuidv1 } = require('uuid');
 
 const { GraphQLObjectType,
     GraphQLString,

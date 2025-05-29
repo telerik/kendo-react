@@ -1,18 +1,23 @@
 import React from 'react';
-import { GridCell } from '@progress/kendo-react-grid';
+import { Button } from '@progress/kendo-react-buttons';
 
 export default function MyCommandCell(remove) {
-    return class extends GridCell {
-        render() {
-            return (
-                    <td>
-                        <button
-                            className="k-button k-grid-remove-command"
-                            onClick={(e) => window.confirm('Confirm deleting: ' + this.props.dataItem.ProductName) && remove(this.props.dataItem)}>
-                            Remove
-                        </button>
-                    </td>
-            );
-        }
-    }
-};
+    return function CommandCell(props) {
+        const { dataItem } = props;
+
+        return (
+            <td>
+                <Button
+                    className="k-grid-remove-command"
+                    onClick={(e) => {
+                        if (window.confirm(`Confirm deleting: ${dataItem.ProductName}`)) {
+                            remove(dataItem);
+                        }
+                    }}
+                >
+                    Remove
+                </Button>
+            </td>
+        );
+    };
+}
