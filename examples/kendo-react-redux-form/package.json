@@ -1,0 +1,35 @@
+{
+  "name": "kendo-grid-redux-form",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@progress/kendo-data-query": "^1.4.0",
+    "@progress/kendo-drawing": "^1.5.7",
+    "@progress/kendo-react-buttons": "^2.0.0",
+    "@progress/kendo-react-dateinputs": "^2.0.0",
+    "@progress/kendo-react-dropdowns": "^2.0.0",
+    "@progress/kendo-react-animation": "^2.0.0",
+    "@progress/kendo-react-popup": "^2.0.0",
+    "@progress/kendo-react-grid": "^2.0.0",
+    "@progress/kendo-react-inputs": "^2.0.0",
+    "@progress/kendo-react-intl": "^2.0.0",
+    "@progress/kendo-react-pdf": "^2.0.0",
+    "@progress/kendo-theme-default": "^2.54.1",
+    "popper.js": "^1.14.3",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "react-scripts": "^1.1.4",
+    "redux": "^4.0.0",
+    "redux-devtools-extension": "^2.13.5",
+    "redux-form": "^7.4.2",
+    "redux-thunk": "^2.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
