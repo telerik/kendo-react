@@ -6,8 +6,8 @@ import {
   SplitButton,
   SplitButtonItemClickEvent
 } from '@progress/kendo-react-buttons';
-import { Switch, Input, InputChangeEvent, SwitchChangeEvent } from "@progress/kendo-react-inputs";
-import { Dialog, DialogActionsBar } from '@progress/kendo-react-dialogs';
+import { InputSuffix, Switch, SwitchChangeEvent, TextBox, TextBoxChangeEvent } from "@progress/kendo-react-inputs";
+import { Dialog, DialogActionsBar, DialogHandle } from '@progress/kendo-react-dialogs';
 import { Upload } from '@progress/kendo-react-upload';
 import { BaseEvent, SvgIcon  } from '@progress/kendo-react-common';
 import { toggleViewBtnGroup, toggleSortBtnGroup } from '../helpers/helperMethods';
@@ -19,7 +19,7 @@ export const FileManagerToolbar = (props) => {
   const [dialogVisible, setDialogVisible] = React.useState<boolean>(false);
   const [viewBtnGroup, setViewBtnGroup] = React.useState<GridViewBtnGroup>({ gridView: true, listView: false });
 
-  const handleSearchChange = (event: InputChangeEvent) => {
+  const handleSearchChange = (event: TextBoxChangeEvent) => {
     props.onSearchChange(event);
   };
 
@@ -79,7 +79,7 @@ export const FileManagerToolbar = (props) => {
     props.onNewFolderClick(event);
   }
 
-  const handleDialogVisibility = (event: BaseEvent<Dialog> | React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+  const handleDialogVisibility = (_event: BaseEvent<DialogHandle> | React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     setDialogVisible(!dialogVisible);
   };
 
@@ -168,8 +168,14 @@ export const FileManagerToolbar = (props) => {
         <Switch defaultChecked={true} onChange={handleSwitchChange} />
       </div>
       <div className="k-filemanager-search-tool k-textbox k-toolbar-last-visible" >
-        <Input className="k-input" placeholder="Search" onChange={handleSearchChange} />
-        <SvgIcon icon={searchIcon} className="k-input-icon"/>
+        <TextBox className="k-input" placeholder="Search" onChange={handleSearchChange} suffix={() => (
+          <InputSuffix>
+            <Button
+              fillMode={'clear'}
+              svgIcon={searchIcon}
+            />
+          </InputSuffix>
+        )} />
       </div>
     </Toolbar>
   );

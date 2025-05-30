@@ -6,7 +6,8 @@ import {
   GridRowClickEvent,
   GridRowDoubleClickEvent,
   GridSortChangeEvent,
-  GRID_COL_INDEX_ATTRIBUTE
+  GRID_COL_INDEX_ATTRIBUTE,
+  GridCustomRowProps
 } from '@progress/kendo-react-grid';
 import { useTableKeyboardNavigation } from '@progress/kendo-react-data-tools';
 import { useInternationalization } from '@progress/kendo-react-intl';
@@ -61,14 +62,19 @@ const NameCell = (props: GridCellProps) => {
 };
 
 export const GridView = (props) => {
-  const RowRender = (trElement, dataItem) => {
+  const CustomRow = (props: GridCustomRowProps) => {
     const trProps = {
       onContextMenu: (event) => {
         event.preventDefault()
-        handleContextMenu(event, dataItem);
-      }
-    }
-    return React.cloneElement(trElement, { ...trProps }, trElement.props.children);
+        handleContextMenu(event, props.dataItem);
+      },
+      ...props.trProps
+    };
+    return (
+      <tr {...trProps}>
+        {props.children}
+      </tr>
+    );
   };
 
   const handleOnSortChange = (event: GridSortChangeEvent) => {
@@ -100,25 +106,25 @@ export const GridView = (props) => {
   return (
     <Grid
       data={props.data}
-      rowRender={RowRender}
-      className={'k-filemanager-grid k-grid-display-block k-editable'}
+      dataItemKey={props.dataItemKey}
+      autoProcessData={true}
+      rows={{ data: CustomRow }}
       style={{ height: '100%' }}
       navigatable={true}
       sortable={{
         allowUnsort: false
       }}
       sort={props.sort}
-      selectedField={'selected'}
       selectable={{ enabled: true, cell: false, drag: true, mode: 'multiple' }}
-      dataItemKey={props.dataItemKey}
+      className={'k-filemanager-grid k-grid-display-block k-editable'}
       onRowClick={handleSelectionChange}
       onSelectionChange={handleMultipleSelection}
       onSortChange={handleOnSortChange}
       onRowDoubleClick={handleDoubleClick}
       >
-      <Column field='path' title='Name' cell={NameCell} />
-      <Column field='dateCreated' title='Date Created' cell={DateCreatedCell} />
-      <Column field='size' title='Size' cell={SizeCell} />
+      <Column field='path' title='Name' cells={{ data: NameCell }} />
+      <Column field='dateCreated' title='Date Created' cells={{ data: DateCreatedCell }} />
+      <Column field='size' title='Size' cells={{ data: SizeCell }} />
     </Grid>
   );
 }
