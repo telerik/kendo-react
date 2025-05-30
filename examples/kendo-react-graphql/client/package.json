@@ -1,0 +1,32 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@apollo/client": "^3.5.10",
+    "@progress/kendo-data-query": "^1.7.1",
+    "@progress/kendo-drawing": "^1.21.2",
+    "@progress/kendo-react-dateinputs": "^11.0.0",
+    "@progress/kendo-react-dropdowns": "^11.0.0",
+    "@progress/kendo-react-grid": "^11.0.0",
+    "@progress/kendo-react-inputs": "^11.0.0",
+    "@progress/kendo-react-intl": "^11.0.0",
+    "@progress/kendo-react-pdf": "^11.0.0",
+    "@progress/kendo-theme-default": "^11.0.2",
+    "bootstrap": "^4.1.1",
+    "cldr-data": "^32.0.1",
+    "graphql": "^16.11.0",
+    "jquery": "^3.3.1",
+    "lodash.flowright": "^3.5.0",
+    "popper.js": "^1.14.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-scripts": "^5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

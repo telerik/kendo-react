@@ -1,0 +1,60 @@
+{
+  "name": "kendo-react-grid-performance",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@progress/kendo-react-grid": "11.0.0",
+    "@progress/kendo-data-query": "1.7.1",
+    "@progress/kendo-drawing": "1.21.2",
+    "@progress/kendo-licensing": "1.6.0",
+    "@progress/kendo-svg-icons": "4.3.0",
+    "@progress/kendo-react-common": "11.0.0",   
+    "@progress/kendo-react-animation": "11.0.0",
+    "@progress/kendo-popup-common": "1.9.2",
+    "@progress/kendo-react-popup": "11.0.0",
+    "@progress/kendo-react-buttons": "11.0.0",
+    "@progress/kendo-date-math": "1.5.14",
+    "@progress/kendo-intl": "3.1.2",
+    "@progress/kendo-react-intl": "11.0.0",
+    "@progress/kendo-react-labels": "11.0.0", 
+    "@progress/kendo-react-progressbars": "11.0.0",
+    "@progress/kendo-react-layout": "11.0.0",
+    "@progress/kendo-react-dateinputs": "11.0.0",
+    "@progress/kendo-inputs-common": "3.1.1",
+    "@progress/kendo-react-dialogs": "11.0.0",
+    "@progress/kendo-react-form": "11.0.0",
+    "@progress/kendo-react-inputs": "11.0.0",
+    "@progress/kendo-react-treeview": "11.0.0",
+    "@progress/kendo-react-dropdowns": "11.0.0",
+    "@progress/kendo-react-data-tools": "11.0.0",
+    "@progress/kendo-theme-default": "^11.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "web-vitals": "^3.4.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

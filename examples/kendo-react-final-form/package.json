@@ -1,0 +1,37 @@
+{
+  "name": "kendo-react-inputs-in-react-final-form",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@progress/kendo-licensing": "^1.5.1",
+    "@progress/kendo-date-math": "^1.5.14",
+    "@progress/kendo-inputs-common": "^3.1.1",
+    "@progress/kendo-intl": "^3.1.2",
+    "@progress/kendo-drawing": "^1.21.2",
+    "@progress/kendo-dateinputs-common": "^0.4.5",
+    "@progress/kendo-react-dateinputs": "^11.0.0",
+    "@progress/kendo-react-dropdowns": "^11.0.0",
+    "@progress/kendo-react-inputs": "^11.0.0",
+    "@progress/kendo-react-intl": "^11.0.0",
+    "@progress/kendo-react-buttons": "^11.0.0",
+    "@progress/kendo-react-common": "^11.0.0",
+    "@progress/kendo-react-layout": "^11.0.0",
+    "@progress/kendo-react-labels": "^11.0.0",
+    "@progress/kendo-react-popup": "^11.0.0",
+    "@progress/kendo-react-treeview": "^11.0.0",
+    "@progress/kendo-react-dialogs": "^11.0.0",
+    "@progress/kendo-theme-default": "^11.0.2",
+    "prop-types": "^15.6.2",
+    "final-form": "^4.4.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-final-form": "^6.5.9",
+    "react-scripts": "^5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

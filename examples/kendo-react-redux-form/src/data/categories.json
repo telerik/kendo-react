@@ -1,0 +1,43 @@
+
+[
+	{
+		"CategoryID" : 2,
+		"Description" : "Sweet and savory sauces relishes spreads and seasonings",
+		"CategoryName" : "Condiments"
+	},
+	{
+		"CategoryID" : 1,
+		"Description" : "Soft drinks coffees teas beers and ales",
+		"CategoryName" : "Beverages"
+	},
+	{
+		"CategoryID" : 3,
+		"Description" : "Desserts candies and sweet breads",
+		"CategoryName" : "Confections"
+	},
+	{
+		"CategoryID" : 4,
+		"Description" : "Cheeses",
+		"CategoryName" : "Dairy Products"
+	},
+	{
+		"CategoryID" : 5,
+		"Description" : "Breads crackers pasta and cereal",
+		"CategoryName" : "Grains/Cereals"
+	},
+	{
+		"CategoryID" : 6,
+		"Description" : "Prepared meats",
+		"CategoryName" : "Meat/Poultry"
+	},
+	{
+		"CategoryID" : 7,
+		"Description" : "Dried fruit and bean curd",
+		"CategoryName" : "Produce"
+	},
+	{
+		"CategoryID" : 8,
+		"Description" : "Seaweed and fish",
+		"CategoryName" : "Seafood"
+	}
+]

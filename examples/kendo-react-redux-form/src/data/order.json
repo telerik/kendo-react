@@ -1,0 +1,36 @@
+{
+    "OrderID" : 10266,
+    "CustomerID" : "WARTH",
+    "EmployeeID" : 3,
+    "OrderDate" : "1996-07-26 00:00:00.000",
+    "RequiredDate" : "1996-09-06 00:00:00.000",
+    "ShippedDate" : "1996-07-31 00:00:00.000",
+    "ShipVia" : 3,
+    "Freight" : 25.73,
+    "ShipName" : "Wartian Herkku",
+    "ShipAddress" : {
+        "Street" : "Torikatu 38",
+        "City" : "Oulu",
+        "Region" : "NULL",
+        "PostalCode" : 90110,
+        "Country" : "Finland"
+    },
+    "Details" : [
+        {
+            "Product" : {
+                "ProductID": 33,
+                "ProductName": "Geitost"
+            },
+            "Quantity" : 24,
+            "Discount" : 0
+        },
+        {
+            "Product" : {
+                "ProductID": 35,
+                "ProductName": "Steeleye Stout"
+            },
+            "Quantity" : 12,
+            "Discount" : 0.05
+        }
+    ]
+}
