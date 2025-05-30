@@ -1,5 +1,4 @@
 import * as React from "react";
-import { getter } from "@progress/kendo-react-common";
 import {
   Grid,
   GridColumn,
@@ -8,8 +7,7 @@ import {
   getSelectedState,
   GridKeyDownEvent,
   getSelectedStateFromKeyDown,
-  GridSortChangeEvent,
-  GridPageChangeEvent,
+  GridSortChangeEvent
 } from "@progress/kendo-react-grid";
 import {
   ChartWizard,
@@ -17,7 +15,6 @@ import {
   getWizardDataFromGridSelection,
 } from "@progress/kendo-react-chart-wizard";
 import { Button } from "@progress/kendo-react-buttons";
-import { orderBy } from "@progress/kendo-data-query";
 import { chartAreaStackedIcon } from "@progress/kendo-svg-icons";
 import { sampleData } from "../data/shared-gd-sampleChartData";
 import { useLanguageContext } from "../helpers/LanguageContext";
@@ -39,8 +36,6 @@ interface SampleDataItem {
 }
 
 const DATA_ITEM_KEY = "ID";
-const SELECTED_FIELD = "selected";
-const idGetter = getter(DATA_ITEM_KEY);
 
 interface SelectedState {
   [id: string]: boolean | number[];
@@ -56,7 +51,6 @@ const AdminView: React.FC = () => {
   const [chartData, setChartData] = React.useState<ChartWizardDataRow[]>([]);
   const [top3SalesData, setTop3SalesData] = React.useState<ChartWizardDataRow[]>([]);
   const [top3Visible, setTop3Visible] = React.useState<boolean>(false);
-  const [page, setPage] = React.useState<{ skip: number; take: number }>({ skip: 0, take: 4 });
 
   const { t, language } = useLanguageContext();
 
@@ -69,13 +63,6 @@ const AdminView: React.FC = () => {
       loadMessages(enMessages, "en");
     }
   }, [language]);
-
-  const data = sampleData.map((item) => ({
-    ...item,
-    [SELECTED_FIELD]: selectedState[idGetter(item)],
-  }));
-
-  const pagedData = orderBy(data, sort).slice(page.skip, page.skip + page.take);
 
   const onSelectionChange = (event: GridSelectionChangeEvent) => {
     const newSelectedState = getSelectedState({
@@ -93,10 +80,6 @@ const AdminView: React.FC = () => {
       dataItemKey: DATA_ITEM_KEY,
     });
     setSelectedState(newSelectedState);
-  };
-
-  const onPageChange = (event: GridPageChangeEvent) => {
-    setPage({ skip: event.page.skip, take: event.page.take });
   };
 
   const disabled = Object.keys(selectedState).length === 0;
@@ -168,14 +151,13 @@ const AdminView: React.FC = () => {
         key={language} 
         ref={gridRef}
         style={{ height: "500px" }}
-        data={pagedData}
+        data={sampleData}
         dataItemKey={DATA_ITEM_KEY}
-        selectedField={SELECTED_FIELD}
-        skip={page.skip}
-        take={page.take}
-        total={data.length}
+        autoProcessData={true}
+        defaultSkip={0}
+        defaultTake={4}
+        total={sampleData.length}
         pageable={true}
-        onPageChange={onPageChange}
         selectable={{
           enabled: true,
           drag: true,
@@ -190,7 +172,7 @@ const AdminView: React.FC = () => {
           setSort(e.sort as { field: string; dir: "asc" | "desc" }[]);
         }}
       >
-        <GridColumn field="URL" title={t.grid.productTitle} cell={URLImageCell} />
+        <GridColumn field="URL" title={t.grid.productTitle} cells={{ data: URLImageCell }} />
         <GridColumn field="Product" title={t.grid.nameTitle} />
         <GridColumn field="SKU" title={t.grid.skuTitle} />
         <GridColumn field="Category" title={t.grid.categoryTitle} />
