@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
 import { Sparkline } from '@progress/kendo-react-charts';
-import { process } from '@progress/kendo-data-query';
+import { Checkbox } from '@progress/kendo-react-inputs';
 
 class SparkLineChartCell extends React.Component {
     render (){
@@ -11,29 +11,25 @@ class SparkLineChartCell extends React.Component {
     }
 }
 
+class ActiveCell extends React.Component {
+    render() {
+        console.log(this.props.dataItem);
+        return (
+            <td><Checkbox disabled defaultChecked={this.props.dataItem[this.props.field]} /></td>
+        )
+    }
+}
+
 export default class GridContainer extends React.Component {
 
-    state = {
-        dataState:{
-            sort:[{
-                field: "UnitPrice",
-                dir:"asc"
-            }]
-        }
-    }
     processData = (data) => {
         data.forEach(item => {
             item.PriceHistory = Array.from({length: 40}, () => Math.floor(Math.random() * 100));
             return item
         })
-        return process(data,this.state.dataState);
+        return data;
     }
 
-    handleDataStateChange = (e) => {
-        this.setState({
-            dataState: e.dataState
-        })
-    }
 
     render() {
         return (
@@ -41,22 +37,18 @@ export default class GridContainer extends React.Component {
                 <Grid
                     style={{ height: '300px' }}
                     data={this.processData(this.props.data)}
-                    {...this.state.dataState}
-                    onDataStateChange={this.handleDataStateChange}
+                    defaultSort={[{
+                        field: "UnitPrice",
+                        dir:"asc"
+                    }]}
                     sortable
                 >
                     <Column field="ProductID" title="ID" sortable={false} width="40px"/>
-                    <Column field="ProductName" title="Name" />
+                    <Column field="ProductName" title="Name"  />
                     <Column field="UnitPrice" title="Price" width="100px" />
                     <Column field="UnitsInStock" title="In stock"  sortable={false} width="100px"/>
-                    <Column field="PriceHistory" title="Price history" cell={SparkLineChartCell}sortable={false} width="200px"/>
-                    <Column field="Discontinued" title="Active" sortable={false} width="100px"
-                        cell={(props) => (
-                            <td>
-                                <input type="checkbox" disabled className="k-checkbox" defaultChecked={props.dataItem[props.field]} />
-                                <label className="k-checkbox-label"></label>
-                            </td>
-                        )} />
+                    <Column field="PriceHistory" title="Price history" cells={{ data: SparkLineChartCell }} sortable={false} width="200px"/>
+                    <Column field="Discontinued" title="Active" sortable={false} width="70px" cells={{ data: ActiveCell }} />
                 </Grid>
             </div>
         );
