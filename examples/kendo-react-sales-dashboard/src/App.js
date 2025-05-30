@@ -82,15 +82,15 @@ class App extends Component {
         let headerText = this.state.value.replace('Sales','');
         return (
           <Ripple>
-            <div className="buttons-right mt-1">
-              <Button themeColor={'primary'} onClick={this.handleShare} className='mr-2'>Share</Button>
-              <Button onClick={this.handlePDFExport}>Export to PDF</Button>
-            </div>
             <div className="app-container" ref={(app) => this.app = app}>
                 <div className="row">
                   <div className="col-xs-9 col-sm-9 col-md-9 col-lg-9 col-xl-9">
                     <h1>Sales | {headerText}</h1>
-                  </div>
+                </div>
+                <div className="buttons-right mt-1">
+                  <Button themeColor={'primary'} onClick={this.handleShare} className='mr-2'>Share</Button>
+                  <Button onClick={this.handlePDFExport}>Export to PDF</Button>
+                </div>
                 </div>
                 <div className="row">
                   <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
