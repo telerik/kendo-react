@@ -1,0 +1,31 @@
+{
+  "name": "kendo-redux-timetravel-editing",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@progress/kendo-data-query": "^1.5.0",
+    "@progress/kendo-drawing": "^1.5.7",
+    "@progress/kendo-react-dateinputs": "^1.2.0",
+    "@progress/kendo-react-dropdowns": "^1.2.0",
+    "@progress/kendo-react-grid": "^1.2.0",
+    "@progress/kendo-react-inputs": "^1.2.0",
+    "@progress/kendo-react-intl": "^1.2.0",
+    "@progress/kendo-react-pdf": "^1.2.0",
+    "@progress/kendo-theme-default": "^2.55.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-redux": "^5.0.7",
+    "react-scripts": "1.1.5",
+    "redux": "^4.0.0",
+    "redux-devtools-extension": "^2.13.5",
+    "redux-thunk": "^2.3.0",
+    "redux-undo": "^0.6.1",
+    "prop-types": "15.6.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
