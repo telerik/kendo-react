@@ -1,10 +1,12 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {addProduct, updateProduct, deleteProduct, changeEdit, datastateChange} from '../actions/actions';
-import MyCommandCell from './MyCommandCell'
+import { connect } from 'react-redux';
 import { ActionCreators as UndoActionCreators } from 'redux-undo';
-import {Grid, GridColumn as Column, GridToolbar} from '@progress/kendo-react-grid';
+import { addProduct, updateProduct, deleteProduct, changeEdit, datastateChange } from '../actions/actions';
+import { Grid, GridColumn as Column, GridToolbar, GridToolbarSort, GridToolbarFilter } from '@progress/kendo-react-grid';
+import { Button } from '@progress/kendo-react-buttons';
+import { gearIcon } from '@progress/kendo-svg-icons';
 import { process } from '@progress/kendo-data-query'
+import MyCommandCell from './MyCommandCell'
 
 class GridContainer extends React.Component {
     constructor(props) {
@@ -38,37 +40,39 @@ class GridContainer extends React.Component {
         return (
             <div className="grid-container">
                 <Grid
+                    adaptive={true}
+                    dataItemKey="ProductID"
+                    autoProcessData={true}
+                    navigatable={true}
+                    sortable={{ mode: 'multiple' }}
                     onRowClick={this.rowClick}
                     onItemChange={this.handleItemChange}
                     data={processedProducts}
-                    total={this.props.products.length}
-                    pageable={true}
-                    sortable={true}
-                    filterable={true}
                     onDataStateChange={this.handleStateChange}
-                    editField="inEdit"
                     {...this.props.dataState}>
                     <GridToolbar>
-                        <button
+                        <GridToolbarSort icon="gear" />
+                        <GridToolbarFilter svgIcon={gearIcon} />
+                        <Button
                             title="Add new"
                             className="k-button k-primary"
                             onClick={this.addItem}>
                             Add new
-                        </button>
-                        <button
+                        </Button>
+                        <Button
                             title="Undo"
                             className="k-button button-right"
                             disabled={!this.props.canUndo}
                             onClick={this.props.onUndo}>
                             Back
-                        </button>
-                        <button
+                        </Button>
+                        <Button
                             title="Redo"
                             className="k-button button-right"
                             disabled={!this.props.canRedo}
                             onClick={this.props.onRedo}>
                             Forward
-                        </button>
+                        </Button>
                     </GridToolbar>
                     <Column field="ProductID" title="ID" editable={false} filter="numeric"/>
                     <Column field="ProductName" title="Name"/>

@@ -14,12 +14,16 @@ export function productsReducer(state = {products: sampleProducts}, action) {
       case ADD_PRODUCT:
         let makeNewID = Math.random() * new Date().getMilliseconds() * 100
         let newProductID = Math.floor(makeNewID)
-        let productForAdd = {inEdit: true}
-        productForAdd.ProductID = newProductID;
-        let productsAfterAdd = state.products.slice()
-        productsAfterAdd.map(product => product.inEdit = false)
+        let productForAdd = { inEdit: true, ProductID: newProductID };
+        let productsAfterAdd = state.products.map(product => ({
+          ...product,
+          inEdit: false
+      }));
         productsAfterAdd.unshift(productForAdd)
-        return Object.assign({ products: productsAfterAdd }, {});
+        return {
+          ...state,
+          products: productsAfterAdd
+      };
 
       case UPDATE_PRODUCT:
         const newProducts = state.products.map(product => {
