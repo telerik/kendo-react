@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "@progress/kendo-data-query": "^1.7.1",
-    "@progress/kendo-drawing": "^1.21.2",
+    "@progress/kendo-drawing": "^1.22.0",
     "@progress/kendo-licensing": "^1.6.0",
     "@progress/kendo-react-animation": "^11.0.0",
     "@progress/kendo-react-buttons": "^11.0.0",
