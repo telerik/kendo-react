@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/kendo-react/kendo-react-file-manager/static/css/main.98842ddb.css",
-    "main.js": "/kendo-react/kendo-react-file-manager/static/js/main.deb41730.js",
+    "main.js": "/kendo-react/kendo-react-file-manager/static/js/main.84e35e0e.js",
     "static/js/488.ee70e6b4.chunk.js": "/kendo-react/kendo-react-file-manager/static/js/488.ee70e6b4.chunk.js",
     "index.html": "/kendo-react/kendo-react-file-manager/index.html",
     "main.98842ddb.css.map": "/kendo-react/kendo-react-file-manager/static/css/main.98842ddb.css.map",
-    "main.deb41730.js.map": "/kendo-react/kendo-react-file-manager/static/js/main.deb41730.js.map",
+    "main.84e35e0e.js.map": "/kendo-react/kendo-react-file-manager/static/js/main.84e35e0e.js.map",
     "488.ee70e6b4.chunk.js.map": "/kendo-react/kendo-react-file-manager/static/js/488.ee70e6b4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.98842ddb.css",
-    "static/js/main.deb41730.js"
+    "static/js/main.84e35e0e.js"
   ]
 }
