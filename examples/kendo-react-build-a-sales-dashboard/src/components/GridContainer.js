@@ -2,8 +2,11 @@ import React from 'react';
 import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
 import { gridData } from '../data/appData';
 import { Sparkline } from '@progress/kendo-react-charts';
+import { Checkbox } from '@progress/kendo-react-inputs';
 
-const SparkLineChartCell = (props) => <td><Sparkline data={props.dataItem.PriceHistory}/></td>
+const SparkLineChartCell = (props) => <td><Sparkline data={props.dataItem.PriceHistory} /></td>
+const ActiveCell = (props) => <td><Checkbox disabled defaultChecked={props.dataItem[props.field]} /></td>
+
 const processData = (data) => {
   data.forEach((item) => {
     item.PriceHistory = Array.from({ length: 20 }, () => Math.floor(Math.random() * 100));
@@ -15,20 +18,21 @@ const processData = (data) => {
 export const GridContainer = () => (
 
   <div>
-    <Grid style={{ height: '300px' }} data={processData(gridData)}>
-      <Column field="ProductID" title="ID" width="40px" />
-      <Column field="ProductName" title="Name" width="160px" />
-      <Column field="Category.CategoryName" title="Category Name" width="80px" />
+    <Grid
+      style={{ height: '300px' }}
+      data={processData(gridData)}
+      defaultSort={[{
+        field: "UnitPrice",
+        dir:"asc"
+      }]}
+      sortable
+    >
+      <Column field="ProductID" title="ID" width="40px" sortable={false} />
+      <Column field="ProductName" title="Name" />
       <Column field="UnitPrice" title="Price" width="80px" />
-      <Column field="UnitsInStock" title="Stock" width="90px" />
-      <Column field="PriceHistory" width="130px" cell={SparkLineChartCell} title="Price history" />
-      <Column field="Discontinued" width="130px"
-        cell={(props) => (
-          <td>
-            <input className="k-checkbox" type="checkbox" disabled defaultChecked={props.dataItem[props.field]} />
-            <label className="k-checkbox-label"></label>
-          </td>
-        )} />
+      <Column field="UnitsInStock" title="In stock" width="100px" sortable={false} />
+      <Column field="PriceHistory"title="Price history" width="200px" cells={{ data: SparkLineChartCell }} sortable={false} />
+      <Column field="Discontinued"  title="Active" width="70px" cells={{ data: ActiveCell }} sortable={false} />
     </Grid>
   </div>
 );
