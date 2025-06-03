@@ -34,7 +34,6 @@ export const Grid = (props) => {
     const [select, setSelect] = React.useState({});
     const localizationService = useLocalization();
 
-
     const onExcelExport = React.useCallback(
         () => {
             if (excelExportRef.current) {
