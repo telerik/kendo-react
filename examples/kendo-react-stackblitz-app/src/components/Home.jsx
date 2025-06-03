@@ -6,7 +6,7 @@ const Home = (props) => {
             <div className='row'>
                 <div className='col-12'>
                     <h1 className='welcome mb-0'>Welcome to KendoReact</h1>
-                    <h2 className='sub-header mt-0'>This is a sample application built with KendoReact - a set of over 60 UI components built from the ground-up specifically for React.</h2>
+                    <h2 className='sub-header mt-0'>This is a sample application built with KendoReact - a React component library of 120+ enterprise-grade UI components and an AI Coding Assistant. Build polished, high-performing and accessible applications.</h2>
                 </div>
             </div>
             <div className='row'>
