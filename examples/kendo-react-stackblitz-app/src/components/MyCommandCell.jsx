@@ -1,48 +1,38 @@
 import * as React from "react";
 import { Button } from '@progress/kendo-react-buttons';
+import { classNames } from '@progress/kendo-react-common';
 
 export const MyCommandCell = (props) => {
   const { dataItem } = props;
-  const inEdit = dataItem[props.editField];
-  const isNewItem = dataItem.ProductID === undefined;
-  return inEdit ? (
-    <td className="k-command-cell">
+  const inEdit = props.isInEdit;
+  const isNewItem = dataItem.ProductID === null;
+
+  const onDeleteData = (dataItem) => {
+    props.remove(dataItem);
+  };
+  return (
+    <td {...props.tdProps} className={classNames('k-command-cell', ...props.className)}>
       <Button
-        className="k-grid-save-command"
-        themeColor={"primary"}
+        className={inEdit ? 'k-grid-save-command' : 'k-grid-edit-command'}
+        themeColor={'primary'}
         onClick={() =>
-          isNewItem ? props.add(dataItem) : props.update(dataItem)
+          inEdit ? (isNewItem ? props.add(dataItem) : props.update(dataItem)) : props.edit(dataItem)
         }
       >
-        {isNewItem ? "Add" : "Update"}
+        {inEdit ? (isNewItem ? 'Add' : 'Update') : 'Edit'}
       </Button>
       <Button
-        className="k-grid-cancel-command"
+        className={inEdit ? 'k-grid-cancel-command' : 'k-grid-remove-command'}
+        themeColor={'base'}
         onClick={() =>
-          isNewItem ? props.discard(dataItem) : props.cancel(dataItem)
+          inEdit
+            ? isNewItem
+              ? props.discard(dataItem)
+              : props.cancel(dataItem)
+            : onDeleteData(props.dataItem)
         }
       >
-        {isNewItem ? "Discard" : "Cancel"}
-      </Button>
-    </td>
-  ) : (
-    <td className="k-command-cell">
-      <Button
-        className="k-grid-edit-command"
-        themeColor={"primary"}
-        onClick={() => props.edit(dataItem)}
-      >
-        Edit
-      </Button>
-      <Button
-        className="k-grid-remove-command"
-        onClick={() =>
-          // eslint-disable-next-line no-restricted-globals
-          confirm("Confirm deleting: " + dataItem.ProductName) &&
-          props.remove(dataItem)
-        }
-      >
-        Remove
+        {inEdit ? (isNewItem ? 'Discard' : 'Cancel') : 'Remove'}
       </Button>
     </td>
   );

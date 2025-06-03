@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@progress/kendo-data-query": "^1.7.0",
+    "@progress/kendo-data-query": "^1.7.1",
     "@progress/kendo-drawing": "^1.21.2",
     "@progress/kendo-react-charts": "^11.0.0",
+    "@progress/kendo-react-common": "^11.0.0",
     "@progress/kendo-react-dateinputs": "^11.0.0",
     "@progress/kendo-react-dialogs": "^11.0.0",
     "@progress/kendo-react-dropdowns": "^11.0.0",
