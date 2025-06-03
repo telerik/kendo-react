@@ -1,4 +1,4 @@
-import{X as i,bF as l,_ as o,bG as c,by as s,ag as m}from"./languageStore.DBT27kjq.js";import{r as f}from"./index.CCMsPnvT.js";/**
+import{X as i,bF as l,_ as o,bG as c,bD as s,ag as m}from"./languageStore.BJ1syNBg.js";import{r as f}from"./index.CCMsPnvT.js";/**
  * @license
  *-------------------------------------------------------------------------------------------
  * Copyright © 2025 Progress Software Corporation. All rights reserved.
@@ -16,4 +16,4 @@ import{X as i,bF as l,_ as o,bG as c,by as s,ag as m}from"./languageStore.DBT27k
  * Copyright © 2025 Progress Software Corporation. All rights reserved.
  * Licensed under commercial license. See LICENSE.md in the package root for more information
  *-------------------------------------------------------------------------------------------
- */const E="labels.optional",F={[E]:"(Optional)"};export{h as L,C as g,L as h,z as i,E as l,F as o};
+ */const E="labels.optional",D={[E]:"(Optional)"};export{h as L,C as g,L as h,z as i,E as l,D as o};
