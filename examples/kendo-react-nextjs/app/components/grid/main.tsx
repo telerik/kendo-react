@@ -1,8 +1,7 @@
 'use client';
 import * as React from 'react';
-import { GridColumn, GridDetailRowProps, GridDataStateChangeEvent, GridExpandChangeEvent } from '@progress/kendo-react-grid';
+import { GridColumn, GridDetailRowProps, GridReorderDropPosition, GridRowReorderEvent } from '@progress/kendo-react-grid';
 import { IntlService } from '@progress/kendo-react-intl';
-import { DataResult, process, State } from '@progress/kendo-data-query';
 import { Button } from "@progress/kendo-react-buttons";
 import { useRouter } from "next/navigation";
 import dynamic from 'next/dynamic';
@@ -54,6 +53,8 @@ const DetailComponent = (props: GridDetailRowProps) => {
 }
 
 export const GridNextjs = () => {
+  const [data, setData] = React.useState<Array<any>>(orders);
+  
   const locales: LocaleInterface[] = [
     {
       language: 'en-US',
@@ -65,55 +66,61 @@ export const GridNextjs = () => {
     }
   ]
   const router = useRouter();
-  const [dataState, setDataState] = React.useState<State>({
-    skip: 0,
-    take: 20,
-    sort: [
-      { field: 'orderDate', dir: 'desc' }
-    ],
-    group: [
-      { field: 'customerID' }
-    ]
-  })
-  const [currentLocale, setCurrentLocale] = React.useState<LocaleInterface>(locales[0]);
-  const [dataResult, setDataResult] = React.useState<DataResult>(process(orders, dataState))
-
-  const dataStateChange = (event: GridDataStateChangeEvent) => {
-    setDataResult(process(orders, event.dataState));
-    setDataState(event.dataState);
-  }
-
-  const expandChange = (event: GridExpandChangeEvent) => {
-    const isExpanded =
-      event.dataItem.expanded === undefined ?
-        event.dataItem.aggregates : event.dataItem.expanded;
-    event.dataItem.expanded = !isExpanded;
-
-    setDataResult({ ...dataResult, data: [...dataResult.data] })
-  }
 
   const navigateToIndex = () => {
     router.push('/');
   }
+
+    const calculateIndexToAdd = (dragIndex: number, dropIndex: number, dropPosition: GridReorderDropPosition) => {
+        const isDropPosition = dropPosition === 'after';
+
+        if (dragIndex > dropIndex) {
+            return isDropPosition ? dropIndex + 1 : dropIndex;
+        }
+
+        return isDropPosition ? dropIndex : dropIndex - 1;
+    };
+
+  const handleRowReorder = (event: GridRowReorderEvent) => {
+    const reorderedData = [...data];
+    const droppedItemIndex = data.findIndex((item) => item === event.droppedDataItem);
+
+    event.draggedDataItems.forEach((draggedItem: any) => {
+        const draggedItemIndex = data.findIndex((item) => item === draggedItem);
+        const idxToAdd: number = calculateIndexToAdd(draggedItemIndex, droppedItemIndex, event.dropPosition)!;
+
+        reorderedData.splice(draggedItemIndex, 1);
+        reorderedData.splice(idxToAdd, 0, event.draggedDataItems[0]);
+    });
+
+    setData(reorderedData);
+};
 
   return (
     <div>
       <div><Button onClick={navigateToIndex}>Index Page</Button></div><br />
       <MyGrid
         style={{ height: '700px' }}
-        sortable={true}
-        filterable={true}
-        groupable={true}
-        reorderable={true}
-        pageable={{ buttonCount: 4, pageSizes: true }}
+        data={data}
+        autoProcessData={true}
+        dataItemKey="orderID"
 
-        data={dataResult}
-        {...dataState}
-        onDataStateChange={dataStateChange}
+        sortable={true}
+        defaultSort={[ { field: 'orderDate', dir: 'desc' } ]}
+
+        filterable={true}
+
+        groupable={true}
+        defaultGroup={[{ field: 'customerID' }]}
+
+        rowReorderable={{ enabled: true }}
+        onRowReorder={handleRowReorder}
+
+        pageable={{ buttonCount: 4, pageSizes: true }}
+        defaultSkip={0}
+        defaultTake={20}
 
         detail={DetailComponent}
-        expandField="expanded"
-        onExpandChange={expandChange}
       >
         <GridColumn field="customerID" width="200px" />
         <GridColumn field="orderDate" filter="date" format="{0:D}" width="300px" />
