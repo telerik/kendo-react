@@ -13,7 +13,6 @@ class SparkLineChartCell extends React.Component {
 
 class ActiveCell extends React.Component {
     render() {
-        console.log(this.props.dataItem);
         return (
             <td><Checkbox disabled defaultChecked={this.props.dataItem[this.props.field]} /></td>
         )
