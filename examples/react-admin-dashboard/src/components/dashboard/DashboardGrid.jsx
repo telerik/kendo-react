@@ -12,15 +12,11 @@ import {
  } from '@progress/kendo-react-grid';
 import { ButtonGroup, Button } from '@progress/kendo-react-buttons';
 import firstTeam  from '../../data/firstTeam.json'
-import {
-   process,
- } from '@progress/kendo-data-query';
 import { getter, SvgIcon } from '@progress/kendo-react-common';
 import { useTableKeyboardNavigation } from '@progress/kendo-react-data-tools';
 import { fileExcelIcon, filePdfIcon} from '@progress/kendo-svg-icons';
 
 const DATA_ITEM_KEY = 'PersonID';
-const SELECTED_FIELD = 'selected';
 const idGetter = getter(DATA_ITEM_KEY);
 
 export const DashboardGrid = () => {
@@ -29,22 +25,8 @@ export const DashboardGrid = () => {
    const [person, setPerson] = React.useState('Joey.png');
    const [filteredSampleProducts, setFilteredSampleProducts] =
      React.useState(firstTeam);
-   const [dataState, setDataState] = React.useState({ take: 5, skip: 0 });
-   const [dataResult, setDataResult] = React.useState(
-     process(
-       firstTeam.map((dataItem) =>
-         Object.assign(
-           {
-             selected: false,
-           },
-           dataItem
-         )
-       ),
-       dataState
-     )
-   );
-
- const [selectedState, setSelectedState] = React.useState({});
+  const [dataState, setDataState] = React.useState({ take: 5, skip: 0 });
+  const [selectedState, setSelectedState] = React.useState({});
 const onSelectionChange = React.useCallback(
   (event) => {
     const newSelectedState = getSelectedState({
@@ -84,8 +66,6 @@ const onFilterChange = (ev) => {
 
   setFilteredSampleProducts(newData);
   let clearedPagerDataState = { ...dataState, take: dataState.take, skip: 0 };
-  let processedData = process(newData, dataState);
-  setDataResult(processedData);
   setDataState(clearedPagerDataState);
 };
 
@@ -136,11 +116,6 @@ const onHeaderSelectionChange = React.useCallback((event) => {
   });
   setSelectedState(newSelectedState);
 }, []);
-
-const dataStateChange = (event) => {
-  setDataResult(process(filteredSampleProducts, event.dataState));
-  setDataState(event.dataState);
-};
 
 const RatingCell = (props) => {
   const field = props.field || '';
@@ -214,111 +189,85 @@ const firstTeamOnClick = React.useCallback(
    [setIsFirstTeam]
  );
 
-   return   <div className="grid-container">
-     <div className="card-buttons">
-          <p>MK Team</p>
-         <ButtonGroup>
-         <Button togglable={true} selected={isFirstTeam}  onClick={firstTeamOnClick}>
-               My Team
-             </Button>
-             <Button togglable={true} selected={!isFirstTeam} onClick={secondTeamOnClick}>
-               All Teams
-             </Button>
-         </ButtonGroup>
+  return (
+    <div className="grid-container">
+      <div className="card-buttons">
+        <p>MK Team</p>
+        <ButtonGroup>
+          <Button togglable={true} selected={isFirstTeam} onClick={firstTeamOnClick}>
+            My Team
+          </Button>
+          <Button togglable={true} selected={!isFirstTeam} onClick={secondTeamOnClick}>
+            All Teams
+          </Button>
+        </ButtonGroup>
       </div>
-    
-   <ExcelExport data={firstTeam} ref={exporter => {
-     _export = exporter;
-   }}>
-   <Grid
-   sortable={true}
-   cellRender={cellRender}
-   data={dataResult.data.map((item) => ({
-     ...item,
-     [SELECTED_FIELD]: selectedState[idGetter(item)],
-   }))}
-   total={dataResult.total}
-   {...dataState}
-   onDataStateChange={dataStateChange}
-  autoProcessData={true}
-  defaultSkip={0}
-  defaultTake={10}
-  pageable={{
-      buttonCount: 4,
-      pageSizes: [5, 10, 15, 'All']
-  }}
-   dataItemKey={DATA_ITEM_KEY}
-   selectedField={SELECTED_FIELD}
-   selectable={{
-     enabled: true,
-     drag: false,
-     cell: false,
-     mode: 'multiple',
-   }}
-   onSelectionChange={onSelectionChange}
-   onHeaderSelectionChange={onHeaderSelectionChange}
- >
-   <GridToolbar className="toolbar">
-    <div>
-       <span>
-         <TextBox
-           value={filterValue}
-           onChange={onFilterChange}
-           style={{
-             width: '200px',
-           }}
-           defaultValue='Search in all columns'
-         />
-       </span>
-      <div className="export-buttons-container">
-       <button title="Export to Excel" className="k-grid-excel k-button k-button-md k-rounded-md k-button-solid k-button-solid-base" onClick={exportExcel}>
-        <SvgIcon icon={fileExcelIcon}/><span> Export to Excel </span>
-       </button>&nbsp;
-       <button className="k-grid-pdf k-button k-button-md k-rounded-md k-button-solid k-button-solid-base" onClick={exportPDF}>
-        <SvgIcon icon={filePdfIcon} /><span> Export to PDF </span>
-       </button>
-      </div>  
+      <ExcelExport data={firstTeam} ref={exporter => {
+        _export = exporter;
+      }}>
+        <Grid
+          data={filteredSampleProducts}
+          autoProcessData={true}
+          dataItemKey={DATA_ITEM_KEY}
+          pageable={{
+            buttonCount: 4,
+            pageSizes: [5, 10, 15, 'All']
+          }}
+          defaultSkip={0}
+          defaultTake={5}
+          sortable={true}
+          selectable={{
+            enabled: true,
+            drag: false,
+            cell: false,
+            mode: 'multiple',
+          }}
+          select={selectedState}
+          cellRender={cellRender}
+          onSelectionChange={onSelectionChange}
+          onHeaderSelectionChange={onHeaderSelectionChange}
+        >
+          <GridToolbar>
+                <TextBox
+                  value={filterValue}
+                  onChange={onFilterChange}
+                  style={{
+                    width: '200px',
+                  }}
+                  placeholder='Search in all columns'
+                />
+              <Button title="Export to Excel" className="k-grid-excel k-button k-button-md k-rounded-md k-button-solid k-button-solid-base" onClick={exportExcel}>
+                <SvgIcon icon={fileExcelIcon} /><span> Export to Excel </span>
+              </Button>
+              <Button className="k-grid-pdf k-button k-button-md k-rounded-md k-button-solid k-button-solid-base" onClick={exportPDF}>
+                <SvgIcon icon={filePdfIcon} /><span> Export to PDF </span>
+              </Button>
+          </GridToolbar>
+          <Column columnType="checkbox" />
+          <Column title="Employee">
+            <Column field="FullName" title="Contact Name" cells={{ data: PersonCell }} />
+          </Column>
+          <Column field="JobTitle" title="Job Title" />
+          <Column title="Performance">
+            <Column field="Rating" title="Rating" cells={{ data: RatingCell }} width="300px" />
+          </Column>
+          <Column field="Budget" title="Budget" cells={{ data: CustomBudgetCell }} />
+        </Grid>
+      </ExcelExport>
+      <GridPDFExport ref={element => {
+        _pdfExport = element;
+      }} margin="1cm">
+        {<Grid data={firstTeam}>
+          <Column title="Employee">
+            <Column field="FullName" title="Contact Name" cells={{ data: PersonCell }} />
+          </Column>
+          <Column field="JobTitle" title="Job Title" />
+          <Column title="Performance">
+            <Column field="Rating" title="Rating" cells={{ data: RatingCell }} width="300px" />
+          </Column>
+          <Column field="Budget" title="Budget" cells={{ data: CustomBudgetCell }} />
+        </Grid>}
+      </GridPDFExport>
     </div>
-   </GridToolbar>
-   <Column
-     field={SELECTED_FIELD}
-     width="50px"
-     headerSelectionValue={
-       dataResult.data.findIndex(
-         (item) => !selectedState[idGetter(item)]
-       ) === -1
-       
-     }
-   />
-     <Column title="Employee">
-   <Column field="FullName" title="Contact Name" cell={PersonCell}/>
-   </Column>
-   <Column field="JobTitle" title="Job Title" />
-   <Column title="Performance">
-   <Column field="Rating" title="Rating" cell={RatingCell} width="300px" />
-   </Column>
-   <Column field="Budget" title="Budget" cell={CustomBudgetCell}/>
- </Grid>
- </ExcelExport>
- <GridPDFExport ref={element => {
-   _pdfExport = element;
- }} margin="1cm">
-           {<Grid data={process(firstTeam, {
-     skip: dataState.skip,
-     take: dataState.take
-   })}>
-    <Column title="Employee">
-   <Column field="FullName" title="Contact Name" cell={PersonCell}/>
-   </Column>
-   <Column field="JobTitle" title="Job Title" />
-   <Column title="Performance">
-   <Column field="Rating" title="Rating" cell={RatingCell} width="300px" />
-   </Column>
-   <Column field="Budget" title="Budget" cell={CustomBudgetCell}/>
-       </Grid>}
-   </GridPDFExport>
- 
-   </div>
+  );
 }
-
- 
