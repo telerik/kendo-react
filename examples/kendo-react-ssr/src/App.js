@@ -3,11 +3,8 @@ import './App.css';
 
 import { Grid, GridColumn } from '@progress/kendo-react-grid';
 import { Tooltip } from '@progress/kendo-react-tooltip';
-import { process } from '@progress/kendo-data-query';
 
 import '@progress/kendo-theme-default/dist/all.css';
-
-
 import products from './products.json';
 
 const MyCustomCell = (props) => {
@@ -35,19 +32,20 @@ const MyTooltipTemplate = (props) => {
 }
 
 function App() {
-  const [dataState, setDataState] = React.useState({ skip: 0, take: 10 })
   return (
     <div>
       <Tooltip content={MyTooltipTemplate} anchorElement="target" position="right">
         <Grid
+          data={products}
+          autoProcessData={true}
+          dataItemKey='ProductID'
           pageable
           sortable
-          data={process(products, dataState)}
-          {...dataState}
-          onDataStateChange={(e) => setDataState(e.dataState)}
+          defaultSkip={0}
+          defaultTake={10}
         >
           <GridColumn field="ProductID" title="Product Id" filter="numeric" />
-          <GridColumn field="ProductName" title="Product Name" cell={MyCustomCell} />
+          <GridColumn field="ProductName" title="Product Name" cells={{ data: MyCustomCell }} />
           <GridColumn field="UnitsInStock" title="Units In Stock" filter="numeric" />
         </Grid>
       </Tooltip>
