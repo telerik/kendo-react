@@ -165,7 +165,7 @@ export default function DashBoard(props) {
                 )}
                 columnMenu={ColumnMenu}
                 width={230}
-                cell={FullNameCell}
+                cells={{ data: FullNameCell }}
               />
               <Column
                 field={"jobTitle"}
@@ -184,7 +184,7 @@ export default function DashBoard(props) {
                 )}
                 columnMenu={ColumnMenu}
                 width={100}
-                cell={FlagCell}
+                cells={{ data: FlagCell }}
               />
               <Column
                 field={"isOnline"}
@@ -194,7 +194,7 @@ export default function DashBoard(props) {
                 )}
                 columnMenu={ColumnMenu}
                 width={100}
-                cell={OnlineCell}
+                cells={{ data: OnlineCell }}
                 filter={"boolean"}
               />
             </Column>
@@ -213,7 +213,7 @@ export default function DashBoard(props) {
                 )}
                 columnMenu={ColumnMenu}
                 width={110}
-                cell={RatingCell}
+                cells={{ data: RatingCell }}
                 filter={"numeric"}
               />
               <Column
@@ -224,7 +224,7 @@ export default function DashBoard(props) {
                 )}
                 columnMenu={ColumnMenu}
                 width={200}
-                cell={EngagementCell}
+                cells={{ data: EngagementCell }}
                 filter={"numeric"}
               />
               <Column
@@ -235,7 +235,7 @@ export default function DashBoard(props) {
                 )}
                 columnMenu={ColumnMenu}
                 width={100}
-                cell={CurrencyCell}
+                cells={{ data: CurrencyCell }}
                 filter={"numeric"}
               />
             </Column>
