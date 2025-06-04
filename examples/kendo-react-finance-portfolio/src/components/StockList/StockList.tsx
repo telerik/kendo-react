@@ -109,21 +109,26 @@ export const StockList: React.FunctionComponent = () => {
             <Grid
                 className={classNames(styles["grid"])}
                 data={processed}
-                selectedField="selected"
+                autoProcessData={true}
+                selectable={{
+                    enabled: true,
+                    mode: 'single'
+                }}
+                defaultSelect={{ 2: true }}
                 onSelectionChange={handleSelectionChange}
                 onRowClick={handleRowClick}
             >
-                <GridColumn field="selected" headerCell={_ => null} cell={CheckboxCell} width={40} />
+                <GridColumn field="selected" cells={{ headerCell: _ => null, data: CheckboxCell }} width={40} />
                 <GridColumn field="symbol" title="Symbol" className={styles['symbol-cell']} width={75} />
                 <GridColumn field="name" title="Name" className={styles['name-cell']} width={195} />
-                <GridColumn field="price" title="Price" className={styles['price-cell']} cell={PriceCell} headerCell={PriceHeaderCell} width={80} />
-                <GridColumn field="day_change" title="Change" cell={ChangeCell} width={80} />
-                <GridColumn field="change_pct" title="% Change" cell={ChangeCell} width={90} />
-                <GridColumn field="volume" title="Volume" cell={NumberCell} width={80} />
-                <GridColumn field="volume_avg" title="Avg Vol" cell={NumberCell} headerCell={AvgVolumeHeaderCell} width={90} />
-                <GridColumn field="market_cap" title="Market Cap" cell={NumberCell} width={102} />
-                <GridColumn field="pe" title="PE Ratio (TTM)" headerCell={PERatioHeaderCell} width={80} />
-                <GridColumn cell={chartCell} title='1 Day Chart' width={200} />
+                <GridColumn field="price" title="Price" className={styles['price-cell']} cells={{ data: PriceCell, headerCell: PriceHeaderCell }} width={80} />
+                <GridColumn field="day_change" title="Change" cells={{ data: ChangeCell }} width={80} />
+                <GridColumn field="change_pct" title="% Change" cells={{ data: ChangeCell }} width={90} />
+                <GridColumn field="volume" title="Volume" cells={{ data: NumberCell }} width={80} />
+                <GridColumn field="volume_avg" title="Avg Vol" cells={{ data: NumberCell, headerCell: AvgVolumeHeaderCell }} width={90} />
+                <GridColumn field="market_cap" title="Market Cap" cells={{ data: NumberCell }} width={102} />
+                <GridColumn field="pe" title="PE Ratio (TTM)" cells={{ headerCell: PERatioHeaderCell }} width={80} />
+                <GridColumn cells={{ data: chartCell }} title='1 Day Chart' width={200} />
             </Grid>
         </>
     )
