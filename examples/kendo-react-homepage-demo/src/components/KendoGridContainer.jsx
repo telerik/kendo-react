@@ -1,11 +1,10 @@
 import React from "react";
 import { Query } from '@apollo/client/react/components';
 import { Grid, GridColumn } from '@progress/kendo-react-grid';
-import { process } from '@progress/kendo-data-query';
 import { ColumnMenu } from './ColumnMenu';
 import { DetailComponent } from './DetailComponent';
 import { StateCell } from './StateCell';
-import { АssignedTo } from './АssignedTo';
+import { Author } from './Author';
 import { LoadingPanel } from './LoadingPanel';
 
 import { getQuery } from '../queries/github';
@@ -15,17 +14,9 @@ import reactIssues from '../data/fallBackDataReact.json';
 
 
 export class KendoGridContainer extends React.Component {
-    state = {
-        skip: 0,
-        take: 10
-    }
     allLabels = [];
     uniqueLabels = [];
     initialLoad = true;
-    expandChange = (event) => {
-        event.dataItem.expanded = !event.dataItem.expanded;
-        this.forceUpdate();
-    }
 
     getOccurrence = (array, value) => {
         var count = 0;
@@ -84,10 +75,6 @@ export class KendoGridContainer extends React.Component {
                         this.allLabels = [];
 
                         gridData.map((item, index) => {
-                            if (this.initialLoad) {
-                                index === 0 ? item.expanded = true : item.expanded = false
-                                this.initialLoad = false
-                            }
                             item.node.createdAt = new Date(item.node.createdAt)
                             item.node.labels.edges.forEach(item => {
                                 this.allLabels.push({
@@ -106,20 +93,22 @@ export class KendoGridContainer extends React.Component {
                         return (
                             <React.Fragment>
                                 <Grid
-                                    data={process(gridData, this.state)}
+                                    data={gridData}
+                                    autoProcessData={true}
+                                    dataItemKey='id'
                                     sortable
                                     pageable
-                                    {...this.state}
-                                    onDataStateChange={(e) => { this.setState(e.dataState); }}
-                                    expandField="expanded"
-                                    onExpandChange={this.expandChange}
+                                    defaultSkip={0}
+                                    defaultTake={10}
                                     style={{ height: '100%', overflow: 'auto', borderInline: 0 }}
+                                    scrollable={'scrollable'}
+                                    onDetailExpandChange={(e) => { console.log(e) }}
                                     detail={(props) => <DetailComponent {...props} makeChartData={this.makeChartData} />}
                                 >
                                     <GridColumn field="node.number" title="ID" width={100} />
-                                    <GridColumn field="node.state" title="State" cell={StateCell} width={100} />
+                                    <GridColumn field="node.state" title="State" cells={{ data: StateCell }} width={100} />
                                     <GridColumn field="node.title" title="Issue" columnMenu={ColumnMenu} />
-                                    <GridColumn field="node.assignees.node" title="Assigned to" width={200} cell={АssignedTo} sortable={false} />
+                                    <GridColumn field="node.author.label" title="Author" width={200} cells={{ data: Author }} sortable={false} />
                                     <GridColumn field="node.createdAt" title="Created on" width={200} format='{0:yyyy/MM/dd hh:mm a}' filter="date" columnMenu={ColumnMenu} />
                                 </Grid>
                                 {loading && <LoadingPanel />}
