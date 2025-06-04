@@ -87,7 +87,7 @@ export default function Transactions(props: TransactionsProps) {
         title="Amount"
         width="150px"
         filter="numeric"
-        cells={{ data: (e) => GridAmountCell(e, currency) }}
+        cells={{ data: (e: any) => GridAmountCell(e, currency) }}
         columnMenu={ColumnMenu}
       />
       <GridColumn
@@ -135,7 +135,7 @@ export default function Transactions(props: TransactionsProps) {
         {grid}
       </ExcelExport>
       <GridPDFExport
-        ref={(pdfExport) => {
+        ref={(pdfExport: any) => {
           gridPDFExport = pdfExport;
         }}
       >
