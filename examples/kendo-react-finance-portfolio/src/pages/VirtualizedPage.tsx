@@ -18,7 +18,6 @@ import currencies from "cldr-numbers-full/main/es/currencies.json";
 import caGregorian from "cldr-dates-full/main/es/ca-gregorian.json";
 import dateFields from "cldr-dates-full/main/es/dateFields.json";
 
-import { process } from "@progress/kendo-data-query";
 import orders from "./data/orders.json";
 import {
   Grid,
