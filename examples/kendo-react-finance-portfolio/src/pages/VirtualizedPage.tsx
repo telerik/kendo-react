@@ -18,7 +18,6 @@ import currencies from "cldr-numbers-full/main/es/currencies.json";
 import caGregorian from "cldr-dates-full/main/es/ca-gregorian.json";
 import dateFields from "cldr-dates-full/main/es/dateFields.json";
 
-import { process } from "@progress/kendo-data-query";
 import orders from "./data/orders.json";
 import {
   Grid,
@@ -81,57 +80,11 @@ export class VirtualizedPage extends React.Component<any, any> {
   ];
   constructor(props: any) {
     super(props);
-    const dataState: any = {
-      skip: 0,
-      take: 20,
-      sort: [
-        { field: 'orderDate', dir: 'desc' }
-      ],
-      group: [
-        { field: 'customerID' }
-      ]
-    };
+
     this.state = {
-      dataResult: process(orders, dataState),
-      dataState: dataState,
       currentLocale: this.locales[0]
     };
   }
-
-  dataStateChange = (event: any) => {
-    this.setState({
-      dataResult: process(orders, event.dataState),
-      dataState: event.dataState
-    });
-  };
-
-  expandChange = (event: any) => {
-    const { dataItem } = event;
-    const { dataResult } = this.state;
-    const updatedState: any[] = [];
-
-    const isExpanded =
-      dataItem.expanded === undefined ? dataItem.aggregates : dataItem.expanded;
-    dataItem.expanded = !isExpanded;
-
-    dataResult.data.forEach((groupInfo: any) => {
-      const groupItems = groupInfo.items.map((item: any) => {
-        return item.employeeID === dataItem.employeeID &&
-          item.customerID === dataItem.customerID
-          ? dataItem
-          : item;
-      });
-      updatedState.push({ ...groupInfo, items: groupItems });
-    });
-
-    this.setState({
-      ...this.state,
-      dataResult: {
-        ...dataResult,
-        data: updatedState,
-      },
-    });
-  };
 
   _pdfExport: any;
   exportExcel = () => {
@@ -162,16 +115,22 @@ export class VirtualizedPage extends React.Component<any, any> {
                   <Grid
                     style={{ height: '700px' }}
                     sortable
+                    defaultSort={[
+                      { field: 'orderDate', dir: 'desc' }
+                    ]}
                     filterable
                     groupable
+                    defaultGroup={[
+                      { field: 'customerID' }
+                    ]}
                     reorderable
                     pageable={{ buttonCount: 4, pageSizes: true }}
-                    data={this.state.dataResult}
-                    {...this.state.dataState}
-                    onDataStateChange={this.dataStateChange}
+                    defaultSkip={0}
+                    defaultTake={20}
+                    data={orders}
+                    autoProcessData={true}
+                    dataItemKey="orderID"
                     detail={DetailComponent}
-                    expandField="expanded"
-                    onExpandChange={this.expandChange}
                   >
                     <GridToolbar>
                       Locale:&nbsp;&nbsp;&nbsp;
@@ -208,10 +167,7 @@ export class VirtualizedPage extends React.Component<any, any> {
                 <GridPDFExport
                   ref={(element) => { this._pdfExport = element; }}
                   margin="1cm" >
-                  {<Grid data={process(orders, {
-                        skip: this.state.dataState.skip,
-                        take: this.state.dataState.take,
-                        })} >
+                  {<Grid data={orders}>
                       <GridColumn field="customerID" width="200px" />
                       <GridColumn field="orderDate" filter="date" format="{0:D}" width="300px" />
                       <GridColumn field="shipName" width="280px" />
