@@ -28,7 +28,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "1dcc868f-dd94-4f44-a5ac-a32bf603427e"
           },
           {
             "node": {
@@ -48,14 +49,15 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "76dd982b-dd81-4a9f-8dea-74f73a9c302e"
           },
           {
             "node": {
               "title": "RFC: Extra property on field definition to pass extra metadata",
               "state": "OPEN",
               "number": 1527,
-              "body": "I'm currently adding extra properties to some graphql object field definitions, like the following:\r\n\r\n```js\r\nconst MutationType = new GraphQLObjectType({\r\n  name: 'Mutation',\r\n  fields: () => ({\r\n    AddSomething: {\r\n      // ... normal field properties\r\n      somethingElse: {},\r\n    }\r\n  }),\r\n})\r\n```\r\n\r\nAnd then using them later on via the `info` argument inside some middlewares (using [`graphql-middleware`](https://github.com/prisma/graphql-middleware/)):\r\n```js\r\nconst mutationField = info.schema.getMutationType().getFields()[info.fieldName];\r\nconsole.log(mutationField.somethingElse);\r\n```\r\n\r\nFor more details, see the following medium post: [graphql mutation arguments validation using yup](https://itnext.io/graphql-mutation-arguments-validation-with-yup-using-graphql-middleware-645822fb748)\r\n\r\n---\r\n\r\nThe thing is, this is relying on internal behavior.\r\nThe following code spreads all properties given to the field:\r\nhttps://github.com/graphql/graphql-js/blob/81719749e01f030cfb3a01a97e7e4bfc534bb08f/src/type/definition.js#L720-L724\r\n\r\nIs that something expected to not change? If yes, then no need for any other extra property or for this issue. 😄 \r\n\r\nBut if this is something that can change in future versions, I would love the possibility of having an extra field for that extra metadata.\r\n\r\nI'm available to work on adding this, if it's approved.",
+              "body": "I'm currently adding extra properties to some graphql object field definitions, like the following:\r\n\r\n```js\r\nconst MutationType = new GraphQLObjectType({\r\n  name: 'Mutation',\r\n  fields: () => ({\r\n    AddSomething: {\r\n      // ... normal field properties\r\n      somethingElse: {},\r\n    }\r\n  }),\r\n})\r\n```\r\n\r\nAnd then using them later on via the `info` argument inside some middlewares (using [`graphql-middleware`](https://github.com/prisma/graphql-middleware/)):\r\n```js\r\nconst mutationField = info.schema.getMutationType().getFields()[info.fieldName];\r\nconsole.log(mutationField.somethingElse);\r\n```\r\n\r\nFor more details, see the following medium post: [graphql mutation arguments validation using yup](https://itnext.io/graphql-mutation-arguments-validation-with-yup-using-graphql-middleware-645822fb748)\r\n\r\n---\r\n\r\nThe thing is, this is relying on internal behavior.\r\nThe following code spreads all properties given to the field:\r\nhttps://github.com/graphql/graphql-js/blob/81719749e01f030cfb3a01a97e7e4bfc534bb08f/src/type/definition.js#L720-L724\r\n\r\nIs that something expected to not change? If yes, then no need for any other extra property or for this issue. \ud83d\ude04 \r\n\r\nBut if this is something that can change in future versions, I would love the possibility of having an extra field for that extra metadata.\r\n\r\nI'm available to work on adding this, if it's approved.",
               "createdAt": "2018-09-20T13:52:40Z",
               "author": {
                 "login": "JCMais",
@@ -80,7 +82,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "422b7667-5d2e-4ad4-99db-d3d707b23a90"
           },
           {
             "node": {
@@ -100,7 +103,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "710d7bac-9cbc-443c-ba71-2b3418de27ad"
           },
           {
             "node": {
@@ -120,7 +124,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "622a40b9-87ab-4cde-bc22-0153b8a729e0"
           },
           {
             "node": {
@@ -140,7 +145,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "7b8c618c-6806-4bdf-a683-e1000df0a14e"
           },
           {
             "node": {
@@ -160,7 +166,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "45e9ce38-bab9-4365-ae2b-ceddb130ac89"
           },
           {
             "node": {
@@ -187,7 +194,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "e25a8ada-20cb-4ac5-bcdf-707191e10eb9"
           },
           {
             "node": {
@@ -207,7 +215,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "115276d7-1320-4774-8f0f-1aeb00a9b106"
           },
           {
             "node": {
@@ -227,7 +236,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "43bcaa31-6238-4977-92b2-9b18f725114f"
           },
           {
             "node": {
@@ -247,7 +257,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "3b110cad-490c-44e3-93ba-a2d93a9df462"
           },
           {
             "node": {
@@ -274,7 +285,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "5f36bdec-b673-49b6-b75e-5276774e6ae6"
           },
           {
             "node": {
@@ -294,7 +306,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "7a4a452b-c575-4996-89bf-f1ec78387bca"
           },
           {
             "node": {
@@ -321,7 +334,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "4a844830-1202-47ae-818d-e69c4ce67600"
           },
           {
             "node": {
@@ -348,7 +362,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "e95d4196-7cfc-48b6-9500-8bae72aaa03f"
           },
           {
             "node": {
@@ -375,14 +390,15 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "e2d67d5d-6a27-4b55-9e20-f24285a3b31f"
           },
           {
             "node": {
               "title": "Extending an Object Type in Code",
               "state": "CLOSED",
               "number": 1569,
-              "body": "(Posting here since haven't been able to get an answer from any other of channels. 😅)\r\n\r\nSo, using SDL you can add fields to an existing type like:\r\n\r\n```\r\nextend type Query {\r\n   extraField: Int!\r\n}\r\n```\r\n\r\nBut how can I do this in code using the built-in classes (`GraphQLObjectType`, etc)? \r\n\r\nSounds like `extendSchema` might offer a way, but it is undocumented and I'm not sure how to use it in this case.\r\n\r\nIs this supported?\r\n\r\nMy apologies in advance if I'm missing something really obvious.",
+              "body": "(Posting here since haven't been able to get an answer from any other of channels. \ud83d\ude05)\r\n\r\nSo, using SDL you can add fields to an existing type like:\r\n\r\n```\r\nextend type Query {\r\n   extraField: Int!\r\n}\r\n```\r\n\r\nBut how can I do this in code using the built-in classes (`GraphQLObjectType`, etc)? \r\n\r\nSounds like `extendSchema` might offer a way, but it is undocumented and I'm not sure how to use it in this case.\r\n\r\nIs this supported?\r\n\r\nMy apologies in advance if I'm missing something really obvious.",
               "createdAt": "2018-11-08T17:23:19Z",
               "author": {
                 "login": "ldiego08",
@@ -402,7 +418,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "b52c8ec7-23a3-4e96-a4eb-74f654782f39"
           },
           {
             "node": {
@@ -429,7 +446,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "f26f49d4-02a5-4dbf-acd7-e0862df93849"
           },
           {
             "node": {
@@ -456,14 +474,15 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "56699bd1-3d80-402b-b3ae-17992f18638d"
           },
           {
             "node": {
               "title": "Allow non-English enum name",
               "state": "CLOSED",
               "number": 1584,
-              "body": "Hi, I need use non-English enum name, but I get below error:\r\n` Names must match /^[_a-zA-Z][_a-zA-Z0-9]*$/ but \"己审核\" does not.`\r\n\r\nCan support validate for other language?",
+              "body": "Hi, I need use non-English enum name, but I get below error:\r\n` Names must match /^[_a-zA-Z][_a-zA-Z0-9]*$/ but \"\u5df1\u5ba1\u6838\" does not.`\r\n\r\nCan support validate for other language?",
               "createdAt": "2018-11-22T19:10:44Z",
               "author": {
                 "login": "s97712",
@@ -476,14 +495,15 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "5701f438-f7d4-440b-9a0a-553b9b67fed7"
           },
           {
             "node": {
               "title": "Flow errors from imported npm package in buildAstSchema",
               "state": "CLOSED",
               "number": 1586,
-              "body": "Using graphql-js version 14.0.2 and Flow version 0.87.0, Flow throws the following errors:\r\n\r\n```sh\r\nError ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ node_modules/graphql/utilities/buildASTSchema.js.flow:363:9\r\n\r\nMissing type annotation for V. V is a type parameter declared in function [1] and was implicitly\r\ninstantiated at call of keyValMap [2].\r\n\r\n     node_modules/graphql/utilities/buildASTSchema.js.flow\r\n     360│     def: ObjectTypeDefinitionNode | InterfaceTypeDefinitionNode,\r\n     361│   ) {\r\n     362│     return def.fields\r\n [2] 363│       ? keyValMap(\r\n     364│           def.fields,\r\n     365│           field => field.name.value,\r\n     366│           field => this.buildField(field),\r\n     367│         )\r\n     368│       : {};\r\n     369│   }\r\n     370│\r\n\r\n     node_modules/graphql/jsutils/keyValMap.js.flow\r\n [1]  29│ export default function keyValMap<T, V>(\r\n      30│   list: $ReadOnlyArray<T>,\r\n      31│   keyFn: (item: T) => string,\r\n      32│   valFn: (item: T) => V,\r\n      33│ ): ObjMap<V> {\r\n\r\n\r\nError ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ node_modules/graphql/utilities/buildASTSchema.js.flow:372:12\r\n\r\nMissing type annotation for V. V is a type parameter declared in function [1] and was implicitly\r\ninstantiated at call of keyValMap [2].\r\n\r\n     node_modules/graphql/utilities/buildASTSchema.js.flow\r\n     369│   }\r\n     370│\r\n     371│   _makeInputValues(values: $ReadOnlyArray<InputValueDefinitionNode>) {\r\n [2] 372│     return keyValMap(\r\n     373│       values,\r\n     374│       value => value.name.value,\r\n     375│       value => this.buildInputField(value),\r\n     376│     );\r\n     377│   }\r\n     378│\r\n     379│   _makeInterfaceDef(def: InterfaceTypeDefinitionNode) {\r\n\r\n     node_modules/graphql/jsutils/keyValMap.js.flow\r\n [1]  29│ export default function keyValMap<T, V>(\r\n      30│   list: $ReadOnlyArray<T>,\r\n      31│   keyFn: (item: T) => string,\r\n      32│   valFn: (item: T) => V,\r\n      33│ ): ObjMap<V> {\r\n\r\n\r\nError ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ node_modules/graphql/utilities/buildASTSchema.js.flow:399:9\r\n\r\nMissing type annotation for V. V is a type parameter declared in function [1] and was implicitly\r\ninstantiated at call of keyValMap [2].\r\n\r\n     node_modules/graphql/utilities/buildASTSchema.js.flow\r\n     396│\r\n     397│   _makeValueDefMap(def: EnumTypeDefinitionNode) {\r\n     398│     return def.values\r\n [2] 399│       ? keyValMap(\r\n     400│           def.values,\r\n     401│           enumValue => enumValue.name.value,\r\n     402│           enumValue => this.buildEnumValue(enumValue),\r\n     403│         )\r\n     404│       : {};\r\n     405│   }\r\n     406│\r\n\r\n     node_modules/graphql/jsutils/keyValMap.js.flow\r\n [1]  29│ export default function keyValMap<T, V>(\r\n      30│   list: $ReadOnlyArray<T>,\r\n      31│   keyFn: (item: T) => string,\r\n      32│   valFn: (item: T) => V,\r\n      33│ ): ObjMap<V> {\r\n```\r\n\r\nAs a quick fix, I've added `.*/node_modules/graphql/jsutils/keyValMap.js.flow` to my `.flowconfig`, but this is far from ideal...",
+              "body": "Using graphql-js version 14.0.2 and Flow version 0.87.0, Flow throws the following errors:\r\n\r\n```sh\r\nError \u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508 node_modules/graphql/utilities/buildASTSchema.js.flow:363:9\r\n\r\nMissing type annotation for V. V is a type parameter declared in function [1] and was implicitly\r\ninstantiated at call of keyValMap [2].\r\n\r\n     node_modules/graphql/utilities/buildASTSchema.js.flow\r\n     360\u2502     def: ObjectTypeDefinitionNode | InterfaceTypeDefinitionNode,\r\n     361\u2502   ) {\r\n     362\u2502     return def.fields\r\n [2] 363\u2502       ? keyValMap(\r\n     364\u2502           def.fields,\r\n     365\u2502           field => field.name.value,\r\n     366\u2502           field => this.buildField(field),\r\n     367\u2502         )\r\n     368\u2502       : {};\r\n     369\u2502   }\r\n     370\u2502\r\n\r\n     node_modules/graphql/jsutils/keyValMap.js.flow\r\n [1]  29\u2502 export default function keyValMap<T, V>(\r\n      30\u2502   list: $ReadOnlyArray<T>,\r\n      31\u2502   keyFn: (item: T) => string,\r\n      32\u2502   valFn: (item: T) => V,\r\n      33\u2502 ): ObjMap<V> {\r\n\r\n\r\nError \u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508 node_modules/graphql/utilities/buildASTSchema.js.flow:372:12\r\n\r\nMissing type annotation for V. V is a type parameter declared in function [1] and was implicitly\r\ninstantiated at call of keyValMap [2].\r\n\r\n     node_modules/graphql/utilities/buildASTSchema.js.flow\r\n     369\u2502   }\r\n     370\u2502\r\n     371\u2502   _makeInputValues(values: $ReadOnlyArray<InputValueDefinitionNode>) {\r\n [2] 372\u2502     return keyValMap(\r\n     373\u2502       values,\r\n     374\u2502       value => value.name.value,\r\n     375\u2502       value => this.buildInputField(value),\r\n     376\u2502     );\r\n     377\u2502   }\r\n     378\u2502\r\n     379\u2502   _makeInterfaceDef(def: InterfaceTypeDefinitionNode) {\r\n\r\n     node_modules/graphql/jsutils/keyValMap.js.flow\r\n [1]  29\u2502 export default function keyValMap<T, V>(\r\n      30\u2502   list: $ReadOnlyArray<T>,\r\n      31\u2502   keyFn: (item: T) => string,\r\n      32\u2502   valFn: (item: T) => V,\r\n      33\u2502 ): ObjMap<V> {\r\n\r\n\r\nError \u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508\u2508 node_modules/graphql/utilities/buildASTSchema.js.flow:399:9\r\n\r\nMissing type annotation for V. V is a type parameter declared in function [1] and was implicitly\r\ninstantiated at call of keyValMap [2].\r\n\r\n     node_modules/graphql/utilities/buildASTSchema.js.flow\r\n     396\u2502\r\n     397\u2502   _makeValueDefMap(def: EnumTypeDefinitionNode) {\r\n     398\u2502     return def.values\r\n [2] 399\u2502       ? keyValMap(\r\n     400\u2502           def.values,\r\n     401\u2502           enumValue => enumValue.name.value,\r\n     402\u2502           enumValue => this.buildEnumValue(enumValue),\r\n     403\u2502         )\r\n     404\u2502       : {};\r\n     405\u2502   }\r\n     406\u2502\r\n\r\n     node_modules/graphql/jsutils/keyValMap.js.flow\r\n [1]  29\u2502 export default function keyValMap<T, V>(\r\n      30\u2502   list: $ReadOnlyArray<T>,\r\n      31\u2502   keyFn: (item: T) => string,\r\n      32\u2502   valFn: (item: T) => V,\r\n      33\u2502 ): ObjMap<V> {\r\n```\r\n\r\nAs a quick fix, I've added `.*/node_modules/graphql/jsutils/keyValMap.js.flow` to my `.flowconfig`, but this is far from ideal...",
               "createdAt": "2018-11-28T10:40:06Z",
               "author": {
                 "login": "TxHawks",
@@ -496,7 +516,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "b1da2da1-0df8-4218-a3a0-93bdb8061d1d"
           },
           {
             "node": {
@@ -516,7 +537,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "c08629e0-a363-472b-9420-a1b3cb8d18bc"
           },
           {
             "node": {
@@ -536,7 +558,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "c3173bb1-acef-41ff-a712-2862aed6c6b0"
           },
           {
             "node": {
@@ -563,7 +586,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "fc57864d-6263-47b8-b02e-55be6a216013"
           },
           {
             "node": {
@@ -590,7 +614,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "e8b269cb-4ee0-402e-b16d-01bf91e38f35"
           },
           {
             "node": {
@@ -610,7 +635,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "b8827053-60ad-420d-8d67-c3bc34a51b8c"
           },
           {
             "node": {
@@ -630,7 +656,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "2f6ca080-6420-467c-95ef-e88345a2a010"
           },
           {
             "node": {
@@ -650,7 +677,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "c4ed2f59-5e82-45a8-8c85-41a878e42310"
           },
           {
             "node": {
@@ -670,14 +698,15 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "46b0f180-defa-4238-a056-8f24a5991be7"
           },
           {
             "node": {
               "title": "default field resolver",
               "state": "CLOSED",
               "number": 1630,
-              "body": "# Questions regarding how to use GraphQL\r\n\r\nWe want to keep signal strong in the GitHub issue tracker – to make sure that it remains the best place to track bugs and features that affect development.\r\n\r\nIf you have a question on how to use GraphQL, please [post it to Stack Overflow](https://stackoverflow.com/questions/ask?tags=graphql) with the tag [#graphql](https://stackoverflow.com/questions/tagged/graphql).\r\n\r\nPlease do not post general questions directly as GitHub issues. They may sit for weeks unanswered, or may be spontaneously closed without answer.\r\n\r\n# Reporting issues with GraphQL.js\r\n\r\nBefore filing a new issue, make sure an issue for your problem doesn't already exist.\r\n\r\nThe best way to get a bug fixed is to provide a *pull request* with a simplified failing test case (or better yet, include a fix).\r\n\r\n# Feature requests\r\n\r\nGraphQL.js is a reference implementation of the [GraphQL specification](https://github.com/facebook/graphql). To discuss new features which are not GraphQL.js specific and fundamentally change the way GraphQL works, open an issue against the specification.\r\n\r\n# Security bugs\r\n\r\nFacebook has a [bounty program](https://www.facebook.com/whitehat/) for the safe disclosure of security bugs. With that in mind, please do not file public issues; go through the process outlined on that page.\r\n",
+              "body": "# Questions regarding how to use GraphQL\r\n\r\nWe want to keep signal strong in the GitHub issue tracker \u2013 to make sure that it remains the best place to track bugs and features that affect development.\r\n\r\nIf you have a question on how to use GraphQL, please [post it to Stack Overflow](https://stackoverflow.com/questions/ask?tags=graphql) with the tag [#graphql](https://stackoverflow.com/questions/tagged/graphql).\r\n\r\nPlease do not post general questions directly as GitHub issues. They may sit for weeks unanswered, or may be spontaneously closed without answer.\r\n\r\n# Reporting issues with GraphQL.js\r\n\r\nBefore filing a new issue, make sure an issue for your problem doesn't already exist.\r\n\r\nThe best way to get a bug fixed is to provide a *pull request* with a simplified failing test case (or better yet, include a fix).\r\n\r\n# Feature requests\r\n\r\nGraphQL.js is a reference implementation of the [GraphQL specification](https://github.com/facebook/graphql). To discuss new features which are not GraphQL.js specific and fundamentally change the way GraphQL works, open an issue against the specification.\r\n\r\n# Security bugs\r\n\r\nFacebook has a [bounty program](https://www.facebook.com/whitehat/) for the safe disclosure of security bugs. With that in mind, please do not file public issues; go through the process outlined on that page.\r\n",
               "createdAt": "2018-12-27T09:55:07Z",
               "author": {
                 "login": "MendesKevin",
@@ -690,7 +719,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "0ae50494-9459-4d1a-b36e-51bc2e36a6da"
           },
           {
             "node": {
@@ -710,7 +740,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "fd36df5a-6c00-4217-9518-f66952ab82af"
           },
           {
             "node": {
@@ -737,7 +768,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "a82ba4ce-983e-4013-b5f3-b25ca541d83e"
           },
           {
             "node": {
@@ -757,7 +789,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "ef6dc3a1-ca94-4e53-a1c0-577895b6c538"
           },
           {
             "node": {
@@ -784,7 +817,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "f1d3e807-d8d7-4e1c-bfc7-e80031a2822f"
           },
           {
             "node": {
@@ -811,7 +845,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "50b2a450-a92f-43aa-81c6-13b9941133e6"
           },
           {
             "node": {
@@ -831,14 +866,15 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "564eea46-78f5-4c29-b0c6-75b175e8e163"
           },
           {
             "node": {
               "title": "Add tests for 'toConfig' functionality",
               "state": "OPEN",
               "number": 1674,
-              "body": "Just a reminder that I need to write a test for `toConfig` functionality but I don't mind if someone wants to help 😉 ",
+              "body": "Just a reminder that I need to write a test for `toConfig` functionality but I don't mind if someone wants to help \ud83d\ude09 ",
               "createdAt": "2019-01-18T21:27:31Z",
               "author": {
                 "login": "IvanGoncharov",
@@ -864,7 +900,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "312bb78d-e06c-4b87-b49f-c90372b685d4"
           },
           {
             "node": {
@@ -884,7 +921,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "a2fb08c0-8cad-40fd-9728-c036a944d0a7"
           },
           {
             "node": {
@@ -911,7 +949,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "611a989c-f6ff-46cb-b4e5-ca1b330cd37f"
           },
           {
             "node": {
@@ -943,7 +982,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "1f4c5dd9-ad4c-4d85-a8da-a746d3d682da"
           },
           {
             "node": {
@@ -963,7 +1003,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "01f41170-06ce-4b3c-a46c-ea7138873f07"
           },
           {
             "node": {
@@ -983,7 +1024,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "3ef840cb-0489-4e79-8122-74fcff5a6863"
           },
           {
             "node": {
@@ -1010,7 +1052,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "a017cfa9-61ff-4cf3-b2d7-f78b75dfd817"
           },
           {
             "node": {
@@ -1030,7 +1073,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "c34c2ae8-342c-4beb-886e-6e2c9778a568"
           },
           {
             "node": {
@@ -1057,7 +1101,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "99fa3134-bbff-4f77-b064-a470dd2a2461"
           },
           {
             "node": {
@@ -1084,7 +1129,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "338ece42-df58-4814-a4d5-646d3295799f"
           },
           {
             "node": {
@@ -1116,7 +1162,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "96b60294-ed30-40f3-9301-85dd0cb95bd4"
           },
           {
             "node": {
@@ -1136,7 +1183,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "ff6d1a3a-e274-4e30-9cb3-b5fb3dfd99a0"
           },
           {
             "node": {
@@ -1163,7 +1211,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "4090c470-ae44-4287-a556-27c5b1f76c58"
           },
           {
             "node": {
@@ -1190,7 +1239,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "3da9de53-5a58-480b-8429-5cedc3d8c69d"
           },
           {
             "node": {
@@ -1217,7 +1267,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "92bb3535-ce53-48df-aed7-003737247b53"
           },
           {
             "node": {
@@ -1244,7 +1295,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "5e027182-2897-4444-8cb4-dd844db6ede3"
           },
           {
             "node": {
@@ -1271,7 +1323,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "c9a69631-b7c8-48e9-9064-e439a6da5233"
           },
           {
             "node": {
@@ -1298,7 +1351,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "f87c4937-d322-4464-90a1-4487c0606645"
           },
           {
             "node": {
@@ -1325,7 +1379,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "8f892e18-2f52-4077-a45b-5b270c0fb5c9"
           },
           {
             "node": {
@@ -1352,7 +1407,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "8abe7210-a694-4662-a217-17e51d2363bd"
           },
           {
             "node": {
@@ -1379,7 +1435,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "722773a3-8b9d-4633-9e9d-65bdca60b8df"
           },
           {
             "node": {
@@ -1399,7 +1456,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "0140e4b0-6bd4-4ee8-9f1f-046b0abcb422"
           },
           {
             "node": {
@@ -1426,7 +1484,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "fd6f0089-fe50-4950-b84a-44e713b8f0a8"
           },
           {
             "node": {
@@ -1453,14 +1512,15 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "f55de6b0-7241-470b-8846-076af353708e"
           },
           {
             "node": {
               "title": "Anyone can suggest me to implement joi validation in reactjs with graphql",
               "state": "CLOSED",
               "number": 1790,
-              "body": "# Questions regarding how to use GraphQL\r\n\r\nWe want to keep signal strong in the GitHub issue tracker – to make sure that it remains the best place to track bugs and features that affect development.\r\n\r\nIf you have a question on how to use GraphQL, please [post it to Stack Overflow](https://stackoverflow.com/questions/ask?tags=graphql) with the tag [#graphql](https://stackoverflow.com/questions/tagged/graphql).\r\n\r\nPlease do not post general questions directly as GitHub issues. They may sit for weeks unanswered, or may be spontaneously closed without answer.\r\n\r\n# Reporting issues with GraphQL.js\r\n\r\nBefore filing a new issue, make sure an issue for your problem doesn't already exist.\r\n\r\nThe best way to get a bug fixed is to provide a *pull request* with a simplified failing test case (or better yet, include a fix).\r\n\r\n# Feature requests\r\n\r\nGraphQL.js is a reference implementation of the [GraphQL specification](https://github.com/facebook/graphql). To discuss new features which are not GraphQL.js specific and fundamentally change the way GraphQL works, open an issue against the specification.\r\n\r\n# Security bugs\r\n\r\nFacebook has a [bounty program](https://www.facebook.com/whitehat/) for the safe disclosure of security bugs. With that in mind, please do not file public issues; go through the process outlined on that page.\r\n",
+              "body": "# Questions regarding how to use GraphQL\r\n\r\nWe want to keep signal strong in the GitHub issue tracker \u2013 to make sure that it remains the best place to track bugs and features that affect development.\r\n\r\nIf you have a question on how to use GraphQL, please [post it to Stack Overflow](https://stackoverflow.com/questions/ask?tags=graphql) with the tag [#graphql](https://stackoverflow.com/questions/tagged/graphql).\r\n\r\nPlease do not post general questions directly as GitHub issues. They may sit for weeks unanswered, or may be spontaneously closed without answer.\r\n\r\n# Reporting issues with GraphQL.js\r\n\r\nBefore filing a new issue, make sure an issue for your problem doesn't already exist.\r\n\r\nThe best way to get a bug fixed is to provide a *pull request* with a simplified failing test case (or better yet, include a fix).\r\n\r\n# Feature requests\r\n\r\nGraphQL.js is a reference implementation of the [GraphQL specification](https://github.com/facebook/graphql). To discuss new features which are not GraphQL.js specific and fundamentally change the way GraphQL works, open an issue against the specification.\r\n\r\n# Security bugs\r\n\r\nFacebook has a [bounty program](https://www.facebook.com/whitehat/) for the safe disclosure of security bugs. With that in mind, please do not file public issues; go through the process outlined on that page.\r\n",
               "createdAt": "2019-03-13T05:06:41Z",
               "author": {
                 "login": "ankitpatelinitio",
@@ -1480,7 +1540,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "d6ef6d66-11a9-4d5e-9e22-d24c94c19c90"
           },
           {
             "node": {
@@ -1507,7 +1568,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "2990afc2-dabe-4f80-9d1c-36b602d85889"
           },
           {
             "node": {
@@ -1534,7 +1596,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "46a006ca-42a9-4175-b357-abc77f7a1368"
           },
           {
             "node": {
@@ -1559,7 +1622,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "6d07f132-cf7f-405b-8de6-09e49da7fea5"
           },
           {
             "node": {
@@ -1586,7 +1650,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "4f768150-e767-4acf-8246-3197c009aa14"
           },
           {
             "node": {
@@ -1613,7 +1678,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "d20545ba-1872-4431-9cef-49d239581ab8"
           },
           {
             "node": {
@@ -1640,7 +1706,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "42ad6bbe-250b-4d46-85c4-7fd137ac8235"
           },
           {
             "node": {
@@ -1667,14 +1734,15 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "4541d7df-f2ba-41b0-b4b5-ffd71a555d75"
           },
           {
             "node": {
               "title": "Convert arbitrary scalar values into ASTs and back",
               "state": "OPEN",
               "number": 1817,
-              "body": "# Reporting issues with GraphQL.js\r\n\r\nThis issue is related to: https://github.com/graphql/graphql-js/issues/1815\r\n\r\n## Expected: \r\n- Successfully convert arbitrary scalars (including default values) to ASTs\r\n- Convert ASTs into dedicated values \r\n\r\n## Code:\r\n\r\n```javascript\r\nconst {\r\n  makeExecutableSchema,\r\n} = require('graphql-tools')\r\n\r\nconst {\r\n  astFromValue,\r\n  valueFromAST,\r\n  isValidJSValue\r\n} = require('graphql/utilities')\r\n\r\nconst {\r\n  GraphQLScalarType\r\n} = require('graphql')\r\n\r\n\r\nconst JsonScalarType = new GraphQLScalarType({\r\n  name: 'JSON',\r\n  serialize: (value) => value,\r\n});\r\n\r\nconst resolveFunctions = {\r\n  JSON: JsonScalarType\r\n};\r\n\r\nconst typeDefs = `\r\n  scalar JSON\r\n  input Message {\r\n    extra: JSON\r\n    meta: JSON = {}\r\n  }\r\n`\r\n\r\nconst schema = makeExecutableSchema({\r\n  typeDefs,\r\n  resolvers: resolveFunctions\r\n})\r\n\r\nconst messageType = schema.getType('Message')\r\n\r\nconst value = {\r\n  extra: {\r\n    'key': 'andy',\r\n    \"kafka.producer.batch\": 0\r\n  }\r\n}\r\n\r\n// check if there's any error in our value\r\nconst errors = isValidJSValue(value, messageType)\r\n// errors will contain detail errors if any\r\nconsole.log(`Valid: ${errors.length==0}`)\r\n\r\n// parse and get value \r\nconst ast = astFromValue(value, messageType)\r\nconst conf = valueFromAST(ast, messageType)\r\n```\r\n\r\n## Result\r\n\r\n```sh\r\n$ npm start                                                                                                              master ✱ ◼\r\n\r\n> gql@1.0.0 start /Users/andy/Works/gql\r\n> babel-node --presets es2015 run.js\r\n\r\nValid: true\r\n/Users/andy/Works/gql/node_modules/graphql/utilities/astFromValue.js:130\r\n          throw _iteratorError;\r\n          ^\r\n\r\nTypeError: Cannot convert value to AST: { key: \"andy\", kafka.producer.batch: 0 }\r\n    at astFromValue (/Users/andy/Works/gql/node_modules/graphql/utilities/astFromValue.js:193:11)\r\n    at astFromValue (/Users/andy/Works/gql/node_modules/graphql/utilities/astFromValue.js:107:26)\r\n```\r\n\r\n## Solution\r\n\r\nI have to patch `astFromValue`: https://github.com/graphql/graphql-js/blob/8aef229cb2/src/utilities/astFromValue.js#L139-L140 by adding following lines before L139\r\n\r\n```javascript\r\n\r\nif (typeof serialized === 'object' ){\r\n    return {\r\n      kind: _kinds.Kind.OBJECT,\r\n      value: serialized\r\n    };\r\n}\r\n```\r\n\r\n## Question\r\n\r\nThe solution above may not be adequate. Would you please tell me it's worth to make a RP against this issue and how to properly resolve it?",
+              "body": "# Reporting issues with GraphQL.js\r\n\r\nThis issue is related to: https://github.com/graphql/graphql-js/issues/1815\r\n\r\n## Expected: \r\n- Successfully convert arbitrary scalars (including default values) to ASTs\r\n- Convert ASTs into dedicated values \r\n\r\n## Code:\r\n\r\n```javascript\r\nconst {\r\n  makeExecutableSchema,\r\n} = require('graphql-tools')\r\n\r\nconst {\r\n  astFromValue,\r\n  valueFromAST,\r\n  isValidJSValue\r\n} = require('graphql/utilities')\r\n\r\nconst {\r\n  GraphQLScalarType\r\n} = require('graphql')\r\n\r\n\r\nconst JsonScalarType = new GraphQLScalarType({\r\n  name: 'JSON',\r\n  serialize: (value) => value,\r\n});\r\n\r\nconst resolveFunctions = {\r\n  JSON: JsonScalarType\r\n};\r\n\r\nconst typeDefs = `\r\n  scalar JSON\r\n  input Message {\r\n    extra: JSON\r\n    meta: JSON = {}\r\n  }\r\n`\r\n\r\nconst schema = makeExecutableSchema({\r\n  typeDefs,\r\n  resolvers: resolveFunctions\r\n})\r\n\r\nconst messageType = schema.getType('Message')\r\n\r\nconst value = {\r\n  extra: {\r\n    'key': 'andy',\r\n    \"kafka.producer.batch\": 0\r\n  }\r\n}\r\n\r\n// check if there's any error in our value\r\nconst errors = isValidJSValue(value, messageType)\r\n// errors will contain detail errors if any\r\nconsole.log(`Valid: ${errors.length==0}`)\r\n\r\n// parse and get value \r\nconst ast = astFromValue(value, messageType)\r\nconst conf = valueFromAST(ast, messageType)\r\n```\r\n\r\n## Result\r\n\r\n```sh\r\n$ npm start                                                                                                              master \u2731 \u25fc\r\n\r\n> gql@1.0.0 start /Users/andy/Works/gql\r\n> babel-node --presets es2015 run.js\r\n\r\nValid: true\r\n/Users/andy/Works/gql/node_modules/graphql/utilities/astFromValue.js:130\r\n          throw _iteratorError;\r\n          ^\r\n\r\nTypeError: Cannot convert value to AST: { key: \"andy\", kafka.producer.batch: 0 }\r\n    at astFromValue (/Users/andy/Works/gql/node_modules/graphql/utilities/astFromValue.js:193:11)\r\n    at astFromValue (/Users/andy/Works/gql/node_modules/graphql/utilities/astFromValue.js:107:26)\r\n```\r\n\r\n## Solution\r\n\r\nI have to patch `astFromValue`: https://github.com/graphql/graphql-js/blob/8aef229cb2/src/utilities/astFromValue.js#L139-L140 by adding following lines before L139\r\n\r\n```javascript\r\n\r\nif (typeof serialized === 'object' ){\r\n    return {\r\n      kind: _kinds.Kind.OBJECT,\r\n      value: serialized\r\n    };\r\n}\r\n```\r\n\r\n## Question\r\n\r\nThe solution above may not be adequate. Would you please tell me it's worth to make a RP against this issue and how to properly resolve it?",
               "createdAt": "2019-04-08T14:54:38Z",
               "author": {
                 "login": "anhldbk",
@@ -1694,7 +1762,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "498ce604-6fc0-462a-bd88-938d3d60fabd"
           },
           {
             "node": {
@@ -1721,7 +1790,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "c2fdeaff-56af-40ef-9c5c-65200dca1d10"
           },
           {
             "node": {
@@ -1753,7 +1823,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "053846dd-7ac4-442a-a6c7-03632c9f142e"
           },
           {
             "node": {
@@ -1773,7 +1844,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "bcb5d60b-5a95-42f6-9d10-a7edb48c84f1"
           },
           {
             "node": {
@@ -1800,7 +1872,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "6ee3c893-5ef6-4085-9b07-68ab6e49ab4e"
           },
           {
             "node": {
@@ -1827,14 +1900,15 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "c0e05809-e426-45cb-861d-2094c524078c"
           },
           {
             "node": {
               "title": "Handlers for custom directives",
               "state": "OPEN",
               "number": 1854,
-              "body": "Hi. Seems that there is no way to handle custom directives. This issue was created at @IvanGoncharov's [request](https://github.com/graphql/graphql-js/issues/41#issuecomment-490044071).\r\n<br><br>\r\n\r\nI use [graphql-faker](https://github.com/APIs-guru/graphql-faker) to define schemas with fake data. Frontend developers feel really great with it, cause it consists of easy-to-run-graphql-server and there is no need in heavy backend, databases, etc.\r\n\r\n```bash\r\n$ graphql-faker --open ./schema.graphql \r\n```\r\n\r\nTo fake data, schema must contain some additional directives: `@fake(…)` and `@examples(…)`. They describe the true nature of entities: names, emails, phone numbers, …\r\n\r\n```graphql\r\ntype Query {\r\n  hello: String!  @fake(type: firstName)\r\n}\r\n```\r\n\r\nAs a GraphQL API developer, I write the following code:\r\n\r\n```js\r\nimport { graphql, buildSchema } from 'graphql'\r\n\r\nconst schema = buildSchema(fs.readFileSync('./schema.graphql', 'utf8'))\r\n\r\napp.use('/graphql', graphqlHTTP({ schema, rootValue }))\r\n```\r\n\r\nAnd I want the graphql parser just to ignore those `@fake` and `@examples` directives, and have a single `schema.graphql` file both for graphql-faker, and for my graphql API.\r\n\r\nAs a bypass I wrote a regex, though it's not reliable (context-grammar, braces, quotes, all that stuff). The better way is to resolve custom directives after grammar parsing, and custom directives handlers could help here.",
+              "body": "Hi. Seems that there is no way to handle custom directives. This issue was created at @IvanGoncharov's [request](https://github.com/graphql/graphql-js/issues/41#issuecomment-490044071).\r\n<br><br>\r\n\r\nI use [graphql-faker](https://github.com/APIs-guru/graphql-faker) to define schemas with fake data. Frontend developers feel really great with it, cause it consists of easy-to-run-graphql-server and there is no need in heavy backend, databases, etc.\r\n\r\n```bash\r\n$ graphql-faker --open ./schema.graphql \r\n```\r\n\r\nTo fake data, schema must contain some additional directives: `@fake(\u2026)` and `@examples(\u2026)`. They describe the true nature of entities: names, emails, phone numbers, \u2026\r\n\r\n```graphql\r\ntype Query {\r\n  hello: String!  @fake(type: firstName)\r\n}\r\n```\r\n\r\nAs a GraphQL API developer, I write the following code:\r\n\r\n```js\r\nimport { graphql, buildSchema } from 'graphql'\r\n\r\nconst schema = buildSchema(fs.readFileSync('./schema.graphql', 'utf8'))\r\n\r\napp.use('/graphql', graphqlHTTP({ schema, rootValue }))\r\n```\r\n\r\nAnd I want the graphql parser just to ignore those `@fake` and `@examples` directives, and have a single `schema.graphql` file both for graphql-faker, and for my graphql API.\r\n\r\nAs a bypass I wrote a regex, though it's not reliable (context-grammar, braces, quotes, all that stuff). The better way is to resolve custom directives after grammar parsing, and custom directives handlers could help here.",
               "createdAt": "2019-05-07T19:43:41Z",
               "author": {
                 "login": "xamgore",
@@ -1854,7 +1928,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "8ef848d0-c319-46a9-b5cd-9684dba5d652"
           },
           {
             "node": {
@@ -1881,7 +1956,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "594375f7-baa4-4f51-b779-0611c01a4a4d"
           },
           {
             "node": {
@@ -1908,7 +1984,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "2e57ba23-7e89-4241-9f66-9ca7a5a6bed5"
           },
           {
             "node": {
@@ -1935,7 +2012,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "fd3071d5-11ee-4fc3-877e-973e1b739ec5"
           },
           {
             "node": {
@@ -1955,7 +2033,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "c96d4674-a02c-4c1c-be43-7ce366b1dd6d"
           },
           {
             "node": {
@@ -1982,7 +2061,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "8358cab7-96f0-4b64-8c96-7a48e94bcf96"
           },
           {
             "node": {
@@ -2009,7 +2089,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "e5e4f876-c032-4909-85a6-5f8ddb1c0e5c"
           },
           {
             "node": {
@@ -2029,7 +2110,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "0c4f6bff-d8b2-4230-90a4-e25940957b80"
           },
           {
             "node": {
@@ -2056,7 +2138,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "43362651-ed57-4de7-b8ab-b3c82c8081ba"
           },
           {
             "node": {
@@ -2076,7 +2159,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "1ccbb2ef-7c22-4327-aaec-e4cc75f9e10e"
           },
           {
             "node": {
@@ -2096,7 +2180,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "e425e4b8-a9e1-4255-82b1-e5b2c4ddd214"
           },
           {
             "node": {
@@ -2123,7 +2208,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "7d6b11e0-38c0-4866-a378-8321efbe6db9"
           },
           {
             "node": {
@@ -2150,7 +2236,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "5849bbc4-4b7a-43da-8cec-ab9c7f9e5cd5"
           },
           {
             "node": {
@@ -2177,7 +2264,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "55821a51-f865-4e2f-9212-18b65537b8cb"
           },
           {
             "node": {
@@ -2204,7 +2292,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "d3146607-2cdf-4f9f-9c71-4503f4ff95f7"
           },
           {
             "node": {
@@ -2231,7 +2320,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "8a85a6d1-22ba-4191-98f4-961248c3f93c"
           },
           {
             "node": {
@@ -2258,7 +2348,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "6a1778ad-e67d-4bcb-9884-cfaa84f68d7d"
           },
           {
             "node": {
@@ -2285,14 +2376,15 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "9678b964-2f33-4840-a642-41f61ce2d27f"
           },
           {
             "node": {
               "title": "Why is GraphQLObjectType not a constructor? ",
               "state": "CLOSED",
               "number": 2012,
-              "body": "Is my code even valid??? Because the terminal says that GraphQLObjectType is not a constructor. What in the world just happened??? \r\n\r\nmy code: \r\n<img width=\"727\" alt=\"Screen Shot 2019-07-04 at 10 32 48 AM\" src=\"https://user-images.githubusercontent.com/34760070/60635946-24df6e80-9e47-11e9-99df-f38af7288932.png\">\r\n\r\nerror: \r\n<img width=\"760\" alt=\"Screen Shot 2019-07-04 at 10 34 23 AM\" src=\"https://user-images.githubusercontent.com/34760070/60636003-5ce6b180-9e47-11e9-94cc-3a0699db0436.png\">\r\n\r\n_**can anybody tell me how to solve this ↑↑↑↑?**_",
+              "body": "Is my code even valid??? Because the terminal says that GraphQLObjectType is not a constructor. What in the world just happened??? \r\n\r\nmy code: \r\n<img width=\"727\" alt=\"Screen Shot 2019-07-04 at 10 32 48 AM\" src=\"https://user-images.githubusercontent.com/34760070/60635946-24df6e80-9e47-11e9-99df-f38af7288932.png\">\r\n\r\nerror: \r\n<img width=\"760\" alt=\"Screen Shot 2019-07-04 at 10 34 23 AM\" src=\"https://user-images.githubusercontent.com/34760070/60636003-5ce6b180-9e47-11e9-94cc-3a0699db0436.png\">\r\n\r\n_**can anybody tell me how to solve this \u2191\u2191\u2191\u2191?**_",
               "createdAt": "2019-07-04T02:39:22Z",
               "author": {
                 "login": "boblamceo",
@@ -2312,7 +2404,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "947d57d1-8842-45b4-b60b-94905faf4e2c"
           },
           {
             "node": {
@@ -2332,14 +2425,15 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "dfab847a-2e5e-4e5e-a6c9-a6149294e157"
           },
           {
             "node": {
               "title": "Custom error obejct properties are not propagated to `originalError` from a rejected promise",
               "state": "CLOSED",
               "number": 2018,
-              "body": "In https://github.com/graphql/graphql-js/issues/251, we added `originalError` to be able to look at the original error object and read stuff from it.\r\n\r\nGreat! Inside of `formatError`, I want to be able to see a custom property on the original error object.\r\n\r\n### works (regular synchronous `Error`):\r\n\r\n```js\r\nconst resolvers = {\r\n  foo: () => {\r\n    try {\r\n      throw new Error('yikes!');\r\n    } catch (e) {\r\n      e.foo = \"bar\";\r\n      throw e;\r\n    }\r\n  }\r\n};\r\n\r\nformatError: e => {\r\n  console.log(\"originalError\", e.originalError.foo); // logs 'bar'\r\n  return e;\r\n}\r\n```\r\n\r\n\r\n\r\n### does _not_ work (async `Promise.reject`):\r\n\r\n```js\r\nconst resolvers = {\r\n  foo: async () => {\r\n    try {\r\n      await Promise.reject(\"yikes!\");\r\n    } catch (e) {\r\n      e.foo = \"bar\";\r\n      throw e;\r\n    }\r\n  }\r\n};\r\n\r\nformatError: e => {\r\n  console.log(\"originalError\", e.originalError.foo); // logs 'undefined'\r\n  return e;\r\n}\r\n```\r\n\r\n**Repro**: https://codesandbox.io/embed/nodejs-graphql-server-xo0vh\r\n\r\nNot sure if this is intended, or if this is to do with there being some difference between an error object and a rejected promise, but we seem to treat rejected promises and synchronous errors the same elsewhere 🤔 \r\n\r\nThoughts?\r\n\r\nThanks!!",
+              "body": "In https://github.com/graphql/graphql-js/issues/251, we added `originalError` to be able to look at the original error object and read stuff from it.\r\n\r\nGreat! Inside of `formatError`, I want to be able to see a custom property on the original error object.\r\n\r\n### works (regular synchronous `Error`):\r\n\r\n```js\r\nconst resolvers = {\r\n  foo: () => {\r\n    try {\r\n      throw new Error('yikes!');\r\n    } catch (e) {\r\n      e.foo = \"bar\";\r\n      throw e;\r\n    }\r\n  }\r\n};\r\n\r\nformatError: e => {\r\n  console.log(\"originalError\", e.originalError.foo); // logs 'bar'\r\n  return e;\r\n}\r\n```\r\n\r\n\r\n\r\n### does _not_ work (async `Promise.reject`):\r\n\r\n```js\r\nconst resolvers = {\r\n  foo: async () => {\r\n    try {\r\n      await Promise.reject(\"yikes!\");\r\n    } catch (e) {\r\n      e.foo = \"bar\";\r\n      throw e;\r\n    }\r\n  }\r\n};\r\n\r\nformatError: e => {\r\n  console.log(\"originalError\", e.originalError.foo); // logs 'undefined'\r\n  return e;\r\n}\r\n```\r\n\r\n**Repro**: https://codesandbox.io/embed/nodejs-graphql-server-xo0vh\r\n\r\nNot sure if this is intended, or if this is to do with there being some difference between an error object and a rejected promise, but we seem to treat rejected promises and synchronous errors the same elsewhere \ud83e\udd14 \r\n\r\nThoughts?\r\n\r\nThanks!!",
               "createdAt": "2019-07-05T22:40:35Z",
               "author": {
                 "login": "magicmark",
@@ -2359,7 +2453,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "2e612613-007d-406d-86b5-1b00c273bced"
           },
           {
             "node": {
@@ -2386,7 +2481,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "4446f4de-5efa-4551-9921-e58096227a76"
           },
           {
             "node": {
@@ -2413,7 +2509,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "14d81783-836f-4242-8f79-6ee96a9474c4"
           },
           {
             "node": {
@@ -2440,7 +2537,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "9cb00a05-34b6-4ab9-9949-8e60ed00d3d4"
           },
           {
             "node": {
@@ -2460,7 +2558,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "f24e5e32-3545-4ba7-a25b-51e2c8e2fdff"
           },
           {
             "node": {
@@ -2480,7 +2579,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "2259e90b-3d63-4d03-be48-bc90a18277d2"
           }
         ]
       }

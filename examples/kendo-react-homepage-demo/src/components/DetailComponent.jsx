@@ -16,7 +16,6 @@ export class DetailComponent extends React.Component {
     render() {
         const dataItem = this.props.dataItem;
         const data = this.props.makeChartData(dataItem.node.labels.edges);
-
         const defaultTooltipRender = (item) => {
             if (item.point) {
                 return (`${item.point.category} : ${item.point.value}`)
@@ -25,7 +24,7 @@ export class DetailComponent extends React.Component {
         };
 
         return (
-            <div style={{ padding: 0 }}>
+            <div key={dataItem.node.number} style={{ padding: 0 }}>
                 <div className="row" style={{ height: 300 }}>
                     <div className="col-2" >
                         <strong>Author: {dataItem.node.author.login}</strong>

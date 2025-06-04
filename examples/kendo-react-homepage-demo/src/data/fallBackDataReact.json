@@ -5,10 +5,10 @@
         "edges": [
           {
             "node": {
-              "title": "Fragment will throw an error during unmount if it’s content is edited outside react",
+              "title": "Fragment will throw an error during unmount if it\u2019s content is edited outside react",
               "state": "OPEN",
               "number": 15985,
-              "body": "**Do you want to request a *feature* or report a *bug*?**\r\nBug\r\n\r\n**What is the current behavior?**\r\nIf direct child node of fragment was replaced by other node not created by react — react will throw `Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.` when Fragment will be unmounted\r\n\r\n**Smallest reproduction case:**\r\nhttps://codesandbox.io/s/react-replace-element-fragment-error-0rkqw\r\nSecond and fourth buttons will produce error on second click.\r\nWhat’s strange that if you’ll delete the content in fragment in content editable div (button 5) — it will not throw error.\r\n\r\n**What is the expected behavior?**\r\nReact not throwing error. Maybe warning?\r\nWhy? because any browser extension in any browser can replace any node and this will lead to broken application.\r\nOtherwise documentation should be improved and state clearly that fragment is unsafe to use if there is a chance of third party DOM modification. (I understand why it is happening in the first place, but not agree that it should).\r\nAlso it would be great to include DOM path into original error if possible, because for example we create captured this error using sentry and it is unclear where it is happening and it’s quite hard to improve the situation.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n16.8.3, no, I think it was broken all along",
+              "body": "**Do you want to request a *feature* or report a *bug*?**\r\nBug\r\n\r\n**What is the current behavior?**\r\nIf direct child node of fragment was replaced by other node not created by react \u2014 react will throw `Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.` when Fragment will be unmounted\r\n\r\n**Smallest reproduction case:**\r\nhttps://codesandbox.io/s/react-replace-element-fragment-error-0rkqw\r\nSecond and fourth buttons will produce error on second click.\r\nWhat\u2019s strange that if you\u2019ll delete the content in fragment in content editable div (button 5) \u2014\u00a0it will not throw error.\r\n\r\n**What is the expected behavior?**\r\nReact not throwing error. Maybe warning?\r\nWhy? because any browser extension in any browser can replace any node and this will lead to broken application.\r\nOtherwise documentation should be improved and state clearly that fragment is unsafe to use if there is a chance of third party DOM modification. (I understand why it is happening in the first place, but not agree that it should).\r\nAlso it would be great to include DOM path into original error if possible, because for example we create captured this error using sentry and it is unclear where it is happening and it\u2019s quite hard to improve the situation.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n16.8.3, no, I think it was broken all along",
               "createdAt": "2019-06-25T12:25:40Z",
               "author": {
                 "login": "wwwsevolod",
@@ -21,7 +21,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "ebfe1901-6a05-463d-b7db-062be762b7c5"
           },
           {
             "node": {
@@ -41,7 +42,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "0a558536-bed7-43e6-8e39-b603bf6c5edb"
           },
           {
             "node": {
@@ -74,7 +76,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "1b6655ba-218e-4b67-9478-1f5930818694"
           },
           {
             "node": {
@@ -107,7 +110,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "801dda61-ae49-46b0-8990-b454013c8e42"
           },
           {
             "node": {
@@ -127,7 +131,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "17e64588-8564-4f1c-bd8c-598d3c236036"
           },
           {
             "node": {
@@ -147,7 +152,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "ae2ec9a7-56ef-4ac3-a5f3-c61877138274"
           },
           {
             "node": {
@@ -167,7 +173,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "fb620158-4f35-4b3b-8141-932b5357651b"
           },
           {
             "node": {
@@ -187,7 +194,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "c01dd53f-28b9-4280-b32b-4aa42ba3a96f"
           },
           {
             "node": {
@@ -207,7 +215,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "c635a00e-6451-4ef2-97a5-946862990f7b"
           },
           {
             "node": {
@@ -240,7 +249,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "9a2a6e3b-82e8-48d7-86d1-eae64770b4ee"
           },
           {
             "node": {
@@ -260,7 +270,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "a3f0ac8f-86c6-4f9f-89a7-b6222cbd1fc9"
           },
           {
             "node": {
@@ -280,14 +291,15 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "5b2bb3d7-c3d8-415a-94ab-eaa00193c750"
           },
           {
             "node": {
               "title": "[Flare] Rethinking Focus",
               "state": "OPEN",
               "number": 16009,
-              "body": "I think we need to rethink how focus works in React. React Flare is the perfection opportunity to allow us to do this, so here are some of my thoughts. None of these ideas wouldn't be possible if it weren't for the great ideas from @sebmarkbage, @devongovett and @necolas have had. Furthermore, the discussions in https://github.com/facebook/react/pull/16000, https://github.com/facebook/react/pull/15848 and https://github.com/facebook/react/pull/15849 got me thinking on a better system.\r\n\r\n## Focus is a mess on the DOM, so let's not use the DOM\r\n\r\nFocusing on the DOM is a mess today. We couple ideas around ideas around things like `tabIndex` and whether a specific browser treats something as focusable. This is very much a hard-coded disaster where no one really agrees on a good formula for success. Not to mention, that this just doesn't translate well for a declarative UI. How does one tab to a specific node that isn't focusable? How does one use keyboard arrows to navigate a table using keyboard arrows?\r\n\r\nThen there's implementation. Without relying on an attribute on an element or a `ref`, it's very hard to say: \"Hey look, let's focus to this node, given this criteria\". Not to mention the performance overhead of doing this: querying or \"collecting\" focusable elements is an expensive O(n) task, which doesn't scale for large applications well. I noticed that wrapping the an internal large app with `<FocusScope>` and then collecting all focusable nodes took over 850ms on Android using Chrome. Querying the DOM nodes took even longer.\r\n\r\nLastly, we can't use the DOM with React Native and the story for handling focus with React Flare is important. If we instead had a React system for handling focus, then both the web and RN would be consistent and performant.\r\n\r\n## Accessible components\r\n\r\nWe already have the `<Focus>` and `<FocusScope>` event components. We could extend on React Flare and introduce a way of layering accessibility logic on to host components. In this I introduce a new API called `createAccessibleComponent`, but really it could be anything – ignore the naming! This is purely hypothetical discussion for now.\r\n\r\n```jsx\r\n// input is not focusable\r\n<FocusScope>\r\n  <input type=\"text\" placeholder=\"Enter your username\" /> \r\n</FocusScope>\r\n\r\nconst FocusableInput = ReactDOM.createAccessibleComponent((props, focusable) => {\r\n  return <input tabIndex={focusable ? 0 : -1} {...props} />;\r\n});\r\n\r\n// now it's focusable\r\n<FocusScope>\r\n  <FocusableInput\r\n    type=\"text\"\r\n    placeholder=\"Enter your username\"\r\n    focusable={true}\r\n  />\r\n</FocusScope>\r\n```\r\n\r\nIf you don't use a `FocusScope`, then the normal DOM behaviour will continue to work as expected. `FocusScope` will only care about these new types of accessible component.\r\n\r\n## The focus manager should be encapsulated and relative to `FocusScope`\r\n\r\nIn order for focus management to be powerful, it needs to be baked into React. Event responders like `FocusScope` can let the manager know what scope it should be interacting with given a particular `<Focus>` that focuses occur in. `FocusScope` will also fully override the browser tabbing behaviour (like it does now) to ensure tabbing works as expected:\r\n\r\n```jsx\r\nimport { focusManager } from 'react-events/focus';\r\n\r\nfocusManager.getFocusedNode();\r\nfocusManager.getFocusedId();\r\nfocusManager.focusFirst(isRTL?: boolean = false);\r\nfocusManager.focusLast(isRTL?: boolean = false);\r\nfocusManager.focusPrevious(fromId?: string, isRTL?: boolean = false);\r\nfocusManager.focusNext(fromId?: string, isRTL?: boolean = false, );\r\nfocusManager.focusById(id: string);\r\n\r\nconst FocusableDiv = ReactDOM.createAccessibleComponent((props, focusable) => {\r\n  return <div tabIndex={focusable ? 0 : -1} {...props} />;\r\n});\r\n\r\n<FocusScope onMount={() => focusManager.focusFirst()}>\r\n  <FocusableDiv focusable={true} />\r\n  <FocusableDiv focusable={true} />\r\n  <div tabIndex={0}>You can't focus this</div>\r\n</FocusScope>\r\n```\r\n\r\nFocusing by `focusId` will propagate until an `focusId` is found. So this would matter for cases such:\r\n\r\n```jsx\r\nconst FocusableDiv = ReactDOM.createAccessibleComponent((props, focusable, focusId) => {\r\n  return <div tabIndex={focusable ? 0 : -1} {...props} />;\r\n});\r\n\r\n<FocusScope>\r\n  <FocusableDiv focusable={true} focusId=\"focus-me\" />\r\n  <FocusScope>\r\n    <FocusableDiv focusable={true} focusId=\"focus-me\" />\r\n  </FocusScope>\r\n</FocusScope>\r\n```\r\n\r\nIf `focusManager.focusById('focus-me);` was used on the inner `FocusScope`, it would focus the inner button. If used on the outer `FocusScope`, it would focus the outer button. If the outer `FocusScope` didn't have an id that matched, then it would propagate the lookup to the inner `FocusScope`.\r\n\r\nDoing this, it makes it possible to apply keyboard navigation:\r\n\r\n```jsx\r\nfunction handleKeyPress(key) {\r\n  if (isValidArrowKey(key)) {\r\n    const currentId = focusManager.getFocusedId();\r\n    const nextId = findNextId(currentId, key);\r\n    focusManager.focusById(nextId);\r\n  }\r\n}\r\n<FocusScope onKeyPress={handleKeyPress}>\r\n  <FocousableCell focusable={true} focusId=\"AA\" />\r\n  <FocousableCell focusable={true} focusId=\"AB\" />\r\n  <FocousableCell focusable={true} focusId=\"AC\" />\r\n  <FocousableCell focusable={true} focusId=\"BA\" />\r\n  <FocousableCell focusable={true} focusId=\"BB\" />\r\n  <FocousableCell focusable={true} focusId=\"BC\" />\r\n  <FocousableCell focusable={true} focusId=\"CA\" />\r\n  <FocousableCell focusable={true} focusId=\"CB\" />\r\n  <FocousableCell focusable={true} focusId=\"CC\" />\r\n</FocusScope>\r\n```\r\n\r\nFurthermore, `<FocusScope>`s can also have `focusId`s that allows you to move focus to a specific scope. That particular event component can then act upon receiving focus `<FocusScope onFocus={...}>`.\r\n\r\n## It can simplify `<Focus>`\r\n\r\n```jsx\r\n<Focus onFocus={...}>\r\n  <div>\r\n    <FocusableDiv focusable={true} />\r\n  </div>\r\n</Focus>\r\n```\r\n\r\nBefore, focus would only be of the direct child of the `<Focus>` component. This made it somewhat problematic when you wanted to find the focusable element that was not a direct child. Focus no longer needs to be coupled with \"bubbling up\" through the DOM, but rather it bubbles from accessible component to event components. So doing this, will still result in the nearest focusable child being passed to the `Focus`:\r\n\r\n```jsx\r\n<Focus onFocus={...}>\r\n  <div>\r\n    <FocusableDiv focusable={true}>\r\n      <FocusableDiv focusable={true} />\r\n    </FocusableDiv>\r\n  </div>\r\n</Focus>\r\n```\r\n\r\n## This can be fast too\r\n\r\nIn terms of performance, we can actually fast-path how this all works because we're no longer using the DOM, but event components within the Flare event system. We'd have optimized data collections that ensure that the least possible time is taken traversing focusable elements by leveraging a separate internal data structure that is separate from the Fiber and DOM structures. The cost is that this will take additional memory and time to construct when a focus scope gets mounted/unmounted. Given this shouldn't be a rapid event, it's worth the trade-off.\r\n\r\nAlso, given we're not wrapping `FocusScope` with a context provider (as mentioned in the FocusManager PR), which should get improved performance from not needing to do context lookups and traversals.\r\n\r\n## `Focus` and `FocusScope`, `focusManager`\r\n\r\nGiven that they now share underlying implementation details, they all should come from the same module. So going forward, it makes sense to import them all form `react-events/focus`.\r\n\r\nThe nice benefit from this is that this actually fixes a bunch of issues with the current implementation, where we can't use `FocusScope` as a hooked event component. With the changes outlined in this issue, it should allow for them to be used via the `useEvent` hook.\r\n\r\n## We can build in great dev tooling around the focus system\r\n\r\nWe can build in great support for debugging in React Dev Tools when working with focus and \r\nthis will help improve accessibility within apps that use `<Focus>`, `<FocusScope>` and `focusManager`. Plus it would support any future APIs that add accessibility benefits to components.",
+              "body": "I think we need to rethink how focus works in React. React Flare is the perfection opportunity to allow us to do this, so here are some of my thoughts. None of these ideas wouldn't be possible if it weren't for the great ideas from @sebmarkbage, @devongovett and @necolas have had. Furthermore, the discussions in https://github.com/facebook/react/pull/16000, https://github.com/facebook/react/pull/15848 and https://github.com/facebook/react/pull/15849 got me thinking on a better system.\r\n\r\n## Focus is a mess on the DOM, so let's not use the DOM\r\n\r\nFocusing on the DOM is a mess today. We couple ideas around ideas around things like `tabIndex` and whether a specific browser treats something as focusable. This is very much a hard-coded disaster where no one really agrees on a good formula for success. Not to mention, that this just doesn't translate well for a declarative UI. How does one tab to a specific node that isn't focusable? How does one use keyboard arrows to navigate a table using keyboard arrows?\r\n\r\nThen there's implementation. Without relying on an attribute on an element or a `ref`, it's very hard to say: \"Hey look, let's focus to this node, given this criteria\". Not to mention the performance overhead of doing this: querying or \"collecting\" focusable elements is an expensive O(n) task, which doesn't scale for large applications well. I noticed that wrapping the an internal large app with `<FocusScope>` and then collecting all focusable nodes took over 850ms on Android using Chrome. Querying the DOM nodes took even longer.\r\n\r\nLastly, we can't use the DOM with React Native and the story for handling focus with React Flare is important. If we instead had a React system for handling focus, then both the web and RN would be consistent and performant.\r\n\r\n## Accessible components\r\n\r\nWe already have the `<Focus>` and `<FocusScope>` event components. We could extend on React Flare and introduce a way of layering accessibility logic on to host components. In this I introduce a new API called `createAccessibleComponent`, but really it could be anything \u2013 ignore the naming! This is purely hypothetical discussion for now.\r\n\r\n```jsx\r\n// input is not focusable\r\n<FocusScope>\r\n  <input type=\"text\" placeholder=\"Enter your username\" /> \r\n</FocusScope>\r\n\r\nconst FocusableInput = ReactDOM.createAccessibleComponent((props, focusable) => {\r\n  return <input tabIndex={focusable ? 0 : -1} {...props} />;\r\n});\r\n\r\n// now it's focusable\r\n<FocusScope>\r\n  <FocusableInput\r\n    type=\"text\"\r\n    placeholder=\"Enter your username\"\r\n    focusable={true}\r\n  />\r\n</FocusScope>\r\n```\r\n\r\nIf you don't use a `FocusScope`, then the normal DOM behaviour will continue to work as expected. `FocusScope` will only care about these new types of accessible component.\r\n\r\n## The focus manager should be encapsulated and relative to `FocusScope`\r\n\r\nIn order for focus management to be powerful, it needs to be baked into React. Event responders like `FocusScope` can let the manager know what scope it should be interacting with given a particular `<Focus>` that focuses occur in. `FocusScope` will also fully override the browser tabbing behaviour (like it does now) to ensure tabbing works as expected:\r\n\r\n```jsx\r\nimport { focusManager } from 'react-events/focus';\r\n\r\nfocusManager.getFocusedNode();\r\nfocusManager.getFocusedId();\r\nfocusManager.focusFirst(isRTL?: boolean = false);\r\nfocusManager.focusLast(isRTL?: boolean = false);\r\nfocusManager.focusPrevious(fromId?: string, isRTL?: boolean = false);\r\nfocusManager.focusNext(fromId?: string, isRTL?: boolean = false, );\r\nfocusManager.focusById(id: string);\r\n\r\nconst FocusableDiv = ReactDOM.createAccessibleComponent((props, focusable) => {\r\n  return <div tabIndex={focusable ? 0 : -1} {...props} />;\r\n});\r\n\r\n<FocusScope onMount={() => focusManager.focusFirst()}>\r\n  <FocusableDiv focusable={true} />\r\n  <FocusableDiv focusable={true} />\r\n  <div tabIndex={0}>You can't focus this</div>\r\n</FocusScope>\r\n```\r\n\r\nFocusing by `focusId` will propagate until an `focusId` is found. So this would matter for cases such:\r\n\r\n```jsx\r\nconst FocusableDiv = ReactDOM.createAccessibleComponent((props, focusable, focusId) => {\r\n  return <div tabIndex={focusable ? 0 : -1} {...props} />;\r\n});\r\n\r\n<FocusScope>\r\n  <FocusableDiv focusable={true} focusId=\"focus-me\" />\r\n  <FocusScope>\r\n    <FocusableDiv focusable={true} focusId=\"focus-me\" />\r\n  </FocusScope>\r\n</FocusScope>\r\n```\r\n\r\nIf `focusManager.focusById('focus-me);` was used on the inner `FocusScope`, it would focus the inner button. If used on the outer `FocusScope`, it would focus the outer button. If the outer `FocusScope` didn't have an id that matched, then it would propagate the lookup to the inner `FocusScope`.\r\n\r\nDoing this, it makes it possible to apply keyboard navigation:\r\n\r\n```jsx\r\nfunction handleKeyPress(key) {\r\n  if (isValidArrowKey(key)) {\r\n    const currentId = focusManager.getFocusedId();\r\n    const nextId = findNextId(currentId, key);\r\n    focusManager.focusById(nextId);\r\n  }\r\n}\r\n<FocusScope onKeyPress={handleKeyPress}>\r\n  <FocousableCell focusable={true} focusId=\"AA\" />\r\n  <FocousableCell focusable={true} focusId=\"AB\" />\r\n  <FocousableCell focusable={true} focusId=\"AC\" />\r\n  <FocousableCell focusable={true} focusId=\"BA\" />\r\n  <FocousableCell focusable={true} focusId=\"BB\" />\r\n  <FocousableCell focusable={true} focusId=\"BC\" />\r\n  <FocousableCell focusable={true} focusId=\"CA\" />\r\n  <FocousableCell focusable={true} focusId=\"CB\" />\r\n  <FocousableCell focusable={true} focusId=\"CC\" />\r\n</FocusScope>\r\n```\r\n\r\nFurthermore, `<FocusScope>`s can also have `focusId`s that allows you to move focus to a specific scope. That particular event component can then act upon receiving focus `<FocusScope onFocus={...}>`.\r\n\r\n## It can simplify `<Focus>`\r\n\r\n```jsx\r\n<Focus onFocus={...}>\r\n  <div>\r\n    <FocusableDiv focusable={true} />\r\n  </div>\r\n</Focus>\r\n```\r\n\r\nBefore, focus would only be of the direct child of the `<Focus>` component. This made it somewhat problematic when you wanted to find the focusable element that was not a direct child. Focus no longer needs to be coupled with \"bubbling up\" through the DOM, but rather it bubbles from accessible component to event components. So doing this, will still result in the nearest focusable child being passed to the `Focus`:\r\n\r\n```jsx\r\n<Focus onFocus={...}>\r\n  <div>\r\n    <FocusableDiv focusable={true}>\r\n      <FocusableDiv focusable={true} />\r\n    </FocusableDiv>\r\n  </div>\r\n</Focus>\r\n```\r\n\r\n## This can be fast too\r\n\r\nIn terms of performance, we can actually fast-path how this all works because we're no longer using the DOM, but event components within the Flare event system. We'd have optimized data collections that ensure that the least possible time is taken traversing focusable elements by leveraging a separate internal data structure that is separate from the Fiber and DOM structures. The cost is that this will take additional memory and time to construct when a focus scope gets mounted/unmounted. Given this shouldn't be a rapid event, it's worth the trade-off.\r\n\r\nAlso, given we're not wrapping `FocusScope` with a context provider (as mentioned in the FocusManager PR), which should get improved performance from not needing to do context lookups and traversals.\r\n\r\n## `Focus` and `FocusScope`, `focusManager`\r\n\r\nGiven that they now share underlying implementation details, they all should come from the same module. So going forward, it makes sense to import them all form `react-events/focus`.\r\n\r\nThe nice benefit from this is that this actually fixes a bunch of issues with the current implementation, where we can't use `FocusScope` as a hooked event component. With the changes outlined in this issue, it should allow for them to be used via the `useEvent` hook.\r\n\r\n## We can build in great dev tooling around the focus system\r\n\r\nWe can build in great support for debugging in React Dev Tools when working with focus and \r\nthis will help improve accessibility within apps that use `<Focus>`, `<FocusScope>` and `focusManager`. Plus it would support any future APIs that add accessibility benefits to components.",
               "createdAt": "2019-06-27T07:28:34Z",
               "author": {
                 "login": "trueadm",
@@ -307,7 +319,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "590b79ef-cfc9-446a-8e04-ab7516acaab6"
           },
           {
             "node": {
@@ -334,7 +347,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "8b3c1d7b-a9a9-4992-bfb9-549b414332a4"
           },
           {
             "node": {
@@ -373,7 +387,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "fb0d8580-c423-4a74-a174-20a2137552cc"
           },
           {
             "node": {
@@ -393,7 +408,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "1ff9f6e4-edca-4e5b-9e08-e6caa2fb2727"
           },
           {
             "node": {
@@ -413,7 +429,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "09cafe95-43fd-4a91-ab5c-4d0dd4723280"
           },
           {
             "node": {
@@ -433,7 +450,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "3cb48b9a-228a-46c2-8133-b07f5c5b499d"
           },
           {
             "node": {
@@ -453,7 +471,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "376bac74-f634-448a-813e-47be1801ea45"
           },
           {
             "node": {
@@ -473,7 +492,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "bf16ae24-d206-4f14-b546-c82eb1801cf9"
           },
           {
             "node": {
@@ -493,7 +513,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "6d2722cb-532d-4e51-9e62-cd2f1e3f76c3"
           },
           {
             "node": {
@@ -513,7 +534,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "083fdabb-2248-4acf-bf0e-54a061a3f94b"
           },
           {
             "node": {
@@ -533,7 +555,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "8050099d-9c5f-41cb-89e4-25ee891406d1"
           },
           {
             "node": {
@@ -553,7 +576,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "b7f630c8-f09a-4861-a3ea-c042f3be8831"
           },
           {
             "node": {
@@ -573,7 +597,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "226ce6b3-febf-4268-a44b-0d9a7bfca2a0"
           },
           {
             "node": {
@@ -593,7 +618,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "a44c695c-43c0-4768-9aea-1b184224b122"
           },
           {
             "node": {
@@ -613,7 +639,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "e8e8e0e3-4589-46c7-911b-81712ec8c186"
           },
           {
             "node": {
@@ -638,7 +665,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "fdc465f8-7ff6-4962-9846-a40f42466d15"
           },
           {
             "node": {
@@ -658,7 +686,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "453a6191-daca-4ae9-bdc4-3ec11ffc5ab2"
           },
           {
             "node": {
@@ -678,7 +707,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "cf356728-1caa-4f1e-a0b5-c3ec15ddc4cf"
           },
           {
             "node": {
@@ -698,7 +728,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "05b5b0a8-0bfb-4dca-94dc-0433bf583a9d"
           },
           {
             "node": {
@@ -718,7 +749,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "fd4aee40-0634-4c54-8f0c-ae91975357ae"
           },
           {
             "node": {
@@ -738,7 +770,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "8288f388-6253-4f41-b4f3-d8bcaa9f74e4"
           },
           {
             "node": {
@@ -758,7 +791,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "febaa73d-2d1d-445b-9d10-f8589c1c8dd8"
           },
           {
             "node": {
@@ -778,7 +812,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "51eb756b-5e36-4fec-b68e-d7b4565747ed"
           },
           {
             "node": {
@@ -798,7 +833,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "9754adfb-6249-4d19-9fd0-9d490640aff4"
           },
           {
             "node": {
@@ -818,7 +854,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "515ebb5d-eebf-4ed8-82b4-adc3d0acf21c"
           },
           {
             "node": {
@@ -838,7 +875,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "cf2e438d-6bd9-4897-ae40-6eef4ab6add7"
           },
           {
             "node": {
@@ -858,7 +896,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "0f057f4e-c1c0-49a6-b173-ea24f8dbf649"
           },
           {
             "node": {
@@ -878,14 +917,15 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "dbef2de9-bcb3-4cd5-ac61-edf89ebd01bf"
           },
           {
             "node": {
               "title": "hooks clear effect function run behind DidUpdate erveytime",
               "state": "OPEN",
               "number": 16062,
-              "body": "hello，i try hooks;but when i try to clear effect,just like componentWillUnmount();but hooks clear effect function run just behind component did update everytime,\r\n\r\n```\r\nimport React, { useState, useEffect } from 'react';\r\n\r\nexport default function ScrollView({ count }) {\r\n  useEffect(() => {\r\n    const timeId = setInterval(() => {}, 2000);\r\n    return function clear() {\r\n      console.log('你好' + count);\r\n      clearInterval(timeId);\r\n    };\r\n  });\r\n\r\n  return <div>counting + count</div>;\r\n}\r\n```",
+              "body": "hello\uff0ci try hooks;but when i try to clear effect,just like componentWillUnmount();but hooks clear effect function run just behind component did update everytime,\r\n\r\n```\r\nimport React, { useState, useEffect } from 'react';\r\n\r\nexport default function ScrollView({ count }) {\r\n  useEffect(() => {\r\n    const timeId = setInterval(() => {}, 2000);\r\n    return function clear() {\r\n      console.log('\u4f60\u597d' + count);\r\n      clearInterval(timeId);\r\n    };\r\n  });\r\n\r\n  return <div>counting + count</div>;\r\n}\r\n```",
               "createdAt": "2019-07-04T10:44:20Z",
               "author": {
                 "login": "cjl-df",
@@ -898,7 +938,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "cfea7ae4-e60d-4e34-aef4-92b1f3176289"
           },
           {
             "node": {
@@ -918,7 +959,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "054eb499-a7c4-4529-aa43-f62b74a5da39"
           },
           {
             "node": {
@@ -938,7 +980,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "96d75705-1dcc-49cf-92bb-e4cf3d01aa94"
           },
           {
             "node": {
@@ -958,14 +1001,15 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "0aab7d74-fbb2-48e1-868d-f1e060f68278"
           },
           {
             "node": {
               "title": "prop-types not work save child please",
               "state": "OPEN",
               "number": 16070,
-              "body": "I use prop-types package . want to validate my props, i transmit a error type of prop but prop-types not work.\r\n\r\nMACOS\r\nreact 16.8.6\r\nreact-dom 16.8.6\r\nprop-types 15.5.7\r\nredux 4.0.1\r\nreact-redux 2.3.0\r\n\r\n\r\n```\r\nimport React from 'react';\r\nimport { Button, Icon } from 'antd';\r\nimport PropTypes from 'prop-types';\r\n\r\nconst PageHeader = ({isUnflod, showFilterPanel, title}) => (\r\n    <>\r\n        <div class='page-title'>{title}</div>\r\n        <div class='page-header-base-button'>\r\n            <Button className='left-button' type='primary'>添加</Button>\r\n            <Button type='default' onClick={() => showFilterPanel(!isUnflod)}>\r\n                筛选<Icon type={isUnflod ? 'up' : 'down'} />\r\n            </Button>\r\n        </div>\r\n    </>\r\n)\r\n\r\nPageHeader.propTypes = {\r\n    title: PropTypes.number,\r\n    isUnflod: PropTypes.bool.isRequired,\r\n    showFilterPanel: PropTypes.func.isRequired\r\n}\r\n\r\nexport default PageHeader;\r\n```\r\n```\r\nconst Vehicle = ({isUnflod, showFilterPanel, pagination}) => (\r\n    <>\r\n        <PageHeader title='车辆管理' isUnflod={isUnflod} showFilterPanel={showFilterPanel} />\r\n        {\r\n            isUnflod ? <VehicleFilterPanel /> : null\r\n        }\r\n    </>\r\n)\r\n```",
+              "body": "I use prop-types package . want to validate my props, i transmit a error type of prop but prop-types not work.\r\n\r\nMACOS\r\nreact 16.8.6\r\nreact-dom 16.8.6\r\nprop-types 15.5.7\r\nredux 4.0.1\r\nreact-redux 2.3.0\r\n\r\n\r\n```\r\nimport React from 'react';\r\nimport { Button, Icon } from 'antd';\r\nimport PropTypes from 'prop-types';\r\n\r\nconst PageHeader = ({isUnflod, showFilterPanel, title}) => (\r\n    <>\r\n        <div class='page-title'>{title}</div>\r\n        <div class='page-header-base-button'>\r\n            <Button className='left-button' type='primary'>\u6dfb\u52a0</Button>\r\n            <Button type='default' onClick={() => showFilterPanel(!isUnflod)}>\r\n                \u7b5b\u9009<Icon type={isUnflod ? 'up' : 'down'} />\r\n            </Button>\r\n        </div>\r\n    </>\r\n)\r\n\r\nPageHeader.propTypes = {\r\n    title: PropTypes.number,\r\n    isUnflod: PropTypes.bool.isRequired,\r\n    showFilterPanel: PropTypes.func.isRequired\r\n}\r\n\r\nexport default PageHeader;\r\n```\r\n```\r\nconst Vehicle = ({isUnflod, showFilterPanel, pagination}) => (\r\n    <>\r\n        <PageHeader title='\u8f66\u8f86\u7ba1\u7406' isUnflod={isUnflod} showFilterPanel={showFilterPanel} />\r\n        {\r\n            isUnflod ? <VehicleFilterPanel /> : null\r\n        }\r\n    </>\r\n)\r\n```",
               "createdAt": "2019-07-06T01:42:30Z",
               "author": {
                 "login": "shenweizheng110",
@@ -978,7 +1022,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "84820ca2-636d-49bf-a747-43841be9a93b"
           },
           {
             "node": {
@@ -998,7 +1043,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "28ecef80-0df3-4d88-aa08-a3db06c41c52"
           },
           {
             "node": {
@@ -1018,7 +1064,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "3b1ef5ff-3c5a-41c7-821c-05118dd6d456"
           },
           {
             "node": {
@@ -1038,7 +1085,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "caf3d169-3cba-48fa-8578-17bd6930a4d3"
           },
           {
             "node": {
@@ -1058,7 +1106,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "44c2db54-b185-4ec6-b4d6-cd9f278711c6"
           },
           {
             "node": {
@@ -1078,7 +1127,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "9b29fb35-d97c-4138-a1ab-518082b6a144"
           },
           {
             "node": {
@@ -1098,7 +1148,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "a5fffe0a-af59-4a55-ab31-95b98c451902"
           },
           {
             "node": {
@@ -1118,7 +1169,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "71541ca9-1849-485a-a3a7-8459e92e0f52"
           },
           {
             "node": {
@@ -1145,7 +1197,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "77f9fb14-23d8-4dfd-9da0-2600b54cde9e"
           },
           {
             "node": {
@@ -1165,7 +1218,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "8a3595e2-d123-496b-808b-b1eadc324827"
           },
           {
             "node": {
@@ -1185,7 +1239,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "93fead7e-c871-41b7-be7c-859cafafc988"
           },
           {
             "node": {
@@ -1205,7 +1260,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "b6019282-c4de-4bf3-8c33-31891021e933"
           },
           {
             "node": {
@@ -1225,7 +1281,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "0058041a-8dab-424c-9495-063610057aa4"
           },
           {
             "node": {
@@ -1245,7 +1302,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "3c17e3e2-017e-4e0f-a5e5-0909b7096d56"
           },
           {
             "node": {
@@ -1265,7 +1323,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "b3f4d7d2-3e9e-4cd3-a894-3b47a3ef892e"
           },
           {
             "node": {
@@ -1292,7 +1351,8 @@
                   }
                 ]
               }
-            }
+            },
+            "id": "2cbeb7ad-4592-454e-812b-ce392bf85506"
           },
           {
             "node": {
@@ -1312,7 +1372,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "21841ac1-f000-43f1-a85c-f9f760c3c595"
           },
           {
             "node": {
@@ -1332,7 +1393,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "98138695-838f-4d89-8246-385bc6a0df87"
           },
           {
             "node": {
@@ -1352,7 +1414,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "1d2c4c15-910a-407b-ae8a-5bcb3a1c1067"
           },
           {
             "node": {
@@ -1372,7 +1435,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "eb6baedf-7e88-4ad3-8807-7f83be55d87f"
           },
           {
             "node": {
@@ -1392,7 +1456,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "7f0f635b-d40a-402c-9fe5-2e68676bfe29"
           },
           {
             "node": {
@@ -1412,7 +1477,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "2e41d9a7-c025-478f-8fa5-b1bc82d6dec6"
           },
           {
             "node": {
@@ -1432,7 +1498,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "fcaf475e-d639-4020-a33c-a50eec0fea24"
           },
           {
             "node": {
@@ -1452,7 +1519,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "0b298916-af3e-407a-95bb-a69f5256720b"
           },
           {
             "node": {
@@ -1472,7 +1540,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "633ef1c3-ee27-48b8-a326-ef516a50b867"
           },
           {
             "node": {
@@ -1492,7 +1561,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "25e796d8-5139-4070-8602-5ea3c333b84d"
           },
           {
             "node": {
@@ -1512,7 +1582,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "5f2bf456-455d-405c-b636-a1f30cded21b"
           },
           {
             "node": {
@@ -1532,7 +1603,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "0acd3c22-d264-42d8-8b6d-cf024ec5b118"
           },
           {
             "node": {
@@ -1552,14 +1624,15 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "1f133c16-dd18-4f05-97c0-897c9b5bab18"
           },
           {
             "node": {
               "title": "[react-cache] [Question] Feedback and stale-while-revalidate strategy",
               "state": "OPEN",
               "number": 16120,
-              "body": "First of all, I am aware that `react-cache` package is highly experimental and unstable, but I still would like to experiment and express my thoughts on the subject. (skip to the end for the actual question)\r\n\r\nI've tried using it in several fun projects, and in my experience current version works pretty well with anything static, e.g. resources that need to be loaded only once, or can be loaded once and updated separately.\r\n\r\nHowever, not all resources are like that, and some of them need cache invalidation.  This https://github.com/facebook/react/issues/14783#issuecomment-461860954 mentions that there is no API for invalidation, but you can actually invalidate the resource, using the clever hash function. I've put together a little [demo](https://codesandbox.io/s/react-cache-stale-while-revalidate-startegy-0o9jj).\r\n\r\nThe problem with that approach is that invalidations happens \"soundly\" and will trigger the suspense. \r\n\r\nThis could be solved by busting the cache only after the `preload` of the next entry already happened, but there's unfortunately no way to track the `preload` state of the next entry, since the `preload` method actually doesn't return the promise it called;\r\n\r\nAnother way to go around this issue is to have a side effect inside the async resource, that would cause a re-render when completed, thus giving the ability to invalidate the old entry only after the new entry has been completed;\r\n\r\nLastly there’s the ability to create a invalidation method, wrapping a `read` method in a try-catch block and have custom logic of resolving with a result / awaiting  a suspender. This however makes the invalidation async, but it's probably fine, since we only need to invalidate the cache after we already have the initial result and can update the result when the invalidation has already happened.\r\n\r\nSince the first approach is basically impossible with current cache package and later two required a lot of custom logic, one would probably be better of writing an entirely custom suspender and cache provider with a required strategy.\r\n\r\nSorry for the long read, thus comes the question:\r\n\r\n**TLDR:** Is `react-cache` being developed and presented as a low-level API for writing custom resource caching logic OR as an example of writing custom suspenders and cache strategies?",
+              "body": "First of all, I am aware that `react-cache` package is highly experimental and unstable, but I still would like to experiment and express my thoughts on the subject. (skip to the end for the actual question)\r\n\r\nI've tried using it in several fun projects, and in my experience current version works pretty well with anything static, e.g. resources that need to be loaded only once, or can be loaded once and updated separately.\r\n\r\nHowever, not all resources are like that, and some of them need cache invalidation.  This https://github.com/facebook/react/issues/14783#issuecomment-461860954 mentions that there is no API for invalidation, but you can actually invalidate the resource, using the clever hash function. I've put together a little [demo](https://codesandbox.io/s/react-cache-stale-while-revalidate-startegy-0o9jj).\r\n\r\nThe problem with that approach is that invalidations happens \"soundly\" and will trigger the suspense. \r\n\r\nThis could be solved by busting the cache only after the `preload` of the next entry already happened, but there's unfortunately no way to track the `preload` state of the next entry, since the `preload` method actually doesn't return the promise it called;\r\n\r\nAnother way to go around this issue is to have a side effect inside the async resource, that would cause a re-render when completed, thus giving the ability to invalidate the old entry only after the new entry has been completed;\r\n\r\nLastly there\u2019s the ability to create a invalidation method, wrapping a `read` method in a try-catch block and have custom logic of resolving with a result / awaiting  a suspender. This however makes the invalidation async, but it's probably fine, since we only need to invalidate the cache after we already have the initial result and can update the result when the invalidation has already happened.\r\n\r\nSince the first approach is basically impossible with current cache package and later two required a lot of custom logic, one would probably be better of writing an entirely custom suspender and cache provider with a required strategy.\r\n\r\nSorry for the long read, thus comes the question:\r\n\r\n**TLDR:** Is `react-cache` being developed and presented as a low-level API for writing custom resource caching logic OR as an example of writing custom suspenders and cache strategies?",
               "createdAt": "2019-07-12T09:46:28Z",
               "author": {
                 "login": "nulladdict",
@@ -1572,14 +1645,15 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "6b7d5ed2-25fa-48fc-97e1-cb7c7a610ff7"
           },
           {
             "node": {
               "title": "useEffect will unpredictable when depends on ref (useRef)",
               "state": "CLOSED",
               "number": 16121,
-              "body": "Look at this [demo](https://codesandbox.io/s/useeffect-depends-on-useref-194ec)\r\nIs there a bug?\r\n\r\n**What is the current behavior?**\r\nWhen you click the minus button until value to -1,  the # 1 effect will not be triggered, but the dependency has changed.\r\n\r\n**What is the expected behavior?**\r\nThe # 1 effect will be trigger when the value changes from 0 to -1，just like # 2 effect",
+              "body": "Look at this [demo](https://codesandbox.io/s/useeffect-depends-on-useref-194ec)\r\nIs there a bug?\r\n\r\n**What is the current behavior?**\r\nWhen you click the minus button until value to -1,  the # 1 effect will not be triggered, but the dependency has changed.\r\n\r\n**What is the expected behavior?**\r\nThe # 1 effect will be trigger when the value changes from 0 to -1\uff0cjust like # 2 effect",
               "createdAt": "2019-07-12T12:22:15Z",
               "author": {
                 "login": "Tommy-White",
@@ -1592,7 +1666,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "ed3b04c5-9cbe-4d8a-90ea-ffe103d2adc1"
           },
           {
             "node": {
@@ -1612,7 +1687,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "304cb82a-08ac-48a8-9d48-c69ea40d5dfd"
           },
           {
             "node": {
@@ -1632,7 +1708,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "80db5c73-503b-447a-8043-d468f77046ca"
           },
           {
             "node": {
@@ -1652,7 +1729,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "3b987d76-a3f5-4871-94ae-cde9bd980add"
           },
           {
             "node": {
@@ -1672,7 +1750,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "895abdef-784a-4bc1-95e1-92f1622b3da4"
           },
           {
             "node": {
@@ -1692,7 +1771,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "87829066-f3b2-461c-a115-6b610ad25f9b"
           },
           {
             "node": {
@@ -1712,14 +1792,15 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "536254e8-6fec-405a-80ad-918d2e7b0607"
           },
           {
             "node": {
               "title": "<g> or <text> are unrecognized in Jest",
               "state": "OPEN",
               "number": 16135,
-              "body": "**Do you want to request a *feature* or report a *bug*?**\r\n**BUG**\r\n**What is the current behavior?**\r\nI am using some SVG tags, especially for customized components from `recharts` library. These customized components tend to fall into this kind of warnings:\r\n\r\n```\r\n Warning: The tag <text> is unrecognized in this browser. If you meant to render a React component, start its name with an uppercase letter.\r\n```\r\n\r\nSame happens for `<g>` tag or `<circle>`.  It would be nice if Jest can recognize it, or at least ignore it \r\n\r\n**What is the expected behavior?**\r\n\r\nRun jest without failing into this warning\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\nReact 16.8.6\r\nChrome 75.0.3770.100\r\n\r\nI think these 3 tags should be specified in after this line https://github.com/facebook/react/blob/67e3f3fb6e342f95f00215c84d5d013d7b0e1b33/packages/react-dom/src/client/ReactDOMComponent.js#L131\r\n\r\nIf this is a valid issue, and that's the place, I could  have a look to add them and adapt the tests to make it work 😄 ",
+              "body": "**Do you want to request a *feature* or report a *bug*?**\r\n**BUG**\r\n**What is the current behavior?**\r\nI am using some SVG tags, especially for customized components from `recharts` library. These customized components tend to fall into this kind of warnings:\r\n\r\n```\r\n Warning: The tag <text> is unrecognized in this browser. If you meant to render a React component, start its name with an uppercase letter.\r\n```\r\n\r\nSame happens for `<g>` tag or `<circle>`.  It would be nice if Jest can recognize it, or at least ignore it \r\n\r\n**What is the expected behavior?**\r\n\r\nRun jest without failing into this warning\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\nReact 16.8.6\r\nChrome 75.0.3770.100\r\n\r\nI think these 3 tags should be specified in after this line https://github.com/facebook/react/blob/67e3f3fb6e342f95f00215c84d5d013d7b0e1b33/packages/react-dom/src/client/ReactDOMComponent.js#L131\r\n\r\nIf this is a valid issue, and that's the place, I could  have a look to add them and adapt the tests to make it work \ud83d\ude04 ",
               "createdAt": "2019-07-15T14:40:09Z",
               "author": {
                 "login": "Ruffeng",
@@ -1732,14 +1813,15 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "35aa5784-3e06-4bd8-9cfc-e4dd7dd60131"
           },
           {
             "node": {
               "title": "Calling a hook setter recursively in a setTimeout is producing unexpected behaviour.",
               "state": "OPEN",
               "number": 16136,
-              "body": "**Do you want to request a *feature* or report a *bug*?** a bug, or I'm using wrong 😄 \r\n\r\n**What is the current behavior?**\r\n```js\r\nconst [items, setItems] = useState([]);\r\n\r\nfunction addItems(delay = 0) {\r\n  setItems(items.concat({ timestamp: new Date() }));\r\n  setTimeout(() => {\r\n    addItems();\r\n  }, 1000);\r\n}\r\n\r\n\r\n//\r\n<button onClick={addItems}>Add items</button>;\r\n{\r\n  items.map((item, index) => \r\n     <div key={index}> {JSON.stringify(item)} </div>\r\n );\r\n}\r\n```\r\n![2019-07-15 19 14 58](https://user-images.githubusercontent.com/2982512/61235084-ebefa580-a734-11e9-97b4-8f54a72d5695.gif)\r\n\r\n\r\n\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem. Your bug will get fixed much faster if we can run your code and it doesn't have dependencies other than React. Paste the link to your JSFiddle (https://jsfiddle.net/Luktwrdm/) or CodeSandbox (https://codesandbox.io/s/new) example below:**\r\n\r\nhttps://codesandbox.io/s/broken-smoke-5x6g5\r\n\r\n**What is the expected behavior?**\r\n`items` will contain more and more items after the button is clicked.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? `16.8.6` Did this work in previous versions of React?** `no`\r\n",
+              "body": "**Do you want to request a *feature* or report a *bug*?** a bug, or I'm using wrong \ud83d\ude04 \r\n\r\n**What is the current behavior?**\r\n```js\r\nconst [items, setItems] = useState([]);\r\n\r\nfunction addItems(delay = 0) {\r\n  setItems(items.concat({ timestamp: new Date() }));\r\n  setTimeout(() => {\r\n    addItems();\r\n  }, 1000);\r\n}\r\n\r\n\r\n//\r\n<button onClick={addItems}>Add items</button>;\r\n{\r\n  items.map((item, index) => \r\n     <div key={index}> {JSON.stringify(item)} </div>\r\n );\r\n}\r\n```\r\n![2019-07-15 19 14 58](https://user-images.githubusercontent.com/2982512/61235084-ebefa580-a734-11e9-97b4-8f54a72d5695.gif)\r\n\r\n\r\n\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem. Your bug will get fixed much faster if we can run your code and it doesn't have dependencies other than React. Paste the link to your JSFiddle (https://jsfiddle.net/Luktwrdm/) or CodeSandbox (https://codesandbox.io/s/new) example below:**\r\n\r\nhttps://codesandbox.io/s/broken-smoke-5x6g5\r\n\r\n**What is the expected behavior?**\r\n`items` will contain more and more items after the button is clicked.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? `16.8.6` Did this work in previous versions of React?** `no`\r\n",
               "createdAt": "2019-07-15T17:22:39Z",
               "author": {
                 "login": "tkrugg",
@@ -1752,7 +1834,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "71d193e7-d77f-415a-85ec-d307eb5ed849"
           },
           {
             "node": {
@@ -1772,7 +1855,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "f83cf32f-33a3-49e4-8b9e-57226529f855"
           },
           {
             "node": {
@@ -1792,14 +1876,15 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "2a838e2c-b224-4b3e-9f4c-5936a523061f"
           },
           {
             "node": {
               "title": "Deno support or Deno rewrite pilot program",
               "state": "CLOSED",
               "number": 16140,
-              "body": "# 🚀 feature request\r\nWould like [Deno](https://deno.land/) runtime support.\r\n\r\n### Description\r\nThis is a new runtime that has was created by [Ryan Dahl](https://en.wikipedia.org/wiki/Ryan_Dahl), the original creator of [NodeJS](https://nodejs.org/en/). It has several new advantages:\r\n\r\n- Use of Promises\r\n- Uses TypeScript out of the box\r\n- no need for node_modules\r\n- uses urls to load dependencies (might be a plus or minus). \r\n",
+              "body": "# \ud83d\ude80 feature request\r\nWould like [Deno](https://deno.land/) runtime support.\r\n\r\n### Description\r\nThis is a new runtime that has was created by [Ryan Dahl](https://en.wikipedia.org/wiki/Ryan_Dahl), the original creator of [NodeJS](https://nodejs.org/en/). It has several new advantages:\r\n\r\n- Use of Promises\r\n- Uses TypeScript out of the box\r\n- no need for node_modules\r\n- uses urls to load dependencies (might be a plus or minus). \r\n",
               "createdAt": "2019-07-16T05:21:39Z",
               "author": {
                 "login": "inunotaisho26",
@@ -1812,7 +1897,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "c604c120-bae1-4963-a154-2d20836f8a40"
           },
           {
             "node": {
@@ -1832,7 +1918,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "1f561ee7-a691-4f74-a2ee-158be2fb6335"
           },
           {
             "node": {
@@ -1852,14 +1939,15 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "f28db4c6-a26f-4648-a585-a83811b11906"
           },
           {
             "node": {
               "title": "scheduler package use set but don't use es6-shim",
               "state": "CLOSED",
               "number": 16146,
-              "body": "When I use a vivo phone，I find a browser console error, That is scheduler package use set, \r\nLike: \r\nsubscribers = new Set();\r\n\r\nBut Browser don't support es6 \r\n\r\nCan you help me Fix this ?\r\n\r\n",
+              "body": "When I use a vivo phone\uff0cI find a browser console error, That is scheduler package use set, \r\nLike: \r\nsubscribers = new Set();\r\n\r\nBut Browser don't support es6 \r\n\r\nCan you help me Fix this ?\r\n\r\n",
               "createdAt": "2019-07-17T06:31:47Z",
               "author": {
                 "login": "souoxs",
@@ -1872,7 +1960,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "2a10f1b5-3b82-474c-8868-a0d858aa43f6"
           },
           {
             "node": {
@@ -1892,7 +1981,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "16a321a4-acf0-4a59-95d9-e7ce1e045e96"
           },
           {
             "node": {
@@ -1912,7 +2002,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "f14780dd-813d-46bf-82da-6c090381d6a8"
           },
           {
             "node": {
@@ -1932,7 +2023,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "2a0c543e-a0eb-4f61-ae2d-503cf006394f"
           },
           {
             "node": {
@@ -1952,14 +2044,15 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "fa199246-b88f-44c3-8a0f-c6161637234a"
           },
           {
             "node": {
               "title": "Accessing state/props in callback ref with hooks",
               "state": "OPEN",
               "number": 16154,
-              "body": "**Do you want to request a *feature* or report a *bug*?**\r\n\r\nRequesting guidance on how to implement something with hooks that used to be possible with class components (so it's not quite a bug, but it might end up becoming a feature request)\r\n\r\n**What is the current behavior?**\r\n\r\nIf you want to access an external value inside a callback ref (props/state/etc.), you can use `useCallback`. However, in some cases you may want to avoid re-triggering the callback ref when one of those external values change. In that case, you could use `useRef` to work around this, and update the ref's value with `useEffect`/`useLayoutEffect`, like this:\r\n\r\n```\r\nconst valueRef = useRef(value);\r\nuseEffect(() => {\r\n  valueRef.current = value;\r\n}, [value]);\r\n\r\n// Now the callback ref can use `valueRef.current`\r\n```\r\n\r\nHowever, callback refs are called before `useEffect`/`useLayoutEffect` callbacks, so if the callback ref happens to be triggered as a result of the same render in which `value` changes, it will see the old value when it access `valueRef.current`.\r\n\r\nThis could be worked around by updating `valueRef` as a side effect of render:\r\n\r\n```\r\nconst valueRef = useRef(value);\r\nvalueRef.current = value;\r\n```\r\n\r\nThis is admittedly a very specific edge case, but I have actually introduced bugs into real code due to this, when trying to convert existing class components to use hooks. Another motivation for this is to use it to help implement a custom hook for making callback refs nicer to use by mimicking the `useEffect` API: https://github.com/facebook/react/issues/15176#issuecomment-512185852\r\n\r\nInterestingly, this issue does not happen with class components, because `this.props` and `this.state` have the correct value when the callback ref is triggered.\r\n\r\nHere is a codesandbox with a contrived example that reproduces the issue (and shows how the issue does not occur with a class component): https://codesandbox.io/s/callback-refhooks-72m3p\r\n\r\n**What is the expected behavior?**\r\n\r\nThat there is some way of handling this use case using hooks, and in such a way that works with concurrent mode:\r\n\r\n• Wanting to access external values in a callback ref\r\n• Wanting to avoid triggering the callback ref when those values change\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\n* React/React-DOM 16.8.6\r\n* Not a browser/OS-related issue\r\n* Also did not work in previous versions of React",
+              "body": "**Do you want to request a *feature* or report a *bug*?**\r\n\r\nRequesting guidance on how to implement something with hooks that used to be possible with class components (so it's not quite a bug, but it might end up becoming a feature request)\r\n\r\n**What is the current behavior?**\r\n\r\nIf you want to access an external value inside a callback ref (props/state/etc.), you can use `useCallback`. However, in some cases you may want to avoid re-triggering the callback ref when one of those external values change. In that case, you could use `useRef` to work around this, and update the ref's value with `useEffect`/`useLayoutEffect`, like this:\r\n\r\n```\r\nconst valueRef = useRef(value);\r\nuseEffect(() => {\r\n  valueRef.current = value;\r\n}, [value]);\r\n\r\n// Now the callback ref can use `valueRef.current`\r\n```\r\n\r\nHowever, callback refs are called before `useEffect`/`useLayoutEffect` callbacks, so if the callback ref happens to be triggered as a result of the same render in which `value` changes, it will see the old value when it access `valueRef.current`.\r\n\r\nThis could be worked around by updating `valueRef` as a side effect of render:\r\n\r\n```\r\nconst valueRef = useRef(value);\r\nvalueRef.current = value;\r\n```\r\n\r\nThis is admittedly a very specific edge case, but I have actually introduced bugs into real code due to this, when trying to convert existing class components to use hooks. Another motivation for this is to use it to help implement a custom hook for making callback refs nicer to use by mimicking the `useEffect` API: https://github.com/facebook/react/issues/15176#issuecomment-512185852\r\n\r\nInterestingly, this issue does not happen with class components, because `this.props` and `this.state` have the correct value when the callback ref is triggered.\r\n\r\nHere is a codesandbox with a contrived example that reproduces the issue (and shows how the issue does not occur with a class component): https://codesandbox.io/s/callback-refhooks-72m3p\r\n\r\n**What is the expected behavior?**\r\n\r\nThat there is some way of handling this use case using hooks, and in such a way that works with concurrent mode:\r\n\r\n\u2022 Wanting to access external values in a callback ref\r\n\u2022 Wanting to avoid triggering the callback ref when those values change\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\n* React/React-DOM 16.8.6\r\n* Not a browser/OS-related issue\r\n* Also did not work in previous versions of React",
               "createdAt": "2019-07-18T07:03:20Z",
               "author": {
                 "login": "butchler",
@@ -1972,7 +2065,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "caf1f3de-5e63-47a3-b14a-f937610c7258"
           },
           {
             "node": {
@@ -1992,7 +2086,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "362ee09e-6806-45d1-8386-ec3fabfe84c3"
           },
           {
             "node": {
@@ -2012,14 +2107,15 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "1159dc88-de6e-4d55-b68b-6fc8991e80f2"
           },
           {
             "node": {
               "title": "Can I download all tutorial pdf",
               "state": "OPEN",
               "number": 16159,
-              "body": "Ictually I want to read tutorial on bus or metro so şs there any download pdf option ",
+              "body": "Ictually I want to read tutorial on bus or metro so \u015fs there any download pdf option ",
               "createdAt": "2019-07-18T21:04:34Z",
               "author": {
                 "login": "meteerogl",
@@ -2032,7 +2128,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "8596498d-2be8-4977-bdb7-74ac6db966ba"
           },
           {
             "node": {
@@ -2052,14 +2149,15 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "ceacdfc8-f320-4707-bedc-6e2c13acf79a"
           },
           {
             "node": {
-              "title": "onBeforeInput fires after browser updates the DOM for special characters like \"中\" or 😣on Firefox and Edge",
+              "title": "onBeforeInput fires after browser updates the DOM for special characters like \"\u4e2d\" or \ud83d\ude23on Firefox and Edge",
               "state": "OPEN",
               "number": 16161,
-              "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\nBug\r\n\r\n**What is the current behavior?**\r\nonBeforeInput fires after browser updates the DOM for special characters like \"中\" or 😣on Firefox and Edge\r\nhttps://codesandbox.io/s/modest-franklin-muirj  \r\nNOTE: pasting it would not trigger the bug, you have to type it in. You can use control-command-space to open the emoji keyboard on mac\r\n\r\n**What is the expected behavior?**\r\nDOM should not update before onBeforeInput fires\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\nReact: 16.3.1\r\nFirefox: 68.0.1 \r\nMac: 10.14.5\r\n",
+              "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\nBug\r\n\r\n**What is the current behavior?**\r\nonBeforeInput fires after browser updates the DOM for special characters like \"\u4e2d\" or \ud83d\ude23on Firefox and Edge\r\nhttps://codesandbox.io/s/modest-franklin-muirj  \r\nNOTE: pasting it would not trigger the bug, you have to type it in. You can use control-command-space to open the emoji keyboard on mac\r\n\r\n**What is the expected behavior?**\r\nDOM should not update before onBeforeInput fires\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\nReact: 16.3.1\r\nFirefox: 68.0.1 \r\nMac: 10.14.5\r\n",
               "createdAt": "2019-07-19T00:07:06Z",
               "author": {
                 "login": "Chun-Yang",
@@ -2072,7 +2170,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "5e04e4f0-91d7-46a4-b556-7d5469c11f5c"
           },
           {
             "node": {
@@ -2092,7 +2191,8 @@
               "labels": {
                 "edges": []
               }
-            }
+            },
+            "id": "6930eff3-8462-441a-85b9-c088db8429d9"
           }
         ]
       }
