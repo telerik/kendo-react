@@ -200,7 +200,7 @@ function App() {
           </GridToolbar>
           <GridColumn field="ProductID" title="Id" width="100px" editable={false} filterable={false} />
           <GridColumn field="ProductName" title="Name" />
-          <GridColumn field="Category.CategoryName" title="Category" cell={DropDownCell} />
+          <GridColumn field="Category.CategoryName" title="Category" cells={{ data: DropDownCell }} />
           <GridColumn field="FirstOrderedOn" title="First Ordered On" editor="date" filter='date' format={'{0:d}'} />
           <GridColumn
             field="UnitsInStock"
@@ -210,7 +210,7 @@ function App() {
             filter="numeric"
           />
           <GridColumn field="Discontinued" title="Discontinued" editor="boolean" filter="boolean" />
-          <GridColumn cell={MyCommandCell} width="200px" filterable={false} />
+          <GridColumn cells={{ data: MyCommandCell }} width="200px" filterable={false} />
         </Grid>
       </DataContext.Provider>
     </div>
