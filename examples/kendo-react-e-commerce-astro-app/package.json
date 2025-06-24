@@ -36,7 +36,7 @@
     "@progress/kendo-react-popup": "^11.0.0",
     "@progress/kendo-react-progressbars": "^11.0.0",
     "@progress/kendo-react-treeview": "^11.0.0",
-    "@progress/kendo-svg-icons": "^4.3.0",
+    "@progress/kendo-svg-icons": "^4.5.0",
     "@progress/kendo-theme-default": "^11.0.2",
     "@progress/kendo-theme-utils": "^11.0.2",
     "astro": "^4.16.18",
