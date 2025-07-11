@@ -1,0 +1,49 @@
+@import "https://fonts.googleapis.com/css2?family=Archivo:wght@200..900&display=swap%27";
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
+  --color-primary-light: #eff6ff;
+  --color-primary-text: #ffffff;
+
+  --color-secondary: #06b6d4;
+  --color-secondary-hover: #0891b2;
+  --color-secondary-light: #ecfeff;
+
+  --color-accent: #6366f1;
+  --color-accent-hover: #4f46e5;
+  --color-accent-light: #eef2ff;
+
+  --color-border: #d1d5db;
+  --color-border-hover: #9ca3af;
+  --color-border-focused: #3b82f6;
+
+  --color-background: #ffffff;
+  --color-background-alt: #fafbfc;
+  --color-background-disabled: #f3f4f6;
+  --color-background-hover: #f8fafc;
+  --color-background-selected: #eff6ff;
+
+  --color-text: #374151;
+  --color-text-subtle: #6b7280;
+  --color-text-disabled: #9ca3af;
+  --color-text-placeholder: #a1a1aa;
+
+  --color-focus-ring: #3b82f6;
+  --color-focus-background: #eff6ff;
+  --color-focus-text: #1d4ed8;
+
+  --color-error: #ef4444;
+  --color-error-background: #fef2f2;
+  --color-error-border: #ef4444;
+
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-info: #06b6d4;
+
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  --color-shadow-lg: rgba(0, 0, 0, 0.15);
+
+  --font-sans: "Outfit", sans-serif;
+}
