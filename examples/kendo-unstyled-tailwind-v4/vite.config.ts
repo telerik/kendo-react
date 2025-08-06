@@ -4,5 +4,6 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: `/kendo-react/kendo-react-unstyled-tailwind-v4/`,
   plugins: [react(), tailwindcss()],
 });
