@@ -65,7 +65,7 @@ jobs:
               - 'examples/react-grid-live-data/**'
             kendo-react-tailwind:
               - 'examples/kendo-react-tailwind/**'
-            kendo-react-unstyled-tailwind-v4:
+            kendo-unstyled-tailwind-v4:
               - 'examples/kendo-unstyled-tailwind-v4/**'
 
       - name: Build Coffee warehouse nextjs app
@@ -205,7 +205,7 @@ jobs:
           npm run build
       - name: Build Kendo React Unstyled Tailwind v4 app
         working-directory: ./examples/kendo-unstyled-tailwind-v4
-        if: steps.changes.outputs.kendo-react-unstyled-tailwind-v4 == 'true'
+        if: steps.changes.outputs.kendo-unstyled-tailwind-v4 == 'true'
         run: |
           npm ci
           npm run build
