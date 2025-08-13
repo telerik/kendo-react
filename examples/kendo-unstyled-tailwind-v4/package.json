@@ -12,11 +12,11 @@
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
-    "@progress/kendo-react-buttons": "^11.2.0",
-    "@progress/kendo-react-common": "^11.2.0",
-    "@progress/kendo-react-dateinputs": "^11.2.0",
-    "@progress/kendo-react-dropdowns": "^11.2.0",
-    "@progress/kendo-react-form": "^11.2.0",
+    "@progress/kendo-react-buttons": "^11.4.0",
+    "@progress/kendo-react-common": "^11.4.0",
+    "@progress/kendo-react-dateinputs": "^11.4.0",
+    "@progress/kendo-react-dropdowns": "^11.4.0",
+    "@progress/kendo-react-form": "^11.4.0",
     "@progress/kendo-react-inputs": "^11.2.0",
     "@progress/kendo-react-labels": "^11.2.0",
     "@tailwindcss/vite": "^4.1.11",
