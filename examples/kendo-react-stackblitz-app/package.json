@@ -15,7 +15,7 @@
     "@progress/kendo-react-intl": "^11.0.0",
     "@progress/kendo-react-layout": "^11.0.0",
     "@progress/kendo-react-tooltip": "^11.0.0",
-    "@progress/kendo-theme-default": "^11.0.2",
+    "@progress/kendo-theme-default": "^12.0.0",
     "bootstrap": "5.2.1",
     "hammerjs": "^2.0.8",
     "react": "^18.2.0",
