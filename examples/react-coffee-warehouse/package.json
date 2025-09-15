@@ -37,7 +37,6 @@
     "cldr-core": "43.1.0",
     "cldr-dates-full": "^43.1.0",
     "cldr-numbers-full": "^43.1.0",
-    "hammerjs": "^2.0.8",
     "node-sass": "^9.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",

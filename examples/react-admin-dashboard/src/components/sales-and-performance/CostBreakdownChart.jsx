@@ -5,7 +5,6 @@ import {
   ChartSeries,
   ChartSeriesItem,
 } from '@progress/kendo-react-charts';
-import 'hammerjs';
 
 const series = [
   {

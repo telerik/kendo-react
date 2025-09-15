@@ -18,7 +18,6 @@
     "bootstrap": "5.2.1",
     "dotenv": "^16.3.2",
     "graphql": "^16.8.1",
-    "hammerjs": "^2.0.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^9.0.1",

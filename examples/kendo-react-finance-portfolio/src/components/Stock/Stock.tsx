@@ -24,7 +24,6 @@ import {
     ChartNavigatorCategoryAxis,
 } from '@progress/kendo-react-charts';
 
-import 'hammerjs';
 import styles from './stock.module.scss';
 import { dataService } from '../../services';
 import { useInternationalization } from '@progress/kendo-react-intl';

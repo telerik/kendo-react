@@ -33,7 +33,6 @@ import { enMessages } from './messages/en-US';
 import { frMessages } from './messages/fr';
 import { esMessages } from './messages/es';
 
-import 'hammerjs';
 import './App.scss';
 
 load(

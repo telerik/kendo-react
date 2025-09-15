@@ -1,4 +1,3 @@
-import 'hammerjs';
 import * as React from 'react';
 import { Chart, ChartTitle, ChartSeries, ChartSeriesItem, ChartCategoryAxis, ChartCategoryAxisItem, ChartTooltip } from '@progress/kendo-react-charts';
 const categories = ['Mon', 'Tue', 'Wed', 'Thru', 'Fri', 'Sat', 'Sun'];

@@ -13,7 +13,6 @@ import {
   ChartLegend,
   ChartTooltip,
 } from "@progress/kendo-react-charts";
-const importHammerJs = () => import("hammerjs");
 import { groupBy, filterBy } from "@progress/kendo-data-query";
 import { useInternationalization } from "@progress/kendo-react-intl";
 import { locales } from "./../resources/locales";
@@ -21,10 +20,6 @@ import { locales } from "./../resources/locales";
 const MONTH_FORMAT = "MMMM yyyy";
 
 export const Chart = (props) => {
-  if (typeof window !== "undefined") {
-    importHammerJs();
-  }
-
   const {
     data,
     groupByField,

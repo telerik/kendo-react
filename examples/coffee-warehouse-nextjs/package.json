@@ -39,7 +39,6 @@
     "cldr-core": "44.0.1",
     "cldr-dates-full": "44.0.1",
     "cldr-numbers-full": "44.0.1",
-    "hammerjs": "^2.0.8",
     "next": "14.2.30",
     "react": "^18",
     "react-dom": "^18"
