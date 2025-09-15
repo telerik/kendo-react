@@ -10,8 +10,6 @@ import {
     ChartTitle
 } from '@progress/kendo-react-charts';
 
-import 'hammerjs';
-
 export class DetailComponent extends React.Component {
     render() {
         const dataItem = this.props.dataItem;

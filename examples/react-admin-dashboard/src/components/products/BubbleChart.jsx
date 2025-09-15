@@ -12,7 +12,6 @@ import {
   ChartYAxisItem,
 } from '@progress/kendo-react-charts';
 import data from '../../data/bubble-chart.json';
-import 'hammerjs';
 
 export const BubbleChart = () => (
   <Chart>
