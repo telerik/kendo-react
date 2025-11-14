@@ -1,4 +1,4 @@
-import{r}from"./index.Brq2tt8m.js";import{n as o,e as t,A as T,r as M,Q as O,R as y,z as j}from"./languageStore.5U26Vo73.js";import{u as I}from"./CategoryList.CdHl__bW.js";import{e as F}from"./getTabIndex.DyyoPw_c.js";/**
+import{r}from"./index.Brq2tt8m.js";import{n as o,e as t,A as T,r as M,Q as O,R as y,z as j}from"./languageStore.Bi5B9sZ5.js";import{u as I}from"./CustomizedSection.BFm7Y-aw.js";import{e as F}from"./getTabIndex.DyyoPw_c.js";/**
  * @license
  *-------------------------------------------------------------------------------------------
  * Copyright © 2025 Progress Software Corporation. All rights reserved.
