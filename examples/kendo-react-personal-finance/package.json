@@ -12,16 +12,16 @@
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
-    "@progress/kendo-react-buttons": "^11.1.0",
-    "@progress/kendo-react-charts": "^11.1.0",
-    "@progress/kendo-react-conversational-ui": "^11.1.0",
-    "@progress/kendo-react-excel-export": "^11.1.0",
-    "@progress/kendo-react-form": "^11.1.0",
-    "@progress/kendo-react-gauges": "^11.1.0",
-    "@progress/kendo-react-grid": "^11.1.0",
-    "@progress/kendo-react-layout": "^11.1.0",
-    "@progress/kendo-react-listview": "^11.1.0",
-    "@progress/kendo-react-pdf": "^11.1.0",
+    "@progress/kendo-react-buttons": "^13.0.0",
+    "@progress/kendo-react-charts": "^13.0.0",
+    "@progress/kendo-react-conversational-ui": "^13.0.0",
+    "@progress/kendo-react-excel-export": "^13.0.0",
+    "@progress/kendo-react-form": "^13.0.0",
+    "@progress/kendo-react-gauges": "^13.0.0",
+    "@progress/kendo-react-grid": "^13.0.0",
+    "@progress/kendo-react-layout": "^13.0.0",
+    "@progress/kendo-react-listview": "^13.0.0",
+    "@progress/kendo-react-pdf": "^13.0.0",
     "@progress/kendo-svg-icons": "^4.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -38,7 +38,7 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
     "typescript": "^5.8.3",
-    "vite": "^6.3.1",
+    "vite": "^6.4.1",
     "gh-pages": "^6.1.1"
   }
 }
