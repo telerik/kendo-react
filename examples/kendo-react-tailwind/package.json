@@ -12,9 +12,9 @@
         "deploy": "gh-pages -d build"
     },
     "dependencies": {
-        "@progress/kendo-react-buttons": "^13.0.0",
-        "@progress/kendo-react-common": "^13.0.0",
-        "@progress/kendo-react-layout": "^13.0.0",
+        "@progress/kendo-react-buttons": "^13.1.0",
+        "@progress/kendo-react-common": "^13.1.0",
+        "@progress/kendo-react-layout": "^13.1.0",
         "@progress/kendo-theme-default": "^12.2.3",
         "@tailwindcss/vite": "^4.1.5",
         "react": "^19.0.0",
