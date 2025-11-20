@@ -46,15 +46,15 @@ export const About = () => {
               </li>
               <li>
                   <a href="https://www.telerik.com/kendo-react-ui/components/notification/">Notification</a>
-                  <li>
+              </li>
+              <li>
                   <a href="https://www.telerik.com/kendo-react-ui/components/listview/">ListView</a>
               </li>
               <li>
                   <a href="https://www.telerik.com/kendo-react-ui/components/inputs/">Inputs</a>
               </li>
-              </li>
               <li>
-              <a href="https://www.telerik.com/kendo-react-ui/components/gauges/">Gauges</a>
+                  <a href="https://www.telerik.com/kendo-react-ui/components/gauges/">Gauges</a>
               </li>
           </ul>
       </div>

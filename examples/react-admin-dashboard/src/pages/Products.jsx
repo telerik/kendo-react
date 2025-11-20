@@ -73,7 +73,7 @@ import { checkIcon, pencilIcon, eyeIcon } from '@progress/kendo-svg-icons';
            </CardBody>
            <CardActions>
            <div className="footer-buttons-container">
-           {visible && <Window title={item.Title} onClose={toggleDialog} initialHeight={350} top={600} minimizeButton="false" maximizeButton="false">
+           {visible && <Window title={item.Title} onClose={toggleDialog} initialHeight={350} top={600} minimizeButton={false} maximizeButton={false}>
                <div>
                 <p>{item.Title}</p>
                 <CardImage
