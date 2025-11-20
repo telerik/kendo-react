@@ -7,9 +7,9 @@ import {
   SplitButtonItemClickEvent
 } from '@progress/kendo-react-buttons';
 import { Switch, Input, InputChangeEvent, SwitchChangeEvent } from "@progress/kendo-react-inputs";
-import { Dialog, DialogActionsBar } from '@progress/kendo-react-dialogs';
+import { Dialog, DialogActionsBar, DialogCloseEvent } from '@progress/kendo-react-dialogs';
 import { Upload } from '@progress/kendo-react-upload';
-import { BaseEvent, SvgIcon  } from '@progress/kendo-react-common';
+import { SvgIcon  } from '@progress/kendo-react-common';
 import { toggleViewBtnGroup, toggleSortBtnGroup } from '../helpers/helperMethods';
 import { GridViewBtnGroup, UploadAddEvent } from '../interfaces/FileManagerModels';
 import { Label } from "@progress/kendo-react-labels";
@@ -79,7 +79,7 @@ export const FileManagerToolbar = (props) => {
     props.onNewFolderClick(event);
   }
 
-  const handleDialogVisibility = (event: BaseEvent<Dialog> | React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+  const handleDialogVisibility = (event: DialogCloseEvent | React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     setDialogVisible(!dialogVisible);
   };
 

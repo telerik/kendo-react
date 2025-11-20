@@ -39,7 +39,10 @@
     "path-to-regexp": "^0.1.12",
     "axios": "^1.8.2",
     "@babel/helpers": "^7.26.10",
-    "@babel/runtime": "7.26.10"
+    "@babel/runtime": "7.26.10",
+    "request": {
+      "form-data":"^2.5.4"
+    }
   },
   "scripts": {
     "start": "react-scripts start",

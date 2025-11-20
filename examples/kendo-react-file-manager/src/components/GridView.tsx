@@ -6,6 +6,7 @@ import {
   GridRowClickEvent,
   GridRowDoubleClickEvent,
   GridSortChangeEvent,
+  GridCustomRowProps,
   GRID_COL_INDEX_ATTRIBUTE
 } from '@progress/kendo-react-grid';
 import { useTableKeyboardNavigation } from '@progress/kendo-react-data-tools';
@@ -61,14 +62,17 @@ const NameCell = (props: GridCellProps) => {
 };
 
 export const GridView = (props) => {
-  const RowRender = (trElement, dataItem) => {
-    const trProps = {
-      onContextMenu: (event) => {
-        event.preventDefault()
-        handleContextMenu(event, dataItem);
-      }
-    }
-    return React.cloneElement(trElement, { ...trProps }, trElement.props.children);
+  const CustomRow = (rowProps: GridCustomRowProps) => {
+    const handleRowContextMenu = (event: React.MouseEvent<HTMLTableRowElement>) => {
+      event.preventDefault();
+      handleContextMenu(event, rowProps);
+    };
+
+    return (
+      <tr {...rowProps.trProps} onContextMenu={handleRowContextMenu}>
+        {rowProps.children}
+      </tr>
+    );
   };
 
   const handleOnSortChange = (event: GridSortChangeEvent) => {
@@ -90,9 +94,9 @@ export const GridView = (props) => {
     props.onDoubleClick(event);
   };
 
-  const handleContextMenu = (event: React.MouseEvent<HTMLDivElement, MouseEvent>, dataItem) => {
+  const handleContextMenu = (event: React.MouseEvent<HTMLTableRowElement>, rowProps: GridCustomRowProps) => {
     props.onContextMenu({
-      dataItem: dataItem.dataItem,
+      dataItem: rowProps.dataItem,
       event: event
     });
   };
@@ -100,7 +104,7 @@ export const GridView = (props) => {
   return (
     <Grid
       data={props.data}
-      rowRender={RowRender}
+      rows={{ data: CustomRow }}
       className={'k-filemanager-grid k-grid-display-block k-editable'}
       style={{ height: '100%' }}
       navigatable={true}
@@ -108,7 +112,6 @@ export const GridView = (props) => {
         allowUnsort: false
       }}
       sort={props.sort}
-      selectedField={'selected'}
       selectable={{ enabled: true, cell: false, drag: true, mode: 'multiple' }}
       dataItemKey={props.dataItemKey}
       onRowClick={handleSelectionChange}
@@ -116,9 +119,9 @@ export const GridView = (props) => {
       onSortChange={handleOnSortChange}
       onRowDoubleClick={handleDoubleClick}
       >
-      <Column field='path' title='Name' cell={NameCell} />
-      <Column field='dateCreated' title='Date Created' cell={DateCreatedCell} />
-      <Column field='size' title='Size' cell={SizeCell} />
+      <Column field='path' title='Name' cells={{ data: NameCell }} />
+      <Column field='dateCreated' title='Date Created' cells={{ data: DateCreatedCell }} />
+      <Column field='size' title='Size' cells={{ data: SizeCell }} />
     </Grid>
   );
 }
