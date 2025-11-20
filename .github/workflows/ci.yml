@@ -14,13 +14,13 @@ jobs:
     runs-on: ubuntu-24.04
 
     steps:
-      - name: Use NodeJS v18
-        uses: actions/setup-node@v4
+      - name: Use NodeJS v22
+        uses: actions/setup-node@v6
         with:
-          node-version: '18'
+          node-version: '22'
 
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Get changed files
         uses: dorny/paths-filter@v2
