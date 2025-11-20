@@ -10,7 +10,11 @@ export const ContextMenu = (props: ContextMenuProps) => {
   };
 
   return (
-    <Popup show={true} offset={props.offset}>
+    <Popup 
+      show={true} 
+      offset={props.offset} 
+      style={{ zIndex: 10000 }}
+    >
       <Menu vertical={true} style={{ display: 'inline-block' }} onSelect={handleSelection}>
         <MenuItem text="Rename" svgIcon={editToolsIcon} />
         <MenuItem text="Delete" svgIcon={trashIcon} />
