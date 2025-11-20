@@ -70,77 +70,66 @@ jobs:
 
       - name: Build Coffee warehouse nextjs app
         working-directory: ./examples/coffee-warehouse-nextjs
-        if: steps.changes.outputs.coffee-warehouse-nextjs == 'true'
         run: |
           npm i
           npm run build
 
       - name: Build Ecommerce jewellery store vite app
         working-directory: ./examples/ecommerce-jewellery-store
-        if: steps.changes.outputs.ecommerce-jewellery-store == 'true'
         run: |
           npm ci
           npm run build
 
       - name: Build Ecommerce Astro app
         working-directory: ./examples/kendo-react-e-commerce-astro-app
-        if: steps.changes.outputs.kendo-react-e-commerce-astro-app == 'true'
         run: |
           npm ci
           npm run build
 
       - name: Build A Sales Dashboard app
         working-directory: ./examples/kendo-react-build-a-sales-dashboard
-        if: steps.changes.outputs.kendo-react-build-a-sales-dashboard == 'true'
         run: |
           npm i
           npm run build
 
       - name: Build Kendo React Editor Strict CSP app
         working-directory: ./examples/kendo-react-editor-strict-csp
-        if: steps.changes.outputs.kendo-react-editor-strict-csp == 'true'
         run: |
           npm i
           npm run build
 
       - name: Build File Manager app
         working-directory: ./examples/kendo-react-file-manager
-        if: steps.changes.outputs.kendo-react-file-manager == 'true'
         run: |
           npm ci
           npm run build
 
       - name: Build Finance Portfolio app
         working-directory: ./examples/kendo-react-finance-portfolio
-        if: steps.changes.outputs.kendo-react-finance-portfolio == 'true'
         run: |
           npm ci
           npm run build
 
       - name: Build Kendo React Project Tracker app
         working-directory: ./examples/kendo-react-project-tracker-app
-        if: steps.changes.outputs.kendo-react-project-tracker-app == 'true'
         run: |
           npm ci
           npm run build
 
       - name: Build Homepage demo app
         working-directory: ./examples/kendo-react-homepage-demo
-        if: steps.changes.outputs.kendo-react-homepage-demo == 'true'
         run: |
           npm ci
           npm run build
 
       - name: Build React Nextjs app
         working-directory: ./examples/kendo-react-nextjs
-        if: steps.changes.outputs.kendo-react-nextjs == 'true'
         run: |
           npm i
           npm run build
 
       - name: Build React Nodejs Express app
         working-directory: ./examples/kendo-react-nodejs-express
-        if: steps.changes.outputs.kendo-react-nodejs-express == 'true'
         run: |
           cd server
           npm i
@@ -150,62 +139,53 @@ jobs:
 
       - name: Build React Sales Dashboard app
         working-directory: ./examples/kendo-react-sales-dashboard
-        if: steps.changes.outputs.kendo-react-sales-dashboard == 'true'
         run: |
           npm i
           npm run build
 
       - name: Build React SSR app
         working-directory: ./examples/kendo-react-ssr
-        if: steps.changes.outputs.kendo-react-ssr == 'true'
         run: |
           npm i
           npm run build
 
       - name: Build React Stackblitz app
         working-directory: ./examples/kendo-react-stackblitz-app
-        if: steps.changes.outputs.kendo-react-stackblitz-app == 'true'
         run: |
           npm i
           npm run build
 
       - name: Build React Unstyled Tailwind app
         working-directory: ./examples/kendo-unstyled-tailwind
-        if: steps.changes.outputs.kendo-unstyled-tailwind == 'true'
         run: |
           npm i
           npm run build
 
       - name: Build React Admin Dashboard app
         working-directory: ./examples/react-admin-dashboard
-        if: steps.changes.outputs.react-admin-dashboard == 'true'
         run: |
           npm ci
           npm run build
 
       - name: Build React Coffee Warehouse app
         working-directory: ./examples/react-coffee-warehouse
-        if: steps.changes.outputs.react-coffee-warehouse == 'true'
         run: |
           npm ci
           npm run build
 
       - name: Build React Grid Live Data app
         working-directory: ./examples/react-grid-live-data
-        if: steps.changes.outputs.react-grid-live-data == 'true'
         run: |
           npm ci
           npm run build
 
       - name: Build Kendo React Tailwind app
         working-directory: ./examples/kendo-react-tailwind
-        if: steps.changes.outputs.kendo-react-tailwind == 'true'
         run: |
           npm ci
           npm run build
       - name: Build Kendo React Unstyled Tailwind v4 app
         working-directory: ./examples/kendo-unstyled-tailwind-v4
-        if: steps.changes.outputs.kendo-unstyled-tailwind-v4 == 'true'
         run: |
           npm ci
           npm run build
