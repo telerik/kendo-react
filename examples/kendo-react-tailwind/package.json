@@ -17,8 +17,8 @@
         "@progress/kendo-react-layout": "^13.1.0",
         "@progress/kendo-theme-default": "^12.2.3",
         "@tailwindcss/vite": "^4.1.5",
-        "react": "^19.0.0",
-        "react-dom": "^19.0.0",
+        "react": "^19.0.1",
+        "react-dom": "^19.0.1",
         "tailwindcss": "^4.1.5"
     },
     "devDependencies": {
