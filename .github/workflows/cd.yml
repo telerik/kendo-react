@@ -17,6 +17,12 @@ jobs:
   build:
     runs-on: ubuntu-24.04
     environment: github-pages
+    
+    permissions:
+      pages: write
+      id-token: write
+      contents: read
+      packages: read
 
     steps:
       - name: Use NodeJS v18
