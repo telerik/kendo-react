@@ -1,0 +1,2690 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap");
+@import "@progress/kendo-theme-bootstrap/dist/all.css";
+
+:root {
+  /* ========================
+     Custom tokens
+     ======================== */
+
+  --avatar-gradient: linear-gradient(135deg, #334155, #64748b);
+  --radius-pill: 85px;
+
+  /* Display & heading type scale (beyond Kendo's xs–xl range) */
+  --font-size-h6: 23px;
+  --font-size-h5: 27px;
+  --font-size-h4: 30px;
+  --font-size-h3: 32px;
+  --font-size-h2: 35px;
+  --font-size-h1: 42px;
+  --font-size-d4: 46px;
+  --font-size-d3: 52px;
+  --font-size-d2: 58px;
+  --font-size-d1: 66px;
+
+  /* ========================
+     Kendo Theme Token Overrides
+     Map design tokens → Kendo CSS variables
+     ======================== */
+
+  /* Kendo Colors */
+  --kendo-color-primary: #334155;
+  --kendo-color-primary-hover: #1e293b;
+  --kendo-color-primary-active: #0f172a;
+  --kendo-color-on-primary: #ffffff;
+  --kendo-color-primary-subtle: #f1f5f9;
+  --kendo-color-primary-subtle-hover: #eaeff5;
+  --kendo-color-primary-subtle-active: #cbd5e1;
+  --kendo-color-primary-emphasis: #64748b;
+  --kendo-color-primary-on-subtle: #1e293b;
+  --kendo-color-primary-on-surface: #334155;
+
+  --kendo-color-secondary: #6366fb;
+  --kendo-color-secondary-hover: #5558e0;
+  --kendo-color-secondary-active: #4a4cc9;
+  --kendo-color-on-secondary: #ffffff;
+  --kendo-color-secondary-subtle: #f5f6ff;
+  --kendo-color-secondary-subtle-hover: #ebecff;
+  --kendo-color-secondary-subtle-active: #dce1e8;
+  --kendo-color-secondary-emphasis: #d4d6ff;
+  --kendo-color-secondary-on-subtle: #1c1d5b;
+  --kendo-color-secondary-on-surface: #6366fb;
+
+  --kendo-color-tertiary: #9c27b0;
+  --kendo-color-tertiary-hover: #7b1fa2;
+  --kendo-color-tertiary-active: #6a1b9a;
+  --kendo-color-on-tertiary: #ffffff;
+  --kendo-color-tertiary-subtle: #fdf6ff;
+  --kendo-color-tertiary-subtle-hover: #f3e5f5;
+  --kendo-color-tertiary-subtle-active: #e1bee7;
+  --kendo-color-tertiary-emphasis: #ddb5fb;
+  --kendo-color-tertiary-on-subtle: #4a148c;
+  --kendo-color-tertiary-on-surface: #9c27b0;
+
+  --kendo-color-success: #28a745;
+  --kendo-color-success-hover: #218838;
+  --kendo-color-success-active: #1e7e34;
+  --kendo-color-on-success: #ffffff;
+  --kendo-color-success-subtle: #dcf0d3;
+  --kendo-color-success-subtle-hover: #d0ebd7;
+  --kendo-color-success-subtle-active: #bce2c5;
+  --kendo-color-success-emphasis: #81d15f;
+  --kendo-color-success-on-subtle: #1c5a00;
+  --kendo-color-success-on-surface: #28a745;
+
+  --kendo-color-warning: #ffc107;
+  --kendo-color-warning-hover: #e0a800;
+  --kendo-color-warning-active: #d39e00;
+  --kendo-color-on-warning: #232a36;
+  --kendo-color-warning-subtle: #fff4d3;
+  --kendo-color-warning-subtle-hover: #fff0c2;
+  --kendo-color-warning-subtle-active: #ffe9a3;
+  --kendo-color-warning-emphasis: #ffd760;
+  --kendo-color-warning-on-subtle: #5e4700;
+  --kendo-color-warning-on-surface: #e6a817;
+
+  --kendo-color-error: #dc3545;
+  --kendo-color-error-hover: #c82333;
+  --kendo-color-error-active: #bd2130;
+  --kendo-color-on-error: #ffffff;
+  --kendo-color-error-subtle: #fcddda;
+  --kendo-color-error-subtle-hover: #fbd5d1;
+  --kendo-color-error-subtle-active: #f8bdb8;
+  --kendo-color-error-emphasis: #f76f60;
+  --kendo-color-error-on-subtle: #7a0c00;
+  --kendo-color-error-on-surface: #dc3545;
+
+  --kendo-color-info: #17a2b8;
+  --kendo-color-info-hover: #138496;
+  --kendo-color-info-active: #117a8b;
+  --kendo-color-on-info: #ffffff;
+  --kendo-color-info-subtle: #d2e2fb;
+  --kendo-color-info-subtle-hover: #cceef9;
+  --kendo-color-info-subtle-active: #b8e7f5;
+  --kendo-color-info-emphasis: #6098f2;
+  --kendo-color-info-on-subtle: #117a8b;
+  --kendo-color-info-on-surface: #17a2b8;
+
+  /* Kendo Surface / Background / Text */
+
+  --kendo-color-surface: #f9fafb;
+  --kendo-color-surface-alt: #ffffff;
+  --kendo-color-on-app-surface: #232a36;
+  --kendo-color-subtle: #4a5666;
+  --kendo-color-border: rgba(23, 56, 99, 0.08);
+  --kendo-color-border-alt: rgba(23, 56, 99, 0.16);
+
+  /* Kendo Base (buttons, pager, toolbar backgrounds) */
+  --kendo-color-base: #f9fafb;
+  --kendo-color-base-hover: #e8ecf1;
+  --kendo-color-base-active: #dce1e8;
+  --kendo-color-on-base: #232a36;
+  --kendo-color-base-subtle: #edf0f5;
+  --kendo-color-base-subtle-hover: #e2e6ed;
+  --kendo-color-base-subtle-active: #d8dde5;
+  --kendo-color-base-emphasis: #c5ccd6;
+  --kendo-color-base-on-subtle: #232a36;
+  --kendo-color-base-on-surface: #4a5666;
+
+  /* Kendo Inverse */
+  --kendo-color-inverse: #232a36;
+  --kendo-color-inverse-hover: #1a2030;
+  --kendo-color-inverse-active: #141824;
+  --kendo-color-on-inverse: #ffffff;
+
+  /* Kendo Typography */
+  --kendo-font-family: "Poppins", "Roboto", sans-serif;
+  --kendo-font-family-sans: "Poppins", "Roboto", sans-serif;
+  --kendo-font-family-sans-serif: "Poppins", "Roboto", sans-serif;
+  --kendo-font-size: 14px;
+  --kendo-font-size-xs: 12px;
+  --kendo-font-size-sm: 14px;
+  --kendo-font-size-md: 16px;
+  --kendo-font-size-lg: 20px;
+  --kendo-font-size-xl: 24px;
+  --kendo-font-weight: 400;
+  --kendo-font-weight-light: 300;
+  --kendo-font-weight-normal: 400;
+  --kendo-font-weight-medium: 500;
+  --kendo-font-weight-semibold: 600;
+  --kendo-font-weight-bold: 700;
+  --kendo-letter-spacing: 0;
+  --kendo-line-height: 1.5;
+  --kendo-line-height-xs: 1.33;
+  --kendo-line-height-sm: 1.42;
+  --kendo-line-height-md: 1.5;
+  --kendo-line-height-lg: 1.5;
+  --kendo-line-height-display: 1.2;
+
+  /* Kendo Border Radius */
+  --kendo-border-radius-none: 0px;
+  --kendo-border-radius-xxs: 1px;
+  --kendo-border-radius-xs: 2px;
+  --kendo-border-radius-sm: 4px;
+  --kendo-border-radius-md: 6px;
+  --kendo-border-radius-lg: 8px;
+  --kendo-border-radius-xl: 10px;
+  --kendo-border-radius-xxl: 12px;
+  --kendo-border-radius-xxxl: 14px;
+  --kendo-border-radius-4xl: 16px;
+  --kendo-border-radius-5xl: 18px;
+  --kendo-border-radius-6xl: 20px;
+  --kendo-border-radius-full: 9999px;
+
+  /* Kendo Spacing */
+  --kendo-spacing-0: 0px;
+  --kendo-spacing-0\.25: 1px;
+  --kendo-spacing-0\.5: 2px;
+  --kendo-spacing-1: 4px;
+  --kendo-spacing-1\.5: 6px;
+  --kendo-spacing-2: 8px;
+  --kendo-spacing-2\.5: 10px;
+  --kendo-spacing-3: 12px;
+  --kendo-spacing-3\.5: 14px;
+  --kendo-spacing-4: 16px;
+  --kendo-spacing-4\.5: 18px;
+  --kendo-spacing-5: 20px;
+  --kendo-spacing-5\.5: 22px;
+  --kendo-spacing-6: 24px;
+  --kendo-spacing-6\.5: 26px;
+  --kendo-spacing-7: 28px;
+  --kendo-spacing-7\.5: 30px;
+  --kendo-spacing-8: 32px;
+  --kendo-spacing-8\.5: 34px;
+  --kendo-spacing-9: 36px;
+  --kendo-spacing-9\.5: 38px;
+  --kendo-spacing-10: 40px;
+  --kendo-spacing-10\.5: 42px;
+  --kendo-spacing-11: 44px;
+  --kendo-spacing-11\.5: 46px;
+  --kendo-spacing-12: 48px;
+  --kendo-spacing-13: 52px;
+  --kendo-spacing-14: 56px;
+  --kendo-spacing-15: 60px;
+  --kendo-spacing-16: 64px;
+  --kendo-spacing-17: 68px;
+  --kendo-spacing-18: 72px;
+  --kendo-spacing-19: 76px;
+  --kendo-spacing-20: 80px;
+  --kendo-spacing-21: 84px;
+  --kendo-spacing-22: 88px;
+  --kendo-spacing-23: 92px;
+  --kendo-spacing-24: 96px;
+  --kendo-spacing-25: 112px;
+  --kendo-spacing-26: 128px;
+  --kendo-spacing-27: 144px;
+  --kendo-spacing-28: 160px;
+  --kendo-spacing-29: 176px;
+  --kendo-spacing-30: 192px;
+
+  /* Kendo Elevation */
+  --kendo-elevation-1:
+    0px 1px 3px rgba(0, 0, 0, 0.04), 0px 1px 2px rgba(0, 0, 0, 0.06); /* Base Button */
+  --kendo-elevation-2:
+    0px 1px 3px rgba(0, 0, 0, 0.04), 0px 2px 6px -1px rgba(0, 0, 0, 0.06); /* Cards */
+  --kendo-elevation-3:
+    0px 2px 6px rgba(0, 0, 0, 0.04), 0px 6px 12px -2px rgba(0, 0, 0, 0.07); /* Focused Card */
+  --kendo-elevation-4:
+    0px 1px 4px rgba(0, 0, 0, 0.05), 0px 4px 12px -2px rgba(0, 0, 0, 0.08); /* App Bar */
+  --kendo-elevation-5:
+    0px 3px 8px rgba(0, 0, 0, 0.05), 0px 8px 20px -3px rgba(0, 0, 0, 0.09); /* FAB */
+  --kendo-elevation-6:
+    0px 4px 10px rgba(0, 0, 0, 0.06), 0px 10px 24px -4px rgba(0, 0, 0, 0.1); /* Popups & Notifications */
+  --kendo-elevation-7:
+    0px 6px 14px rgba(0, 0, 0, 0.06), 0px 14px 32px -6px rgba(0, 0, 0, 0.1); /* Action Sheet */
+  --kendo-elevation-8:
+    0px 8px 20px rgba(0, 0, 0, 0.07), 0px 20px 48px -8px rgba(0, 0, 0, 0.11); /* Windows & Dialogs */
+  --kendo-elevation-9:
+    0px 12px 28px rgba(0, 0, 0, 0.08), 0px 28px 64px -10px rgba(0, 0, 0, 0.12); /* Focused Window */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: var(--kendo-font-family);
+  background: var(--kendo-color-surface-alt);
+  color: var(--kendo-color-on-app-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Override Kendo font-family for any remaining selectors */
+.k-widget,
+.k-chat {
+  font-family: var(--kendo-font-family);
+}
+
+/* ========================
+   Kendo Theme Refinements
+   (Beyond what --kendo-* variables cover)
+   ======================== */
+
+/* Grid: remove row hover effect */
+.k-grid tbody > tr.k-table-row:hover {
+  background-color: inherit;
+}
+.k-grid tbody > tr.k-table-alt-row:hover {
+  background-color: color-mix(
+    in srgb,
+    var(--kendo-color-on-app-surface, #212529) 4%,
+    transparent
+  );
+}
+
+/* Grid: remove all borders except header bottom */
+.k-grid {
+  border-width: 0;
+  border-radius: var(--kendo-border-radius-xxl);
+  overflow: hidden;
+}
+
+.k-grid .k-table-th,
+.k-grid .k-table-td,
+.k-grid td,
+.k-grid th {
+  border-inline-start-width: 0 !important;
+  border-inline-end-width: 0;
+  border-block-start-width: 0;
+  border-block-end-width: 0;
+}
+
+.k-grid div.k-grid-header {
+  border-block-end-width: 0;
+}
+
+.k-grid-header,
+.k-grid-header-table {
+  background-color: var(--kendo-color-surface);
+}
+
+.k-grid th.k-table-th {
+  font-family: var(--kendo-font-family);
+  font-weight: var(--kendo-font-weight-bold);
+  font-size: var(--kendo-font-size-md);
+  line-height: 1.5;
+  letter-spacing: var(--kendo-letter-spacing);
+  color: var(--kendo-color-on-app-surface);
+}
+
+.appointments-grid-wrapper .k-grid th.k-table-th {
+  font-weight: var(--kendo-font-weight-medium);
+  font-size: var(--kendo-font-size-sm);
+  line-height: 1.42;
+  vertical-align: middle;
+  text-transform: none;
+}
+
+.k-pager {
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom-left-radius: var(--kendo-border-radius-xxl);
+  border-bottom-right-radius: var(--kendo-border-radius-xxl);
+}
+
+.k-pager .k-button-flat {
+  border-radius: var(--kendo-border-radius-md);
+}
+
+.k-scheduler {
+  border-radius: var(--kendo-border-radius-4xl);
+  overflow: hidden;
+  box-shadow: var(--kendo-elevation-2);
+  flex: 1;
+  min-width: 0;
+}
+
+.k-scheduler .k-scheduler-toolbar {
+  background-color: var(--kendo-color-surface-alt);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+}
+
+.k-scheduler .k-scheduler-toolbar .k-toolbar {
+  flex-wrap: nowrap;
+  min-width: max-content;
+}
+
+.k-scheduler .k-scheduler-toolbar .k-toolbar > * {
+  flex-shrink: 0;
+}
+
+.k-scheduler .k-scheduler-toolbar .k-button-group {
+  border-radius: var(--kendo-border-radius-full);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.k-scheduler .k-scheduler-toolbar .k-nav-current {
+  color: var(--kendo-color-on-app-surface);
+  font-weight: var(--kendo-font-weight-semibold);
+}
+
+.k-scheduler .k-event {
+  border-radius: var(--kendo-border-radius-lg);
+  border: none;
+  padding: 0;
+}
+
+.k-scheduler .k-event.scheduler-event-solid {
+  background-color: var(--kendo-color-secondary-emphasis) !important;
+  border-left: 3px solid var(--kendo-color-secondary);
+}
+
+.k-scheduler .k-event.scheduler-event-solid .scheduler-event-title {
+  color: var(--kendo-color-secondary-on-subtle);
+}
+
+.k-scheduler .k-event.scheduler-event-solid .scheduler-event-meta {
+  color: var(--kendo-color-secondary);
+}
+
+.k-scheduler .k-event.scheduler-event-light {
+  background-color: var(--kendo-color-secondary-subtle) !important;
+  border-left: 3px dashed var(--kendo-color-secondary);
+}
+
+.k-scheduler .k-event.scheduler-event-light .scheduler-event-title {
+  color: var(--kendo-color-secondary-on-subtle);
+}
+
+.k-scheduler .k-event.scheduler-event-light .scheduler-event-meta {
+  color: var(--kendo-color-secondary);
+}
+
+.k-scheduler .k-event .k-event-template {
+  padding: 0;
+  font-size: inherit;
+}
+
+.scheduler-event-content {
+  padding: var(--kendo-spacing-1) var(--kendo-spacing-2);
+  overflow: hidden;
+}
+
+.scheduler-event-title {
+  font-size: var(--kendo-font-size-sm);
+  font-weight: var(--kendo-font-weight-semibold);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.scheduler-event-meta {
+  font-size: 11px;
+  opacity: 0.85;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.k-window .k-window-titlebar,
+.k-dialog .k-dialog-titlebar {
+  background: var(--kendo-color-surface-alt);
+  border-bottom: 1px solid var(--kendo-color-border);
+  font-weight: var(--kendo-font-weight-semibold);
+}
+
+.k-window,
+.k-dialog-wrapper .k-dialog {
+  box-shadow: var(--kendo-elevation-8);
+}
+
+.k-textbox:focus-within,
+.k-textarea:focus-within,
+.k-input-solid:focus-within {
+  border-color: var(--kendo-color-primary);
+  box-shadow: 0 0 0 2px rgba(78, 107, 255, 0.15);
+}
+
+.k-popup .k-list-item.k-selected {
+  background-color: var(--kendo-color-primary);
+  color: var(--kendo-color-on-primary);
+}
+
+.k-popup .k-list-item:hover:not(.k-selected),
+.k-popup .k-list-item.k-hover:not(.k-selected) {
+  background-color: var(--kendo-color-primary-subtle);
+}
+
+.popup-rounded {
+  border-radius: var(--kendo-border-radius-md);
+  overflow: hidden;
+}
+
+.k-fab.k-fab-primary,
+.k-fab.k-fab-solid-primary,
+.k-fab.k-fab-primary.k-fab {
+  background-image: linear-gradient(135deg, #ac58ff 0%, #4b5ffa 100%);
+  background-color: transparent;
+  outline: none;
+  box-shadow: var(--kendo-elevation-5);
+}
+
+.k-fab.k-fab-primary:hover,
+.k-fab.k-fab-solid-primary:hover,
+.k-hover.k-fab.k-fab-primary {
+  background-image: linear-gradient(135deg, #9b40f0 0%, #3a4ee9 100%);
+  background-color: transparent;
+  outline: none;
+}
+
+.k-tabstrip .k-tabstrip-items .k-item.k-active {
+  border-bottom-color: var(--kendo-color-primary);
+  color: var(--kendo-color-primary);
+}
+
+.k-grid .k-filter-row th {
+  text-transform: none;
+  font-size: var(--kendo-font-size-sm);
+  font-weight: var(--kendo-font-weight-normal);
+}
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  padding: var(--kendo-spacing-10) calc(var(--kendo-spacing-10) * 3);
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-layout::before {
+  content: "";
+  position: fixed;
+  width: 3233.52px;
+  height: 1015.11px;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  background: conic-gradient(
+    from 269.87deg at 47.29% 49.93%,
+    #e5bdcf 0deg,
+    #d2c2e0 166.15deg,
+    #c5c0e8 226.73deg,
+    #a8aae5 308.08deg,
+    #b7bff0 351.35deg,
+    #e5bdcf 360deg
+  );
+  filter: blur(150px);
+  transform: rotate(-15.79deg);
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.app-layout > * {
+  z-index: 1;
+}
+
+.app-header {
+  flex-shrink: 0;
+  z-index: 10;
+  padding-bottom: var(--kendo-spacing-8);
+}
+
+.app-content {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-heading {
+  margin-top: var(--kendo-spacing-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--kendo-spacing-3);
+}
+
+.page-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--kendo-spacing-6);
+}
+
+.page-heading-titles {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kendo-spacing-1);
+}
+
+.page-heading-breadcrumb {
+  display: flex;
+  align-items: center;
+}
+
+.page-heading h1 {
+  font-size: 36px;
+  font-weight: var(--kendo-font-weight-semibold);
+  color: var(--kendo-color-on-app-surface);
+  line-height: 1.4;
+}
+
+.page-heading p {
+  font-size: var(--kendo-font-size-md);
+  color: var(--kendo-color-subtle);
+  margin-top: 0;
+}
+
+.general-info-sidebar .app-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.general-info {
+  display: flex;
+  gap: var(--kendo-spacing-8);
+  align-items: stretch;
+}
+
+.general-info-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--kendo-spacing-8);
+  min-height: 0;
+}
+
+.general-info-sidebar {
+  width: 610px;
+  min-width: 520px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.general-info-main > .app-card:last-child {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.general-info-main > .app-card:last-child .appointments-grid-wrapper {
+  flex: 1;
+  min-height: 0;
+}
+
+.app-card {
+  background: var(--kendo-color-surface-alt);
+  border-radius: var(--kendo-border-radius-xxl);
+  box-shadow: var(--kendo-elevation-2);
+  overflow: hidden;
+}
+
+.app-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--kendo-spacing-4);
+  padding: var(--kendo-spacing-5);
+}
+
+.app-card-header h3 {
+  flex: 1;
+  font-size: var(--kendo-font-size-xl);
+  font-weight: var(--kendo-font-weight-bold);
+  color: var(--kendo-color-on-app-surface);
+}
+
+.app-card-body {
+  padding: 0 var(--kendo-spacing-5) var(--kendo-spacing-5);
+}
+
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--kendo-spacing-4);
+}
+
+.quick-action-card {
+  background: var(--kendo-color-primary-subtle);
+  border: 1px solid var(--kendo-color-border);
+  border-radius: var(--kendo-border-radius-xxl);
+  padding: var(--kendo-spacing-4);
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 120px;
+}
+
+.quick-action-card:hover {
+  box-shadow: var(--kendo-elevation-3);
+}
+
+.quick-action-card .icon {
+  width: var(--kendo-spacing-10);
+  height: var(--kendo-spacing-10);
+  border-radius: var(--kendo-border-radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--kendo-spacing-3);
+  font-size: var(--kendo-font-size-lg);
+}
+
+.quick-action-card h4 {
+  font-size: var(--kendo-font-size-md);
+  font-weight: var(--kendo-font-weight-bold);
+  color: var(--kendo-color-on-app-surface);
+  margin-bottom: var(--kendo-spacing-1);
+}
+
+.quick-action-card p {
+  font-size: var(--kendo-font-size-sm);
+  color: var(--kendo-color-subtle);
+}
+
+.patient-info-card {
+  display: flex;
+  align-items: center;
+  gap: var(--kendo-spacing-3);
+  padding: var(--kendo-spacing-2\.5) var(--kendo-spacing-5);
+}
+
+.patient-avatar {
+  width: var(--kendo-spacing-18);
+  height: var(--kendo-spacing-18);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.patient-name-block h4 {
+  font-size: var(--kendo-font-size-lg);
+  font-weight: var(--kendo-font-weight-semibold);
+  color: var(--kendo-color-on-app-surface);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--kendo-spacing-2);
+}
+
+.patient-name-block .badge {
+  font-size: var(--kendo-font-size-xs);
+  font-weight: var(--kendo-font-weight-medium);
+  padding: var(--kendo-spacing-0\.5) var(--kendo-spacing-2);
+  border-radius: var(--kendo-border-radius-full);
+}
+
+.patient-name-block p {
+  font-size: var(--kendo-font-size-sm);
+  color: var(--kendo-color-subtle);
+}
+
+.appointment-time {
+  margin-left: auto;
+  text-align: right;
+}
+
+.appointment-time .time {
+  font-size: var(--kendo-font-size-sm);
+  font-weight: var(--kendo-font-weight-medium);
+  color: var(--kendo-color-on-app-surface);
+}
+
+.appointment-time .label {
+  font-size: var(--kendo-font-size-sm);
+  color: var(--kendo-color-subtle);
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: var(--kendo-spacing-3);
+  padding: var(--kendo-spacing-3) var(--kendo-spacing-5);
+  border: 1px solid var(--kendo-color-border);
+  border-radius: var(--kendo-border-radius-lg);
+  margin: 0 var(--kendo-spacing-5) var(--kendo-spacing-2\.5);
+}
+
+.info-item .info-icon {
+  width: var(--kendo-spacing-10);
+  height: var(--kendo-spacing-10);
+  border-radius: var(--kendo-border-radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--kendo-font-size-lg);
+}
+
+.info-item .info-content h5 {
+  font-size: var(--kendo-font-size-sm);
+  font-weight: var(--kendo-font-weight-medium);
+  color: var(--kendo-color-on-app-surface);
+}
+
+.info-item .info-content p {
+  font-size: var(--kendo-font-size-xs);
+  color: var(--kendo-color-subtle);
+}
+
+.message-item {
+  display: flex;
+  align-items: center;
+  gap: var(--kendo-spacing-3);
+  padding: var(--kendo-spacing-2\.5) var(--kendo-spacing-5);
+  border-bottom: 1px solid var(--kendo-color-border);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.message-item:hover {
+  background: var(--kendo-color-surface);
+}
+
+.message-avatar {
+  width: var(--kendo-spacing-10);
+  height: var(--kendo-spacing-10);
+  border-radius: 50%;
+  background: var(--kendo-color-primary-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--kendo-font-size-sm);
+  font-weight: var(--kendo-font-weight-semibold);
+  color: var(--kendo-color-primary);
+  flex-shrink: 0;
+}
+
+.message-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.message-content h5 {
+  font-size: var(--kendo-font-size-sm);
+  font-weight: var(--kendo-font-weight-medium);
+  color: var(--kendo-color-on-app-surface);
+}
+
+.message-content p {
+  font-size: var(--kendo-font-size-xs);
+  color: var(--kendo-color-subtle);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.message-time {
+  font-size: var(--kendo-font-size-xs);
+  color: var(--kendo-color-subtle);
+  flex-shrink: 0;
+}
+
+.section-separator {
+  height: 1px;
+  background: var(--kendo-color-border);
+  margin: 0 var(--kendo-spacing-5);
+}
+
+.sidebar-scroll {
+  max-height: 340px;
+  overflow-y: auto;
+}
+
+.fab-container {
+  position: fixed;
+  bottom: var(--kendo-spacing-10);
+  right: 54px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--kendo-spacing-4);
+}
+
+/* ========================
+   AI Chat Popup
+   ======================== */
+.ai-chat-popup {
+  border-radius: var(--kendo-border-radius-xxxl);
+  overflow: hidden;
+  box-shadow: var(--kendo-elevation-6);
+  border: 1px solid var(--kendo-color-border);
+}
+
+.ai-chat-popup .k-chat {
+  border: none;
+  border-radius: var(--kendo-border-radius-xxxl);
+}
+
+.ai-chat-popup .k-message-list {
+  scrollbar-width: none;
+}
+
+.ai-chat-popup .k-message-list::-webkit-scrollbar {
+  display: none;
+}
+
+.ai-chat-header {
+  display: flex;
+  align-items: center;
+  gap: var(--kendo-spacing-2);
+  padding: var(--kendo-spacing-1\.5) 0;
+}
+
+.ai-chat-header-icon {
+  width: var(--kendo-spacing-8);
+  height: var(--kendo-spacing-6);
+}
+
+.ai-chat-header-title {
+  font-size: var(--kendo-font-size-md);
+  font-weight: var(--kendo-font-weight-bold);
+  color: var(--kendo-color-on-app-surface);
+  margin: 0;
+}
+
+.ai-chat-message {
+  padding: 4px 0;
+}
+
+.ai-chat-message-body {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  word-wrap: break-word;
+  flex: 1;
+  min-width: 0;
+}
+
+.ai-chat-message-body p {
+  margin: 0 0 6px;
+}
+
+.ai-chat-message-body p:last-child {
+  margin-bottom: 0;
+}
+
+.ai-chat-message-body h1,
+.ai-chat-message-body h2,
+.ai-chat-message-body h3 {
+  margin: 8px 0 4px;
+  font-weight: 700;
+  font-size: 1.05em;
+  line-height: 1.3;
+}
+
+.ai-chat-message-body strong {
+  font-weight: 600;
+}
+
+.ai-chat-message-body em {
+  font-style: italic;
+}
+
+.ai-chat-message-body ul,
+.ai-chat-message-body ol {
+  margin: 2px 0 6px;
+  padding-left: 18px;
+}
+
+.ai-chat-message-body li {
+  margin-bottom: 2px;
+}
+
+.ai-chat-message-body blockquote {
+  margin: 4px 0;
+  padding-left: 10px;
+  border-left: 3px solid var(--kendo-color-border);
+  color: var(--kendo-color-subtle);
+}
+
+.ai-chat-message-body code {
+  background: var(--kendo-color-surface);
+  border-radius: var(--kendo-border-radius-sm);
+  padding: 1px 5px;
+  font-size: 0.9em;
+  font-family: monospace;
+}
+
+.app-topbar,
+.app-topbar.k-appbar {
+  background: var(--kendo-color-surface-alt);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--kendo-elevation-4);
+  border: 1px solid var(--kendo-color-border);
+  padding: var(--kendo-spacing-4);
+  z-index: 100;
+  overflow: visible;
+  margin-bottom: 0;
+  top: 0;
+}
+
+.app-topbar-left {
+  display: flex;
+  align-items: center;
+  gap: var(--kendo-spacing-8);
+}
+
+.app-logo {
+  display: flex;
+  align-items: center;
+}
+
+.app-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--kendo-spacing-3);
+}
+
+.app-topbar-separator {
+  border-color: var(--kendo-color-border, #17386314);
+}
+
+.k-input .k-input-prefix {
+  background-color: var(--kendo-color-surface-alt);
+}
+
+/* SegmentedControl: slightly larger than medium */
+.app-topbar .k-segmented-control .k-segmented-control-button,
+.btn-segmented-size {
+  padding-block: 7px;
+  padding-inline: var(--kendo-spacing-3);
+  font-size: var(--kendo-font-size-md);
+}
+.k-segmented-control {
+  background-color: var(--kendo-color-base-active);
+}
+
+/* Custom icon button (matches Kendo flat button size) */
+.icon-btn {
+  width: var(--kendo-spacing-10);
+  height: var(--kendo-spacing-10);
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: var(--kendo-color-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.icon-btn:hover {
+  background: var(--kendo-color-surface);
+}
+
+/* ========================
+   Transparent Surfaces Mode
+   ======================== */
+body.transparent-surfaces .app-topbar,
+body.transparent-surfaces .app-card,
+body.transparent-surfaces .k-grid,
+body.transparent-surfaces .k-scheduler,
+body.transparent-surfaces .general-info-sidebar,
+body.transparent-surfaces .patients-sidebar,
+body.transparent-surfaces .patient-profile-card,
+body.transparent-surfaces .analytics-card,
+body.transparent-surfaces .chart-card {
+  background: linear-gradient(
+    179.48deg,
+    rgba(255, 255, 255, 0.2) 0.02%,
+    rgba(255, 255, 255, 0.5) 99.11%
+  );
+}
+
+body.transparent-surfaces .profile-stack .app-card {
+  background: var(--kendo-color-surface-alt);
+}
+
+body.transparent-surfaces .k-grid .k-table,
+body.transparent-surfaces .k-grid .k-grid-content,
+body.transparent-surfaces .k-grid .k-grid-container,
+body.transparent-surfaces .k-scheduler .k-scheduler-layout {
+  background: var(--kendo-color-surface-alt);
+}
+
+.search-input {
+  width: 272px;
+}
+
+.search-input .k-input {
+  border-radius: var(--kendo-border-radius-full);
+}
+
+.topbar-icon-btn {
+  width: var(--kendo-spacing-10);
+  height: var(--kendo-spacing-10);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: var(--kendo-color-subtle);
+  transition: background 0.15s;
+}
+
+.topbar-icon-btn:hover {
+  background: var(--kendo-color-surface);
+}
+
+.page-content {
+  flex: 1;
+}
+
+.chart-card {
+  background: var(--kendo-color-surface-alt);
+  border-radius: var(--kendo-border-radius-xxl);
+  box-shadow: var(--kendo-elevation-2);
+  padding: var(--kendo-spacing-5);
+}
+
+.chart-card h3 {
+  font-size: var(--kendo-font-size-md);
+  font-weight: var(--kendo-font-weight-semibold);
+  margin-bottom: var(--kendo-spacing-4);
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--kendo-spacing-6);
+}
+
+.patient-list-search {
+  margin-bottom: var(--kendo-spacing-6);
+}
+
+.dialog-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1600px) {
+  .app-layout {
+    padding: var(--kendo-spacing-6) var(--kendo-spacing-10);
+  }
+  .general-info-sidebar {
+    width: 460px;
+    min-width: 460px;
+  }
+
+  .quick-actions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1280px) {
+  .general-info {
+    flex-direction: column;
+  }
+
+  .general-info-sidebar {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-layout {
+    padding: var(--kendo-spacing-4) var(--kendo-spacing-3);
+  }
+}
+
+/* ========================
+   Notification Popup
+   ======================== */
+.notification-popup {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: var(--kendo-spacing-2);
+  width: 380px;
+  background: var(--kendo-color-surface-alt);
+  border-radius: var(--kendo-border-radius-xxl);
+  box-shadow: var(--kendo-elevation-6);
+  border: 1px solid var(--kendo-color-border);
+  z-index: 200;
+  overflow: hidden;
+}
+
+.notification-popup-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--kendo-spacing-4) var(--kendo-spacing-5);
+  border-bottom: 1px solid var(--kendo-color-border);
+}
+
+.notification-popup-header h3 {
+  font-size: var(--kendo-font-size-md);
+  font-weight: var(--kendo-font-weight-semibold);
+}
+
+.notification-item {
+  display: flex;
+  gap: var(--kendo-spacing-3);
+  padding: var(--kendo-spacing-3) var(--kendo-spacing-5);
+  border-bottom: 1px solid var(--kendo-color-border);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.notification-item:hover {
+  background: var(--kendo-color-surface);
+}
+
+.notification-item.unread {
+  background: rgba(78, 107, 255, 0.03);
+}
+
+.notification-dot {
+  width: var(--kendo-spacing-8);
+  height: var(--kendo-spacing-8);
+  border-radius: var(--kendo-border-radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--kendo-font-size-sm);
+  flex-shrink: 0;
+}
+
+.notification-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.notification-body h5 {
+  font-size: var(--kendo-font-size-sm);
+  font-weight: var(--kendo-font-weight-semibold);
+  color: var(--kendo-color-on-app-surface);
+  margin-bottom: var(--kendo-spacing-0\.5);
+}
+
+.notification-body p {
+  font-size: var(--kendo-font-size-xs);
+  color: var(--kendo-color-subtle);
+  line-height: 1.4;
+}
+
+.notification-time {
+  font-size: 11px;
+  color: var(--kendo-color-subtle);
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* ========================
+   Profile Management Dialog
+   ======================== */
+.profile-management-dialog .k-dialog {
+  border-radius: var(--kendo-border-radius-xxl);
+  overflow: hidden;
+}
+
+.profile-dialog-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kendo-spacing-4);
+}
+
+.profile-dialog-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kendo-spacing-3);
+}
+
+.profile-image-container {
+  width: 100%;
+  border-radius: var(--kendo-border-radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--kendo-color-surface);
+}
+
+.profile-image-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.profile-upload-btn {
+  width: 100%;
+}
+
+.profile-password-policy {
+  background: var(--kendo-color-primary-subtle);
+  border: 1px solid var(--kendo-color-primary-subtle-active);
+  border-radius: var(--kendo-border-radius-lg);
+  padding: var(--kendo-spacing-3);
+}
+
+.profile-password-policy h4 {
+  font-size: var(--kendo-font-size-sm);
+  font-weight: var(--kendo-font-weight-semibold);
+  color: var(--kendo-color-primary);
+  margin-bottom: var(--kendo-spacing-1);
+}
+
+.profile-password-policy ul {
+  margin: 0;
+  padding-left: var(--kendo-spacing-4);
+}
+
+.profile-password-policy li {
+  font-size: var(--kendo-font-size-sm);
+  color: var(--kendo-color-subtle);
+  line-height: 1.5;
+}
+
+.profile-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kendo-spacing-1);
+}
+
+/* ========================
+   Patients Split Panel
+   ======================== */
+.patients-layout {
+  display: flex;
+  gap: var(--kendo-spacing-6);
+  transition: all 0.3s ease;
+  flex: 1;
+  min-height: 400px;
+  max-height: 800px;
+}
+
+.patients-main {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.patients-side-panel {
+  width: 420px;
+  flex-shrink: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.side-panel-card {
+  background: var(--kendo-color-surface-alt);
+  border-radius: var(--kendo-border-radius-xxl);
+  box-shadow: var(--kendo-elevation-2);
+  overflow: hidden;
+  flex: 1;
+  min-height: 300px;
+  max-height: 900px;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--kendo-spacing-4) var(--kendo-spacing-5);
+  border-bottom: 1px solid var(--kendo-color-border);
+}
+
+.side-panel-header h3 {
+  font-size: var(--kendo-font-size-md);
+  font-weight: var(--kendo-font-weight-semibold);
+}
+
+.side-panel-body {
+  padding: var(--kendo-spacing-5);
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+/* ========================
+   Schedule Task Details
+   ======================== */
+.schedule-event-dialog .k-dialog {
+  border-radius: var(--kendo-border-radius-xxl);
+}
+
+.schedule-event-dialog .k-window-titlebar-actions {
+  display: none;
+}
+
+.schedule-event-dialog-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: var(--kendo-spacing-3);
+  font-weight: var(--kendo-font-weight-normal);
+}
+
+.schedule-event-expand-btn {
+  min-width: 28px;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+}
+
+.schedule-event-dialog-body {
+  padding: 0;
+}
+
+.schedule-event-section {
+  padding: var(--kendo-spacing-2) var(--kendo-spacing-2);
+}
+
+.schedule-event-section + .schedule-event-section {
+  border-top: 1px solid var(--kendo-color-border);
+}
+
+.schedule-event-section-title {
+  margin: 0 0 var(--kendo-spacing-2);
+  font-size: var(--kendo-font-size-lg);
+  font-weight: var(--kendo-font-weight-normal);
+  color: var(--kendo-color-on-app-surface);
+}
+
+.schedule-event-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kendo-spacing-3);
+}
+
+.schedule-event-info-item {
+  display: flex;
+  align-items: center;
+  gap: var(--kendo-spacing-3);
+  color: var(--kendo-color-on-app-surface);
+  font-size: var(--kendo-font-size-md);
+}
+
+.schedule-event-info-item .k-svg-icon {
+  color: var(--kendo-color-subtle);
+  width: 1em;
+  height: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.schedule-event-patient-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kendo-spacing-3);
+}
+
+.schedule-event-patient-grid p {
+  margin: 0;
+  font-size: var(--kendo-font-size-md);
+  color: var(--kendo-color-on-app-surface);
+}
+
+/* ========================
+   Patient Profile
+   ======================== */
+.patient-profile-layout {
+  display: flex;
+  gap: var(--kendo-spacing-8);
+  align-items: flex-start;
+}
+
+.patient-profile-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.patient-profile-sidebar {
+  width: 320px;
+  flex-shrink: 0;
+}
+
+.page-heading .k-breadcrumb-item:last-child .k-breadcrumb-root-link {
+  text-decoration: none;
+}
+.k-breadcrumb-last-item .k-breadcrumb-link,
+.k-breadcrumb-link {
+  color: var(--kendo-color-primary);
+}
+
+.profile-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kendo-spacing-6);
+}
+
+.profile-top-row {
+  display: flex;
+  gap: var(--kendo-spacing-6);
+  align-items: stretch;
+}
+
+.profile-top-row > .app-card {
+  flex: 1;
+  min-width: 0;
+  height: 220px;
+  overflow: hidden;
+}
+
+.profile-identity-card {
+  flex: 0 0 410px !important;
+  height: 220px;
+}
+
+.profile-vitals-card .app-card-header,
+.profile-admission-card .app-card-header {
+  padding: var(--kendo-spacing-5) var(--kendo-spacing-5) 0;
+}
+
+.profile-vitals-card,
+.profile-admission-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-vitals-card .app-card-header h3,
+.profile-admission-card .app-card-header h3 {
+  font-size: 16px;
+  font-weight: var(--kendo-font-weight-bold);
+  color: var(--kendo-color-on-app-surface);
+}
+
+.profile-identity-avatar {
+  display: flex;
+  align-items: center;
+  gap: var(--kendo-spacing-4);
+  padding: var(--kendo-spacing-5);
+}
+
+.profile-identity-info {
+  padding: var(--kendo-spacing-5);
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--kendo-spacing-2);
+}
+
+.profile-section-label {
+  font-size: var(--kendo-font-size-sm);
+  font-weight: var(--kendo-font-weight-semibold);
+  color: var(--kendo-color-on-app-surface);
+  margin: 0 0 var(--kendo-spacing-2);
+}
+
+.profile-detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--kendo-spacing-4);
+}
+
+.profile-detail-label {
+  font-size: var(--kendo-font-size-sm);
+  color: var(--kendo-color-subtle);
+}
+
+.profile-detail-value {
+  font-size: var(--kendo-font-size-sm);
+  color: var(--kendo-color-on-app-surface);
+  text-align: right;
+}
+
+.profile-detail-bold {
+  font-weight: var(--kendo-font-weight-semibold);
+}
+
+.profile-metric-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 var(--kendo-spacing-5) var(--kendo-spacing-5);
+  flex: 1;
+}
+
+.profile-metric-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  font-size: 16px;
+}
+
+.profile-metric-item > span:first-child {
+  color: var(--kendo-color-subtle);
+}
+
+.profile-metric-item > span:last-child {
+  font-weight: var(--kendo-font-weight-medium);
+  color: var(--kendo-color-on-app-surface);
+}
+
+.profile-editor-wrap {
+  padding: 0 var(--kendo-spacing-5) var(--kendo-spacing-5);
+}
+
+.profile-editor-wrap .k-editor {
+  border-radius: var(--kendo-border-radius-4xl);
+  overflow: hidden;
+}
+
+.profile-editor-wrap .k-editor-content {
+  height: 260px;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: normal;
+  vertical-align: middle;
+}
+
+.profile-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--kendo-spacing-4);
+  padding: var(--kendo-spacing-5);
+}
+
+.profile-sidebar-content {
+  padding: 0 var(--kendo-spacing-5) var(--kendo-spacing-5);
+}
+
+.profile-sidebar-avatar-section {
+  display: flex;
+  align-items: center;
+  gap: var(--kendo-spacing-3);
+  margin-bottom: var(--kendo-spacing-5);
+}
+
+.profile-sidebar-info-items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kendo-spacing-3);
+  padding-bottom: var(--kendo-spacing-5);
+  border-bottom: 1px solid var(--kendo-color-border);
+  margin-bottom: var(--kendo-spacing-5);
+}
+
+.profile-sidebar-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.profile-sidebar-info-label {
+  font-size: var(--kendo-font-size-sm);
+  color: var(--kendo-color-subtle);
+  font-weight: var(--kendo-font-weight-medium);
+}
+
+.profile-sidebar-messages {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-sidebar-message-item {
+  display: flex;
+  align-items: center;
+  gap: var(--kendo-spacing-3);
+  padding: var(--kendo-spacing-2) 0;
+}
+
+.profile-sidebar-message-name {
+  display: block;
+  font-size: var(--kendo-font-size-sm);
+  font-weight: var(--kendo-font-weight-medium);
+}
+
+.profile-sidebar-message-preview {
+  display: block;
+  font-size: var(--kendo-font-size-sm);
+  color: var(--kendo-color-subtle);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.profile-sidebar-message-time {
+  font-size: var(--kendo-font-size-sm);
+  color: var(--kendo-color-subtle);
+  white-space: nowrap;
+}
+
+.profile-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kendo-spacing-1);
+}
+
+.profile-info-item .label {
+  font-size: var(--kendo-font-size-xs);
+  color: var(--kendo-color-subtle);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.profile-info-item .value {
+  font-size: var(--kendo-font-size-sm);
+  font-weight: var(--kendo-font-weight-medium);
+  color: var(--kendo-color-on-app-surface);
+}
+
+.popup-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 199;
+}
+
+.lab-status-normal {
+  color: var(--kendo-color-success);
+  background: var(--kendo-color-success-subtle);
+}
+
+.lab-status-abnormal {
+  color: var(--kendo-color-warning-on-surface);
+  background: var(--kendo-color-warning-subtle);
+}
+
+.lab-status-critical {
+  color: var(--kendo-color-error);
+  background: var(--kendo-color-error-subtle);
+}
+
+/* ========================
+   Quick Action Cards
+   ======================== */
+.quick-action-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.quick-action-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--kendo-color-secondary);
+  opacity: 60%;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+}
+
+.quick-action-icon g {
+  transition: opacity 0.2s ease;
+}
+
+.quick-action-card:hover .quick-action-icon {
+  transform: scale(1.19); /* 42 → 50px */
+  opacity: 1;
+}
+
+.quick-action-card:hover .quick-action-icon g {
+  opacity: 1;
+}
+
+.quick-action-bottom {
+  margin-top: var(--kendo-spacing-3);
+}
+
+.quick-action-add-wrap {
+  display: inline-flex;
+  align-items: center;
+  background: var(--kendo-color-on-app-surface);
+  border-radius: var(--kendo-border-radius-full);
+  overflow: hidden;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border: none;
+  padding: 0;
+  height: var(--kendo-spacing-10);
+  color: var(--kendo-color-on-primary);
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.quick-action-add-wrap:hover {
+  background: var(--kendo-color-primary);
+}
+
+.quick-action-add-wrap > .k-svg-icon {
+  flex-shrink: 0;
+  align-items: normal;
+  width: var(--kendo-spacing-10);
+}
+
+.quick-action-add-label {
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: var(--kendo-font-size-sm);
+  font-weight: var(--kendo-font-weight-medium);
+  color: var(--kendo-color-on-primary);
+  transition:
+    max-width 0.25s ease,
+    padding 0.25s ease;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.quick-action-add-wrap:hover .quick-action-add-label {
+  max-width: 120px;
+  padding-left: var(--kendo-spacing-2);
+  padding-right: var(--kendo-spacing-3);
+}
+
+/* ========================
+   Next Patient Section
+   ======================== */
+.next-patient-section {
+  padding: 0 var(--kendo-spacing-5) var(--kendo-spacing-4);
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  min-height: 0;
+}
+
+.next-patient-top {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--kendo-spacing-3);
+  margin-bottom: var(--kendo-spacing-4);
+}
+
+.next-patient-avatar {
+  width: var(--kendo-spacing-14);
+  height: var(--kendo-spacing-14);
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--kendo-color-border);
+  flex-shrink: 0;
+}
+
+.next-patient-avatar-initials {
+  background: var(--avatar-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--kendo-color-surface-alt);
+  font-size: var(--kendo-font-size-lg);
+  font-weight: var(--kendo-font-weight-semibold);
+}
+
+.next-patient-info {
+  flex: 1;
+}
+
+.next-patient-name-row {
+  display: flex;
+  align-items: center;
+  gap: var(--kendo-spacing-2);
+}
+
+.next-patient-name-row h4 {
+  font-size: var(--kendo-font-size-lg);
+  font-weight: var(--kendo-font-weight-medium);
+  color: var(--kendo-color-on-app-surface);
+  margin: 0;
+}
+
+.view-profile-link {
+  color: var(--kendo-color-subtle);
+  font-size: var(--kendo-font-size-sm);
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--kendo-spacing-1);
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+
+.view-profile-link:hover {
+  text-decoration: underline;
+  color: var(--kendo-color-primary);
+}
+
+.next-patient-info p {
+  font-size: var(--kendo-font-size-sm);
+  color: var(--kendo-color-subtle);
+  margin-top: var(--kendo-spacing-0\.5);
+}
+
+.next-patient-time {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.next-patient-time .time-value {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--kendo-spacing-1);
+  font-size: var(--kendo-font-size-sm);
+  color: var(--kendo-color-on-app-surface);
+}
+
+.next-patient-time .time-label {
+  display: block;
+  font-size: var(--kendo-font-size-xs);
+  color: var(--kendo-color-subtle);
+  margin-top: var(--kendo-spacing-0\.5);
+}
+
+.next-patient-detail-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--kendo-spacing-3);
+  padding: var(--kendo-spacing-3);
+  border-radius: var(--kendo-border-radius-lg);
+  margin-bottom: var(--kendo-spacing-2\.5);
+  position: relative;
+  border-width: 1px 2px 2px 1px;
+  border-style: solid;
+  border-color: var(--kendo-color-border, rgba(0, 0, 0, 0.08));
+  transition: box-shadow 0.2s ease;
+}
+
+.next-patient-detail-card:hover {
+  box-shadow: var(--kendo-elevation-3);
+}
+
+.next-patient-detail-card.reason-card,
+.next-patient-detail-card.allergy-card {
+  background: var(--kendo-color-surface-alt, #ffffff);
+}
+
+.detail-card-icon {
+  width: var(--kendo-spacing-9);
+  height: var(--kendo-spacing-9);
+  border-radius: var(--kendo-border-radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.reason-icon {
+  background: var(--kendo-color-info-subtle, #d2e2fb);
+  color: var(--kendo-color-info-emphasis, #6098f2);
+}
+
+.allergy-icon {
+  background: var(--kendo-color-warning-subtle, #fff4d4);
+  color: var(--kendo-color-warning-emphasis, #ffd54f);
+}
+
+.detail-card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.detail-card-content h5 {
+  font-size: var(--kendo-font-size-sm);
+  font-weight: var(--kendo-font-weight-semibold);
+  color: var(--kendo-color-on-app-surface);
+  margin-bottom: var(--kendo-spacing-0\.5);
+}
+
+.detail-card-content p {
+  font-size: var(--kendo-font-size-xs);
+  color: var(--kendo-color-subtle);
+}
+
+.detail-card-action {
+  background: none;
+  border: none;
+  color: var(--kendo-color-subtle);
+  font-size: var(--kendo-font-size-sm);
+  font-weight: var(--kendo-font-weight-medium);
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: inherit;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.detail-card-action:hover {
+  text-decoration: underline;
+  color: var(--kendo-color-primary);
+}
+
+/* ========================
+   Daily Alerts
+   ======================== */
+.daily-alerts-list {
+  padding: 0 var(--kendo-spacing-5) var(--kendo-spacing-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--kendo-spacing-5);
+  flex: 1 1 0;
+  min-height: 0;
+  max-height: none;
+  overflow-y: auto;
+}
+
+.daily-alert-item {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding: var(--kendo-spacing-2) var(--kendo-spacing-4);
+  border-radius: var(--kendo-border-radius-lg);
+  border-width: 1px 1px 1px 0px;
+  border-style: solid;
+  border-color: var(--kendo-color-border, #17386314);
+  border-left: 3px solid var(--kendo-color-primary-emphasis, #ff6358);
+  background: var(--kendo-color-primary-subtle, #ffeceb);
+  transition: box-shadow 0.2s ease;
+}
+
+.daily-alert-item:hover {
+  box-shadow: var(--kendo-elevation-3);
+}
+
+.daily-alert-content h5 {
+  font-size: var(--kendo-font-size-md);
+  font-weight: var(--kendo-font-weight-medium);
+  color: var(--kendo-color-on-app-surface);
+  margin-bottom: var(--kendo-spacing-0\.5);
+}
+
+.daily-alert-time {
+  font-size: var(--kendo-font-size-sm);
+  color: var(--kendo-color-subtle);
+}
+
+/* ========================
+   Schedule Two-Column Layout
+   ======================== */
+.schedule-layout {
+  display: flex;
+  gap: var(--kendo-spacing-8);
+}
+
+.daily-tasks-panel {
+  width: 610px;
+  flex-shrink: 0;
+}
+
+.daily-tasks-list {
+  max-height: 700px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--kendo-spacing-5);
+  padding: 0 var(--kendo-spacing-5) var(--kendo-spacing-5);
+}
+
+.daily-task-item {
+  display: flex;
+  align-items: center;
+  gap: var(--kendo-spacing-2\.5);
+  padding: var(--kendo-spacing-3) var(--kendo-spacing-4);
+  background: var(--kendo-color-surface-alt);
+  border-radius: var(--kendo-border-radius-lg);
+  border: 1px solid var(--kendo-color-border);
+  transition: box-shadow 0.2s ease;
+}
+
+.daily-task-item:hover {
+  box-shadow: var(--kendo-elevation-3);
+}
+
+.daily-task-item.completed .task-text {
+  text-decoration: line-through;
+  color: var(--kendo-color-subtle);
+}
+
+.k-checkbox {
+  border-radius: var(--kendo-border-radius-full);
+}
+
+.task-text {
+  flex: 1;
+  font-size: var(--kendo-font-size-sm);
+  color: var(--kendo-color-on-app-surface);
+  line-height: 1.4;
+}
+
+.task-priority {
+  font-size: var(--kendo-font-size-xs);
+  font-weight: var(--kendo-font-weight-medium);
+  padding: var(--kendo-spacing-0\.5) var(--kendo-spacing-2);
+  border-radius: var(--kendo-border-radius-full);
+  flex-shrink: 0;
+  border: 1px solid transparent;
+  height: var(--kendo-spacing-7\.5);
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ========================
+   Responsive Schedule
+   ======================== */
+@media (max-width: 1200px) {
+  .schedule-layout {
+    flex-direction: column;
+  }
+  .daily-tasks-panel {
+    width: 100%;
+  }
+  .general-info-main > .app-card:last-child {
+    flex: initial;
+  }
+  .next-patient-section {
+    flex: initial;
+  }
+  .daily-alerts-list {
+    max-height: none;
+  }
+}
+
+/* ========================
+   Utility: Status Badges (Chip-based: patients grid, task list)
+   ======================== */
+.k-chip .k-chip-label {
+  font-family: var(--kendo-font-family);
+  font-weight: var(--kendo-font-weight-normal);
+  font-style: normal;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: var(--kendo-letter-spacing, normal);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.k-chip {
+  padding: var(--kendo-spacing-1\.5) var(--kendo-spacing-0\.5);
+}
+
+/* ========================
+   Utility: Appointment Badges (span-based: appointments grid)
+   ======================== */
+.appointment-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--kendo-spacing-7\.5);
+  padding: 0 var(--kendo-spacing-3);
+  border-radius: var(--kendo-border-radius-full);
+  font-size: var(--kendo-font-size-xs);
+  font-weight: var(--kendo-font-weight-medium);
+  line-height: 1;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.appointment-badge-complete {
+  background: var(--kendo-color-primary-subtle-hover, #eaeff5);
+  color: var(--kendo-color-primary-on-subtle);
+  border: 1px solid var(--kendo-color-primary-emphasis);
+}
+
+.appointment-badge-in-progress {
+  background: var(--kendo-color-secondary-subtle-hover, #ebecff);
+  color: var(--kendo-color-secondary-on-subtle);
+  border: 1px solid var(--kendo-color-secondary-emphasis);
+}
+
+.appointment-badge-upcoming {
+  background: var(--kendo-color-tertiary-subtle, #fdf6ff);
+  color: var(--kendo-color-tertiary-on-subtle);
+  border: 1px solid var(--kendo-color-tertiary-emphasis);
+}
+
+.appointment-badge-cancelled {
+  background: var(--kendo-color-info-subtle, #d2e2fb);
+  color: var(--kendo-color-info-on-subtle);
+  border: 1px solid var(--kendo-color-info-emphasis);
+}
+
+/* ========================
+   Utility: Avatar Circles
+   ======================== */
+.avatar-circle {
+  border-radius: 50%;
+  background: var(--avatar-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--kendo-color-surface-alt);
+  font-weight: var(--kendo-font-weight-semibold);
+  flex-shrink: 0;
+  min-width: 0;
+  aspect-ratio: 1 / 1;
+}
+
+.avatar-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+.avatar-circle-sm {
+  width: var(--kendo-spacing-8);
+  height: var(--kendo-spacing-8);
+  font-size: var(--kendo-font-size-xs);
+}
+
+.avatar-circle-md {
+  width: var(--kendo-spacing-10);
+  height: var(--kendo-spacing-10);
+  font-size: var(--kendo-font-size-sm);
+}
+
+.avatar-circle-lg {
+  width: var(--kendo-spacing-14);
+  height: var(--kendo-spacing-14);
+  font-size: var(--kendo-font-size-lg);
+}
+
+.avatar-circle-xl {
+  width: var(--kendo-spacing-18);
+  height: var(--kendo-spacing-18);
+  min-width: var(--kendo-spacing-18);
+  font-size: var(--kendo-font-size-xl);
+}
+
+/* ========================
+   Utility: Form Label
+   ======================== */
+.form-label {
+  display: block;
+  font-size: var(--kendo-font-size-sm);
+  font-weight: var(--kendo-font-weight-medium);
+  margin-bottom: var(--kendo-spacing-1\.5);
+  color: var(--kendo-color-subtle);
+}
+
+.detail-label {
+  display: block;
+  font-size: var(--kendo-font-size-sm);
+  font-weight: var(--kendo-font-weight-medium);
+  margin-bottom: var(--kendo-spacing-1\.5);
+  color: var(--kendo-color-subtle);
+}
+
+.form-label-sm {
+  display: block;
+  font-size: var(--kendo-font-size-sm);
+  font-weight: var(--kendo-font-weight-medium);
+  margin-bottom: var(--kendo-spacing-1);
+  color: var(--kendo-color-subtle);
+}
+
+/* ========================
+   Utility: Window Form Layout
+   ======================== */
+.window-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kendo-spacing-4);
+  padding: var(--kendo-spacing-2);
+}
+
+.window-form-actions {
+  display: flex;
+  gap: var(--kendo-spacing-2);
+  justify-content: flex-end;
+}
+
+/* ========================
+   Lab Request Window
+   ======================== */
+.lab-request-window {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kendo-spacing-4);
+  padding: var(--kendo-spacing-2);
+  height: 100%;
+}
+
+.lab-test-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--kendo-spacing-3);
+  min-height: 0;
+  border: 1px solid var(--kendo-color-border);
+  border-radius: var(--kendo-border-radius-lg);
+  padding: var(--kendo-spacing-3);
+}
+
+.lab-test-item.k-button {
+  display: flex;
+
+  justify-content: flex-start;
+  gap: var(--kendo-spacing-3);
+  padding: var(--kendo-spacing-3) var(--kendo-spacing-4);
+  background: var(--kendo-color-surface-alt);
+  border-radius: var(--kendo-border-radius-lg);
+  border: 1px solid var(--kendo-color-border);
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+  width: 100%;
+  text-align: left;
+}
+
+.lab-test-item:hover {
+  box-shadow: var(--kendo-elevation-3);
+}
+
+.lab-test-name {
+  flex: 1;
+  font-size: var(--kendo-font-size-sm);
+  color: var(--kendo-color-on-app-surface);
+  margin-left: var(--kendo-spacing-3);
+}
+
+/* ========================
+   Utility: Page Form Layout
+   ======================== */
+.page-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kendo-spacing-5);
+}
+
+.page-form-actions {
+  display: flex;
+  gap: var(--kendo-spacing-3);
+  justify-content: flex-end;
+}
+
+/* ========================
+   Utility: Page Heading with Actions
+   ======================== */
+.page-heading-actions {
+  display: flex;
+  gap: var(--kendo-spacing-2);
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* ========================
+   Utility: Text Colors
+   ======================== */
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-primary {
+  color: var(--kendo-color-primary);
+}
+
+.text-subtle {
+  color: var(--kendo-color-subtle);
+}
+
+.text-secondary {
+  color: var(--kendo-color-subtle);
+}
+
+.text-error {
+  color: var(--kendo-color-error);
+}
+
+/* ========================
+   AppBar
+   ======================== */
+.app-logo img {
+  height: 42px;
+}
+
+.app-search-input.k-input,
+.app-search-input.k-combobox {
+  width: 272px;
+  height: 40px;
+}
+
+.app-search-combo-wrapper {
+  display: inline-flex;
+  align-items: center;
+}
+
+.app-search-input .k-button {
+  display: none;
+}
+
+.patient-search-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+}
+
+.notif-wrapper {
+  position: relative;
+}
+
+.app-topbar-avatar {
+  cursor: pointer;
+}
+
+/* ========================
+   Page Heading
+   ======================== */
+.page-heading-back-btn {
+  margin-bottom: 8px;
+}
+
+/* ========================
+   Appointments Grid
+   ======================== */
+.appointments-grid-wrapper {
+  padding: 0 20px 20px;
+}
+
+.appointments-grid-wrapper .k-grid {
+  max-height: 420px;
+}
+
+/* ========================
+   Detail Card Buttons
+   ======================== */
+.detail-card-details-btn {
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+/* ========================
+   Window Form
+   ======================== */
+.window-form-patient-select {
+  width: 250px;
+}
+
+.window-form .k-textarea,
+.window-form .k-input {
+  width: 100%;
+}
+
+/* ========================
+   Dialog Detail Body
+   ======================== */
+.dialog-detail-body {
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dialog-body-list {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.dialog-confirm-text {
+  padding: var(--kendo-spacing-4) 0;
+}
+
+/* ========================
+   Form Page Layout
+   ======================== */
+.form-page-card {
+  max-width: 800px;
+}
+
+.form-page-card .app-card-body {
+  padding: var(--kendo-spacing-6);
+}
+
+.page-form .k-input,
+.page-form .k-dropdownlist,
+.page-form .k-multiselect,
+.page-form .k-textarea {
+  width: 100%;
+}
+
+.page-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--kendo-spacing-4);
+}
+
+/* ========================
+   Schedule Page
+   ======================== */
+.daily-tasks-panel .app-card {
+  height: 100%;
+}
+
+.daily-tasks-header-search {
+  width: 210px;
+  height: 40px;
+}
+
+.event-detail-wrapper {
+  padding: 4px 0;
+}
+
+/* ========================
+   Patient Profile
+   ======================== */
+.profile-identity-name-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.profile-identity-name-row h3 {
+  margin: 0;
+}
+
+.profile-file-input {
+  display: none;
+}
+
+/* ========================
+   Patients Grid
+   ======================== */
+.patients-main .k-grid {
+  height: 100%;
+}
+
+/* ========================
+   Clinical Analytics
+   ======================== */
+.analytics-patient-filter {
+  width: 280px;
+}
+
+.chart-card--mb {
+  margin-bottom: 24px;
+}
+
+.chart-card--flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-card-subtitle {
+  font-size: 13px;
+  color: var(--kendo-color-subtle);
+  margin-bottom: 16px;
+}
+
+.lab-ranges-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.chart-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.risk-score-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.risk-score-out-of {
+  font-size: 13px;
+  color: var(--kendo-color-subtle);
+  margin-top: 8px;
+}
+
+.risk-score-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 24px;
+  width: 100%;
+}
+
+.risk-score-legend-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.risk-score-legend-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.risk-score-legend-range {
+  color: var(--kendo-color-subtle);
+}
+
+.risk-score-legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* ========================
+   Utility: Priority Badges
+   ======================== */
+.priority-badge {
+  font-size: 11px;
+  font-weight: var(--kendo-font-weight-medium);
+  padding: var(--kendo-spacing-0\.5) var(--kendo-spacing-2);
+  border-radius: var(--kendo-border-radius-full);
+  border: 1px solid transparent;
+}
+
+.priority-badge-high {
+  background: var(--kendo-color-error-subtle, #fcddda);
+  color: var(--kendo-color-error-on-subtle, #7a0c00);
+  border-color: var(--kendo-color-error-emphasis, #f76f60);
+}
+
+.priority-badge-medium {
+  background: var(--kendo-color-warning-subtle, #fff4d3);
+  color: var(--kendo-color-warning-on-subtle, #5e4700);
+  border-color: var(--kendo-color-warning-emphasis, #ffd760);
+}
+
+.priority-badge-low {
+  background: var(--kendo-color-success-subtle, #dcf0d3);
+  color: var(--kendo-color-success-on-subtle, #1c5a00);
+  border-color: var(--kendo-color-success-emphasis, #81d15f);
+}
+
+/* ========================
+   Utility: Notification Type Colors
+   ======================== */
+.notif-bg-info {
+  background: var(--kendo-color-info-subtle);
+}
+
+.notif-bg-warning {
+  background: var(--kendo-color-warning-subtle);
+}
+
+.notif-bg-success {
+  background: var(--kendo-color-success-subtle);
+}
+
+.notif-bg-error {
+  background: var(--kendo-color-error-subtle);
+}
+
+/* ========================
+   Utility: Clinical Note Cards
+   ======================== */
+.note-card {
+  border: 1px solid var(--kendo-color-border);
+  border-radius: var(--kendo-border-radius-lg);
+  padding: var(--kendo-spacing-4);
+}
+
+.note-card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--kendo-spacing-2);
+}
+
+.note-card-type {
+  font-size: var(--kendo-font-size-sm);
+  font-weight: var(--kendo-font-weight-semibold);
+  color: var(--kendo-color-primary);
+}
+
+.note-card-date {
+  font-size: var(--kendo-font-size-xs);
+  color: var(--kendo-color-subtle);
+}
+
+.note-card-text {
+  font-size: var(--kendo-font-size-sm);
+  line-height: 1.6;
+  color: var(--kendo-color-on-app-surface);
+}
+
+/* ========================
+   Utility: Empty State
+   ======================== */
+.empty-state-text {
+  color: var(--kendo-color-subtle);
+  padding: var(--kendo-spacing-3) 0;
+}
