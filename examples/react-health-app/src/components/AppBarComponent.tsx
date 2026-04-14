@@ -9,9 +9,11 @@ import {
 } from "@progress/kendo-react-layout";
 import {
   Button,
+  DropDownButton,
   SegmentedControl,
   ToolbarSeparator,
 } from "@progress/kendo-react-buttons";
+import type { DropDownButtonItemClickEvent } from "@progress/kendo-react-buttons";
 import { Badge, BadgeContainer } from "@progress/kendo-react-indicators";
 import { notifications as initialNotifications } from "../data/sampleData";
 import logo from "../assets/logo.svg";
@@ -25,6 +27,7 @@ import {
   appBarSearchIcon,
   transparencyIcon,
   bellIcon as bellCustomIcon,
+  hamburgerMenuIcon,
 } from "../icons/customIcons";
 import NotificationPanel from "./NotificationPanel";
 import ProfileDialog from "./ProfileDialog";
@@ -51,8 +54,14 @@ export default function AppBarComponent() {
   const { profile, updateProfile } = useDoctorProfile();
   const notifRef = useRef<HTMLDivElement>(null);
 
-  const isCompact = useMediaQuery("(max-width: 1300px)");
-  const isMobile = useMediaQuery("(max-width: 768px)");
+  const isCompact = useMediaQuery("(max-width: 1439px)");
+  const isSmallScreen = useMediaQuery("(max-width: 899px)");
+  const isMobile = useMediaQuery("(max-width: 575px)");
+
+  const handleMobileNavSelect = (e: DropDownButtonItemClickEvent) => {
+    const path = e.item.path as string;
+    if (path) navigate(path);
+  };
 
   const handleTransparencyToggle = () => {
     const next = !transparentMode;
@@ -77,9 +86,29 @@ export default function AppBarComponent() {
       {/* Logo */}
       <AppBarSection>
         <NavLink to="/" className="app-logo">
-          <img src={isMobile ? logoShort : logo} alt="Logo" />
+          <img src={isSmallScreen ? logoShort : logo} alt="Logo" />
         </NavLink>
       </AppBarSection>
+
+      {isMobile && (
+        <>
+          <ToolbarSeparator className="app-topbar-separator" />
+          <AppBarSection>
+            <DropDownButton
+              svgIcon={hamburgerMenuIcon}
+              fillMode="flat"
+              rounded="full"
+              items={navItems.map((item) => ({
+                text: item.label,
+                svgIcon: item.icon,
+                path: item.path,
+              }))}
+              onItemClick={handleMobileNavSelect}
+              popupSettings={{ popupClass: "mobile-nav-popup" }}
+            />
+          </AppBarSection>
+        </>
+      )}
 
       <AppBarSpacer />
 

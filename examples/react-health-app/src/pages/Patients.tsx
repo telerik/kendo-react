@@ -11,6 +11,7 @@ import {
   exportButtonIcon,
   gridViewProfileIcon,
 } from "../icons/customIcons";
+import { useMediaQuery } from "../hooks/useMediaQuery";
 import { Chat } from "@progress/kendo-react-conversational-ui";
 import { patients } from "../data/sampleData";
 import StatusBadge from "../components/StatusBadge";
@@ -60,11 +61,13 @@ const StatusCell = memo(function StatusCell(
 const NavigateContext = createContext<ReturnType<typeof useNavigate> | null>(
   null,
 );
+const IconOnlyContext = createContext(false);
 
 const ActionsCell = memo(function ActionsCell(
   props: Readonly<GridCustomCellProps>,
 ) {
   const navigate = useContext(NavigateContext);
+  const isIconOnly = useContext(IconOnlyContext);
   return (
     <td {...props.tdProps}>
       <Button
@@ -76,7 +79,7 @@ const ActionsCell = memo(function ActionsCell(
           navigate?.(`/patients/${props.dataItem.id}`);
         }}
       >
-        View Profile
+        {!isIconOnly && "View Profile"}
       </Button>
     </td>
   );
@@ -123,6 +126,9 @@ export default function Patients() {
   const gridRef = useRef<GridHandle | null>(null);
   const navigate = useNavigate();
   const [showAiPanel, setShowAiPanel] = useState(false);
+  const isViewProfileIconOnly = useMediaQuery(
+    "(max-width: 899px), (min-width: 1440px) and (max-width: 1759px)",
+  );
 
   const handleGridExportButtonClick = () => {
     gridRef.current?.exportAsPdf();
@@ -133,71 +139,77 @@ export default function Patients() {
   };
   return (
     <NavigateContext.Provider value={navigate}>
-      <PageHeading
-        title="Patients"
-        subtitle="Monitor patient trends, vitals, lab results, and risk levels in one place"
-        actions={
-          <>
-            <Button
-              svgIcon={aiAssistanceSparklesIcon}
-              themeColor="primary"
-              rounded="full"
-              onClick={() => setShowAiPanel(!showAiPanel)}
-            >
-              AI Assistance
-            </Button>
-            <Button
-              svgIcon={exportButtonIcon}
-              themeColor="base"
-              rounded="full"
-              onClick={handleGridExportButtonClick}
-            >
-              Export
-            </Button>
-          </>
-        }
-      />
+      <IconOnlyContext.Provider value={isViewProfileIconOnly}>
+        <PageHeading
+          title="Patients"
+          subtitle="Monitor patient trends, vitals, lab results, and risk levels in one place"
+          actions={
+            <>
+              <Button
+                svgIcon={aiAssistanceSparklesIcon}
+                themeColor="primary"
+                rounded="full"
+                onClick={() => setShowAiPanel(!showAiPanel)}
+              >
+                AI Assistance
+              </Button>
+              <Button
+                svgIcon={exportButtonIcon}
+                themeColor="base"
+                rounded="full"
+                onClick={handleGridExportButtonClick}
+              >
+                Export
+              </Button>
+            </>
+          }
+        />
 
-      <div className="patients-layout">
-        <div className="patients-main">
-          <Grid
-            ref={gridRef}
-            data={patients}
-            sortable
-            filterable
-            autoProcessData
-            defaultTake={15}
-            pageable={{
-              pageSizes: [15, 30, 45],
-              buttonCount: 5,
-              info: true,
-              previousNext: true,
-            }}
-            pdf={true}
-            onPdfExport={handleGridPdfExport}
-          >
-            <GridColumn
-              field="name"
-              title="Patient Name"
-              cells={{ data: PatientNameCell }}
-            />
-            <GridColumn field="age" title="Age" filter="numeric" />
-            <GridColumn
-              field="status"
-              title="Status"
-              cells={{ data: StatusCell }}
-            />
-            <GridColumn field="gender" title="Gender" />
-            <GridColumn field="bloodType" title="Blood Type" />
-            <GridColumn field="ward" title="Ward" />
-            <GridColumn field="diagnosis" title="Diagnosis" />
-            <GridColumn title="Actions" cells={{ data: ActionsCell }} />
-          </Grid>
+        <div className="patients-layout">
+          <div className="patients-main">
+            <Grid
+              ref={gridRef}
+              data={patients}
+              sortable
+              filterable
+              autoProcessData
+              defaultTake={15}
+              pageable={{
+                pageSizes: [15, 30, 45],
+                buttonCount: 5,
+                info: true,
+                previousNext: true,
+              }}
+              pdf={true}
+              onPdfExport={handleGridPdfExport}
+            >
+              <GridColumn
+                field="name"
+                title="Patient Name"
+                cells={{ data: PatientNameCell }}
+              />
+              <GridColumn field="age" title="Age" filter="numeric" />
+              <GridColumn
+                field="status"
+                title="Status"
+                cells={{ data: StatusCell }}
+              />
+              <GridColumn field="gender" title="Gender" />
+              <GridColumn field="bloodType" title="Blood Type" />
+              <GridColumn field="ward" title="Ward" />
+              <GridColumn field="diagnosis" title="Diagnosis" />
+              <GridColumn
+                title="Actions"
+                filterable={false}
+                cells={{ data: ActionsCell }}
+              />
+            </Grid>
+          </div>
+
+          {/* AI Assistance Panel (KendoReact Chat) */}
+          {showAiPanel && <AIChatPanel />}
         </div>
-
-        {/* AI Assistance Panel (KendoReact Chat) */}
-        {showAiPanel && <AIChatPanel />}
-      </div>
+      </IconOnlyContext.Provider>
     </NavigateContext.Provider>
   );
 }

@@ -1,73 +1,50 @@
-# React + TypeScript + Vite
+# Healthcare Sample App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A healthcare dashboard application built with React and KendoReact, generated from a Figma design.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19** + **TypeScript 5.9** + **Vite 8**
+- **KendoReact** — Grid, Scheduler, Charts, Gauges, Form, Dialogs, and more
+- **Kendo Default Theme** (`@progress/kendo-theme-default`)
+- **react-router-dom v7** — client-side routing
+- **Poppins** + **Roboto** fonts via Google Fonts
 
-## React Compiler
+## Pages
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Route           | Page               | Description                                                  |
+| --------------- | ------------------ | ------------------------------------------------------------ |
+| `/`             | Dashboard          | Overview with appointments grid, quick actions, daily alerts |
+| `/schedule`     | Schedule           | Scheduler calendar with daily task management                |
+| `/patients`     | Patients           | Searchable patient list with AI chat assistant               |
+| `/patients/:id` | Patient Profile    | Detailed patient view with vitals, notes, and lab results    |
+| `/analytics`    | Clinical Analytics | Charts and gauges for clinical data visualization            |
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── components/     Shared UI components (AppBar, Layout, dialogs, badges)
+├── context/        React context providers (DoctorProfile)
+├── data/           Sample data, TypeScript interfaces
+├── hooks/          Custom hooks (useAIChat, useMediaQuery)
+├── icons/          Custom SVG icon definitions
+├── pages/          Route-level page components
+└── styles.css      Global styles and CSS custom properties
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
+
+## Scripts
+
+| Command           | Description                         |
+| ----------------- | ----------------------------------- |
+| `npm run dev`     | Start development server            |
+| `npm run build`   | Type-check and build for production |
+| `npm run lint`    | Run ESLint                          |
+| `npm run preview` | Preview production build locally    |

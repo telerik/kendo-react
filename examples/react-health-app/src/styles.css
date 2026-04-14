@@ -428,6 +428,11 @@ body {
   text-overflow: ellipsis;
 }
 
+.schedule-event-dialog .k-window-content {
+  padding-inline: 0;
+  padding-block: 0;
+}
+
 .k-window .k-window-titlebar,
 .k-dialog .k-dialog-titlebar {
   background: var(--kendo-color-surface-alt);
@@ -493,7 +498,7 @@ body {
 .app-layout {
   display: flex;
   flex-direction: column;
-  padding: var(--kendo-spacing-10) calc(var(--kendo-spacing-10) * 3);
+  padding: var(--page-padding-block) var(--page-padding-inline);
   position: relative;
   height: 100vh;
   overflow: hidden;
@@ -530,7 +535,7 @@ body {
 .app-header {
   flex-shrink: 0;
   z-index: 10;
-  padding-bottom: var(--kendo-spacing-8);
+  padding-bottom: var(--page-gap);
 }
 
 .app-content {
@@ -543,7 +548,7 @@ body {
 }
 
 .page-heading {
-  margin-top: var(--kendo-spacing-8);
+  margin-top: var(--page-gap);
   display: flex;
   flex-direction: column;
   gap: var(--kendo-spacing-3);
@@ -591,7 +596,7 @@ body {
 
 .general-info {
   display: flex;
-  gap: var(--kendo-spacing-8);
+  gap: var(--page-gap);
   align-items: stretch;
 }
 
@@ -599,7 +604,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: var(--kendo-spacing-8);
+  gap: var(--page-gap);
   min-height: 0;
 }
 
@@ -1116,28 +1121,68 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   justify-content: center;
 }
 
-@media (max-width: 1600px) {
-  .app-layout {
-    padding: var(--kendo-spacing-6) var(--kendo-spacing-10);
-  }
-  .general-info-sidebar {
-    width: 460px;
-    min-width: 460px;
-  }
+/* ========================
+   Responsive Breakpoints
+   ======================== */
 
+/* Default: 900px–1439px */
+:root {
+  --page-gap: var(--kendo-spacing-6);
+  --page-padding-block: var(--kendo-spacing-8);
+  --page-padding-inline: var(--kendo-spacing-10);
+}
+
+/* 1920px+ — content 87.5%, padding 6.25% each side */
+@media (min-width: 1920px) {
+  :root {
+    --page-padding-inline: 6.25%;
+  }
+}
+
+/* 1760px–1919px — content fixed 1680px, rest is padding */
+@media (min-width: 1760px) and (max-width: 1919px) {
+  :root {
+    --page-padding-inline: calc((100vw - 1680px) / 2);
+  }
+}
+
+/* 1440px–1759px — gaps 24px, icon-only View Profile */
+@media (min-width: 1440px) and (max-width: 1759px) {
+  :root {
+    --page-padding-inline: calc(var(--kendo-spacing-10) * 3);
+  }
   .quick-actions {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 1280px) {
+/* 900px–1439px (default values already set in :root) */
+@media (max-width: 1439px) {
+  .general-info .general-info-sidebar {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .quick-actions {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .general-info {
     flex-direction: column;
   }
-
-  .general-info-sidebar {
+  .schedule-layout {
+    flex-direction: column;
+  }
+  .schedule-layout .daily-tasks-panel {
     width: 100%;
-    min-width: 0;
+  }
+  .general-info-main > .app-card:last-child {
+    flex: initial;
+  }
+  .next-patient-section {
+    flex: initial;
+  }
+  .daily-alerts-list {
+    max-height: none;
   }
 }
 
@@ -1147,9 +1192,26 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   }
 }
 
-@media (max-width: 600px) {
-  .app-layout {
-    padding: var(--kendo-spacing-4) var(--kendo-spacing-3);
+/* Below 900px — gaps 16px, padding 24px, icon-only View Profile, stacked layout */
+@media (max-width: 899px) {
+  :root {
+    --page-gap: var(--kendo-spacing-4);
+    --page-padding-block: var(--kendo-spacing-6);
+  }
+
+  .general-info {
+    flex-direction: column;
+  }
+
+  .app-topbar-right {
+    gap: var(--kendo-spacing-0);
+  }
+}
+
+/* Below 576px — compact horizontal padding */
+@media (max-width: 575px) {
+  :root {
+    --page-padding-inline: var(--kendo-spacing-3);
   }
 }
 
@@ -1268,6 +1330,7 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
   display: block;
 }
 
@@ -1311,7 +1374,7 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
    ======================== */
 .patients-layout {
   display: flex;
-  gap: var(--kendo-spacing-6);
+  gap: var(--page-gap);
   transition: all 0.3s ease;
   flex: 1;
   min-height: 400px;
@@ -1385,7 +1448,8 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   justify-content: space-between;
   width: 100%;
   gap: var(--kendo-spacing-3);
-  font-weight: var(--kendo-font-weight-normal);
+  font-weight: var(--kendo-font-weight-bold);
+  font-size: var(--kendo-font-size-md);
 }
 
 .schedule-event-expand-btn {
@@ -1400,7 +1464,7 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
 }
 
 .schedule-event-section {
-  padding: var(--kendo-spacing-2) var(--kendo-spacing-2);
+  padding: var(--kendo-spacing-5);
 }
 
 .schedule-event-section + .schedule-event-section {
@@ -1408,8 +1472,8 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
 }
 
 .schedule-event-section-title {
-  margin: 0 0 var(--kendo-spacing-2);
-  font-size: var(--kendo-font-size-lg);
+  margin: 0 0 var(--kendo-spacing-4);
+  font-size: var(--kendo-font-size-md);
   font-weight: var(--kendo-font-weight-normal);
   color: var(--kendo-color-on-app-surface);
 }
@@ -1425,7 +1489,7 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   align-items: center;
   gap: var(--kendo-spacing-3);
   color: var(--kendo-color-on-app-surface);
-  font-size: var(--kendo-font-size-md);
+  font-size: var(--kendo-font-size-sm);
 }
 
 .schedule-event-info-item .k-svg-icon {
@@ -1453,7 +1517,7 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
    ======================== */
 .patient-profile-layout {
   display: flex;
-  gap: var(--kendo-spacing-8);
+  gap: var(--page-gap);
   align-items: flex-start;
 }
 
@@ -2031,7 +2095,7 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
    ======================== */
 .schedule-layout {
   display: flex;
-  gap: var(--kendo-spacing-8);
+  gap: var(--page-gap);
 }
 
 .daily-tasks-panel {
@@ -2089,27 +2153,6 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   height: var(--kendo-spacing-7\.5);
   display: inline-flex;
   align-items: center;
-}
-
-/* ========================
-   Responsive Schedule
-   ======================== */
-@media (max-width: 1200px) {
-  .schedule-layout {
-    flex-direction: column;
-  }
-  .daily-tasks-panel {
-    width: 100%;
-  }
-  .general-info-main > .app-card:last-child {
-    flex: initial;
-  }
-  .next-patient-section {
-    flex: initial;
-  }
-  .daily-alerts-list {
-    max-height: none;
-  }
 }
 
 /* ========================
@@ -2687,4 +2730,62 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
 .empty-state-text {
   color: var(--kendo-color-subtle);
   padding: var(--kendo-spacing-3) 0;
+}
+
+/* ========================
+   Mobile Nav DropDownButton Popup
+   ======================== */
+.mobile-nav-popup {
+  border-radius: var(--kendo-border-radius-xxl);
+  border: 1px solid var(--kendo-color-border);
+  box-shadow: var(--kendo-elevation-4);
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+}
+
+.mobile-nav-popup .k-menu-group,
+.mobile-nav-popup .k-list-ul {
+  padding: var(--kendo-spacing-2);
+  gap: var(--kendo-spacing-0\.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-nav-popup .k-list-item,
+.mobile-nav-popup .k-menu-item {
+  border-radius: var(--kendo-border-radius-sm);
+  padding: var(--kendo-spacing-1) var(--kendo-spacing-2);
+  gap: var(--kendo-spacing-2);
+  font-size: var(--kendo-font-size-md);
+  line-height: 1.5;
+}
+
+.mobile-nav-popup .k-list-item:hover,
+.mobile-nav-popup .k-list-item.k-hover,
+.mobile-nav-popup .k-menu-item:hover {
+  background: var(--kendo-color-base-active);
+}
+
+.mobile-nav-popup .k-list-item.k-selected {
+  background: transparent;
+  color: var(--kendo-color-on-app-surface);
+}
+
+.mobile-nav-popup .k-list-item:focus,
+.mobile-nav-popup .k-list-item.k-focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.mobile-nav-popup .k-list-item::before {
+  display: none;
+}
+
+.mobile-nav-popup .k-menu-group .k-item.k-focus > .k-link {
+  box-shadow: none;
+}
+
+.mobile-nav-popup .k-menu-group .k-item > .k-link:active {
+  color: inherit;
+  background-color: transparent;
 }

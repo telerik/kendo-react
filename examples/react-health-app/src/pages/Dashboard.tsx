@@ -4,6 +4,7 @@ import { Grid, GridColumn } from "@progress/kendo-react-grid";
 import type { GridCustomCellProps } from "@progress/kendo-react-grid";
 import { Button } from "@progress/kendo-react-buttons";
 import { SvgIcon } from "@progress/kendo-react-common";
+import { useMediaQuery } from "../hooks/useMediaQuery";
 import {
   allergyAlertCardIcon,
   clinicalNoteCardIcon,
@@ -50,6 +51,9 @@ function AppointmentStatusCell(props: Readonly<GridCustomCellProps>) {
 export default function Dashboard() {
   const navigate = useNavigate();
   const { profile } = useDoctorProfile();
+  const isViewProfileIconOnly = useMediaQuery(
+    "(max-width: 899px), (min-width: 1440px) and (max-width: 1759px)",
+  );
 
   const [showNoteWindow, setShowNoteWindow] = useState(false);
   const [showLabWindow, setShowLabWindow] = useState(false);
@@ -203,7 +207,7 @@ export default function Dashboard() {
                       rounded="full"
                       size="small"
                     >
-                      View profile
+                      {!isViewProfileIconOnly && "View profile"}
                     </Button>
                   </div>
                   <p>

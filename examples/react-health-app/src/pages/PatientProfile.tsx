@@ -21,10 +21,9 @@ import {
 import StatusBadge from "../components/StatusBadge";
 import AvatarCircle from "../components/AvatarCircle";
 import PageHeading from "../components/PageHeading";
-import AIChatButton from "../components/AIChatButton";
+
 import {
   appBarPatientsIcon,
-  aiAssistanceSparklesIcon,
   exportButtonIcon,
   patientProfileBreadcrumbIcon,
   patientNoteSaveIcon,
@@ -67,7 +66,6 @@ export default function PatientProfile() {
   const navigate = useNavigate();
   const [sort, setSort] = useState<SortDescriptor[]>([]);
   const [page, setPage] = useState({ skip: 0, take: 10 });
-  const [showAiPanel, setShowAiPanel] = useState(false);
 
   const handleGridExportButtonClick = () => {
     gridRef.current?.exportAsPdf();
@@ -135,24 +133,14 @@ export default function PatientProfile() {
           { text: "Patient Profile", svgIcon: patientProfileBreadcrumbIcon },
         ]}
         actions={
-          <>
-            <Button
-              svgIcon={aiAssistanceSparklesIcon}
-              themeColor="primary"
-              rounded="full"
-              onClick={() => setShowAiPanel(!showAiPanel)}
-            >
-              AI Assistance
-            </Button>
-            <Button
-              svgIcon={exportButtonIcon}
-              themeColor="base"
-              rounded="full"
-              onClick={handleGridExportButtonClick}
-            >
-              Export
-            </Button>
-          </>
+          <Button
+            svgIcon={exportButtonIcon}
+            themeColor="base"
+            rounded="full"
+            onClick={handleGridExportButtonClick}
+          >
+            Export
+          </Button>
         }
       />
 
@@ -314,8 +302,6 @@ export default function PatientProfile() {
           </Grid>
         </div>
       </div>
-
-      <AIChatButton />
     </>
   );
 }
