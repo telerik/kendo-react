@@ -2,9 +2,20 @@
 
 import * as React from "react";
 import { useRouter } from "next/navigation";
-import { Drawer, DrawerContent, DrawerSelectEvent } from "@progress/kendo-react-layout";
+import {
+  Drawer,
+  DrawerContent,
+  DrawerSelectEvent,
+} from "@progress/kendo-react-layout";
 import { Button } from "@progress/kendo-react-buttons";
-import { inboxIcon, calendarIcon, heartIcon, linkIcon, bellIcon, menuIcon } from '@progress/kendo-svg-icons';
+import {
+  inboxIcon,
+  calendarIcon,
+  heartIcon,
+  linkIcon,
+  bellIcon,
+  menuIcon,
+} from "@progress/kendo-svg-icons";
 import "./styles.css";
 
 const items = [
@@ -12,38 +23,38 @@ const items = [
     text: "Inbox",
     svgIcon: inboxIcon,
     selected: true,
-    route: "/components/drawer/inbox"
+    route: "/components/drawer/inbox",
   },
   {
-    separator: true
+    separator: true,
   },
   {
     text: "Notifications",
     svgIcon: bellIcon,
-    route: "/components/drawer/notifications"
+    route: "/components/drawer/notifications",
   },
   {
     text: "Calendar",
     svgIcon: calendarIcon,
-    route: "/components/drawer/calendar"
+    route: "/components/drawer/calendar",
   },
   {
-    separator: true
+    separator: true,
   },
   {
     text: "Attachments",
     svgIcon: linkIcon,
-    route: "/components/drawer/attachments"
+    route: "/components/drawer/attachments",
   },
   {
     text: "Favourites",
     svgIcon: heartIcon,
-    route: "/components/drawer/favourites"
-  }
+    route: "/components/drawer/favourites",
+  },
 ];
 
 export default function DrawerLayout({
-  children
+  children,
 }: {
   children: React.ReactNode;
 }) {
@@ -66,14 +77,17 @@ export default function DrawerLayout({
   };
 
   const navigateToIndex = () => {
-    router.push('/');
-  }
+    router.push("/");
+  };
 
   const selectedItem = setSelectedItem(selected);
 
   return (
     <div>
-      <div><Button onClick={navigateToIndex}>Index Page</Button></div><br />
+      <div>
+        <Button onClick={navigateToIndex}>Index Page</Button>
+      </div>
+      <br />
       <div className="custom-toolbar">
         <Button svgIcon={menuIcon} fillMode="flat" onClick={handleClick} />
         <span className="mail-box">Mail Box</span>
@@ -85,7 +99,7 @@ export default function DrawerLayout({
         mini={true}
         items={items.map((item) => ({
           ...item,
-          selected: item.text === selectedItem
+          selected: item.text === selectedItem,
         }))}
         onSelect={onSelect}
       >

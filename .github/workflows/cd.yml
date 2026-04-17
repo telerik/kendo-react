@@ -17,7 +17,7 @@ jobs:
   build:
     runs-on: ubuntu-24.04
     environment: github-pages
-    
+
     permissions:
       pages: write
       id-token: write
@@ -25,10 +25,10 @@ jobs:
       packages: read
 
     steps:
-      - name: Use NodeJS v18
+      - name: Use NodeJS v24
         uses: actions/setup-node@v6
         with:
-          node-version: '18'
+          node-version: "24"
 
       - name: Check out repository
         uses: actions/checkout@v6
@@ -44,7 +44,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './live/build'
+          path: "./live/build"
 
       - name: Deploy to GitHub Pages
         id: deployment

@@ -38,11 +38,11 @@
     "cldr-dates-full": "^43.1.0",
     "cldr-numbers-full": "^43.1.0",
     "hammerjs": "^2.0.8",
-    "node-sass": "^9.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-router-dom": "^6.21.3",
     "react-scripts": "5.0.1",
+    "sass": "^1.99.0",
     "socks": ">=2.7.3"
   },
   "overrides": {

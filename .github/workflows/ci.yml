@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-24.04
 
     steps:
-      - name: Use NodeJS v18
-        uses: actions/setup-node@v4
+      - name: Use NodeJS v24
+        uses: actions/setup-node@v6
         with:
-          node-version: '18'
+          node-version: "24"
 
       - name: Check out repository
         uses: actions/checkout@v4
@@ -67,6 +67,8 @@ jobs:
               - 'examples/kendo-react-tailwind/**'
             kendo-unstyled-tailwind-v4:
               - 'examples/kendo-unstyled-tailwind-v4/**'
+            react-health-app:
+              - 'examples/react-health-app/**'
 
       - name: Build Coffee warehouse nextjs app
         working-directory: ./examples/coffee-warehouse-nextjs
@@ -209,4 +211,9 @@ jobs:
         run: |
           npm ci
           npm run build
-              
+      - name: Build React Health app
+        working-directory: ./examples/react-health-app
+        if: steps.changes.outputs.react-health-app == 'true'
+        run: |
+          npm ci
+          npm run build
