@@ -89,7 +89,7 @@ export default function NewMessageWindow({ onClose }: Readonly<Props>) {
           {errors.message && <Error>{errors.message}</Error>}
         </div>
         <div className="window-form-actions">
-          <Button fillMode="outline" onClick={onClose} size="small">
+          <Button themeColor="base" onClick={onClose} size="small">
             Discard
           </Button>
           <Button themeColor="primary" onClick={handleSend} size="small">

@@ -411,7 +411,7 @@ export default function Schedule() {
               </div>
             )}
           </div>
-          <DialogActionsBar>
+          <DialogActionsBar layout="end">
             <Button
               fillMode="flat"
               rounded="full"

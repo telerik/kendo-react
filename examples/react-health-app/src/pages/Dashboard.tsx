@@ -407,15 +407,17 @@ export default function Dashboard() {
               <p>{nextPatient.condition}</p>
             </div>
           </div>
-          <DialogActionsBar>
+          <DialogActionsBar layout="end">
             <Button
-              fillMode="outline"
+              fillMode="flat"
+              rounded="full"
               onClick={() => setShowReasonDialog(false)}
             >
               Close
             </Button>
             <Button
               themeColor="primary"
+              rounded="full"
               onClick={() => {
                 setShowReasonDialog(false);
                 navigate(`/patients/${nextPatient.id}`);
@@ -455,15 +457,17 @@ export default function Dashboard() {
               <p>{nextPatient.bloodType}</p>
             </div>
           </div>
-          <DialogActionsBar>
+          <DialogActionsBar layout="end">
             <Button
-              fillMode="outline"
+              fillMode="flat"
+              rounded="full"
               onClick={() => setShowAllergyDialog(false)}
             >
               Close
             </Button>
             <Button
               themeColor="primary"
+              rounded="full"
               onClick={() => {
                 setShowAllergyDialog(false);
                 navigate(`/patients/${nextPatient.id}`);
@@ -499,11 +503,19 @@ export default function Dashboard() {
               </p>
             </div>
           </div>
-          <DialogActionsBar>
-            <Button fillMode="outline" onClick={() => setReviewAlert(null)}>
+          <DialogActionsBar layout="end">
+            <Button
+              fillMode="flat"
+              rounded="full"
+              onClick={() => setReviewAlert(null)}
+            >
               Dismiss
             </Button>
-            <Button themeColor="primary" onClick={() => setReviewAlert(null)}>
+            <Button
+              themeColor="primary"
+              rounded="full"
+              onClick={() => setReviewAlert(null)}
+            >
               Acknowledge
             </Button>
           </DialogActionsBar>
