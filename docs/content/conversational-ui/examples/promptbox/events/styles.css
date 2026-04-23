@@ -1,0 +1,53 @@
+
+.profile-demo.card-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 20px;
+    top: 70px;
+    width: calc(100% - 40px);
+}
+
+.main-layout {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+}
+
+.example-config {
+    margin: 0;
+    padding: 10px;
+    background-color: var(--kendo-color-base);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    height: 550px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.example-config h5 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: var(--kendo-color-on-base);
+}
+
+.event-log {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    color: var(--kendo-color-on-base);
+    max-height: 550px;
+    overflow-y: auto;
+}
+
+.event-log li {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    word-break: break-word;
+}
+
+.event-log li:last-child {
+    border-bottom: none;
+}

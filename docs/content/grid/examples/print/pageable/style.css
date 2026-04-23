@@ -1,0 +1,16 @@
+@media print {
+    * {
+        visibility: hidden;
+    }
+
+    .k-grid {
+        visibility: visible;
+        padding: 0px;
+        margin-top: -20px;
+    }
+
+    .k-grid * {
+        visibility: visible;
+    }
+}
+

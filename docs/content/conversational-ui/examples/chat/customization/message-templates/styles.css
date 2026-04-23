@@ -1,0 +1,17 @@
+.chat-template-rich div.k-message-group > div.k-avatar,
+.chat-template-rich div.k-message-group-content > span.k-message-author {
+    display: none;
+}
+
+.chat-template-bubble div.k-message-group-content > span.k-message-author {
+    display: none;
+}
+
+.chat-template-card div.k-message-group > div.k-avatar,
+.chat-template-card div.k-message-group-content > span.k-message-author {
+    display: none;
+}
+.chat-template-minimal div.k-message-group > div.k-avatar,
+.chat-template-minimal div.k-message-group-content > span.k-message-author {
+    display: none;
+}

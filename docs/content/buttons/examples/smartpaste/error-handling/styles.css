@@ -1,0 +1,100 @@
+.smartpaste-container {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+    position: relative;
+    justify-content: center;
+}
+
+.message-copy-button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 4px;
+}
+
+.message-copy-button button.copy-text-link.k-button {
+    cursor: pointer;
+    font-size: 12px;
+    color: var(--kendo-color-on-app-surface, #424242);
+    background: none;
+    border: none;
+    font-family: inherit;
+    outline: none;
+}
+
+.message-copy-button button.copy-text-link.k-button:hover {
+    color: var(--kendo-color-primary, #5c6bc0);
+}
+
+.message-copy-button button.copy-text-link.k-button.copied {
+    pointer-events: none;
+}
+
+.message-highlighted .k-chat-bubble {
+    background-color: #feeabf;
+    transition: background-color 0.3s ease;
+}
+
+.form-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 284px;
+}
+
+.loader-container {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.smartpaste-container .editor {
+    flex-shrink: 0;
+    width: 284px;
+}
+
+.smartpaste-container .k-form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.smartpaste-container div.k-form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+}
+
+.pasted-input .k-input,
+.pasted-input.k-input {
+    background-color: var(--kendo-color-info-subtle-hover, rgba(92, 107, 192, 0.2));
+}
+
+div.k-separator {
+    border: none;
+}
+
+div.k-message-box-wrapper {
+    padding: var(--kendo-spacing-4, 1rem);
+}
+
+div.k-bubble-content {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.chat-skeleton.k-chat {
+    border-radius: 20px;
+    background-color: var(--kendo-color-surface, #f8f9fa);
+    border: none;
+}
+
+.k-chat-bubble.k-bubble.k-bubble-placeholder {
+    background-color: #b3b3b3;
+    border-color: #b3b3b3;
+    color: #666666;
+}

@@ -1,0 +1,107 @@
+.demo-section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background-color: #fafafa;
+  }
+
+  .demo-section h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  .control-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .control-btn {
+    min-width: 150px;
+  }
+
+  .transcript {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1rem;
+  }
+
+  .interim-text {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+
+  .final-text {
+    color: #333;
+    font-weight: 500;
+  }
+
+  .event-log {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem;
+    max-height: 300px;
+    overflow-y: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 0.875rem;
+  }
+
+  .log-entry {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    gap: 1rem;
+    padding: 0.25rem 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .log-entry:last-child {
+    border-bottom: none;
+  }
+
+  .timestamp {
+    color: #666;
+    font-weight: 500;
+  }
+
+  .event-type {
+    padding: 0.125rem 0.5rem;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 0.75rem;
+    text-align: center;
+    min-width: 60px;
+  }
+
+  .event-type:contains('METHOD') {
+    background-color: #007bff;
+    color: white;
+  }
+
+  .event-type:contains('EVENT') {
+    background-color: #28a745;
+    color: white;
+  }
+
+  .event-type:contains('RESULT') {
+    background-color: #ffc107;
+    color: black;
+  }
+
+  .event-type:contains('ERROR') {
+    background-color: #dc3545;
+    color: white;
+  }
+
+  .event-type:contains('SYSTEM') {
+    background-color: #6c757d;
+    color: white;
+  }
+
+  .event-message {
+    color: #333;
+  }

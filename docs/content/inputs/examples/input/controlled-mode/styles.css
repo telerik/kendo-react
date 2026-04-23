@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  .title {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .input-wrapper {
+    width: 300px;
+    position: relative;
+  }
+
+  .character-count {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    font-size: 12px;
+    margin-top: 5px;
+    color: gray;
+  }
+
+  .current-value {
+    margin-top: 20px;
+    color: gray;
+  }

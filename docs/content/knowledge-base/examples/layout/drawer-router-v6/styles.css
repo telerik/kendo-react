@@ -1,0 +1,35 @@
+my-app { padding: 0 !important; }
+
+.k-drawer-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+.k-drawer-item {
+    user-select: none;
+}
+.k-icon {
+    font-size: 20px;
+}
+.title {
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 17px;
+}
+.custom-toolbar {
+    width: 100%;
+    background-color: #f6f6f6;
+    line-height: 10px;
+    border-bottom: inset;
+    border-bottom-width: 1px;
+    padding: 3px 8px;
+    color: #656565;
+}
+.k-drawer-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+.k-drawer-content {
+    padding: 10px;
+}

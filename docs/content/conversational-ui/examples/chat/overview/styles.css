@@ -1,0 +1,667 @@
+body {
+    font-family: 'RobotoRegular', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    background-color: var(--kendo-color-app-surface);
+    color: var(--kendo-color-on-app-surface);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.chatgpt-container {
+    width: 100%;
+    height: 640px;
+    display: flex;
+    background-color: var(--kendo-color-surface);
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    position: relative;
+    border: 1px solid var(--kendo-color-border);
+}
+
+.custom-drawer {
+    width: 260px;
+    height: 100%;
+    background-color: var(--kendo-color-surface);
+    border-inline-end: 1px solid var(--kendo-color-border);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    transition: width 0.3s ease;
+    padding: 0;
+    gap: 0;
+    color: var(--kendo-color-on-app-surface, inherit);
+}
+
+.custom-drawer.collapsed {
+    width: 56px;
+    padding: 0;
+    border-inline-end: 1px solid var(--kendo-color-border);
+}
+
+.drawer-menu-icon {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: var(--kendo-color-on-app-surface);
+    border-radius: 10px;
+    align-self: flex-start;
+    background-color: transparent !important;
+    margin: 8px 8px 0 8px !important;
+    font-size: 18px;
+}
+
+.drawer-menu-icon .k-button-icon,
+.drawer-menu-icon .k-svg-icon {
+    font-size: inherit;
+}
+
+.drawer-menu-icon:hover {
+    background-color: var(--kendo-color-base-active);
+}
+
+.drawer-new-chat-full {
+    width: calc(100% - 16px);
+    height: 44px;
+    padding: 0 12px 0 13px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start !important;
+    gap: 12px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: transparent;
+    margin: 8px 8px 0 8px;
+    border-radius: 5px;
+}
+
+.drawer-new-chat-full:hover {
+    background-color: var(--kendo-color-base-hover);
+}
+
+.drawer-new-chat-full:active,
+.drawer-new-chat-full.active {
+    background-color: var(--kendo-color-base-active);
+}
+
+.drawer-new-chat-full .k-svg-icon {
+    margin-right: 16px;
+    color: var(--kendo-color-on-app-surface);
+    display: inline-flex;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+}
+
+.drawer-new-chat-full .k-svg-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+.drawer-new-chat-full span {
+    font-family: var(--kendo-font-family);
+    font-weight: var(--kendo-font-weight-regular);
+    font-size: var(--kendo-font-size-md);
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+}
+
+.drawer-popup-header {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid var(--kendo-color-border);
+}
+
+.drawer-popup-toggle {
+    margin: 0 !important;
+    align-self: auto;
+}
+
+.drawer-chats-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: var(--kendo-color-surface);
+    margin-top: 16px;
+    padding: 0 8px;
+}
+
+.drawer-chats-label {
+    padding: 8px 12px;
+    font-family: var(--kendo-font-family);
+    font-weight: var(--kendo-font-weight-regular);
+    font-size: var(--kendo-font-size-sm);
+    color: var(--kendo-color-subtle);
+    background-color: var(--kendo-color-surface);
+    opacity: 0.6;;
+}
+
+.chats-header {
+    font-size: 14px;
+    color: var(--kendo-color-subtle);
+    padding: 8px 0;
+}
+
+.drawer-chat-list {
+    flex: 1;
+    overflow-y: auto;
+    background-color: var(--kendo-color-surface);
+    padding: 0;
+    margin: 0;
+}
+
+.chat-list-item {
+    padding: 10px 12px;
+    font-size: 15px;
+    color: var(--kendo-color-on-app-surface);
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: background-color 0.15s ease;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+}
+
+.chat-list-item-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1;
+    min-width: 0;
+}
+
+.chat-delete-btn {
+    flex-shrink: 0;
+}
+
+.chat-delete-btn:focus,
+.chat-delete-btn.k-focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.chat-list-item:hover {
+    background-color: var(--kendo-color-base-subtle-hover);
+    border-radius: 5px;
+}
+
+.chat-list-item.selected {
+    background-color: var(--kendo-color-base-active);
+    border-radius: 5px;
+}
+
+/* Chat Content */
+.chat-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--kendo-color-app-surface);
+    position: relative;
+    overflow: hidden;
+}
+
+.chat-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.empty-state {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    pointer-events: none;
+    color: var(--kendo-color-subtle);
+}
+
+.welcome-title {
+    font-family: var(--kendo-font-family);
+    font-weight: 400;
+    letter-spacing: var(--kendo-letter-spacing);
+
+}
+
+.k-chat {
+    border: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    min-height: 0;
+}
+
+.k-chat .k-message-list {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.k-chat .k-message-box-wrapper {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto !important;
+    align-self: center !important;
+
+}
+
+.k-chat .k-bubble {
+    border-radius: var(--kendo-border-radius-xl)
+}
+
+.k-message-box {
+    width: 100%;
+}
+
+.k-message-group {
+    max-width: 100% !important;
+    width: 100%;
+}
+
+.custom-bot-message {
+    width: 100%;
+    padding: 12px;
+    background-color: transparent;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.custom-bot-message .markdown-content {
+    white-space: normal;
+}
+
+.custom-bot-message .markdown-content p {
+    margin: 0 0 8px;
+}
+
+.custom-bot-message .markdown-content p:last-child {
+    margin-bottom: 0;
+}
+
+.custom-bot-message table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 14px;
+}
+
+.custom-bot-message th {
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+    color: var(--kendo-color-on-app-surface);
+    border-bottom: 2px solid var(--kendo-color-border);
+}
+
+.custom-bot-message td {
+    padding: 12px 16px;
+    color: var(--kendo-color-on-app-surface);
+    border-bottom: 1px solid var(--kendo-color-border);
+    vertical-align: top;
+}
+
+.custom-bot-message tr:last-child td {
+    border-bottom: none;
+}
+
+.custom-bot-message code {
+    background-color: var(--kendo-color-surface-alt);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 13px;
+    color: var(--kendo-color-primary);
+}
+
+.code-block-wrapper {
+    background-color: var(--kendo-color-surface);
+    border-radius: 18px;
+    margin: 8px 0;
+    overflow: hidden;
+}
+
+.code-block-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: var(--kendo-color-surface);
+}
+
+.code-block-language {
+    font-family: var(--kendo-font-family) !important;
+    font-weight: var(--kendo-font-weight-regular) !important;
+    font-size: var(--kendo-font-size-sm) !important;
+    font-style: normal !important;
+    line-height: 142% !important;
+    letter-spacing: var(--kendo-letter-spacing) !important;
+    color: var(--kendo-color-base-active, #BDC4CB) !important;
+}
+
+.code-block-copy {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    color: var(--kendo-color-subtle);
+    font-size: 13px;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.code-block-copy:hover {
+    background-color: var(--kendo-color-base-hover);
+    color: var(--kendo-color-on-app-surface);
+}
+
+.code-block-copy svg {
+    width: var(--kendo-icon-size, 1rem);
+    height: var(--kendo-icon-size, 1rem);
+    margin-right: 6px;
+}
+
+.custom-bot-message pre {
+    background-color: var(--kendo-color-surface);
+    color: var(--kendo-color-on-app-surface);
+    padding: 16px;
+    margin: 0;
+    overflow-x: auto;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.custom-bot-message pre code {
+    background-color: transparent;
+    padding: 0;
+    color: inherit;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+.typing-indicator {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 0;
+}
+
+.typing-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--kendo-color-subtle);
+    border-radius: 50%;
+    animation: typing-bounce 1.4s infinite ease-in-out both;
+}
+
+.typing-dot:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.typing-dot:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+.typing-dot:nth-child(3) {
+    animation-delay: 0s;
+}
+
+@keyframes typing-bounce {
+
+    0%,
+    80%,
+    100% {
+        transform: scale(0.6);
+        opacity: 0.4;
+    }
+
+    40% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.k-timestamp {
+    display: none;
+}
+
+/* Responsive breakpoints */
+
+.mobile-navbar {
+    display: none;
+    padding: 8px;
+    background-color: var(--kendo-color-surface);
+    border-bottom: 1px solid var(--kendo-color-border);
+}
+
+.drawer-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 4;
+}
+
+@media (max-width: 768px) {
+    .chat-wrapper {
+        width: 100%;
+    }
+
+    .chatgpt-container.tablet .custom-drawer.overlay {
+        position: relative;
+        transform: none;
+        width: 56px;
+        box-shadow: none;
+        z-index: auto;
+        pointer-events: auto;
+    }
+
+    .chatgpt-container.tablet .custom-drawer.overlay.expanded {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100%;
+        z-index: 5;
+        box-shadow: 0 8px 16px var(--kendo-color-border);
+    }
+
+    .chatgpt-container.tablet .custom-drawer.overlay.collapsed .drawer-new-chat-full,
+    .chatgpt-container.tablet .custom-drawer.overlay.collapsed .drawer-chats-section {
+        display: none;
+    }
+
+    .welcome-title {
+        font-size: 24px;
+    }
+
+    .chat-wrapper:not(.has-messages) {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .k-chat {
+        border-style: none !important;
+    }
+
+
+    .chat-wrapper:not(.has-messages) .empty-state {
+        position: static;
+        transform: none;
+        width: 100%;
+        padding-bottom: 24px;
+    }
+
+    .chat-wrapper:not(.has-messages) .k-chat {
+        height: auto !important;
+        flex: none !important;
+        width: 90%;
+        max-width: 720px;
+    }
+
+    .chat-wrapper:not(.has-messages) .k-chat .k-message-list {
+        display: none;
+    }
+
+    .chat-wrapper.has-messages .empty-state {
+        display: none;
+    }
+}
+
+@media (max-width: 360px) {
+    .chatgpt-container.mobile {
+        flex-direction: column;
+    }
+
+    .mobile-navbar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        flex-shrink: 0;
+    }
+
+    .mobile-navbar .drawer-menu-icon {
+        margin: 0 !important;
+    }
+
+    .chat-content {
+        height: calc(100% - 61px);
+        margin-left: 0;
+        flex: 1;
+    }
+
+    .chatgpt-container.mobile .custom-drawer.overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        transform: none;
+        transition: width 0.25s ease;
+        z-index: 6;
+        box-shadow: none;
+        pointer-events: none;
+        overflow: hidden;
+        border-inline-end: none;
+    }
+
+    .chatgpt-container.mobile .custom-drawer.overlay.expanded {
+        width: 200px;
+        pointer-events: auto;
+        box-shadow: 0 8px 16px var(--kendo-color-border);
+        border-inline-end: 1px solid var(--kendo-color-border);
+    }
+
+    .chatgpt-container.mobile .custom-drawer.overlay.collapsed .drawer-new-chat-full,
+    .chatgpt-container.mobile .custom-drawer.overlay.collapsed .drawer-chats-section,
+    .chatgpt-container.mobile .custom-drawer.overlay.collapsed .drawer-menu-icon {
+        display: none;
+    }
+
+    .welcome-title {
+        font-size: 20px;
+    }
+
+    .chat-wrapper:not(.has-messages) {
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+
+    .chat-wrapper:not(.has-messages) .empty-state {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-bottom: 0;
+    }
+
+    .chat-wrapper:not(.has-messages) .k-chat {
+        height: 100% !important;
+        flex: 1 !important;
+        width: 100%;
+        max-width: none;
+    }
+
+    .k-chat .k-message-list {
+        width: 100%;
+        flex: 1;
+    }
+
+    .chat-wrapper:not(.has-messages) .k-chat .k-message-list {
+        display: block;
+    }
+
+    .k-chat .k-message-box-wrapper {
+        width: 95% !important;
+        max-width: 720px !important;
+        margin: 0 auto !important;
+        align-self: center !important;
+    }
+
+    .k-chat .k-input.k-prompt-box {
+        width: 100% !important;
+    }
+}
+
+.k-chat .k-input.k-prompt-box {
+    /* border-radius: var(--kendo-border-radius-xxxl); */
+    border-radius: 18px;
+}
+
+.k-bubble {
+    display: inherit;
+}
+
+.k-prompt-box .k-prompt-box-textarea {
+    font-family: var(--kendo-font-family);
+    font-weight: var(--kendo-font-weight-regular);
+    font-style: normal;
+    font-size: var(--kendo-font-size-md);
+    line-height: 24px;
+}
+
+
+.k-prompt-box .k-prompt-box-textarea::placeholder {
+    font-family: var(--kendo-font-family);
+    font-weight: var(--kendo-font-weight-regular);
+    font-style: regular;
+    line-height: 150%;
+    font-size: var(--kendo-font-size-md);
+    letter-spacing: var(--kendo-letter-spacing);
+    vertical-align: middle;
+    color: var(--kendo-color-subtle);
+    opacity: 0.7;
+    line-height: 24px;
+}
+
+.k-separator {
+    display: none;
+}
+
+textarea.k-input-inner.k-prompt-box-textarea {
+    padding-left: 0;
+}

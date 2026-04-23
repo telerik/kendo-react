@@ -1,0 +1,8 @@
+.panelbar-wrapper {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.custom-loading-template {
+    padding: 30px;
+    text-align: center;
+}

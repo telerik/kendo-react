@@ -1,0 +1,54 @@
+/* Animated Suggestion Button Styles - Optimized for horizontal scroll */
+.animated-suggestion-button {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    flex-shrink: 0 !important; /* Prevent shrinking in horizontal scroll */
+}
+
+.animated-suggestion-button:hover {
+    background: linear-gradient(135deg, #5dade2 0%, #1abc9c 100%) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 8px rgba(79, 172, 254, 0.3) !important;
+    transform: translateY(-2px) scale(1.05) !important;
+}
+
+.animated-suggestion-button:active {
+    background: linear-gradient(135deg, #2980b9 0%, #0074cc 100%) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), inset 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+    transform: translateY(1px) scale(0.98) !important;
+}
+
+/* Pulse animation keyframes */
+@keyframes pulse {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+
+    100% {
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+    }
+}
+
+/* Reduced floating animation for horizontal scroll compatibility */
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.animated-suggestion-button {
+    animation: float 4s ease-in-out infinite; /* Slower animation */
+}
+
+/* Glow effect on focus - reduced for horizontal scroll */
+.animated-suggestion-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(79, 172, 254, 0.5), 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}

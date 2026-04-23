@@ -1,0 +1,16 @@
+.k-popup .content {
+    padding: 30px;
+    color: #ffffff;
+    background-color: #999999;
+    border: 1px solid rgba(0, 0, 0, .05);
+}
+
+.content p {
+    margin: 0;
+}
+
+.anchor {
+    display: block;
+    width: 120px;
+    margin: 100px auto;
+}

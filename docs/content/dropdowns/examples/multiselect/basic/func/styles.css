@@ -1,0 +1,171 @@
+.hobbies-demo.card-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.hobbies-demo .custom-card {
+    padding: 32px;
+    width: 712px;
+    height: 350px;
+    gap: 32px;
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.08);
+}
+
+.hobbies-demo .card-row {
+    display: flex;
+    gap: 32px;
+}
+
+.hobbies-demo .card-column {
+    flex: 1;
+}
+
+.hobbies-demo .no-flex {
+    flex: 0;
+}
+
+.hobbies-demo .sidebar-container,
+.hobbies-demo .avatar-name-container,
+.hobbies-demo .name-container,
+.hobbies-demo .description-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hobbies-demo .sidebar-container {
+    padding: 30px 20px;
+    width: 180px;
+    height: 318px;
+    gap: 50px;
+}
+
+.hobbies-demo .avatar-name-container {
+    gap: 20px;
+}
+
+.hobbies-demo .name-container {
+    gap: 5px;
+}
+
+.hobbies-demo .description-container {
+    width: 100%;
+    gap: 15px;
+}
+
+.hobbies-demo .k-skeleton {
+    border-radius: 4px;
+    opacity: 0.4;
+}
+
+.hobbies-demo .sidebar-container .k-skeleton {
+    opacity: 0.8;
+}
+
+.hobbies-demo .skeleton-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+}
+
+.hobbies-demo .skeleton-text {
+    width: 104px;
+    height: 15px;
+}
+
+.hobbies-demo .skeleton-small-text {
+    width: 100%;
+    height: 10px;
+}
+
+.hobbies-demo .skeleton-small-text-short {
+    width: 56px;
+    height: 10px;
+}
+
+.hobbies-demo .skeleton-box-small {
+    width: 124px;
+    height: 15px;
+}
+
+.hobbies-demo .skeleton-box-large {
+    width: 100%;
+    height: 30px;
+}
+
+.hobbies-demo .skeleton-box-large-double {
+    width: 100%;
+    height: 56px;
+}
+
+.hobbies-demo .skeleton-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hobbies-demo .avatar-title-container {
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.hobbies-demo .avatar-title-container .skeleton-avatar {
+    width: 48px;
+    height: 48px;
+    display: none;
+}
+
+.hobbies-demo .top {
+    margin-bottom: 20px;
+}
+
+.hobbies-demo .component-container {
+    margin-bottom: 20px;
+}
+
+.hobbies-demo .k-h4 {
+    margin-bottom: 0;
+    opacity: 0.2;
+}
+
+@media only screen and (max-width: 559px) {
+    .hobbies-demo .card-column.no-flex {
+        display: none !important;
+    }
+
+    .hobbies-demo .avatar-title-container .skeleton-avatar {
+        display: block;
+    }
+
+    .hobbies-demo .custom-card {
+        width: 360px;
+        gap: 48px;
+    }
+
+    .hobbies-demo .skeleton-box-large-double {
+        height: 72px;
+    }
+}
+
+@media only screen and (max-width: 359px) {
+    .hobbies-demo .custom-card {
+        padding: 24px;
+    }
+
+    .hobbies-demo .k-h4 {
+        font-size: 20px;
+    }
+
+    .hobbies-demo .avatar-title-container .skeleton-avatar {
+        width: 32px;
+        height: 32px;
+    }
+
+    .hobbies-demo .skeleton-box-large-double {
+        height: 78px;
+    }
+}

@@ -1,0 +1,28 @@
+.example-container {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    text-align: center;
+  }
+
+  h4 {
+    margin-bottom: 15px;
+    color: #656565;
+  }
+
+  .fillmode-examples {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .fillmode-examples > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .fillmode-examples span {
+    font-size: 14px;
+    color: #656565;
+  }

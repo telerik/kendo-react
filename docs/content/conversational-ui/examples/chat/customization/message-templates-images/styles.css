@@ -1,0 +1,13 @@
+/* Image Chat Template Styles */
+
+/* Hide default avatars and author names since we're using custom templates */
+div.k-message-group>div.k-avatar,
+div.k-message-group-content>span.k-message-author {
+    display: none;
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}

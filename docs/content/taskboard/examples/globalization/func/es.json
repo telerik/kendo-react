@@ -1,0 +1,33 @@
+{
+   "taskBoard": {
+     "editCardButton": "editar tarjeta",
+     "deleteCardButton": "Eliminar tarjeta",
+     "editColumnButton": "Editar",
+     "addCardButton": "Agregar tarjeta",
+     "addCardPriorityLabel": "Prioridad",
+     "deleteColumnButton": "Eliminar columna",
+     "deleteColumnDialogTitle": "Eliminar columna?",
+     "deleteColumnDialogMessage": "¿Está seguro de que desea eliminar esta columna?",
+     "deleteColumnConfirmButton": "Eliminar",
+     "deleteColumnCancelButton": "Cancelar",
+     "editPaneDescriptionLabel": "Descripción",
+     "editPaneTitleLabel": "Título",
+     "editPanePriorityLabel": "Prioridad",
+     "addCardTitle": "Crear nueva tarjeta",
+     "deleteTaskConfirmButton": "Eliminar",
+     "deleteTaskCancelButton": "Cancelar",
+     "deleteTaskDialogTitle": "Eliminar tarjeta",
+     "deleteTaskDialogMessage": "¿Está seguro de que desea eliminar esta tarjeta?",
+     "toolbarAddColumnButton": "Añadir columna",
+     "toolbarSearchField": "Buscar",
+     "addCardCreateButton": "Crear",
+     "editPaneCancelButton": "Cancelar",
+     "editCardPaneTitle": "Editar",
+     "editCardPaneSaveButton": "Guardar cambios",
+     "addCardTitleLabel": "Título",
+     "addCardDescriptionLabel": "Descripción",
+     "previewPanePriorityLabel": "Prioridad:",
+     "previewPaneDeleteButton": "Borrar",
+     "previewPaneEditButton": "Editar"
+   }
+ }

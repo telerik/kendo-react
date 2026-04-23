@@ -1,0 +1,7 @@
+.demo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2%;
+    margin: 0 auto 20px auto;
+}

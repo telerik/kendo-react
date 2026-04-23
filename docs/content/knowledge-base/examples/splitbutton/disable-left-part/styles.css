@@ -1,0 +1,4 @@
+.k-button-group > .k-button:first-child:not(:only-child) {
+    pointer-events: none;
+    background-color: white;
+ }

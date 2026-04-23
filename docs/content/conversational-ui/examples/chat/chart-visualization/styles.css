@@ -1,0 +1,161 @@
+
+
+.k-chat {
+    background-color: transparent;
+}
+
+.chat-responsive {
+    height: 710px;
+}
+
+.chart-responsive {
+    height: 350px;
+}
+
+.k-chat .k-bubble {
+    border-radius: var(--kendo-border-radius-xl);
+    background-color: var(--kendo-color-primary);
+    color: var(--kendo-color-on-primary, #ffffff);
+}
+
+
+.k-message-box {
+    width: auto;
+}
+
+.k-message-group.k-alt {
+    max-width: 100% !important;
+    width: 100%;
+}
+
+.custom-bot-message {
+    width: 100%;
+    padding: 12px;
+    background-color: transparent;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.k-timestamp {
+    text-align: center;
+}
+
+.thinking-indicator {
+    color: #999;
+}
+
+.thinking-indicator span {
+    display: inline-block;
+    animation: wave 1.5s ease-in-out infinite;
+    animation-delay: var(--delay);
+}
+
+@keyframes wave {
+
+    0%,
+    60%,
+    100% {
+        opacity: 0.3;
+    }
+
+    30% {
+        opacity: 1;
+    }
+}
+
+/* Mobile devices: Apply max-width for better responsiveness */
+@media (max-width: 767px) {
+    .chat-responsive {
+        height: 630px;
+    }
+
+    .chart-responsive {
+        height: 230px;
+    }
+
+    .k-chat {
+        max-width: 400px !important;
+    }
+
+    .k-message-list {
+        border: none !important;
+    }
+
+    .k-message-box-wrapper {
+        border: none !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .chat-responsive {
+        height: 630px;
+    }
+
+    .chart-responsive {
+        height: 210px;
+    }
+}
+
+.k-separator {
+    display: none;
+}
+
+.k-tilelayout-item.k-card {
+    box-shadow: 0px 2px 14px 0px var(--kendo-color-border);
+    border-radius: 8px;
+}
+
+
+.k-suggestion,
+.k-suggestion.k-suggestion-base {
+    background-color: var(--kendo-color-surface);
+    font-weight: 500;
+    border: 1px solid var(--kendo-color-border);
+}
+
+.k-svg-icon.ai-icon {
+    width: 32px;
+    height: 24px;
+}
+
+
+.k-prompt-box-content {
+    height: 84px !important;
+}
+
+
+
+.k-prompt-box .k-prompt-box-textarea::placeholder {
+    font-family: var(--kendo-font-family);
+    font-weight: var(--kendo-font-weight-regular);
+    font-style: regular;
+    line-height: 150%;
+    font-size: var(--kendo-font-size-md);
+    letter-spacing: var(--kendo-letter-spacing);
+    vertical-align: middle;
+    color: var(--kendo-color-subtle);
+    opacity: 0.7;
+    line-height: 24px;
+}
+
+
+.k-tilelayout-item-header.k-card-header {
+    border: none;
+}
+
+.chart-card-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.chart-card-title {
+    margin-right: auto;
+    font-size: var(--kendo-font-size-lg);
+    font-weight: var(--kendo-font-weight-normal);
+}
+
+.chart-download-button {
+    margin-left: auto;
+}

@@ -1,0 +1,32 @@
+.contact-img {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-position: center center;
+    vertical-align: middle;
+    line-height: 32px;
+    border: 1px solid var(--kendo-color-border);
+}
+
+.k-rating-item .k-svg-icon {
+    width: 1rem;
+    height: 1rem
+}
+
+.no-border-sparkline svg > g > path:first-child {
+    fill: none !important;
+}
+
+.no-border-sparkline {
+    width: 100%;
+}
+
+.no-border-sparkline .k-sparkline {
+    width: 100% !important;
+}
+
+.k-badge-container {
+    margin-left: 30px;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,38 @@
+.preferences-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+
+  h3 {
+    text-align: center;
+    color: #333;
+  }
+
+  p {
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .k-checkbox-label {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .checkbox-group .k-checkbox {
+    margin-left: 10px;
+  }

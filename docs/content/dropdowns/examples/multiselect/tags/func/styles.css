@@ -1,0 +1,12 @@
+.custom-tag {
+
+    background: #333;
+    color: #fff;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    align-content: center;
+    overflow: 'hidden';
+    float: left;
+}

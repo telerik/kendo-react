@@ -1,0 +1,5 @@
+.icon-active {
+    color: #ff6358;
+    transform: scale(1.2);
+    transition: transform 0.15s ease, color 0.15s ease;
+}

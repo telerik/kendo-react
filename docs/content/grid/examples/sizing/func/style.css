@@ -1,0 +1,23 @@
+.parent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1.5em;
+   }
+
+   .left {
+   width: 49%;
+ }
+  .right {
+   width: 49%;
+  }
+
+  @media screen and (max-width: 700px) {
+      .parent {
+       flex-direction: column;
+      }
+
+   .left, .right {
+     width: 100%;
+     }
+ }

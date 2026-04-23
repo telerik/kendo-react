@@ -1,0 +1,235 @@
+html,
+body,
+my-app {
+    background-color: var(--kendo-color-app-surface, #F8FAFC);
+}
+
+.demo-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 40px;
+    background-color: var(--kendo-color-app-surface, #F8FAFC);
+    overflow: hidden;
+}
+
+.demo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.demo-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--kendo-color-on-app-surface, #475569);
+}
+
+.demo-controls {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.control-label {
+    font-size: 14px;
+    color: var(--kendo-color-on-app-surface, #475569);
+}
+
+.tickets-section {
+    margin-bottom: 40px;
+    text-align: left;
+    max-width: 800px;
+}
+
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding: 0;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.status-text {
+    font-size: 14px;
+    color: var(--kendo-color-on-app-surface, #475569);
+}
+
+.status-text strong {
+    color: var(--kendo-color-on-app-surface, #475569);
+    font-weight: 600;
+}
+
+.k-segmented-control.k-segmented-control {
+    border-radius: 0.5rem;
+    background-color: var(--kendo-color-base, #F1F5F9);
+}
+
+.k-segmented-control .k-segmented-control-thumb,
+.k-segmented-control .k-segmented-control-button {
+    border-radius: calc(0.5rem - 2px);
+}
+
+.k-segmented-control .k-segmented-control-thumb {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+.k-segmented-control.k-segmented-control-md .k-segmented-control-button.k-segmented-control-button {
+    font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: var(--kendo-color-on-app-surface, #475569);
+}
+
+.k-segmented-control.k-segmented-control-md .k-segmented-control-button.k-segmented-control-button.k-selected {
+    color: var(--kendo-color-on-app-surface, #475569);
+}
+
+.k-segmented-control.k-segmented-control-lg .k-segmented-control-button.k-segmented-control-button {
+    font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding: 0.75rem 0.75rem;
+    outline: none;
+    color: var(--kendo-color-on-app-surface, #475569);
+}
+
+.k-segmented-control.k-segmented-control-lg .k-segmented-control-button.k-segmented-control-button.k-selected {
+    color: var(--kendo-color-on-app-surface, #475569);
+}
+
+.k-segmented-control-stretched .k-segmented-control-button.k-segmented-control-button {
+    min-width: 0;
+}
+
+.segment-content {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+
+.control-group .k-menu-button {
+    border-radius: 0.5rem;
+    background-color: var(--kendo-color-base, #F1F5F9);
+    font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--kendo-color-on-app-surface, #475569);
+    gap: 0.5rem;
+}
+
+.status-bar .k-button {
+    font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--kendo-color-on-app-surface, #475569);
+    background-color: var(--kendo-color-surface-alt);
+    border: 1px solid var(--kendo-color-border);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+.status-bar .k-button:hover {
+    background-color: var(--kendo-color-base-hover);
+    border-color: var(--kendo-color-border-alt);
+}
+
+.skeleton-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.skeleton-card {
+    background-color: var(--kendo-color-surface-alt);
+    border-radius: 0.5rem;
+    border: 1px solid var(--kendo-color-border);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.skeleton-card-header {
+    margin-bottom: 0;
+}
+
+.skeleton-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.skeleton-row-between {
+    justify-content: space-between;
+}
+
+.skeleton-bar {
+    background-color: var(--kendo-color-base, #E2E8F0);
+    border-radius: 0.25rem;
+    min-width: 0;
+}
+
+.skeleton-bar-lg {
+    height: 2.5rem;
+    border-radius: 0.5rem;
+}
+
+.skeleton-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    position: relative;
+}
+
+.skeleton-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 8rem;
+    background: linear-gradient(to top, var(--kendo-color-app-surface, #F8FAFC), transparent);
+    pointer-events: none;
+}
+
+@keyframes skeleton-pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.skeleton-pulse {
+    animation: skeleton-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.count-badge {
+    display: inline-block;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tickets-section.updating .count-badge {
+    opacity: 0;
+    transform: translateY(-4px);
+}

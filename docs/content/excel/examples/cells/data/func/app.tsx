@@ -1,0 +1,37 @@
+import * as React from 'react';
+import { ExcelExport, ExcelExportColumn } from '@progress/kendo-react-excel-export';
+import { Button } from '@progress/kendo-react-buttons';
+import products from './shared-ex-products';
+
+const data = products;
+
+const App = () => {
+    const _exporter = React.createRef<ExcelExport>();
+    const excelExport = () => {
+        if (_exporter.current) {
+            _exporter.current.save();
+        }
+    };
+
+    return (
+        <div>
+            <Button type="button" onClick={excelExport}>
+                Export to Excel
+            </Button>
+
+            <ExcelExport data={data} fileName="Products.xlsx" ref={_exporter}>
+                <ExcelExportColumn
+                    field="ProductID"
+                    title="Product ID"
+                    cellOptions={{
+                        background: '#ff0000',
+                        textAlign: 'center'
+                    }}
+                />
+                <ExcelExportColumn field="ProductName" title="Product Name" width={350} />
+            </ExcelExport>
+        </div>
+    );
+};
+
+export default App;

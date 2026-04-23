@@ -1,0 +1,18 @@
+.example-wrapper {
+    width: 300px;
+    margin: 0 auto;
+    box-shadow: 0px 10px 20px #00000029;
+    border-radius: 30px;
+}
+.page { padding: 20px 10px; }
+.content {
+    background: #F9F9F9;
+    height: 470px;
+    overflow: auto;
+}
+.box { 
+    padding: 4px;
+    background-color: #87dfce;
+}
+.big { background-color: #fea69c; }
+.rect { background-color: #fee47c; }

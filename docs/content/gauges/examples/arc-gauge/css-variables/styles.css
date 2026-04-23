@@ -1,0 +1,35 @@
+.gauge-css-variables-demo {
+    --gauge-success: #37b400;
+    --gauge-warning: #ffc000;
+    padding: 8px 0;
+}
+
+.gauge-css-variables-demo__lead {
+    margin: 0 0 16px;
+}
+
+.gauge-css-variables-demo__grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.gauge-css-variables-demo__card {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.gauge-css-variables-demo__card h3 {
+    margin: 0 0 8px;
+}
+
+.gauge-css-variables-demo__card p {
+    margin: 0 0 12px;
+    min-height: 60px;
+}
+
+.gauge-css-variables-demo__card code {
+    display: inline-block;
+    margin-bottom: 12px;
+}

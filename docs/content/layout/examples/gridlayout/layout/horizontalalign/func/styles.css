@@ -1,0 +1,18 @@
+.example-wrapper {
+    width: 300px;
+    margin: 0 auto;
+    box-shadow: 0px 10px 20px #00000029;
+    border-radius: 30px;
+}
+.page { padding: 20px 10px; }
+.content {
+    background: #F9F9F9;
+    height: 470px;
+    overflow: auto;
+}
+.box { padding: 4px; }
+.box-0, .box-5, .box-10 { background-color: #89c0dd; }
+.box-1, .box-6, .box-11 { background-color: #85d9b0; }
+.box-2, .box-7, .box-12 { background-color: #f2ab7e; }
+.box-3, .box-8, .box-13 { background-color: #fee47c; }
+.box-4, .box-9, .box-14 { background-color: #fea69c; }

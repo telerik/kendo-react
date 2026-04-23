@@ -1,0 +1,44 @@
+.info-banner {
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    background-color: #e7f3ff;
+    border-left: 4px solid #0078d4;
+    border-radius: 4px;
+    color: #323130;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.custom-tooltip {
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.transfer-tooltip {
+    max-width: 250px;
+    padding: 12px 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    background: #ffffff;
+    border: 1px solid #dee2e6;
+    border-left: 4px solid #28a745;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.transfer-tooltip strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #212529;
+    font-size: 15px;
+}
+
+.transfer-info {
+    color: #6c757d;
+    font-size: 13px;
+    margin-top: 4px;
+}

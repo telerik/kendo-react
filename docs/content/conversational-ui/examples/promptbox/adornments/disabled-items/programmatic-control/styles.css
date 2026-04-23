@@ -1,0 +1,10 @@
+.demo-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.example-buttons {
+    margin-bottom: 16px;
+    display: flex;
+    gap: 8px;
+}

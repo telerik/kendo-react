@@ -1,0 +1,69 @@
+.smartpaste-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: fit-content;
+}
+
+.form-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 284px;
+}
+
+.loader-container {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.smartpaste-title {
+    font-family: var(--kendo-font-family, inherit);
+    font-weight: var(--kendo-font-weight-bold, 700);
+    font-size: 22px;
+    line-height: 32px;
+    color: #d7d7d7;
+    margin: 0 0 16px 0;
+}
+
+.smartpaste-container {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.smartpaste-container .editor {
+    flex-shrink: 0;
+    width: 284px;
+}
+
+.smartpaste-container .k-form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.smartpaste-container .k-form div.k-form-field,
+.smartpaste-container .k-form .k-form-field-wrap,
+.smartpaste-container .k-form .k-input,
+.smartpaste-container .k-form .k-floating-label-container {
+    width: 100%;
+    margin-block-start: 0;
+}
+
+.smartpaste-container .k-form div.k-form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-block-start: 0;
+    margin-top: auto;
+}
+
+.pasted-input .k-input,
+.pasted-input.k-input {
+    background-color: var(--kendo-color-info-subtle-hover, rgba(92, 107, 192, 0.2));
+}

@@ -1,0 +1,7 @@
+.k-multiselect .k-input-values:after {
+  content: '\e006';
+  font-family: 'WebComponentsIcons';
+  outline: 0;
+  position: absolute;
+  right: 20px;
+}

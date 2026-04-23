@@ -1,0 +1,45 @@
+.demo-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.tab-image {
+    width: 17px;
+    height: 17px;
+    margin-left: 5px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.main {
+    width: 160px;
+    display: flex;
+}
+
+.degree {
+    display: flex;
+    flex-direction: column;
+}
+
+.main>img {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.large-degree {
+    font-size: 2em;
+    font-weight: lighter;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+}

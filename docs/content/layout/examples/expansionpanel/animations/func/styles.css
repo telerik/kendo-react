@@ -1,0 +1,27 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.k-expander {
+    width: 600px;
+}
+
+.content {
+    display: flex;
+}
+
+.image-container {
+    height: 250px;
+    margin-right: 20px;
+}
+
+img {
+    height: 100%;
+}
+
+.content-text {
+    display: block;
+    text-align: justify;
+}

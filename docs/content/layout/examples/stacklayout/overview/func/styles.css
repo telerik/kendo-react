@@ -1,0 +1,31 @@
+.example-container {
+    margin: 0 auto;
+    max-width: 900px;
+}
+.title {
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    font-weight: bold;
+}
+.k-flex-30 { flex: 1 1 30%; }
+.k-flex-40 { flex: 1 1 40%; }
+.k-card-cover {
+    object-fit: cover;
+    width: 100%;
+    height: 375px;
+}
+.k-card .k-card-body { padding: 5px 8px; }
+.photo-text {
+    text-align: right;
+    font-size: 10px;
+    font-style: italic;
+}
+.k-card-title { font-size: 22px; }
+@media only screen and (max-width: 890px) {
+  .k-card-title { font-size: 18px; }
+}
+@media only screen and (max-width: 760px) {
+  .k-card-title, 
+  .k-card-subtitle { display: none; }
+}

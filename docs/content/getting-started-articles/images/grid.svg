@@ -1,0 +1,102 @@
+<svg width="143" height="54" viewBox="0 0 143 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_14391_128710)">
+<g clip-path="url(#clip1_14391_128710)">
+<mask id="path-3-inside-1_14391_128710" fill="white">
+<path d="M0.25 0H142.75V13.5H0.25V0Z"/>
+</mask>
+<rect width="47.5" height="13.5" transform="translate(0.25)" fill="#E4EBF6"/>
+<rect x="4.75" y="5.625" width="25" height="2.25" rx="1.125" fill="#5473C8"/>
+<mask id="path-6-inside-2_14391_128710" fill="white">
+<path d="M47.75 0H95.25V13.5H47.75V0Z"/>
+</mask>
+<path d="M47.75 0H95.25V13.5H47.75V0Z" fill="#E4EBF6"/>
+<path d="M47.75 13.5H48.125V0H47.75H47.375V13.5H47.75Z" fill="#C2D1EB" mask="url(#path-6-inside-2_14391_128710)"/>
+<rect x="52.25" y="5.625" width="25" height="2.25" rx="1.125" fill="#5473C8"/>
+<mask id="path-9-inside-3_14391_128710" fill="white">
+<path d="M95.25 0H142.75V13.5H95.25V0Z"/>
+</mask>
+<path d="M95.25 0H142.75V13.5H95.25V0Z" fill="#E4EBF6"/>
+<path d="M95.25 13.5H95.625V0H95.25H94.875V13.5H95.25Z" fill="#C2D1EB" mask="url(#path-9-inside-3_14391_128710)"/>
+<rect x="99.75" y="5.625" width="25" height="2.25" rx="1.125" fill="#5473C8"/>
+</g>
+<path d="M142.75 13.5V13.125H0.25V13.5V13.875H142.75V13.5Z" fill="#C2D1EB" mask="url(#path-3-inside-1_14391_128710)"/>
+<g clip-path="url(#clip2_14391_128710)">
+<mask id="path-12-inside-4_14391_128710" fill="white">
+<path d="M0.25 13.5H142.75V27H0.25V13.5Z"/>
+</mask>
+<rect width="47.5" height="13.5" transform="translate(0.25 13.5)" fill="white"/>
+<rect x="4.75" y="19.125" width="22.5" height="2.25" rx="1.125" fill="#C2D1EB"/>
+<mask id="path-15-inside-5_14391_128710" fill="white">
+<path d="M47.75 13.5H95.25V27H47.75V13.5Z"/>
+</mask>
+<path d="M47.75 13.5H95.25V27H47.75V13.5Z" fill="white"/>
+<path d="M47.75 27H48.125V13.5H47.75H47.375V27H47.75Z" fill="#C2D1EB" mask="url(#path-15-inside-5_14391_128710)"/>
+<rect x="52.25" y="19.125" width="22.5" height="2.25" rx="1.125" fill="#C2D1EB"/>
+<mask id="path-18-inside-6_14391_128710" fill="white">
+<path d="M95.25 13.5H142.75V27H95.25V13.5Z"/>
+</mask>
+<path d="M95.25 13.5H142.75V27H95.25V13.5Z" fill="white"/>
+<path d="M95.25 27H95.625V13.5H95.25H94.875V27H95.25Z" fill="#C2D1EB" mask="url(#path-18-inside-6_14391_128710)"/>
+<rect x="99.75" y="19.125" width="22.5" height="2.25" rx="1.125" fill="#C2D1EB"/>
+</g>
+<path d="M142.75 27V26.625H0.25V27V27.375H142.75V27Z" fill="#C2D1EB" mask="url(#path-12-inside-4_14391_128710)"/>
+<g clip-path="url(#clip3_14391_128710)">
+<mask id="path-21-inside-7_14391_128710" fill="white">
+<path d="M0.25 27H142.75V40.5H0.25V27Z"/>
+</mask>
+<rect width="47.5" height="13.5" transform="translate(0.25 27)" fill="#F2F6FB"/>
+<rect x="4.75" y="32.625" width="22.5" height="2.25" rx="1.125" fill="#C2D1EB"/>
+<mask id="path-24-inside-8_14391_128710" fill="white">
+<path d="M47.75 27H95.25V40.5H47.75V27Z"/>
+</mask>
+<path d="M47.75 27H95.25V40.5H47.75V27Z" fill="#F2F6FB"/>
+<path d="M47.75 40.5H48.125V27H47.75H47.375V40.5H47.75Z" fill="#C2D1EB" mask="url(#path-24-inside-8_14391_128710)"/>
+<rect x="52.25" y="32.625" width="22.5" height="2.25" rx="1.125" fill="#C2D1EB"/>
+<mask id="path-27-inside-9_14391_128710" fill="white">
+<path d="M95.25 27H142.75V40.5H95.25V27Z"/>
+</mask>
+<path d="M95.25 27H142.75V40.5H95.25V27Z" fill="#F2F6FB"/>
+<path d="M95.25 40.5H95.625V27H95.25H94.875V40.5H95.25Z" fill="#C2D1EB" mask="url(#path-27-inside-9_14391_128710)"/>
+<rect x="99.75" y="32.625" width="22.5" height="2.25" rx="1.125" fill="#C2D1EB"/>
+</g>
+<path d="M142.75 40.5V40.125H0.25V40.5V40.875H142.75V40.5Z" fill="#C2D1EB" mask="url(#path-21-inside-7_14391_128710)"/>
+<g clip-path="url(#clip4_14391_128710)">
+<mask id="path-30-inside-10_14391_128710" fill="white">
+<path d="M0.25 40.5H142.75V54H0.25V40.5Z"/>
+</mask>
+<rect width="47.5" height="13.5" transform="translate(0.25 40.5)" fill="white"/>
+<rect x="4.75" y="46.125" width="22.5" height="2.25" rx="1.125" fill="#C2D1EB"/>
+<mask id="path-33-inside-11_14391_128710" fill="white">
+<path d="M47.75 40.5H95.25V54H47.75V40.5Z"/>
+</mask>
+<path d="M47.75 40.5H95.25V54H47.75V40.5Z" fill="white"/>
+<path d="M47.75 54H48.125V40.5H47.75H47.375V54H47.75Z" fill="#C2D1EB" mask="url(#path-33-inside-11_14391_128710)"/>
+<rect x="52.25" y="46.125" width="22.5" height="2.25" rx="1.125" fill="#C2D1EB"/>
+<mask id="path-36-inside-12_14391_128710" fill="white">
+<path d="M95.25 40.5H142.75V54H95.25V40.5Z"/>
+</mask>
+<path d="M95.25 40.5H142.75V54H95.25V40.5Z" fill="white"/>
+<path d="M95.25 54H95.625V40.5H95.25H94.875V54H95.25Z" fill="#C2D1EB" mask="url(#path-36-inside-12_14391_128710)"/>
+<rect x="99.75" y="46.125" width="22.5" height="2.25" rx="1.125" fill="#C2D1EB"/>
+</g>
+<path d="M142.75 54V53.625H0.25V54V54.375H142.75V54Z" fill="#C2D1EB" mask="url(#path-30-inside-10_14391_128710)"/>
+</g>
+<rect x="0.4375" y="0.1875" width="142.125" height="53.625" stroke="#C2D1EB" stroke-width="0.375"/>
+<defs>
+<clipPath id="clip0_14391_128710">
+<rect x="0.25" width="142.5" height="54" fill="white"/>
+</clipPath>
+<clipPath id="clip1_14391_128710">
+<path d="M0.25 0H142.75V13.5H0.25V0Z" fill="white"/>
+</clipPath>
+<clipPath id="clip2_14391_128710">
+<path d="M0.25 13.5H142.75V27H0.25V13.5Z" fill="white"/>
+</clipPath>
+<clipPath id="clip3_14391_128710">
+<path d="M0.25 27H142.75V40.5H0.25V27Z" fill="white"/>
+</clipPath>
+<clipPath id="clip4_14391_128710">
+<path d="M0.25 40.5H142.75V54H0.25V40.5Z" fill="white"/>
+</clipPath>
+</defs>
+</svg>

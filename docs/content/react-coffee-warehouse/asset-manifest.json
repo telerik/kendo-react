@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/kendo-react-ui/react-coffee-warehouse/static/css/main.9ba0e390.css",
+    "main.js": "/kendo-react-ui/react-coffee-warehouse/static/js/main.c77432ca.js",
+    "static/media/kendoka.png": "/kendo-react-ui/react-coffee-warehouse/static/media/kendoka.c7095d9ce8e429779438.png",
+    "static/media/Roboto-Regular.ttf": "/kendo-react-ui/react-coffee-warehouse/static/media/Roboto-Regular.03523cf578d69fa92322.ttf",
+    "static/media/header-bg.png": "/kendo-react-ui/react-coffee-warehouse/static/media/header-bg.e62f0e09ea1b70f0f904.png",
+    "static/media/user-avatar.jpg": "/kendo-react-ui/react-coffee-warehouse/static/media/user-avatar.2e5d6e703239d19e8aff.jpg",
+    "static/media/info-background.svg": "/kendo-react-ui/react-coffee-warehouse/static/media/info-background.f6b66c9247a1db7b1e78.svg",
+    "index.html": "/kendo-react-ui/react-coffee-warehouse/index.html",
+    "static/media/github-icon.svg": "/kendo-react-ui/react-coffee-warehouse/static/media/github-icon.966d08444a590b0bca5dd780ad7ff155.svg",
+    "static/media/hamburger-icon.svg": "/kendo-react-ui/react-coffee-warehouse/static/media/hamburger-icon.4a15965e8cb3f506cbbb.svg",
+    "main.9ba0e390.css.map": "/kendo-react-ui/react-coffee-warehouse/static/css/main.9ba0e390.css.map",
+    "main.c77432ca.js.map": "/kendo-react-ui/react-coffee-warehouse/static/js/main.c77432ca.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9ba0e390.css",
+    "static/js/main.c77432ca.js"
+  ]
+}

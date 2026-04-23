@@ -1,0 +1,39 @@
+.input-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-header {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .form-description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .input-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .custom-label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #1274AC;
+  }
+
+  .custom-label:focus {
+    color: #4caf50;
+    font-size: 15px;
+    transition: color 0.3s ease, font-size 0.3s ease;
+  }

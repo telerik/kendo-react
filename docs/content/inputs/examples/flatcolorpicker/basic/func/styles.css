@@ -1,0 +1,141 @@
+.kendoka {
+	margin: 0 auto;
+	width: 430px;
+	height: 462px;
+	background-size: cover;
+	background-image: url('https://demos.telerik.com/kendo-react-ui/assets/inputs/colorpicker/kendoka.png');
+}
+
+
+.clothes-demo.card-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .clothes-demo .custom-card {
+    padding: 32px;
+    width: 812px;
+    height: 550px;
+    gap: 32px;
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.08);
+  }
+
+  .clothes-demo .card-row {
+    display: flex;
+    gap: 32px;
+  }
+
+  .clothes-demo .card-row-inner {
+    gap: 20px;
+  }
+
+  .clothes-demo .card-row-inner .skeleton-container {
+    flex: 1;
+  }
+
+  .clothes-demo .card-row-inner .component-container {
+    flex: 0;
+  }
+
+  .clothes-demo .card-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+  }
+
+  .clothes-demo .no-flex {
+    width: 430px;
+    flex: none;
+  }
+
+  .clothes-demo .image-container {
+    width: 100%;
+    height: 100%;
+    min-height: 436px;
+    gap: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .clothes-demo .k-skeleton {
+    border-radius: 4px;
+    opacity: 0.4;
+  }
+
+  .clothes-demo .image-container .k-skeleton {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  .clothes-demo .skeleton-box-small {
+    width: 124px;
+    height: 15px;
+  }
+
+  .clothes-demo .skeleton-box-medium {
+    width: 80px;
+    height: 30px;
+  }
+
+  .clothes-demo .skeleton-box-large {
+    width: 100%;
+    height: 30px;
+  }
+
+  .clothes-demo .skeleton-box-xlarge {
+    width: 100%;
+    height: 250px;
+  }
+
+  .clothes-demo .skeleton-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .clothes-demo .skeleton-container.bottom {
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 16px;
+  }
+
+  .clothes-demo .k-h4 {
+    margin: 0;
+    opacity: 0.2;
+  }
+
+  .clothes-demo .k-label {
+    display: block;
+  }
+
+  .clothes-demo kendo-colorgradient,
+  .clothes-demo kendo-flatcolorpicker {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .clothes-demo .custom-card {
+      width: 100%;
+      height: auto;
+      padding: 16px;
+    }
+
+    .clothes-demo .custom-card > .card-row {
+      flex-direction: column;
+    }
+
+    .clothes-demo .image-container {
+      min-height: 260px;
+    }
+
+    .clothes-demo .no-flex {
+      width: 100%;
+    }
+  }

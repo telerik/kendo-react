@@ -1,0 +1,5 @@
+/* center the Carousel horizontally */
+/* k-scrollview is the default component class */
+.k-scrollview {
+    margin: 0 auto;
+}

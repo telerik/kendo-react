@@ -1,0 +1,11 @@
+.k-upload .k-upload-dropzone.k-dropzone {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.k-upload .k-upload-dropzone .k-dropzone-hint {
+    margin-left: 12px;
+    flex: 0 0 auto;
+    position: static;
+}

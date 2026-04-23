@@ -1,0 +1,19 @@
+.custom-animation-enter {
+    transform: scale(0);
+    transition: transform 500ms ease-in-out;
+}
+.custom-animation-enter-active {
+    transform: scale(1);
+}
+
+.content {
+    width: 100px;
+    padding: 10px;
+    color: #787878;
+    background-color: #fcf7f8;
+    font-size: 13px;
+    font-family: Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
