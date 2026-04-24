@@ -1,0 +1,111 @@
+/* Chat drawer styles */
+.k-drawer-overlay .k-drawer-wrapper .k-chat {
+    border-left-width: 1px;
+}
+.k-drawer-wrapper .k-chat {
+    border-left-width: 0px;
+    min-width: 280px;
+}
+
+/* Header styles */
+.k-chat > .k-appbar {
+    box-shadow: none;
+    border-bottom: 1px solid var(--kendo-color-border, rgba(36, 36, 36, 0.72));
+    padding-block: 0.5rem;
+}
+.k-grid .k-toolbar {
+    padding-inline: var(--kendo-spacing-2);
+    padding-block: var(--kendo-spacing-2);
+}
+
+/* Gradient border button styles */
+.k-button.gradient-border-button.k-button-outline {
+    position: relative;
+    background: var(--kendo-color-app-surface);
+    border: 1px solid transparent;
+    background-image: linear-gradient(var(--kendo-color-app-surface), var(--kendo-color-app-surface)),
+        linear-gradient(135.34deg, #ac58ff 15.16%, #4b5ffa 84.89%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    color: #4b5ffa;
+}
+
+.k-button.gradient-border-button.k-button-outline:hover {
+    background-image: linear-gradient(134.88deg, rgba(172, 88, 255, 0.1) 15.09%, rgba(75, 95, 250, 0.1) 85.31%),
+        linear-gradient(var(--kendo-color-app-surface), var(--kendo-color-app-surface)),
+        linear-gradient(135.34deg, #ac58ff 15.16%, #4b5ffa 84.89%);
+    background-origin: border-box;
+    background-clip: padding-box, padding-box, border-box;
+    border: 1px solid transparent;
+    color: #4b5ffa;
+}
+
+.k-button.gradient-border-button.k-button-outline:active,
+.k-button.gradient-border-button.k-button-outline.active {
+    background-image: linear-gradient(134.88deg, rgba(172, 88, 255, 0.2) 15.09%, rgba(75, 95, 250, 0.2) 85.31%),
+        linear-gradient(var(--kendo-color-app-surface), var(--kendo-color-app-surface)),
+        linear-gradient(135.34deg, #ac58ff 15.16%, #4b5ffa 84.89%);
+    background-origin: border-box;
+    background-clip: padding-box, padding-box, border-box;
+    border: 1px solid transparent;
+    color: #4b5ffa;
+}
+.k-button-outline-base:focus,
+.k-button-outline-base.k-focus {
+    box-shadow: none;
+}
+
+/* AI icon styles */
+.k-svg-icon.ai-icon {
+    width: 32px;
+    height: 24px;
+}
+
+/* Drawer styles */
+.k-drawer-mini div.k-drawer.k-drawer-end,
+.k-drawer-expanded div.k-drawer.k-drawer-end {
+    border-inline-start-width: 0px;
+}
+
+my-app {
+    overflow-x: hidden;
+}
+
+.k-drawer-wrapper,
+.k-drawer-content {
+    height: 100%;
+}
+
+.k-drawer-mini .k-drawer.k-drawer-end,
+.k-drawer-expanded .k-drawer.k-drawer-end {
+    border-inline-start-width: 0px;
+}
+
+.k-drawer-expanded.k-drawer-overlay {
+    position: relative;
+}
+
+.k-overlay,
+.k-drawer-expanded.k-drawer-overlay .k-drawer {
+    position: absolute;
+}
+
+div.k-drawer-content {
+    padding-block: 0px;
+    padding-inline: 0px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .k-chat {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 560px) {
+    .k-drawer-expanded.k-drawer-overlay > .k-drawer,
+    .k-drawer-expanded .k-drawer-wrapper {
+        width: 100% !important;
+        max-width: 100%;
+    }
+}

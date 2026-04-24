@@ -1,0 +1,118 @@
+.demo-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.demo-hint {
+    padding: 12px 16px;
+    background-color: var(--kendo-color-info-subtle, #e8f4fd);
+    border: 1px solid var(--kendo-color-info, #0058e9);
+    border-radius: var(--kendo-border-radius-md, 0.25rem);
+    color: var(--kendo-color-on-app-surface, #3d3d3d);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.events-demo {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.main-content {
+    display: flex;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.sample-data-card {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    background: var(--kendo-color-surface, #fafafa);
+}
+
+.sample-data-card .k-card-body {
+    flex: 1;
+}
+
+.sample-data-card .k-card-actions {
+    padding: 16px;
+}
+
+.sample-data-content {
+    font-size: 14px;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+.form-container {
+    flex: 1;
+    border: 1px solid var(--kendo-color-border, rgba(0, 0, 0, 0.08));
+    border-radius: var(--kendo-border-radius-md, 0.25rem);
+    padding: 16px;
+}
+
+.form-container .k-form-legend {
+    grid-column: 1 / -1;
+    padding-bottom: 16px;
+    font-size: 14px;
+    font-size: var(--kendo-font-size-lg, inherit);
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+.event-logger {
+    flex: 1;
+    border: 1px solid var(--kendo-color-border, rgba(0, 0, 0, 0.08));
+    border-radius: 4px;
+    background: var(--kendo-color-surface, #fafafa);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.event-logger-header {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--kendo-color-border, rgba(0, 0, 0, 0.08));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.event-logger-content {
+    padding: 16px;
+    flex: 1;
+    overflow-y: auto;
+    font-family: monospace;
+    font-size: 12px;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+.event-logger-item {
+    padding: 8px;
+    margin-bottom: 8px;
+    background: var(--kendo-color-surface-alt, #fff);
+    border-radius: 4px;
+    border-left: 3px solid var(--kendo-color-primary, #ff6358);
+}
+
+.event-logger-item.response {
+    border-left-color: var(--kendo-color-success, #37b400);
+}
+
+.event-logger-item.response .event-logger-label {
+    color: var(--kendo-color-success, #37b400);
+}
+
+.event-logger-label {
+    font-weight: bold;
+    color: var(--kendo-color-primary, #ff6358);
+    margin-bottom: 4px;
+}
+
+.placeholder-text {
+    color: #888;
+}

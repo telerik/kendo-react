@@ -1,0 +1,45 @@
+.demo-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.configuration-panel {
+    background-color: var(--kendo-color-base);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.config-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 16px;
+    align-items: center;
+}
+
+.config-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 32px;
+}
+
+.label-inline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.label-compact {
+    min-width: 75px;
+    font-size: 13px;
+}
+
+.dropdown-compact {
+    flex: 1;
+    min-width: 0;
+}
+
+.demo-container .k-prompt-box {
+    width: 100%;
+}

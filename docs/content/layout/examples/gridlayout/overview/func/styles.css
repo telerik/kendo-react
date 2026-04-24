@@ -1,0 +1,83 @@
+.grid-layout-container { overflow-x: auto; }
+
+.k-grid-layout {
+    width: 870px;
+    margin: auto;
+}
+
+.article, .card-article {
+    gap: 16px;
+    color: #656565;
+}
+
+.card-article {
+    padding: 16px;
+    margin-bottom: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 3px;
+}
+
+.article-description { gap: 6px; }
+
+.article-description .date,
+.card-article-description .date {
+    font-size: 10px;
+    line-height: 20px;
+}
+
+.article-description .separator,
+.card-article-description .separator {
+    padding: 0 5px;
+}
+
+.article-position { font-size: 32px; }
+
+.article-description .title {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.article-description .author {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.card-article-description .title {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.card-article-description .sub-title {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.card-article-description .author {
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 4px;
+}
+
+.k-card-horizontal .k-card-image.card-article-image {
+    max-width: 225px;
+}
+
+.card-article .photo-text {
+    text-align: right;
+    font-style: italic;
+    font-size: 10px;
+    opacity: 0.7;
+}
+
+.k-chip-list {
+    padding: 5px 0px;
+    grid-gap: 6px;
+    margin-top: 8px;
+}
+
+.k-chip {
+    margin: 0px;
+    border-radius: 2px;
+}
+
+.event-calendar { width: 100%; }

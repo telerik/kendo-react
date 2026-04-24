@@ -1,0 +1,13 @@
+{
+    "scheduler": {
+        "today": "Hoy",
+        "allDay": "todo el dia",
+        "showWorkDay": "Mostrar horas laborables",
+        "showFullDay": "Mostrar día completo",
+        "agendaViewTitle": "Agenda",
+        "dayViewTitle": "Día",
+        "weekViewTitle": "Semana",
+        "workWeekViewTitle": "Semana laboral",
+        "monthViewTitle": "Mes"
+    }
+}

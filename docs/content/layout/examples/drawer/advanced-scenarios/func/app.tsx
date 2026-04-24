@@ -1,0 +1,40 @@
+import * as React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import InboxMessages from './InboxMessages';
+import Notifications from './Notifications';
+import Calendar from './Calendar';
+import Attachments from './Attachments';
+import Favourites from './Favourites';
+import DrawerRouterContainer from './DrawerRouterContainer';
+// import './styles.css';
+
+const App = () => {
+    React.useEffect(() => {
+        const styleSheet = import('./styles.css');
+
+        return () => {
+            styleSheet.then((module) => {
+                const linkElement = document.querySelector(`link[href="${module.default}"]`);
+                if (linkElement) {
+                    linkElement.remove();
+                }
+            });
+        };
+    }, []);
+
+    return (
+        // BrowserRouterOpen
+        <DrawerRouterContainer>
+            <Routes>
+                <Route path="/" element={<Calendar />} />
+                <Route path="/notifications" element={<Notifications />} />
+                <Route path="/inbox" element={<InboxMessages />} />
+                <Route path="/attachments" element={<Attachments />} />
+                <Route path="/favourites" element={<Favourites />} />
+            </Routes>
+        </DrawerRouterContainer>
+        // BrowserRouterClose
+    );
+};
+
+export default App;

@@ -1,0 +1,56 @@
+.example {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: 0 auto;
+	width: 700px;
+	color: #44403f;
+}
+.k-colorpalette .k-item {
+	border-radius: 50%;
+}
+.description {
+	width: 340px;
+	margin-top: 35px;
+	align-self: flex-start;
+}
+h1 {
+	font-size: 32px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+p {
+	font-size: 20px;
+	letter-spacing: 0.025em;
+	margin-bottom: 0;
+}
+.description span {
+	color: #8e8682;
+	display: block;
+	font-size: 13px;
+}
+.selected-color {
+	margin: 40px 0 10px 0;
+}
+.img {
+	width: 100%;
+	height: 480px;
+	margin-right: 10px;
+	background-size: cover;
+	background-image: url('https://demos.telerik.com/kendo-react-ui/assets/inputs/colorpalette/demo-img.png');
+}
+button {
+	display: block;
+	background: transparent;
+	color: #44403f;
+	border-color: currentColor;
+	width: 200px;
+	margin-top: 40px;
+	padding: 8px;
+	font-size: 20px;
+}
+button:hover {
+	background: #0083ff;
+	color: #fff;
+	border-color: currentColor;
+}

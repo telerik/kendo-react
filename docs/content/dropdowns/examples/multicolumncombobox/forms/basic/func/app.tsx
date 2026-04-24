@@ -1,0 +1,88 @@
+import * as React from 'react';
+import { Form, Field, FormElement, FieldWrapper, FormFieldSet } from '@progress/kendo-react-form';
+import { Button } from '@progress/kendo-react-buttons';
+import { MultiColumnComboBox } from '@progress/kendo-react-dropdowns';
+import { employees } from './shared-dd-data';
+
+interface columnValues {
+    field: string;
+    header: string;
+    width: string;
+}
+
+const columns: columnValues[] = [
+    {
+        field: 'id',
+        header: 'ID',
+        width: '100px'
+    },
+    {
+        field: 'name',
+        header: 'Name',
+        width: '300px'
+    },
+    {
+        field: 'position',
+        header: 'Position',
+        width: '300px'
+    }
+];
+
+const requiredValidator = (value: any) => (value ? '' : 'This field is required.');
+
+const App = () => {
+    const [success, setSuccess] = React.useState<boolean>(false);
+
+    const handleSubmit = (dataItem) => {
+        setSuccess(true);
+        setTimeout(() => {
+            setSuccess(false);
+        }, 3000);
+    };
+
+    return (
+        <div className="row example-wrapper">
+            <div className="col-xs-12 col-sm-6 offset-sm-3 example-col">
+                <Form
+                    onSubmit={handleSubmit}
+                    initialValues={{
+                        employee: null
+                    }}
+                    render={(formRenderProps) => (
+                        <FormElement>
+                            <FormFieldSet legend="Select an employee">
+                                <FieldWrapper>
+                                    <div className="mb-3">
+                                        <Field
+                                            name="employee"
+                                            component={MultiColumnComboBox}
+                                            data={employees}
+                                            columns={columns}
+                                            textField={'name'}
+                                            style={{
+                                                width: '300px'
+                                            }}
+                                            placeholder="Please select ..."
+                                            label="Employee"
+                                            validator={requiredValidator}
+                                        />
+                                    </div>
+                                </FieldWrapper>
+                            </FormFieldSet>
+                            <Button type="submit" themeColor={'primary'}>
+                                Search
+                            </Button>
+                        </FormElement>
+                    )}
+                />
+            </div>
+            {success && (
+                <div className="alert alert-success" style={{ position: 'absolute' }}>
+                    Form submitted!
+                </div>
+            )}
+        </div>
+    );
+};
+
+export default App;

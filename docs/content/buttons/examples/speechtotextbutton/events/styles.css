@@ -1,0 +1,55 @@
+.events-demo {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .demo-section {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  h4 {
+    margin-bottom: 10px;
+    color: #656565;
+  }
+
+  p {
+    margin-bottom: 20px;
+    color: #888;
+  }
+
+  .speech-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+  .current-status {
+    font-size: 16px;
+    color: #333;
+    padding: 8px 16px;
+    background-color: white;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    min-width: 200px;
+    text-align: center;
+  }
+
+  .recognized-text {
+    font-size: 14px;
+    color: #0066cc;
+    padding: 8px 16px;
+    background-color: #f0f8ff;
+    border-radius: 6px;
+    border: 1px solid #b3d9ff;
+    max-width: 400px;
+    text-align: center;
+    word-wrap: break-word;
+  }

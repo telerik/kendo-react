@@ -1,0 +1,32 @@
+  .tab-image {
+    width: 17px;
+    height: 17px;
+    margin-right: 5px;
+  }
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+  }
+  .main {
+    width: 160px;
+    display: flex;
+  }
+  .degree {
+    display: flex;
+    flex-direction: column;
+  }
+  .main > img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  .large-degree {
+    font-size: 2em;
+    font-weight: lighter;
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+  }

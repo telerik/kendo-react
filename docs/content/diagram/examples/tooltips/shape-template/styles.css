@@ -1,0 +1,39 @@
+.info-banner {
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    background-color: #e7f3ff;
+    border-left: 4px solid #0078d4;
+    border-radius: 4px;
+    color: #323130;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.custom-tooltip {
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.employee-tooltip {
+    padding: 12px 16px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.employee-tooltip strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #212529;
+    font-size: 15px;
+}
+
+.employee-tooltip div {
+    color: #6c757d;
+}

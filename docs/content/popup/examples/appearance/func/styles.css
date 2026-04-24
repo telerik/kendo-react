@@ -1,0 +1,23 @@
+.k-animation-container.wrapper {
+    color: #ffffff;
+    background-color: #eeeeee;
+}
+
+.k-popup.inner-wrapper {
+    padding: 20px;
+    background-color: #fcfcfc;
+    color: #333333;
+    border: 1px solid #cccccc;
+}
+
+/* Fallback with higher specificity for compatibility */
+div.wrapper {
+    color: #ffffff;
+    background-color: #eeeeee;
+}
+
+div.inner-wrapper {
+    padding: 20px;
+    background-color: #fcfcfc;
+    color: #333333;
+}

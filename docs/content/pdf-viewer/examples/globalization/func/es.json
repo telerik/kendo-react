@@ -1,0 +1,33 @@
+{
+   "pdfviewer": {
+     "zoomIn": "Acercarse",
+     "zoomOut": "Disminuir el zoom",
+     "enableSelection": "Habilitar selección",
+     "enablePanning": "Habilitar panorámica",
+     "search": "Buscar",
+     "open": "Abrir",
+     "download": "Descargar",
+     "print": "Imprimir",
+     "close": "Cerrar",
+     "matchCase": "Caso de coincidencia",
+     "prevMatch": "Anterior",
+     "nextMatch": "Próximo",
+     "actualWidth": "Ancho Real",
+     "fitToWidth": "Ajustar al ancho",
+     "fitToPage": "Ajustar a la página",
+     "popupBlocked": "La ventana emergente está bloqueada."
+   },
+   "pager": {
+    "firstPage": "Ir a la primera página",
+    "previousPage": "Ir a la página anterior",
+    "nextPage": "Ir a la página siguiente",
+    "lastPage": "Ir a la última página",
+    "page": "Página",
+    "of": "de",
+    "info": "{0} - {1} de {2} ítems",
+    "itemsPerPage": "ítems por página"
+   },
+   "dropdowns": {
+    "clear": "Claro"
+}
+ }

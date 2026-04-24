@@ -1,0 +1,7 @@
+/* Reduce the height and padding of the grid header row */
+.k-grid-header th.k-header {
+    height: 16px; /* Adjust the height as needed */
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 16px;
+}

@@ -1,0 +1,13 @@
+my-app { padding: 0 !important; }
+
+.k-drawer-content { 
+    padding: 20px;
+}
+.k-drawer-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+.k-drawer-item {
+    user-select: none;
+}

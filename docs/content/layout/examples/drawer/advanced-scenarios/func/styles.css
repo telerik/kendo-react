@@ -1,0 +1,81 @@
+my-app {
+    padding: 0;
+}
+
+/** main content styles **/
+.custom-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #f6f6f6;
+    line-height: 10px;
+    border-bottom: inset;
+    border-bottom-width: 1px;
+    padding: 3px 8px;
+    color: #656565;
+}
+
+.mail-box {
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.main-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+}
+
+.main-content li {
+    font-size: 1em;
+    background: 0 0;
+    border-radius: 0;
+    border-width: 0 0 1px;
+    border-color: rgba(33, 37, 41, 0.125);
+    border-style: solid;
+    line-height: 1.5em;
+    padding: 1.09em 0.84em 1.23em 0.84em;
+}
+
+.main-content li:last-child {
+    border: 0;
+}
+
+/** page layout styles **/
+.page {
+    display: flex;
+    min-height: calc(100% - 47px);
+}
+
+.left,
+.right {
+    flex-grow: 0;
+    flex-shrink: 0;
+    transition: flex 200ms ease 0s;
+    overflow: hidden;
+}
+
+.main-content {
+    flex-grow: 1;
+    transition: flex 200ms ease 0s;
+    overflow-y: auto;
+}
+
+.left.k-drawer-expanded,
+.right.k-drawer-expanded {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.main-content.expanded-one-panel {
+    flex-basis: calc(100% - 240px);
+}
+
+.main-content.expanded-two-panels {
+    flex-basis: calc(100% - 480px);
+}

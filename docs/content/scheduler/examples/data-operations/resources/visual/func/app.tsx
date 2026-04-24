@@ -1,0 +1,28 @@
+import * as React from 'react';
+
+import { Scheduler, MonthView, SchedulerResource } from '@progress/kendo-react-scheduler';
+import { sampleDataWithResources, displayDate } from './sc-events-utc';
+
+const resources: SchedulerResource[] = [
+    {
+        name: 'Rooms',
+        data: [
+            { text: 'Meeting Room 101', value: 1, color: '#5392E4' },
+            { text: 'Meeting Room 201', value: 2, color: '#FF7272' }
+        ],
+        field: 'roomId',
+        valueField: 'value',
+        textField: 'text',
+        colorField: 'color'
+    }
+];
+
+const App = () => {
+    return (
+        <Scheduler resources={resources} data={sampleDataWithResources} defaultDate={displayDate}>
+            <MonthView />
+        </Scheduler>
+    );
+};
+
+export default App;

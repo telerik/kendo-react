@@ -1,0 +1,44 @@
+{
+    "datepicker": {
+        "toggleCalendar": "Alternar calendario"
+    },
+    "calendar": {
+        "today": "Hoy"
+    },
+    "dateinput": {
+        "increment": "Incrementar valor",
+        "decrement": "Disminuir valor"
+    },
+    "numerictextbox": {
+        "increment": "Incrementar valor",
+        "decrement": "Disminuir valor"
+    },
+    "treelist": {
+        "noRecords": "No hay datos disponibles.",
+        "filterEqOperator": "Es igual a",
+        "filterNotEqOperator": "No es igual a",
+        "filterIsNullOperator": "Es nulo",
+        "filterIsNotNullOperator": "No es nulo",
+        "filterIsEmptyOperator": "Está vacío",
+        "filterIsNotEmptyOperator": "No está vacío",
+        "filterStartsWithOperator": "Comienza con",
+        "filterContainsOperator": "Contiene",
+        "filterNotContainsOperator": "No contiene",
+        "filterEndsWithOperator": "Termina en",
+        "filterGteOperator": "Es mayor o igual que",
+        "filterGtOperator": "Es mayor que",
+        "filterLteOperator": "Es menor o igual que",
+        "filterLtOperator": "Es menor o igual que",
+        "filterIsTrue": "Sí",
+        "filterIsFalse": "No",
+        "filterBooleanAll": "(Todas)",
+        "filterAfterOrEqualOperator": "Es posterior o igual a",
+        "filterAfterOperator": "Es posterior",
+        "filterBeforeOperator": "Es anterior",
+        "filterBeforeOrEqualOperator": "Es anterior o igual a",
+        "filterFilterButton": "Filtrar",
+        "filterClearButton": "Limpiar filtros",
+        "filterAndLogic": "Y",
+        "filterOrLogic": "O"
+    }
+}

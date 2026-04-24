@@ -1,0 +1,14 @@
+.demo-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.demo-container .k-prompt-box {
+    width: 100%;
+}
+
+.example-buttons {
+    margin-bottom: 16px;
+    display: flex;
+    gap: 8px;
+}

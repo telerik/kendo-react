@@ -1,0 +1,26 @@
+.demo-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.configuration-panel {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: var(--kendo-color-base);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 20px;
+}
+
+.label-inline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.demo-container .k-prompt-box {
+    width: 100%;
+}

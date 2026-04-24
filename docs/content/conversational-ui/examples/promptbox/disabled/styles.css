@@ -1,0 +1,19 @@
+.demo-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.example-config {
+    margin: 0;
+    padding: 10px;
+    background-color: var(--kendo-color-base);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.event-log li:last-child {
+    border-bottom: none;
+}

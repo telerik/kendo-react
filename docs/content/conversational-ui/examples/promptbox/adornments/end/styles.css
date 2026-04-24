@@ -1,0 +1,32 @@
+.demo-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.example-buttons {
+    margin-bottom: 16px;
+    display: flex;
+    gap: 8px;
+}
+
+.info-message {
+    margin-bottom: 16px;
+    padding: 12px;
+    background-color: var(--kendo-color-base);
+    border-radius: 4px;
+    border-left: 3px solid var(--kendo-color-info);
+}
+
+.info-message p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--kendo-color-on-app-surface);
+}
+
+.status-message {
+    margin-top: 16px;
+    padding: 12px;
+    background-color: var(--kendo-color-info-subtle);
+    border-radius: 4px;
+    color: var(--kendo-color-info-on-subtle);
+}

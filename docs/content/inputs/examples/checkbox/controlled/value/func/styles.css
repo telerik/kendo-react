@@ -1,0 +1,38 @@
+.task-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  h3 {
+    color: #333;
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+    color: #555;
+  }
+
+  .task-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  button {
+    font-weight: bold;
+  }
+
+  .k-checkbox-label {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+  }

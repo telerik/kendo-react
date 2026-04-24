@@ -1,0 +1,10 @@
+td.dirty:before {
+  font-family: 'WebComponentsIcons';
+  color: red;
+  content: '\e000';
+  margin-top: -10px;
+  margin-right: -15px;
+  font-size: 18px;
+  line-height: 0px;
+  float: right;
+}

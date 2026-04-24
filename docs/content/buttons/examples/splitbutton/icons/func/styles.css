@@ -1,0 +1,14 @@
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+}
+
+.buttons-container-button {
+    margin: 7px;
+}
+
+.k-icon-button > .k-button-icon.fa {
+    min-width: 16px;
+    min-height: 16px;
+}

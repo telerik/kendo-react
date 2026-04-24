@@ -1,0 +1,15 @@
+@media print {
+    * {
+        visibility: hidden;
+    }
+
+    .k-grid {
+        visibility: visible;
+        margin: 5px;
+    }
+
+    .k-grid * {
+        visibility: visible;
+    }
+}
+

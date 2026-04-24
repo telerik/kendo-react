@@ -1,0 +1,37 @@
+.configurator {
+    margin: -30px -30px 30px -30px;
+}
+
+.configurator-header {
+    display: flex;
+    justify-content: center;
+    padding: 4px 0;
+}
+
+.configurator-header span {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
+
+.configurator-options {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: var(--kendo-color-base);
+}
+
+.configurator-options .k-form-field {
+    flex: 1 1 0px;
+    min-width: 150px;
+    margin: 5px;
+}
+
+.example-config {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: var(--kendo-color-base);
+}

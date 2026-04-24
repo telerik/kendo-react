@@ -1,0 +1,93 @@
+.tooltip-container {
+  padding: 25px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 300px;
+}
+
+.k-tooltip {
+    padding: 0;
+    background-color: transparent;
+}
+
+.tooltip-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.tooltip-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.tooltip-name {
+  margin: 0 0 5px 0;
+  color: #212529;
+}
+
+.tooltip-title {
+  margin: 0;
+  color: #6c757d;
+  font-size: 16px;
+}
+
+.tooltip-details {
+  border-top: 1px solid #dee2e6;
+  padding-top: 15px;
+}
+
+.tooltip-detail-item {
+  margin-bottom: 10px;
+}
+
+.tooltip-detail-item:last-child {
+  margin-bottom: 0;
+}
+
+.tooltip-label {
+  color: #495057;
+}
+
+.tooltip-value {
+  color: #6c757d;
+  margin-left: 10px;
+}
+
+.connection-tooltip {
+  padding: 16px 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 200px;
+}
+
+.connection-flow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.connection-from,
+.connection-to {
+  color: #212529;
+  font-weight: 600;
+}
+
+.connection-arrow {
+  color: #667eea;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.connection-relationship {
+  color: #6c757d;
+  font-size: 14px;
+  text-align: center;
+  padding-top: 12px;
+  border-top: 1px solid #dee2e6;
+}

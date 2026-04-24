@@ -1,0 +1,9 @@
+.button-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.button-container > * {
+    flex-shrink: 0;
+}

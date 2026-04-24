@@ -1,0 +1,104 @@
+html,
+body,
+my-app {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.page-host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.demo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 40px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+.hint-text {
+    margin: 0;
+    position: relative;
+    top: 10px;
+    font-size: 14px;
+    color: var(--kendo-color-subtle);
+}
+
+.status-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.status-divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--kendo-color-border);
+}
+
+.status-bar {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.status-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-label {
+    font-size: 14px;
+    color: var(--kendo-color-subtle);
+}
+
+.status-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--kendo-color-on-app-surface, #3d3d3d);
+}
+
+.status-separator {
+    width: 1px;
+    height: 16px;
+    background-color: var(--kendo-color-border);
+}
+
+.k-segmented-control.k-segmented-control {
+    border-radius: 0.5rem;
+}
+
+.k-segmented-control .k-segmented-control-thumb,
+.k-segmented-control .k-segmented-control-button {
+    border-radius: calc(0.5rem - 2px);
+}
+
+.k-segmented-control.k-segmented-control-lg .k-segmented-control-button.k-segmented-control-button {
+    font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding: 0.75rem 0.75rem;
+    outline: none;
+    color: var(--kendo-color-subtle);
+}
+
+.k-segmented-control.k-segmented-control-lg .k-segmented-control-button.k-segmented-control-button.k-selected {
+    color: var(--kendo-color-on-app-surface);
+}
+
+.k-segmented-control .k-segmented-control-button-text.k-segmented-control-button-text {
+    white-space: normal;
+    text-overflow: clip;
+    overflow: visible;
+}

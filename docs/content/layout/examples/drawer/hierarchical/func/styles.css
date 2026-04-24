@@ -1,0 +1,33 @@
+my-app { padding: 0 !important; }
+
+.title {
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 17px;
+}
+.custom-toolbar {
+    width: 100%;
+    background-color: #f6f6f6;
+    line-height: 10px;
+    border-bottom: inset;
+    border-bottom-width: 1px;
+    padding: 3px 8px;
+    color: #656565;
+}
+.k-drawer-container {
+    height: calc(100vh - 43px);
+}
+.k-drawer-item {
+    user-select: none;
+}
+.k-drawer-item .k-icon {
+    font-size: 20px;
+}
+.k-drawer-content {
+    padding: 10px;
+}
+.k-card-image {
+    max-height: 240px;
+}
+.k-drawer-item.sub-item { padding-left: 20px; }
+.k-card-subtitle { margin: 0; line-height: 1.5; }

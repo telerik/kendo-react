@@ -1,0 +1,18 @@
+.example-wrapper {
+    width: 300px;
+    margin: 0 auto;
+    box-shadow: 0px 10px 20px #00000029;
+    border-radius: 30px;
+}
+.page { padding: 20px 10px; }
+.content {
+    background: #F9F9F9;
+    border-radius: 30px 30px 0 0;
+    height: 450px;
+}
+.box { padding: 4px; }
+.first { background-color: #fae47a; }
+.second { background-color: #fbd17f; }
+.third { background-color: #f5bf8b; }
+.fourth { background-color: #ebaa79; }
+.k-dropdown { margin: 0px 20px 20px 0px; }

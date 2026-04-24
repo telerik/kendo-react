@@ -1,0 +1,11 @@
+  td>.negative {
+    color: #F31700
+  }
+
+  td>.positive {
+    color: #37B400
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+  }

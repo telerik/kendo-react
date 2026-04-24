@@ -1,0 +1,188 @@
+.grid-frame {
+    box-shadow: 0px 4px 12px 0px rgba(13, 10, 44, 0.08);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 1);
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+    padding: 35px var(--kendo-spacing-7);
+    margin: 0 auto;
+    margin-inline: max(var(--kendo-spacing-15), calc((100vw - 2581px) / 2));
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    height: 790px;
+    max-width: 2581px;
+}
+
+.container-wrapper {
+    display: flex;
+    gap: 0;
+    position: relative;
+    z-index: 3;
+    flex: 1;
+    min-height: 0;
+}
+
+.container-wrapper-chat {
+    flex-shrink: 0;
+    width: clamp(300px, 30vw, 400px);
+}
+
+.container-wrapper-grid {
+    flex: 1;
+    min-width: 0;
+    max-width: 2525px;
+}
+
+/* .container-wrapper-grid .hide-group .k-grouping-header {
+    height: 0;
+    padding: 0;
+    padding-block: 0;
+    border: none;
+} */
+
+.k-message-box-wrapper span.k-input-suffix {
+    background-color: transparent;
+    padding: 10px;
+}
+
+.k-chat-send {
+    background-color: var(--kendo-color-base) !important;
+}
+
+span.k-suggestion {
+    border-radius: var(--kendo-border-radius-xxl, 0.75rem) !important;
+    background: rgba(75, 95, 250, 0.1);
+    border: 1px solid rgba(75, 95, 250, 0.4) !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    color: var(--kendo-color-base-on-subtle, #212529);
+}
+
+span.k-suggestion:hover {
+    background: rgba(75, 95, 250, 0.2);
+}
+
+span.k-suggestion:active,
+span.k-suggestion:focus {
+    background: rgba(75, 95, 250, 0.3);
+}
+
+.k-textarea.k-message-box {
+    height: 132px;
+    border-radius: var(--kendo-border-radius-xl);
+}
+
+.k-textarea.k-message-box textarea {
+    padding-block: 9px;
+    padding-inline: 12px;
+}
+
+.k-textarea.k-message-box textarea::placeholder {
+    font-size: 1rem;
+    color: var(--kendo-color-subtle, rgba(89, 97, 105, 1));
+    /* your color */
+}
+
+.k-chat {
+    background-color: #fff !important;
+}
+
+.k-chat>.k-appbar {
+    box-shadow: none;
+    border-bottom: 1px solid var(--kendo-color-border, rgba(33, 37, 41, 0.13));
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    padding: var(--kendo-spacing-0) 512px var(--kendo-spacing-0) 80px;
+}
+
+.hero-icon {
+    position: relative;
+    width: 96px;
+    height: 96px;
+}
+
+.hero-icon.smart {
+    background-image: linear-gradient(112.33deg, #c158e4 13.08%, #4b5ffa 80.05%);
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-title {
+    margin: 0px 0 0px -15px;
+    font-family: var(--kendo-font-family);
+    font-weight: var(--kendo-font-weight-bold);
+    font-size: 28px;
+    line-height: 120%;
+    letter-spacing: var(--kendo-letter-spacing);
+    color: var(--Gray-Light-12, rgba(52, 58, 64, 1));
+}
+
+.hero-subtitle {
+    margin: 0;
+    font-family: var(--kendo-font-family);
+    font-weight: var(--kendo-font-weight-semibold);
+    font-size: 14px;
+    line-height: 142%;
+    letter-spacing: var(--kendo-letter-spacing);
+    color: var(--Gray-Light-9, rgba(108, 117, 125, 1));
+}
+
+/* Gradient button - Outline state */
+.k-button.gradient-border-button.k-button-outline {
+    position: relative;
+    border: 1px solid;
+    color: #4b5ffa;
+}
+
+/* Gradient button - Solid state */
+.k-button.gradient-border-button.k-button-solid {
+    color: #ffffff;
+    background: linear-gradient(112.33deg, #c158e4 13.08%, #4b5ffa 80.05%);
+}
+
+/* Hover state for outline */
+.k-button.gradient-border-button.k-button-outline:hover {
+    background: linear-gradient(112.33deg, #c158e4 13.08%, #4b5ffa 80.05%);
+    border: 1px solid transparent;
+    color: #ffffff;
+}
+
+/* Hover state for solid */
+.k-button.gradient-border-button.k-button-solid:hover {
+    background: linear-gradient(112.33deg, #b043d4 13.08%, #3a4fe0 80.05%);
+}
+
+/* Focus state for outline */
+.k-button.gradient-border-button.k-button-outline:focus,
+.k-button.gradient-border-button.k-button-outline:focus-visible {
+    box-shadow: 0 0 0 3px rgba(75, 95, 250, 0.2);
+}
+
+/* Focus state for solid */
+.k-button.gradient-border-button.k-button-solid:focus,
+.k-button.gradient-border-button.k-button-solid:focus-visible {
+    box-shadow: 0 0 0 3px rgba(75, 95, 250, 0.3);
+}
+
+.k-button.gradient-border-button.active {
+    position: relative;
+    border: 1px solid #4b5ffa;
+    background: linear-gradient(116.82deg, rgba(193, 88, 228, 0.2) 11.47%, rgba(75, 95, 250, 0.2) 71.93%);
+    color: #4b5ffa;
+}
+
+.ai-icon {
+    color: #4b5ffa;
+}

@@ -1,0 +1,39 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-name {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.price-text {
+    font-size: 1.1em;
+}
+
+.units-text {
+    font-size: 1.1em;
+}
+
+.badge {
+    padding: 6px 8px;
+    font-weight: 500;
+    border-radius: 0.25rem;
+    color: white;
+    font-size: 0.85em;
+}
+
+.badge-success {
+    background-color: #198754;
+}
+
+.badge-danger {
+    background-color: #dc3545;
+}
+
+.flag {
+    vertical-align: middle;
+}

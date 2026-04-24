@@ -1,0 +1,11 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.k-button {
+    margin: 5px;
+}

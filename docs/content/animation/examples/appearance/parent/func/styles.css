@@ -1,0 +1,37 @@
+.animation-demo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.demo-button {
+    min-width: 180px;
+}
+
+.custom-parent {
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.animated-box {
+    padding: 30px 40px;
+    text-align: center;
+    min-width: 250px;
+    color: white;
+}
+
+.animated-box h3 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.animated-box p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.95;
+}

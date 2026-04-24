@@ -1,0 +1,16 @@
+{
+   "pivotgrid": {
+     "fieldMenuReset": "Reiniciar",
+     "fieldMenuApply": "Aplicar",
+     "configuratorCancel": "Cancelar",
+     "configuratorApply": "Aplicar",
+     "configuratorTitle": "Ajustes",
+     "configuratorEditorSearchTitle": "Los campos",
+     "configuratorEditorSearchPlaceholder": "Búsqueda...",
+     "configuratorColumnsTitle": "Columnas",
+     "configuratorRowsTitle": "Filas",
+     "configuratorMeasuresTitle": "Valores",
+     "configuratorButtonLabel": "Cambiar ajustes",
+     "configuratorMissingFields": "Seleccione algunos campos para comenzar la configuración"
+   }
+ }

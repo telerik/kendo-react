@@ -1,0 +1,23 @@
+.example-wrapper {
+    width: 300px;
+    margin: 0 auto;
+    box-shadow: 0px 10px 20px #00000029;
+    border-radius: 30px;
+}
+.page { padding: 20px 10px; }
+.content {
+    background: #F9F9F9;
+    border-radius: 30px 30px 0 0;
+    height: 450px;
+}
+.k-hstack,
+.k-vstack { height: 100%; }
+.box { padding: 4px; }
+.first { background-color: #fae47a; }
+.second { background-color: #fbd17f; }
+.third { background-color: #f5bf8b; }
+.fourth { background-color: #ebaa79; }
+.k-flex-10 { flex: 1 1 10%; }
+.k-flex-20 { flex: 1 1 20%; }
+.k-flex-30 { flex: 1 1 30%; }
+.k-flex-40 { flex: 1 1 40%; }

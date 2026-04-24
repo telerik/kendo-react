@@ -1,0 +1,40 @@
+.example-container {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .textarea-speech-demo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  p {
+    margin: 0 0 15px 0;
+    color: #666;
+    text-align: center;
+  }
+
+  .textarea-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .actions-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+
+  .actions {
+    display: flex;
+    gap: 10px;
+  }

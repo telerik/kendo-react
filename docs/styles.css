@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --text: #1f2328;
+  --text-secondary: #656d76;
+  --border: #d1d9e0;
+  --bg: #ffffff;
+  --bg-page: #f6f8fa;
+  --hover: #f0f4f8;
+  --accent: #ff6358;
+  --link: #0969da;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, sans-serif;
+  color: var(--text);
+  background: var(--bg-page);
+  line-height: 1.6;
+}
+
+#app {
+  min-height: 100%;
+}
+
+.page {
+  padding: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ---- Brand in toolbar ---- */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  white-space: nowrap;
+  width: 220px;
+}
+
+.toolbar-end {
+  width: 220px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.count-badge {
+  background: var(--bg-page);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1px 10px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+/* ---- Empty state ---- */
+.empty {
+  text-align: center;
+  padding: 60px 24px;
+  color: var(--text-secondary);
+  font-size: 17px;
+}

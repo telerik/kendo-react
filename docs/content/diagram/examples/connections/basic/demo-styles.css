@@ -1,0 +1,68 @@
+.example-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-height: 400px;
+}
+
+.configurator-panel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    padding: 20px;
+    background-color: var(--kendo-color-base);
+    color: var(--kendo-color-on-app-surface);
+    border-radius: 4px;
+}
+
+.config-group {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    width: 220px;
+}
+
+.diagram-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 2;
+}
+
+.config-control {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-weight: 600;
+}
+
+.label-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    line-height: 1.4;
+    min-height: 20px;
+}
+
+.input-button-group {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.input-button-group .k-numerictextbox {
+    width: 120px;
+}
+
+.k-diagram {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .configurator-panel {
+        padding: 24px;
+    }
+}

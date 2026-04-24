@@ -1,0 +1,93 @@
+.example-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.instructions {
+    padding: 16px;
+    background-color: var(--kendo-color-base);
+    border-radius: 4px;
+}
+
+.instructions h4 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: var(--kendo-color-on-app-surface);
+}
+
+.instructions p {
+    margin-bottom: 12px;
+    color: var(--kendo-color-subtle);
+    font-size: 14px;
+}
+
+.shortcuts-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1.3fr 1fr 0.9fr;
+    gap: 16px;
+}
+
+.shortcuts-column strong {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--kendo-color-on-app-surface);
+    font-size: 13px;
+}
+
+.shortcuts-column ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.shortcuts-column li {
+    margin-bottom: 4px;
+    color: var(--kendo-color-subtle);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+kbd {
+    display: inline-block;
+    padding: 3px 6px;
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--kendo-color-on-app-surface);
+    background-color: var(--kendo-color-surface-alt);
+    border: 1px solid var(--kendo-color-border);
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    font-family: monospace;
+}
+
+.step-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.step-controls {
+    margin-top: 6px;
+    padding: 10px;
+    background-color: var(--kendo-color-surface-alt);
+    border-radius: 4px;
+    border: 1px solid var(--kendo-color-border);
+}
+
+.step-controls strong {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--kendo-color-on-app-surface);
+    font-size: 13px;
+}
+
+.step-controls label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: var(--kendo-color-subtle);
+}
+
+.step-controls .k-input-inner {
+    width: 100%;
+}

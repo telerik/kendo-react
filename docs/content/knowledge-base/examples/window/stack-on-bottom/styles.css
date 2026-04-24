@@ -1,0 +1,19 @@
+
+.k-window-minimized {
+    position: relative !important;
+    bottom: 0px !important;
+    left: auto !important;
+    top: auto !important;
+    width: 150px !important;
+    margin-left: 0;
+    margin-bottom: 5px;
+}
+
+#windowsWrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+    padding: 20px;
+}

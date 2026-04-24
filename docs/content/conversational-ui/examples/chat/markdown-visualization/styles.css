@@ -1,0 +1,245 @@
+
+
+.k-chat {
+    background-color: transparent;
+    /* border: 1px solid var(--kendo-color-border); */
+}
+
+.k-chat .k-bubble {
+    border-radius: var(--kendo-border-radius-xl);
+    background-color: var(--kendo-color-primary);
+    color: var(--kendo-color-on-primary, #ffffff);
+}
+
+.k-message-box {
+    width: 100%;
+}
+
+.k-message-group {
+    max-width: 100% !important;
+    width: 100%;
+}
+
+.custom-bot-message {
+    width: 100%;
+    padding: 12px;
+    background-color: transparent;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.k-timestamp {
+    text-align: center;
+}
+
+.custom-bot-message table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 14px;
+}
+
+.custom-bot-message th {
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+    color: var(--kendo-color-on-app-surface);
+    border-bottom: 2px solid var(--kendo-color-border);
+}
+
+.custom-bot-message td {
+    padding: 12px 16px;
+    color: var(--kendo-color-on-app-surface);
+    border-bottom: 1px solid var(--kendo-color-border);
+    vertical-align: top;
+}
+
+.custom-bot-message tr:last-child td {
+    border-bottom: none;
+}
+
+.custom-bot-message code {
+    background-color: var(--kendo-color-surface-alt);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 13px;
+    color: var(--kendo-color-primary);
+}
+
+.code-block-wrapper {
+    background-color: var(--kendo-color-surface);
+    border-radius: 8px;
+    margin: 12px 0;
+    overflow: hidden;
+}
+
+.code-block-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: var(--kendo-color-surface);
+}
+
+.code-block-language {
+    font-family: var(--kendo-font-family) !important;
+    font-weight: var(--kendo-font-weight-regular) !important;
+    font-size: var(--kendo-font-size-sm) !important;
+    font-style: normal !important;
+    line-height: 142% !important;
+    letter-spacing: var(--kendo-letter-spacing) !important;
+    color: var(--kendo-color-base-active, #BDC4CB) !important;
+}
+
+.code-block-copy {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    color: var(--kendo-color-subtle);
+    font-size: 13px;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.code-block-copy:hover {
+    background-color: var(--kendo-color-base-hover);
+    color: var(--kendo-color-on-app-surface);
+}
+
+.code-block-copy svg {
+    width: var(--kendo-icon-size, 1rem);
+    height: var(--kendo-icon-size, 1rem);
+    margin-right: 6px;
+}
+
+.custom-bot-message pre {
+    background-color: var(--kendo-color-surface);
+    color: var(--kendo-color-on-app-surface);
+    padding: 16px;
+    margin: 0;
+    overflow-x: auto;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.custom-bot-message pre code {
+    background-color: transparent;
+    padding: 0;
+    color: inherit;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+.custom-bot-message pre .keyword,
+.custom-bot-message pre code .keyword {
+    color: var(--kendo-color-error);
+}
+
+.custom-bot-message pre .string,
+.custom-bot-message pre code .string {
+    color: var(--kendo-color-success);
+}
+
+.custom-bot-message pre .property,
+.custom-bot-message pre code .property {
+    color: var(--kendo-color-info);
+}
+
+.custom-bot-message pre .value,
+.custom-bot-message pre code .value {
+    color: var(--kendo-color-warning);
+}
+
+.typing-indicator {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 0;
+}
+
+.typing-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--kendo-color-subtle);
+    border-radius: 50%;
+    animation: typing-bounce 1.4s infinite ease-in-out both;
+}
+
+.typing-dot:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.typing-dot:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+.typing-dot:nth-child(3) {
+    animation-delay: 0s;
+}
+
+@keyframes typing-bounce {
+
+    0%,
+    80%,
+    100% {
+        transform: scale(0.6);
+        opacity: 0.4;
+    }
+
+    40% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 767px) {
+    .k-chat {
+        max-width: 400px !important;
+    }
+}
+
+.k-separator {
+    display: none;
+}
+
+.k-message-box {
+    width: auto;
+}
+
+
+.k-suggestion,
+.k-suggestion.k-suggestion-base {
+    background-color: var(--kendo-color-surface);
+    font-weight: 500;
+    border: 1px solid var(--kendo-color-border);
+}
+
+.k-svg-icon.ai-icon {
+    width: 32px;
+    height: 24px;
+}
+
+.k-prompt-box.k-prompt-box-multiline {
+    border: 1px solid var(--kendo-color-border);
+    border-radius: 18px;
+}
+
+.k-prompt-box .k-prompt-box-content {
+    height: 138px;
+}
+
+.k-prompt-box .k-prompt-box-textarea::placeholder {
+    font-family: var(--kendo-font-family);
+    font-weight: var(--kendo-font-weight-regular);
+    font-style: regular;
+    line-height: 150%;
+    font-size: var(--kendo-font-size-md);
+    letter-spacing: var(--kendo-letter-spacing);
+    vertical-align: middle;
+    color: var(--kendo-color-subtle);
+    opacity: 0.7;
+    line-height: 24px;
+}

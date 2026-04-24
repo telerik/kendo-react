@@ -1,0 +1,83 @@
+.page-host {
+    display: flex;
+}
+
+.demo-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+    width: 100%;
+    background-color: var(--kendo-color-surface-alt, #fff);
+    border: 1px solid var(--kendo-color-border);
+    border-radius: 12px;
+}
+
+.demo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.section-label {
+    font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--kendo-color-on-app-surface);
+}
+
+.tip-text {
+    margin: 12px 0 0;
+    padding-top: 8px;
+    position: relative;
+    top: 5px;
+    font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+    font-size: 12px;
+    color: var(--kendo-color-subtle);
+    text-align: center;
+}
+
+.tooltip-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+    font-weight: 500;
+}
+
+.k-segmented-control.k-segmented-control {
+    border-radius: 0.5rem;
+}
+
+.k-segmented-control .k-segmented-control-thumb,
+.k-segmented-control .k-segmented-control-button {
+    border-radius: calc(0.5rem - 2px);
+}
+
+.k-segmented-control .k-segmented-control-button.k-segmented-control-button {
+    font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--kendo-color-subtle);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.k-segmented-control .k-segmented-control-button.k-segmented-control-button.k-selected {
+    color: var(--kendo-color-on-app-surface);
+}
+
+.k-segmented-control .k-segmented-control-button .k-svg-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.k-segmented-control .k-segmented-control-button-text:empty {
+    display: none;
+}
+
+.tooltip-toggle .k-checkbox {
+    border-radius: 2px;
+}

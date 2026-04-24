@@ -1,0 +1,35 @@
+.role-tooltip {
+    width: 260px;
+    padding: 0px 8px;
+    font-size: 14px;
+    line-height: 1.5;
+    background: #ffffff;
+    border: 1px solid #dee2e6;
+    color: #212529;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.executive-level {
+    border-left: 4px solid #667eea;
+}
+
+.manager-level {
+    border-left: 4px solid #48bb78;
+}
+
+.individual-level {
+    border-left: 4px solid #ed8936;
+}
+
+.connection-tooltip-custom {
+    width: 260px;
+    padding: 0px 8px;
+    font-size: 13px;
+    color: #212529;
+    line-height: 1.4;
+    background: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

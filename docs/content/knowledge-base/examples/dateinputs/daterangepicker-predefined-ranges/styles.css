@@ -1,0 +1,12 @@
+.preset-buttons {
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #eee;
+    border-radius: 5px;
+    margin-left: 5px;
+  }
+  .preset-buttons:hover {
+    background-color: #ccc;
+  }
+  

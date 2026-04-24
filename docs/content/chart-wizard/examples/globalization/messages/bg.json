@@ -1,0 +1,174 @@
+{
+    "chartWizard": {
+        "window": {
+            "title": "Преглед на диаграмата"
+        },
+        "export": {
+            "button": "Експортирай",
+            "exportPDF": {
+                "button": "PDF файл"
+            },
+            "exportSVG": {
+                "button": "SVG файл"
+            },
+            "exportPNG": {
+                "button": "PNG файл"
+            }
+        },
+        "tab": {
+            "chart": "Диаграма",
+            "data": "Данни",
+            "format": "Формат"
+        },
+        "chart": {
+            "barChart": {
+                "expandText": "Лентова диаграма",
+                "bar": "Лента",
+                "stackedBar": "Наслоена лента",
+                "100%stackedBar": "100% Наслоена лента"
+            },
+            "pieChart": {
+                "expandText": "Кръгова диаграма",
+                "pie": "Кръг"
+            },
+            "columnChart": {
+                "expandText": "Колонна диаграма",
+                "column": "Колона",
+                "stackedColumn": "Наслоена колона",
+                "100%stackedColumn": "100% Наслоена колона"
+            },
+            "lineChart": {
+                "expandText": "Линейна диаграма",
+                "line": "Линия",
+                "stackedLine": "Наслоена линия",
+                "100%stackedLine": "100% Наслоена линия"
+            },
+            "scatterChart": {
+                "expandText": "Точкова диаграма",
+                "scatter": "Точки"
+            }
+        },
+        "data": {
+            "configuration": {
+                "expandText": "Конфигурация",
+                "categoryAxis": "Категорийна ос",
+                "xAxis": "X ос",
+                "valueAxis": "Ос на стойностите",
+                "series": {
+                    "title": "Серия",
+                    "add": "Добави"
+                }
+            }
+        },
+        "format": {
+            "chartArea": {
+                "expandText": "Зона на диаграмата",
+                "margins": {
+                    "auto": "Автоматично",
+                    "left": "Ляво",
+                    "right": "Дясно",
+                    "top": "Горе",
+                    "bottom": "Долу"
+                },
+                "background": {
+                    "color": "Цвят"
+                }
+            },
+            "title": {
+                "expandText": "Заглавие",
+                "applyTo": "Приложи към",
+                "chartTitle": "Заглавие на диаграмата",
+                "chartSubtitle": "Подзаглавие на диаграмата",
+                "label": "Етикет",
+                "font": "Шрифт",
+                "fontPlaceholder": "(наследен шрифт)",
+                "size": "Размер",
+                "sizePlaceholder": "px",
+                "color": "Цвят"
+            },
+            "series": {
+                "expandText": "Серия",
+                "applyTo": "Приложи към",
+                "allSeries": "Всички серии",
+                "color": "Цвят",
+                "showLabels": "Покажи етикети"
+            },
+            "legend": {
+                "expandText": "Легенда",
+                "showLegend": "Покажи легендата",
+                "font": "Шрифт",
+                "fontPlaceholder": "(наследен шрифт)",
+                "size": "Размер",
+                "sizePlaceholder": "px",
+                "color": "Цвят",
+                "position": {
+                    "top": "Горе",
+                    "bottom": "Долу",
+                    "left": "Ляво",
+                    "right": "Дясно"
+                }
+            },
+            "categoryAxis": {
+                "expandText": "Категорийна ос",
+                "title": {
+                    "expandText": "Заглавие",
+                    "placeholder": "Заглавие на оста",
+                    "font": "Шрифт",
+                    "fontPlaceholder": "(наследен шрифт)",
+                    "size": "Размер",
+                    "sizePlaceholder": "px",
+                    "color": "Цвят"
+                },
+                "labels": {
+                    "text": "Етикети",
+                    "font": "Шрифт",
+                    "fontPlaceholder": "(наследен шрифт)",
+                    "size": "Размер",
+                    "sizePlaceholder": "px",
+                    "color": "Цвят",
+                    "rotation": {
+                        "text": "Завъртане",
+                        "auto": "Автоматично"
+                    },
+                    "reverseOrder": "Обърнат ред"
+                }
+            },
+            "xAxis": {
+                "expandText": "X ос"
+            },
+            "valueAxis": {
+                "expandText": "Ос на стойностите",
+                "title": {
+                    "text": "Заглавие",
+                    "placeholder": "Заглавие на оста",
+                    "font": "Шрифт",
+                    "fontPlaceholder": "(наследен шрифт)",
+                    "size": "Размер",
+                    "sizePlaceholder": "px",
+                    "color": "Цвят"
+                },
+                "labels": {
+                    "text": "Етикети",
+                    "labelFormat": {
+                        "text": "Текст",
+                        "number": "Число",
+                        "currency": "Валута",
+                        "percent": "Процент"
+                    },
+                    "font": "Шрифт",
+                    "fontPlaceholder": "(наследен шрифт)",
+                    "size": "Размер",
+                    "sizePlaceholder": "px",
+                    "color": "Цвят",
+                    "rotation": {
+                        "text": "Завъртане",
+                        "auto": "Автоматично"
+                    }
+                }
+            },
+            "yAxis": {
+                "expandText": "Y ос"
+            }
+        }
+    }
+}
