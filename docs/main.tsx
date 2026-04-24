@@ -5,6 +5,17 @@ import {
   RouterProvider,
   RouteObject,
 } from "react-router-dom";
+import {
+  Grid,
+  GridColumn,
+  GridCellProps,
+  GridNoRecords,
+  GridToolbar,
+  SmartBox,
+  GridToolbarSpacer,
+  GridSmartBoxSearchEvent,
+} from "@progress/kendo-react-grid";
+import { Avatar } from "@progress/kendo-react-layout";
 
 const pages: Record<string, () => Promise<{ default: React.ComponentType }>> =
   import.meta.glob("./content/**/app.{tsx,jsx}", {
@@ -41,87 +52,115 @@ function buildRoutes(): DemoRoute[] {
     .sort((a, b) => a.path.localeCompare(b.path));
 }
 
+const DemoCell = (props: GridCellProps) => {
+  const item = props.dataItem as DemoRoute;
+  return (
+    <td>
+      <a
+        href={`/${item.path}`}
+        target="_blank"
+        rel="noopener"
+        style={{
+          color: "var(--link)",
+          textDecoration: "none",
+          fontWeight: 500,
+        }}
+      >
+        {item.demo}
+      </a>
+    </td>
+  );
+};
+
+const ComponentCell = (props: GridCellProps) => {
+  const item = props.dataItem as DemoRoute;
+  return (
+    <td style={{ textTransform: "capitalize" }}>
+      {item.component.replace(/-/g, " ")}
+    </td>
+  );
+};
+
+const PathCell = (props: GridCellProps) => {
+  const item = props.dataItem as DemoRoute;
+  return (
+    <td
+      style={{
+        fontFamily:
+          "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace",
+        fontSize: 13,
+        color: "#8b949e",
+      }}
+    >
+      {item.path}
+    </td>
+  );
+};
+
 function DemoIndex({ routes }: { routes: DemoRoute[] }) {
-  const [search, setSearch] = React.useState("");
+  const [data, setData] = React.useState(routes);
 
-  const query = search.toLowerCase().trim();
-  const filtered = query
-    ? routes.filter((r) => r.path.toLowerCase().includes(query))
-    : routes;
-
-  const grouped: Record<string, DemoRoute[]> = {};
-  for (const r of filtered) {
-    (grouped[r.component] ??= []).push(r);
-  }
-  const components = Object.keys(grouped).sort();
+  const handleSearch = React.useCallback(
+    (event: GridSmartBoxSearchEvent) => {
+      const query = event.searchValue.toLowerCase().trim();
+      setData(
+        query
+          ? routes.filter((r) => r.path.toLowerCase().includes(query))
+          : routes,
+      );
+    },
+    [routes],
+  );
 
   return (
     <div className="page">
-      <header className="header">
-        <div className="header-inner">
-          <div className="brand">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-              <rect width="24" height="24" rx="5" fill="#ff6358" />
-              <text
-                x="6"
-                y="18"
-                fill="#fff"
-                fontWeight="700"
-                fontSize="16"
-                fontFamily="system-ui"
-              >
-                K
-              </text>
-            </svg>
-            <span>KendoReact Demos</span>
-            <span className="count-badge">{filtered.length}</span>
-          </div>
-          <div className="search-box">
-            <input
+      <Grid data={data} rowHeight={50} style={{ height: "calc(100vh - 48px)" }}>
+        <GridToolbar>
+          <span className="brand">
+            <Avatar
               type="text"
-              placeholder="Search by component, feature, or keyword..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
-            {search && (
-              <button className="clear-btn" onClick={() => setSearch("")}>
-                &times;
-              </button>
-            )}
-          </div>
-        </div>
-      </header>
+              size="medium"
+              themeColor="primary"
+              rounded="full"
+            >
+              K
+            </Avatar>
+            <span>KendoReact Demos</span>
+          </span>
+          <GridToolbarSpacer />
 
-      <div className="list-container">
-        {components.length === 0 && (
-          <div className="empty">
-            No demos match "<strong>{search}</strong>"
-          </div>
-        )}
+          <SmartBox
+            searchConfig={{
+              enabled: true,
+              fields: ["path", "component", "demo"],
+              placeholder: "Search demos...",
+              delay: 200,
+            }}
+            semanticSearchConfig={false}
+            aiAssistantConfig={false}
+            onSearch={handleSearch}
+          />
+          <GridToolbarSpacer />
+          <span className="toolbar-end">
+            <span className="count-badge">{data.length}</span>
+          </span>
+        </GridToolbar>
 
-        {components.map((comp) => (
-          <section key={comp} className="group">
-            <h2 className="group-title">
-              {comp.replace(/-/g, " ")}
-              <span className="group-count">{grouped[comp].length}</span>
-            </h2>
-            <div className="group-items">
-              {grouped[comp].map((r) => (
-                <a
-                  key={r.path}
-                  href={`/${r.path}`}
-                  target="_blank"
-                  rel="noopener"
-                  className="demo-link"
-                >
-                  <span className="demo-label">{r.demo}</span>
-                  <span className="demo-path">{r.path}</span>
-                </a>
-              ))}
-            </div>
-          </section>
-        ))}
-      </div>
+        <GridNoRecords>No matching demos found</GridNoRecords>
+        <GridColumn
+          field="component"
+          title="Component"
+          width="220px"
+          cells={{ data: ComponentCell }}
+        />
+        <GridColumn field="demo" title="Demo" cells={{ data: DemoCell }} />
+        <GridColumn
+          field="path"
+          title="Path"
+          width="340px"
+          cells={{ data: PathCell }}
+        />
+      </Grid>
     </div>
   );
 }
