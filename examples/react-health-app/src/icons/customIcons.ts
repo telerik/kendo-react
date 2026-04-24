@@ -13,6 +13,24 @@ export const plusWhiteIcon: SVGIcon = {
 };
 
 /**
+ * GitHub icon — used in the AppBar for the source code popup.
+ */
+export const gitHubIcon: SVGIcon = {
+  name: "github",
+  content: `
+    <path d="M8 1C4.13 1 1 4.13 1 8a7 7 0 0 0 4.79 6.65c.35.06.48-.15.48-.34
+    0-.17-.01-.71-.01-1.3C4 13.47 3.55 12.37 3.55 12.37c-.32-.81-.78-1.02-.78-1.02
+    -.63-.43.05-.42.05-.42.7.05 1.07.72 1.07.72.62 1.07 1.63.76 2.03.58.06-.45.24-.76
+    .44-.93-1.55-.18-3.18-.78-3.18-3.46 0-.76.27-1.39.72-1.88-.07-.18-.31-.89.07-1.85
+    0 0 .59-.19 1.93.72a6.7 6.7 0 0 1 3.5 0c1.34-.91 1.93-.72 1.93-.72.38.96.14 1.67
+    .07 1.85.45.49.72 1.11.72 1.88 0 2.69-1.64 3.28-3.19 3.45.25.22.47.64.47 1.29
+    0 .93-.01 1.68-.01 1.91 0 .19.13.41.48.34A7 7 0 0 0 15 8c0-3.87-3.13-7-7-7Z"
+      fill="currentColor"/>
+  `,
+  viewBox: "0 0 16 16",
+};
+
+/**
  * Two overlapping circles (venn diagram) — used for the transparency toggle in the AppBar.
  */
 export const transparencyIcon: SVGIcon = {

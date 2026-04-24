@@ -177,7 +177,8 @@ export default function ProfileDialog({
 
             <DialogActionsBar layout="end">
               <Button
-                fillMode="outline"
+                fillMode="flat"
+                rounded="full"
                 type="button"
                 onClick={() => {
                   formRenderProps.onFormReset();
@@ -188,6 +189,7 @@ export default function ProfileDialog({
               </Button>
               <Button
                 themeColor="primary"
+                rounded="full"
                 type="submit"
                 disabled={!formRenderProps.allowSubmit}
               >

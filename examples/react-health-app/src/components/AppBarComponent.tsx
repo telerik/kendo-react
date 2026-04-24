@@ -28,7 +28,10 @@ import {
   transparencyIcon,
   bellIcon as bellCustomIcon,
   hamburgerMenuIcon,
+  gitHubIcon,
 } from "../icons/customIcons";
+import { Popup } from "@progress/kendo-react-popup";
+import { SvgIcon } from "@progress/kendo-react-common";
 import NotificationPanel from "./NotificationPanel";
 import ProfileDialog from "./ProfileDialog";
 import PatientSearchComboBox from "./PatientSearchComboBox";
@@ -53,8 +56,10 @@ export default function AppBarComponent() {
   const [transparentMode, setTransparentMode] = useState(false);
   const { profile, updateProfile } = useDoctorProfile();
   const notifRef = useRef<HTMLDivElement>(null);
+  const [showGitHub, setShowGitHub] = useState(false);
+  const [gitHubAnchor, setGitHubAnchor] = useState<HTMLDivElement | null>(null);
 
-  const isCompact = useMediaQuery("(max-width: 1439px)");
+  const isCompact = useMediaQuery("(max-width: 1445px)");
   const isSmallScreen = useMediaQuery("(max-width: 899px)");
   const isMobile = useMediaQuery("(max-width: 575px)");
 
@@ -76,10 +81,17 @@ export default function AppBarComponent() {
       if (notifRef.current && !notifRef.current.contains(e.target as Node)) {
         setShowNotifications(false);
       }
+      if (
+        gitHubAnchor &&
+        !gitHubAnchor.contains(e.target as Node) &&
+        !(e.target as HTMLElement).closest(".github-popup")
+      ) {
+        setShowGitHub(false);
+      }
     }
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  }, [gitHubAnchor]);
 
   return (
     <AppBar themeColor="inherit" className="app-topbar">
@@ -186,6 +198,49 @@ export default function AppBarComponent() {
             />
           )}
         </div>
+
+        {/* GitHub Source Code */}
+        <div ref={setGitHubAnchor} style={{ display: "inline-flex" }}>
+          <Button
+            svgIcon={gitHubIcon}
+            fillMode="flat"
+            rounded="full"
+            onClick={() => setShowGitHub(!showGitHub)}
+            title="Get the Source Code"
+          />
+        </div>
+        {showGitHub && (
+          <Popup
+            anchor={gitHubAnchor}
+            show={showGitHub}
+            popupClass="github-popup"
+            anchorAlign={{ horizontal: "center", vertical: "bottom" }}
+            popupAlign={{ horizontal: "center", vertical: "top" }}
+          >
+            <div className="github-popup-content">
+              <SvgIcon icon={gitHubIcon} size="xlarge" />
+              <Button
+                themeColor="base"
+                rounded="full"
+                onClick={() =>
+                  window.open(
+                    "https://github.com/telerik/kendo-react/tree/master/examples/react-health-app",
+                    "_blank",
+                    "noopener,noreferrer",
+                  )
+                }
+              >
+                Get the Source Code
+              </Button>
+              <p>
+                Copyright &copy; 2026 Progress Software.
+                <br />
+                All rights reserved.
+              </p>
+            </div>
+          </Popup>
+        )}
+
         <ToolbarSeparator className="app-topbar-separator" />
 
         {/* Profile Avatar */}

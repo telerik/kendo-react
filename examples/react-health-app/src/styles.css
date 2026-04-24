@@ -1123,7 +1123,7 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
    Responsive Breakpoints
    ======================== */
 
-/* Default: 900px–1439px */
+/* Default: 900px–1444px */
 :root {
   --page-gap: var(--kendo-spacing-6);
   --page-padding-block: var(--kendo-spacing-8);
@@ -1144,8 +1144,8 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   }
 }
 
-/* 1440px–1759px — gaps 24px, icon-only View Profile */
-@media (min-width: 1440px) and (max-width: 1759px) {
+/* 1445px–1759px — gaps 24px, icon-only View Profile */
+@media (min-width: 1445px) and (max-width: 1759px) {
   :root {
     --page-padding-inline: calc(var(--kendo-spacing-10) * 3);
   }
@@ -1154,8 +1154,8 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   }
 }
 
-/* 900px–1439px (default values already set in :root) */
-@media (max-width: 1439px) {
+/* 900px–1444px (default values already set in :root) */
+@media (max-width: 1444px) {
   .general-info .general-info-sidebar {
     width: 100%;
     min-width: 0;
@@ -2786,4 +2786,32 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
 .mobile-nav-popup .k-menu-group .k-item > .k-link:active {
   color: inherit;
   background-color: transparent;
+}
+
+/* GitHub source code popup */
+.github-popup {
+  margin-top: 8px;
+}
+
+.github-popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 24px;
+  text-align: center;
+  min-width: 220px;
+}
+
+.github-popup-content h4 {
+  margin: 4px 0 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.github-popup-content p {
+  margin: 0;
+  font-size: 12px;
+  color: #888;
+  line-height: 1.4;
 }
