@@ -24,6 +24,8 @@ import { TextBox, TextArea, Checkbox } from "@progress/kendo-react-inputs";
 import { Dialog, DialogActionsBar } from "@progress/kendo-react-dialogs";
 import { SvgIcon } from "@progress/kendo-react-common";
 import SearchInputPrefix from "../components/SearchInputPrefix";
+import SearchClearSuffix from "../components/SearchClearSuffix";
+
 import { Label, Error } from "@progress/kendo-react-labels";
 import StatusBadge from "../components/StatusBadge";
 import ExpandingActionButton from "../components/ExpandingActionButton";
@@ -34,6 +36,7 @@ import {
   dialogCollapseIcon,
   dialogExpandIcon,
   dialogLocationIcon,
+  patientNoteSaveIcon,
 } from "../icons/customIcons";
 import {
   schedulerData,
@@ -41,6 +44,7 @@ import {
   patients,
   type DailyTask,
 } from "../data/sampleData";
+import { commentIcon } from "@progress/kendo-svg-icons";
 
 interface SchedulerEvent {
   id: number;
@@ -108,6 +112,7 @@ export default function Schedule() {
   const [tasks, setTasks] = useState<DailyTask[]>(dailyTasks);
   const [taskSearch, setTaskSearch] = useState("");
   const [showAddTask, setShowAddTask] = useState(false);
+  const [selectedTask, setSelectedTask] = useState<DailyTask | null>(null);
   const [selectedEvent, setSelectedEvent] = useState<SchedulerEvent | null>(
     null,
   );
@@ -148,8 +153,9 @@ export default function Schedule() {
       text: newTaskText.trim(),
       priority: newTaskPriority as DailyTask["priority"],
       completed: false,
+      description: newTaskDescription.trim() || undefined,
     };
-    setTasks((prev) => [...prev, newTask]);
+    setTasks((prev) => [newTask, ...prev]);
     setNewTaskText("");
     setNewTaskPriority("Medium");
     setNewTaskDescription("");
@@ -216,6 +222,12 @@ export default function Schedule() {
                 value={taskSearch}
                 onChange={(e) => setTaskSearch(String(e.value ?? ""))}
                 prefix={SearchInputPrefix}
+                suffix={() => (
+                  <SearchClearSuffix
+                    visible={!!taskSearch}
+                    onClear={() => setTaskSearch("")}
+                  />
+                )}
                 rounded="full"
                 className="daily-tasks-header-search"
               />
@@ -230,10 +242,15 @@ export default function Schedule() {
                   <div
                     key={task.id}
                     className={`daily-task-item ${task.completed ? "completed" : ""}`}
+                    onClick={() => setSelectedTask(task)}
+                    style={{ cursor: "pointer" }}
                   >
                     <Checkbox
                       checked={task.completed}
-                      onChange={() => toggleTask(task.id)}
+                      onChange={(e) => {
+                        e.syntheticEvent.stopPropagation();
+                        toggleTask(task.id);
+                      }}
                       aria-label={task.text}
                     />
                     <span className="task-text">{task.text}</span>
@@ -310,6 +327,70 @@ export default function Schedule() {
               </Button>
             </div>
           </div>
+        </Dialog>
+      )}
+
+      {/* Task Detail Dialog */}
+      {selectedTask && (
+        <Dialog
+          className="schedule-event-dialog"
+          title={
+            <span
+              style={{
+                fontSize: "var(--kendo-font-size-md)",
+                fontWeight: "var(--kendo-font-weight-semibold)",
+              }}
+            >
+              {selectedTask.text}
+            </span>
+          }
+          onClose={() => setSelectedTask(null)}
+          width={340}
+        >
+          <div className="schedule-event-dialog-body">
+            <div className="schedule-event-section">
+              <div className="schedule-event-info-list">
+                <div className="schedule-event-info-item">
+                  <SvgIcon icon={patientNoteSaveIcon} />
+                  <span>
+                    Status: {selectedTask.completed ? "Completed" : "Pending"}
+                  </span>
+                </div>
+                <div className="schedule-event-info-item">
+                  <SvgIcon icon={appBarCalendarIcon} />
+                  <span>Priority: {selectedTask.priority}</span>
+                </div>
+                {selectedTask.description && (
+                  <div
+                    className="schedule-event-info-item"
+                    style={{ alignItems: "flex-start" }}
+                  >
+                    <SvgIcon icon={commentIcon} />
+                    <span>{selectedTask.description}</span>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+          <DialogActionsBar layout="end">
+            <Button
+              fillMode="flat"
+              rounded="full"
+              onClick={() => setSelectedTask(null)}
+            >
+              Close
+            </Button>
+            <Button
+              themeColor="primary"
+              rounded="full"
+              onClick={() => {
+                toggleTask(selectedTask.id);
+                setSelectedTask(null);
+              }}
+            >
+              {selectedTask.completed ? "Mark Pending" : "Mark Complete"}
+            </Button>
+          </DialogActionsBar>
         </Dialog>
       )}
 
@@ -413,16 +494,6 @@ export default function Schedule() {
           </div>
           <DialogActionsBar layout="end">
             <Button
-              fillMode="flat"
-              rounded="full"
-              onClick={() => {
-                setSelectedEvent(null);
-                setShowPatientInfo(false);
-              }}
-            >
-              Cancel
-            </Button>
-            <Button
               themeColor="primary"
               rounded="full"
               onClick={() => {
@@ -430,7 +501,7 @@ export default function Schedule() {
                 setShowPatientInfo(false);
               }}
             >
-              Save
+              Cancel
             </Button>
           </DialogActionsBar>
         </Dialog>

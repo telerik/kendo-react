@@ -992,7 +992,8 @@ body {
   border-color: var(--kendo-color-border, #17386314);
 }
 
-.k-input .k-input-prefix {
+.k-input .k-input-prefix,
+.k-input .k-input-suffix {
   background-color: var(--kendo-color-surface-alt);
 }
 

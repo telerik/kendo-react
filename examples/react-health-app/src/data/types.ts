@@ -79,6 +79,7 @@ export interface DailyTask {
   text: string;
   priority: "High" | "Medium" | "Low";
   completed: boolean;
+  description?: string;
 }
 
 export interface DailyAlert {
