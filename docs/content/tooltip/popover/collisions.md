@@ -1,7 +1,7 @@
 ---
 title: Collisions
 description: 'Change the collision options of the KendoReact Popover.'
-components: ["tooltip","popover"]
+components: ['tooltip', 'popover']
 slug: collisions_popover
 position: 4
 ---
@@ -21,6 +21,6 @@ The Popover allows you to control the collision behavior when it's not fully vis
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 *   [API Reference of the Tooltips]({% slug api_tooltip %})

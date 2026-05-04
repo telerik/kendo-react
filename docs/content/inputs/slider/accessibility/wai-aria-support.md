@@ -80,7 +80,7 @@ The Slider has been tested with the following screen readers and browsers combin
 For more details about the Slider component's keyboard navigation, refer to the article on [keyboard navigation in the Slider component]({% slug keyboard_navigation_slider %}).
 
 ## See Also
-* [Learn about KendoReact Free.](slug:free_components_introduction)
+* [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 * [Accessibility in KendoReact]({% slug overview_accessibilty %})
 * [Accessibility Compliance and Keyboard Support in KendoReact]({% slug compliance_accessibilty %})

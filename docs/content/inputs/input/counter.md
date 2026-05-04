@@ -1,7 +1,7 @@
 ---
 title: Characters Counter
 description: 'Implement a counter of the KendoReact Input component in React projects.'
-components: ["input"]
+components: ['input']
 slug: counter_input
 position: 4
 ---
@@ -19,7 +19,7 @@ The following example demonstrates the KendoReact Input component with a charact
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the Input]({% slug api_inputs_input %})
 -   [API Reference of the InputProps]({% slug api_inputs_inputprops %})

@@ -1,7 +1,7 @@
 ---
 title: Titles
 description: 'Configure the titles of the KendoReact PanelBar items in React projects.'
-components: ["panelbar"]
+components: ['panelbar']
 slug: titlesitems_panelbar
 position: 2
 ---
@@ -44,7 +44,7 @@ You can render icons next to the titles of the PanelBar items by either:
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the PanelBar]({% slug api_layout_panelbarprops %})
 -   [API Reference of the PanelBarItem]({% slug api_layout_panelbaritemprops %})

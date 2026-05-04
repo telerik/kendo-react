@@ -32,7 +32,7 @@ The component follows standard `input date` behaviour.
 
 ## See Also
 
-* [Learn about KendoReact Free.](slug:free_components_introduction)
+* [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 * [API Reference of the DateInput]({% slug api_dateinputs_dateinputprops %})
 * [Accessibility]({% slug accessibility_dateinput %})
 * [Accessibility in KendoReact]({% slug overview_accessibilty %})

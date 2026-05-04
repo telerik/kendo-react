@@ -150,7 +150,7 @@ Need something unique that is tailor-made for your project? Progress offers its 
 -   [Getting Started with KendoReact (Video Tutorials)](https://www.telerik.com/kendo-react-ui/resources#videos)
 -   [Virtual Classroom (Introductory Course Available to Trial and Commercial License Holders)](https://learn.telerik.com/learn/course/external/view/elearning/14/kendoreact)
 -   [React UI Components](https://www.telerik.com/kendo-react-ui/)
--   [Getting Started with the KendoReact Free Components](slug:free_components_introduction)
+-   [Getting Started with the KendoReact Free Components](slug:getting_started_free_vs_premium)
 -   [Explore the Free Project Tracker Sample Application](slug:project-tracker-with-free-components)
 -   [Free Project Tracker app page template (built with free components)](https://www.telerik.com/design-system/docs/ui-templates/templates/project-tracker/)
 -   [Getting Started with the KendoReact Free Components](https://www.telerik.com/kendo-react-ui/components/free)

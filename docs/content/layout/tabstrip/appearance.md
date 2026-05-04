@@ -1,7 +1,7 @@
 ---
 title: Appearance
 description: The KendoReact Tabstrip allows you to set different styles based on its content."
-components: ["tabstrip"]
+components: ['tabstrip']
 slug: sizing_tabstrip
 position: 50
 tag: updated
@@ -31,6 +31,6 @@ The following example demonstrates how to define the TabStrip size.
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 -   [API Reference of the TabStripTab Component]({% slug api_layout_tabstriptabprops %})
 -   [API Reference of the Tabstrip]({% slug api_layout_tabstripprops %})

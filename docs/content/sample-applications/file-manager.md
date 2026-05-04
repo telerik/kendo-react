@@ -2,7 +2,7 @@
 title: File Manager Template
 page_title: React Dashboard – File Manager Sample App - KendoReact
 description: 'Create a sample KendoReact File Manager Template application, helping developers to manage file systems, perform common folder and file operations with some of the most powerful KendoReact components, such as the Grid and Upload, handle the connections between these components, and provide a ContextMenu functionality for an easy command execution.'
-components: ["general"]
+components: ['general']
 slug: file-manager-template
 position: 40
 category: sample-applications
@@ -47,9 +47,10 @@ For more information on how to add one of the themes to your project, refer to t
 If you're interested in further customizing the theme, check the [Customization](https://www.telerik.com/design-system/docs/themes/kendo-themes/default/customization/) article in our Progress Design System documentation.
 
 ## Suggested Links
+
 -   [Get Started with KendoReact Free](https://www.telerik.com/kendo-react-ui/components/free)
 
--   [Get Started with KendoReact Free](slug://free_components_introduction)
+-   [Get Started with KendoReact Free](slug://getting_started_free_vs_premium)
 -   [KendoReact Data Grid]({% slug overview_grid %})
 -   [KendoReact TreeView]({% slug overview_treeview %})
 -   [KendoReact Toolbar]({% slug overview_toolbar %})

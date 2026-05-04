@@ -1,7 +1,7 @@
 ---
 title: Disabled
 description: 'Sets the disabled mode of the KendoReact Rating in React projects.'
-components: ["rating"]
+components: ['rating']
 slug: disabled_rating
 position: 7
 ---
@@ -19,6 +19,6 @@ To set the Rating to disabled mode set it's [`disabled`]({% slug api_inputs_rati
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 *   [API Reference of the RatingProps]({% slug api_inputs_ratingprops %})

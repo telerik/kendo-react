@@ -58,7 +58,7 @@ The Popup element of the component must implement the KB specification for a Pop
 {% endmeta %}
 
 ## See Also
-* [Learn about KendoReact Free.](slug:free_components_introduction)
+* [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 * [API Reference of the DropDownList]({% slug api_dropdowns_dropdownlistprops %})
 * [Accessibility]({% slug accessibility_dropdownlist %})

@@ -2,7 +2,7 @@
 title: Overriding the Default Rendering
 page_title: Overriding Items Rendering - Menu - KendoReact
 description: 'Override the default rendering of the KendoReact Menu items in React projects.'
-components: ["menu"]
+components: ['menu']
 slug: rendering_menu
 position: 3
 ---
@@ -81,7 +81,7 @@ To avoid the accidental closing of content items:
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the Menu]({% slug api_layout_menuprops %})
 -   [API Reference of the MenuItem]({% slug api_layout_menuitemprops %})

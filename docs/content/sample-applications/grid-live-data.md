@@ -1,7 +1,7 @@
 ---
 title: Grid Live Data
 description: "Create a KendoReact Grid with live data sample application, seamlessly integrating 4 of the most powerful KendoReact components, such as the Chart, Chip, Grid, taking advantage of React's fast rendering, showing multiple live data updates in real time, and displaying information in cards."
-components: ["general"]
+components: ['general']
 slug: gridlivedata_sampleapp
 position: 70
 category: sample-applications
@@ -45,6 +45,6 @@ You can see the following five KendoReact components implemented in this sample 
 ## Suggested Links
 
 -   [Getting Started with KendoReact](https://www.telerik.com/kendo-react-ui/components/getting-started/)
--   [Get Started with KendoReact Free](slug://free_components_introduction)
+-   [Get Started with KendoReact Free](slug://getting_started_free_vs_premium)
 -   [KendoReact Coffee Warehouse App](https://telerik.github.io/react-coffee-warehouse/#/)
 -   [KendoReact Dashboard sample application](https://telerik.github.io/kendo-react-material-dashboard/)

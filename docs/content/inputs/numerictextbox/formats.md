@@ -1,7 +1,7 @@
 ---
 title: Formats
 description: 'Control the format of the KendoReact NumericTextBox in React projects.'
-components: ["numerictextbox"]
+components: ['numerictextbox']
 slug: formats_numerictextbox
 position: 4
 ---
@@ -25,6 +25,6 @@ For more information on the date and number formats KendoReact supports, refer t
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the NumericTextBox Props]({% slug api_inputs_numerictextboxprops %})

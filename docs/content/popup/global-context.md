@@ -1,7 +1,7 @@
 ---
 title: Popup Context Props
 description: 'Set global props to all Popups inside PopupPropsContext.'
-components: ["popup"]
+components: ['popup']
 slug: context_popup
 position: 9
 ---
@@ -21,7 +21,7 @@ The following example shows how to configure the Popup props through `PopupProps
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the Popup]({% slug api_popup %})
 -   [PopupPropsContext]({% slug api_popup_popuppropscontext %})

@@ -1,7 +1,7 @@
 ---
 title: Custom Rendering
 description: 'Enable the rendering customization of the KendoReact DropDownList in React projects.'
-components: ["dropdownlist"]
+components: ['dropdownlist']
 slug: customrendering_dropdownlist
 position: 5
 ---
@@ -57,6 +57,6 @@ To customize the content of the option list when no data is present, use the [`l
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the DropDownList]({% slug api_dropdowns_dropdownlistprops %})

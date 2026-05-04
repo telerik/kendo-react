@@ -1,7 +1,7 @@
 ---
 title: Advanced Scenarios
 description: 'Divide page layout with KendoReact Drawers and navigate with the React router.'
-components: ["drawer"]
+components: ['drawer']
 slug: advanced_scenarios_drawer
 position: 7
 ---
@@ -27,6 +27,6 @@ The following example demonstrates the usage of two Drawer components, positione
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 -   [API Reference of the DrawerProps]({% slug api_layout_drawerprops %})
 -   [API Reference of the DrawerItemProps]({% slug api_layout_draweritemprops %})

@@ -1,7 +1,7 @@
 ---
 title: Icon
 description: 'Sets the icon of the KendoReact Rating in React projects.'
-components: ["rating"]
+components: ['rating']
 slug: icon_rating
 position: 5
 ---
@@ -21,7 +21,7 @@ The following example demonstrates how to implement different icon for the Ratin
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [KendoReact Icons Article]({% slug icons %})
 -   [Rating Item customization]({% slug item_customization_ratingitem %})

@@ -1,7 +1,7 @@
 ---
 title: Positioning
 description: 'Get started with the KendoReact Drawer and set its position.'
-components: ["drawer"]
+components: ['drawer']
 slug: positioning_drawer
 position: 4
 ---
@@ -25,5 +25,5 @@ The Drawer provides the following options for positioning:
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 -   [API Reference of the Drawer Props]({% slug api_layout_drawerprops %})

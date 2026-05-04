@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: 'Try now the React ProgressBars package by KendoReact and discover the variety of features that it provides for your next React project.'
-components: ["chunkprogressbar", "progressbar"]
+components: ['chunkprogressbar', 'progressbar']
 slug: overview_progressbars
 position: 0
 ---
@@ -126,6 +126,7 @@ For any questions about the use of KendoReact Progress Bars, or any other [Kendo
 Need something unique that is tailor-made for your project? Progress offers its [Progress Services](https://www.progress.com/services) group that can work with you to create any customized solution that you might need.
 
 ## Suggested Links
+
 -   [Getting Started with the KendoReact Free Components](https://www.telerik.com/kendo-react-ui/components/free)
 
 -   [Getting Started with the KendoReact Progress Bars](slug://get_started_progressbars)
@@ -133,6 +134,6 @@ Need something unique that is tailor-made for your project? Progress offers its 
 -   [Getting Started with KendoReact (Video Tutorials)](https://www.telerik.com/kendo-react-ui/resources#videos)
 -   [Virtual Classroom (Training Courses for Registered Users)](https://learn.telerik.com/learn/course/external/view/elearning/14/kendoreact)
 -   [React UI Components](https://www.telerik.com/kendo-react-ui/)
--   [Getting Started with the KendoReact Free Components](slug:free_components_introduction)
+-   [Getting Started with the KendoReact Free Components](slug:getting_started_free_vs_premium)
 -   [Explore the Free Project Tracker Sample Application](slug:project-tracker-with-free-components)
 -   [Free Project Tracker app page template (built with free components)](https://www.telerik.com/design-system/docs/ui-templates/templates/project-tracker/)

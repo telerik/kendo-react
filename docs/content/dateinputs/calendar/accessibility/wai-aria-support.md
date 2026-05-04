@@ -95,5 +95,5 @@ For more details about the Calendar component's keyboard navigation, refer to th
 
 * [Accessibility in KendoReact]({% slug overview_accessibilty %})
 * [Accessibility Compliance and Keyboard Support in KendoReact]({% slug compliance_accessibilty %})
-* [Learn about KendoReact Free.](slug:free_components_introduction)
+* [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 * [React Date Inputs](slug:overview_dateinputs)

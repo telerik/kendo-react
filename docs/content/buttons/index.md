@@ -202,4 +202,4 @@ For support options, see the [KendoReact Support](https://www.telerik.com/kendo-
 
 ## Suggested Links
 
--   [Getting Started with the KendoReact Free Components](slug:free_components_introduction)
+-   [Getting Started with the KendoReact Free Components](slug:getting_started_free_vs_premium)

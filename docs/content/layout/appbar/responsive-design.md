@@ -1,7 +1,7 @@
 ---
 title: Responsive Design
 description: 'Get started with the KendoReact AppBar supporting responsive web design by adapting its layout to the available screen size.'
-components: ["appbar"]
+components: ['appbar']
 slug: responsivedesign_appbar
 position: 5
 ---
@@ -19,7 +19,7 @@ The following example demonstrates how the AppBar adjusts for different screen s
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 *   [API Reference of the AppBar]({% slug api_layout_appbar %})
 *   [API Reference of the AppBarProps]({% slug api_layout_appbarprops %})

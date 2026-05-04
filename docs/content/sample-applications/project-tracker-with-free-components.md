@@ -2,7 +2,7 @@
 title: Project Tracker Application
 page_title: Free React Dashboard – Free Project Tracker Sample App - KendoReact
 description: 'Create a Project Tracker application using the free KendoReact components in a React application bundled with Vite.'
-components: ["general"]
+components: ['general']
 slug: project-tracker-with-free-components
 position: 1
 category: sample-applications
@@ -30,7 +30,7 @@ To play with the demo and see how it’s built, you may want to run it locally:
 
 ## About the App
 
-The Project Tracker Application is an application built to help users manage tasks, projects, and teams efficiently. It is built using only free KendoReact components and follows best practices, maintaining a clean structure that makes it an excellent learning resource. Learn more about [KendoReact Free](slug://free_components_introduction) and see the full list of free React components included.
+The Project Tracker Application is an application built to help users manage tasks, projects, and teams efficiently. It is built using only free KendoReact components and follows best practices, maintaining a clean structure that makes it an excellent learning resource. Learn more about [KendoReact Free](slug://getting_started_free_vs_premium) and see the full list of free React components included.
 
 ## Styling KendoReact Components with Ease
 
@@ -46,8 +46,8 @@ To enable smooth collaboration between designers and developers, the Progress De
 
 ## Suggested Links
 
--   [KendoReact Free](slug://free_components_introduction)
--   [Free vs Premium React Components](slug://free_components_introduction#toc-free-vs-premium-react-components)
+-   [KendoReact Free](slug://getting_started_free_vs_premium)
+-   [Free vs Premium React Components](slug://getting_started_free_vs_premium)
 -   [Free Project Tracker app page template (built with free components)](https://www.telerik.com/design-system/docs/ui-templates/templates/project-tracker/)
 -   [KendoReact Data Grid](slug://overview_grid)
 -   [KendoReact AppBar](slug://overview_appbar)

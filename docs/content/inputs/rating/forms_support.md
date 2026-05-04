@@ -1,7 +1,7 @@
 ---
 title: Forms Support
 description: 'Integrate the KendoReact Form with the KendoReact Rating.'
-components: ["rating"]
+components: ['rating']
 slug: forms_support_rating
 position: 10
 ---
@@ -27,7 +27,7 @@ The following example demonstrates how to render a required Rating within a Kend
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 *   [API Reference of the Rating Component]({% slug api_inputs_rating %})
 *   [API Reference of the Rating props]({% slug api_inputs_ratingprops %})

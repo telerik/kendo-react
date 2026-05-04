@@ -134,6 +134,18 @@ For further customization, add the custom content as `children` of the [ChartNoD
 {% embed_file data-binding/no-data-overlay-custom/func/main.tsx %}
 {% endmeta %}
 
+## Dynamic Data Updates
+
+The Chart enables you to show dynamic data updates by changing the series [`data`](slug:api_charts_chartseriesitemprops#data) at runtime to display points that are added, removed, or modified.
+
+The following example demonstrates how to add, remove, and randomize data points in a [`line`](slug:api_charts_chartseriesitemprops#type) series of a Chart. Each button rebinds a new array to the [`data`](slug:api_charts_chartseriesitemprops#data) prop of the [ChartSeriesItem](slug:api_charts_chartseriesitem).
+
+<demo metaUrl="charts/data-binding/data-operations/" height="570"></demo>
+
+The [StockChart](slug:api_charts_stockchartprops) supports the same dynamic updates. The following example simulates a live feed by appending a new [`candlestick`](slug:api_charts_chartseriesitemprops#toc-type) point every second while the **Play** control is active. Use the **Pause** control to stop the stream, inspect the current range through the [`ChartNavigator`](slug:api_charts_chartnavigatorprops), and resume whenever you need to continue receiving updates. The visible range stays fixed through the [ChartNavigatorSelect](slug:api_charts_chartnavigatorselectprops) [`from`](slug:api_charts_chartnavigatorselectprops#toc-from) and [`to`](slug:api_charts_chartnavigatorselectprops#toc-to) props.
+
+<demo metaUrl="charts/data-binding/stock-operations/" height="570"></demo>
+
 ## Suggested Links
 
 -   [Elements]({% slug axes_chart_charts %})

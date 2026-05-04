@@ -1,7 +1,7 @@
 ---
 title: Read-Only
 description: 'Sets the readonly mode of the KendoReact Rating in React projects.'
-components: ["rating"]
+components: ['rating']
 slug: readonly_rating
 position: 6
 ---
@@ -19,6 +19,6 @@ To enable the Rating readonly mode set it's [`readonly`]({% slug api_inputs_rati
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 *   [API Reference of the RatingProps]({% slug api_inputs_ratingprops %})

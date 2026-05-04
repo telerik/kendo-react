@@ -71,7 +71,7 @@ The listbox placed in the popup element of the MultiSelect has to implement the 
 {% endmeta %}
 
 ## See Also
-* [Learn about KendoReact Free.](slug:free_components_introduction)
+* [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 * [API Reference of the MultiSelect]({% slug api_dropdowns_multiselectprops %})
 * [Accessibility]({% slug accessibility_multiselect %})

@@ -1,7 +1,7 @@
 ---
 title: Spin Buttons
 description: 'Increase or decrease the currently selected date part in the KendoReact DateInput by implementing spin buttons.'
-components: ["dateinput"]
+components: ['dateinput']
 slug: spinbuttons_dateinput
 position: 5
 ---
@@ -21,6 +21,6 @@ The following demo lets you switch between the enabled and the disabled spin but
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 -   [API Reference of the DateInput]({% slug api_dateinputs_dateinputprops %})
 -   [React Date Inputs](slug:overview_dateinputs)

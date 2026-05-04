@@ -1,7 +1,7 @@
 ---
 title: Custom Icons
 description: 'Customize the expand and collapse icons of the React ExpansionPanel by KendoReact.'
-components: ["expansionpanel"]
+components: ['expansionpanel']
 slug: icons_expansionpanel
 position: 5
 ---
@@ -19,5 +19,5 @@ You can replace both the expand and collapse icons with custom font icons by usi
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 -   [API Reference of the ExpansionPanel]({% slug api_layout_expansionpanel %})

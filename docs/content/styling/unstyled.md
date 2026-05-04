@@ -2,7 +2,7 @@
 title: Unstyled Mode
 page_title: 'React Unstyled Mode Components - KendoReact'
 description: 'React unstyled components provide barebones functionality without default styling, allowing full customization.'
-components: ["general"]
+components: ['general']
 slug: overview_unstyled
 position: 15
 tier: free
@@ -117,7 +117,7 @@ The following KendoReact components support Unstyled mode:
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 -   [React UI Common Utilities AllClassStructure API](slug:api_common_allclassstructure)
 -   [React UI Components](https://www.telerik.com/kendo-react-ui/)
 -   [Getting Started with KendoReact (Online Guide)]({% slug getting_started %})

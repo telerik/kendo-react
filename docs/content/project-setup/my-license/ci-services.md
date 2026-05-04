@@ -2,7 +2,7 @@
 title: Adding the License Key to CI Services
 page_title: Learn how to configure your license key as an environment variable or a secret and activate it within your CI service pipeline.
 description: 'Securely set and activate your license key in your CI pipeline.'
-components: ["general"]
+components: ['general']
 slug: ci_services_license
 position: 20
 ---
@@ -200,4 +200,4 @@ npx kendo-ui-license activate
 -   [Setting Up Your License Key](slug:my_license)
 -   [License Activation Errors and Warnings](slug:license_activation_errors)
 -   [Frequently Asked Questions about Your KendoReact License Key](slug:faq_license)
--   [Get Started with KendoReact Free](slug://free_components_introduction)
+-   [Get Started with KendoReact Free](slug://getting_started_free_vs_premium)

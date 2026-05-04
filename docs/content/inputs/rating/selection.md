@@ -1,7 +1,7 @@
 ---
 title: Selection
 description: 'Sets the selection mode of the KendoReact Rating in React projects.'
-components: ["rating"]
+components: ['rating']
 slug: selection_rating
 position: 1
 ---
@@ -19,6 +19,6 @@ To change the component selection, set its [`selection`]({% slug api_inputs_rati
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 *   [API Reference of the RatingProps]({% slug api_inputs_ratingprops %})

@@ -104,7 +104,7 @@ A React [`SyntheticEvent`](https://react.dev/learn/responding-to-events).
 <code>
 
 
-Notification
+[NotificationHandle]({% slug api_notification_notificationhandle %})
 
 
 </code>

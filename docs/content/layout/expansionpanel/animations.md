@@ -1,7 +1,7 @@
 ---
 title: Animations
 description: 'Get started with the React ExpansionPanel by KendoReact and learn more about how to add expand and collapse animations.'
-components: ["expansionpanel"]
+components: ['expansionpanel']
 slug: animations_expansionpanel
 position: 2
 ---
@@ -21,7 +21,7 @@ To animate the ExpansionPanel, wrap its content in the desired KendoReact Animat
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 *   [API Reference of the ExpansionPanel]({% slug api_layout_expansionpanel %})
 *   [API Reference of the ExpansionPanelProps]({% slug api_layout_expansionpanelprops %})

@@ -32,7 +32,7 @@ position: 110
 {% endmeta %}
 
 ## See Also
-* [Learn about KendoReact Free.](slug:free_components_introduction)
+* [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 * [API Reference of the ColorPalette]({% slug api_inputs_colorpalette %})
 * [Accessibility in KendoReact]({% slug overview_accessibilty %})

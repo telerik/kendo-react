@@ -1,7 +1,7 @@
 ---
 title: GridHelper
 description: 'Get automatic data operations and features for the KendoReact Data Grid with the GridHelper component'
-components: ["datagrid"]
+components: ['datagrid']
 slug: gridhelper_grid
 position: 20
 ---
@@ -10,7 +10,7 @@ position: 20
 
 The GridHelper is a component that wraps the KendoReact Grid, enhancing its functionality by providing built-in features for data operations, commonly requested functions, and a user-friendly interface that gives end users different ways to customize the Data Grid (such as hiding columns, exporting to PDF, and more).
 
-> Some of the features showcased in the GridHelper are part of the [Premium offering](slug:free_components_introduction) of the Grid.
+> Some of the features showcased in the GridHelper are part of the [Premium offering](slug:getting_started_free_vs_premium) of the Grid.
 
 ## Getting Started
 

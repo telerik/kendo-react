@@ -2,7 +2,7 @@
 title: Items Overview
 page_title: Items Overview - Menu - KendoReact
 description: 'Learn what features the KendoReact Menu items deliver and use them in React projects.'
-components: ["menu"]
+components: ['menu']
 slug: items_menu
 position: 1
 ---
@@ -23,7 +23,7 @@ To render the Menu items, use either:
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 *   [API Reference of the Menu]({% slug api_layout_menuprops %})
 *   [API Reference of the MenuItem]({% slug api_layout_menuitemprops %})

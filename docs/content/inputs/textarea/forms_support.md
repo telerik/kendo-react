@@ -1,7 +1,7 @@
 ---
 title: Forms Support
 description: 'Use the native HTML5 forms implementation of the KendoReact TextArea component in React projects.'
-components: ["textarea"]
+components: ['textarea']
 slug: forms_support_textarea
 position: 4
 ---
@@ -27,7 +27,7 @@ The following example demonstrates how to render a required TextArea within a Ke
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the TextArea]({% slug api_inputs_textarea %})
 -   [API Reference of the TextAreaProps]({% slug api_inputs_textareaprops %})

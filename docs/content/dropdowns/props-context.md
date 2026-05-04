@@ -1,7 +1,16 @@
 ---
 title: Props Context
 description: 'Learn how to provide a global configuration for all instances of a DropDown component in a React Application'
-components: ["autocomplete", "combobox", "dropdownlist", "dropdowntree", "multicolumncombobox", "multiselect", "multiselecttree"]
+components:
+    [
+        'autocomplete',
+        'combobox',
+        'dropdownlist',
+        'dropdowntree',
+        'multicolumncombobox',
+        'multiselect',
+        'multiselecttree'
+    ]
 slug: props-context_dropdowns
 position: 40
 ---
@@ -37,7 +46,7 @@ The following components from the `@progress/kendo-react-dropdowns` package supp
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [AutoComplete Overview]({% slug overview_autocomplete %})
 -   [ComboBox Overview]({% slug overview_combobox %})

@@ -1,7 +1,7 @@
 ---
 title: Text Direction
 description: 'Define the text direction that the KendoReact Error displays in React projects.'
-components: ["error"]
+components: ['error']
 slug: direction_error
 position: 1
 ---
@@ -20,7 +20,7 @@ Text direction affects only the positioning of the Error label and does not chan
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [Globalization]({% slug globalization_labels %})
 -   [API Reference of the Error Component]({% slug api_labels_errorprops %})

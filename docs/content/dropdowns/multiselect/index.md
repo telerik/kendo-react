@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: 'Get an overview of the features the KendoReact MultiSelect delivers and use the component in React projects.'
-components: ["multiselect"]
+components: ['multiselect']
 slug: overview_multiselect
 position: 1
 ---
@@ -15,7 +15,7 @@ The KendoReact MultiSelect component is part of the KendoReact library of React 
 <CtaPanelOverview title="Use This React @Subject for Free" message="You can use the @TestLink of this @Subject in production—no sign-up or license required. It is part of KendoReact, an enterprise-grade UI library with 120+ @FreemiumShortLink and premium components. To test-drive premium functionality such as virtualization, @StartTrialLink.">
 <span token="TestLink">
 
-[free feature set](slug://free_components_introduction#react-multiselect)
+[free feature set](slug://getting_started_free_vs_premium#multiselect)
 
 </span>
 </CtaPanelOverview>

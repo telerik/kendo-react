@@ -1,8 +1,8 @@
 ---
 title: FAQs
 page_title: Licensing FAQ - KendoReact
-description: "Find the answers to your questions about the licensing in the KendoReact"
-components: ["general"]
+description: 'Find the answers to your questions about the licensing in the KendoReact'
+components: ['general']
 slug: faq_license
 position: 30
 ---
@@ -17,7 +17,6 @@ KendoReact Free is a free version of the [KendoReact component library](https://
 
 KendoReact premium components and features require an active commercial or trial license key.
 
-
 ## Why is my license key truncated when an environment variable is set on Windows?
 
 Because of the larger license key file size, the key length is automatically truncated when an environment variable is set on Windows, resulting in the following error:
@@ -30,27 +29,27 @@ To fix the error, copy the file to `%AppData%\Telerik\telerik-license.txt` or pu
 
 We do not recommend using the `TELERIK_LICENSE` environment variable for local development on Windows. Using the environment variable is recommended on CI/CD platforms where the variable size limit is larger. Refer to [Adding the License Key to CI Services](slug:ci_services_license).
 
-
 ## Will the product function with an expired license key?
+
 This depends on the type of license you have:
 
-* _Perpetual Licenses_ will continue to function normally with an expired license key. However, the following will happen if you update or install a package version that is released after the expiration date of the license:
+-   _Perpetual Licenses_ will continue to function normally with an expired license key. However, the following will happen if you update or install a package version that is released after the expiration date of the license:
 
-  * A watermark will appear over selected KendoReact components.
-  * A licensing banner will pop over a page that uses unlicensed KendoReact components.
-  * A warning message will appear when calling the `kendo-ui-license activate` command.
-  * A warning message will appear in the browser console.
+    -   A watermark will appear over selected KendoReact components.
+    -   A licensing banner will pop over a page that uses unlicensed KendoReact components.
+    -   A warning message will appear when calling the `kendo-ui-license activate` command.
+    -   A warning message will appear in the browser console.
 
-* _Subscription Licenses_ will continue to function normally for deployed applications. However, the following will happen when you try to rebuild the application:
+-   _Subscription Licenses_ will continue to function normally for deployed applications. However, the following will happen when you try to rebuild the application:
 
-  * A warning message will appear when calling the `kendo-ui-license activate` command.
+    -   A warning message will appear when calling the `kendo-ui-license activate` command.
 
-* _Trial Licenses_ will continue to function normally with an expired license key. The following will happen if you try to build or run the application:
+-   _Trial Licenses_ will continue to function normally with an expired license key. The following will happen if you try to build or run the application:
 
-  * A watermark appears on application startup.
-  * A modal dialog appears on application startup.
-  * A warning message will appear when calling the `kendo-ui-license activate` command.
-  * A warning message similar to the following is logged in the build log.
+    -   A watermark appears on application startup.
+    -   A modal dialog appears on application startup.
+    -   A warning message will appear when calling the `kendo-ui-license activate` command.
+    -   A warning message similar to the following is logged in the build log.
 
 See the [Invalid License](#toc-invalid-license) section for more information.
 
@@ -89,8 +88,8 @@ If you have a valid license activated for your project, you won't get any [inval
 
 Yes, the license key expires at the end of your support subscription.
 
-* For trial users, this is at the end of your 30-day trial.
-* For licensed developers, this is when your subscription expires.
+-   For trial users, this is at the end of your 30-day trial.
+-   For licensed developers, this is when your subscription expires.
 
 You will need to [download and install a new license key](slug:my_license) after starting a trial, renewing a license, or upgrading a license.
 
@@ -153,16 +152,15 @@ No, versions prior to v4.0.0 do not require a license key.
 
 ## Do I need a license key when using script files instead of the npm packages?
 
-Yes, the KendoReact browser scripts (located in the `dist/cdn/js`) require a license key in a special format. Follow the instructions in the [Using with Scripts](slug:scripts_installation) help article.
+Yes, the KendoReact browser scripts (located in the `dist/cdn/js`) require a license key in a special format. For setup guidance, refer to the [Getting Started with KendoReact](slug:getting_started) article.
 
 ## My team has more than one licensed developer. Which key do I have to use?
 
 You can use any of the keys associated with your subscriptions to activate your license, both in your local environment and in CI builds.
 
-
 ## Suggested Links
 
-* [Setting Up Your License Key](slug:my_license)
-* [License Activation Errors and Warnings](slug:license_activation_errors)
-* [Adding the License Key to CI Services](slug:ci_services_license)
-* [Get Started with KendoReact Free](slug://free_components_introduction)
+-   [Setting Up Your License Key](slug:my_license)
+-   [License Activation Errors and Warnings](slug:license_activation_errors)
+-   [Adding the License Key to CI Services](slug:ci_services_license)
+-   [Get Started with KendoReact Free](slug://getting_started_free_vs_premium)

@@ -1,7 +1,7 @@
 ---
 title: Callout
 description: 'Change the visibility of the callout of the KendoReact Popover.'
-components: ["tooltip","popover"]
+components: ['tooltip', 'popover']
 slug: callout_popover
 position: 3
 ---
@@ -19,6 +19,6 @@ To control the callout behavior, use the [`callout`]({% slug api_tooltip_popover
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 *   [API Reference of the Tooltips]({% slug api_tooltip %})

@@ -1,7 +1,7 @@
 ---
 title: Appearance
 description: 'Get started with the KendoReact Avatar and set its size.'
-components: ["avatar"]
+components: ['avatar']
 slug: appearance_avatar
 position: 2
 ---
@@ -133,7 +133,7 @@ The available [`themeColor`]({% slug api_layout_avatarprops %}#toc-themeColor) v
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the Avatar Component]({% slug api_layout_avatarprops %})
 -   [Creating Custom Styles]({% slug themebuilder %})

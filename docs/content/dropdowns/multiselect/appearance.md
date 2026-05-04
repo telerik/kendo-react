@@ -41,7 +41,7 @@ You can set the roundness of the MultiSelect through the [`rounded`]({% slug api
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the MultiSelect]({% slug api_dropdowns_multiselect %})
 -   [MultiSelect `size` options]({% slug api_dropdowns_multiselectprops %}#toc-size)

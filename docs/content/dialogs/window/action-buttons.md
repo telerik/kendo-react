@@ -1,7 +1,7 @@
 ---
 title: Action Buttons
 description: 'Render action buttons and customize their content in the KendoReact Window.'
-components: ["window"]
+components: ['window']
 slug: actionbuttons_window
 position: 30
 ---
@@ -19,6 +19,6 @@ To specify action buttons in the Window, use the `WindowActionsBar` element. You
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the Window]({% slug api_dialogs_window %})

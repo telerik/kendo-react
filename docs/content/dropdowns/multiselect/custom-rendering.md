@@ -1,7 +1,7 @@
 ---
 title: Custom Rendering
 description: 'Enable the rendering customization of the KendoReact MultiSelect in React projects.'
-components: ["multiselect"]
+components: ['multiselect']
 slug: customrendering_multiselect
 position: 6
 ---
@@ -60,6 +60,6 @@ To customize the content of the suggestion list when no data is present, use the
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the MultiSelect]({% slug api_dropdowns_multiselectprops %})

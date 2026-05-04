@@ -1,7 +1,7 @@
 ---
 title: Content Arrangement
 description: 'Learn how to arrange the content of the KendoReact AppBar component.'
-components: ["appbar"]
+components: ['appbar']
 slug: contentarrangement_appbar
 position: 3
 ---
@@ -47,7 +47,7 @@ Separators are used to create a visual separation of the AppBar content. To add 
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 *   [API Reference of the AppBarSection]({% slug api_layout_appbarsection %})
 *   [API Reference of the AppBarSpacer]({% slug api_layout_appbarspacer %})

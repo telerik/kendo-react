@@ -1,7 +1,7 @@
 ---
 title: Positioning
 description: 'Change the default position of the KendoReact Popover.'
-components: ["tooltip","popover"]
+components: ['tooltip', 'popover']
 slug: positioning_popover
 position: 2
 ---
@@ -17,6 +17,6 @@ The Popover allows you to specify the position of the Popover element relative t
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 *   [API Reference of the Tooltips]({% slug api_tooltip %})

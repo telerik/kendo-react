@@ -1,7 +1,7 @@
 ---
 title: Appearance
 description: 'Add styling options to the KendoReact Popup in React projects.'
-components: ["popup"]
+components: ['popup']
 slug: appearance_popup
 position: 8
 ---
@@ -20,7 +20,7 @@ To style the host element, decorate the component element. To style the element 
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the Popup]({% slug api_popup %})
 -   [Creating Custom Styles]({% slug themebuilder %})

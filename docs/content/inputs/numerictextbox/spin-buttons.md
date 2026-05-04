@@ -1,7 +1,7 @@
 ---
 title: Spin Buttons
 description: 'Manage the spin buttons of the KendoReact NumericTextBox in React projects.'
-components: ["numerictextbox"]
+components: ['numerictextbox']
 slug: spinbuttons_numerictextbox
 position: 3
 ---
@@ -19,6 +19,6 @@ When enabled, the spin buttons increase or decrease the value with the predefine
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 *   [API Reference of the NumericTextBox Props]({% slug api_inputs_numerictextboxprops %})

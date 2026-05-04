@@ -1,7 +1,7 @@
 ---
 title: Positioning and Dragging
 description: 'Set the position of the KendoReact Window and move it by dragging.'
-components: ["window"]
+components: ['window']
 slug: positioningdragging_window
 position: 70
 ---
@@ -30,6 +30,6 @@ By default, the Window enables you to move it by dragging. To control this behav
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the Window]({% slug api_dialogs_windowprops %})

@@ -1,7 +1,7 @@
 ---
 title: Without Form Element
 description: 'Define the KendoReact FloatingLabel without a form element in React projects.'
-components: ["floatinglabel"]
+components: ['floatinglabel']
 slug: without_form_floating_label
 position: 1
 ---
@@ -20,6 +20,6 @@ By default the wrapped element is associated with the `label` element only if it
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 *   [API Reference of the FloatingLabel Component]({% slug api_labels_floatinglabelprops %})

@@ -1,7 +1,7 @@
 ---
 title: Placeholders
 description: 'Handle the way the format sections of the KendoReact DateInput input field are rendered.'
-components: ["dateinput"]
+components: ['dateinput']
 slug: placeholders_dateinput
 position: 7
 ---
@@ -47,6 +47,6 @@ The `formatPlaceholder` provides the following available options which you can s
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 -   [API Reference of the DateInput]({% slug api_dateinputs_dateinputprops %})
 -   [React Date Inputs](slug:overview_dateinputs)

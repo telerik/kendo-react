@@ -18,7 +18,7 @@ The KendoReact Data Grid is a powerful component for creating responsive, access
 <!-- <CtaPanelOverview title="Use This React @Subject for Free" message="You can use the @TestLink of the @Subject in production—no sign-up or license required. It’s part of KendoReact, an enterprise-grade UI library with 120+ @FreemiumShortLink and premium components. To test-drive premium @Subject functionality, such as inline editing, chart integration and React Server Components mode, @StartTrialLink.">
 <span token="TestLink">
 
-[free feature set](slug://free_components_introduction#react-data-grid)
+[free feature set](slug://getting_started_free_vs_premium#data-grid)
 
 </span>
 </CtaPanelOverview> -->

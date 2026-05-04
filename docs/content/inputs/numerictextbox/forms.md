@@ -1,7 +1,7 @@
 ---
 title: Forms Support
 description: 'Use the native HTML5 forms implementation of the KendoReact NumericTextBox component in React projects.'
-components: ["numerictextbox"]
+components: ['numerictextbox']
 slug: forms_numerictextbox
 position: 5
 ---
@@ -57,6 +57,6 @@ By default, to achieve a visual representation of its invalid state, the Numeric
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the NumericTextBox Props]({% slug api_inputs_numerictextboxprops %})

@@ -1,7 +1,7 @@
 ---
 title: Adaptive Rendering
 description: 'Enable adaptive rendering for the KendoReact AutoComplete in React projects.'
-components: ["autocomplete"]
+components: ['autocomplete']
 slug: adaptive_rendering_autocomplete
 position: 9
 tag: new
@@ -44,7 +44,7 @@ The following example demonstrates the adaptiveness of the AutoComplete when wor
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the AutoComplete]({% slug api_dropdowns_autocompleteprops %})
 -   [Creating Custom Styles]({% slug themebuilder %})

@@ -1,7 +1,7 @@
 ---
 title: Date Limits
 description: 'Set the KendoReact DateInput to render a range of dates.'
-components: ["dateinput"]
+components: ['dateinput']
 slug: dateranges_dateinput
 position: 8
 ---
@@ -34,6 +34,6 @@ The following example demonstrates how to limit the value of the DateInput to a 
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 -   [API Reference of the DateInput]({% slug api_dateinputs_dateinputprops %})
 -   [React Date Inputs](slug:overview_dateinputs)

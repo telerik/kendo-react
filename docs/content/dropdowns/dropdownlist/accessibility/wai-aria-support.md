@@ -112,7 +112,7 @@ The DropDownList has been tested with the following screen readers and browsers 
 For more details about the DropDownList component's keyboard navigation, refer to the article on [keyboard navigation in the DropDownList component]({% slug keyboard_navigation_dropdownlist %}).
 
 ## See Also
-* [Learn about KendoReact Free.](slug:free_components_introduction)
+* [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 * [Accessibility in KendoReact]({% slug overview_accessibilty %})
 * [Accessibility Compliance and Keyboard Support in KendoReact]({% slug compliance_accessibilty %})

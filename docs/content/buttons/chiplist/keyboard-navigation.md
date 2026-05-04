@@ -1,7 +1,7 @@
 ---
 title: Keyboard Navigation
 description: 'Use the KendoReact ChipList keyboard navigation in React projects.'
-components: ["chiplist"]
+components: ['chiplist']
 slug: keyboard_navigation_chiplist
 position: 6
 ---
@@ -29,4 +29,4 @@ The ChipList supports the following keyboard shortcuts:
 -   [Accessibility in KendoReact](https://www.telerik.com/kendo-react-ui/components/accessibility/)
 -   [Accessibility Compliance and Keyboard Support in KendoReact](https://www.telerik.com/kendo-react-ui/components/accessibility/accessibility-compliance/)
 -   [API Reference of the ChipList]({% slug api_buttons_chiplistprops %})
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)

@@ -1,7 +1,7 @@
 ---
 title: 'Custom Rendering'
 description: 'Customize the KendoReact BottomNavigation items in React projects.'
-components: ["bottomnavigation"]
+components: ['bottomnavigation']
 slug: custom_rendering_bottomnavigation
 position: 6
 ---
@@ -30,7 +30,7 @@ To override the default rendering of the whole item, use the [`itemRender`]({% s
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 *   [API Reference of the BottomNavigationProps]({% slug api_layout_bottomnavigationprops %})
 *   [API Reference of the BottomNavigationItemProps]({% slug api_layout_bottomnavigationitemprops %})

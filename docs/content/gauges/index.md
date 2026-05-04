@@ -2,7 +2,7 @@
 title: Overview
 page_title: 'React Gauge Component - KendoReact'
 description: 'A React gauge component displays a value on a visual scale, like a speedometer, to represent progress, performance, or capacity.'
-components: ["arcgauge", "circulargauge", "lineargauge", "radialgauge"]
+components: ['arcgauge', 'circulargauge', 'lineargauge', 'radialgauge']
 slug: overview_gauges
 position: 0
 ---

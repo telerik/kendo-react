@@ -1,7 +1,7 @@
 ---
 title: Read-Only MaskedTextBox
 description: 'Set and control the read-only state of the KendoReact MaskedTextBox in React projects.'
-components: ["maskedtextbox"]
+components: ['maskedtextbox']
 slug: readonly_maskedtextbox
 position: 3
 ---
@@ -19,6 +19,6 @@ To render the MaskedTextBox into a read-only state, set its [`readonly`]({% slug
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 *   [API Reference of the MaskedTextBox]({% slug api_inputs_maskedtextbox %})

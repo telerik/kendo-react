@@ -1,7 +1,7 @@
 ---
 title: Appearance
 description: 'Add alternative styling options to the KendoReact NumericTextBox in React projects.'
-components: ["numerictextbox"]
+components: ['numerictextbox']
 slug: appearance_numerictextbox
 position: 7
 ---
@@ -80,7 +80,7 @@ The NumericTextBox enables you to apply different width size to the component th
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the NumericTextBox]({% slug api_inputs_numerictextboxprops %})
 -   [NumericTextBox `prefix` options]({% slug api_inputs_numerictextboxprops %}#toc-prefix)

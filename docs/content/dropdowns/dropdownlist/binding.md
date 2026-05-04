@@ -1,7 +1,7 @@
 ---
 title: Data and Value Binding
 description: 'Bind the KendoReact DropDownList to data and render the selected option in React projects.'
-components: ["dropdownlist"]
+components: ['dropdownlist']
 slug: binding_dropdownlist
 position: 2
 ---
@@ -50,7 +50,7 @@ To render the selected value, use the [`value`]({% slug api_dropdowns_dropdownli
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the DropDownList]({% slug api_dropdowns_dropdownlistprops %})
 -   [Controlled Components in React](https://react.dev/learn/sharing-state-between-components#controlled-and-uncontrolled-components)

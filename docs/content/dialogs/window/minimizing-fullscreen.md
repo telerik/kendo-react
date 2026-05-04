@@ -1,7 +1,7 @@
 ---
 title: Minimizing and Maximizing
 description: 'Control the minimized, default, and full screen states of the KendoReact Window.'
-components: ["window"]
+components: ['window']
 slug: windowstage_window
 position: 60
 ---
@@ -22,6 +22,6 @@ To place the Window in a controlled mode:
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the Window]({% slug api_dialogs_windowprops %})

@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: 'Get an overview of the features the KendoReact RadialGauge delivers and use the component in React projects.'
-components: ["radialgauge"]
+components: ['radialgauge']
 slug: overview_radialgauge_gauges
 position: 1
 ---

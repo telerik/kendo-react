@@ -75,7 +75,7 @@ The following example demonstrates how to define the thumb border radius of the 
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the Switch](slug:api_inputs_switchprops)
 -   [Switch `size` options](slug:api_inputs_switchprops#size)

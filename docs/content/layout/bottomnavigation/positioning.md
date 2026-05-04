@@ -1,7 +1,7 @@
 ---
 title: Positioning
 description: 'Learn how to position the KendoReact BottomNavigation component in relation to the page content.'
-components: ["bottomnavigation"]
+components: ['bottomnavigation']
 slug: positioning_bottomnavigation
 position: 3
 ---
@@ -28,7 +28,7 @@ The BottomNavigation provides the following options for setting the position mod
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 *   [API Reference of the BottomNavigationProps]({% slug api_layout_bottomnavigationprops %})
 *   [API Reference of the BottomNavigationItemProps]({% slug api_layout_bottomnavigationitemprops %})

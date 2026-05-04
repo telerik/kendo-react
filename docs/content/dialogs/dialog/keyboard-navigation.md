@@ -36,7 +36,7 @@ The following example is based on the official [accessibility standard](https://
 {% endmeta %}
 
 ## See Also
-* [Learn about KendoReact Free.](slug:free_components_introduction)
+* [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 * [Get Started with the Dialog]({% slug overview_dialog %})
 * [API Reference of the Dialog]({% slug api_dialogs %})

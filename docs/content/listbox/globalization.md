@@ -1,7 +1,7 @@
 ---
 title: Globalization
 description: 'Get started with the globalization functionality of the KendoReact ListBox and learn how to localize built-in messages.'
-components: ["listbox"]
+components: ['listbox']
 slug: globalization_listbox
 position: 80
 ---
@@ -46,7 +46,7 @@ The following example demonstrates how to utilize the RTL support for the ListBo
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [Globalization]({% slug overview_globalization %})
 -   [Internationalization]({% slug overview_intl %})

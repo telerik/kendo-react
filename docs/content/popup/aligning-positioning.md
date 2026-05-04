@@ -1,7 +1,7 @@
 ---
 title: Aligning and Positioning
 description: 'Align the KendoReact Popup to components or absolute points in React projects and control its position.'
-components: ["popup"]
+components: ['popup']
 slug: alignmentpositioning_popup
 position: 5
 ---
@@ -44,6 +44,6 @@ Both the anchor and the Popup are treated as rectangular elements and, as a resu
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the Popup]({% slug api_popup %})

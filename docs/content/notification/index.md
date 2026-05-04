@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: 'Get started with the React Notification package by KendoReact and learn more about how to use the Notification component in React projects.'
-components: ["notification"]
+components: ['notification']
 slug: overview_notification
 position: 0
 ---
@@ -84,6 +84,7 @@ For any questions about the use of the KendoReact Notification, or any other [Ke
 Need something unique that is tailor-made for your project? Progress offers its [Progress Services](https://www.progress.com/services) group that can work with you to create any customized solution that you might need.
 
 ## Suggested Links
+
 -   [Getting Started with the KendoReact Free Components](https://www.telerik.com/kendo-react-ui/components/free)
 
 -   [Getting Started with the KendoReact Notification]({% slug get_started_notification %})
@@ -91,6 +92,6 @@ Need something unique that is tailor-made for your project? Progress offers its 
 -   [Getting Started with KendoReact (Video Tutorials)](https://www.telerik.com/kendo-react-ui/resources#videos)
 -   [Virtual Classroom (Introductory Course Available to Trial and Commercial License Holders)](https://learn.telerik.com/learn/course/external/view/elearning/14/kendoreact)
 -   [React UI Components](https://www.telerik.com/kendo-react-ui/)
--   [Getting Started with the KendoReact Free Components](slug:free_components_introduction)
+-   [Getting Started with the KendoReact Free Components](slug:getting_started_free_vs_premium)
 -   [Explore the Free Project Tracker Sample Application](slug:project-tracker-with-free-components)
 -   [Free Project Tracker app page template (built with free components)](https://www.telerik.com/design-system/docs/ui-templates/templates/project-tracker/)

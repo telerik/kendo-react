@@ -1,7 +1,7 @@
 ---
 title: Precision
 description: 'Sets the precision mode of the KendoReact Rating in React projects.'
-components: ["rating"]
+components: ['rating']
 slug: precision_rating
 position: 2
 ---
@@ -50,6 +50,6 @@ The `Rating` component will detect such use-cases when the `precision` is set to
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 *   [API Reference of the RatingProps]({% slug api_inputs_ratingprops %})

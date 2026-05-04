@@ -1,7 +1,7 @@
 ---
 title: Appearance
 description: 'Add alternative styling options to the KendoReact Checkbox in React projects.'
-components: ["checkbox"]
+components: ['checkbox']
 slug: appearance_checkbox
 position: 7
 ---
@@ -51,7 +51,7 @@ The [`rounded`]({% slug api_inputs_checkboxprops %}#toc-rounded) option supports
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the Checkbox]({% slug api_inputs_checkboxprops %})
 -   [Checkbox `size` options]({% slug api_inputs_checkboxprops %}#toc-size)

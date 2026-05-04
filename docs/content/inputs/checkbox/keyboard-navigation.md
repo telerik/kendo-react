@@ -31,7 +31,7 @@ The CheckBox supports the following keyboard shortcuts:
 {% endmeta %}
 
 ## See Also
-* [Learn about KendoReact Free.](slug:free_components_introduction)
+* [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 * [API Reference of the Checkbox Component]({% slug api_inputs_checkbox %})
 * [API Reference of the Checkbox props]({% slug api_inputs_checkboxprops %})

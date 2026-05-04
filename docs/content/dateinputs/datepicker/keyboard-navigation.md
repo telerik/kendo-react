@@ -60,7 +60,7 @@ When the input of the DatePicker is focused, it adopts the same keyboard shortcu
 
 ## See Also
 
-* [Learn about KendoReact Free.](slug:free_components_introduction)
+* [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 * [Accessibility in KendoReact]({% slug overview_accessibilty %})
 * [Accessibility Compliance and Keyboard Support in KendoReact]({% slug compliance_accessibilty %})
 * [React Date Inputs](slug:overview_dateinputs)

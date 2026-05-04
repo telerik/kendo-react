@@ -1,7 +1,26 @@
 ---
 title: Props Context
 description: 'Learn how to provide a global configuration for all instances of a Input component in a React Application'
-components: ["checkbox", "colorgradient", "colorpalette", "colorpicker", "flatcolorpicker", "input", "maskedtextbox", "numerictextbox", "radiobutton", "radiogroup", "rangeslider", "rating", "signature", "slider", "switch", "textarea", "textbox"]
+components:
+    [
+        'checkbox',
+        'colorgradient',
+        'colorpalette',
+        'colorpicker',
+        'flatcolorpicker',
+        'input',
+        'maskedtextbox',
+        'numerictextbox',
+        'radiobutton',
+        'radiogroup',
+        'rangeslider',
+        'rating',
+        'signature',
+        'slider',
+        'switch',
+        'textarea',
+        'textbox'
+    ]
 slug: props-context_inputs
 position: 50
 ---
@@ -44,7 +63,7 @@ The following components from the `@progress/kendo-react-inputs` package support
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [Checkbox Overview]({% slug overview_calendar %})
 -   [ColorPicker Overview]({% slug overview_colorpicker %})

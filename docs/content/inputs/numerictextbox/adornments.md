@@ -1,7 +1,7 @@
 ---
 title: Adornments
 description: 'Add custom items using adornments for the KendoReact NumericTextBox component'
-components: ["numerictextbox"]
+components: ['numerictextbox']
 slug: adornments_numerictextbox
 position: 8
 ---
@@ -32,7 +32,7 @@ To visually separate the specified adornments, you can add a [`InputSeparator`](
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the NumericTextBox]({% slug api_inputs_numerictextbox %})
 -   [API Reference of the Button]({% slug api_buttons_buttonprops %})

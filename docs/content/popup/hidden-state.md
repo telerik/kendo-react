@@ -1,7 +1,7 @@
 ---
 title: Hidden Popup
 description: 'Show or hide the KendoReact Popup in React projects.'
-components: ["popup"]
+components: ['popup']
 slug: hidden_popup
 position: 3
 ---
@@ -20,6 +20,6 @@ To show or hide the Popup, use the [`show`]({% slug api_popup_popupprops %}#toc-
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the Popup]({% slug api_popup %})

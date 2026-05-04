@@ -78,7 +78,7 @@ Now try to add another component from the Charts package yourself. The procedure
 
 ## Activating Your License Key
 
-KendoReact is an enterprise-grade UI library with 120+ free and premium components. You can use the [50+ free components and features of KendoReact]({% slug free_components_introduction %}), even in production, no license required.
+KendoReact is an enterprise-grade UI library with 120+ free and premium components. You can use the [50+ free components and features of KendoReact]({% slug getting_started_free_vs_premium %}), even in production, no license required.
 
 **Important**: The KendoReact Charts are premium components that require a license key file to be installed in your project. This applies to both trial and commercial usage:
 

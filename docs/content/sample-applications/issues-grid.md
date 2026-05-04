@@ -1,7 +1,7 @@
 ---
 title: Github Issues Grid
 description: 'Create a powerful KendoReact Data Grid component, bound to and showing complex data from the public GitHub GraphQL API, enabling you to beautifully visualize and list, sort, and filter issues descriptions, and rendering additional information about feature requests, bug fixes, and follow-up.'
-components: ["general"]
+components: ['general']
 slug: github_issues_grid
 position: 30
 category: sample-applications
@@ -23,7 +23,7 @@ This application binds the KendoReact Grid to the Github public GraphQL API to s
 
 ## Suggested Links
 
--   [Get Started with KendoReact Free](slug://free_components_introduction)
+-   [Get Started with KendoReact Free](slug://getting_started_free_vs_premium)
 -   [Getting Started with Progressive Web Apps](https://codelabs.developers.google.com/codelabs/your-first-pwapp/#0)
 -   [KendoReact Dashboard sample application](https://telerik.github.io/kendo-react-material-dashboard/)
 -   [All Things React Telerik Blog Page](https://www.telerik.com/blogs/all-things-react)

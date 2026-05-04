@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: 'Use the KendoReact DropDownList component in a React project.'
-components: ["dropdownlist"]
+components: ['dropdownlist']
 slug: overview_dropdownlist
 position: 1
 ---
@@ -15,7 +15,7 @@ The KendoReact DropDownList component is part of the KendoReact library of React
 <CtaPanelOverview title="Use This React @Subject for Free" message="You can use the @TestLink of this @Subject in production—no sign-up or license required. It is part of KendoReact, an enterprise-grade UI library with 120+ @FreemiumShortLink and premium components. To test-drive premium functionality such as virtualization, @StartTrialLink.">
 <span token="TestLink">
 
-[free feature set](slug://free_components_introduction#react-dropdownlist)
+[free feature set](slug://getting_started_free_vs_premium#dropdownlist)
 
 </span>
 </CtaPanelOverview>

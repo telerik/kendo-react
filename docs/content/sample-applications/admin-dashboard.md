@@ -1,7 +1,7 @@
 ---
 title: Admin Dashboard
 description: "Create a KendoReact Admin Dashboard sample application, seamlessly integrating 10 of the most powerful KendoReact components, such as Charts, Gauges, and Dropdowns, taking advantage of React's fast rendering, showing dynamic data updates in real time, and displaying multiple forms in cards."
-components: ["general"]
+components: ['general']
 slug: admindashboard_sampleapp
 position: 30
 category: sample-applications
@@ -49,8 +49,9 @@ You can see the following ten KendoReact components implemented in this sample a
 -   [KendoReact Dropdowns]({% slug overview_dropdowns %})
 
 ## Suggested Links
+
 -   [Get Started with KendoReact Free](https://www.telerik.com/kendo-react-ui/components/free)
 
 -   [Getting Started with KendoReact](https://www.telerik.com/kendo-react-ui/components/getting-started/)
--   [Get Started with KendoReact Free](slug://free_components_introduction)
+-   [Get Started with KendoReact Free](slug://getting_started_free_vs_premium)
 -   [Getting Started with Progressive Web Apps](https://codelabs.developers.google.com/codelabs/your-first-pwapp/#0)

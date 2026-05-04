@@ -1,7 +1,7 @@
 ---
 title: Label
 description: 'Sets the label of the KendoReact Rating in React projects.'
-components: ["rating"]
+components: ['rating']
 slug: label_rating
 position: 4
 ---
@@ -19,6 +19,6 @@ To customize the Rating component label, set its [`label`]({% slug api_inputs_ra
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 *   [API Reference of the RatingProps]({% slug api_inputs_ratingprops %})

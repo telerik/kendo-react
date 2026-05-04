@@ -1,7 +1,7 @@
 ---
 title: Incremental Steps
 description: 'Manage the incremental steps of the KendoReact NumericTextBox in React projects.'
-components: ["numerictextbox"]
+components: ['numerictextbox']
 slug: predefinedsteps_numerictextbox
 position: 2
 ---
@@ -19,6 +19,6 @@ When `step` is set, you can increase or decrease the value of the component that
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 *   [API Reference of the NumericTextBox Props]({% slug api_inputs_numerictextboxprops %})

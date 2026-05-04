@@ -1,7 +1,7 @@
 ---
 title: Custom Properties
 description: 'Set custom properties to the items of the KendoReact PanelBar.'
-components: ["panelbar"]
+components: ['panelbar']
 slug: customproperty_panelbar
 position: 4
 ---
@@ -39,7 +39,7 @@ You can access the property from the target of the [`onSelect`]({% slug api_layo
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 *   [API Reference of the PanelBar]({% slug api_layout_panelbarprops %})
 *   [API Reference of the PanelBarItem]({% slug api_layout_panelbaritemprops %})

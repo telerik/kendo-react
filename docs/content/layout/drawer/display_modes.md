@@ -1,7 +1,7 @@
 ---
 title: 'Display Modes'
 description: 'Get started with the KendoReact Drawer and set its overlay or push expand modes or its compact mini view in React projects.'
-components: ["drawer"]
+components: ['drawer']
 slug: display_modes_drawer
 position: 3
 ---
@@ -39,5 +39,5 @@ A compact view can be displayed when the Drawer is collapsed. To toggle between 
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 -   [API Reference of the Drawer Props]({% slug api_layout_drawerprops %})

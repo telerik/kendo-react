@@ -47,7 +47,7 @@ The PanelBar is a single-tab-stop component. It implements the roving tab index 
 
 
 ## See Also
-* [Learn about KendoReact Free.](slug:free_components_introduction)
+* [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 * [API Reference of the PanelBar]({% slug api_layout_panelbarprops %})
 * [Accessibility]({% slug accessibility_panelbar %})

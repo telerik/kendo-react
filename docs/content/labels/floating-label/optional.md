@@ -1,7 +1,7 @@
 ---
 title: Optional
 description: 'Define the optional state of the KendoReact FloatingLabel component in React projects.'
-components: ["floatinglabel"]
+components: ['floatinglabel']
 slug: optional_floating_label
 position: 4
 ---
@@ -21,7 +21,7 @@ You can customize the default optional content through custom messages the same 
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [Globalization]({% slug globalization_labels %})
 -   [API Reference of the FloatingLabel Component]({% slug api_labels_floatinglabelprops %})

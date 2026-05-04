@@ -71,7 +71,7 @@ The following example demonstrates how to define the border radius of the TextAr
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the TextArea](slug:api_inputs_textareaprops)
 -   [TextArea `size` options](slug:api_inputs_textareaprops#size)

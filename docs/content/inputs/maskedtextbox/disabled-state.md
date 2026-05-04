@@ -1,7 +1,7 @@
 ---
 title: Disabled MaskedTextBox
 description: 'Enable or disable the KendoReact MaskedTextBox in React projects.'
-components: ["maskedtextbox"]
+components: ['maskedtextbox']
 slug: disabled_maskedtextbox
 position: 2
 ---
@@ -19,6 +19,6 @@ To disable the user interaction with the component, set its [`disabled`]({% slug
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the MaskedTextBox]({% slug api_inputs_maskedtextbox %})

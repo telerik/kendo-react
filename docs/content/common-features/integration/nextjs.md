@@ -12,7 +12,7 @@ KendoReact enables you to add KendoReact components to Next.js projects and util
 
 ## Installation
 
-The following steps demonstrate how to add the KendoReact components to a Next.js project. For a complete step by step tutorial on how to start a Next.js project with KendoReact with the pages or app router, and activate the license (no license needed if using KendoReact Free), refer to the [Getting Started with Next.js](slug:nextjs_installation) article.
+The following steps demonstrate how to add the KendoReact components to a Next.js project. For a complete step by step tutorial on how to start a project with KendoReact, including Next.js setup options and license activation guidance (no license needed if using KendoReact Free), refer to the [Getting Started with KendoReact](slug:getting_started) article.
 
 1. Install and import the desired KendoReact components by using NPM or YARN.
 
@@ -93,4 +93,4 @@ const MyGrid: any = dynamic(
 
 -   [Next.js](https://nextjs.org/)
 -   [Sample Project with Next.js Integration](https://github.com/telerik/kendo-react/tree/master/examples/coffee-warehouse-nextjs)
--   [Getting Started with Next.js](slug:nextjs_installation)
+-   [Getting Started with KendoReact](slug:getting_started)

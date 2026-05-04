@@ -1,7 +1,7 @@
 ---
 title: Default Item
 description: 'Configure the default item of the KendoReact DropDownList in React projects.'
-components: ["dropdownlist"]
+components: ['dropdownlist']
 slug: defaultitem_dropdownlist
 position: 3
 ---
@@ -28,6 +28,6 @@ The following example demonstrates how to define a `defaultItem` as an object va
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the DropDownList]({% slug api_dropdowns_dropdownlistprops %})

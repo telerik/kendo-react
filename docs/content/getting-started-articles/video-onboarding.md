@@ -2,9 +2,9 @@
 title: Video Onboarding
 page_title: Video Onboarding - KendoReact
 description: Get started with KendoReact by following a step-by-step video tutorial that helps you develop a real-life project and learn the basics about working with the KendoReact components.
-components: ["general"]
+components: ['general']
 slug: virtualclass
-position: 90
+position: 20
 category: getting-started
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Grouping
 description: 'Get started with the grouping functionality of the KendoReact DropDownList and learn how to display grouped data.'
-components: ["dropdownlist"]
+components: ['dropdownlist']
 slug: grouping_dropdownlist
 position: 5
 ---
@@ -46,7 +46,7 @@ By customizing the templates passed to each of the listed above properties you c
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the DropDownList]({% slug api_dropdowns_dropdownlist %})
 -   [API Reference of the DropDownListProps]({% slug api_dropdowns_dropdownlistprops %})

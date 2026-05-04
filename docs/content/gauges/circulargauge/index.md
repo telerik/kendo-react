@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: 'Discover the features provided by the KendoReact CircularGauge, and learn how to use the component in React projects.'
-components: ["circulargauge"]
+components: ['circulargauge']
 slug: overview_circulargauge_gauges
 position: 1
 ---

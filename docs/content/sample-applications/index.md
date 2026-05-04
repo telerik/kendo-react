@@ -20,7 +20,7 @@ KendoReact provides the following sample applications:
 | Demo | GitHub Repository | Live Example |
 |------|-------------------|--------------|
 | Project Tracker Application | [View Code](https://github.com/telerik/kendo-react/tree/master/examples/project-tracker-with-free-components) | [Live Example](https://telerik.github.io/kendo-react/project-tracker-with-free-components/) |
-| Personal Finance Application | [View Code](https://github.com/telerik/kendo-react/tree/master/examples/kendo-react-personal-finance) | [Live Example](https://telerik.github.io/kendo-react/kendo-react-personal-finance/) |
+| Personal Finance Dashboard | [View Code](https://github.com/telerik/kendo-react/tree/master/examples/kendo-react-personal-finance) | [Live Example](https://telerik.github.io/kendo-react/kendo-react-personal-finance/) |
 | Finance Portfolio Application | [View Code](https://github.com/telerik/kendo-react/tree/master/examples/kendo-react-finance-portfolio) | [Live Example](https://telerik.github.io/kendo-react/kendo-react-finance-portfolio/#/stocks) |
 | Coffee Warehouse Dashboard | [View Code](https://github.com/telerik/kendo-react/tree/master/examples/react-coffee-warehouse) | [Live Example](https://telerik.github.io/kendo-react/react-coffee-warehouse/#/) |
 | Admin Dashboard Application | [View Code](https://github.com/telerik/kendo-react/tree/master/examples/react-admin-dashboard) | [Live Example](https://telerik.github.io/kendo-react/react-admin-dashboard/#/) |

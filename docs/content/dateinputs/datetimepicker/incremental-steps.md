@@ -1,7 +1,7 @@
 ---
 title: Incremental Steps
 description: 'Increment or decrement each date or time value part by a predefined step in the KendoReact DateTimePicker.'
-components: ["datetimepicker"]
+components: ['datetimepicker']
 slug: incrementalsteps_datetimepicker
 position: 6
 ---
@@ -30,6 +30,6 @@ The following demo displays a DateInput with predefined incremental steps for ye
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 -   [API Reference of the DateTimePicker]({% slug api_dateinputs_datetimepicker %})
 -   [React Date Inputs](slug:overview_dateinputs)

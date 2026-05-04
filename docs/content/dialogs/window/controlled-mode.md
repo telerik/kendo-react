@@ -1,7 +1,7 @@
 ---
 title: Controlled Window
 description: 'Control the state, dimensions, and position of the KendoReact Window in React projects.'
-components: ["window"]
+components: ['window']
 slug: controlled_mode_window
 position: 20
 ---
@@ -26,6 +26,6 @@ The following example demonstrates how to control the Window functionality.
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the Window]({% slug api_dialogs_window %})

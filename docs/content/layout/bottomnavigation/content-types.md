@@ -1,7 +1,7 @@
 ---
 title: Content Types
 description: 'Set different content types to the KendoReact BottomNavigation items in React projects.'
-components: ["bottomnavigation"]
+components: ['bottomnavigation']
 slug: content_types_bottomnavigation
 position: 2
 ---
@@ -38,7 +38,7 @@ The possible values are:
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 *   [API Reference of the BottomNavigationProps]({% slug api_layout_bottomnavigationprops %})
 *   [API Reference of the BottomNavigationItemProps]({% slug api_layout_bottomnavigationitemprops %})

@@ -38,4 +38,4 @@ The Sortable component is a single tab-stop. When focused with the keyboard (tab
 * [Globalization]({% slug globalization_sortable %})
 * [Accessibility in KendoReact]({% slug overview_accessibilty %})
 * [Accessibility Compliance and Keyboard Support in KendoReact]({% slug compliance_accessibilty %})
-* [Learn about KendoReact Free.](slug:free_components_introduction)
+* [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)

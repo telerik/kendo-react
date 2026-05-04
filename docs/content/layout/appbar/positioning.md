@@ -1,7 +1,7 @@
 ---
 title: Positioning
 description: 'Learn how to position the KendoReact AppBar component in relation to the page content.'
-components: ["appbar"]
+components: ['appbar']
 slug: positioning_appbar
 position: 2
 ---
@@ -43,7 +43,7 @@ The AppBar provides the following options for setting the position mode:
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 *   [API Reference of the AppBar]({% slug api_layout_appbar %})
 *   [API Reference of the AppBarProps]({% slug api_layout_appbarprops %})

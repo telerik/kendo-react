@@ -1,7 +1,7 @@
 ---
 title: Default State
 description: 'Set the initial value of the KendoReact TextArea in React projects.'
-components: ["textarea"]
+components: ['textarea']
 slug: default_textarea
 position: 2
 ---
@@ -19,7 +19,7 @@ Use its [`defaultValue`]({% slug api_inputs_textareaprops %}#toc-defaultValue) p
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the TextArea]({% slug api_inputs_textarea %})
 -   [API Reference of the TextAreaProps]({% slug api_inputs_textareaprops %})

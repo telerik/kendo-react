@@ -42,4 +42,4 @@ In addition to the above, the component could also implement the `selection foll
 * [API Reference of the Step Props]({% slug api_layout_stepprops %})
 * [Accessibility in KendoReact]({% slug overview_accessibilty %})
 * [Accessibility Compliance and Keyboard Support in KendoReact]({% slug compliance_accessibilty %})
-* [Learn about KendoReact Free.](slug:free_components_introduction)
+* [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)

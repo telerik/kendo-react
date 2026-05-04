@@ -1,7 +1,7 @@
 ---
 title: Disabled ExpansionPanel
 description: 'Enable or disable the React ExpansionPanel by KendoReact.'
-components: ["expansionpanel"]
+components: ['expansionpanel']
 slug: disabled_expansionpanel
 position: 6
 ---
@@ -19,6 +19,6 @@ To control this behavior, use the [`disabled`]({% slug api_layout_expansionpanel
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the ExpansionPanel]({% slug api_layout_expansionpanel %})

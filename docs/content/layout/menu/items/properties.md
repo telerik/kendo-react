@@ -2,7 +2,7 @@
 title: Configuring Item Properties
 page_title: Configuring Item Properties - Menu - KendoReact
 description: 'Configure the text, URLs, icons, and styles for the KendoReact Menu in React projects.'
-components: ["menu"]
+components: ['menu']
 slug: itemproperties_menu
 position: 2
 tag: updated
@@ -75,7 +75,7 @@ You can specify a separator item by using the [`separator`]({% slug api_layout_b
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the Menu]({% slug api_layout_menuprops %})
 -   [API Reference of the MenuItem]({% slug api_layout_menuitemprops %})

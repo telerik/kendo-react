@@ -1,7 +1,7 @@
 ---
 title: Visibility
 description: 'Show or hide the KendoReact Window in React projects.'
-components: ["window"]
+components: ['window']
 slug: visibility_window
 position: 90
 ---
@@ -25,6 +25,6 @@ The following example demonstrates how to show and hide the Window based on its 
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the Window]({% slug api_dialogs_window %})

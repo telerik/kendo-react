@@ -1,7 +1,7 @@
 ---
 title: Data and Value Binding
 description: 'Bind the KendoReact MultiSelect to data and render the selected option in React projects.'
-components: ["multiselect"]
+components: ['multiselect']
 slug: binding_multiselect
 position: 2
 ---
@@ -52,7 +52,7 @@ To render the selected values, use the [`value`]({% slug api_dropdowns_multisele
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the MultiSelect]({% slug api_dropdowns_multiselectprops %})
 -   [Controlled Components in React](https://react.dev/learn/sharing-state-between-components#controlled-and-uncontrolled-components)

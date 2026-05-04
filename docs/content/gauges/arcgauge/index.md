@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: 'Get an overview of the features the KendoReact ArcGauge delivers and use the component in React projects.'
-components: ["arcgauge"]
+components: ['arcgauge']
 slug: overview_arcgauge_gauges
 position: 1
 ---

@@ -1,7 +1,7 @@
 ---
 title: Routing
 description: 'Use the KendoReact Drawer with the React router.'
-components: ["drawer"]
+components: ['drawer']
 slug: routing_drawer
 position: 5
 ---
@@ -31,6 +31,6 @@ To use custom properties and set the route path:
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 -   [API Reference of the DrawerProps]({% slug api_layout_drawerprops %})
 -   [API Reference of the DrawerItemProps]({% slug api_layout_draweritemprops %})

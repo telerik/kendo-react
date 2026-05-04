@@ -1,7 +1,7 @@
 ---
 title: Forms Support
 description: 'Use the native HTML5 forms implementation of the KendoReact DateInput component in React projects.'
-components: ["dateinput"]
+components: ['dateinput']
 slug: forms_dateinput
 position: 8
 ---
@@ -57,6 +57,6 @@ By default, to achieve a visual representation of its invalid state, the DateInp
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 -   [API Reference of the DateInput Props]({% slug api_dateinputs_dateinputprops %})
 -   [React Date Inputs](slug:overview_dateinputs)

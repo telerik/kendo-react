@@ -84,6 +84,9 @@ position: 1
         <a href="{% slug api_notification_notificationgroupprops %}">NotificationGroupProps</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_notification_notificationhandle %}">NotificationHandle</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_notification_notificationprops %}">NotificationProps</a>
     </li>
   </ul>

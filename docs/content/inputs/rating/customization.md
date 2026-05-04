@@ -1,7 +1,7 @@
 ---
 title: Customization
 description: 'Learn how to customize the Rating component and use it in React projects.'
-components: ["rating"]
+components: ['rating']
 slug: item_customization_ratingitem
 position: 9
 ---
@@ -30,7 +30,7 @@ The RatingItem look can be also completely changed and override the existing Rat
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [Rating icon prop]({% slug icon_rating %})
 -   [KendoReact Icons Article]({% slug icons %})

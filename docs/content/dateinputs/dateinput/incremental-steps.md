@@ -1,7 +1,7 @@
 ---
 title: Incremental Steps
 description: 'Override the default incremental steps in the KendoReact DateInput.'
-components: ["dateinput"]
+components: ['dateinput']
 slug: incrementalsteps_dateinput
 position: 6
 ---
@@ -30,6 +30,6 @@ The following demo displays a DateInput with predefined incremental steps for `y
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 -   [API Reference of the DateInput]({% slug api_dateinputs_dateinputprops %})
 -   [React Date Inputs](slug:overview_dateinputs)

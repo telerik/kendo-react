@@ -101,7 +101,7 @@ Explore a variety of KendoReact examples and demos, showcasing powerful React co
             src="./images/apps/admin-dashboard.png"
             description="An admin dashboard app that showcases the Chart, React Forms, Button, and more React components."
             backgroundcolor="#FF8A82"></DetailedCard>
-            <DetailedCard title="Personal Finance Application"
+            <DetailedCard title="Personal Finance Dashboard"
             href="https://telerik.github.io/kendo-react/kendo-react-personal-finance/"
             src="./images/apps/personal-finance.png"
             description="A financial dashboard app that showcases the Grid, Charts, DateInputs, and ProgressBars for React."
@@ -487,9 +487,9 @@ Explore a variety of KendoReact examples and demos, showcasing powerful React co
        <MoreResourcesSection title="Project Setup" type="links">
             <MoreResourcesLink href="slug://requirements_installation" iscategory="true" tag="updated" title="System Requirements"></MoreResourcesLink>
             <MoreResourcesLink href="slug://development_builds_installation" iscategory="true" title="Obtaining Development Builds"></MoreResourcesLink>
-            <MoreResourcesLink href="slug://nextjs_installation" iscategory="true" title="Using with Next.js"></MoreResourcesLink>
-            <MoreResourcesLink href="slug://astro_installation" iscategory="true" title="Using with Astro"></MoreResourcesLink>
-            <MoreResourcesLink href="slug://ssr_integration" iscategory="true" title="Using with Server Side Rendering"></MoreResourcesLink>
+                <MoreResourcesLink href="slug://getting_started" iscategory="true" title="Using with Next.js"></MoreResourcesLink>
+                <MoreResourcesLink href="slug://getting_started" iscategory="true" title="Using with Astro"></MoreResourcesLink>
+                <MoreResourcesLink href="slug://getting_started" iscategory="true" title="Using with Server Side Rendering"></MoreResourcesLink>
             <MoreResourcesLink href="slug://overview_vscode_installation" iscategory="true" title="VS Code Extension"></MoreResourcesLink>
             <MoreResourcesLink href="https://www.telerik.com/kendo-react-ui/components/changelogs/ui-for-react" iscategory="true" title="KendoReact Changelog"></MoreResourcesLink>
         </MoreResourcesSection>

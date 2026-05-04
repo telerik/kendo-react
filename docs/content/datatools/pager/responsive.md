@@ -1,7 +1,7 @@
 ---
 title: Responsive Design
 description: 'Get started with the KendoReact Pager and use its responsive design support.'
-components: ["pager"]
+components: ['pager']
 slug: responsive_pager
 position: 1
 ---
@@ -40,6 +40,6 @@ The following example demonstrates the different Pager layouts based on its widt
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the Pager Props](slug://api_data-tools_pagerprops)

@@ -1,7 +1,7 @@
 ---
 title: Support for Document Scale
 description: 'Support of Document Scale in KendoReact Popover.'
-components: ["tooltip","popover"]
+components: ['tooltip', 'popover']
 slug: scale_popover
 position: 6
 ---
@@ -17,6 +17,6 @@ The KendoReact Popover support custom Document Scale. To enable this support, yo
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 *   [API Reference of the Tooltips]({% slug api_tooltip %})

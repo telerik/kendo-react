@@ -1,7 +1,7 @@
 ---
 title: Controlled Mode
 description: 'Control the value of the KendoReact Rating in React projects.'
-components: ["rating"]
+components: ['rating']
 slug: controlled_rating
 position: 9
 ---
@@ -25,6 +25,6 @@ To control the state of the Rating:
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 *   [API Reference of the Rating]({% slug api_inputs_rating %})

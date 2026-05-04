@@ -1,7 +1,7 @@
 ---
 title: Dimensions and Resizing
 description: 'Set the dimensions of the KendoReact Window and manually resize the component by dragging its resize handles.'
-components: ["window"]
+components: ['window']
 slug: dimensionsresizing_window
 position: 40
 ---
@@ -32,6 +32,6 @@ You can also control the minimum allowed dimensions of the Window by using the [
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the Window]({% slug api_dialogs_window %})

@@ -1,7 +1,7 @@
 ---
 title: Invalid State
 description: 'Define the invalid state of the KendoReact FloatingLabel component in React projects.'
-components: ["floatinglabel"]
+components: ['floatinglabel']
 slug: invalid_state_floating_label
 position: 3
 ---
@@ -17,7 +17,7 @@ When the editor has invalid value you can also set different styles for the Floa
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [Error Overview]({% slug error_labels %})
 -   [API Reference of the FloatingLabel Component]({% slug api_labels_floatinglabelprops %})

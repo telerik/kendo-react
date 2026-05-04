@@ -1,7 +1,7 @@
 ---
 title: 'Expanded State'
 description: 'Get started with the KendoReact Drawer, set its expanded state in React projects.'
-components: ["drawer"]
+components: ['drawer']
 slug: expanded_state_drawer
 position: 2
 ---
@@ -22,5 +22,5 @@ The following example demonstrates how to configure the display state of the Dra
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 -   [API Reference of the Drawer]({% slug api_layout_drawerprops %})

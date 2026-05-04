@@ -2,7 +2,7 @@
 title: Coffee Warehouse Dashboard
 page_title: React Dashboard – Coffee Warehouse Sample App - KendoReact
 description: 'Create a KendoReact Coffee Warehouse Dashboard sample application, seamlessly integrating some of the most powerful KendoReact components in a single dashboard, implementing advanced scenarios such as setting up the Chart type based on button selection or saving newly uploaded avatars in the global user settings, and enabling you to easily beautify your app with the KendoReact theme of your preference.'
-components: ["general"]
+components: ['general']
 slug: react-coffee-warehouse-dashboard
 position: 20
 category: sample-applications
@@ -48,9 +48,10 @@ To enable a smooth and trouble-free collaboration between designers and develope
 Globalization is a process which combines the translation of component messages (localization) with their adaptation to specific cultures (internationalization). In this demo application, we wanted to showcase how globalization comes out-of-the-box with our UI components. Use the Language DropDown menu in the upper right corner to see this in action.
 
 ## Suggested Links
+
 -   [Get Started with KendoReact Free](https://www.telerik.com/kendo-react-ui/components/free)
 
--   [Get Started with KendoReact Free](slug://free_components_introduction)
+-   [Get Started with KendoReact Free](slug://getting_started_free_vs_premium)
 -   [KendoReact Data Grid]({% slug overview_grid %})
 -   [KendoReact Charts]({% slug overview_charts %})
 -   [KendoReact Scheduler]({% slug overview_scheduler %})

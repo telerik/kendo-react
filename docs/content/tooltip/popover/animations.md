@@ -1,7 +1,7 @@
 ---
 title: Animations
 description: 'Change the animations configuration of the KendoReact Popover.'
-components: ["tooltip","popover"]
+components: ['tooltip', 'popover']
 slug: animations_popover
 position: 5
 ---
@@ -19,6 +19,6 @@ To control the animation behavior, use the [`animate`]({% slug api_tooltip_popov
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 *   [API Reference of the Tooltips]({% slug api_tooltip %})

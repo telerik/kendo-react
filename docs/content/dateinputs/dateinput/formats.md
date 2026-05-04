@@ -1,7 +1,7 @@
 ---
 title: Formats
 description: 'Control the date format of the KendoReact DateInput.'
-components: ["dateinput"]
+components: ['dateinput']
 slug: formats_dateinput
 position: 4
 ---
@@ -32,6 +32,6 @@ By default, the [`twoDigitYearMax`]({% slug api_dateinputs_dateinputprops %}#toc
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 -   [API Reference of the DateInput]({% slug api_dateinputs_dateinputprops %})
 -   [React Date Inputs](slug:overview_dateinputs)

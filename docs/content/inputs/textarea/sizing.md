@@ -1,7 +1,7 @@
 ---
 title: Sizing
 description: 'Set the height of the KendoReact TextArea component in React projects.'
-components: ["textarea"]
+components: ['textarea']
 slug: sizing_textarea
 position: 5
 ---
@@ -30,7 +30,7 @@ To automatically adjust the height of the TextArea as the user types, set its [`
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 *   [API Reference of the TextArea]({% slug api_inputs_textarea %})
 *   [API Reference of the TextAreaProps]({% slug api_inputs_textareaprops %})

@@ -1,7 +1,7 @@
 ---
 title: Value
 description: 'Format the visible values of the KendoReact MaskedTextBox in React projects.'
-components: ["maskedtextbox"]
+components: ['maskedtextbox']
 slug: value_maskedtextbox
 position: 5
 ---
@@ -17,6 +17,6 @@ The MaskedTextBox enables you to control its value by setting the [`value`]({% s
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 *   [API Reference of the MaskedTextBox]({% slug api_inputs_maskedtextbox %})

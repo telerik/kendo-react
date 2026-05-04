@@ -1,7 +1,7 @@
 ---
 title: Title
 description: 'Display a title in the KendoReact Window and customize its behavior.'
-components: ["window"]
+components: ['window']
 slug: title_window
 position: 80
 ---
@@ -33,6 +33,6 @@ If `title` is not specified, instead of a title, the Window will display a title
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the Window]({% slug api_dialogs_windowprops %})

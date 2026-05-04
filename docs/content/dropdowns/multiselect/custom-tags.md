@@ -1,7 +1,7 @@
 ---
 title: Custom Tags
 description: 'Use custom tags with the KendoReact MultiSelect component in React projects.'
-components: ["multiselect"]
+components: ['multiselect']
 slug: customtags_multiselect
 position: 5
 ---
@@ -21,6 +21,6 @@ The following example demonstrates how to display a single summary tag.
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the MultiSelect]({% slug api_dropdowns_multiselectprops %})

@@ -66,7 +66,7 @@ Roving tab index components strategy implemented. Meaning that only one node has
 
 
 ## See Also
-* [Learn about KendoReact Free.](slug:free_components_introduction)
+* [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 * [API Reference of the Menu]({% slug api_layout_menuprops %})
 * [API Reference of the MenuItem]({% slug api_layout_menuitemprops %})

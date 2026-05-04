@@ -1,7 +1,8 @@
 ---
 title: Props Context
 description: 'Learn how to provide a global configuration for all instances of a DateInput component in a React Application'
-components: ["calendar", "dateinput", "datepicker", "daterangepicker", "datetimepicker", "multiviewcalendar", "timepicker"]
+components:
+    ['calendar', 'dateinput', 'datepicker', 'daterangepicker', 'datetimepicker', 'multiviewcalendar', 'timepicker']
 slug: props-context_dateinputs
 position: 40
 ---
@@ -37,7 +38,7 @@ The following components from the `@progress/kendo-react-dateinputs` package sup
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [Calendar Overview]({% slug overview_calendar %})
 -   [DateInput Overview]({% slug overview_dateinput %})

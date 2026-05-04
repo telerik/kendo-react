@@ -1,7 +1,7 @@
 ---
 title: Custom Values
 description: 'Use custom values with the KendoReact MultiSelect component in React projects.'
-components: ["multiselect"]
+components: ['multiselect']
 slug: custom_values_multiselect
 position: 3
 ---
@@ -32,6 +32,6 @@ The following example demonstrates how to allow custom values when the MultiSele
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the MultiSelect]({% slug api_dropdowns_multiselectprops %})

@@ -11,7 +11,7 @@ position: 10
 
 In this article, you’ll learn how to activate the KendoReact premium components and features by installing a license key.
 
-KendoReact is an enterprise-grade UI library with 120+ free and premium components. You can use the [50+ free components and features of KendoReact](slug://free_components_introduction), even in production, no license required.
+KendoReact is an enterprise-grade UI library with 120+ free and premium components. You can use the [50+ free components and features of KendoReact](slug://getting_started_free_vs_premium), even in production, no license required.
 
 **Important**: To work with any premium KendoReact components and features, you must install a license key file in your project. This requirement applies to:
 
@@ -32,6 +32,7 @@ If you’re in a hurry, skip the rest of the article and run this command sequen
 npm install --save @progress/kendo-licensing
 npx kendo-ui-license refresh && npx kendo-ui-license activate
 ```
+
 ```sh YARN
 yarn add @progress/kendo-licensing
 yarn run kendo-ui-license refresh && yarn run kendo-ui-license activate
@@ -68,6 +69,7 @@ When you start a new trial, purchase a new KendoReact license, or renew an exist
     ```sh NPM
     npm i @progress/kendo-licensing
     ```
+
     ```sh YARN
     yarn add @progress/kendo-licensing
     ```
@@ -77,6 +79,7 @@ When you start a new trial, purchase a new KendoReact license, or renew an exist
     ```sh NPM
     npx kendo-ui-license activate
     ```
+
     ```sh YARN
     yarn run kendo-ui-license activate
     ```
@@ -121,4 +124,4 @@ If the invalid license attributes are still displayed after you have installed o
 -   [Per-Project License Key Setup](slug:license_per_project_setup)
 -   [License Activation Errors and Warnings](slug:license_activation_errors)
 -   [Frequently Asked Questions](slug:faq_license)
--   [Get Started with KendoReact Free](slug://free_components_introduction)
+-   [Get Started with KendoReact Free](slug://getting_started_free_vs_premium)

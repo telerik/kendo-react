@@ -164,7 +164,7 @@ import { Grid } from '@progress/kendo-react-grid';
 ## Suggested Links
 
 -   [React Data Grid](slug://overview_grid)
--   [Getting started with KendoReact Next.js](slug:nextjs_installation)
+-   [Getting Started with KendoReact](slug:getting_started)
 -   [Data Operations in the RSC Mode of the Grid](slug:data_operations_rsc_grid)
 -   [API Reference of the Grid]({% slug api_grid %})
 -   [Virtual Classroom (Introductory Course Available to Trial and Commercial License Holders)](https://learn.telerik.com/learn/course/external/view/elearning/14/kendoreact)

@@ -1,107 +1,50 @@
 ---
-title: 50+ Free React Components
-page_title: Free React UI Library - KendoReact
-meta_title: Free React UI Library - KendoReact
-description: Install a free React UI library from KendoReact and get access to a collection of components that can streamline app development.
-components: ['general']
-slug: free_components_introduction
-position: 0
-hideCta: true
+title: Free vs. Premium
+description: 'Compare KendoReact Free and premium tiers — see which components and features are included in each plan, and learn how to upgrade from free to a commercial license.'
+slug: getting_started_free_vs_premium
+position: 40
+category: getting-started
+tier: mixed
+tag: new
 ---
 
-# Get Started with KendoReact Free
+# KendoReact Free vs. Premium
 
-Welcome to KendoReact Free, a rich library of free customizable UI components developed to enhance your React projects. To install all KendoReact Free components, run:
+KendoReact is available in two tiers: **KendoReact Free** and the full **KendoReact** commercial library.
 
-```sh
-npm i @progress/kendo-react-animation @progress/kendo-react-buttons @progress/kendo-react-grid @progress/kendo-react-data-tools @progress/kendo-react-dateinputs @progress/kendo-react-dialogs @progress/kendo-react-dropdowns @progress/kendo-react-indicators @progress/kendo-react-inputs @progress/kendo-react-labels @progress/kendo-react-layout @progress/kendo-react-listbox @progress/kendo-react-notification @progress/kendo-react-popup @progress/kendo-react-progressbars @progress/kendo-react-tooltip @progress/kendo-theme-default
-```
+-   **KendoReact Free** provides 50+ production-ready components with no license key required.
+-   **KendoReact Trial** gives you temporary access to all premium features for evaluation.
+-   **KendoReact (commercial)** unlocks 120+ components, advanced capabilities, and professional support for production use.
 
-Note that some packages contain both free and premium components and features. [Reference this table to see all free KendoReact components.](#free-vs-premium-react-components)
+> Not sure which components are free?
+> Premium components and premium-only features are marked with a diamond icon in the docs. If there is no diamond marker, that functionality is free to use in production.
 
-## What is KendoReact Free?
+## Comparing the Plans
 
-<!-- POSSIBLE PLACEHOLDER FOR INTRO VIDEO-->
+The table below summarizes what is available at each level.
 
-KendoReact Free is a free version of KendoReact that includes over 50 customizable, enterprise-grade components.
+|                                  | KendoReact Free    | KendoReact Trial                                                                                                                                                                                                | KendoReact                                                                                                                                                                                               |
+| -------------------------------- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| React components                 | 50+                | 120+                                                                                                                                                                                                            | 120+                                                                                                                                                                                                     |
+| Four professional themes         | Yes                | Yes                                                                                                                                                                                                             | Yes                                                                                                                                                                                                      |
+| Four Figma UI Kits               | Yes                | Yes                                                                                                                                                                                                             | Yes                                                                                                                                                                                                      |
+| Page Templates & Building Blocks | 1 template         | <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" stroke="white" stroke-width="2"/></svg>        | <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" stroke="white" stroke-width="2"/></svg> |
+| ThemeBuilder                     | Free\*             | Ultimate                                                                                                                                                                                                        | Ultimate                                                                                                                                                                                                 |
+| Visual Studio Code extension     | 1 starter template | Full functionality                                                                                                                                                                                              | Full functionality                                                                                                                                                                                       |
+| Legendary customer support       | No                 | Yes (during trial)                                                                                                                                                                                              | Yes                                                                                                                                                                                                      |
+| Agentic UI Generator             | No                 | <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" stroke="white" stroke-width="2"/></svg>(trial) | <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" stroke="white" stroke-width="2"/></svg> |
 
-All components included in KendoReact Free are part of KendoReact (premium) and, [with a few exceptions](#react-ui-components-with-both-free-and-premium-functionality), each component's full functionality is free.
+\* Requires a free Telerik account.
 
-To explore the premium components and features, [start a trial](https://www.telerik.com/try/kendo-react-ui) or [buy a license](https://www.telerik.com/kendo-react-ui/pricing#subscription).
+## Free and Premium Components
 
-> tip **Wondering which components are free?**
->
-> Explore the documentation. Premium components and features are clearly marked with a diamond icon. Components and features without the premium marker are free to use, even in production, with no sign-up or license required.
+The table below maps each package to its free and premium-only components. Components marked with \*\* provide a blend of free and premium features — see the [Components with Mixed Tiers](#components-with-mixed-tiers) section for a feature-by-feature breakdown.
 
-## Installation
-
-All KendoReact components (free and premium) are available on [npm](https://www.npmjs.com/search?q=keywords:KendoReact).
-
-You can install any component with `npm install`. For example, here's the [Buttons package](https://www.npmjs.com/package/@progress/kendo-react-buttons).
-
-```sh
-npm i @progress/kendo-react-buttons
-```
-
-After that, simply `import` the component in your React app and start using it.
-
-```tsx
-import { Button } from '@progress/kendo-react-buttons';
-...
-<Button>
-    Button Label
-</Button>
-```
-
-Visit the general [First Steps with KendoReact page](slug://getting_started) or use the **Getting Started** page in the sidebar navigation for the component you're interested in (for example, the [Grid Getting Started article](slug:getstarted_grid)).
-
-> All KendoReact packages use the [KendoReact keyword](https://www.npmjs.com/search?q=keywords:KendoReact) and are published and maintained by [Progress](https://www.npmjs.com/~progress).
-
-The [Kendo UI Productivity Tools](slug://overview_vscode_installation) extension for Visual Studio Code is also freely available to all KendoReact developers, no license required. You can use it to kick off your KendoReact project with the built-in [template wizard](slug://vscodewizard_installation) or to speed up development with the [scaffolding](slug://scaffolders_vscode_installation) and [code snippets](slug://snippets_vscode_installation). Note that the templates, code snippets, and scaffolding that provide premium components and features, still require an active commercial or trial license to use.
-
-## Support
-
-For any questions about KendoReact Free, or any other KendoReact components, these are [the available support options](https://www.telerik.com/kendo-react-ui/support):
-
--   The [KendoReact forums](https://www.telerik.com/forums/kendo-ui-react) provide free support from the community.
--   The [KendoReact Feedback Portal](https://feedback.telerik.com/kendo-react-ui) and [KendoReact Roadmap](https://www.telerik.com/support/whats-new/kendo-react-ui/roadmap/) provide information on the features in discussion and also those planned for release.
--   KendoReact uses [GitHub Issues](https://github.com/telerik/kendo-react) as its bug tracker, and you can submit any related reports there. Also, check out the [closed list](https://github.com/telerik/kendo-react/issues?q=is%3Aissue+is%3Aclosed).
--   Outstanding [customer support](https://www.telerik.com/account/support-tickets), provided by the developers who build the library, available either with a [30-day free trial](https://www.telerik.com/try/kendo-react-ui) or an active [commercial license](https://www.telerik.com/kendo-react-ui/pricing#subscription).
-
-## Differences Between KendoReact Free and Premium
-
-KendoReact is an enterprise-grade UI library with 120+ free and premium components offering unmatched value for building business applications.
-
-KendoReact Free is a free React UI library. A subset of KendoReact, it includes 50+ free components and features sufficient to implement a functional production app. Some components provide a well-balanced blend of free and premium functionality.
-
-<!-- POSSIBLE PLACEHOLDER FOR INTRO VIDEO-->
-
-### Three Options: KendoReact Free, Free Trial, Complete Library
-
-The following table outlines the key resources available with KendoReact and KendoReact Free.
-
-|                                  | KendoReact Free                                                                                                                                                                                          | KendoReact Trial                                                                                                                                                                                                 | KendoReact                                                                                                                                                                                               |
-| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| React components                 | 50+                                                                                                                                                                                                      | 120+                                                                                                                                                                                                             | 120+                                                                                                                                                                                                     |
-| Four professional themes         | <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" stroke="white" stroke-width="2"/></svg> | <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" stroke="white" stroke-width="2"/></svg>         | <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" stroke="white" stroke-width="2"/></svg> |
-| Four Figma UI Kits               | <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" stroke="white" stroke-width="2"/></svg> | <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" stroke="white" stroke-width="2"/></svg>         | <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" stroke="white" stroke-width="2"/></svg> |
-| Page Templates & Building Blocks | 1 template                                                                                                                                                                                               | <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" stroke="white" stroke-width="2"/></svg>         | <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" stroke="white" stroke-width="2"/></svg> |
-| ThemeBuilder                     | Free\*                                                                                                                                                                                                   | Ultimate                                                                                                                                                                                                         | Ultimate                                                                                                                                                                                                 |
-| Visual Studio Code extension     | 1 starter template                                                                                                                                                                                       | Full functionality                                                                                                                                                                                               | Full functionality                                                                                                                                                                                       |
-| Legendary customer support       | No                                                                                                                                                                                                       | <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" stroke="white" stroke-width="2"/></svg> (trial) | <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" stroke="white" stroke-width="2"/></svg> |
-| AI coding assistant              | No                                                                                                                                                                                                       | <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" stroke="white" stroke-width="2"/></svg>(trial)  | <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" stroke="white" stroke-width="2"/></svg> |
-
-\* This service requires a free Telerik account.
-
-### Free vs Premium React Components
-
-The following table indicates the free components included in KendoReact Free (left column), and those that are part of the premium offering (right column).
-
-| Installation                                                              | Package                                                                      | KendoReact Free                                                                                                                                                                                                           | Premium-Only                                                                                                                                                                                                 |
+| Package                                                                   | npm                                                                          | KendoReact Free                                                                                                                                                                                                           | Premium-Only                                                                                                                                                                                                 |
 | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [Animation](slug://overview_animation)                                    | [npm](https://www.npmjs.com/package/@progress/kendo-react-animation)         | <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" stroke="white" stroke-width="2"/></svg>                  |                                                                                                                                                                                                              |
 | [Barcodes](slug://overview_barcodes)                                      | [npm](https://www.npmjs.com/package/@progress/kendo-react-barcodes)          | No                                                                                                                                                                                                                        | Barcode, QR Code                                                                                                                                                                                             |
-| [Buttons](slug://overview_buttons)                                        | [npm](https://www.npmjs.com/package/@progress/kendo-react-buttons)           | Button<br/>ButtonGroup<br/>Chip<br/>ChipList<br/>FloatingActionButton<br/>SegmentedControl<br/>Toolbar                                                                                                    | DropDownButton<br/>SmartPasteButton<br/>SpeechToTextButton<br/>SplitButton                                                                                                                                   |
+| [Buttons](slug://overview_buttons)                                        | [npm](https://www.npmjs.com/package/@progress/kendo-react-buttons)           | Button<br/>ButtonGroup<br/>Chip<br/>ChipList<br/>FloatingActionButton<br/>SegmentedControl<br/>Toolbar                                                                                                                    | DropDownButton<br/>SmartPasteButton<br/>SpeechToTextButton<br/>SplitButton                                                                                                                                   |
 | [Chart Wizard](slug://overview_chart-wizard)                              | [npm](https://www.npmjs.com/package/@progress/kendo-react-chart-wizard)      | No                                                                                                                                                                                                                        | <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" stroke="white" stroke-width="2"/></svg>     |
 | [Charts](slug://overview_charts)                                          | [npm](https://www.npmjs.com/package/@progress/kendo-react-charts)            | No                                                                                                                                                                                                                        | Chart<br/>Sparkline<br/>StockChart<br/>Sankey                                                                                                                                                                |
 | [Common Utilities](slug://overview_common)                                | [npm](https://www.npmjs.com/package/@progress/kendo-react-common)            | Icon<br/>SvgIcon<br/>Typography<br/>Keyboard Navigation                                                                                                                                                                   | Drag&Drop                                                                                                                                                                                                    |
@@ -148,81 +91,68 @@ The following table indicates the free components included in KendoReact Free (l
 
 \*\* This component provides a blend of free and premium features.
 
-### React UI Components with Both Free and Premium Functionality
+## Which Tier Should You Choose?
 
-The following components provide have free and premium features. For a complete breakdown of the available features, check out the respective section in the current article or inspect the documentation in the navigation sidebar.
+-   Choose **KendoReact Free** if you need core components, standard business application workflows, and no licensing overhead.
+-   Choose **KendoReact Trial** if you want to validate premium-only capabilities in a real project before purchasing.
+-   Choose **KendoReact (commercial)** if your product needs advanced data, scheduling, exporting, AI tooling, and enterprise support in production.
 
-#### React Data Grid
+## Components with Mixed Tiers
 
-The free feature set of the KendoReact Data Grid is yours to use in production, no license required. To benefit from premium data grid features, such as React server components (RSC) mode, custom cell rendering, advanced filtering, data export, and others, you need a commercial license or an active trial license.
+Several components ship in both free and premium variants within the same package. The sections below detail exactly which capabilities are free and which require a license.
 
-The following table lists the free and premium-only features of the KendoReact Data Grid. With a valid commercial license or an active trial license, you gain access to all KendoReact Free features plus all premium features.
+### Data Grid
 
-| Area                              | KendoReact Free                                                                                | Premium-Only                                                                                                                                            |
-| --------------------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Columns                           | Resizing of columns<br/>Reordering of columns<br/>Auto-resizing of columns<br/>Spanned columns | Locked columns<br/>Hidden columns<br/>Multi-column headers<br/>Column menu                                                                              |
-| Rows                              | Spanned rows<br/>Reordering of rows                                                            | Locked rows<br/>Detail rows                                                                                                                             |
-| Custom cell rendering             | No                                                                                             | Custom cells<br/>Custom group headers and footers<br/>Custom filter cells                                                                               |
-| Editing                           | In-cell editing<br/>In-cell editing of all cells                                               | Inline editing (row editing)<br/>Inline editing with custom editors<br/>Inline editing with external form                                               |
-| Selection                         | Single row selection<br/>Cell selection<br/>Checkbox selection                                 | Multiple row selection<br/>Selection aggregates<br/>Multi-range selection                                                                               |
-| Filtering                         | Global filter (quick filter)<br/>Row filtering (header filtering)                              | Column menu fitlering<br/>External filter<br/>Custom filter operations<br/>Multi-column filtering                                                       |
-| Sorting                           | Single column sorting                                                                          | Multi-column sorting                                                                                                                                    |
-| Paging                            | No                                                                                             | Custom Pager                                                                                                                                            |
-| Virtualization                    | Numeric pager with drop-down<br/>Column virtualization                                         | Row virtualization                                                                                                                                      |
-| Styling                           | Basic theming<br/>Adaptive mode<br/>Custom row and cell styling                                | Stacked layout (card-based layout for mobile/responsive)<br/>Custom column templates                                                                    |
-| Exporting                         | CVS export                                                                                     | PDF export<br/>Excel export                                                                                                                             |
-| Loading                           | Loading indicator                                                                              |                                                                                                                                                         |
-| Grouping                          | No                                                                                             | Persisting group state<br/>Aggregates for grouped data<br/>Locked group<br/>Column groups the same as multi-column headers<br/>Row groups               |
-| Master-detail grid                | No                                                                                             | Master-detail grid                                                                                                                                      |
-| Other                             | Print<br/>Accessibility<br/>Keyboard navigation<br/>Localization and globalization             | Clipboard copy<br/>Clipboard paste<br/>Chart integration<br/>Context menu<br/>OData support<br/>DataSource<br/>Toolbar Tools                            |
-| Server and hybrid data operations | No                                                                                             | Support for server templates<br/>Server actions<br/>Server-side rendering<br/>Server-side filtering<br/>Server-side selection<br/>Server-side filtering |
+The free Data Grid is production-ready and covers the most common data display scenarios. Premium features go further with advanced editing, grouping, server integration, and export options.
 
-#### React DropDownList
+| Area                              | KendoReact Free                                                                    | Premium-Only                                                                                                                        |
+| --------------------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Columns                           | Resizing<br/>Reordering<br/>Auto-resizing<br/>Spanned columns                      | Locked columns<br/>Hidden columns<br/>Multi-column headers<br/>Column menu                                                          |
+| Rows                              | Spanned rows<br/>Reordering of rows                                                | Locked rows<br/>Detail rows                                                                                                         |
+| Custom cell rendering             | No                                                                                 | Custom cells<br/>Custom group headers and footers<br/>Custom filter cells                                                           |
+| Editing                           | In-cell editing<br/>In-cell editing of all cells                                   | Inline editing (row editing)<br/>Inline editing with custom editors<br/>Inline editing with external form                           |
+| Selection                         | Single row selection<br/>Cell selection<br/>Checkbox selection                     | Multiple row selection<br/>Selection aggregates<br/>Multi-range selection                                                           |
+| Filtering                         | Global filter (quick filter)<br/>Row filtering (header filtering)                  | Column menu filtering<br/>External filter<br/>Custom filter operations<br/>Multi-column filtering                                   |
+| Sorting                           | Single column sorting                                                              | Multi-column sorting                                                                                                                |
+| Paging                            | Numeric pager with drop-down                                                       | Custom Pager                                                                                                                        |
+| Virtualization                    | Column virtualization                                                              | Row virtualization                                                                                                                  |
+| Styling                           | Basic theming<br/>Adaptive mode<br/>Custom row and cell styling                    | Stacked layout (card-based layout for mobile/responsive)<br/>Custom column templates                                                |
+| Exporting                         | CSV export                                                                         | PDF export<br/>Excel export                                                                                                         |
+| Loading                           | Loading indicator                                                                  |                                                                                                                                     |
+| Grouping                          | No                                                                                 | Persisting group state<br/>Aggregates for grouped data<br/>Locked group<br/>Multi-column headers as column groups<br/>Row groups    |
+| Master-detail grid                | No                                                                                 | Master-detail grid                                                                                                                  |
+| Other                             | Print<br/>Accessibility<br/>Keyboard navigation<br/>Localization and globalization | Clipboard copy/paste<br/>Chart integration<br/>Context menu<br/>OData support<br/>DataSource<br/>Toolbar tools                      |
+| Server and hybrid data operations | No                                                                                 | Server actions<br/>Server-side rendering<br/>Server-side filtering<br/>Server-side selection<br/>React Server Components (RSC) mode |
 
-The free feature set of the KendoReact DropDownList is yours to use in production as a part of the free React UI library from KendoReact, no license required. To benefit from the premium filtering and virtualization, you need a commercial license or an active trial license.
+### DropDownList
 
-#### React MultiSelect
+The free DropDownList covers basic selection scenarios with no license required. Premium adds filtering and virtualization for large data sets.
 
-The free feature set of the KendoReact MultiSelect is yours to use in production, no license required. To benefit from the premium filtering, you need a commercial license or an active trial license.
+| KendoReact Free Includes                               | Premium Adds                              |
+| ------------------------------------------------------ | ----------------------------------------- |
+| Core single-value selection and data binding scenarios | Data filtering in the popup list          |
+| Keyboard navigation and accessibility support          | Virtualization for large data collections |
 
-## Upgrading from KendoReact Free to KendoReact
+### MultiSelect
 
-To unlock the premium features and components of KendoReact, you need an active license. You can activate a [30-day free trial](https://www.telerik.com/try/kendo-react-ui) to try all 120+ UI components and benefit from the outstanding customer support. Or you can [purchase a subscription](https://www.telerik.com/kendo-react-ui/pricing) and unlock multiple additional benefits such as source code access, year-long support, and access to Page Templates, Building Blocks and the ThemeBuilder Ultimate. (Note that the last three items are only included in the subscription and **not** in the perpetual license.)
+The free MultiSelect supports core multi-value selection. Premium adds filtering support for large data sets.
 
-## Resources
+| KendoReact Free Includes                            | Premium Adds                         |
+| --------------------------------------------------- | ------------------------------------ |
+| Core multiple-value selection and tagging scenarios | Data filtering for long option lists |
 
--   React tips and tricks from the [Telerik Blogs](https://www.telerik.com/blogs/web-react).
--   [React knowledge base](https://www.telerik.com/kendo-react-ui/components/knowledge-base) with real-life how-tos and troubleshooting articles.
--   Industry-leading [design and front-end documentation](https://www.telerik.com/design-system/docs/) with best practices and helpful resources for best-in-class implementation.
--   [KendoReact roadmap](https://www.telerik.com/support/whats-new/kendo-react-ui/roadmap) that captures the future plans and commitments of the enterprise-grade library.
--   [KendoReact issue tracker](https://github.com/telerik/kendo-react) and [feedback portal](https://feedback.telerik.com/kendo-react-ui).
--   [Explore the Free Project Tracker Sample Application](slug:project-tracker-with-free-components)
-<!-- NOT READY
--   Announcement blog post
--   Intro video-->
+For API-level details, check the component documentation and the diamond icon markers that identify premium-only features.
 
-## FAQs
+## Upgrading to KendoReact
 
-### Can I Use KendoReact Free in Production?
+When you are ready to move beyond the free tier, you have two paths:
 
-KendoReact Free components are free to use in prototyping, development, testing, and production according to the terms and conditions of the [KendoReact EULA](https://www.telerik.com/purchase/license-agreement/progress-kendoreact). No sign-up or license is required.
+-   **Start a free trial** — Activate a [30-day trial](https://www.telerik.com/try/kendo-react-ui) to access all 120+ components and receive priority support from the team that builds the library. No credit card required.
+-   **Purchase a subscription** — A [commercial subscription](https://www.telerik.com/kendo-react-ui/pricing) adds source code access, year-long support, Page Templates, Building Blocks, and ThemeBuilder Ultimate. (Note: Page Templates, Building Blocks, and ThemeBuilder Ultimate are subscription-only benefits and are not included in a perpetual license.)
 
-Some KendoReact Free components may provide premium features which require an active commercial or trial license. Premium features and components are clearly indicated throughout the documentation.
+## Suggested Links
 
-### Can I Sell a Product Built with KendoReact Free?
-
-Applications built with KendoReact Free components don't require a commercial license to ship to your end users. However, if you have decided to add premium components or functionality to your app, you will need to obtain a commercial license or an active trial license.
-
-### How Can I Access Technical Support?
-
-Developers working exclusively with KendoReact Free components can benefit from the [free support resources](#support) available to the community and the public. If you need more specialized assistance, including from the developers who build the library, you can start a [30-day free trial](https://www.telerik.com/try/kendo-react-ui) or [purchase a license](https://www.telerik.com/kendo-react-ui/pricing).
-
-### Are the KendoReact Free Components Getting Regular Updates and Bug Fixes?
-
-KendoReact Free is part of the enterprise-grade KendoReact UI library, and not a separate library. All KendoReact components, including the free ones, are developed and maintained with the same attention to detail by the KendoReact development team. The entire library receives bug fixes, feature improvements, and new components and functionality on a regular basis.
-
-### Can I Access the Code?
-
-KendoReact Free and KendoReact are not open source. Developers working exclusively with KendoReact Free cannot access the source code.
-
-Developers with an active commercial license are eligible to receive access to the source code. Check out [what's included when you purchase a license](https://www.telerik.com/kendo-react-ui/pricing).
+-   [KendoReact Free Overview](slug:getting_started_free_vs_premium)
+-   [Licensing and Activation](slug:my_license)
+-   [KendoReact Key Features](slug:components_key_features)
+-   [KendoReact FAQ](slug://faq_kendoreact)

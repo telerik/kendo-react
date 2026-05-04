@@ -1,7 +1,7 @@
 ---
 title: Controlled Mode
 description: 'Control the value of the KendoReact TextArea in React projects.'
-components: ["textarea"]
+components: ['textarea']
 slug: controlled_textarea
 position: 1
 ---
@@ -27,7 +27,7 @@ To manage the value of the TextArea:
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the TextArea]({% slug api_inputs_textarea %})
 -   [API Reference of the TextAreaProps]({% slug api_inputs_textareaprops %})

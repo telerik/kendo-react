@@ -1,7 +1,7 @@
 ---
 title: Animations
 description: 'Enable or disable the opening or closing animations of the KendoReact Popup in React projects.'
-components: ["popup"]
+components: ['popup']
 slug: animations_popup
 position: 4
 ---
@@ -20,6 +20,6 @@ To control the animation behavior, use the [`animate`]({% slug api_popup_popuppr
 
 ## Suggested Links
 
--   [Learn about KendoReact Free.](slug:free_components_introduction)
+-   [Learn about KendoReact Free.](slug:getting_started_free_vs_premium)
 
 -   [API Reference of the Popup]({% slug api_popup %})

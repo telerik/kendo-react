@@ -1,5 +1,5 @@
 ---
-title: First Steps with KendoReact
+title: Quick Start
 page_title: Getting Started With React Component Library - KendoReact
 description: "Learn how to use KendoReact components and see how to take your React application's UI to the next level."
 slug: getting_started
@@ -46,14 +46,20 @@ The [Kendo CLI](https://www.npmjs.com/package/@progress/kendo-cli) generates rea
 1.  Generate a new project by running the [preferred command](slug:kendo_cli_options#generate-a-kendoreact-project) in the terminal:
 
     ```sh Vite
-    npx kendo react create vite MyKendoApp
+    npx kendo react create vite MyKendoApp --free
     ```
     ```sh Next.js
-    npx kendo react create nextjs MyKendoApp
+    npx kendo react create nextjs MyKendoApp --free
     ```
     ```sh Astro
-    npx kendo react create astro MyKendoApp
+    npx kendo react create astro MyKendoApp --free
     ```
+
+    <p style="font-size: 18px; font-style: italic; color: #666; margin-top: 12px; line-height: 1.5;">
+    <em>
+    *  Use the <code>--free</code> or <code>--premium</code> flag to choose between KendoReact <strong>Free</strong> and  <strong>Premium</strong> project templates and component tier.
+    </em> <br/>
+    </p>
 
 1.  Navigate to the project and start the dev server:
 

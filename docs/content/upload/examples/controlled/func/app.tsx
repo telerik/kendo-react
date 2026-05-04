@@ -33,7 +33,12 @@ const App = () => {
 
         if (valid.length) {
             setFiles((prev) => [...prev, ...valid]);
-            event.target.uploadFiles({ default: valid });
+
+            const grouped: Record<string, UploadFileInfo[]> = {};
+            valid.forEach((f) => {
+                grouped[f.uid] = [f];
+            });
+            event.target.uploadFiles(grouped);
         }
     };
 

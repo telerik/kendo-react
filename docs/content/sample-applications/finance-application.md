@@ -1,7 +1,7 @@
 ---
 title: Finance Portfolio
 description: "Create a sample KendoReact Finance Portfolio application, fully meeting the financial sector requirements, flawlessly integrating some of the most powerful KendoReact components, such as the Chart, Grid, and DatePicker, taking advantage of React's fast rendering, and showing dynamic data updates in real time."
-components: ["general"]
+components: ['general']
 slug: finance_sampleapp
 position: 10
 category: sample-applications
@@ -47,9 +47,10 @@ You can see the following ten KendoReact components implemented in this sample a
 -   [KendoReact Buttons]({% slug overview_buttons %})
 
 ## Suggested Links
+
 -   [Get Started with KendoReact Free](https://www.telerik.com/kendo-react-ui/components/free)
 
--   [Get Started with KendoReact Free](slug://free_components_introduction)
+-   [Get Started with KendoReact Free](slug://getting_started_free_vs_premium)
 -   [Getting Started with KendoReact](https://www.telerik.com/kendo-react-ui/components/getting-started/)
 -   [Getting Started with Progressive Web Apps](https://codelabs.developers.google.com/codelabs/your-first-pwapp/#0)
 -   [KendoReact Dashboard sample application](https://telerik.github.io/kendo-react-material-dashboard/)

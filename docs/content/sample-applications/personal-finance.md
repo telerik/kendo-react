@@ -2,7 +2,7 @@
 title: Personal Finance
 page_title: React Personal Portfolio - KendoReact - Vite
 description: 'Create a KendoReact Personal Portfolio sample application, seamlessly integrating some of the most powerful KendoReact components in a React application bundled with Vite.'
-components: ["general"]
+components: ['general']
 slug: personalfinance_sampleapp
 position: 2
 category: sample-applications
@@ -45,7 +45,7 @@ To enable a smooth and trouble-free collaboration between designers and develope
 
 ## Suggested Links
 
--   [Get Started with KendoReact Free](slug://free_components_introduction)
+-   [Get Started with KendoReact Free](slug://getting_started_free_vs_premium)
 -   [KendoReact Data Grid]({% slug overview_grid %})
 -   [KendoReact Charts]({% slug overview_chart_charts %})
 -   [KendoReact Gauges]({% slug overview_gauges %})
