@@ -498,10 +498,9 @@ body {
 .app-layout {
   display: flex;
   flex-direction: column;
-  padding: var(--page-padding-block) var(--page-padding-inline);
+  padding-block: var(--page-padding-block);
   position: relative;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
 }
 
 .app-layout::before {
@@ -527,22 +526,53 @@ body {
 }
 
 .app-layout > * {
+  position: relative;
   z-index: 1;
 }
 
 .app-header {
   flex-shrink: 0;
+  position: sticky;
+  top: 0;
   z-index: 10;
-  padding-bottom: var(--page-gap);
+  padding: var(--page-padding-block) var(--page-padding-inline) var(--page-gap);
+  margin-block-start: calc(-1 * var(--page-padding-block));
+  background-color: var(--kendo-color-surface-alt);
+  overflow: hidden;
+}
+
+.app-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3233.52px;
+  height: 1015.11px;
+  background: conic-gradient(
+    from 269.87deg at 47.29% 49.93%,
+    #e5bdcf 0deg,
+    #d2c2e0 166.15deg,
+    #c5c0e8 226.73deg,
+    #a8aae5 308.08deg,
+    #b7bff0 351.35deg,
+    #e5bdcf 360deg
+  );
+  filter: blur(150px);
+  transform: rotate(-15.79deg);
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.app-header > * {
+  position: relative;
+  z-index: 1;
 }
 
 .app-content {
-  flex: 1;
-  overflow-y: auto;
-  min-height: 0;
-  z-index: 1;
   display: flex;
   flex-direction: column;
+  padding-inline: var(--page-padding-inline);
 }
 
 .page-heading {
