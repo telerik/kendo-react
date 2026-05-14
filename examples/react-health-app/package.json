@@ -41,7 +41,7 @@
     "@progress/kendo-theme-bootstrap": "^13.1.0",
     "@types/hammerjs": "^2.0.46",
     "hammerjs": "^2.0.8",
-    "marked": "^18.0.0",
+    "marked": "^18.0.2",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-markdown": "^10.1.0",
