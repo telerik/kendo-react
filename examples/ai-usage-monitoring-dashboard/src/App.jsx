@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { Button } from '@progress/kendo-react-buttons';
 import { Card, CardBody, CardHeader } from '@progress/kendo-react-layout';
 import { Switch, Input } from '@progress/kendo-react-inputs';
@@ -42,8 +42,20 @@ const modelShare = [
   { model: 'Llama 3', value: 12 },
 ];
 
-function formatCurrency(value) {
-  return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value);
+// Single reusable formatter instance — avoids recreating on every call
+const currencyFormatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
+const formatCurrency = (value) => currencyFormatter.format(value);
+
+// Shared download helper — avoids duplicated blob/link logic in both export functions
+function downloadBlob(blob, filename) {
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  URL.revokeObjectURL(url);
 }
 
 function App() {
@@ -61,84 +73,65 @@ function App() {
   }, [theme]);
 
   const filteredRows = useMemo(() => {
+    const lowerSearch = searchTerm.toLowerCase();
     return rows.filter((item) => {
-      const target = item.date;
-      const dateValue = new Date(target);
+      const dateValue = new Date(item.date);
       const withinRange = dateValue >= startDate && dateValue <= endDate;
       const matchesModel = !selectedModel || item.model === selectedModel;
       const matchesTeam = !selectedTeam || item.team === selectedTeam;
       const matchesProject = !selectedProject || item.project === selectedProject;
-      const matchesSearch = searchTerm === '' || [item.model, item.team, item.project].some((value) => value.toLowerCase().includes(searchTerm.toLowerCase()));
+      const matchesSearch = !lowerSearch || [item.model, item.team, item.project].some((v) => v.toLowerCase().includes(lowerSearch));
       return withinRange && matchesModel && matchesTeam && matchesProject && matchesSearch;
     });
   }, [selectedModel, selectedTeam, selectedProject, startDate, endDate, searchTerm]);
 
   const sortedRows = useMemo(() => {
-    let sorted = [...filteredRows];
-
-    if (sort && sort.length > 0) {
-      const { field, dir } = sort[0];
-      sorted.sort((a, b) => {
-        const aVal = a[field];
-        const bVal = b[field];
-
-        if (aVal === bVal) return 0;
-        if (aVal == null) return dir === 'asc' ? 1 : -1;
-        if (bVal == null) return dir === 'asc' ? -1 : 1;
-
-        if (typeof aVal === 'string') {
-          const cmp = aVal.localeCompare(bVal);
-          return dir === 'asc' ? cmp : -cmp;
-        }
-
-        if (typeof aVal === 'number') {
-          return dir === 'asc' ? aVal - bVal : bVal - aVal;
-        }
-
-        return 0;
-      });
-    }
-
-    return sorted;
+    if (!sort.length) return filteredRows;
+    const { field, dir } = sort[0];
+    return [...filteredRows].sort((a, b) => {
+      const aVal = a[field];
+      const bVal = b[field];
+      if (aVal === bVal) return 0;
+      if (aVal == null) return dir === 'asc' ? 1 : -1;
+      if (bVal == null) return dir === 'asc' ? -1 : 1;
+      if (typeof aVal === 'string') {
+        const cmp = aVal.localeCompare(bVal);
+        return dir === 'asc' ? cmp : -cmp;
+      }
+      return dir === 'asc' ? aVal - bVal : bVal - aVal;
+    });
   }, [filteredRows, sort]);
 
-  const totalCalls = sortedRows.reduce((sum, item) => sum + item.calls, 0);
-  const totalSpend = sortedRows.reduce((sum, item) => sum + item.spend, 0);
-  const avgLatency = sortedRows.length ? Math.round(sortedRows.reduce((sum, item) => sum + item.latency, 0) / sortedRows.length) : 0;
-  const activeTeams = new Set(sortedRows.map((item) => item.team)).size;
+  // Memoized so they only recompute when sortedRows changes, not on every render
+  const { totalCalls, totalSpend, avgLatency, activeTeams } = useMemo(() => {
+    const totalCalls = sortedRows.reduce((sum, item) => sum + item.calls, 0);
+    const totalSpend = sortedRows.reduce((sum, item) => sum + item.spend, 0);
+    const totalLatency = sortedRows.reduce((sum, item) => sum + item.latency, 0);
+    return {
+      totalCalls,
+      totalSpend,
+      avgLatency: sortedRows.length ? Math.round(totalLatency / sortedRows.length) : 0,
+      activeTeams: new Set(sortedRows.map((item) => item.team)).size,
+    };
+  }, [sortedRows]);
 
-  const chartStyle = theme === 'dark'
-    ? { background: 'transparent', color: '#e2d6f8' }
-    : {};
+  const isDark = theme === 'dark';
+  const chartStyle = isDark ? { background: 'transparent', color: '#e2d6f8' } : {};
+  const chartLabelColor = isDark ? '#c4b5fd' : '#3d3d3d';
+  const chartTitleColor = isDark ? '#e2d6f8' : '#3d3d3d';
 
-  const exportCsv = () => {
+  const exportCsv = useCallback(() => {
     const headers = ['Date', 'Team', 'Project', 'Model', 'Calls', 'Spend', 'Latency'];
     const rowsCsv = sortedRows.map((row) => [
-      row.date,
-      row.team,
-      row.project,
-      row.model,
-      row.calls,
-      row.spend.toFixed(2),
-      row.latency,
+      row.date, row.team, row.project, row.model, row.calls, row.spend.toFixed(2), row.latency,
     ]);
     const csvContent = [headers, ...rowsCsv]
       .map((row) => row.map((value) => `"${String(value).replace(/"/g, '""')}"`).join(','))
       .join('\r\n');
+    downloadBlob(new Blob([csvContent], { type: 'text/csv;charset=utf-8;' }), 'ai-usage-report.csv');
+  }, [sortedRows]);
 
-    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'ai-usage-report.csv';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
-  };
-
-  const exportFullReport = () => {
-    const reportDate = new Date().toLocaleString();
+  const exportFullReport = useCallback(() => {
     const filtersSummary = [];
     if (selectedModel) filtersSummary.push(`Model: ${selectedModel}`);
     if (selectedTeam) filtersSummary.push(`Team: ${selectedTeam}`);
@@ -148,7 +141,7 @@ function App() {
 
     const report = [
       'AI USAGE MONITORING REPORT',
-      `Generated: ${reportDate}`,
+      `Generated: ${new Date().toLocaleString()}`,
       `URL: ${window.location.href}`,
       '',
       '=== FILTERS APPLIED ===',
@@ -168,16 +161,11 @@ function App() {
       ),
     ].join('\r\n');
 
-    const blob = new Blob([report], { type: 'text/plain;charset=utf-8;' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `ai-usage-report-${new Date().toISOString().split('T')[0]}.txt`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
-  };
+    downloadBlob(
+      new Blob([report], { type: 'text/plain;charset=utf-8;' }),
+      `ai-usage-report-${new Date().toISOString().split('T')[0]}.txt`
+    );
+  }, [selectedModel, selectedTeam, selectedProject, searchTerm, startDate, endDate, totalCalls, totalSpend, avgLatency, activeTeams, sortedRows]);
 
   return (
     <div className={`app-shell ${theme}`}>
@@ -192,7 +180,7 @@ function App() {
           <label className="toggle-label">
             <span>Dark mode</span>
             <Switch
-              checked={theme === 'dark'}
+              checked={isDark}
               onChange={(event) => setTheme(event.value ? 'dark' : 'light')}
               aria-label="Toggle dark mode"
             />
@@ -206,7 +194,7 @@ function App() {
       <section className="filters" aria-label="Dashboard filters">
         <div className="filter-row">
           <DropDownList
-            data={[...models]}
+            data={models}
             textField=""
             dataItemKey=""
             value={selectedModel}
@@ -216,7 +204,7 @@ function App() {
             aria-label="Filter by model"
           />
           <DropDownList
-            data={[...teams]}
+            data={teams}
             value={selectedTeam}
             onChange={(e) => setSelectedTeam(e.target.value)}
             defaultItem=""
@@ -224,7 +212,7 @@ function App() {
             aria-label="Filter by team"
           />
           <DropDownList
-            data={[...projects]}
+            data={projects}
             value={selectedProject}
             onChange={(e) => setSelectedProject(e.target.value)}
             defaultItem=""
@@ -323,14 +311,14 @@ function App() {
             <h2>Usage trend</h2>
           </CardHeader>
           <CardBody>
-            <Chart style={chartStyle} chartArea={{ background: theme === 'dark' ? 'transparent' : '' }}>
-              <ChartTitle text="API calls by day" color={theme === 'dark' ? '#e2d6f8' : ''} />
-              <ChartLegend position="bottom" labels={{ color: theme === 'dark' ? '#e2d6f8' : '' }} />
+            <Chart style={chartStyle} chartArea={{ background: isDark ? 'transparent' : '' }}>
+              <ChartTitle text="API calls by day" color={chartTitleColor} />
+              <ChartLegend position="bottom" labels={{ color: chartTitleColor }} />
               <ChartCategoryAxis>
-                <ChartCategoryAxisItem categories={usageLabels} labels={{ color: theme === 'dark' ? '#c4b5fd' : '' }} />
+                <ChartCategoryAxisItem categories={usageLabels} labels={{ color: chartLabelColor }} />
               </ChartCategoryAxis>
               <ChartValueAxis>
-                <ChartValueAxisItem labels={{ color: theme === 'dark' ? '#c4b5fd' : '' }} />
+                <ChartValueAxisItem labels={{ color: chartLabelColor }} />
               </ChartValueAxis>
               <ChartSeries>
                 <ChartSeriesItem type="line" data={usageByTime} name="API calls" />
@@ -345,9 +333,9 @@ function App() {
             <h2>Spend share</h2>
           </CardHeader>
           <CardBody>
-            <Chart style={chartStyle} chartArea={{ background: theme === 'dark' ? 'transparent' : '' }}>
-              <ChartTitle text="Spend by model" color={theme === 'dark' ? '#e2d6f8' : ''} />
-              <ChartLegend position="bottom" labels={{ color: theme === 'dark' ? '#e2d6f8' : '' }} />
+            <Chart style={chartStyle} chartArea={{ background: isDark ? 'transparent' : '' }}>
+              <ChartTitle text="Spend by model" color={chartTitleColor} />
+              <ChartLegend position="bottom" labels={{ color: chartTitleColor }} />
               <ChartSeries>
                 <ChartSeriesItem type="donut" data={modelShare} field="value" categoryField="model" />
               </ChartSeries>
