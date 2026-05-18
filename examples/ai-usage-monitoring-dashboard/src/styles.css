@@ -435,7 +435,6 @@ html.dark .k-picker.k-picker-solid,
 html.dark .k-dropdownlist,
 html.dark .k-input.k-textbox,
 html.dark .k-textbox.k-input,
-html.dark .filter-row > .k-input,
 html.dark .k-floating-label-container .k-picker,
 html.dark .k-floating-label-container .k-input {
   background: rgba(31, 24, 56, 0.9) !important;
@@ -444,13 +443,24 @@ html.dark .k-floating-label-container .k-input {
   border-color: rgba(168, 85, 247, 0.3) !important;
 }
 
+html.dark .filter-row > .k-input {
+  background: rgba(31, 24, 56, 0.9) !important;
+  background-color: rgba(31, 24, 56, 0.9) !important;
+  color: #c4b5fd !important;
+  border-color: rgba(168, 85, 247, 0.3) !important;
+}
+
 html.dark .k-input-inner {
   background: transparent !important;
-  color: #f3e8ff !important;
+  color: #c4b5fd !important;
 }
 
 html.dark .k-input-inner::placeholder {
-  color: #a89cc4 !important;
+  color: #c4b5fd !important;
+}
+
+html.dark input.k-input::placeholder {
+  color: #c4b5fd !important;
 }
 
 /* Responsive Design */
