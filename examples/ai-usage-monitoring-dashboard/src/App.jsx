@@ -301,7 +301,7 @@ function App() {
           <GridColumn field="model" title="Model" width="140px" />
           <GridColumn field="calls" title="Calls" width="120px" />
           <GridColumn field="spend" title="Spend" width="120px" format="{0:c}" />
-          <GridColumn field="latency" title="Latency (ms)" width="140px" />
+          <GridColumn field="latency" title="Latency (ms)" />
         </Grid>
       </section>
 
