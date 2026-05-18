@@ -463,6 +463,134 @@ html.dark input.k-input::placeholder {
   color: #c4b5fd !important;
 }
 
+/* Dark mode Switch overrides */
+html.dark .k-switch-on .k-switch-track {
+  background-color: var(--accent) !important;
+  border-color: var(--accent) !important;
+}
+
+html.dark .k-switch-on:hover .k-switch-track,
+html.dark .k-switch-on:focus .k-switch-track {
+  background-color: var(--accent-hover) !important;
+  border-color: var(--accent-hover) !important;
+}
+
+html.dark .k-switch-off .k-switch-track {
+  background-color: rgba(31, 24, 56, 0.9) !important;
+  border-color: rgba(168, 85, 247, 0.3) !important;
+}
+
+html.dark .k-switch-thumb {
+  background-color: #f3e8ff !important;
+  border-color: transparent !important;
+}
+
+/* Dark mode DatePicker / Calendar popup overrides */
+
+/* Outermost popup + animation wrappers */
+html.dark .k-animation-container .k-calendar,
+html.dark .k-calendar,
+html.dark .k-calendar-container,
+html.dark .k-datetime-container {
+  background-color: rgba(18, 13, 36, 0.98) !important;
+  color: #f3e8ff !important;
+  border-color: rgba(168, 85, 247, 0.3) !important;
+}
+
+/* Every direct and nested child gets the dark background so no white
+   bleeds through any unknown intermediate wrappers (k-hstack, k-vstack, etc.) */
+html.dark .k-calendar *:not(.k-link):not(span) {
+  background-color: rgba(18, 13, 36, 0.98) !important;
+}
+
+/* Navigation sidebar (month list) */
+html.dark .k-calendar-navigation,
+html.dark .k-calendar-navigation .k-content,
+html.dark .k-calendar-navigation ul,
+html.dark .k-calendar-navigation li {
+  background-color: rgba(18, 13, 36, 0.98) !important;
+  color: #c4b5fd !important;
+  border-color: rgba(168, 85, 247, 0.2) !important;
+}
+
+html.dark .k-calendar-navigation li:hover,
+html.dark .k-calendar-navigation .k-item:hover {
+  background-color: rgba(124, 58, 237, 0.25) !important;
+  color: #f3e8ff !important;
+}
+
+html.dark .k-calendar-navigation .k-selected,
+html.dark .k-calendar-navigation li.k-selected {
+  color: var(--accent) !important;
+  font-weight: 700;
+}
+
+/* Day-of-week header cells */
+html.dark .k-calendar .k-calendar-th,
+html.dark .k-calendar th {
+  color: #c4b5fd !important;
+}
+
+/* Regular date cells */
+html.dark .k-calendar .k-calendar-td .k-link,
+html.dark .k-calendar td .k-link {
+  color: #e9d5ff !important;
+  background-color: transparent !important;
+}
+
+html.dark .k-calendar .k-calendar-td:hover .k-link,
+html.dark .k-calendar td:hover .k-link {
+  background-color: rgba(124, 58, 237, 0.25) !important;
+  color: #f3e8ff !important;
+}
+
+/* Selected date */
+html.dark .k-calendar .k-selected .k-link,
+html.dark .k-calendar .k-state-selected .k-link,
+html.dark .k-calendar td.k-selected .k-link {
+  background-color: var(--accent) !important;
+  color: #ffffff !important;
+  border-color: var(--accent) !important;
+}
+
+/* Today marker */
+html.dark .k-calendar .k-today .k-link {
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+}
+
+html.dark .k-calendar td.k-selected.k-today .k-link {
+  background-color: var(--accent) !important;
+  color: #ffffff !important;
+}
+
+/* Header nav buttons ("Today", prev/next arrows, month title) */
+html.dark .k-calendar .k-button {
+  background-color: rgba(31, 24, 56, 0.9) !important;
+  color: #c4b5fd !important;
+  border-color: rgba(168, 85, 247, 0.3) !important;
+}
+
+html.dark .k-calendar .k-button:hover {
+  background-color: rgba(124, 58, 237, 0.3) !important;
+  color: #f3e8ff !important;
+}
+
+html.dark .k-calendar .k-calendar-title {
+  color: #f3e8ff !important;
+  background-color: transparent !important;
+}
+
+html.dark .k-calendar .k-calendar-title:hover {
+  background-color: rgba(124, 58, 237, 0.2) !important;
+}
+
+/* Month list inside the year-scroll panel */
+html.dark .k-calendar .k-month,
+html.dark .k-calendar .k-calendar-monthview .k-link {
+  color: #e9d5ff !important;
+}
+
 /* Responsive Design */
 @media (max-width: 1100px) {
   .dashboard-grid {
