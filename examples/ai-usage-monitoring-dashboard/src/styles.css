@@ -1,0 +1,494 @@
+@import "@progress/kendo-theme-default/dist/all.css";
+
+:root {
+  /* Light Mode Colors */
+  --app-bg: #f5f1ff;
+  --panel-bg: rgba(255, 255, 255, 0.8);
+  --panel-surface: rgba(240, 234, 254, 0.5);
+  --panel-border: rgba(168, 85, 247, 0.25);
+  --text-primary: #1a1233;
+  --text-secondary: #5f5778;
+  --muted: #8b7bb8;
+  --accent: #7c3aed;
+  --accent-hover: #6d28d9;
+  --surface-alt: rgba(249, 240, 255, 0.6);
+  --card-radius: 1.25rem;
+  --shadow-soft: 0 8px 32px rgba(124, 58, 237, 0.1);
+  --shadow-medium: 0 16px 48px rgba(124, 58, 237, 0.15);
+  --focus-ring: rgba(124, 58, 237, 0.4);
+  
+  /* Glassmorphism */
+  --backdrop-blur: 12px;
+  --border-glass: 1.5px solid rgba(168, 85, 247, 0.2);
+}
+
+html.dark {
+  /* Dark Mode Colors */
+  --app-bg: #0f0a1a;
+  --panel-bg: rgba(18, 13, 36, 0.6);
+  --panel-surface: rgba(31, 24, 56, 0.5);
+  --panel-border: rgba(168, 85, 247, 0.25);
+  --text-primary: #f3e8ff;
+  --text-secondary: #d8b4fe;
+  --muted: #c4b5fd;
+  --accent: #a78bfa;
+  --accent-hover: #c4b5fd;
+  --surface-alt: rgba(31, 24, 56, 0.4);
+  --card-radius: 1.25rem;
+  --shadow-soft: 0 8px 32px rgba(168, 85, 247, 0.15);
+  --shadow-medium: 0 16px 48px rgba(168, 85, 247, 0.25);
+  --focus-ring: rgba(168, 85, 247, 0.5);
+  
+  /* Glassmorphism */
+  --backdrop-blur: 12px;
+  --border-glass: 1.5px solid rgba(168, 85, 247, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--app-bg);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:focus-visible,
+input:focus-visible,
+.k-button:focus-visible,
+.k-dropdown-list:focus-visible,
+.k-datepicker:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.app-shell {
+  padding: 32px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.topbar {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 2.5vw, 3rem);
+  line-height: 1.05;
+  color: var(--text-primary);
+}
+
+h2 {
+  color: var(--text-primary);
+}
+
+.subtitle {
+  margin: 12px 0 0;
+  color: var(--text-secondary);
+  max-width: 680px;
+  line-height: 1.7;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.toggle-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 0.75rem;
+  background: var(--panel-bg);
+  border: var(--border-glass);
+  backdrop-filter: blur(var(--backdrop-blur));
+  transition: all 0.2s ease;
+}
+
+.toggle-label:hover {
+  background: var(--panel-surface);
+  border-color: rgba(168, 85, 247, 0.4);
+}
+
+.filters {
+  background: var(--panel-bg);
+  border: var(--border-glass);
+  border-radius: var(--card-radius);
+  padding: 24px;
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(var(--backdrop-blur));
+  margin-bottom: 32px;
+  transition: all 0.3s ease;
+}
+
+.filters:hover {
+  border-color: rgba(168, 85, 247, 0.4);
+  box-shadow: var(--shadow-medium);
+}
+
+.filter-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.date-pickers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.metric-card,
+.chart-card,
+.table-section {
+  background: var(--panel-bg);
+  border: var(--border-glass);
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(var(--backdrop-blur));
+  transition: all 0.3s ease;
+}
+
+.metric-card:hover,
+.chart-card:hover,
+.table-section:hover {
+  border-color: rgba(168, 85, 247, 0.4);
+  box-shadow: var(--shadow-medium);
+}
+
+.metric-card {
+  min-height: 140px;
+}
+
+.metric-label {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.metric-value {
+  margin: 16px 0 0;
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+html.dark .metric-value {
+  background: linear-gradient(135deg, #a78bfa, #d8b4fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.metric-note {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.chart-card {
+  padding: 24px;
+}
+
+.chart-card h2 {
+  margin: 0 0 16px;
+  font-size: 1.1rem;
+}
+
+.chart-card .k-chart {
+  min-height: 360px;
+}
+
+.table-section {
+  padding: 24px;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.table-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.table-header p {
+  margin: 4px 0 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.k-grid {
+  background: transparent;
+}
+
+.k-grid-header th {
+  color: var(--text-primary);
+}
+
+.k-grid td,
+.k-grid th {
+  color: var(--text-primary);
+}
+
+/* Kendo Component Overrides - Light Mode */
+.k-dropdown .k-input,
+.k-datepicker .k-input,
+.k-textbox,
+.k-picker-wrap input,
+.k-dropdown-wrap input {
+  background: var(--panel-bg) !important;
+  color: var(--text-primary) !important;
+  border: var(--border-glass) !important;
+  backdrop-filter: blur(var(--backdrop-blur));
+}
+
+.k-button.k-primary {
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  border: var(--border-glass) !important;
+}
+
+.k-button.k-primary:hover {
+  background: var(--accent-hover) !important;
+  box-shadow: 0 4px 16px rgba(124, 58, 237, 0.3);
+}
+
+/* Dark mode Kendo widget overrides */
+html.dark .k-widget,
+html.dark .k-dropdown,
+html.dark .k-dropdown-list,
+html.dark .k-datepicker,
+html.dark .k-textbox,
+html.dark .k-button,
+html.dark .k-picker-wrap,
+html.dark .k-dropdown-wrap,
+html.dark .k-list-container,
+html.dark .k-grid,
+html.dark .k-grid-header,
+html.dark .k-grid-content {
+  background: var(--panel-surface) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--panel-border) !important;
+}
+
+html.dark .k-dropdown .k-input,
+html.dark .k-datepicker .k-input,
+html.dark .k-textbox,
+html.dark .k-picker-wrap input,
+html.dark .k-dropdown-wrap input,
+html.dark .k-dropdown-wrap .k-select,
+html.dark .k-button {
+  background: rgba(31, 24, 56, 0.8) !important;
+  color: #f3e8ff !important;
+  border: var(--border-glass) !important;
+  backdrop-filter: blur(var(--backdrop-blur));
+}
+
+html.dark .k-button.k-primary {
+  background: var(--accent) !important;
+  color: #ffffff !important;
+}
+
+html.dark .k-button.k-primary:hover {
+  background: var(--accent-hover) !important;
+}
+
+html.dark .k-grid-header {
+  background: rgba(18, 13, 36, 0.7) !important;
+}
+
+html.dark .k-grid-header .k-table-thead {
+  background: transparent !important;
+}
+
+html.dark .k-grid-content {
+  background: var(--panel-surface) !important;
+}
+
+html.dark .k-grid td,
+html.dark .k-grid th {
+  border-color: rgba(168, 85, 247, 0.15) !important;
+}
+
+html.dark .k-grid th {
+  color: #d8b4fe !important;
+}
+
+html.dark .k-grid td {
+  color: #f3e8ff !important;
+}
+
+html.dark .k-popup,
+html.dark .k-list-container,
+html.dark .k-list {
+  background: rgba(18, 13, 36, 0.95) !important;
+  color: #f3e8ff !important;
+  border: var(--border-glass) !important;
+  backdrop-filter: blur(var(--backdrop-blur));
+}
+
+/* Chart styling - dark mode */
+html.dark .k-chart,
+html.dark .k-chart .k-plot-area,
+html.dark .k-chart .k-chart-area,
+html.dark .k-chart .k-legend,
+html.dark .k-chart .k-tooltip {
+  background: transparent;
+  color: #d8b4fe;
+}
+
+html.dark .k-chart text,
+html.dark .k-chart .k-chart-title,
+html.dark .k-chart .k-axis-title,
+html.dark .k-chart .k-axis-label,
+html.dark .k-chart .k-legend text,
+html.dark .k-chart .k-tooltip text {
+  fill: #d8b4fe !important;
+}
+
+html.dark .k-chart .k-plot-area rect,
+html.dark .k-chart .k-gridline,
+html.dark .k-chart .k-major-gridline,
+html.dark .k-chart .k-minor-gridline {
+  stroke: rgba(168, 85, 247, 0.15) !important;
+}
+
+html.dark .k-chart .k-tooltip {
+  background: rgba(18, 13, 36, 0.95) !important;
+  border: var(--border-glass) !important;
+}
+
+html.dark .k-chart .k-series-a text,
+html.dark .k-chart .k-series-b text {
+  fill: #a78bfa !important;
+}
+
+/* Force chart SVG background path to transparent in dark mode */
+html.dark .k-chart-surface svg > g > path[fill="#ffffff"],
+html.dark .k-chart-surface svg path[fill="#ffffff"],
+html.dark .k-chart-surface svg path[fill="white"] {
+  fill: transparent !important;
+}
+
+/* Dark mode floating labels for dropdowns and datepickers */
+html.dark .k-floating-label,
+html.dark .k-floating-label-container > .k-label,
+html.dark .k-floating-label-container .k-floating-label,
+html.dark .k-label {
+  color: #e2d6f8 !important;
+}
+
+/* Dark mode - dropdown/picker and input backgrounds */
+html.dark .k-picker,
+html.dark .k-picker.k-picker-solid,
+html.dark .k-dropdownlist,
+html.dark .k-input.k-textbox,
+html.dark .k-textbox.k-input,
+html.dark .filter-row > .k-input,
+html.dark .k-floating-label-container .k-picker,
+html.dark .k-floating-label-container .k-input {
+  background: rgba(31, 24, 56, 0.9) !important;
+  background-color: rgba(31, 24, 56, 0.9) !important;
+  color: #f3e8ff !important;
+  border-color: rgba(168, 85, 247, 0.3) !important;
+}
+
+html.dark .k-input-inner {
+  background: transparent !important;
+  color: #f3e8ff !important;
+}
+
+html.dark .k-input-inner::placeholder {
+  color: #a89cc4 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1100px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .topbar,
+  .filter-row,
+  .topbar-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar-actions {
+    justify-items: start;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .date-pickers {
+    grid-template-columns: 1fr;
+  }
+
+  .app-shell {
+    padding: 16px;
+  }
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
