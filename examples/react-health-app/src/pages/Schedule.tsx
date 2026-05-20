@@ -92,7 +92,7 @@ function CustomSchedulerItem(props: Readonly<SchedulerItemProps>) {
       {...props}
       onClick={handleClick}
       className={`scheduler-event-${isPrimary ? "solid" : "light"}`}
-      style={{ ...props.style, borderRadius: "var(--kendo-border-radius-lg)" }}
+      style={props.style}
     >
       <div className="scheduler-event-content">
         <div className="scheduler-event-title">{dataItem.title}</div>
@@ -247,10 +247,10 @@ export default function Schedule() {
                   >
                     <Checkbox
                       checked={task.completed}
-                      onChange={(e) => {
-                        e.syntheticEvent.stopPropagation();
+                      onChange={() => {
                         toggleTask(task.id);
                       }}
+                      onClick={(e) => e.stopPropagation()}
                       aria-label={task.text}
                     />
                     <span className="task-text">{task.text}</span>
