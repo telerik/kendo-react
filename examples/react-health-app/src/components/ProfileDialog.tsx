@@ -80,7 +80,6 @@ export default function ProfileDialog({
         setPendingImage(null);
       }}
       width={480}
-      className="profile-management-dialog"
     >
       <Form
         initialValues={initialProfileValues}

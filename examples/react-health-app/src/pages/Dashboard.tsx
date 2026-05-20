@@ -149,7 +149,6 @@ export default function Dashboard() {
                 svgIcon={plusWhiteIcon}
                 onClick={() => navigate("/schedule")}
                 rounded="full"
-                className="btn-segmented-size"
               >
                 View Schedule
               </Button>

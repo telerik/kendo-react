@@ -174,7 +174,6 @@ export default function ClinicalAnalytics() {
                             value={selectedPatient}
                             onChange={(e) => setSelectedPatient(e.value)}
                             rounded="full"
-                            popupSettings={{ popupClass: 'popup-rounded' }}
                             className="analytics-patient-filter"
                         />
                         <Button svgIcon={exportButtonIcon} themeColor="base" rounded="full">

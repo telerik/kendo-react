@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, useLocation, NavLink } from "react-router-dom";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 import {
@@ -55,7 +55,7 @@ export default function AppBarComponent() {
   const [showProfileDialog, setShowProfileDialog] = useState(false);
   const [transparentMode, setTransparentMode] = useState(false);
   const { profile, updateProfile } = useDoctorProfile();
-  const notifRef = useRef<HTMLDivElement>(null);
+  const [notifAnchor, setNotifAnchor] = useState<HTMLDivElement | null>(null);
   const [showGitHub, setShowGitHub] = useState(false);
   const [gitHubAnchor, setGitHubAnchor] = useState<HTMLDivElement | null>(null);
 
@@ -78,7 +78,7 @@ export default function AppBarComponent() {
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
-      if (notifRef.current && !notifRef.current.contains(e.target as Node)) {
+      if (notifAnchor && !notifAnchor.contains(e.target as Node)) {
         setShowNotifications(false);
       }
       if (
@@ -91,10 +91,10 @@ export default function AppBarComponent() {
     }
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [gitHubAnchor]);
+  }, [gitHubAnchor, notifAnchor]);
 
   return (
-    <AppBar themeColor="inherit" className="app-topbar">
+    <AppBar className="app-topbar">
       {/* Logo */}
       <AppBarSection>
         <NavLink to="/" className="app-logo">
@@ -126,7 +126,7 @@ export default function AppBarComponent() {
 
       {/* Centered nav */}
       {!isMobile && (
-        <AppBarSection>
+        <AppBarSection className="app-topbar-nav">
           <SegmentedControl
             value={
               navItems.find((item) =>
@@ -141,7 +141,6 @@ export default function AppBarComponent() {
               text: isCompact ? undefined : item.label,
               svgIcon: item.icon,
             }))}
-            size="medium"
           />
         </AppBarSection>
       )}
@@ -172,7 +171,7 @@ export default function AppBarComponent() {
         />
 
         {/* Notifications */}
-        <div ref={notifRef} className="notif-wrapper">
+        <div ref={setNotifAnchor} className="notif-wrapper">
           <BadgeContainer>
             <Button
               svgIcon={bellCustomIcon}
@@ -189,14 +188,14 @@ export default function AppBarComponent() {
             )}
           </BadgeContainer>
 
-          {showNotifications && (
-            <NotificationPanel
-              notifications={notifList}
-              onMarkAllRead={() =>
-                setNotifList((prev) => prev.map((n) => ({ ...n, read: true })))
-              }
-            />
-          )}
+          <NotificationPanel
+            notifications={notifList}
+            onMarkAllRead={() =>
+              setNotifList((prev) => prev.map((n) => ({ ...n, read: true })))
+            }
+            anchor={notifAnchor}
+            show={showNotifications}
+          />
         </div>
 
         {/* GitHub Source Code */}
@@ -252,6 +251,7 @@ export default function AppBarComponent() {
             setShowNotifications(false);
           }}
           aria-label={`Dr. ${profile.fullName} profile`}
+          rounded="full"
         >
           <Avatar type="image" rounded="full" size="medium">
             <img src={profile.image} alt={`Dr. ${profile.fullName}`} />

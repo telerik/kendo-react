@@ -1,4 +1,5 @@
 import { Button } from "@progress/kendo-react-buttons";
+import { Popup } from "@progress/kendo-react-popup";
 
 interface Notification {
   id: number;
@@ -19,14 +20,24 @@ const notifTypeStyles: Record<string, { bgClass: string; icon: string }> = {
 interface NotificationPanelProps {
   notifications: Notification[];
   onMarkAllRead: () => void;
+  anchor: HTMLDivElement | null;
+  show: boolean;
 }
 
 export default function NotificationPanel({
   notifications,
   onMarkAllRead,
+  anchor,
+  show,
 }: Readonly<NotificationPanelProps>) {
   return (
-    <div className="notification-popup">
+    <Popup
+      anchor={anchor}
+      show={show}
+      popupClass="notification-popup"
+      anchorAlign={{ horizontal: "right", vertical: "bottom" }}
+      popupAlign={{ horizontal: "right", vertical: "top" }}
+    >
       <div className="notification-popup-header">
         <h3>Notifications</h3>
         <Button fillMode="flat" size="small" onClick={onMarkAllRead}>
@@ -51,6 +62,6 @@ export default function NotificationPanel({
           </div>
         );
       })}
-    </div>
+    </Popup>
   );
 }

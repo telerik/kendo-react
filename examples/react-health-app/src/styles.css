@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap");
-@import "@progress/kendo-theme-bootstrap/dist/all.css";
+@import "@progress/kendo-theme-meridian/dist/all.css";
 
 :root {
   /* ========================
@@ -21,220 +21,9 @@
   --font-size-d2: 58px;
   --font-size-d1: 66px;
 
-  /* ========================
-     Kendo Theme Token Overrides
-     Map design tokens → Kendo CSS variables
-     ======================== */
-
-  /* Kendo Colors */
-  --kendo-color-primary: #334155;
-  --kendo-color-primary-hover: #1e293b;
-  --kendo-color-primary-active: #0f172a;
-  --kendo-color-on-primary: #ffffff;
-  --kendo-color-primary-subtle: #f1f5f9;
-  --kendo-color-primary-subtle-hover: #eaeff5;
-  --kendo-color-primary-subtle-active: #cbd5e1;
-  --kendo-color-primary-emphasis: #64748b;
-  --kendo-color-primary-on-subtle: #1e293b;
-  --kendo-color-primary-on-surface: #334155;
-
-  --kendo-color-secondary: #6366fb;
-  --kendo-color-secondary-hover: #5558e0;
-  --kendo-color-secondary-active: #4a4cc9;
-  --kendo-color-on-secondary: #ffffff;
-  --kendo-color-secondary-subtle: #f5f6ff;
-  --kendo-color-secondary-subtle-hover: #ebecff;
-  --kendo-color-secondary-subtle-active: #dce1e8;
-  --kendo-color-secondary-emphasis: #d4d6ff;
-  --kendo-color-secondary-on-subtle: #1c1d5b;
-  --kendo-color-secondary-on-surface: #6366fb;
-
-  --kendo-color-tertiary: #9c27b0;
-  --kendo-color-tertiary-hover: #7b1fa2;
-  --kendo-color-tertiary-active: #6a1b9a;
-  --kendo-color-on-tertiary: #ffffff;
-  --kendo-color-tertiary-subtle: #fdf6ff;
-  --kendo-color-tertiary-subtle-hover: #f3e5f5;
-  --kendo-color-tertiary-subtle-active: #e1bee7;
-  --kendo-color-tertiary-emphasis: #ddb5fb;
-  --kendo-color-tertiary-on-subtle: #4a148c;
-  --kendo-color-tertiary-on-surface: #9c27b0;
-
-  --kendo-color-success: #28a745;
-  --kendo-color-success-hover: #218838;
-  --kendo-color-success-active: #1e7e34;
-  --kendo-color-on-success: #ffffff;
-  --kendo-color-success-subtle: #dcf0d3;
-  --kendo-color-success-subtle-hover: #d0ebd7;
-  --kendo-color-success-subtle-active: #bce2c5;
-  --kendo-color-success-emphasis: #81d15f;
-  --kendo-color-success-on-subtle: #1c5a00;
-  --kendo-color-success-on-surface: #28a745;
-
-  --kendo-color-warning: #ffc107;
-  --kendo-color-warning-hover: #e0a800;
-  --kendo-color-warning-active: #d39e00;
-  --kendo-color-on-warning: #232a36;
-  --kendo-color-warning-subtle: #fff4d3;
-  --kendo-color-warning-subtle-hover: #fff0c2;
-  --kendo-color-warning-subtle-active: #ffe9a3;
-  --kendo-color-warning-emphasis: #ffd760;
-  --kendo-color-warning-on-subtle: #5e4700;
-  --kendo-color-warning-on-surface: #e6a817;
-
-  --kendo-color-error: #dc3545;
-  --kendo-color-error-hover: #c82333;
-  --kendo-color-error-active: #bd2130;
-  --kendo-color-on-error: #ffffff;
-  --kendo-color-error-subtle: #fcddda;
-  --kendo-color-error-subtle-hover: #fbd5d1;
-  --kendo-color-error-subtle-active: #f8bdb8;
-  --kendo-color-error-emphasis: #f76f60;
-  --kendo-color-error-on-subtle: #7a0c00;
-  --kendo-color-error-on-surface: #dc3545;
-
-  --kendo-color-info: #17a2b8;
-  --kendo-color-info-hover: #138496;
-  --kendo-color-info-active: #117a8b;
-  --kendo-color-on-info: #ffffff;
-  --kendo-color-info-subtle: #d2e2fb;
-  --kendo-color-info-subtle-hover: #cceef9;
-  --kendo-color-info-subtle-active: #b8e7f5;
-  --kendo-color-info-emphasis: #6098f2;
-  --kendo-color-info-on-subtle: #117a8b;
-  --kendo-color-info-on-surface: #17a2b8;
-
-  /* Kendo Surface / Background / Text */
-
-  --kendo-color-surface: #f9fafb;
-  --kendo-color-surface-alt: #ffffff;
-  --kendo-color-on-app-surface: #232a36;
-  --kendo-color-subtle: #4a5666;
-  --kendo-color-border: rgba(23, 56, 99, 0.08);
-  --kendo-color-border-alt: rgba(23, 56, 99, 0.16);
-
-  /* Kendo Base (buttons, pager, toolbar backgrounds) */
-  --kendo-color-base: #f9fafb;
-  --kendo-color-base-hover: #e8ecf1;
-  --kendo-color-base-active: #dce1e8;
-  --kendo-color-on-base: #232a36;
-  --kendo-color-base-subtle: #edf0f5;
-  --kendo-color-base-subtle-hover: #e2e6ed;
-  --kendo-color-base-subtle-active: #d8dde5;
-  --kendo-color-base-emphasis: #c5ccd6;
-  --kendo-color-base-on-subtle: #232a36;
-  --kendo-color-base-on-surface: #4a5666;
-
-  /* Kendo Inverse */
-  --kendo-color-inverse: #232a36;
-  --kendo-color-inverse-hover: #1a2030;
-  --kendo-color-inverse-active: #141824;
-  --kendo-color-on-inverse: #ffffff;
-
-  /* Kendo Typography */
   --kendo-font-family: "Poppins", "Roboto", sans-serif;
-  --kendo-font-family-sans: "Poppins", "Roboto", sans-serif;
-  --kendo-font-family-sans-serif: "Poppins", "Roboto", sans-serif;
-  --kendo-font-size: 14px;
-  --kendo-font-size-xs: 12px;
-  --kendo-font-size-sm: 14px;
-  --kendo-font-size-md: 16px;
-  --kendo-font-size-lg: 20px;
-  --kendo-font-size-xl: 24px;
-  --kendo-font-weight: 400;
-  --kendo-font-weight-light: 300;
-  --kendo-font-weight-normal: 400;
-  --kendo-font-weight-medium: 500;
-  --kendo-font-weight-semibold: 600;
-  --kendo-font-weight-bold: 700;
-  --kendo-letter-spacing: 0;
-  --kendo-line-height: 1.5;
-  --kendo-line-height-xs: 1.33;
-  --kendo-line-height-sm: 1.42;
-  --kendo-line-height-md: 1.5;
-  --kendo-line-height-lg: 1.5;
-  --kendo-line-height-display: 1.2;
-
-  /* Kendo Border Radius */
-  --kendo-border-radius-none: 0px;
-  --kendo-border-radius-xxs: 1px;
-  --kendo-border-radius-xs: 2px;
-  --kendo-border-radius-sm: 4px;
-  --kendo-border-radius-md: 6px;
-  --kendo-border-radius-lg: 8px;
-  --kendo-border-radius-xl: 10px;
-  --kendo-border-radius-xxl: 12px;
-  --kendo-border-radius-xxxl: 14px;
-  --kendo-border-radius-4xl: 16px;
-  --kendo-border-radius-5xl: 18px;
-  --kendo-border-radius-6xl: 20px;
-  --kendo-border-radius-full: 9999px;
-
-  /* Kendo Spacing */
-  --kendo-spacing-0: 0px;
-  --kendo-spacing-0\.25: 1px;
-  --kendo-spacing-0\.5: 2px;
-  --kendo-spacing-1: 4px;
-  --kendo-spacing-1\.5: 6px;
-  --kendo-spacing-2: 8px;
-  --kendo-spacing-2\.5: 10px;
-  --kendo-spacing-3: 12px;
-  --kendo-spacing-3\.5: 14px;
-  --kendo-spacing-4: 16px;
-  --kendo-spacing-4\.5: 18px;
-  --kendo-spacing-5: 20px;
-  --kendo-spacing-5\.5: 22px;
-  --kendo-spacing-6: 24px;
-  --kendo-spacing-6\.5: 26px;
-  --kendo-spacing-7: 28px;
-  --kendo-spacing-7\.5: 30px;
-  --kendo-spacing-8: 32px;
-  --kendo-spacing-8\.5: 34px;
-  --kendo-spacing-9: 36px;
-  --kendo-spacing-9\.5: 38px;
-  --kendo-spacing-10: 40px;
-  --kendo-spacing-10\.5: 42px;
-  --kendo-spacing-11: 44px;
-  --kendo-spacing-11\.5: 46px;
-  --kendo-spacing-12: 48px;
-  --kendo-spacing-13: 52px;
-  --kendo-spacing-14: 56px;
-  --kendo-spacing-15: 60px;
-  --kendo-spacing-16: 64px;
-  --kendo-spacing-17: 68px;
-  --kendo-spacing-18: 72px;
-  --kendo-spacing-19: 76px;
-  --kendo-spacing-20: 80px;
-  --kendo-spacing-21: 84px;
-  --kendo-spacing-22: 88px;
-  --kendo-spacing-23: 92px;
-  --kendo-spacing-24: 96px;
-  --kendo-spacing-25: 112px;
-  --kendo-spacing-26: 128px;
-  --kendo-spacing-27: 144px;
-  --kendo-spacing-28: 160px;
-  --kendo-spacing-29: 176px;
-  --kendo-spacing-30: 192px;
-
-  /* Kendo Elevation */
-  --kendo-elevation-1:
-    0px 1px 3px rgba(0, 0, 0, 0.04), 0px 1px 2px rgba(0, 0, 0, 0.06); /* Base Button */
-  --kendo-elevation-2:
-    0px 1px 3px rgba(0, 0, 0, 0.04), 0px 2px 6px -1px rgba(0, 0, 0, 0.06); /* Cards */
-  --kendo-elevation-3:
-    0px 2px 6px rgba(0, 0, 0, 0.04), 0px 6px 12px -2px rgba(0, 0, 0, 0.07); /* Focused Card */
-  --kendo-elevation-4:
-    0px 1px 4px rgba(0, 0, 0, 0.05), 0px 4px 12px -2px rgba(0, 0, 0, 0.08); /* App Bar */
-  --kendo-elevation-5:
-    0px 3px 8px rgba(0, 0, 0, 0.05), 0px 8px 20px -3px rgba(0, 0, 0, 0.09); /* FAB */
-  --kendo-elevation-6:
-    0px 4px 10px rgba(0, 0, 0, 0.06), 0px 10px 24px -4px rgba(0, 0, 0, 0.1); /* Popups & Notifications */
-  --kendo-elevation-7:
-    0px 6px 14px rgba(0, 0, 0, 0.06), 0px 14px 32px -6px rgba(0, 0, 0, 0.1); /* Action Sheet */
-  --kendo-elevation-8:
-    0px 8px 20px rgba(0, 0, 0, 0.07), 0px 20px 48px -8px rgba(0, 0, 0, 0.11); /* Windows & Dialogs */
-  --kendo-elevation-9:
-    0px 12px 28px rgba(0, 0, 0, 0.08), 0px 28px 64px -10px rgba(0, 0, 0, 0.12); /* Focused Window */
+  --kendo-font-family-sans: "Poppins", sans-serif;
+  --kendo-font-family-serif: "Roboto", serif;
 }
 
 * {
@@ -258,30 +47,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Override Kendo font-family for any remaining selectors */
-.k-widget,
-.k-chat {
-  font-family: var(--kendo-font-family);
-}
-
 /* ========================
    Kendo Theme Refinements
-   (Beyond what --kendo-* variables cover)
+   (App-specific layout overrides on Kendo components)
    ======================== */
 
-/* Grid: remove row hover effect */
+/* Grid: row hover & border cleanup */
 .k-grid tbody > tr.k-table-row:hover {
   background-color: inherit;
 }
+.k-grid tbody > tr.k-table-alt-row {
+  background-color: var(--kendo-color-surface);
+}
 .k-grid tbody > tr.k-table-alt-row:hover {
-  background-color: color-mix(
-    in srgb,
-    var(--kendo-color-on-app-surface, #212529) 4%,
-    transparent
-  );
+  background-color: var(--kendo-color-surface);
 }
 
-/* Grid: remove all borders except header bottom */
 .k-grid {
   border-width: 0;
   border-radius: var(--kendo-border-radius-xxl);
@@ -302,67 +83,37 @@ body {
   border-block-end-width: 0;
 }
 
-.k-grid-header,
-.k-grid-header-table {
-  background-color: var(--kendo-color-surface);
-}
-
-.k-grid th.k-table-th {
-  font-family: var(--kendo-font-family);
-  font-weight: var(--kendo-font-weight-bold);
-  font-size: var(--kendo-font-size-md);
-  line-height: 1.5;
-  letter-spacing: var(--kendo-letter-spacing);
-  color: var(--kendo-color-on-app-surface);
-}
-
-.appointments-grid-wrapper .k-grid th.k-table-th {
-  font-weight: var(--kendo-font-weight-medium);
-  font-size: var(--kendo-font-size-sm);
-  line-height: 1.42;
-  vertical-align: middle;
-  text-transform: none;
-}
-
-.k-pager {
+/* FAB: custom gradient */
+.k-fab.k-fab-primary,
+.k-fab.k-fab-solid-primary,
+.k-fab.k-fab-primary.k-fab {
+  background-image: linear-gradient(135deg, #ac58ff 0%, #4b5ffa 100%);
   background-color: transparent;
-  border-color: transparent;
-  border-bottom-left-radius: var(--kendo-border-radius-xxl);
-  border-bottom-right-radius: var(--kendo-border-radius-xxl);
+  outline: none;
+  box-shadow: var(--kendo-elevation-5);
 }
 
-.k-pager .k-button-flat {
-  border-radius: var(--kendo-border-radius-md);
+.k-fab.k-fab-primary:hover,
+.k-fab.k-fab-solid-primary:hover,
+.k-hover.k-fab.k-fab-primary {
+  background-image: linear-gradient(135deg, #9b40f0 0%, #3a4ee9 100%);
+  background-color: transparent;
+  outline: none;
 }
 
+/* Scheduler: layout overrides */
 .k-scheduler {
-  border-radius: var(--kendo-border-radius-4xl);
-  overflow: hidden;
-  box-shadow: var(--kendo-elevation-2);
   flex: 1;
   min-width: 0;
-}
-
-.k-scheduler .k-scheduler-toolbar {
-  background-color: var(--kendo-color-surface-alt);
-  overflow-x: auto;
-  overflow-y: hidden;
-  scrollbar-width: thin;
-}
-
-.k-scheduler .k-scheduler-toolbar .k-toolbar {
-  flex-wrap: nowrap;
-  min-width: max-content;
-}
-
-.k-scheduler .k-scheduler-toolbar .k-toolbar > * {
-  flex-shrink: 0;
 }
 
 .k-scheduler .k-scheduler-toolbar .k-button-group {
   border-radius: var(--kendo-border-radius-full);
   overflow: hidden;
   flex-shrink: 0;
+}
+.k-scheduler .k-scheduler-toolbar .k-button-group .k-button {
+  outline: none;
 }
 
 .k-scheduler .k-scheduler-toolbar .k-nav-current {
@@ -392,19 +143,7 @@ body {
 .k-scheduler .k-event.scheduler-event-light {
   background-color: var(--kendo-color-secondary-subtle) !important;
   border-left: 3px dashed var(--kendo-color-secondary);
-}
-
-.k-scheduler .k-event.scheduler-event-light .scheduler-event-title {
-  color: var(--kendo-color-secondary-on-subtle);
-}
-
-.k-scheduler .k-event.scheduler-event-light .scheduler-event-meta {
-  color: var(--kendo-color-secondary);
-}
-
-.k-scheduler .k-event .k-event-template {
-  padding: 0;
-  font-size: inherit;
+  box-shadow: none;
 }
 
 .scheduler-event-content {
@@ -431,68 +170,6 @@ body {
 .schedule-event-dialog .k-window-content {
   padding-inline: 0;
   padding-block: 0;
-}
-
-.k-window .k-window-titlebar,
-.k-dialog .k-dialog-titlebar {
-  background: var(--kendo-color-surface-alt);
-  border-bottom: 1px solid var(--kendo-color-border);
-  font-weight: var(--kendo-font-weight-semibold);
-}
-
-.k-window,
-.k-dialog-wrapper .k-dialog {
-  box-shadow: var(--kendo-elevation-8);
-}
-
-.k-textbox:focus-within,
-.k-textarea:focus-within,
-.k-input-solid:focus-within {
-  border-color: var(--kendo-color-primary);
-  box-shadow: 0 0 0 2px rgba(78, 107, 255, 0.15);
-}
-
-.k-popup .k-list-item.k-selected {
-  background-color: var(--kendo-color-primary);
-  color: var(--kendo-color-on-primary);
-}
-
-.k-popup .k-list-item:hover:not(.k-selected),
-.k-popup .k-list-item.k-hover:not(.k-selected) {
-  background-color: var(--kendo-color-primary-subtle);
-}
-
-.popup-rounded {
-  border-radius: var(--kendo-border-radius-md);
-  overflow: hidden;
-}
-
-.k-fab.k-fab-primary,
-.k-fab.k-fab-solid-primary,
-.k-fab.k-fab-primary.k-fab {
-  background-image: linear-gradient(135deg, #ac58ff 0%, #4b5ffa 100%);
-  background-color: transparent;
-  outline: none;
-  box-shadow: var(--kendo-elevation-5);
-}
-
-.k-fab.k-fab-primary:hover,
-.k-fab.k-fab-solid-primary:hover,
-.k-hover.k-fab.k-fab-primary {
-  background-image: linear-gradient(135deg, #9b40f0 0%, #3a4ee9 100%);
-  background-color: transparent;
-  outline: none;
-}
-
-.k-tabstrip .k-tabstrip-items .k-item.k-active {
-  border-bottom-color: var(--kendo-color-primary);
-  color: var(--kendo-color-primary);
-}
-
-.k-grid .k-filter-row th {
-  text-transform: none;
-  font-size: var(--kendo-font-size-sm);
-  font-weight: var(--kendo-font-weight-normal);
 }
 
 .app-layout {
@@ -891,12 +568,10 @@ body {
   border-radius: var(--kendo-border-radius-xxxl);
   overflow: hidden;
   box-shadow: var(--kendo-elevation-6);
-  border: 1px solid var(--kendo-color-border);
 }
 
 .ai-chat-popup .k-chat {
   border: none;
-  border-radius: var(--kendo-border-radius-xxxl);
 }
 
 .ai-chat-popup .k-message-list {
@@ -1012,9 +687,11 @@ body {
   align-items: center;
 }
 
+.k-segmented-control {
+  overflow: unset;
+}
+
 .app-topbar-right {
-  display: flex;
-  align-items: center;
   gap: var(--kendo-spacing-3);
 }
 
@@ -1085,14 +762,6 @@ body.transparent-surfaces .k-grid .k-grid-content,
 body.transparent-surfaces .k-grid .k-grid-container,
 body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   background: var(--kendo-color-surface-alt);
-}
-
-.search-input {
-  width: 272px;
-}
-
-.search-input .k-input {
-  border-radius: var(--kendo-border-radius-full);
 }
 
 .topbar-icon-btn {
@@ -1248,16 +917,11 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
    Notification Popup
    ======================== */
 .notification-popup {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  margin-top: var(--kendo-spacing-2);
   width: 380px;
   background: var(--kendo-color-surface-alt);
   border-radius: var(--kendo-border-radius-xxl);
   box-shadow: var(--kendo-elevation-6);
   border: 1px solid var(--kendo-color-border);
-  z-index: 200;
   overflow: hidden;
 }
 
@@ -1330,11 +994,6 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
 /* ========================
    Profile Management Dialog
    ======================== */
-.profile-management-dialog .k-dialog {
-  border-radius: var(--kendo-border-radius-xxl);
-  overflow: hidden;
-}
-
 .profile-dialog-content {
   display: flex;
   flex-direction: column;
@@ -1463,10 +1122,6 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
 /* ========================
    Schedule Task Details
    ======================== */
-.schedule-event-dialog .k-dialog {
-  border-radius: var(--kendo-border-radius-xxl);
-}
-
 .schedule-event-dialog .k-window-titlebar-actions {
   display: none;
 }
@@ -1476,6 +1131,7 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  padding: var(--kendo-spacing-1);
   gap: var(--kendo-spacing-3);
   font-weight: var(--kendo-font-weight-bold);
   font-size: var(--kendo-font-size-md);
@@ -1560,12 +1216,9 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   flex-shrink: 0;
 }
 
-.page-heading .k-breadcrumb-item:last-child .k-breadcrumb-root-link {
-  text-decoration: none;
-}
 .k-breadcrumb-last-item .k-breadcrumb-link,
 .k-breadcrumb-link {
-  color: var(--kendo-color-primary);
+  text-decoration: underline;
 }
 
 .profile-stack {
@@ -1683,20 +1336,8 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   padding: 0 var(--kendo-spacing-5) var(--kendo-spacing-5);
 }
 
-.profile-editor-wrap .k-editor {
-  border-radius: var(--kendo-border-radius-4xl);
-  overflow: hidden;
-}
-
 .profile-editor-wrap .k-editor-content {
-  height: 260px;
-  font-family: Poppins, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: normal;
-  vertical-align: middle;
+  padding: 1rem;
 }
 
 .profile-info-grid {
@@ -2500,7 +2141,7 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
    Window Form
    ======================== */
 .window-form-patient-select {
-  width: 250px;
+  width: 300px;
 }
 
 .window-form .k-textarea,
@@ -2770,53 +2411,6 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   box-shadow: var(--kendo-elevation-4);
   backdrop-filter: blur(5px);
   overflow: hidden;
-}
-
-.mobile-nav-popup .k-menu-group,
-.mobile-nav-popup .k-list-ul {
-  padding: var(--kendo-spacing-2);
-  gap: var(--kendo-spacing-0\.5);
-  display: flex;
-  flex-direction: column;
-}
-
-.mobile-nav-popup .k-list-item,
-.mobile-nav-popup .k-menu-item {
-  border-radius: var(--kendo-border-radius-sm);
-  padding: var(--kendo-spacing-1) var(--kendo-spacing-2);
-  gap: var(--kendo-spacing-2);
-  font-size: var(--kendo-font-size-md);
-  line-height: 1.5;
-}
-
-.mobile-nav-popup .k-list-item:hover,
-.mobile-nav-popup .k-list-item.k-hover,
-.mobile-nav-popup .k-menu-item:hover {
-  background: var(--kendo-color-base-active);
-}
-
-.mobile-nav-popup .k-list-item.k-selected {
-  background: transparent;
-  color: var(--kendo-color-on-app-surface);
-}
-
-.mobile-nav-popup .k-list-item:focus,
-.mobile-nav-popup .k-list-item.k-focus {
-  box-shadow: none;
-  outline: none;
-}
-
-.mobile-nav-popup .k-list-item::before {
-  display: none;
-}
-
-.mobile-nav-popup .k-menu-group .k-item.k-focus > .k-link {
-  box-shadow: none;
-}
-
-.mobile-nav-popup .k-menu-group .k-item > .k-link:active {
-  color: inherit;
-  background-color: transparent;
 }
 
 /* GitHub source code popup */

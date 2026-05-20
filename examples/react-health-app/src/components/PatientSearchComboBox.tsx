@@ -8,7 +8,6 @@ import {
   type ListItemProps,
 } from "@progress/kendo-react-dropdowns";
 import { patients, type Patient } from "../data/sampleData";
-import { globalCaretAltDownIcon } from "../icons/customIcons";
 import SearchInputPrefix from "./SearchInputPrefix";
 
 const patientSearchItemRender = (
@@ -63,7 +62,6 @@ export default function PatientSearchComboBox() {
         className="app-search-input"
         clearButton={false}
         aria-label="Search patients by name or ID"
-        svgIcon={globalCaretAltDownIcon}
         onFilterChange={filterChange}
         onChange={(e) => {
           if (e.nativeEvent.type === "click") {
