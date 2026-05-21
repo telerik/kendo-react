@@ -10,7 +10,7 @@ import { Label } from "@progress/kendo-react-labels";
 import {
   facebookIcon,
   linkedinIcon,
-  twitterIcon,
+  xLogoIcon,
 } from "@progress/kendo-svg-icons";
 import { useStore } from "@nanostores/react";
 import { selectedLanguage } from "../helpers/languageStore";
@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
                 className="k-d-flex k-align-items-center"
                 style={{ gap: "10px" }}
               >
-                <SvgIcon icon={twitterIcon} size="xlarge" /> Twitter
+                <SvgIcon icon={xLogoIcon} size="xlarge" /> X
               </p>
               <p
                 className="k-d-flex k-align-items-center"
