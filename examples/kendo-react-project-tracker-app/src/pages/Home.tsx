@@ -65,7 +65,7 @@ export default function Home() {
                 </Card>
             </div>
             <div className="col-span-2 sm:col-span-1 lg:col-span-6 xl:col-span-1">
-                <Calendar className="rounded-2xl w-full" value={date} onChange={e => setDate(e.target.value)} tabIndex={0}/>
+                <Calendar className="rounded-2xl w-full" value={date} onChange={e => setDate(e.value)} tabIndex={0}/>
             </div>
             <div className="col-span-2 sm:col-span-1 lg:col-span-3 xl:col-span-1 h-72.5 lg:h-116">
                 <Card className="rounded-2xl overflow-auto max-h-72.5 lg:max-h-116">

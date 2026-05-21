@@ -20,7 +20,7 @@ export default function AppBarComponent() {
         setShow(false);
     };
     return (
-        <AppBar positionMode="sticky" className="bg-surface-alt !p-4" themeColor='inherit'>
+        <AppBar positionMode="sticky" className="bg-surface-alt !p-4">
             <AppBarSection className="grow gap-4">
                 <div role="banner">
                     <a href="#" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
