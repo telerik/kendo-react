@@ -121,7 +121,7 @@ const RatingCell = (props) => {
   const field = props.field || '';
   const value = props.dataItem[field];
   return (
-    <td>
+    <td className={props.tdProps.className}>
       <Rating
         value={value === null ? '' : props.dataItem[field].toString()}
         readonly={true}
@@ -135,7 +135,7 @@ const PersonCell = (props) => {
   const value = props.dataItem[field];
 
   return (
-    <td>
+    <td className={props.tdProps.className}>
     <img src={require(`../../assets/people/${person}`)} alt="Girl in a jacket" width="34" height="34"/>
      <span className="person-name">{ value === null ? '' : props.dataItem[field].toString()}</span>
     </td>
@@ -150,7 +150,7 @@ const BudgetCell = props => {
     color: value > 0 ? props.myProp[0].color : props.myProp[1].color
   }} colSpan={props.colSpan} role={'gridcell'} aria-colindex={props.ariaColumnIndex} aria-selected={props.isSelected} {...{
     [GRID_COL_INDEX_ATTRIBUTE]: props.columnIndex
-  }} {...navigationAttributes}>
+  }} {...navigationAttributes} className={props.tdProps.className}>
       ${value === null ? '' : props.dataItem[field].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
     </td>;
 };
