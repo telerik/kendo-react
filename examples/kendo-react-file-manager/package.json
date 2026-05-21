@@ -22,55 +22,22 @@
     "@progress/kendo-react-upload": "^15.0.0",
     "@progress/kendo-svg-icons": "^5.0.0",
     "@progress/kendo-theme-default": "^14.1.0",
-    "@testing-library/jest-dom": "^6.2.1",
-    "@testing-library/react": "^14.1.2",
-    "@testing-library/user-event": "^14.5.1",
-    "@types/react": "^18.2.48",
-    "@types/react-dom": "^18.2.17",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.0.0",
-    "web-vitals": "^3.5.0"
-  },
-  "overrides": {
-    "nth-check": ">=2.0.1",
-    "postcss": ">=8.4.31",
-    "path-to-regexp": "^0.1.12",
-    "axios": "^1.8.2",
-    "@babel/helpers": "^7.26.10",
-    "@babel/runtime": "7.26.10",
-    "request": {
-      "form-data":"^2.5.4"
-    }
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "gh-pages": "^6.1.0"
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "gh-pages": "^6.1.0",
+    "typescript": "^5.4.0",
+    "vite": "^5.4.0"
+  },
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   }
 }
