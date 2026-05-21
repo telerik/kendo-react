@@ -23,6 +23,7 @@ const DateCreatedCell  = (props: GridCellProps) => {
 
   return (
     <td
+      className={'k-table-td'}
       {...{ [GRID_COL_INDEX_ATTRIBUTE]: props.columnIndex }}
       {...navigationAttributes}
     >
@@ -37,6 +38,7 @@ const SizeCell = (props: GridCellProps) => {
 
   return (
     <td
+      className={'k-table-td'}
       {...{ [GRID_COL_INDEX_ATTRIBUTE]: props.columnIndex }}
       {...navigationAttributes}
     >
@@ -49,9 +51,10 @@ const NameCell = (props: GridCellProps) => {
   const navigationAttributes = useTableKeyboardNavigation(props.id);
   const name = getName(props.dataItem.path);
   const { svgIcon } = props.dataItem.icon;
-
+console.log(props)
   return (
     <td
+      className={'k-table-td'}
       {...{ [GRID_COL_INDEX_ATTRIBUTE]: props.columnIndex }}
       {...navigationAttributes}
     >
