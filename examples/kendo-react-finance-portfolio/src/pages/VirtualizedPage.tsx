@@ -50,111 +50,115 @@ orders.forEach((o: any) => {
     o.shippedDate === "NULL" ? undefined : new Date(o.shippedDate);
 });
 
-class DetailComponent extends React.Component<GridDetailRowProps> {
-  render() {
-    const dataItem = this.props.dataItem;
-    return (
-      <div>
-        <section style={{ width: "200px", float: "left" }}>
-          <p><strong>Street:</strong> {dataItem.shipAddress.street}</p>
-          <p><strong>City:</strong> {dataItem.shipAddress.city}</p>
-          <p><strong>Country:</strong> {dataItem.shipAddress.country}</p>
-          <p><strong>Postal Code:</strong> {dataItem.shipAddress.postalCode}</p>
-        </section>
-        <Grid style={{ width: "500px" }} data={dataItem.details}></Grid>
+const DetailComponent = (props: GridDetailRowProps) => {
+  const dataItem = props.dataItem;
+  return (
+    <div>
+      <section style={{ width: "200px", float: "left" }}>
+        <p><strong>Street:</strong> {dataItem.shipAddress.street}</p>
+        <p><strong>City:</strong> {dataItem.shipAddress.city}</p>
+        <p><strong>Country:</strong> {dataItem.shipAddress.country}</p>
+        <p><strong>Postal Code:</strong> {dataItem.shipAddress.postalCode}</p>
+      </section>
+      <Grid style={{ width: "500px" }} data={dataItem.details}></Grid>
+    </div>
+  );
+};
+
+const locales = [
+  {
+    language: 'en-US',
+    locale: 'en'
+  },
+  {
+    language: 'es-ES',
+    locale: 'es'
+  }
+];
+
+export const VirtualizedPage = () => {
+  const [currentLocale, setCurrentLocale] = React.useState(locales[0]);
+  const exportRef = React.useRef<ExcelExport | null>(null);
+  const pdfExportRef = React.useRef<GridPDFExport | null>(null);
+
+  const exportExcel = () => {
+    exportRef.current?.save();
+  };
+
+  const exportPDF = () => {
+    pdfExportRef.current?.save();
+  };
+
+  return (
+    <>
+      <div className="container my-3">
+        <NavigationRow className="row justify-content-center">
+          <Navigation className="col-12 flex-grow-1 text-center" />
+        </NavigationRow>
       </div>
-    );
-  }
-}
-
-export class VirtualizedPage extends React.Component<any, any> {
-  locales = [
-    {
-      language: 'en-US',
-      locale: 'en'
-    },
-    {
-      language: 'es-ES',
-      locale: 'es'
-    }
-  ];
-  constructor(props: any) {
-    super(props);
-
-    this.state = {
-      currentLocale: this.locales[0]
-    };
-  }
-
-  _pdfExport: any;
-  exportExcel = () => {
-    this._export.save();
-  };
-
-  _export: any;
-  exportPDF = () => {
-    this._pdfExport.save();
-  };
-
-  render() {
-    return (
-      <>
-        <div className="container my-3">
-          <NavigationRow className="row justify-content-center">
-            <Navigation className="col-12 flex-grow-1 text-center" />
-          </NavigationRow>
-        </div>
-        <div className="container">
-          <LocalizationProvider language={this.state.currentLocale.language}>
-            <IntlProvider locale={this.state.currentLocale.locale}>
-              <div>
-                <ExcelExport
+      <div className="container">
+        <LocalizationProvider language={currentLocale.language}>
+          <IntlProvider locale={currentLocale.locale}>
+            <div>
+              <ExcelExport
+                data={orders}
+                ref={exportRef}
+              >
+                <Grid
+                  style={{ height: '700px' }}
+                  sortable
+                  defaultSort={[
+                    { field: 'orderDate', dir: 'desc' }
+                  ]}
+                  filterable
+                  groupable
+                  defaultGroup={[
+                    { field: 'customerID' }
+                  ]}
+                  reorderable
+                  pageable={{ buttonCount: 4, pageSizes: true }}
+                  defaultSkip={0}
+                  defaultTake={20}
                   data={orders}
-                  ref={(exporter) => { this._export = exporter; }}
+                  autoProcessData={true}
+                  dataItemKey="orderID"
+                  detail={DetailComponent}
                 >
-                  <Grid
-                    style={{ height: '700px' }}
-                    sortable
-                    defaultSort={[
-                      { field: 'orderDate', dir: 'desc' }
-                    ]}
-                    filterable
-                    groupable
-                    defaultGroup={[
-                      { field: 'customerID' }
-                    ]}
-                    reorderable
-                    pageable={{ buttonCount: 4, pageSizes: true }}
-                    defaultSkip={0}
-                    defaultTake={20}
-                    data={orders}
-                    autoProcessData={true}
-                    dataItemKey="orderID"
-                    detail={DetailComponent}
-                  >
-                    <GridToolbar>
-                      Locale:&nbsp;&nbsp;&nbsp;
-                      <DropDownList
-                        style={{ border: 'none' }}
-                        value={this.state.currentLocale}
-                        fillMode={null}
-                        textField="language"
-                        onChange={(e) => { this.setState({ currentLocale: e.target.value }); }}
-                        data={this.locales} />&nbsp;&nbsp;&nbsp;
-                      <Button
-                        title="Export to Excel"
-                        themeColor="primary"
-                        fillMode="solid"
-                        onClick={this.exportExcel}
-                      >
-                        Export to Excel
-                      </Button>&nbsp;
-                      <Button
-                        title="Export to PDF"
-                        themeColor="primary"
-                        fillMode="solid"
-                        onClick={this.exportPDF}>Export to PDF</Button>
-                    </GridToolbar>
+                  <GridToolbar>
+                    Locale:&nbsp;&nbsp;&nbsp;
+                    <DropDownList
+                      style={{ border: 'none' }}
+                      value={currentLocale}
+                      textField="language"
+                      onChange={(e) => { setCurrentLocale(e.target.value); }}
+                      data={locales} />&nbsp;&nbsp;&nbsp;
+                    <Button
+                      title="Export to Excel"
+                      themeColor="primary"
+                      fillMode="solid"
+                      onClick={exportExcel}
+                    >
+                      Export to Excel
+                    </Button>&nbsp;
+                    <Button
+                      title="Export to PDF"
+                      themeColor="primary"
+                      fillMode="solid"
+                      onClick={exportPDF}>Export to PDF</Button>
+                  </GridToolbar>
+                  <GridColumn field="customerID" width="200px" />
+                  <GridColumn field="orderDate" filter="date" format="{0:D}" width="300px" />
+                  <GridColumn field="shipName" width="280px" />
+                  <GridColumn field="freight" filter="numeric" width="200px" />
+                  <GridColumn field="shippedDate" filter="date" format="{0:D}" width="300px" />
+                  <GridColumn field="employeeID" filter="numeric" width="200px" />
+                  <GridColumn field="orderID" filterable={false} title="ID" width="90px" />
+                </Grid>
+              </ExcelExport>
+              <GridPDFExport
+                ref={pdfExportRef}
+                margin="1cm" >
+                {<Grid data={orders}>
                     <GridColumn field="customerID" width="200px" />
                     <GridColumn field="orderDate" filter="date" format="{0:D}" width="300px" />
                     <GridColumn field="shipName" width="280px" />
@@ -162,26 +166,12 @@ export class VirtualizedPage extends React.Component<any, any> {
                     <GridColumn field="shippedDate" filter="date" format="{0:D}" width="300px" />
                     <GridColumn field="employeeID" filter="numeric" width="200px" />
                     <GridColumn field="orderID" filterable={false} title="ID" width="90px" />
-                  </Grid>
-                </ExcelExport>
-                <GridPDFExport
-                  ref={(element) => { this._pdfExport = element; }}
-                  margin="1cm" >
-                  {<Grid data={orders}>
-                      <GridColumn field="customerID" width="200px" />
-                      <GridColumn field="orderDate" filter="date" format="{0:D}" width="300px" />
-                      <GridColumn field="shipName" width="280px" />
-                      <GridColumn field="freight" filter="numeric" width="200px" />
-                      <GridColumn field="shippedDate" filter="date" format="{0:D}" width="300px" />
-                      <GridColumn field="employeeID" filter="numeric" width="200px" />
-                      <GridColumn field="orderID" filterable={false} title="ID" width="90px" />
-                    </Grid>}
-                </GridPDFExport>
-              </div>
-            </IntlProvider>
-          </LocalizationProvider>
-        </div>
-      </>
-    );
-  };
+                  </Grid>}
+              </GridPDFExport>
+            </div>
+          </IntlProvider>
+        </LocalizationProvider>
+      </div>
+    </>
+  );
 };

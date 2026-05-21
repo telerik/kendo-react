@@ -52,7 +52,6 @@ export const Header: React.FunctionComponent<any> = () => {
                                     closeDuration: 0
                                 }
                             }}
-                            fillMode={null}
                             data={data}
                             style={{
                                 width: 200,

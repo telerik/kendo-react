@@ -45,7 +45,6 @@ export const ChangeSector = (props: ChangeSectorProps) => {
                     border: 'none',
                     width: 'auto'
                 }}
-                fillMode={null}
                 value={data.find(s => s.sector === sector)}
                 onChange={handleChange}
                 data={data}
