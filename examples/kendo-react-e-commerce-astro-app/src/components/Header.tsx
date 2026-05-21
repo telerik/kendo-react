@@ -138,7 +138,7 @@ const Header: React.FC = () => {
     <>
       <link id="theme-link" rel="stylesheet" href={theme} />
       <LocalizationProvider language={language}>
-        <AppBar themeColor="inherit">
+        <AppBar themeColor="base">
           <AppBarSection
             className="k-flex-basis-0 k-flex-grow k-gap-2 k-align-items-center"
             style={{ paddingLeft: "50px" }}
