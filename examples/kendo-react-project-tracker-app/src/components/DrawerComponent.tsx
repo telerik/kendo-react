@@ -1,13 +1,13 @@
 import React from 'react';
 import { Drawer, DrawerContent } from "@progress/kendo-react-layout";
-import { folderIcon, homeIcon, listUnorderedSquareIcon, userOutlineIcon } from '@progress/kendo-svg-icons';
+import { folderIcon, homeIcon, listUnorderedSquareIcon, userIcon } from '@progress/kendo-svg-icons';
 import { To, useLocation, useNavigate } from 'react-router-dom';
 
 const drawerItems = [
     { text: "Home", svgIcon: homeIcon, route: '/', selected: true, className: "rounded-md [.k-selected]:!bg-primary/8 [.k-selected]:!text-primary-emphasis" },
     { text: "Projects", svgIcon: folderIcon, route: '/projects', className: "rounded-md [.k-selected]:!bg-primary/8 [.k-selected]:!text-primary-emphasis"  },
     { text: "Tasks", svgIcon: listUnorderedSquareIcon, route: '/tasks', className: "rounded-md [.k-selected]:!bg-primary/8 [.k-selected]:!text-primary-emphasis"  },
-    { text: "Team Management", svgIcon: userOutlineIcon, route: '/team-management', className: "rounded-md [.k-selected]:!bg-primary/8 [.k-selected]:!text-primary-emphasis"  }
+    { text: "Team Management", svgIcon: userIcon, route: '/team-management', className: "rounded-md [.k-selected]:!bg-primary/8 [.k-selected]:!text-primary-emphasis"  }
 ];
 
 interface DrawerComponentProps {
