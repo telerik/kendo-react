@@ -1,8 +1,9 @@
 import React from 'react';
 
 export const Author = (props) => {
+    console.log(props)
     return (
-        <td>
+        <td className={props.tdProps.className}>
             <p className="author-container">
                 <span>
                     <img
