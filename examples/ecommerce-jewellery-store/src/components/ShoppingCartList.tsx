@@ -2,7 +2,7 @@ import * as React from "react";
 import {
   chevronLeftIcon,
   trashIcon,
-  walletSolidIcon,
+  walletIcon,
   heartIcon,
   percentIcon,
 } from "@progress/kendo-svg-icons";
@@ -187,7 +187,7 @@ export const ShoppingCartList: React.FC = () => {
           <div className="k-d-grid k-grid-cols-1 k-grid-cols-md-3 k-gap-5">
             <div className="k-d-flex k-flex-col k-align-items-center">
               <Avatar rounded="full" themeColor="primary" size="large">
-                <SvgIcon icon={walletSolidIcon} size="xxlarge" />
+                <SvgIcon icon={walletIcon} size="xxlarge" />
               </Avatar>
               <p className="k-font-size-xl k-font-bold">{t.returnPolicyTitle}</p>
               <p>{t.returnPolicyContent}</p>

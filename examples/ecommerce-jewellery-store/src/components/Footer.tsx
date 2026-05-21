@@ -6,7 +6,7 @@ import { Label } from '@progress/kendo-react-labels';
 import {
   facebookIcon,
   linkedinIcon,
-  twitterIcon,
+  xLogoIcon,
 } from '@progress/kendo-svg-icons';
 import viloraLogo from '@/assets/vilora-logo.png';
 import { useLanguageContext } from '../helpers/LanguageContext';
@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
               <SvgIcon icon={facebookIcon} size="xlarge" /> Facebook
             </p>
             <p className="k-d-flex k-align-items-center" style={{ gap: '10px' }}>
-              <SvgIcon icon={twitterIcon} size="xlarge" /> Twitter
+              <SvgIcon icon={xLogoIcon} size="xlarge" /> X
             </p>
             <p className="k-d-flex k-align-items-center" style={{ gap: '10px' }}>
               <SvgIcon icon={linkedinIcon} size="xlarge" /> LinkedIn
