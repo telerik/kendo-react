@@ -42,7 +42,7 @@ export const FullNameCell = (props) => {
   }
 
   return (
-    <td>
+    <td className={props.tdProps.className}>
       <div style={customerPhotoStyle} />
       <div style={customerName}>{props.dataItem.fullName}</div>
     </td>
@@ -55,7 +55,7 @@ export const FlagCell = (props) => {
   }
 
   return (
-    <td style={{ textAlign: "center" }}>
+    <td style={{ textAlign: "center" }} className={props.tdProps.className}>
       <Image
         src={images[props.dataItem.country]}
         style={{ width: 30, verticalAlign: "middle", borderStyle: "none" }}
@@ -76,7 +76,7 @@ export const RatingCell = (props) => {
   }
 
   return (
-    <td>
+    <td className={props.tdProps.className}>
       {[...new Array(MAX_STARS)].map((_, idx) => {
         const isActive = rating <= idx;
         return (
@@ -102,7 +102,7 @@ export const OnlineCell = (props) => {
   }
 
   return (
-    <td style={{ textAlign: "center" }}>
+    <td style={{ textAlign: "center" }} className={props.tdProps.className}>
       {props.dataItem.isOnline === true ? (
         <Badge themeColor={"success"} shape={"rounded"} style={badgeStyle}>
           Online
@@ -122,7 +122,7 @@ export const EngagementCell = (props) => {
   }
 
   return (
-    <td>
+    <td className={props.tdProps.className}>
       <Sparkline type={"bar"} data={props.dataItem.target} />
     </td>
   );
@@ -141,7 +141,7 @@ export const CurrencyCell = (props) => {
   }
 
   return (
-    <td>
+    <td className={props.tdProps.className}>
       <span style={props.dataItem.budget < 0 ? redBoldStyle : undefined}>
         {intlService.formatNumber(props.dataItem.budget, "c")}
       </span>
