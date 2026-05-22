@@ -5,9 +5,9 @@ import { MS_PER_DAY } from '@progress/kendo-date-math';
 import { classNames } from '@progress/kendo-react-common';
 import { DropDownList, ListItemProps } from '@progress/kendo-react-dropdowns';
 
-import { ReactComponent as areaIcon } from '../../icons/area.svg';
-import { ReactComponent as lineIcon } from '../../icons/line.svg';
-import { ReactComponent as candleIcon } from '../../icons/candle.svg';
+import areaIcon from '../../icons/area.svg?react';
+import lineIcon from '../../icons/line.svg?react';
+import candleIcon from '../../icons/candle.svg?react';
 import {
     StockChart,
     ChartSeries,

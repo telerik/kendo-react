@@ -1,9 +1,10 @@
 import * as React from 'react';
 import styles from './header.module.scss';
-import headerBg from '../../images/header-bg.svg';
 import { DropDownList, DropDownListChangeEvent } from '@progress/kendo-react-dropdowns';
 import { CURRENCY, CurrencyContext } from '../../context/CurrencyContext';
 import { classNames } from '@progress/kendo-react-common';
+
+const headerBg = `${import.meta.env.BASE_URL}header-bg.svg`;
 import userImg from '../../images/user.jpg';
 import { Link } from 'react-router-dom';
 
