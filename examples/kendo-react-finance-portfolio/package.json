@@ -48,6 +48,7 @@
     "react-transition-group": "4.4.2"
   },
   "devDependencies": {
+    "@types/jquery": "^3.5.34",
     "@types/node": "^20.10.5",
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",
