@@ -35,13 +35,13 @@ export const dataService = {
             [SECTOR.HEALTHCARE]: 'health-symbols',
             [SECTOR.TECHNOLOGY]: 'tech-symbols',
         }
-        const resp = await fetch(`${process.env.PUBLIC_URL}/data/${sectorMap[sector]}.json`);
+        const resp = await fetch(`${import.meta.env.BASE_URL}data/${sectorMap[sector]}.json`);
         const symbols = await resp.json();
         return symbols.data;
     },
     getAllSymbols: async () => {
-        const health = await fetch(`${process.env.PUBLIC_URL}/data/health-symbols.json`);
-        const tech = await fetch(`${process.env.PUBLIC_URL}/data/tech-symbols.json`);
+        const health = await fetch(`${import.meta.env.BASE_URL}data/health-symbols.json`);
+        const tech = await fetch(`${import.meta.env.BASE_URL}data/tech-symbols.json`);
 
         const healthSymbols = await health.json();
         const techSymbols = await tech.json();
@@ -49,12 +49,12 @@ export const dataService = {
         return healthSymbols.data.concat(techSymbols.data);
     },
     getOneDaySymbol: async (symbol: any) => {
-        const resp = await fetch(`${process.env.PUBLIC_URL}/data/symbols/${symbol}1D.json`);
+        const resp = await fetch(`${import.meta.env.BASE_URL}data/symbols/${symbol}1D.json`);
         const data = await resp.json();
         return processData(data);
     },
     getSymbol: async (symbol: any) => {
-        const resp = await fetch(`${process.env.PUBLIC_URL}/data/symbols/${symbol}5M.json`);
+        const resp = await fetch(`${import.meta.env.BASE_URL}data/symbols/${symbol}5M.json`);
         const data = await resp.json();
 
         return processData(data);

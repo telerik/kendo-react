@@ -1,9 +1,11 @@
 import * as React from 'react';
 import styles from './footer.module.scss';
-import footerBg from '../../images/footer-bg.svg';
-import { ReactComponent as ProgressLogo } from '../../icons/progress-logo.svg';
+import ProgressLogo from '../../icons/progress-logo.svg?react';
+
+const footerBg = `${import.meta.env.BASE_URL}footer-bg.svg`;
 
 export const Footer = () => {
+    console.log(footerBg)
     return (
         <footer
             className={styles.footer}
