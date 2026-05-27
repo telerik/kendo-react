@@ -5,7 +5,6 @@ import ProgressLogo from '../../icons/progress-logo.svg?react';
 const footerBg = `${import.meta.env.BASE_URL}footer-bg.svg`;
 
 export const Footer = () => {
-    console.log(footerBg)
     return (
         <footer
             className={styles.footer}
