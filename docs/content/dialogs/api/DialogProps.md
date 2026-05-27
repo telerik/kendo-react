@@ -631,51 +631,6 @@ The styles that are applied to the Dialog.
 <td class="table-cell-name">
 
 
-#### themeColor?
-
-
-</td>
-<td type class="table-cell-type">
-
-
-<code>
-
-
-"primary" | "dark" | "light"
-
-
-</code>
-
-
-</td>
-<td class="table-cell-default">
-
-
-
-
-</td>
-<td class="table-cell-comment">
-
-
-Configures the `themeColor` of the Dialog.
-
-The available options are:
-- primary
-- dark
-- light
-
-```jsx
-<Dialog themeColor="dark" />
-```
-
-
-
-</td>
-</tr>
-<tr>
-<td class="table-cell-name">
-
-
 #### title?
 
 
@@ -708,6 +663,42 @@ Sets the title of the Dialog ([see example](https://www.telerik.com/kendo-react-
 <Dialog title="Dialog Title" />
 ```
 
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
+#### webMcp?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+boolean | WebMcpProps
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Enables Web MCP tool registration for this component.
+Requires a parent `WebMcpProvider` from `@progress/kendo-react-webmcp`.
 
 
 </td>

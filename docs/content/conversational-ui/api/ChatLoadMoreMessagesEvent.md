@@ -8,7 +8,7 @@ slug: api_conversational-ui_chatloadmoremessagesevent
 
 # ChatLoadMoreMessagesEvent
 Arguments for the `onLoadMoreMessages` event of the Chat.
-Fires in remote mode (`messages.length < total`) when the user scrolls near the edge
+Fires in endless scroll mode when the user scrolls near the edge
 of the rendered message window.
 
 
@@ -52,7 +52,7 @@ number
 <td class="table-cell-comment">
 
 
-The end index of the requested message range (exclusive).
+The end index of the full message range that should be rendered (exclusive).
 
 
 </td>
@@ -87,7 +87,7 @@ number
 <td class="table-cell-comment">
 
 
-The start index of the requested message range (inclusive).
+The start index of the full message range that should be rendered (inclusive).
 
 
 </td>

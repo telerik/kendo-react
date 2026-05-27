@@ -73,13 +73,10 @@ const App = () => {
         if (!MessageBoxTemplate) {
             return undefined;
         }
-        const ClosureBox = (chatProps: EnhancedMessageBoxProps) => (
-            <MessageBoxTemplate
-                {...chatProps}
-                onSendMessage={handleSend}
-            />
+        const ClosureBox = (chatProps: React.PropsWithChildren<EnhancedMessageBoxProps>) => (
+            <MessageBoxTemplate {...chatProps} onSendMessage={handleSend} />
         );
-        return ClosureBox;
+        return ClosureBox as React.ComponentType<any>;
     }, [MessageBoxTemplate, handleSend]);
 
     return (

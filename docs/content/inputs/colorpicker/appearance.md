@@ -4,7 +4,6 @@ description: 'Add alternative styling options to the KendoReact ColorPicker in R
 components: ['colorpicker']
 slug: appearance_colorpicker
 position: 6
-tag: updated
 ---
 
 # Appearance

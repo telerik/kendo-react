@@ -1,0 +1,50 @@
+.tab-title-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    user-select: none;
+    cursor: grab;
+    padding: 2px 4px;
+}
+
+.tab-title-wrapper:active {
+    cursor: grabbing;
+}
+
+.tab-title-wrapper.dragging {
+    opacity: 0.4;
+}
+
+.reorder-icon {
+    opacity: 0.6;
+}
+
+.tab-title-wrapper:hover .reorder-icon {
+    opacity: 1;
+}
+
+.tab-title-wrapper.drop-before::before,
+.tab-title-wrapper.drop-after::after {
+    content: '';
+    position: absolute;
+    top: -6px;
+    bottom: -6px;
+    width: 3px;
+    background-color: #ff6358;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.tab-title-wrapper.drop-before::before {
+    left: -8px;
+}
+
+.tab-title-wrapper.drop-after::after {
+    right: -8px;
+}
+
+.k-tabstrip-content p {
+    margin: 0;
+    padding: 8px;
+}

@@ -3,7 +3,7 @@ import { RadioButton } from '@progress/kendo-react-inputs';
 import { Label } from '@progress/kendo-react-labels';
 
 const App = () => {
-    const [theme, setTheme] = React.useState<string>('light');
+    const [theme, setTheme] = React.useState<string>('base');
 
     const handleChange = (event: any) => {
         setTheme(event.value);
@@ -30,14 +30,14 @@ const App = () => {
                 }}
             >
                 <RadioButton
-                    id="theme-light"
+                    id="theme-base"
                     name="theme"
-                    value="light"
-                    checked={theme === 'light'}
+                    value="base"
+                    checked={theme === 'base'}
                     onChange={handleChange}
                 >
-                    <Label editorId="theme-light" className="k-radio-label" style={{ display: 'inline-block' }}>
-                        🌞 Light Mode <strong style={{ color: 'blue' }}>Enabled</strong>
+                    <Label editorId="theme-base" className="k-radio-label" style={{ display: 'inline-block' }}>
+                        🌞 base Mode <strong style={{ color: 'blue' }}>Enabled</strong>
                     </Label>
                 </RadioButton>
             </div>
@@ -68,7 +68,7 @@ const App = () => {
                 <span
                     style={{
                         marginLeft: '8px',
-                        color: theme === 'light' ? 'blue' : 'purple'
+                        color: theme === 'base' ? 'blue' : 'purple'
                     }}
                 >
                     {theme.charAt(0).toUpperCase() + theme.slice(1)} Mode

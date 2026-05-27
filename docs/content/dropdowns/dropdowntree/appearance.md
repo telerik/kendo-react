@@ -4,7 +4,6 @@ description: 'Add alternative styling options to the KendoReact DropDownTree in 
 components: ['dropdowntree']
 slug: appearance_dropdowntree
 position: 7
-tag: updated
 ---
 
 # Appearance

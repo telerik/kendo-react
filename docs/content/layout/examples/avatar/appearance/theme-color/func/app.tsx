@@ -2,9 +2,7 @@ import * as React from 'react';
 
 import { Avatar } from '@progress/kendo-react-layout';
 
-const themeColors: Array<
-    'primary' | 'secondary' | 'tertiary' | 'info' | 'success' | 'error' | 'warning' | 'dark' | 'light' | 'inverse'
-> = ['primary', 'secondary', 'tertiary', 'info', 'success', 'error', 'warning', 'dark', 'light', 'inverse'];
+const themeColors: Array<'primary' | 'secondary' | 'tertiary' | 'base'> = ['primary', 'secondary', 'tertiary', 'base'];
 
 const App = () => {
     return (

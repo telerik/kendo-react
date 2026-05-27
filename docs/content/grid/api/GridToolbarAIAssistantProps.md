@@ -124,6 +124,50 @@ Customizes the AI prompt component.
 <td class="table-cell-name">
 
 
+#### httpClient?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+[GridAIHttpClient]({% slug api_grid_gridaihttpclient %})
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Optional custom HTTP client for the AI assistant.
+When not provided, the component uses the built-in fetch-based transport.
+
+```tsx
+import axios from 'axios';
+import { createAxiosAIClient } from '@progress/kendo-react-grid';
+
+<GridToolbarAIAssistant httpClient={createAxiosAIClient(axios)} />
+```
+
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### icon?
 
 
@@ -334,7 +378,7 @@ Called when the response returns an error.
 <code>
 
 
-(response: AxiosResponse&lt;any&gt;, promptMessage?: string, isRetry?: boolean) => void
+(response: [GridAIResponse]({% slug api_grid_gridairesponse %})&lt;any&gt;, promptMessage?: string, isRetry?: boolean) => void
 
 
 </code>
@@ -351,6 +395,9 @@ Called when the response returns an error.
 
 
 Called when the response is received.
+
+
+
 
 ```jsx
 <GridToolbarAIAssistant onResponseSuccess={(response) => console.log(response)} />
@@ -454,7 +501,7 @@ Defines the placeholder text for the AI prompt input.
 <code>
 
 
-AxiosRequestConfig&lt;any&gt;
+[GridAIRequestConfig]({% slug api_grid_gridairequestconfig %})
 
 
 </code>
@@ -470,7 +517,11 @@ AxiosRequestConfig&lt;any&gt;
 <td class="table-cell-comment">
 
 
-Defines the options for the axios request.
+Defines the options for the HTTP request.
+Accepts both the new `GridAIRequestConfig` and the legacy `AxiosRequestConfig`.
+
+
+
 
 ```jsx
 <GridToolbarAIAssistant requestOptions={{ timeout: 5000 }} />

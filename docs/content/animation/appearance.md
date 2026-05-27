@@ -5,6 +5,7 @@ components: ["animation"]
 slug: appearance_animation
 position: 11
 tag: updated
+release_tag: Q2 2026
 ---
 
 # Appearance

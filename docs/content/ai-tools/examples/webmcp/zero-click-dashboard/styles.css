@@ -1,0 +1,299 @@
+.zcd {
+    background:
+        radial-gradient(ellipse at 20% 15%, rgba(99, 64, 184, 0.45) 0%, rgba(99, 64, 184, 0) 55%),
+        radial-gradient(ellipse at 80% 85%, rgba(45, 28, 110, 0.55) 0%, rgba(45, 28, 110, 0) 60%),
+        linear-gradient(135deg, #1a1140 0%, #120c2e 45%, #0a0820 100%);
+    min-height: 100vh;
+    padding: 18px 28px 28px 28px;
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+    color: #e6ebf2;
+}
+
+/* Dark scrollbars inside Kendo components on this page. */
+.zcd .k-grid-content,
+.zcd .k-grid-content-locked,
+.zcd .k-scheduler-content,
+.zcd .k-scheduler-body,
+.zcd .k-scheduler-times,
+.zcd .k-scheduler-table-wrap,
+.zcd .k-scrollable,
+.zcd .k-virtual-scrollable-wrap,
+.zcd .k-spreadsheet-scroller,
+.zcd .k-panel,
+.zcd .zcd-panel {
+    scrollbar-color: #4a3a8a #1a1140;
+    scrollbar-width: thin;
+}
+
+.zcd .k-grid-content::-webkit-scrollbar,
+.zcd .k-grid-content-locked::-webkit-scrollbar,
+.zcd .k-scheduler-content::-webkit-scrollbar,
+.zcd .k-scheduler-body::-webkit-scrollbar,
+.zcd .k-scheduler-times::-webkit-scrollbar,
+.zcd .k-scheduler-table-wrap::-webkit-scrollbar,
+.zcd .k-scrollable::-webkit-scrollbar,
+.zcd .k-virtual-scrollable-wrap::-webkit-scrollbar,
+.zcd .k-spreadsheet-scroller::-webkit-scrollbar,
+.zcd .zcd-panel::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.zcd .k-grid-content::-webkit-scrollbar-track,
+.zcd .k-grid-content-locked::-webkit-scrollbar-track,
+.zcd .k-scheduler-content::-webkit-scrollbar-track,
+.zcd .k-scheduler-body::-webkit-scrollbar-track,
+.zcd .k-scheduler-times::-webkit-scrollbar-track,
+.zcd .k-scheduler-table-wrap::-webkit-scrollbar-track,
+.zcd .k-scrollable::-webkit-scrollbar-track,
+.zcd .k-virtual-scrollable-wrap::-webkit-scrollbar-track,
+.zcd .k-spreadsheet-scroller::-webkit-scrollbar-track,
+.zcd .zcd-panel::-webkit-scrollbar-track {
+    background: rgba(20, 14, 50, 0.6);
+}
+
+.zcd .k-grid-content::-webkit-scrollbar-thumb,
+.zcd .k-grid-content-locked::-webkit-scrollbar-thumb,
+.zcd .k-scheduler-content::-webkit-scrollbar-thumb,
+.zcd .k-scheduler-body::-webkit-scrollbar-thumb,
+.zcd .k-scheduler-times::-webkit-scrollbar-thumb,
+.zcd .k-scheduler-table-wrap::-webkit-scrollbar-thumb,
+.zcd .k-scrollable::-webkit-scrollbar-thumb,
+.zcd .k-virtual-scrollable-wrap::-webkit-scrollbar-thumb,
+.zcd .k-spreadsheet-scroller::-webkit-scrollbar-thumb,
+.zcd .zcd-panel::-webkit-scrollbar-thumb {
+    background: #4a3a8a;
+    border-radius: 6px;
+    border: 2px solid rgba(20, 14, 50, 0.6);
+}
+
+.zcd .k-grid-content::-webkit-scrollbar-thumb:hover,
+.zcd .k-grid-content-locked::-webkit-scrollbar-thumb:hover,
+.zcd .k-scheduler-content::-webkit-scrollbar-thumb:hover,
+.zcd .k-scheduler-body::-webkit-scrollbar-thumb:hover,
+.zcd .k-scheduler-times::-webkit-scrollbar-thumb:hover,
+.zcd .k-scheduler-table-wrap::-webkit-scrollbar-thumb:hover,
+.zcd .k-scrollable::-webkit-scrollbar-thumb:hover,
+.zcd .k-virtual-scrollable-wrap::-webkit-scrollbar-thumb:hover,
+.zcd .k-spreadsheet-scroller::-webkit-scrollbar-thumb:hover,
+.zcd .zcd-panel::-webkit-scrollbar-thumb:hover {
+    background: #6450b8;
+}
+
+.zcd .k-grid-content::-webkit-scrollbar-corner,
+.zcd .k-scheduler-content::-webkit-scrollbar-corner {
+    background: rgba(20, 14, 50, 0.6);
+}
+
+.zcd-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 4px 18px 4px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    margin-bottom: 18px;
+}
+
+.zcd-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #e6ebf2;
+}
+
+.zcd-brand-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #22d3ee;
+    box-shadow: 0 0 8px rgba(34, 211, 238, 0.7);
+}
+
+.zcd-brand-tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 10px;
+    background: rgba(34, 211, 238, 0.15);
+    color: #67e8f9;
+    border: 1px solid rgba(34, 211, 238, 0.35);
+}
+
+.zcd-tools-count {
+    font-size: 12px;
+    color: #94a3b8;
+    font-family: 'SF Mono', Menlo, Consolas, monospace;
+}
+
+.zcd-section-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 16px 0;
+}
+
+.zcd-section-head h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    color: #f8fafc;
+}
+
+.zcd-filter-chip {
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #cbd5e1;
+}
+
+.zcd-kpi-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+.zcd-kpi-card {
+    background: #111a2e;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    padding: 16px 18px;
+}
+
+.zcd-kpi-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #94a3b8;
+    margin-bottom: 8px;
+}
+
+.zcd-kpi-value {
+    font-size: 26px;
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 6px;
+}
+
+.zcd-kpi-delta {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.delta-up { color: #34d399; }
+.delta-down { color: #f87171; }
+.delta-pos { color: #34d399; font-weight: 600; }
+.delta-neg { color: #f87171; font-weight: 600; }
+.revenue-pos { color: #34d399; }
+.revenue-neg { color: #f87171; }
+
+.zcd-panel {
+    background: #111a2e;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    padding: 14px 16px 16px 16px;
+}
+
+.zcd-panel-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #94a3b8;
+    margin: 0 0 12px 0;
+}
+
+.zcd-mid-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+.zcd-bottom-row {
+    margin-bottom: 14px;
+}
+
+/* Dark theme overrides for Kendo components */
+.zcd .k-grid {
+    background: #111a2e;
+    color: #e6ebf2;
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+.zcd .k-grid .k-grid-header,
+.zcd .k-grid .k-grid-header-wrap,
+.zcd .k-grid th.k-header,
+.zcd .k-grid .k-table-th {
+    background: #0e172a;
+    color: #cbd5e1;
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+.zcd .k-grid td,
+.zcd .k-grid .k-table-td {
+    background: #111a2e;
+    color: #e6ebf2;
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+.zcd .k-grid tr:hover td {
+    background: rgba(34, 211, 238, 0.06);
+}
+
+.zcd .k-scheduler {
+    background: #111a2e;
+    color: #e6ebf2;
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+.zcd .k-scheduler-toolbar,
+.zcd .k-scheduler-header,
+.zcd .k-scheduler-times,
+.zcd .k-scheduler-content {
+    background: #0e172a;
+    color: #cbd5e1;
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+.zcd .k-scheduler .k-event {
+    background: #22d3ee;
+    color: #0b1220;
+    border-color: #22d3ee;
+}
+
+.zcd .k-chart {
+    background: transparent;
+}
+
+/* Prompt rows */
+.zcd-prompts {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.zcd-prompt-row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    font-size: 12px;
+    color: #94a3b8;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 6px;
+    padding: 8px 12px;
+}
+
+.zcd-prompt-label {
+    font-weight: 700;
+    color: #67e8f9;
+    white-space: nowrap;
+}

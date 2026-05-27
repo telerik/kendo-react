@@ -45,6 +45,9 @@ position: 1
         <a href="{% slug api_grid_gridcolumn %}">GridColumn</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_grid_gridcolumncellssettings %}">GridColumnCellsSettings</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_grid_gridcolumnmenucolumnschooser %}">GridColumnMenuColumnsChooser</a>
     </li>
     <li class="api-item">
@@ -96,6 +99,9 @@ position: 1
         <a href="{% slug api_grid_gridtoolbarspacer %}">GridToolbarSpacer</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_grid_gridwebmcptoolscallback %}">GridWebMcpToolsCallback</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_grid_operators %}">operators</a>
     </li>
     <li class="api-item">
@@ -133,6 +139,9 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_grid_combinesmartfilters %}">combineSmartFilters</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_grid_createaxiosaiclient %}">createAxiosAIClient</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_grid_getselectedstate %}">getSelectedState</a>
@@ -180,10 +189,19 @@ position: 1
         <a href="{% slug api_grid_gridaiassistantcommand %}">GridAIAssistantCommand</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_grid_gridaihttpclient %}">GridAIHttpClient</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_grid_gridaipromptprops %}">GridAIPromptProps</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_grid_gridairequestconfig %}">GridAIRequestConfig</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_grid_gridairequestdata %}">GridAIRequestData</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_grid_gridairesponse %}">GridAIResponse</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_grid_gridairesponseresult %}">GridAIResponseResult</a>
@@ -486,10 +504,16 @@ position: 1
         <a href="{% slug api_grid_gridtoolbarspacerprops %}">GridToolbarSpacerProps</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_grid_gridwebmcptoolshelpers %}">GridWebMcpToolsHelpers</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_grid_headerhandle %}">HeaderHandle</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_grid_historyitem %}">HistoryItem</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_grid_mcptooloption %}">McpToolOption</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_grid_page %}">Page</a>
@@ -706,6 +730,9 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_grid_gridrowtype %}">GridRowType</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_grid_gridwebmcpprops %}">GridWebMcpProps</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_grid_scrollmode %}">ScrollMode</a>

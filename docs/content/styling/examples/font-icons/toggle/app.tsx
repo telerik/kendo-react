@@ -1,57 +1,47 @@
 import * as React from 'react';
 
 const App = () => {
-	return (
-		<>
-			<link rel="stylesheet" href="https://unpkg.com/@progress/kendo-theme-default@latest/dist/all.css" />
-			<link rel="stylesheet" href="https://unpkg.com/@progress/kendo-font-icons/dist/index.css" />
-			<ul className="WebComponentsIcons">
-				<li>
-					<span className="k-icon k-font-icon k-i-heart-outline"></span> .k-i-heart-outline
-					<br /> .k-i-fav-outline
-					<br />
-					.k-i-favorite-outline
-				</li>
-				<li>
-					<span className="k-icon k-font-icon k-i-heart"></span> .k-i-heart
-					<br /> .k-i-fav
-					<br /> .k-i-favorite
-				</li>
-				<li>
-					<span className="k-icon k-font-icon k-i-star-outline"></span> .k-i-star-outline
-					<br /> .k-i-bookmark-outline
-				</li>
-				<li>
-					<span className="k-icon k-font-icon k-i-star"></span> .k-i-star
-					<br /> .k-i-bookmark
-				</li>
-				<li>
-					<span className="k-icon k-font-icon k-i-checkbox"></span> .k-i-checkbox
-					<br /> .k-i-shape-rect
-				</li>
-				<li>
-					<span className="k-icon k-font-icon k-i-checkbox-checked"></span> .k-i-checkbox-checked
-				</li>
-				<li>
-					<span className="k-icon k-font-icon k-i-tri-state-indeterminate"></span>{' '}
-					.k-i-tri-state-indeterminate
-				</li>
-				<li>
-					<span className="k-icon k-font-icon k-i-tri-state-null"></span> .k-i-tri-state-null
-				</li>
-				<li>
-					<span className="k-icon k-font-icon k-i-circle"></span> .k-i-circle
-				</li>
-				<li>
-					<span className="k-icon k-font-icon k-i-radiobutton"></span> .k-i-radiobutton
-					<br /> .k-i-shape-circle
-				</li>
-				<li>
-					<span className="k-icon k-font-icon k-i-radiobutton-checked"></span> .k-i-radiobutton-checked
-				</li>
-			</ul>
-			<style>
-				{`
+    return (
+        <>
+            <link rel="stylesheet" href="https://unpkg.com/@progress/kendo-theme-default@latest/dist/all.css" />
+            <link rel="stylesheet" href="https://unpkg.com/@progress/kendo-font-icons@5/dist/index.css" />
+            <ul className="WebComponentsIcons">
+                <li>
+                    <span className="k-icon k-font-icon k-i-heart"></span> .k-i-heart .k-i-favorite-outline
+                </li>
+                <li>
+                    <span className="k-icon k-font-icon k-i-heart"></span> .k-i-heart
+                </li>
+                <li>
+                    <span className="k-icon k-font-icon k-i-star"></span> .k-i-star
+                </li>
+                <li>
+                    <span className="k-icon k-font-icon k-i-star"></span> .k-i-star
+                </li>
+                <li>
+                    <span className="k-icon k-font-icon k-i-checkbox"></span> .k-i-checkbox
+                </li>
+                <li>
+                    <span className="k-icon k-font-icon k-i-checkbox-checked"></span> .k-i-checkbox-checked
+                </li>
+                <li>
+                    <span className="k-icon k-font-icon k-i-checkbox-indeterminate"></span> .k-i-checkbox-indeterminate
+                </li>
+                <li>
+                    <span className="k-icon k-font-icon k-i-checkbox-null"></span> .k-i-checkbox-null
+                </li>
+                <li>
+                    <span className="k-icon k-font-icon k-i-circle"></span> .k-i-circle
+                </li>
+                <li>
+                    <span className="k-icon k-font-icon k-i-radiobutton"></span> .k-i-radiobutton
+                </li>
+                <li>
+                    <span className="k-icon k-font-icon k-i-radiobutton-checked"></span> .k-i-radiobutton-checked
+                </li>
+            </ul>
+            <style>
+                {`
         .WebComponentsIcons {
             list-style: none;
             margin: 0;
@@ -121,9 +111,9 @@ const App = () => {
         .ref-icon {
             width: 60px;
         }`}
-			</style>
-		</>
-	);
+            </style>
+        </>
+    );
 };
 
 export default App;

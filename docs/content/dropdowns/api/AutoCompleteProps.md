@@ -244,6 +244,49 @@ For example these elements could contain error or hint message.
 <td class="table-cell-name">
 
 
+#### ariaLabel?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+string
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Defines a string value that labels the component.
+
+```jsx
+<AutoComplete ariaLabel="Search" />
+```
+
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### ariaLabelledBy?
 
 
@@ -2130,6 +2173,42 @@ Fires when the AutoComplete input element is about to be rendered. Use it to ove
 <AutoComplete valueRender={(rendering) => <span>{rendering}</span>} />
 ```
 
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
+#### webMcp?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+boolean | WebMcpProps
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Enables Web MCP tool registration for this component.
+Requires a parent `WebMcpProvider` from `@progress/kendo-react-webmcp`.
 
 
 </td>

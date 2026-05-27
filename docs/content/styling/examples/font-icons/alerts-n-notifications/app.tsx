@@ -1,31 +1,26 @@
 import * as React from 'react';
 
 const App = () => {
-	return (
-		<>
-			<link rel="stylesheet" href="https://unpkg.com/@progress/kendo-theme-default@latest/dist/all.css" />
-			<link rel="stylesheet" href="https://unpkg.com/@progress/kendo-font-icons/dist/index.css" />
-			<ul className="WebComponentsIcons">
-				<li>
-					<span className="k-icon k-font-icon k-i-notification"></span> .k-i-notification
-					<br /> .k-i-bell
-				</li>
-				<li>
-					<span className="k-icon k-font-icon k-i-information"></span> .k-i-information
-					<br /> .k-i-info
-				</li>
-				<li>
-					<span className="k-icon k-font-icon k-i-question"></span> .k-i-question
-					<br /> .k-i-help
-				</li>
-				<li>
-					<span className="k-icon k-font-icon k-i-warning"></span> .k-i-warning
-					<br /> .k-i-exception
-					<br /> .k-i-error
-				</li>
-			</ul>
-			<style>
-				{`
+    return (
+        <>
+            <link rel="stylesheet" href="https://unpkg.com/@progress/kendo-theme-default@latest/dist/all.css" />
+            <link rel="stylesheet" href="https://unpkg.com/@progress/kendo-font-icons@5/dist/index.css" />
+            <ul className="WebComponentsIcons">
+                <li>
+                    <span className="k-icon k-font-icon k-i-bell"></span> .k-i-bell
+                </li>
+                <li>
+                    <span className="k-icon k-font-icon k-i-info-circle"></span> .k-i-info-circle
+                </li>
+                <li>
+                    <span className="k-icon k-font-icon k-i-question-circle"></span> .k-i-question-circle
+                </li>
+                <li>
+                    <span className="k-icon k-font-icon k-i-exclamation-circle"></span> .k-i-exclamation-circle
+                </li>
+            </ul>
+            <style>
+                {`
         .WebComponentsIcons {
             list-style: none;
             margin: 0;
@@ -95,9 +90,9 @@ const App = () => {
         .ref-icon {
             width: 60px;
         }`}
-			</style>
-		</>
-	);
+            </style>
+        </>
+    );
 };
 
 export default App;

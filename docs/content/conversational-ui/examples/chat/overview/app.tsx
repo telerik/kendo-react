@@ -10,9 +10,9 @@ import { Button } from '@progress/kendo-react-buttons';
 import { SVGIcon } from '@progress/kendo-react-common';
 import {
     trashIcon,
-    thumbUpOutlineIcon,
-    thumbDownOutlineIcon,
-    arrowsRotateOutlineIcon
+    thumbUpIcon,
+    thumbDownIcon,
+    arrowsRotateIcon
 } from '@progress/kendo-svg-icons';
 import { setOptions } from 'marked';
 import { ChatAIService } from './data-service';
@@ -109,9 +109,9 @@ const CodeBlock = ({ language, code }: CodeBlockProps) => {
 const ChatFeedback = () => {
     return (
         <div style={{ display: 'flex', gap: 8, marginTop: 10 }}>
-            <Button fillMode="flat" size="small" svgIcon={thumbUpOutlineIcon} />
-            <Button fillMode="flat" size="small" svgIcon={thumbDownOutlineIcon} />
-            <Button fillMode="flat" size="small" svgIcon={arrowsRotateOutlineIcon} />
+            <Button fillMode="flat" size="small" svgIcon={thumbUpIcon} />
+            <Button fillMode="flat" size="small" svgIcon={thumbDownIcon} />
+            <Button fillMode="flat" size="small" svgIcon={arrowsRotateIcon} />
         </div>
     );
 };

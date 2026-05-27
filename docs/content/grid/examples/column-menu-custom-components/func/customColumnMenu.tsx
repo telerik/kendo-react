@@ -106,7 +106,7 @@ export const CustomColumnMenu = (props: CustomColumnMenuProps) => {
                                 const visibleCount = props.columns.reduce((acc, _, idx) => {
                                     const v = formRenderProps.valueGetter
                                         ? formRenderProps.valueGetter(`col_${idx}`)
-                                        : formRenderProps.dataValue?.[`col_${idx}`];
+                                        : formRenderProps.values?.[`col_${idx}`];
                                     return acc + (v ? 1 : 0);
                                 }, 0);
 
@@ -118,7 +118,7 @@ export const CustomColumnMenu = (props: CustomColumnMenuProps) => {
                                                 const currentVal =
                                                     (formRenderProps.valueGetter
                                                         ? formRenderProps.valueGetter(name)
-                                                        : formRenderProps.dataValue?.[name]) ?? initialValues[name];
+                                                        : formRenderProps.values?.[name]) ?? initialValues[name];
                                                 const isLastVisible = !!currentVal && visibleCount === 1;
 
                                                 return (

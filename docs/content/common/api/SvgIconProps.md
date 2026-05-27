@@ -399,13 +399,54 @@ The possible values are:
 * `success`&mdash; Applies coloring based on success theme color.
 * `warning`&mdash; Applies coloring based on warning theme color.
 * `error`&mdash; Applies coloring based on error theme color.
-* `dark`&mdash; Applies coloring based on dark theme color.
-* `light`&mdash; Applies coloring based on light theme color.
 * `inverse`&mdash; Applies coloring based on inverse theme color.
 
 If the property is not set, the icon inherits the color from its parent.
 
 You can use the `style` prop to apply custom color related properties to the icon.
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
+#### variant?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+[IconVariant]({% slug api_common_iconvariant %})
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Specifies the variant of the SVG icon to render.
+
+The possible values are:
+* `solid`&mdash;Renders the solid variant of the icon.
+* `outline`&mdash;Renders the outline variant of the icon.
+* `duotone`&mdash;Renders the duotone variant of the icon.
+
+Custom variant names are also supported if the icon defines them.
+If the specified variant is not available, the default icon content is rendered.
 
 
 </td>

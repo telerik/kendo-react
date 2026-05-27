@@ -279,7 +279,7 @@ Selected state
 <code>
 
 
-{ large?: string; medium?: string; small?: string; }
+{ large?: string; medium?: string; small?: string; xs?: string; }
 
 
 </code>
@@ -314,7 +314,7 @@ Size options for the button
 <code>
 
 
-{ base?: string; dark?: string; error?: string; info?: string; inverse?: string; light?: string; primary?: string; secondary?: string; success?: string; tertiary?: string; warning?: string; }
+{ base?: string; error?: string; info?: string; inverse?: string; primary?: string; secondary?: string; success?: string; tertiary?: string; warning?: string; }
 
 
 </code>

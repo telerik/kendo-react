@@ -1231,7 +1231,7 @@ Configures the field that will be used for the text of the `items`. `textField` 
 <code>
 
 
-"base" | "error" | "primary" | "secondary" | "tertiary" | "info" | "success" | "warning" | "dark" | "light" | "inverse"
+"base" | "error" | "primary" | "secondary" | "tertiary" | "info" | "success" | "warning" | "inverse"
 
 
 </code>

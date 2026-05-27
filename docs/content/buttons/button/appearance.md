@@ -86,8 +86,6 @@ The [`themeColor`]({% slug api_buttons_buttonprops %}#toc-themecolor) option sup
 -   `success`&mdash;Applies coloring based on the `success` theme color.
 -   `warning`&mdash;Applies coloring based on the `warning` theme color.
 -   `error`&mdash;Applies coloring based on the `error` theme color.
--   `dark`&mdash;Applies coloring based on the `dark` theme color.
--   `light`&mdash;Applies coloring based on the `light` theme color.
 -   `inverse`&mdash;Applies coloring based on the `inverse` theme color.
 
 The following example demonstrates how to define the theme color of the Button.

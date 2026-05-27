@@ -24,6 +24,54 @@ Represents the props of the [KendoReact Loader component](https://www.telerik.co
 <td class="table-cell-name">
 
 
+#### ariaLabel?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+string
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+<code>
+
+
+'Loading'
+
+
+</code>
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Sets the `aria-label` attribute of the Loader.
+
+
+
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### className?
 
 
@@ -163,16 +211,10 @@ Sets additional CSS styles to the Loader.
 Specifies the theme color of the Loader.
 
 The possible values are:
+* `base`&mdash;Applies coloring based on base theme color.
 * `primary` (Default)&mdash;Applies coloring based on primary theme color.
 * `secondary`&mdash;Applies coloring based on secondary theme color.
 * `tertiary`&mdash; Applies coloring based on tertiary theme color.
-* `info`&mdash;Applies coloring based on info theme color.
-* `success`&mdash; Applies coloring based on success theme color.
-* `warning`&mdash; Applies coloring based on warning theme color.
-* `error`&mdash; Applies coloring based on error theme color.
-* `dark`&mdash; Applies coloring based on dark theme color.
-* `light`&mdash; Applies coloring based on light theme color.
-* `inverse`&mdash; Applies coloring based on inverse theme color.
 
 
 </td>

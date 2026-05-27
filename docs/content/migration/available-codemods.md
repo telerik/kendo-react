@@ -5,6 +5,7 @@ components: ['general']
 slug: available_codemods
 position: 3
 tag: new
+release_tag: Q2 2026
 ---
 
 # Available Codemods
@@ -12,6 +13,11 @@ tag: new
 This page outlines the available codemods for migrating from KendoReact v10.0.0 to each version up until the latest.
 
 <Row>
+  <Column count={[24,24,8]} style={{marginBottom: "1rem"}}>
+    <Component className="tile" href="#kendoreact-v14-0-0-to-v15-0-0">
+      <ComponentTitle>From v14 to v15</ComponentTitle>
+    </Component>
+  </Column>
   <Column count={[24,24,8]} style={{marginBottom: "1rem"}}>
     <Component className="tile" href="#kendoreact-v10-0-0-to-v11-0-0">
       <ComponentTitle>From v10 to v11</ComponentTitle>
@@ -28,6 +34,95 @@ This page outlines the available codemods for migrating from KendoReact v10.0.0 
     </Component>
   </Column>
 </Row>
+
+## KendoReact v14.0.0 to v15.0.0
+
+### Quick Guide
+
+To migrate a specific KendoReact package from v14.0.0 to v15.0.0, run the following command in your project root:
+
+```bash
+npx @progress/kendo-cli migrate @progress/kendo-react-<package-name> --from=14 --to=15
+```
+
+> If not already installed, you will be prompted to install the Kendo CLI when running this command for the first time.
+
+### Buttons
+
+```bash
+npx @progress/kendo-cli migrate @progress/kendo-react-buttons --from=14 --to=15
+```
+
+The following table outlines the specific Buttons codemod transformations:
+
+| Codemod                         | Description                                                                                                                                                                                              |
+| ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `themeColor type narrowing`     | Removes unsupported `themeColor` values (`'dark'`, `'light'`) from `Button`, `DropDownButton`, and `SplitButton`. Adds a TODO comment indicating the removed value.                                      |
+| `FAB themeColor type narrowing` | Removes unsupported `themeColor` values (`'info'`, `'success'`, `'warning'`, `'error'`, `'dark'`, `'light'`, `'inverse'`) from `FloatingActionButton`. Adds a TODO comment indicating the removed value. |
+
+### Common (SVG Icons)
+
+```bash
+npx @progress/kendo-cli migrate @progress/kendo-react-common --from=14 --to=15
+```
+
+The following table outlines the specific Common codemod transformations:
+
+| Codemod                          | Description                                                                                                                                                                                                                                                                                                                                                                                                         |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Icon rename`                    | <ul><li>Renames removed/deprecated SVG icon imports from `@progress/kendo-svg-icons` v4 to v5 (167 icons).</li><li>Updates import specifiers (e.g., `caretAltDownIcon` → `chevronDownIcon`).</li><li>Updates `icon` string props (e.g., `icon="caret-alt-down"` → `icon="chevron-down"`).</li><li>Adds TODO comments for 6 icons removed without replacement.</li><li>Deduplicates imports after renames.</li></ul> |
+| `Icon themeColor type narrowing` | Removes unsupported `themeColor` values (`'dark'`, `'light'`) from `Icon` and `SvgIcon`. Adds a TODO comment indicating the removed value.                                                                                                                                                                                                                                                                          |
+
+### Indicators
+
+```bash
+npx @progress/kendo-cli migrate @progress/kendo-react-indicators --from=14 --to=15
+```
+
+The following table outlines the specific Indicators codemod transformations:
+
+| Codemod                            | Description                                                                                                                                                                                |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `Badge themeColor type narrowing`  | Removes unsupported `themeColor` values (`'dark'`, `'light'`, `'inverse'`, `'inherit'`) from `Badge`. Adds a TODO comment indicating the removed value.                                    |
+| `Loader themeColor type narrowing` | Removes unsupported `themeColor` values (`'info'`, `'success'`, `'warning'`, `'error'`, `'dark'`, `'light'`, `'inverse'`) from `Loader`. Adds a TODO comment indicating the removed value. |
+
+### Layout
+
+```bash
+npx @progress/kendo-cli migrate @progress/kendo-react-layout --from=14 --to=15
+```
+
+The following table outlines the specific Layout codemod transformations:
+
+| Codemod                                      | Description                                                                                                                                                                                |
+| -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `AppBar themeColor type narrowing`           | Removes unsupported `themeColor` values (`'info'`, `'success'`, `'warning'`, `'error'`, `'dark'`, `'light'`, `'inherit'`) from `AppBar`. Adds a TODO comment indicating the removed value. |
+| `Avatar themeColor type narrowing`           | Removes unsupported `themeColor` values (`'info'`, `'success'`, `'warning'`, `'error'`, `'dark'`, `'light'`, `'inverse'`) from `Avatar`. Adds a TODO comment indicating the removed value. |
+| `BottomNavigation themeColor type narrowing` | Removes unsupported `themeColor` values (`'info'`, `'success'`, `'warning'`, `'error'`, `'dark'`, `'light'`) from `BottomNavigation`. Adds a TODO comment indicating the removed value.    |
+
+### Tooltip
+
+```bash
+npx @progress/kendo-cli migrate @progress/kendo-react-tooltip --from=14 --to=15
+```
+
+The following table outlines the specific Tooltip codemod transformations:
+
+| Codemod                       | Description                                                                                                                                           |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `TooltipHandle method rename` | Renames `handleMouseOver` to `handleMouseEnter` and `handleMouseOut` to `handleMouseLeave` on TooltipHandle member expressions and object properties. |
+
+### Notification
+
+```bash
+npx @progress/kendo-cli migrate @progress/kendo-react-notification --from=14 --to=15
+```
+
+The following table outlines the specific Notification codemod transformations:
+
+| Codemod                                  | Description                                                                                                                          |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `Notification type.style type narrowing` | Removes unsupported `type.style` values (`'dark'`, `'light'`) from `Notification`. Adds a TODO comment indicating the removed value. |
 
 ## KendoReact v10.0.0 to v11.0.0
 

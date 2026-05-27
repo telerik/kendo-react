@@ -762,7 +762,7 @@ Triggered when the upload progress of a file changes.
 
 Example:
 ```jsx
-<Upload onProgress={(event) => console.log(event.percentComplete)} />
+<Upload onProgress={(event) => console.log(event.affectedFiles[0].progress)} />
 ```
 
 
@@ -842,7 +842,7 @@ Triggered when the status of files changes. May include a server response if app
 
 Example:
 ```jsx
-<Upload onStatusChange={(event) => console.log(event.files)} />
+<Upload onStatusChange={(event) => console.log(event.affectedFiles)} />
 ```
 
 
@@ -1395,6 +1395,42 @@ Example:
 
 
 
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
+#### webMcp?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+boolean | WebMcpProps
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Enables Web MCP tool registration for this component.
+Requires a parent `WebMcpProvider` from `@progress/kendo-react-webmcp`.
 
 
 </td>

@@ -45,7 +45,7 @@ const App = () => {
                     initialValues={{ firstName: 'John', lastName: 'Smith', postcode: '' }}
                     render={() => (
                         <FormElement>
-                            <FormFieldSet legend="Please fill in the fields:">
+                            <FormFieldSet legend="Please fill in the fields:" style={{ marginBottom: '2em' }}>
                                 <FieldWrapper>
                                     <div className="k-form-field-wrap">
                                         <Field name="firstName" component={Input} label="First Name" />

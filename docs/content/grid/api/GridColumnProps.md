@@ -34,7 +34,7 @@ The props of the GridColumn component.
 <code>
 
 
-[GridCellsSettings]({% slug api_grid_gridcellssettings %})
+[GridColumnCellsSettings]({% slug api_grid_gridcolumncellssettings %})
 
 
 </code>

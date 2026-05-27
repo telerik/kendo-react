@@ -34,7 +34,7 @@ const App = () => {
             <FloatingActionButton
                 svgIcon={editToolsIcon}
                 text={'Compose New'}
-                themeColor={'info'}
+                themeColor={'tertiary'}
                 items={contacts}
                 item={CustomItem}
                 popupSettings={{ animate: false, popupClass: 'contacts-list' }}
@@ -47,13 +47,14 @@ const App = () => {
             }
             .contacts-list .k-fab-items {
                 padding: 0;
-                width: 145px;
+                width: 170px;
             }
             .contact-item {
                 padding: 8px 10px;
                 width: 100%;
                 display: flex;
                 align-items: center;
+                justify-content: space-between;
             }
             .contact-details {
                 margin-left: 8px;

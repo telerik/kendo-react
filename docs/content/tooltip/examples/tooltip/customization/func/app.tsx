@@ -1,35 +1,44 @@
 import * as React from 'react';
-import { Tooltip } from '@progress/kendo-react-tooltip';
+import { Tooltip, TooltipHandle } from '@progress/kendo-react-tooltip';
 import { Button } from '@progress/kendo-react-buttons';
-
+import './styles.css';
 
 const App = () => {
-    const tooltip = React.useRef<Tooltip>(null);
+    const tooltip = React.useRef<TooltipHandle>(null);
+
+    const handlePointerOver = (event: React.PointerEvent<HTMLElement>) => {
+        tooltip.current?.handleMouseOver(event);
+    };
+
+    const handlePointerLeave = (event: React.PointerEvent<HTMLElement>) => {
+        tooltip.current?.handleMouseLeave(event);
+    };
+
     return (
-    <div>
-      <div>
-        <Button type="button" title="Tooltip message">I have the browser tooltip</Button>
-      </div>
-      <hr className="k-hr" />
-      <div>
-        <Button>I do not have a tooltip</Button>
-      </div>
-      <hr className="k-hr" />
-      <div
-        onMouseOver={event => tooltip.current && tooltip.current.handleMouseOver(event)}
-        onMouseOut={event => tooltip.current && tooltip.current.handleMouseOut(event)}
-      >
-        <Button type="button" title="Tooltip message">I have a KendoReact Tooltip</Button>
-      </div>
-      <hr className="k-hr" />
-      <div
-        onMouseOver={event => tooltip.current && tooltip.current.handleMouseOver(event)}
-        onMouseOut={event => tooltip.current && tooltip.current.handleMouseOut(event)}
-      >
-        <Button type="button" title="Tooltip message">I also the same KendoReact Tooltip</Button>
-        <Tooltip ref={tooltip} anchorElement="target" position="right" openDelay={300} />
-      </div>
-    </div>
+        <div>
+            <section aria-label="Tooltip host region" className="tooltip-host-container">
+                <div
+                    role="toolbar"
+                    aria-label="Tooltip action targets"
+                    className="tooltip-host-actions"
+                    onPointerOver={handlePointerOver}
+                    onPointerLeave={handlePointerLeave}
+                >
+                    <Button fillMode="link" title="Tooltip for the first action">
+                        First action
+                    </Button>
+                    <Button themeColor="primary" title="Tooltip for the second action">
+                        Action button
+                    </Button>
+                </div>
+                <div className="tooltip-outside-action">
+                    <Button title="There is no KendoReact Tooltip for the third action">Third action</Button>
+                </div>
+            </section>
+
+            <Tooltip ref={tooltip} anchorElement="anchor" parentTitle position="bottom" openDelay={250} />
+        </div>
     );
-}
+};
+
 export default App;

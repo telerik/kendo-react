@@ -4,7 +4,6 @@ description: 'Customize the appearance of the empty state in the KendoReact Chat
 components: ["chat"]
 slug: customization_no_data_template_chat
 position: 60
-tag: new
 ---
 
 # No Data Templates

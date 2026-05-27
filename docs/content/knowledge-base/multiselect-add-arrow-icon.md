@@ -6,7 +6,7 @@ page_title: Add an arrow icon to the MultiSelect - KendoReact MultiSelect
 slug: multiselect-add-arrow-icon
 tags: multiselect, arrow, icon, svg, font
 res_type: kb
-components: ["multiselect"]
+components: ['multiselect']
 ---
 
 ## Environment
@@ -45,17 +45,18 @@ If your project relies on font icons, you can use the following CSS that uses th
 
 ```css
 .k-multiselect .k-input-values:after {
-	content: "\e006";
-	font-family: "WebComponentsIcons";
-	outline: 0;
-	position: absolute;
-	right: 20px;
+    content: '\e006';
+    font-family: 'WebComponentsIcons';
+    outline: 0;
+    position: absolute;
+    right: 20px;
 }
 ```
+
 Make sure that the `@progress/kendo-font-icons` CDN is loaded:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@progress/kendo-font-icons/dist/index.css" />
+<link rel="stylesheet" href="https://unpkg.com/@progress/kendo-font-icons@5/dist/index.css" />
 ```
 
 The following example demonstrates this approach in action:
@@ -66,9 +67,7 @@ The following example demonstrates this approach in action:
 {% embed_file multiselect/multiselect-add-arrow-icon/font-icon/style.css %}
 {% endmeta %}
 
-
 ## See Also
 
 -   [KendoReact MultiSelect Overview](slug:overview_multiselect)
 -   [Custom Rendering](slug:customrendering_multiselect)
-

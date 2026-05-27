@@ -4,7 +4,6 @@ description: 'Add alternative styling options to the KendoReact ComboBox in Reac
 components: ['combobox']
 slug: appearance_combobox
 position: 6
-tag: updated
 ---
 
 # Appearance

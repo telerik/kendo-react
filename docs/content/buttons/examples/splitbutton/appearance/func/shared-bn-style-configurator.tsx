@@ -3,46 +3,27 @@ import * as React from 'react';
 import { Label } from '@progress/kendo-react-labels';
 import { DropDownList, DropDownListChangeEvent, ListItemProps } from '@progress/kendo-react-dropdowns';
 
+type Size = 'small' | 'medium' | 'large';
+type ThemeColor = 'base' | 'primary' | 'secondary' | 'tertiary' | 'info' | 'success' | 'warning' | 'inverse';
+type FillMode = 'solid' | 'outline' | 'flat' | 'link';
+type Rounded = 'small' | 'medium' | 'large' | 'full';
+
 interface StyleConfiguratorProps {
-    size?: 'small' | 'medium' | 'large';
-    sizes?: Array<'small' | 'medium' | 'large'>;
-    onSizeChange?: (size: 'small' | 'medium' | 'large') => void;
+    size?: Size;
+    sizes?: Array<Size>;
+    onSizeChange?: (size: Size) => void;
 
-    themeColor?:
-        | 'base'
-        | 'primary'
-        | 'secondary'
-        | 'tertiary'
-        | 'info'
-        | 'success'
-        | 'warning'
-        | 'dark'
-        | 'light'
-        | 'inverse';
-    themeColors?: Array<
-        'base' | 'primary' | 'secondary' | 'tertiary' | 'info' | 'success' | 'warning' | 'dark' | 'light' | 'inverse'
-    >;
-    onThemeColorChange?: (
-        themeColor:
-            | 'base'
-            | 'primary'
-            | 'secondary'
-            | 'tertiary'
-            | 'info'
-            | 'success'
-            | 'warning'
-            | 'dark'
-            | 'light'
-            | 'inverse'
-    ) => void;
+    themeColor?: ThemeColor;
+    themeColors?: Array<ThemeColor>;
+    onThemeColorChange?: (themeColor: ThemeColor) => void;
 
-    fillMode?: 'solid' | 'outline' | 'flat' | 'link';
-    fillModes?: Array<'solid' | 'outline' | 'flat' | 'link'>;
-    onFillModeChange?: (fillMode: 'solid' | 'outline' | 'flat' | 'link') => void;
+    fillMode?: FillMode;
+    fillModes?: Array<FillMode>;
+    onFillModeChange?: (fillMode: FillMode) => void;
 
-    rounded?: 'small' | 'medium' | 'large' | 'full';
-    roundedOptions?: Array<'small' | 'medium' | 'large' | 'full'>;
-    onRoundedChange?: (rounded: 'small' | 'medium' | 'large' | 'full') => void;
+    rounded?: Rounded;
+    roundedOptions?: Array<Rounded>;
+    onRoundedChange?: (rounded: Rounded) => void;
 }
 
 export const StyleConfigurator = (props: StyleConfiguratorProps) => {
@@ -179,19 +160,7 @@ StyleConfigurator.defaultProps = {
         /* noop */
     },
 
-    themeColors: [
-        'base',
-        'primary',
-        'secondary',
-        'tertiary',
-        'info',
-        'success',
-        'warning',
-        'error',
-        'dark',
-        'light',
-        'inverse'
-    ],
+    themeColors: ['base', 'primary', 'secondary', 'tertiary', 'info', 'success', 'warning', 'error', 'inverse'],
     onThemeColorChange: () => {
         /* noop */
     },

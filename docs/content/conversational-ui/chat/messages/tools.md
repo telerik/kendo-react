@@ -4,7 +4,6 @@ description: 'Configure message context menus and toolbar actions for enhanced u
 components: ["chat"]
 slug: messages_tools_chat
 position: 1
-tag: updated
 ---
 
 # Message Tools

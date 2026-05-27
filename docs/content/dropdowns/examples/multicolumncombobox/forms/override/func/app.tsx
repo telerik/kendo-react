@@ -45,7 +45,6 @@ const App = () => {
                 columns={columns}
                 label="Second Employee"
                 textField="name"
-                valid={visited ? !validationMessage : undefined}
                 validationMessage={visited ? (validationMessage as string) : ''}
                 {...others}
             />

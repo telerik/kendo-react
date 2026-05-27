@@ -59,6 +59,12 @@ position: 1
     <li class="api-item">
         <a href="{% slug api_common_unstyledcontext %}">UnstyledContext</a>
     </li>
+    <li class="api-item">
+        <a href="{% slug api_common_webmcpcontext %}">WebMcpContext</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_common_webmcpprovider %}">WebMcpProvider</a>
+    </li>
   </ul>
 </div>
 <div class="api-index-section">
@@ -345,6 +351,9 @@ position: 1
         <a href="{% slug api_common_maskedtextboxclasses %}">MaskedTextBoxClasses</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_common_mcptooloption %}">McpToolOption</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_common_navigationoptions %}">NavigationOptions</a>
     </li>
     <li class="api-item">
@@ -426,6 +435,24 @@ position: 1
         <a href="{% slug api_common_usekendopasteoptions %}">UseKendoPasteOptions</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_common_webmcpcontextvalue %}">WebMcpContextValue</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_common_webmcpmodelcontext %}">WebMcpModelContext</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_common_webmcpprops %}">WebMcpProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_common_webmcpproviderprops %}">WebMcpProviderProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_common_webmcptoolregistration %}">WebMcpToolRegistration</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_common_webmcptoolresult %}">WebMcpToolResult</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_common_wrapperclasses %}">WrapperClasses</a>
     </li>
     <li class="api-item">
@@ -463,6 +490,9 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_common_getkendopasteeventtarget %}">getKendoPasteEventTarget</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_common_getmodelcontext %}">getModelContext</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_common_getter %}">getter</a>
@@ -537,6 +567,9 @@ position: 1
         <a href="{% slug api_common_iconthemecolor %}">IconThemeColor</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_common_iconvariant %}">IconVariant</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_common_marginenum %}">MarginEnum</a>
     </li>
   </ul>
@@ -571,6 +604,9 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_common_useunstyled %}">useUnstyled</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_common_usewebmcpregister %}">useWebMcpRegister</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_common_usewindow %}">useWindow</a>

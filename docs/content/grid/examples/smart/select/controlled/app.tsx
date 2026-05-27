@@ -12,7 +12,6 @@ import { arrowRotateCcwIcon } from '@progress/kendo-svg-icons';
 import { Button } from '@progress/kendo-react-buttons';
 import { patients, addColumnsValues } from './data';
 import { AIPromptOutputInterface } from '@progress/kendo-react-conversational-ui';
-import { AxiosResponse } from 'axios';
 import { CustomConditionSeverityCell, CustomStatusCell, CustomRiskScoreCell } from './custom-cells';
 
 const App = () => {
@@ -29,7 +28,7 @@ const App = () => {
         setLoading(true);
     };
 
-    const onResponseSuccess = (req: AxiosResponse<any>, promptMessage?: string, isRetry?: boolean) => {
+    const onResponseSuccess = (req: { data: any }, promptMessage?: string, isRetry?: boolean) => {
         setStreaming(false);
         setLoading(false);
         if (req && req.data) {

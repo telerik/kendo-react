@@ -10,8 +10,9 @@ slug: api_buttons_floatingactionbuttonsize
 Specifies the size of the FloatingActionButton.
 
 The possible values are:
+* `xsmall`&mdash;Applies the smallest available spacing and icon scale.
 * `small`&mdash;Applies half of the default padding, e.g. `8px`.
 * `medium` (Default)&mdash;Applies the default padding, e.g. `16px`.
 * `large`&mdash;Applies one and one half of the default padding, e.g. `24px`.
 
-`type` FloatingActionButtonSize = "small" | "medium" | "large";
+`type` FloatingActionButtonSize = "xsmall" | "small" | "medium" | "large";

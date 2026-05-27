@@ -7,7 +7,7 @@ const sizes: IconSize[] = ['default', 'xsmall', 'small', 'medium', 'large', 'xla
 const App = () => {
     return (
         <React.Fragment>
-            <link rel="stylesheet" href="https://unpkg.com/@progress/kendo-font-icons/dist/index.css" />
+            <link rel="stylesheet" href="https://unpkg.com/@progress/kendo-font-icons@5/dist/index.css" />
             <div className="wrap">
                 {sizes.map((size: IconSize, index) => {
                     return (

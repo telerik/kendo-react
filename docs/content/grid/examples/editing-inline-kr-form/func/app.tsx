@@ -2,15 +2,10 @@ import * as React from 'react';
 import { Form, Field, FieldRenderProps } from '@progress/kendo-react-form';
 import { Input } from '@progress/kendo-react-inputs';
 import { EditDescriptor } from '@progress/kendo-react-data-tools';
-import {
-    Grid,
-    GridColumn,
-    GridToolbar,
-    GridCustomCellProps,
-    GridCustomRowProps
-} from '@progress/kendo-react-grid';
+import { Grid, GridColumn, GridToolbar, GridCustomCellProps, GridCustomRowProps } from '@progress/kendo-react-grid';
 import sampleProducts from './gd-sample-products';
 import { Button } from '@progress/kendo-react-buttons';
+import { classNames } from '@progress/kendo-react-common';
 
 const DATA_ITEM_KEY = 'ProductID';
 
@@ -114,7 +109,7 @@ const CommandCell = (props: GridCustomCellProps) => {
     const buttonThemeColor = buttonText === 'Edit' ? 'primary' : 'base';
 
     return (
-        <td {...props.tdProps} className="k-command-cell">
+        <td {...props.tdProps} className={classNames(props.tdProps?.className, 'k-command-cell')}>
             <Button
                 onClick={isInEdit ? onSaveClick : onEditClick}
                 className={buttonClassName}

@@ -483,7 +483,7 @@ The available options are:
 <code>
 
 
-"small" | "medium" | "large"
+"small" | "medium" | "large" | "xs"
 
 
 </code>
@@ -568,7 +568,7 @@ Defines the SVG icon that renders inside the Button component.
 <code>
 
 
-"base" | "error" | "primary" | "secondary" | "tertiary" | "info" | "success" | "warning" | "dark" | "light" | "inverse"
+"base" | "error" | "primary" | "secondary" | "tertiary" | "info" | "success" | "warning" | "inverse"
 
 
 </code>

@@ -3,7 +3,6 @@ title: Controlled Mode
 description: 'Control the value of the KendoReact Input in React projects.'
 components: ["input"]
 slug: controlled_input
-tag: new
 position: 1
 ---
 

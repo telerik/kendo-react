@@ -4,7 +4,6 @@ description: 'Get started with the KendoReact Form and customize its appearance'
 components: ["form"]
 slug: appearance_form
 position: 12
-tag: updated
 ---
 
 # Appearance

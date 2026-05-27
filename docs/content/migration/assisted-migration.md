@@ -4,7 +4,6 @@ description: 'Update KendoReact components to their latest versions.'
 components: ["general"]
 slug: assisted_migration
 position: 2
-tag: new
 ---
 
 # Assisted Migration Tooling

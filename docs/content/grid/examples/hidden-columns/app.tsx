@@ -7,7 +7,7 @@ const App = () => {
     const [columnsState, setColumnsState] = React.useState<GridColumnState[]>([
         { id: 'ProductID', field: 'ProductID', hidden: true },
         { id: 'ProductName', field: 'ProductName' },
-        { id: 'Category.CategoryName', field: 'Category.CategoryName' },
+        { id: 'CategoryName', field: 'Category.CategoryName' },
         { id: 'UnitPrice', field: 'UnitPrice' },
         { id: 'UnitsInStock', field: 'UnitsInStock' }
     ]);
@@ -28,7 +28,7 @@ const App = () => {
             <h4>Show Columns</h4>
             <div className="row example-config">
                 {columnsState.map((column, index) => (
-                    <div key={index} className="col-xs-12 col-md-2 example-col">
+                    <div key={index} className="col-12 col-md-4 col-lg example-col">
                         <Checkbox
                             type="checkbox"
                             id={column.field}
@@ -43,7 +43,7 @@ const App = () => {
             <Grid columnsState={columnsState} style={{ height: '400px' }} data={[...products]}>
                 <Column id={'ProductID'} field={'ProductID'} title={'ID'} />
                 <Column id={'ProductName'} field={'ProductName'} title={'Name'} />
-                <Column id={'Category.CategoryName'} field={'Category.CategoryName'} title={'Category Name'} />
+                <Column id={'CategoryName'} field={'Category.CategoryName'} title={'Category Name'} />
                 <Column id={'UnitPrice'} field={'UnitPrice'} title={'Price'} />
                 <Column id={'UnitsInStock'} field={'UnitsInStock'} title={'In Stock'} />
             </Grid>

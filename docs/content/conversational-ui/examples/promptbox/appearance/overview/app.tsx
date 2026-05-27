@@ -16,8 +16,6 @@ type ButtonThemeColor =
     | 'success'
     | 'warning'
     | 'error'
-    | 'dark'
-    | 'light'
     | 'inverse';
 
 const App = () => {
@@ -39,8 +37,6 @@ const App = () => {
         'success',
         'warning',
         'error',
-        'dark',
-        'light',
         'inverse'
     ];
 

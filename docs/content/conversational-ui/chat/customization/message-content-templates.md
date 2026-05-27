@@ -4,7 +4,6 @@ description: 'Customize the content area of messages while preserving the defaul
 components: ["chat"]
 slug: customization_message_content_templates_chat
 position: 11
-tag: new
 ---
 
 # Message Content Templates

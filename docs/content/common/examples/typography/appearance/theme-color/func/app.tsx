@@ -12,8 +12,6 @@ const App = () => {
         'success',
         'error',
         'warning',
-        'dark',
-        'light',
         'inverse'
     ];
     return (

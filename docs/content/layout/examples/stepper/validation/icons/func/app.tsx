@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { Stepper, StepperChangeEvent } from '@progress/kendo-react-layout';
-import { checkCircleIcon, xOutlineIcon } from '@progress/kendo-svg-icons';
+import { checkCircleIcon, xIcon } from '@progress/kendo-svg-icons';
 
 const App = () => {
     const [step, setStep] = React.useState(0);
@@ -32,7 +32,7 @@ const App = () => {
           onChange={handleChange}
           items={steps}
           successSVGIcon={checkCircleIcon}
-          errorSVGIcon={xOutlineIcon}
+          errorSVGIcon={xIcon}
             />
         <Stepper
           value={step}
@@ -40,7 +40,7 @@ const App = () => {
           items={steps}
           mode={'labels'}
           successSVGIcon={checkCircleIcon}
-          errorSVGIcon={xOutlineIcon}
+          errorSVGIcon={xIcon}
             />
       </div>
     );

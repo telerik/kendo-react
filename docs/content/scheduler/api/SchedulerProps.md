@@ -1524,6 +1524,53 @@ const CustomViewTask = (props) => <div>{props.title}</div>;
 
 </td>
 </tr>
+<tr>
+<td class="table-cell-name">
+
+
+#### webMcp?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+boolean | WebMcpProps
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Enables browser-native AI agent tools via Web MCP (Chrome 146+).
+
+Pass `true` for defaults or an object for fine-grained control.
+AI agents are multilingual — `dataName` accepts any language.
+
+```tsx
+// Boolean: generic "scheduler" label
+<Scheduler webMcp data={events} onDataChange={handleDataChange} />
+
+// Config object: explicit name
+<Scheduler webMcp={{ dataName: 'appointments' }} data={events} onDataChange={handleDataChange} />
+```
+
+
+
+</td>
+</tr>
 </tbody>
 </table>
 

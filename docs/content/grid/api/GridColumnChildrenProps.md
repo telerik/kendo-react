@@ -34,7 +34,7 @@ The type of elements that the children property of the Grid accepts.
 <code>
 
 
-[GridCellsSettings]({% slug api_grid_gridcellssettings %})
+[GridColumnCellsSettings]({% slug api_grid_gridcolumncellssettings %})
 
 
 </code>

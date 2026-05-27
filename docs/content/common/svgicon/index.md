@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 description: 'Get an overview of the features the KendoReact SvgIcon delivers and use the component in React projects.'
-components: ["svgicon"]
+components: ['svgicon']
 slug: overview_svgicon
 position: 1
 ---
@@ -9,6 +9,8 @@ position: 1
 # KendoReact SvgIcon Overview
 
 The KendoReact SVGIcon component is used to display SVG icons; it includes more than 500 icon options.
+
+> Kendo UI Icons version `^5.x.x` requires KendoReact `v15.0.0` or later. For more information, refer to the [Icon Package Compatibility](slug:icons#icon-package-compatibility) section.
 
 <CtaPanelOverview></CtaPanelOverview>
 

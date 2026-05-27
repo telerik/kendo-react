@@ -69,7 +69,7 @@ Returns the HTML element of the Calendar component.
 <code>
 
 
-Readonly&lt;[CalendarProps]({% slug api_dateinputs_calendarprops %})&lt;any&gt;&gt;
+[CalendarProps]({% slug api_dateinputs_calendarprops %})&lt;any&gt;
 
 
 </code>
@@ -85,7 +85,7 @@ Readonly&lt;[CalendarProps]({% slug api_dateinputs_calendarprops %})&lt;any&gt;&
 <td class="table-cell-comment">
 
 
-The props of the CalendarHandle component.
+Returns the props of the Calendar component.
 
 
 </td>

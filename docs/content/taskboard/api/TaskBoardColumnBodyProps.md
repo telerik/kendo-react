@@ -55,6 +55,41 @@ Determines the children nodes.
 
 </td>
 </tr>
+<tr>
+<td class="table-cell-name">
+
+
+#### columnHeaderId?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+string
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Specifies the ID of the column header element for aria-labelledby.
+
+
+</td>
+</tr>
 </tbody>
 </table>
 

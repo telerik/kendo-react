@@ -4,7 +4,6 @@ description: 'Configure the on-screen keyboard for the KendoReact NumericTextBox
 components: ["numerictextbox"]
 slug: adaptive_rendering_numerictextbox
 position: 9
-tag: new
 ---
 
 # Adaptive Rendering

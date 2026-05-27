@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: 'Discover the KendoReact TabStrip component and learn how to use it in a React project.'
-components: ["tabstrip"]
+components: ['tabstrip']
 slug: overview_tabstrip
 position: 1
 ---
@@ -16,7 +16,7 @@ The KendoReact TabStrip component is part of the KendoReact library of React UI 
 
 The following example demonstrates the TabStrip in action.
 
-{% meta height:300 %}
+{% meta height:350 %}
 {% embed_file tabstrip/overview/basic/func/app.tsx preview %}
 {% embed_file tabstrip/overview/basic/func/main.tsx %}
 {% endmeta %}

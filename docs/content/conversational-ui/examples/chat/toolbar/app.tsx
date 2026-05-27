@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Chat, ChatMessageSendEvent, Message } from '@progress/kendo-react-conversational-ui';
+import { Chat, ChatSendMessageEvent, Message } from '@progress/kendo-react-conversational-ui';
 import { Button } from '@progress/kendo-react-buttons';
 import { imageAddIcon } from '@progress/kendo-svg-icons';
 
@@ -15,9 +15,7 @@ const AttachmentTemplate = (props) => {
 };
 
 const user = {
-    id: 1,
-    avatarUrl: (import.meta.env.VITE_REACT_DEMOS_BASE_URL || '') + 'assets/dropdowns/contacts/RICSU.jpg',
-    avatarAltText: 'KendoReact Conversational UI RICSU'
+    id: 1
 };
 
 const App = () => {
@@ -30,7 +28,8 @@ const App = () => {
         let file = e.target.files[0];
         let reader = new FileReader();
         reader.onloadend = (event) => {
-            let message = {
+            let message: Message = {
+                id: Date.now(),
                 author: user,
                 text: '',
                 attachments: [
@@ -61,22 +60,22 @@ const App = () => {
         );
     };
 
-    const addNewMessage = (event: ChatMessageSendEvent) => {
+    const addNewMessage = (event: ChatSendMessageEvent) => {
         setMessages([...messages, event.message]);
     };
 
     return (
         <div>
             <Chat
-                user={user}
+                authorId={user.id}
                 messages={messages}
-                onMessageSend={addNewMessage}
+                onSendMessage={addNewMessage}
                 placeholder={'Type a message...'}
                 width={400}
                 attachmentTemplate={AttachmentTemplate}
-                showToolbar={showToolbar}
-                onToolbarActionExecute={() => setShowToolbar(!showToolbar)}
-                toolbar={<Toolbar />}
+                messageBoxSettings={{
+                    topAffix: showToolbar ? <Toolbar /> : undefined
+                }}
             />
         </div>
     );

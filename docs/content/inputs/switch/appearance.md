@@ -4,7 +4,6 @@ description: 'Add alternative styling options to the KendoReact Switch in React 
 components: ['switch']
 slug: appearance_switch
 position: 6
-tag: updated
 ---
 
 # Appearance

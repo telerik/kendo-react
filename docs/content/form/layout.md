@@ -4,7 +4,6 @@ description: 'Learn more about how to arrange the form controls inside the Kendo
 components: ["form"]
 slug: layout_form
 position: 7
-tag: updated
 ---
 
 # KendoReact Form Layout

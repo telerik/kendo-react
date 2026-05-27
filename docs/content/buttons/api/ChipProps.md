@@ -111,6 +111,43 @@ Represents the label of the Chip component.
 <td class="table-cell-name">
 
 
+#### ariaSelected?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+boolean
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Sets the `aria-selected` attribute on the Chip.
+When provided, overrides the internally computed selected state for the ARIA attribute.
+Only applies when `role` is `"option"`.
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### avatar?
 
 

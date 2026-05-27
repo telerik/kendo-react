@@ -3,7 +3,7 @@ import { PromptBox, PromptBoxActionButtonProps, PromptBoxChangeEvent } from '@pr
 import { Checkbox } from '@progress/kendo-react-inputs';
 import { Label } from '@progress/kendo-react-labels';
 import { DropDownList, DropDownListChangeEvent } from '@progress/kendo-react-dropdowns';
-import { arrowRightIcon, paperPlaneIcon, checkIcon, arrowUpOutlineIcon, stopSmIcon } from '@progress/kendo-svg-icons';
+import { arrowRightIcon, paperPlaneIcon, checkIcon, arrowUpIcon, stopIcon } from '@progress/kendo-svg-icons';
 import './styles.css';
 import { SVGIcon } from '@progress/kendo-react-common';
 
@@ -14,7 +14,7 @@ interface IconOption {
 }
 
 const iconOptions: IconOption[] = [
-    { text: 'Default', icon: arrowUpOutlineIcon, value: 1 },
+    { text: 'Default', icon: arrowUpIcon, value: 1 },
     { text: 'Paper Plane (send)', icon: paperPlaneIcon, value: 2 },
     { text: 'Arrow Right', icon: arrowRightIcon, value: 3 },
     { text: 'Check', icon: checkIcon, value: 4 }
@@ -28,7 +28,7 @@ const App = () => {
 
     const actionButtonSettings: PromptBoxActionButtonProps = {
         disabled: actionButtonDisabled,
-        svgIcon: loading ? stopSmIcon : sendIcon,
+        svgIcon: loading ? stopIcon : sendIcon,
         themeColor: 'primary'
     };
 

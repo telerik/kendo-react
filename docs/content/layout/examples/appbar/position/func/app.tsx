@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { AppBar, AppBarSection, AppBarSpacer } from '@progress/kendo-react-layout';
-import { facebookIcon, googlePlusIcon, menuIcon, pinterestIcon, twitterIcon } from '@progress/kendo-svg-icons';
+import { facebookIcon, googlePlusIcon, menuIcon, pinterestIcon, xLogoIcon } from '@progress/kendo-svg-icons';
 import { Button } from '@progress/kendo-react-buttons';
 import { Input } from '@progress/kendo-react-inputs';
 
@@ -29,7 +29,7 @@ const App = () => {
 
                 <AppBarSection className="social-section">
                     <Button type="button" fillMode="flat" svgIcon={facebookIcon} />
-                    <Button type="button" fillMode="flat" svgIcon={twitterIcon} />
+                    <Button type="button" fillMode="flat" svgIcon={xLogoIcon} />
                     <Button type="button" fillMode="flat" svgIcon={pinterestIcon} />
                     <Button type="button" fillMode="flat" svgIcon={googlePlusIcon} />
                 </AppBarSection>
@@ -55,7 +55,7 @@ const App = () => {
                     dry in the east. Temperature 10 to 15 deg. C.
                 </p>
             </div>
-            <AppBar position={'bottom'} themeColor={'dark'}>
+            <AppBar position={'bottom'}>
                 <AppBarSpacer style={{ width: 150 }} />
 
                 <AppBarSection>
@@ -106,7 +106,7 @@ const App = () => {
                     color: #ccc;
                 }
                 .page-content {
-                    height: 100%;
+                    height: 85%;
                     background: white;
                     padding: 20px 10px;
                 }

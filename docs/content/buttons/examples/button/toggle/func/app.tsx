@@ -11,9 +11,9 @@ const ButtonContainer = () => {
                     togglable={true}
                     selected={isDarkMode}
                     onClick={() => setIsDarkMode(!isDarkMode)}
-                    themeColor={isDarkMode ? 'dark' : 'light'}
+                    themeColor={isDarkMode ? 'inverse' : 'base'}
                 >
-                    {isDarkMode ? 'Dark Mode Enabled' : 'Light Mode Enabled'}
+                    {isDarkMode ? 'Inverse Mode Enabled' : 'Base Mode Enabled'}
                 </Button>
             </div>
             <div
@@ -26,7 +26,7 @@ const ButtonContainer = () => {
                     transition: 'all 0.3s ease'
                 }}
             >
-                <p>This is a preview of the {isDarkMode ? 'dark' : 'light'} mode.</p>
+                <p>This is a preview of the {isDarkMode ? 'inverse' : 'base'} mode.</p>
             </div>
         </div>
     );

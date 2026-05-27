@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { ChipList, Chip, ChipProps } from '@progress/kendo-react-buttons';
-import { SVGIcon, commentRemoveIcon, cancelIcon, cancelOutlineIcon } from '@progress/kendo-svg-icons';
+import { SVGIcon, commentRemoveIcon, cancelIcon } from '@progress/kendo-svg-icons';
 
 interface Fruits {
     text: string;
@@ -27,7 +27,7 @@ const fruits: Fruits[] = [
         text: 'Strawberry',
         value: 'strawberry',
         removable: true,
-        removeSvgIcon: cancelOutlineIcon
+        removeSvgIcon: cancelIcon
     }
 ];
 

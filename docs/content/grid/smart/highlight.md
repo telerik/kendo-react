@@ -75,17 +75,17 @@ const handleBeforeRequest = (event, isRetry) => {
     setStreaming(true);
 
     // Make custom AI service request
-    axios({
-        ...event.requestOptions,
-        url: 'https://your-ai-service.com/api/grid',
+    fetch('https://your-ai-service.com/api/grid', {
+        method: 'POST',
         headers: event.headers,
-        data: {
+        body: JSON.stringify({
             role: event.role,
             contents: [{ $type: 'text', text: event.promptMessage }],
             columns: event.columns
-        }
+        })
     })
-        .then((response) => onResponseSuccess(response, event.promptMessage, isRetry))
+        .then((res) => res.json())
+        .then((data) => onResponseSuccess({ data }, event.promptMessage, isRetry))
         .catch(onResponseError);
 };
 ```

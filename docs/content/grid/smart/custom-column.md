@@ -79,18 +79,19 @@ To implement an AI Custom Column in your Grid:
 
         // Perform custom AI service request here
         // Use props.dataItem to access the current row data
-        axios({
-            url: 'https://your-ai-service.com/api/completion',
+        fetch('https://your-ai-service.com/api/completion', {
             method: 'POST',
-            data: {
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
                 prompt: prompt,
                 context: props.dataItem
-            }
+            })
         })
-            .then((response) => {
+            .then((res) => res.json())
+            .then((data) => {
                 const newOutput = {
                     id: Date.now(),
-                    responseContent: response.data.content,
+                    responseContent: data.content,
                     prompt
                 };
                 setOutputs([newOutput]);

@@ -39,7 +39,7 @@ A [Functional Component](https://react.dev/reference/react/Component).
 <code>
 
 
-[CalendarProps]({% slug api_dateinputs_calendarprops %})&lt;any&gt; [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with RefAttributes&lt;any&gt;
+[CalendarProps]({% slug api_dateinputs_calendarprops %})&lt;any&gt; [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with RefAttributes&lt;"null" | [CalendarHandle]({% slug api_dateinputs_calendarhandle %})&gt;
 
 
 </code>

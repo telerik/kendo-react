@@ -1,10 +1,9 @@
 ---
 title: Appearance
 description: 'Specify the appearance of the KendoReact BottomNavigation component.'
-components: ["bottomnavigation"]
+components: ['bottomnavigation']
 slug: appearance_bottomnavigation
 position: 4
-tag: updated
 ---
 
 # Appearance
@@ -23,14 +22,9 @@ The BottomNavigation allows you to specify predefined theme colors.
 The available [`themeColor`]({% slug api_layout_bottomnavigationprops %}#toc-themeColor) values are:
 
 -   `primary` (Default) &mdash; Applies coloring based on the primary theme color.
+-   `base` &mdash; Applies coloring based on the base theme color.
 -   `secondary` &mdash; Applies coloring based on the secondary theme color.
 -   `tertiary` &mdash; Applies coloring based on the tertiary theme color.
--   `info` &mdash; Applies coloring based on the info theme color.
--   `success` &mdash; Applies coloring based on the success theme color.
--   `warning` &mdash; Applies coloring based on the warning theme color.
--   `error` &mdash; Applies coloring based on the error theme color.
--   `dark` &mdash; Applies coloring based on the dark theme color.
--   `light` &mdash; Applies coloring based on the light theme color.
 -   `inverse` &mdash; Applies coloring based on the inverted theme color.
 
 Any other regular color can be applied via custom CSS styling by targeting the BottomNavigation through its `k-bottom-nav` CSS class.

@@ -4,7 +4,6 @@ description: 'Configure the on-screen keyboard for the KendoReact DateInput to i
 components: ["dateinput"]
 slug: adaptive_rendering_dateinput
 position: 10
-tag: new
 ---
 
 # Adaptive Rendering

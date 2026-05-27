@@ -26,7 +26,7 @@ const App = () => {
                     initialValues={{ username: 'Robert' }}
                     render={(formRenderProps: FormRenderProps) => (
                         <FormElement>
-                            <FormFieldSet legend="Volunteer Sign-Up">
+                            <FormFieldSet legend="Volunteer Sign-Up" style={{ marginBottom: '2em' }}>
                                 <FieldWrapper>
                                     <div className="k-form-field-wrap">
                                         <Field

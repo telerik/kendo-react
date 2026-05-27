@@ -48,7 +48,7 @@ You can see the following ten KendoReact components implemented in this sample a
 
 ## Suggested Links
 
--   [Get Started with KendoReact Free](https://www.telerik.com/kendo-react-ui/components/free)
+-   [Get Started with KendoReact Free](https://www.telerik.com/kendo-react-ui/components/getting-started)
 
 -   [Get Started with KendoReact Free](slug://getting_started_free_vs_premium)
 -   [Getting Started with KendoReact](https://www.telerik.com/kendo-react-ui/components/getting-started/)

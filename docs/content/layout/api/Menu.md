@@ -9,6 +9,8 @@ slug: api_layout_menu
 # Menu
 Represents the [KendoReact Menu component](https://www.telerik.com/kendo-react-ui/components/layout/menu).
 
+A [Functional Component](https://react.dev/reference/react/Component).
+
 
 
 
@@ -43,41 +45,6 @@ const App = () => {
 <td class="table-cell-name">
 
 
-#### element
-
-
-</td>
-<td type class="table-cell-type">
-
-
-<code>
-
-
-"null" | HTMLDivElement
-
-
-</code>
-
-
-</td>
-<td class="table-cell-default">
-
-
-
-
-</td>
-<td class="table-cell-comment">
-
-
-The current element or `null` if there is no one.
-
-
-</td>
-</tr>
-<tr>
-<td class="table-cell-name">
-
-
 #### props
 
 
@@ -88,7 +55,7 @@ The current element or `null` if there is no one.
 <code>
 
 
-Readonly&lt;[MenuProps]({% slug api_layout_menuprops %})&gt;
+[MenuProps]({% slug api_layout_menuprops %}) [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with RefAttributes&lt;[MenuHandle]({% slug api_layout_menuhandle %})&gt;
 
 
 </code>
@@ -109,36 +76,6 @@ The props of the Menu component.
 
 </td>
 </tr>
-</tbody>
-</table>
-
-
-
-## Methods
-
-<table class="api-table api-table-methods">
-<thead class="api-table-methods-head">
-<tr>
-<th>
-
-
-#### reset
-
-
-</th>
-</tr>
-</thead>
-<tbody class="api-table-body">
-<tr>
-<td>
-
-
-Resets the selection and opening of Menu items.
-
-
-</td>
-</tr>
-
 </tbody>
 </table>
 

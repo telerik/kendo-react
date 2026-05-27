@@ -8,7 +8,6 @@ position: 1
 category: sample-applications
 level: 0
 subject: Project Tracker
-tag: new
 ---
 
 # Project Tracker Application

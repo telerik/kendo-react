@@ -3,7 +3,6 @@ title: Stacked Layout
 description: 'Learn how to use the stacked layout mode of the KendoKendoReact Data Grid to display data in a card-based format ideal for mobile and responsive designs.'
 slug: stacked_layout_grid
 position: 40
-tag: new
 tier: premium
 ---
 

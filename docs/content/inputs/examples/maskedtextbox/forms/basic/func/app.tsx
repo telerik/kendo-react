@@ -81,7 +81,7 @@ const App = () => {
                     initialValues={{ firstName: 'John', lastName: 'Smith', postcode: '' }}
                     render={(formRenderProps: FormRenderProps) => (
                         <FormElement noValidate>
-                            <FormFieldSet legend="Please fill in the fields:">
+                            <FormFieldSet legend="Please fill in the fields:" style={{ marginBottom: '2em' }}>
                                 <FieldWrapper>
                                     <Field name="firstName" component={FirstNameInputField} label="First Name" />
                                 </FieldWrapper>

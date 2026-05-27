@@ -9,6 +9,7 @@ category: setup
 level: 0
 tier: mixed
 tag: new
+release_tag: Q2 2026
 ---
 
 # Kendo CLI Options for React

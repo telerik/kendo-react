@@ -4,7 +4,6 @@ description: 'Implement predefined message suggestions and quick reply options i
 components: ['chat']
 slug: quick_actions_suggestions_chat
 position: 1
-tag: updated
 ---
 
 # Predefined Suggestions

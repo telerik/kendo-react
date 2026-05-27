@@ -34,7 +34,7 @@ Represents the return type of TaskBoardChangeEvent.
 <code>
 
 
-[TaskBoardTaskModel]({% slug api_taskboard_taskboardtaskmodel %})[] | undefined[]
+object[] | [TaskBoardTaskModel]({% slug api_taskboard_taskboardtaskmodel %})[]
 
 
 </code>

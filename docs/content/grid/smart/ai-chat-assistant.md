@@ -4,7 +4,6 @@ description: 'Learn how to implement an AI Chat Assistant for the KendoKendoReac
 components: ['datagrid']
 slug: ai_chat_assistant
 position: 50
-tag: new
 tier: premium
 ---
 
@@ -72,16 +71,17 @@ To implement an AI Chat Assistant for your Grid, follow the steps below:
         setMessages((prev) => [...prev, { id: 'typing', author: bot, typing: true }]);
 
         // Send request to your AI service
-        axios({
+        fetch('your-ai-service-endpoint', {
             method: 'POST',
-            url: 'your-ai-service-endpoint',
-            data: {
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
                 role: 'user',
                 contents: [{ $type: 'text', text: event.prompt }],
                 columns: event.columns
-            }
+            })
         })
-            .then((response) => onResponseSuccess(response))
+            .then((res) => res.json())
+            .then((data) => onResponseSuccess({ data }))
             .catch(onResponseError);
     };
     ```
@@ -91,7 +91,7 @@ To implement an AI Chat Assistant for your Grid, follow the steps below:
     ```tsx
     import { handleAIResponse } from '@progress/kendo-react-grid';
 
-    const onResponseSuccess = (response: AxiosResponse) => {
+    const onResponseSuccess = (response: { data: any }) => {
         // Remove typing indicator
         setMessages((prev) => prev.filter((msg) => msg.id !== 'typing'));
 

@@ -5,6 +5,8 @@ components: ['datagrid']
 slug: groupingstickyheaders_grid
 position: 40
 subject: Grouping feature of the Grid
+tag: new
+release_tag: Q2 2026
 ---
 
 # Sticky Group Headers and Footers

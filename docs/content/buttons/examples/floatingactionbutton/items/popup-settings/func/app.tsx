@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { FloatingActionButton } from '@progress/kendo-react-buttons';
-import { facebookIcon, pinterestIcon, shareIcon, twitterIcon } from '@progress/kendo-svg-icons';
+import { facebookIcon, pinterestIcon, shareIcon, xLogoIcon } from '@progress/kendo-svg-icons';
 import { SVGIcon } from '@progress/kendo-react-common';
 
 interface Item {
@@ -13,7 +13,7 @@ interface Item {
 const items: Item[] = [
     {
         text: 'Twitter',
-        svgIcon: twitterIcon
+        svgIcon: xLogoIcon
     },
     {
         text: 'Facebook',

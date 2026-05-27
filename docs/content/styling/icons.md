@@ -1,15 +1,33 @@
 ---
 title: Icons
 description: 'Check out the full list of the web font icons for the KendoReact components.'
-components: ["general"]
+components: ['general']
 slug: icons
 position: 30
+tag: updated
+release_tag: Q2 2026
 ---
 
 # Icons
 
 Kendo UI for React provides a large set of built-in icons. There are two ways to consume and render them: as [Font icons](https://www.telerik.com/design-system/docs/foundation/iconography/font-icons/) or as [SVG icons](https://www.telerik.com/design-system/docs/foundation/iconography/svg-icons/).
 In general, font icons produce a smaller HTML footprint and the glyph can be overridden with CSS. SVG icons provide better accessibility and can use multiple colors in a single icon.
+
+> Kendo UI Icons version `^5.x.x` requires KendoReact `v15.0.0` or later.
+
+## Icon Package Compatibility
+
+Starting with KendoReact 15.0.0, KendoReact supports both Kendo UI Icons version `^4.x.x` and version `^5.x.x` of the `@progress/kendo-font-icons` and `@progress/kendo-svg-icons` packages.
+
+Version `5.0.0` of the icon packages introduces breaking changes. The icon set is streamlined and updated with new icons and variants, and the default icon variant is changed to `outline`. The update also includes icon removals and renames, and font icon aliases are removed and no longer supported.
+
+What is affected:
+
+-   Removed icons with replacements (renamed or consolidated icons in v5).
+-   Icons removed without replacement.
+-   Deprecated font icon aliases (old alias names no longer resolve).
+
+> tip Review the complete list of deprecations, replacements, and other breaking changes in the [Iconography changelog v5.0.0](https://www.telerik.com/design-system/docs/foundation/iconography/changelog/#v5.0.0).
 
 ## Using Font Icons
 
@@ -22,16 +40,6 @@ The [Icon component](https://www.telerik.com/kendo-react-ui/components/common/ic
 ### Render Font Icons with HTML
 
 For more details on adding a KendoReact Font icon using just HTML and CSS (without the Icon component), read the [Font Icons Usage article in the Progress Design System documentation](https://www.telerik.com/design-system/docs/foundation/iconography/font-icons/#usage).
-
-### Loading Icons through a CDN
-
-Import the font icons by using the following CDN link in your `index.html` file.
-`html
-    <link
-        rel="stylesheet"
-        href="https://unpkg.com/@progress/kendo-font-icons/dist/index.css"
-    />
-    `
 
 ### Rendering with Unicode Numbers
 

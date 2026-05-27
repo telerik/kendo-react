@@ -1,0 +1,14 @@
+---
+title: NotificationCommands
+description: "Learn how to build custom functionality when working with the React Web MCP by Kendo UI with the help of the NotificationCommands."
+api_reference: true
+type: inner_api
+slug: api_webmcp_notificationcommands
+---
+
+# NotificationCommands
+Command constants for the Notification component.
+These commands allow AI agents to show or dismiss notification messages.
+
+
+

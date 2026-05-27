@@ -4,7 +4,6 @@ description: 'Add alternative styling options to the KendoReact MultiSelectTree 
 components: ['multiselecttree']
 slug: appearance_multiselecttree
 position: 7
-tag: updated
 ---
 
 # Appearance

@@ -3,7 +3,6 @@ title: AI Smart Box
 description: 'Get started with the Smart functionality of the KendoReact Smart Grid and learn how to perform basic operations.'
 components: ['datagrid']
 slug: smart_grid_basic_operations
-tag: new
 position: 30
 tier: premium
 ---

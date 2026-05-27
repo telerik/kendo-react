@@ -7,6 +7,7 @@ slug: components_key_features
 position: 30
 category: getting-started
 tag: new
+release_tag: Q2 2026
 level: 0
 ---
 

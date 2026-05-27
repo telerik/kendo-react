@@ -39,7 +39,7 @@ A [Functional Component](https://react.dev/reference/react/Component).
 <code>
 
 
-[MultiViewCalendarProps]({% slug api_dateinputs_multiviewcalendarprops %})&lt;any&gt; [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with RefAttributes&lt;any&gt;
+[MultiViewCalendarProps]({% slug api_dateinputs_multiviewcalendarprops %})&lt;any&gt; [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with RefAttributes&lt;"null" | [MultiViewCalendarHandle]({% slug api_dateinputs_multiviewcalendarhandle %})&gt;
 
 
 </code>

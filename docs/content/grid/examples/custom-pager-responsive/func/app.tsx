@@ -37,7 +37,7 @@ const App = () => {
     return (
         <div>
             <Grid
-                style={{ height: '400px' }}
+                style={{ height: '550px' }}
                 data={products.slice(page.skip, page.take + page.skip)}
                 skip={page.skip}
                 take={page.take}

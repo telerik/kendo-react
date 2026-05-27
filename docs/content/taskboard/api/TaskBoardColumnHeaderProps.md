@@ -129,6 +129,41 @@ The rendered column.
 <td class="table-cell-name">
 
 
+#### columnHeaderId?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+string
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+The ID for the column header text element, used for aria-labelledby.
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### editButtonTitle
 
 

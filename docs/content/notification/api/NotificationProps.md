@@ -253,7 +253,7 @@ The styles that are applied to the Notification.
 <code>
 
 
-{ icon?: boolean; style?: "base" | "none" | "error" | "primary" | "secondary" | "tertiary" | "info" | "success" | "warning" | "dark" | "light" | "inverse"; }
+{ icon?: boolean; style?: "base" | "error" | "none" | "primary" | "secondary" | "tertiary" | "info" | "success" | "warning" | "inverse"; }
 
 
 </code>
@@ -279,6 +279,42 @@ The possible values are:
 * `style: 'none'|'success'|'error'|'warning'|'info'`. The default is `'none'`.
 * `icon?: 'true'|'false'`. The default is `true`.
 
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
+#### webMcp?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+boolean | WebMcpProps
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Enables Web MCP tool registration for this component.
+Requires a parent `WebMcpProvider` from `@progress/kendo-react-webmcp`.
 
 
 </td>

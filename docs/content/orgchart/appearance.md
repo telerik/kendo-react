@@ -4,7 +4,6 @@ description: 'Get Started with the KendoReact OrgChart and learn how to customiz
 components: ["orgchart"]
 slug: appearance_orgchart
 position: 6
-tag: updated
 ---
 
 # KendoReact OrgChart Appearance

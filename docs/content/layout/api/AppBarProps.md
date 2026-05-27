@@ -332,16 +332,10 @@ undefined (theme-controlled)
 Specifies the AppBar theme color ([see example](https://www.telerik.com/kendo-react-ui/components/layout/appbar/appearance)).
 
 * The possible values are:
-* 'light'
+* 'base'
 * 'primary'
 * 'secondary'
 * 'tertiary'
-* 'info'
-* 'success'
-* 'warning'
-* 'error'
-* 'dark'
-* 'inherit'
 * 'inverse'
 
 

@@ -21,12 +21,6 @@ const themeColorOptions = [
     { label: 'Primary', value: 'primary' },
     { label: 'Secondary', value: 'secondary' },
     { label: 'Tertiary', value: 'tertiary' },
-    { label: 'Info', value: 'info' },
-    { label: 'Success', value: 'success' },
-    { label: 'Warning', value: 'warning' },
-    { label: 'Error', value: 'error' },
-    { label: 'Dark', value: 'dark' },
-    { label: 'Light', value: 'light' },
     { label: 'Inverse', value: 'inverse' }
 ];
 

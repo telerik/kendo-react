@@ -27,7 +27,7 @@ The KendoReact Buttons is a collection of customizable, responsive, and interact
 
 The following demo shows the components included in the KendoReact Buttons package:
 
-{% meta height:490 %}
+{% meta height:540 %}
 {% embed_file overview/func/app.tsx preview %}
 {% embed_file overview/func/main.tsx %}
 {% embed_file overview/func/styles.css %}

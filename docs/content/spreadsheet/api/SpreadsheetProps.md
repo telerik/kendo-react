@@ -391,6 +391,53 @@ A Boolean value which indicates if the toolbar will be displayed. It also allows
 
 </td>
 </tr>
+<tr>
+<td class="table-cell-name">
+
+
+#### webMcp?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+boolean | WebMcpProps
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Enables browser-native AI agent tools via Web MCP (Chrome 146+).
+
+Pass `true` for defaults or an object for fine-grained control.
+AI agents are multilingual — `dataName` accepts any language.
+
+```tsx
+// Boolean: generic "spreadsheet" label
+<Spreadsheet webMcp />
+
+// Config object: explicit name
+<Spreadsheet webMcp={{ dataName: 'budget' }} />
+```
+
+
+
+</td>
+</tr>
 </tbody>
 </table>
 

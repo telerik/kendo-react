@@ -681,6 +681,9 @@ position: 1
         <a href="{% slug api_charts_axislabelclickevent %}">AxisLabelClickEvent</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_charts_chart %}">Chart</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_charts_chartarea %}">ChartArea</a>
     </li>
     <li class="api-item">
@@ -956,6 +959,9 @@ position: 1
 
 
   <ul class="api-item-list">
+    <li class="api-item">
+        <a href="{% slug api_charts_chart %}">Chart</a>
+    </li>
     <li class="api-item">
         <a href="{% slug api_charts_chart %}">Chart</a>
     </li>

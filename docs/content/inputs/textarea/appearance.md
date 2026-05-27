@@ -4,7 +4,6 @@ description: 'Add alternative styling options to the KendoReact TextArea in Reac
 components: ['textarea']
 slug: appearance_textarea
 position: 7
-tag: updated
 ---
 
 # Appearance

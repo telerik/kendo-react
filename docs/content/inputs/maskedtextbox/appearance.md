@@ -4,7 +4,6 @@ description: 'Add alternative styling options to the KendoReact MaskedTextBox in
 components: ['maskedtextbox']
 slug: appearance_maskedtextbox
 position: 8
-tag: updated
 ---
 
 # Appearance

@@ -4,7 +4,6 @@ description: 'Get started with the KendoReact Form and use its responsive grid l
 components: ["form"]
 slug: responsive_form
 position: 8
-tag: new
 ---
 
 # KendoReact Form Responsive Design

@@ -1,7 +1,7 @@
 ---
 title: Appearance
 description: 'Specify the appearance of the KendoReact Typography component in React projects.'
-components: ["typography"]
+components: ['typography']
 slug: appearance_typography
 position: 2
 ---
@@ -82,14 +82,12 @@ The possible values are:
 -   `inherit`&mdash;Applies coloring based on the current color.
 -   `primary` &mdash;Applies coloring based on primary theme color.
 -   `secondary`&mdash;Applies coloring based on secondary theme color.
--   `tertiary`&mdash; Applies coloring based on tertiary theme color.
+-   `tertiary`&mdash;Applies coloring based on tertiary theme color.
 -   `info`&mdash;Applies coloring based on info theme color.
--   `success`&mdash; Applies coloring based on success theme color.
--   `warning`&mdash; Applies coloring based on warning theme color.
--   `error`&mdash; Applies coloring based on error theme color.
--   `dark`&mdash; Applies coloring based on dark theme color.
--   `light`&mdash; Applies coloring based on light theme color.
--   `inverse`&mdash; Applies coloring based on inverse theme color.
+-   `success`&mdash;Applies coloring based on success theme color.
+-   `warning`&mdash;Applies coloring based on warning theme color.
+-   `error`&mdash;Applies coloring based on error theme color.
+-   `inverse`&mdash;Applies coloring based on inverse theme color.
 
 You can use the `style` property to apply custom color related properties to the element.
 

@@ -5,6 +5,7 @@ components: ['splitbutton']
 slug: appearance_splitbutton
 position: 6
 tag: updated
+release_tag: Q2 2026
 ---
 
 # Appearance
@@ -86,8 +87,6 @@ The [`themeColor`](slug:api_buttons_splitbuttonprops#themeColor) option supports
 -   `success` - Applies coloring based on the `success` theme color.
 -   `warning` - Applies coloring based on the `warning` theme color.
 -   `error` - Applies coloring based on the `error` theme color.
--   `dark` - Applies coloring based on the `dark` theme color.
--   `light` - Applies coloring based on the `light` theme color.
 -   `inverse` - Applies coloring based on the `inverse` theme color.
 
 The following example demonstrates how to define the theme color of the SplitButton.

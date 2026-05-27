@@ -25,7 +25,7 @@ A [Functional Component](https://react.dev/reference/react/Component).
                <DrawerItem text="Calendar" icon="k-i-calendar"/>
                <DrawerItem separator={true} />
                <DrawerItem text="Attachments" icon="k-i-hyperlink-email" selected={true}/>
-               <DrawerItem text="Favourites" icon="k-i-star-outline"/>
+               <DrawerItem text="Favourites" icon="k-i-star"/>
            </DrawerNavigation>
            <DrawerContent><Button onClick={handleClick}>Toggle the drawer state</Button></DrawerContent>
        </Drawer>

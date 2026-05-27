@@ -1,14 +1,16 @@
 ---
 title: Getting Started
 description: 'Get an overview of the features the KendoReact Icon delivers and use the component in React projects.'
-components: ["general"]
+components: ['general']
 slug: overview_icon
 position: 1
 ---
 
 # KendoReact Icon Overview
 
-The Icon component is used to display [font icons](https://www.telerik.com/kendo-react-ui/components/styling/icons/#list-of-font-icons). The font icons are no longer shipped in the [kendo-themes](https://www.telerik.com/kendo-react-ui/components/styling/) packages and therefore it is now required to [load them through a CDN](https://www.telerik.com/kendo-react-ui/components/styling/icons/#toc-loading-icons-through-a-cdn).
+The Icon component is used to display [font icons](https://www.telerik.com/kendo-react-ui/components/styling/icons/#list-of-font-icons). The font icons are no longer shipped in the [kendo-themes](https://www.telerik.com/kendo-react-ui/components/styling/) packages and therefore it is now required to [import them explicitly](https://www.telerik.com/kendo-react-ui/components/styling/icons/).
+
+> Kendo UI Icons version `^5.x.x` requires KendoReact `v15.0.0` or later. For more information, refer to the [Icon Package Compatibility](slug:icons#icon-package-compatibility) section.
 
 <CtaPanelOverview></CtaPanelOverview>
 

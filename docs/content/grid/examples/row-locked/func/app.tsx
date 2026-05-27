@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Grid, GridColumn as Column, GridCellProps, GridCustomCellProps } from '@progress/kendo-react-grid';
-import { SvgIcon } from '@progress/kendo-react-common';
+import { SvgIcon, classNames } from '@progress/kendo-react-common';
 import { pinIcon, unpinIcon } from '@progress/kendo-svg-icons';
 import products from './gd-products';
 
@@ -16,18 +16,19 @@ interface LockRowCellProps extends GridCustomCellProps {
 const rowHeight: number = 50;
 
 const LockRowCell = (props: LockRowCellProps) => {
-    let styles = props.style;
-    let classNames = props.className;
+    const styles = { ...props.style };
+
+    let stickyClassName;
     if (props.dataItem.locked) {
-        styles!.top = props.getTop(props.dataItem);
-        styles!.bottom = props.getBottom(props.dataItem);
-        classNames += ' k-grid-row-sticky';
+        styles.top = props.getTop(props.dataItem);
+        styles.bottom = props.getBottom(props.dataItem);
+        stickyClassName = 'k-grid-row-sticky';
     }
     return (
         <td
             {...props.tdProps}
+            className={classNames(props.tdProps?.className, stickyClassName)}
             style={{ textAlign: 'center', ...styles }}
-            className={classNames}
             onClick={() => props.onClick(props.dataItem)}
         >
             {props.dataItem.locked ? <SvgIcon icon={pinIcon} /> : <SvgIcon icon={unpinIcon} />}
@@ -49,20 +50,22 @@ const App = () => {
     const [allLockedRows, setAllLockedRows] = React.useState<Product[]>(filterBy(products, filterDescriptorLocked));
 
     const CustomCell = (props: GridCustomCellProps) => {
-        const extraProps: any = {};
         if (props.dataItem.locked) {
-            extraProps.style = {
-                top: getTop(props.dataItem),
-                bottom: getBottom(props.dataItem),
-                ...props.style
-            };
-            extraProps.className = props.className + ' k-grid-row-sticky';
+            return (
+                <td
+                    {...props.tdProps}
+                    className={classNames(props.tdProps?.className, 'k-grid-row-sticky')}
+                    style={{
+                        top: getTop(props.dataItem),
+                        bottom: getBottom(props.dataItem),
+                        ...props.style
+                    }}
+                >
+                    {props.children}
+                </td>
+            );
         }
-        return (
-            <td {...props.tdProps} {...extraProps}>
-                {props.children}
-            </td>
-        );
+        return <td {...props.tdProps}>{props.children}</td>;
     };
 
     const getTop = (dataItem: Product) => {
@@ -77,9 +80,9 @@ const App = () => {
     };
 
     const handleLockRowChange = (dataItem: Product) => {
-        let itemIndex = data.findIndex((item) => item.ProductID === dataItem.ProductID);
-        let newData = [...data];
-        newData[itemIndex].locked = !newData[itemIndex].locked;
+        const itemIndex = data.findIndex((item) => item.ProductID === dataItem.ProductID);
+        const newData = [...data];
+        newData[itemIndex] = { ...newData[itemIndex], locked: !newData[itemIndex].locked };
         setData(newData);
         setAllLockedRows(filterBy(newData, filterDescriptorLocked));
     };

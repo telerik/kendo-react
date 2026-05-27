@@ -7,7 +7,7 @@ slug: api_upload_upload
 ---
 
 # Upload
-
+A [Functional Component](https://react.dev/reference/react/Component).
 
 
 <table class="api-table api-table-properties">
@@ -34,7 +34,7 @@ slug: api_upload_upload
 <code>
 
 
-Readonly&lt;[UploadProps]({% slug api_upload_uploadprops %})&gt;
+[UploadProps]({% slug api_upload_uploadprops %}) [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with RefAttributes&lt;any&gt;
 
 
 </code>
@@ -55,36 +55,6 @@ The props of the Upload component.
 
 </td>
 </tr>
-</tbody>
-</table>
-
-
-
-## Methods
-
-<table class="api-table api-table-methods">
-<thead class="api-table-methods-head">
-<tr>
-<th>
-
-
-#### triggerUpload
-
-
-</th>
-</tr>
-</thead>
-<tbody class="api-table-body">
-<tr>
-<td>
-
-
-Upload the selected files. Usable when the upload action is triggered by external code.
-
-
-</td>
-</tr>
-
 </tbody>
 </table>
 

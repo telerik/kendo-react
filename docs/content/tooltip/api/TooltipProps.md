@@ -865,6 +865,54 @@ Required when the Tooltip is in controlled mode.
 <td class="table-cell-name">
 
 
+#### themeColor?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+[TooltipThemeColor]({% slug api_tooltip_tooltipthemecolor %})
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Configures the `themeColor` of the Tooltip.
+
+The available options are:
+- `base`
+- `inverse`
+- `info`
+- `success`
+- `warning`
+- `error`
+
+```jsx
+<Tooltip themeColor="info" />
+```
+
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### tooltipClassName?
 
 

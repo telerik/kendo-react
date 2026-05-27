@@ -104,7 +104,7 @@ Gets the current focused date of the MultiViewCalendar.
 <code>
 
 
-Readonly&lt;[MultiViewCalendarProps]({% slug api_dateinputs_multiviewcalendarprops %})&lt;any&gt;&gt;
+[MultiViewCalendarProps]({% slug api_dateinputs_multiviewcalendarprops %})&lt;any&gt;
 
 
 </code>
@@ -120,7 +120,7 @@ Readonly&lt;[MultiViewCalendarProps]({% slug api_dateinputs_multiviewcalendarpro
 <td class="table-cell-comment">
 
 
-The props of the MultiViewCalendarHandle component.
+Returns the props of the MultiViewCalendar component.
 
 
 </td>

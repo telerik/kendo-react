@@ -30,10 +30,10 @@ const requiredValidator = (value: any) => (value && value.length > 0 ? '' : 'You
 
 const App = () => {
     const [success, setSuccess] = React.useState(false);
-    const [expanded, setExpanded] = React.useState([data[0][dataItemKey]]);
+    const [expanded, setExpanded] = React.useState<number[]>([data[0][dataItemKey]]);
 
     const onExpandChange = React.useCallback(
-        (event: MultiSelectTreeExpandEvent) => setExpanded(expandedState(event.item, dataItemKey, expanded)),
+        (event: MultiSelectTreeExpandEvent) => setExpanded(expandedState(event.item, dataItemKey, expanded) as number[]),
         [expanded]
     );
 
@@ -76,7 +76,7 @@ const App = () => {
                 expandField={expandField}
                 onExpandChange={onExpandChange}
                 valid={visited && !validationMessage}
-                validationMessage={visited ? validationMessage : ''}
+                validationMessage={visited ? validationMessage ?? '' : ''}
             />
         );
     };

@@ -1456,6 +1456,53 @@ Specifies the name of the field which will provide a text representation for the
 
 </td>
 </tr>
+<tr>
+<td class="table-cell-name">
+
+
+#### webMcp?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+boolean | WebMcpProps
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Enables browser-native AI agent tools via Web MCP (Chrome 146+).
+
+Pass `true` for defaults or an object for fine-grained control.
+AI agents are multilingual — `dataName` accepts any language.
+
+```tsx
+// Boolean: generic "treeview" label
+<TreeView webMcp data={treeData} />
+
+// Config object: explicit name
+<TreeView webMcp={{ dataName: 'file_browser' }} data={treeData} />
+```
+
+
+
+</td>
+</tr>
 </tbody>
 </table>
 

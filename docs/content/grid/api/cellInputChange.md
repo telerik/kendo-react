@@ -40,3 +40,13 @@ any
 </code>
 
 
+##### clearOperatorOnClear
+<code>
+
+
+boolean
+
+
+</code>
+
+

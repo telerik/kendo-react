@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { ChipList, Chip, ChipProps } from '@progress/kendo-react-buttons';
-import { SVGIcon, checkOutlineIcon, plusCircleIcon, fileAddIcon } from '@progress/kendo-svg-icons';
+import { SVGIcon, checkIcon, plusCircleIcon, fileAddIcon } from '@progress/kendo-svg-icons';
 
 interface Fruits {
     text: string;
@@ -13,7 +13,7 @@ const fruits: Fruits[] = [
     {
         text: 'Berry',
         value: 'berry',
-        selectedIconSvg: checkOutlineIcon
+        selectedIconSvg: checkIcon
     },
     {
         text: 'Apple',

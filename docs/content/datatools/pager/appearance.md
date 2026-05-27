@@ -5,6 +5,7 @@ components: ['pager']
 slug: appearance_pager
 position: 2
 tag: updated
+release_tag: Q2 2026
 ---
 
 # Appearance

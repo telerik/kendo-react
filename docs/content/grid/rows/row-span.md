@@ -4,7 +4,6 @@ description: 'Get started with the KendoKendoReact Data Grid supporting the span
 components: ["datagrid"]
 slug: rowspan_grid
 position: 10
-tag: 'updated'
 ---
 
 # Spanning of Rows

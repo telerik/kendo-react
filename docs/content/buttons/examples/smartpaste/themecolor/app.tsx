@@ -44,12 +44,6 @@ const App = () => {
                 <SmartPasteButton themeColor="error" disabled={isDisabled}>
                     Error
                 </SmartPasteButton>
-                <SmartPasteButton themeColor="dark" disabled={isDisabled}>
-                    Dark
-                </SmartPasteButton>
-                <SmartPasteButton themeColor="light" disabled={isDisabled}>
-                    Light
-                </SmartPasteButton>
                 <SmartPasteButton themeColor="inverse" disabled={isDisabled}>
                     Inverse
                 </SmartPasteButton>

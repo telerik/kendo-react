@@ -20,7 +20,7 @@ const App = () => {
       { text: 'Calendar', icon: 'k-i-calendar' },
       { separator: true },
       { text: 'Attachments', icon: 'k-i-hyperlink-email' },
-      { text: 'Favourites', icon: 'k-i-star-outline' }
+      { text: 'Favourites', icon: 'k-i-star' }
   ];
 
   const [expanded, setExpanded] = React.useState(true);

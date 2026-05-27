@@ -4,7 +4,6 @@ description: 'Configure the on-screen keyboard for the KendoReact TextBox to imp
 components: ["textbox"]
 slug: adaptive_rendering_textbox
 position: 8
-tag: new
 ---
 
 # Adaptive Rendering

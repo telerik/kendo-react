@@ -4,7 +4,6 @@ description: 'Discover how to display a loading indicator overlay while the Kend
 components: ["datagrid"]
 slug: loading_grid
 position: 10
-tag: updated
 ---
 
 # KendoReact Data Grid Loading Indicator

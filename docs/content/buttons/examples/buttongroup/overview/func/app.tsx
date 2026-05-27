@@ -2,8 +2,6 @@ import * as React from 'react';
 
 import { Button, ButtonGroup } from '@progress/kendo-react-buttons';
 
-import './styles.css';
-
 const App = () => {
     return (
         <div>

@@ -1,7 +1,7 @@
 ---
 title: Appearance
 description: 'Specify the appearance of the KendoReact SvgIcon component in React projects.'
-components: ["svgicon"]
+components: ['svgicon']
 slug: appearance_svgicon
 position: 2
 ---
@@ -10,6 +10,8 @@ position: 2
 
 The SvgIcon component provides many predefined appearance options such as different sizes, theme colors and flipping.
 
+> Kendo UI Icons version `^5.x.x` requires KendoReact `v15.0.0` or later. For more information, refer to the [Icon Package Compatibility](slug:icons#icon-package-compatibility) section.
+
 ## Theme Color
 
 SVG icons can be colored in terms of the current theme using the [`themeColor`]({% slug api_common_iconthemecolor %}) property. The available values are:
@@ -17,14 +19,12 @@ SVG icons can be colored in terms of the current theme using the [`themeColor`](
 -   `inherit` (Default)&mdash;Applies coloring based on the current color.
 -   `primary`&mdash;Applies coloring based on primary theme color.
 -   `secondary`&mdash;Applies coloring based on secondary theme color.
--   `tertiary`&mdash; Applies coloring based on tertiary theme color.
+-   `tertiary`&mdash;Applies coloring based on tertiary theme color.
 -   `info`&mdash;Applies coloring based on info theme color.
--   `success`&mdash; Applies coloring based on success theme color.
--   `warning`&mdash; Applies coloring based on warning theme color.
--   `error`&mdash; Applies coloring based on error theme color.
--   `dark`&mdash; Applies coloring based on dark theme color.
--   `light`&mdash; Applies coloring based on light theme color.
--   `inverse`&mdash; Applies coloring based on inverse theme color.
+-   `success`&mdash;Applies coloring based on success theme color.
+-   `warning`&mdash;Applies coloring based on warning theme color.
+-   `error`&mdash;Applies coloring based on error theme color.
+-   `inverse`&mdash;Applies coloring based on inverse theme color.
 
 > The SvgIcon allows you to use predefined theme colors through the `themeColor` property. Any custom color could by applied via [`style`]({% slug api_common_svgiconprops %}#style) property.
 
@@ -66,6 +66,18 @@ The SvgIcon allows you to invert it through an axis in different directions by u
 {% embed_file svg-icon/flip/func/app.tsx preview %}
 {% embed_file svg-icon/flip/func/main.tsx %}
 {% endmeta %}
+
+## Variant
+
+> Using the `variant` property requires `@progress/kendo-svg-icons` version `5.0.0` or later, as icon variant data is only available starting from that version.
+
+You can render the SVGIcon component in different visual styles by using the `variant` property. The available values are `solid`, `outline`, and `duotone`.
+
+When a variant is specified, the component uses the `variants` property of the [`SVGIcon`](slug:api_common_svgiconprops) object to render the corresponding path. If the requested variant is not present on the icon, the component falls back to the default `content` path.
+
+The following example demonstrates the available `variant` values.
+
+<demo metaUrl="common/svg-icon/variant/func/" height="230"></demo>
 
 ## Suggested Links
 

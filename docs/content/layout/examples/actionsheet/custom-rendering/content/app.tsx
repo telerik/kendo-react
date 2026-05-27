@@ -75,7 +75,7 @@ const App = () => {
                     position: absolute;
                     top: 50%;
                     left: 50%;
-                    transform: translate(-50%, -50%);
+                    transform: translate(-50%, -100%);
                     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
                     border-radius: 8px;
                     background-color: white;

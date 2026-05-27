@@ -4,7 +4,6 @@ description: 'Get started with the React ListBox appearance features and learn h
 components: ["listbox"]
 slug: appearance_listbox
 position: 30
-tag: updated
 ---
 
 # Appearance

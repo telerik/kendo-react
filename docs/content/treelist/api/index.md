@@ -111,6 +111,9 @@ position: 1
         <a href="{% slug api_treelist_treelist %}">TreeList</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_treelist_treelist %}">TreeList</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_treelist_treelistbooleaneditor %}">TreeListBooleanEditor</a>
     </li>
     <li class="api-item">
@@ -166,30 +169,6 @@ position: 1
 <span class="section-key">
 
 
-## Constant
-
-
-</span>
-
-
-  <ul class="api-item-list">
-    <li class="api-item">
-        <a href="{% slug api_treelist_treelist_col_index_attribute %}">TREELIST_COL_INDEX_ATTRIBUTE</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_treelist_treelist_prevent_selection_element %}">TREELIST_PREVENT_SELECTION_ELEMENT</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_treelist_treelist_row_index_attribute %}">TREELIST_ROW_INDEX_ATTRIBUTE</a>
-    </li>
-  </ul>
-</div>
-<div class="api-index-section">
-
-
-<span class="section-key">
-
-
 ## Class
 
 
@@ -197,6 +176,9 @@ position: 1
 
 
   <ul class="api-item-list">
+    <li class="api-item">
+        <a href="{% slug api_treelist_treelist %}">TreeList</a>
+    </li>
     <li class="api-item">
         <a href="{% slug api_treelist_treelistbooleaneditor %}">TreeListBooleanEditor</a>
     </li>
@@ -226,6 +208,30 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_treelist_treelisttoolbar %}">TreeListToolbar</a>
+    </li>
+  </ul>
+</div>
+<div class="api-index-section">
+
+
+<span class="section-key">
+
+
+## Constant
+
+
+</span>
+
+
+  <ul class="api-item-list">
+    <li class="api-item">
+        <a href="{% slug api_treelist_treelist_col_index_attribute %}">TREELIST_COL_INDEX_ATTRIBUTE</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_treelist_treelist_prevent_selection_element %}">TREELIST_PREVENT_SELECTION_ELEMENT</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_treelist_treelist_row_index_attribute %}">TREELIST_ROW_INDEX_ATTRIBUTE</a>
     </li>
   </ul>
 </div>

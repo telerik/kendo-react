@@ -139,7 +139,7 @@ The prompt message sent to the AI assistant.
 <code>
 
 
-{[key: string]: any}
+[GridAIRequestConfig]({% slug api_grid_gridairequestconfig %}) [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with { cancelToken?: unknown; url?: string; }
 
 
 </code>

@@ -31,7 +31,7 @@ const App = () => {
     };
 
     const InterestsField = (fieldRenderProps: FieldRenderProps) => {
-        const { validationMessage, visited, ...others } = fieldRenderProps;
+        const { validationMessage, visited, valid, ...others } = fieldRenderProps;
         return (
             <MultiSelect
                 validityStyles={false}

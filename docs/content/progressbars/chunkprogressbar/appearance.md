@@ -4,7 +4,6 @@ description: 'Get started with the KendoReact ChunkProgressBar and change its ap
 components: ["chunkprogressbar"]
 slug: chunkprogressbar_appearance
 position: 6
-tag: updated
 ---
 
 # Appearance

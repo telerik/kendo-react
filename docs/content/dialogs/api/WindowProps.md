@@ -1232,51 +1232,6 @@ Set styles to the Window element.
 <td class="table-cell-name">
 
 
-#### themeColor?
-
-
-</td>
-<td type class="table-cell-type">
-
-
-<code>
-
-
-"primary" | "dark" | "light"
-
-
-</code>
-
-
-</td>
-<td class="table-cell-default">
-
-
-
-
-</td>
-<td class="table-cell-comment">
-
-
-Configures the `themeColor` of the Window.
-
-The available options are:
-- primary
-- dark
-- light
-
-```jsx
-<Window themeColor="dark" />
-```
-
-
-
-</td>
-</tr>
-<tr>
-<td class="table-cell-name">
-
-
 #### title?
 
 
@@ -1349,6 +1304,44 @@ Specifies the top coordinates of the Window.
 <Window top={100} />
 ```
 
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
+#### webMcp?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+boolean | WebMcpProps
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Enables Web MCP tool registration so AI agents can interact with this Window.
+Set to `true` to use the provider-level `dataName`, or pass a config object to override.
+
+Requires a `WebMcpProvider` ancestor from `@progress/kendo-react-webmcp`.
 
 
 </td>

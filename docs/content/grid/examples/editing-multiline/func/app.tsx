@@ -5,12 +5,14 @@ import { MyCommandCell } from './gd-myCommandCell';
 import { insertItem, getItems, updateItem, deleteItem, generateId } from './gd-services';
 import { Button } from '@progress/kendo-react-buttons';
 import { Product } from './gd-interfaces';
+import { classNames } from '@progress/kendo-react-common';
 
 const CommandCell = (props) => {
     const { edit, enterEdit, remove, add, discard, update, cancel } = props;
     return (
         <MyCommandCell
             {...props}
+            className={classNames(props.tdProps?.className)}
             edit={edit}
             enterEdit={enterEdit}
             remove={remove}

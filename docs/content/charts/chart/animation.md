@@ -4,6 +4,7 @@ description: 'Learn how the KendoReact Charts animate on initial render and how 
 slug: animation_charts
 position: 40
 tag: new
+release_tag: Q2 2026
 ---
 
 # Animation

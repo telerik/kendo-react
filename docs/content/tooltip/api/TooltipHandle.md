@@ -60,7 +60,7 @@ Handles keyboard events.
 <td class="table-cell-name">
 
 
-#### handleMouseOut
+#### handleMouseLeave
 
 
 </td>
@@ -86,7 +86,7 @@ Handles keyboard events.
 <td class="table-cell-comment">
 
 
-The method is used on the MouseOut event to hide the Tooltip.
+The method is used on the MouseLeave event to hide the Tooltip.
 
 
 </td>

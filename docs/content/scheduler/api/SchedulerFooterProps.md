@@ -446,7 +446,7 @@ The `resize` event of the Toolbar.
 <code>
 
 
-"section" | "none" | "scroll"
+"section" | "scroll" | "none"
 
 
 </code>

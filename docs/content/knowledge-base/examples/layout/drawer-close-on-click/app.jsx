@@ -18,7 +18,7 @@ const items = [
     },
     {
         text: 'Favourites',
-        icon: 'k-i-star-outline',
+        icon: 'k-i-star',
     },
 ];
 const App = () => {

@@ -138,9 +138,6 @@ position: 1
         <a href="{% slug api_layout_menu %}">Menu</a>
     </li>
     <li class="api-item">
-        <a href="{% slug api_layout_menuhandle %}">MenuHandle</a>
-    </li>
-    <li class="api-item">
         <a href="{% slug api_layout_menuitem %}">MenuItem</a>
     </li>
     <li class="api-item">
@@ -468,6 +465,9 @@ position: 1
         <a href="{% slug api_layout_menucloseevent %}">MenuCloseEvent</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_layout_menuhandle %}">MenuHandle</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_layout_menuitemarrowprops %}">MenuItemArrowProps</a>
     </li>
     <li class="api-item">
@@ -716,6 +716,9 @@ position: 1
 
 
   <ul class="api-item-list">
+    <li class="api-item">
+        <a href="{% slug api_layout_menuitem %}">MenuItem</a>
+    </li>
     <li class="api-item">
         <a href="{% slug api_layout_sorteventlist %}">sortEventList</a>
     </li>

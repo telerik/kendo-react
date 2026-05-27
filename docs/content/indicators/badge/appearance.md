@@ -16,18 +16,14 @@ The Badge allows you to specify predefined theme colors.
 
 The available [`themeColor`]({% slug api_indicators_badgeprops %}#toc-themeColor) values are:
 
--   `base` &mdash;Applies coloring based on the base theme color.
+-   `base`&mdash;Applies coloring based on the base theme color.
 -   `primary` (Default)&mdash;Applies coloring based on primary theme color.
 -   `secondary`&mdash;Applies coloring based on secondary theme color.
--   `tertiary`&mdash; Applies coloring based on tertiary theme color.
--   `inherit`&mdash; Applies inherited coloring value.
+-   `tertiary`&mdash;Applies coloring based on tertiary theme color.
 -   `info`&mdash;Applies coloring based on info theme color.
--   `success`&mdash; Applies coloring based on success theme color.
--   `warning`&mdash; Applies coloring based on warning theme color.
--   `error`&mdash; Applies coloring based on error theme color.
--   `dark`&mdash; Applies coloring based on dark theme color.
--   `light`&mdash; Applies coloring based on light theme color.
--   `inverse`&mdash; Applies coloring based on inverted theme color.
+-   `success`&mdash;Applies coloring based on success theme color.
+-   `warning`&mdash;Applies coloring based on warning theme color.
+-   `error`&mdash;Applies coloring based on error theme color.
 
 {% meta height:170 %}
 {% embed_file badge/theme-color/func/app.tsx preview %}

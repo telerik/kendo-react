@@ -4,7 +4,6 @@ description: 'Instantiate and set the configuration options for the KendoReact T
 components: ["tabstrip"]
 slug: tabs_tabstrip
 position: 20
-tag: updated
 ---
 
 # Tabs

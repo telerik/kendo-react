@@ -12,7 +12,7 @@ import products from './products';
 const App = () => {
     return (
         <>
-            <link rel="stylesheet" href="https://unpkg.com/@progress/kendo-font-icons/dist/index.css" />
+            <link rel="stylesheet" href="https://unpkg.com/@progress/kendo-font-icons@5/dist/index.css" />
             <Grid
                 style={{ minWidth: '500px', height: '530px' }}
                 adaptive={true}

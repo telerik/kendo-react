@@ -7,21 +7,7 @@ slug: api_treeview_treeview
 ---
 
 # TreeView
-Represents the [KendoReact TreeView component](https://www.telerik.com/kendo-react-ui/components/treeview).
-
-```jsx
-const data = [{
-    text: 'Furniture', expanded: true, items: [
-        { text: 'Tables & Chairs' }, { text: 'Sofas' }, { text: 'Occasional Furniture' }]
-}, {
-    text: 'Decor', expanded: true, items: [
-        { text: 'Bed Linen' }, { text: 'Curtains & Blinds' }, { text: 'Carpets' }]
-}];
-const App = () => {
-    return <TreeView data={data} />;
-}
-```
-
+A [Functional Component](https://react.dev/reference/react/Component).
 
 
 <table class="api-table api-table-properties">
@@ -38,41 +24,6 @@ const App = () => {
 <td class="table-cell-name">
 
 
-#### guid
-
-
-</td>
-<td type class="table-cell-type">
-
-
-<code>
-
-
-string
-
-
-</code>
-
-
-</td>
-<td class="table-cell-default">
-
-
-
-
-</td>
-<td class="table-cell-comment">
-
-
-Returns the `guid` which is associated with the TreeView.
-
-
-</td>
-</tr>
-<tr>
-<td class="table-cell-name">
-
-
 #### props
 
 
@@ -83,7 +34,7 @@ Returns the `guid` which is associated with the TreeView.
 <code>
 
 
-Readonly&lt;[TreeViewProps]({% slug api_treeview_treeviewprops %})&gt;
+[TreeViewProps]({% slug api_treeview_treeviewprops %}) [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with RefAttributes&lt;[TreeViewHandle]({% slug api_treeview_treeviewhandle %})&gt;
 
 
 </code>

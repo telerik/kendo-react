@@ -5,7 +5,6 @@ description: 'Configure the text, URLs, icons, and styles for the KendoReact Men
 components: ['menu']
 slug: itemproperties_menu
 position: 2
-tag: updated
 ---
 
 # Configuring Item Properties

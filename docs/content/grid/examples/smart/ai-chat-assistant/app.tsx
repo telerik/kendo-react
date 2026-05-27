@@ -3,7 +3,6 @@ import { GridHandle, GridAIState, handleAIResponse } from '@progress/kendo-react
 import { ChatSendMessageEvent, Message } from '@progress/kendo-react-conversational-ui';
 import { Drawer, DrawerContent, DrawerNavigation } from '@progress/kendo-react-layout';
 import { savePDF } from '@progress/kendo-react-pdf';
-import axios, { AxiosResponse } from 'axios';
 
 import { addColumnsValues } from './data';
 import { AIChat, bot, user, initialMessages } from './chat';
@@ -90,16 +89,14 @@ const App = () => {
         };
         setMessages((prev) => [...prev, typingMessage]);
 
-        axios({
+        fetch('https://demos.telerik.com/service/v2/ai/grid/smart-state', {
             method: 'POST',
-            withCredentials: false,
-            responseType: 'json',
-            url: 'https://demos.telerik.com/service/v2/ai/grid/smart-state',
+            credentials: 'omit',
             headers: {
                 Accept: '*/*',
                 'Content-Type': 'application/json'
             },
-            data: {
+            body: JSON.stringify({
                 role: 'user',
                 contents: [
                     {
@@ -108,13 +105,14 @@ const App = () => {
                     }
                 ],
                 columns: processedEvent.columns
-            }
+            })
         })
-            .then((e) => onResponseSuccess(e, processedEvent.prompt, isRetry))
+            .then((res) => res.json())
+            .then((data) => onResponseSuccess({ data }, processedEvent.prompt, isRetry))
             .catch(onResponseError);
     };
 
-    const onResponseSuccess = (response: AxiosResponse, promptMessage?: string, isRetry?: boolean) => {
+    const onResponseSuccess = (response: { data: any }, promptMessage?: string, isRetry?: boolean) => {
         // Remove typing indicator
         setMessages((prev) => prev.filter((msg) => msg.id !== 'typing'));
 

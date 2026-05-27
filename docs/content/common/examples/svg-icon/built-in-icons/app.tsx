@@ -3,7 +3,7 @@ import { SplitButton } from '@progress/kendo-react-buttons';
 import { saveIcon, uploadIcon } from '@progress/kendo-svg-icons';
 import { IconsContext } from '@progress/kendo-react-common';
 
-import { caretAltDownIcon, filterIcon } from '@progress/kendo-svg-icons';
+import { chevronDownIcon, filterIcon } from '@progress/kendo-svg-icons';
 
 const inflatable = {
     name: 'inflatable',
@@ -29,9 +29,9 @@ const App = () => {
                     type: 'svg',
                     icons: {
                         //a custom SVG icon
-                        [caretAltDownIcon.name]: inflatable
+                        [chevronDownIcon.name]: inflatable
                         //or any of the built-in SVG icons
-                        //[caretAltDownIcon.name]: filterIcon,
+                        //[chevronDownIcon.name]: filterIcon,
                     }
                 }}
             >

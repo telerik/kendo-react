@@ -400,7 +400,7 @@ The possible values are:
 <code>
 
 
-"inherit" | "error" | "primary" | "secondary" | "tertiary" | "info" | "success" | "warning" | "dark" | "light" | "inverse"
+"error" | "inherit" | "primary" | "secondary" | "tertiary" | "info" | "success" | "warning" | "inverse"
 
 
 </code>
@@ -428,8 +428,6 @@ The possible values are:
 * `success`&mdash; Applies coloring based on success theme color.
 * `warning`&mdash; Applies coloring based on warning theme color.
 * `error`&mdash; Applies coloring based on error theme color.
-* `dark`&mdash; Applies coloring based on dark theme color.
-* `light`&mdash; Applies coloring based on light theme color.
 * `inverse`&mdash; Applies coloring based on inverse theme color.
 
 You can use the `style` property to apply custom color related properties to the element.

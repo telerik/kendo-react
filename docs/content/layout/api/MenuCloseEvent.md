@@ -139,7 +139,7 @@ The popup close event if the close was triggered by a popup closing .
 <code>
 
 
-[Menu]({% slug api_layout_menu %})
+[MenuHandle]({% slug api_layout_menuhandle %})
 
 
 </code>
@@ -155,7 +155,7 @@ The popup close event if the close was triggered by a popup closing .
 <td class="table-cell-comment">
 
 
-The Menu component instance.
+The Menu component handle.
 
 
 </td>

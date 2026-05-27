@@ -11,7 +11,7 @@ export const leftNavigationItems = [
     },
     {
         text: 'Attachments',
-        svgIcon: svgIcons.envelopLinkIcon,
+        svgIcon: svgIcons.envelopeLinkIcon,
         route: '/drawer-advanced-scenarios/attachments'
     },
     {
@@ -19,7 +19,7 @@ export const leftNavigationItems = [
     },
     {
         text: 'Favourites',
-        svgIcon: svgIcons.starOutlineIcon,
+        svgIcon: svgIcons.starIcon,
         route: '/drawer-advanced-scenarios/favourites'
     }
 ];

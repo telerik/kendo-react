@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Grid, GridColumn as Column, GridCustomCellProps } from '@progress/kendo-react-grid';
-import axios, { AxiosResponse } from 'axios';
+
 import { patients } from './data';
 import { Button, ButtonHandle, Chip } from '@progress/kendo-react-buttons';
 import {
@@ -10,7 +10,7 @@ import {
     InlineAIPromptOutputInterface,
     OutputActionInterface
 } from '@progress/kendo-react-conversational-ui';
-import { cancelOutlineIcon, copyIcon, insertBottomIcon, sparklesIcon } from '@progress/kendo-svg-icons';
+import { cancelIcon, copyIcon, insertBottomIcon, sparklesIcon } from '@progress/kendo-svg-icons';
 
 const CustomStatusCell = (props: GridCustomCellProps) => {
     let themeColor;
@@ -50,7 +50,7 @@ const outputActions: OutputActionInterface[] = [
     {
         id: 'discard',
         text: 'Discard',
-        svgIcon: cancelOutlineIcon,
+        svgIcon: cancelIcon,
         themeColor: 'base',
         title: 'Discard'
     }
@@ -102,7 +102,7 @@ const CustomAICell = (props: CustomAICellProps) => {
         }
     };
 
-    const onResponseSuccess = (req: AxiosResponse<any>, prompt?: string) => {
+    const onResponseSuccess = (req: { data: any }, prompt?: string) => {
         const newOutput: InlineAIPromptOutputInterface = {
             id: 1,
             responseContent: req.data.messages[0].contents[0].text,
@@ -128,16 +128,14 @@ const CustomAICell = (props: CustomAICellProps) => {
         setOutputs((prevOutputs) => [...prevOutputs, { prompt, outputItem }]);
         setStreaming(true);
         setLoading(true);
-        axios({
-            url: 'https://demos.telerik.com/service/v2/ai/completion',
+        fetch('https://demos.telerik.com/service/v2/ai/completion', {
+            method: 'POST',
+            credentials: 'omit',
             headers: {
                 Accept: '*/*',
                 'Content-Type': 'application/json'
             },
-            method: 'POST',
-            withCredentials: false,
-            responseType: 'json',
-            data: [
+            body: JSON.stringify([
                 {
                     role: 'user',
                     contents: [
@@ -147,9 +145,10 @@ const CustomAICell = (props: CustomAICellProps) => {
                         }
                     ]
                 }
-            ]
+            ])
         })
-            .then((e) => onResponseSuccess(e, prompt))
+            .then((res) => res.json())
+            .then((data) => onResponseSuccess({ data }, prompt))
             .catch(onResponseError);
     };
 

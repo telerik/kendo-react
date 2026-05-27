@@ -71,22 +71,6 @@ const App = () => {
 
             <PromptBox
                 mode="single"
-                placeholder="Dark theme color..."
-                uploadButtonConfig={{ themeColor: 'dark' }}
-                speechToTextButtonConfig={{ themeColor: 'dark' }}
-                actionButtonConfig={{ themeColor: 'dark' }}
-            />
-
-            <PromptBox
-                mode="single"
-                placeholder="Light theme color..."
-                uploadButtonConfig={{ themeColor: 'light' }}
-                speechToTextButtonConfig={{ themeColor: 'light' }}
-                actionButtonConfig={{ themeColor: 'light' }}
-            />
-
-            <PromptBox
-                mode="single"
                 placeholder="Inverse theme color..."
                 uploadButtonConfig={{ themeColor: 'inverse' }}
                 speechToTextButtonConfig={{ themeColor: 'inverse' }}

@@ -1,7 +1,28 @@
 ---
 title: Overview
 description: 'Try the variety of React layout components by KendoReact, and discover their features and rich configuration options.'
-components: ["actionsheet", "appbar", "general", "avatar", "bottomnavigation", "breadcrumb", "card", "contextmenu", "drawer", "expansionpanel", "gridlayout", "menu", "panelbar", "splitter", "stacklayout", "stepper", "tabstrip", "tilelayout", "timeline"]
+components:
+    [
+        'actionsheet',
+        'appbar',
+        'general',
+        'avatar',
+        'bottomnavigation',
+        'breadcrumb',
+        'card',
+        'contextmenu',
+        'drawer',
+        'expansionpanel',
+        'gridlayout',
+        'menu',
+        'panelbar',
+        'splitter',
+        'stacklayout',
+        'stepper',
+        'tabstrip',
+        'tilelayout',
+        'timeline'
+    ]
 slug: overview_layout
 position: 0
 ---
@@ -12,7 +33,7 @@ The KendoReact Layout package provides a collection of customizable, responsive,
 
 <CtaPanelOverview></CtaPanelOverview>
 
-{% meta height:600 %}
+{% meta height:610 %}
 {% embed_file overview/func/app.tsx preview %}
 {% embed_file overview/func/main.tsx %}
 {% embed_file overview/func/styles.css %}

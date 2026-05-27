@@ -39,7 +39,6 @@ const App = () => {
                 textField="name"
                 style={{ width: '100%' }}
                 label="Employee"
-                valid={visited ? !validationMessage : undefined}
                 validationMessage={visited ? (validationMessage as string) : ''}
                 {...others}
             />

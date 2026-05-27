@@ -5,6 +5,7 @@ components: ["progressbar"]
 slug: progressbar_appearance
 position: 8
 tag: updated
+release_tag: Q2 2026
 ---
 
 # Appearance

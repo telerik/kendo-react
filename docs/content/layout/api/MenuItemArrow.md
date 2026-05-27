@@ -7,7 +7,7 @@ slug: api_layout_menuitemarrow
 ---
 
 # MenuItemArrow
-
+A [Functional Component](https://react.dev/reference/react/Component).
 
 
 <table class="api-table api-table-properties">
@@ -34,7 +34,7 @@ slug: api_layout_menuitemarrow
 <code>
 
 
-Readonly&lt;[MenuItemArrowProps]({% slug api_layout_menuitemarrowprops %})&gt;
+[MenuItemArrowProps]({% slug api_layout_menuitemarrowprops %})
 
 
 </code>

@@ -4,7 +4,6 @@ description: 'Get started with the custom rows feature of the KendoReact Data Gr
 components: ["datagrid"]
 slug: custom-rows_grid
 position: 25
-tag: new
 tier: premium
 subject: Grid Custom Rows feature
 ---

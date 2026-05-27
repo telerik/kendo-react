@@ -3,19 +3,19 @@ import { Surface } from '@progress/kendo-drawing';
 import { drawScene } from './draw-scene';
 
 const App = () => {
-	const surfaceRef = React.useRef(null);
+    const surfaceRef = React.useRef(null);
 
-	const createSurface = () => {
-		const surface = surfaceRef.current && Surface.create(surfaceRef.current);
+    const createSurface = () => {
+        const surface = surfaceRef.current && Surface.create(surfaceRef.current);
 
-		return surface;
-	};
+        return surface;
+    };
 
-	React.useEffect(() => {
-		drawScene(createSurface());
-	}, []);
+    React.useEffect(() => {
+        drawScene(createSurface());
+    }, []);
 
-	return <div ref={surfaceRef} id="surface" />;
+    return <div ref={surfaceRef} id="surface" />;
 };
 
 export default App;

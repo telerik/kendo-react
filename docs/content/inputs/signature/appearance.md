@@ -4,7 +4,6 @@ description: 'Add alternative styling options to the KendoReact Signature in Rea
 components: ['signature']
 slug: appearance_signature
 position: 4
-tag: updated
 ---
 
 # Appearance

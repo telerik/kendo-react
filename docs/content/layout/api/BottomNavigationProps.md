@@ -688,15 +688,10 @@ Specifies the BottomNavigation theme color
 ([see example](https://www.telerik.com/kendo-react-ui/components/layout/bottomnavigation/appearance#toc-theme-color)).
 
 The possible values are:
+* `base` &mdash; Applies coloring based on the base theme color.
 * `primary` &mdash; Applies coloring based on the primary theme color.
 * `secondary` &mdash; Applies coloring based on the secondary theme color.
 * `tertiary` &mdash; Applies coloring based on the tertiary theme color.
-* `info` &mdash; Applies coloring based on the info theme color.
-* `success` &mdash; Applies coloring based on the success theme color.
-* `warning` &mdash; Applies coloring based on the warning theme color.
-* `error` &mdash; Applies coloring based on the error theme color.
-* `dark` &mdash; Applies coloring based on the dark theme color.
-* `light` &mdash; Applies coloring based on the light theme color.
 * `inverse` &mdash; Applies coloring based on the inverted theme color.
 
 

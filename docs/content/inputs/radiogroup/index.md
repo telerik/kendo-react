@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: 'Get an overview of the features the KendoReact RadioGroup delivers and use the component in React projects.'
-components: ["radiogroup"]
+components: ['radiogroup']
 slug: overview_radiogroup
 position: 1
 ---
@@ -16,7 +16,7 @@ The KendoReact RadioGroup component is part of the KendoReact library of React U
 
 The following example demonstrates the RadioGroup component in action.
 
-{% meta height:220 %}
+{% meta height:300 %}
 {% embed_file radiogroup/overview/func/app.tsx preview %}
 {% embed_file radiogroup/overview/func/main.tsx %}
 {% endmeta %}

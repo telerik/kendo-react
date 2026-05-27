@@ -14,7 +14,7 @@ import { arrowRotateCcwIcon, filterIcon } from '@progress/kendo-svg-icons';
 import { customers, addColumnsValues } from './data';
 import { ColumnMenu } from './columnMenu';
 import { AIPromptOutputInterface } from '@progress/kendo-react-conversational-ui';
-import axios, { AxiosResponse } from 'axios';
+
 import { CustomAmountCell, CustomStatusCell, CustomAccountTypeCell } from './custom-cells';
 
 const App = () => {
@@ -32,11 +32,11 @@ const App = () => {
         event.columns = addColumnsValues(event.columns);
         setStreaming(true);
         setLoading(true);
-        axios({
-            ...event.requestOptions,
-            url: 'https://demos.telerik.com/service/v2/ai/grid/smart-state',
+        fetch('https://demos.telerik.com/service/v2/ai/grid/smart-state', {
+            method: 'POST',
+            credentials: 'omit',
             headers: event.headers,
-            data: {
+            body: JSON.stringify({
                 role: event.role,
                 contents: [
                     {
@@ -45,13 +45,14 @@ const App = () => {
                     }
                 ],
                 columns: event.columns
-            }
+            })
         })
-            .then((e) => onResponseSuccess(e, event.promptMessage, isRetry))
+            .then((res) => res.json())
+            .then((data) => onResponseSuccess({ data }, event.promptMessage, isRetry))
             .catch(onResponseError);
     };
 
-    const onResponseSuccess = (req: AxiosResponse<any>, promptMessage?: string, isRetry?: boolean) => {
+    const onResponseSuccess = (req: { data: any }, promptMessage?: string, isRetry?: boolean) => {
         setStreaming(false);
         setLoading(false);
         if (req && req.data) {

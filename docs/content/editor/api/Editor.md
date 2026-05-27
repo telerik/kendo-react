@@ -7,21 +7,7 @@ slug: api_editor_editor
 ---
 
 # Editor
-Represents the [KendoReact Editor component](https://www.telerik.com/kendo-react-ui/components/editor).
-
-```jsx
-const App = () => {
-   return (
-       <Editor
-           defaultContent="<p>Hello World</p>"
-           tools={[
-              [ EditorTools.Bold, EditorTools.Italic ]
-           ]}
-       />
-   );
-}
-```
-
+A [Functional Component](https://react.dev/reference/react/Component).
 
 
 <table class="api-table api-table-properties">
@@ -38,76 +24,6 @@ const App = () => {
 <td class="table-cell-name">
 
 
-#### contentElement
-
-
-</td>
-<td type class="table-cell-type">
-
-
-<code>
-
-
-"null" | HTMLDivElement
-
-
-</code>
-
-
-</td>
-<td class="table-cell-default">
-
-
-
-
-</td>
-<td class="table-cell-comment">
-
-
-Returns the content-editable DOM element of the Editor.
-
-
-</td>
-</tr>
-<tr>
-<td class="table-cell-name">
-
-
-#### element
-
-
-</td>
-<td type class="table-cell-type">
-
-
-<code>
-
-
-"null" | HTMLElement
-
-
-</code>
-
-
-</td>
-<td class="table-cell-default">
-
-
-
-
-</td>
-<td class="table-cell-comment">
-
-
-Returns the DOM element of the Editor.
-
-
-</td>
-</tr>
-<tr>
-<td class="table-cell-name">
-
-
 #### props
 
 
@@ -118,7 +34,7 @@ Returns the DOM element of the Editor.
 <code>
 
 
-Readonly&lt;[EditorProps]({% slug api_editor_editorprops %})&gt;
+[EditorProps]({% slug api_editor_editorprops %}) [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with RefAttributes&lt;[Editor]({% slug api_editor_editor %})&gt;
 
 
 </code>
@@ -135,76 +51,6 @@ Readonly&lt;[EditorProps]({% slug api_editor_editorprops %})&gt;
 
 
 The props of the Editor component.
-
-
-</td>
-</tr>
-<tr>
-<td class="table-cell-name">
-
-
-#### value
-
-
-</td>
-<td type class="table-cell-type">
-
-
-<code>
-
-
-string | Node
-
-
-</code>
-
-
-</td>
-<td class="table-cell-default">
-
-
-
-
-</td>
-<td class="table-cell-comment">
-
-
-The value of the Editor.
-
-
-</td>
-</tr>
-<tr>
-<td class="table-cell-name">
-
-
-#### view
-
-
-</td>
-<td type class="table-cell-type">
-
-
-<code>
-
-
-undefined | EditorView
-
-
-</code>
-
-
-</td>
-<td class="table-cell-default">
-
-
-
-
-</td>
-<td class="table-cell-comment">
-
-
-Returns the `view` object of the Editor.
 
 
 </td>

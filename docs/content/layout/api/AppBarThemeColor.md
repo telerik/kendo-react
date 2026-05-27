@@ -14,12 +14,6 @@ Specifies the AppBar theme color ([see example](https://www.telerik.com/kendo-re
 * 'primary'
 * 'secondary'
 * 'tertiary'
-* 'info'
-* 'success'
-* 'warning'
-* 'error'
-* 'dark'
-* 'inherit'
 * 'inverse'
 
-`type` AppBarThemeColor = "base" | "primary" | "secondary" | "tertiary" | "info" | "success" | "warning" | "error" | "dark" | "light" | "inherit" | "inverse";
+`type` AppBarThemeColor = "base" | "primary" | "secondary" | "tertiary" | "inverse";

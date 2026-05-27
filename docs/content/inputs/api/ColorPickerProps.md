@@ -1003,6 +1003,51 @@ The available options are:
 <td class="table-cell-name">
 
 
+#### showButtons?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+boolean
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+<code>
+
+
+true
+
+
+</code>
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Specifies whether action buttons (Apply/Cancel) will be rendered in the popup footer.
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### size?
 
 
@@ -1320,6 +1365,42 @@ Specifies the views that will be rendered in the popup. By default both the grad
 
 
 
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
+#### webMcp?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+boolean | WebMcpProps
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Enables Web MCP tool registration for this component.
+Requires a parent `WebMcpProvider` from `@progress/kendo-react-webmcp`.
 
 
 </td>

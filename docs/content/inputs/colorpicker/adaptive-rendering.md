@@ -5,6 +5,7 @@ components: ["colorpicker"]
 slug: adaptive_rendering_colorpicker
 position: 7
 tag: new
+release_tag: Q2 2026
 ---
 
 # Adaptive Rendering

@@ -1699,6 +1699,52 @@ Controls which view is currently shown. The value must match the `title` propert
 
 </td>
 </tr>
+<tr>
+<td class="table-cell-name">
+
+
+#### webMcp?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+boolean | WebMcpProps
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Enables Web MCP tool registration for the Gantt component.
+When set, browser-native AI agent tools are registered via
+`navigator.modelContext.registerTool()` (Chrome 146+).
+
+```tsx
+// Boolean: generic "gantt" label
+<Gantt webMcp taskData={tasks} />
+
+// Config object: explicit name
+<Gantt webMcp={{ dataName: 'project' }} taskData={tasks} />
+```
+
+
+
+</td>
+</tr>
 </tbody>
 </table>
 

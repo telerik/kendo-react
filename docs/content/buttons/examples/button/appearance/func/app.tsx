@@ -1,14 +1,12 @@
 import * as React from 'react';
 
-import { Button } from '@progress/kendo-react-buttons';
+import { Button, ButtonProps } from '@progress/kendo-react-buttons';
 
 import { StyleConfigurator } from './style-configurator';
 
 const App = () => {
-    const [size, setSize] = React.useState<'small' | 'medium' | 'large'>('medium');
-    const [themeColor, setThemeColor] = React.useState<
-        'base' | 'primary' | 'secondary' | 'tertiary' | 'info' | 'success' | 'warning' | 'dark' | 'light' | 'inverse'
-    >('base');
+    const [size, setSize] = React.useState<ButtonProps['size']>('medium');
+    const [themeColor, setThemeColor] = React.useState<ButtonProps['themeColor']>('base');
     const [fillMode, setFillMode] = React.useState<'solid' | 'outline' | 'flat' | 'link' | 'clear'>('solid');
     const [rounded, setRounded] = React.useState<'small' | 'medium' | 'large' | 'full'>('medium');
 

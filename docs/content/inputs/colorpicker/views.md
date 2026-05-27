@@ -4,7 +4,6 @@ description: 'Customize the view options of the KendoReact ColorPicker in React 
 components: ["colorpicker"]
 slug: views_colorpicker
 position: 4
-tag: updated
 ---
 
 # ColorPicker Views

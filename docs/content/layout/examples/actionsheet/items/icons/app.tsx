@@ -7,14 +7,7 @@ import { cartIcon, heartIcon, xIcon } from '@progress/kendo-svg-icons';
 const items: ActionSheetItemProps[] = [
     {
         title: 'Add to Cart',
-        icon: (
-            <SvgIcon
-                className="k-actionsheet-item-icon"
-                style={{ fontSize: '1.5rem' }}
-                themeColor="dark"
-                icon={cartIcon}
-            />
-        )
+        icon: <SvgIcon className="k-actionsheet-item-icon" style={{ fontSize: '1.5rem' }} icon={cartIcon} />
     },
     {
         title: 'Add to Favorites',
@@ -76,7 +69,7 @@ const App = () => {
                         position: absolute;
                         top: 50%;
                         left: 50%;
-                        transform: translate(-50%, -50%);
+                        transform: translate(-50%, -100%);
                     }
                 `}
             </style>

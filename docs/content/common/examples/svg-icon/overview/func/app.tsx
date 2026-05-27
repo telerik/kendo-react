@@ -2,26 +2,26 @@ import * as React from 'react';
 
 import { SvgIcon } from '@progress/kendo-react-common';
 
-import { facebookIcon, twitterIcon, googleIcon, linkedinIcon, youtubeIcon } from '@progress/kendo-svg-icons';
+import { facebookIcon, xLogoIcon, googleIcon, linkedinIcon, youtubeIcon } from '@progress/kendo-svg-icons';
 
 const App = () => {
     return (
         <React.Fragment>
             <div className="text-center social-icons">
                 <div className="icon facebook">
-                    <SvgIcon icon={facebookIcon} size="medium" />
+                    <SvgIcon icon={facebookIcon} size="xlarge" />
                 </div>
-                <div className="icon twitter">
-                    <SvgIcon icon={twitterIcon} size="medium" />
+                <div className="icon x-logo">
+                    <SvgIcon icon={xLogoIcon} size="xlarge" />
                 </div>
                 <div className="icon google">
-                    <SvgIcon icon={googleIcon} size="medium" />
+                    <SvgIcon icon={googleIcon} size="xlarge" />
                 </div>
                 <div className="icon linkedin">
-                    <SvgIcon icon={linkedinIcon} size="medium" />
+                    <SvgIcon icon={linkedinIcon} size="xlarge" />
                 </div>
                 <div className="icon youtube">
-                    <SvgIcon icon={youtubeIcon} size="medium" />
+                    <SvgIcon icon={youtubeIcon} size="xlarge" />
                 </div>
             </div>
             <style>{`
@@ -38,8 +38,8 @@ const App = () => {
                   left: -110%;
                 }
                 .social-icons .icon .k-svg-icon {
-                  -webkit-transform: scale(0.8);
-                          transform: scale(0.8);
+                  -webkit-transform: scale(1);
+                          transform: scale(1);
                 }
                 .social-icons .icon.facebook:before {
                   background-color: #3b5998;
@@ -47,11 +47,11 @@ const App = () => {
                 .social-icons .icon.facebook .k-svg-icon {
                   color: #3b5998;
                 }
-                .social-icons .icon.twitter:before {
-                  background-color: #3cf;
+                .social-icons .icon.x-logo:before {
+                  background-color: #000;
                 }
-                .social-icons .icon.twitter .k-svg-icon {
-                  color: #3cf;
+                .social-icons .icon.x-logo .k-svg-icon {
+                  color: #000;
                 }
                 .social-icons .icon.google:before {
                   background-color: #dc4a38;
@@ -79,8 +79,8 @@ const App = () => {
                 .social-icons .icon:focus .k-svg-icon,
                 .social-icons .icon:hover .k-svg-icon {
                   color: #fff;
-                  -webkit-transform: scale(1);
-                          transform: scale(1);
+                  -webkit-transform: scale(1.5);
+                          transform: scale(1.5);
                 }
                 .social-icons .icon {
                   display: inline-block;

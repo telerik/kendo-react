@@ -58,7 +58,7 @@ const App = () => {
 
     return (
         <React.Fragment>
-            <link rel="stylesheet" href="https://unpkg.com/@progress/kendo-font-icons/dist/index.css" />
+            <link rel="stylesheet" href="https://unpkg.com/@progress/kendo-font-icons@5/dist/index.css" />
             <Button
                 ref={button}
                 style={{

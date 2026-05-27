@@ -547,6 +547,44 @@ Sets additional CSS styles to the PanelBar.
 
 </td>
 </tr>
+<tr>
+<td class="table-cell-name">
+
+
+#### webMcp?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+boolean | WebMcpProps
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Enables Web MCP tool registration so AI agents can interact with this PanelBar.
+Set to `true` to use the provider-level `dataName`, or pass a config object to override.
+
+Requires a `WebMcpProvider` ancestor from `@progress/kendo-react-webmcp`.
+
+
+</td>
+</tr>
 </tbody>
 </table>
 

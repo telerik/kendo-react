@@ -4,7 +4,6 @@ description: 'Get more information on how to improve the KendoKendoReact Data Gr
 components: ["datagrid"]
 slug: performance_grid
 position: 5
-tag: new
 ---
 
 # Performance

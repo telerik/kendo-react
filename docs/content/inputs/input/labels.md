@@ -3,7 +3,6 @@ title: Labels
 description: 'Display labels for the KendoReact Input component.'
 components: ["input"]
 slug: labels_input
-tag: new
 position: 2
 ---
 

@@ -31,6 +31,7 @@ To install a KendoReact theme, run `npm i @progress/kendo-theme-` followed by on
 -   [`material`](https://www.telerik.com/design-system/docs/themes/kendo-themes/material/)
 -   [`fluent`](https://www.telerik.com/design-system/docs/themes/kendo-themes/fluent/)
 -   [`classic`](https://www.telerik.com/design-system/docs/themes/kendo-themes/classic/)
+-   [`meridian`](https://www.telerik.com/design-system/docs/themes/kendo-themes/meridian/)
 
 ## Including a Theme
 

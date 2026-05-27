@@ -353,6 +353,50 @@ Marker shapes are implemented as CSS classes on the marker element (span.k-marke
 <td class="table-cell-name">
 
 
+#### template?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+string | (dataItem: any) => string
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+The template which renders the content of the marker.
+
+Accepts a string template or a function that receives the data item and returns an HTML string.
+
+```tsx
+<MapMarkerLayer
+  template={(dataItem) => `<span>${dataItem.name}</span>`}
+/>
+```
+
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### titleField?
 
 

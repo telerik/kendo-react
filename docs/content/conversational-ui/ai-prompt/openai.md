@@ -4,7 +4,6 @@ description: 'Learn how to utilize your openAI key to use the KendoReact AIPromp
 components: ["aiprompt"]
 slug: openai_aiprompt
 position: 45
-tag: 'new'
 ---
 
 # OpenAI Integration

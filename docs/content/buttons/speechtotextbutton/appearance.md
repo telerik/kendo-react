@@ -80,10 +80,11 @@ The [`themeColor`](slug://api_buttons_speechtotextbuttonprops#themecolor) proper
 -   `primary`&mdash;The primary theme color
 -   `secondary`&mdash;The secondary theme color
 -   `tertiary`&mdash;The tertiary theme color
--   `info`&mdash;The information theme color (typically blue)
--   `success`&mdash;The success theme color (typically green)
--   `warning`&mdash;The warning theme color (typically yellow/orange)
--   `error`&mdash;The error theme color (typically red)
+-   `info`&mdash;The information theme color
+-   `success`&mdash;The success theme color
+-   `warning`&mdash;The warning theme color
+-   `error`&mdash;The error theme color
+-   `inverse`&mdash;The inverse theme color
 
 {% meta height:200 %}
 {% embed_file speechtotextbutton/theme-color/app.tsx preview %}

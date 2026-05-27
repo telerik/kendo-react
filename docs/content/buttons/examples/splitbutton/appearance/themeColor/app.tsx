@@ -52,14 +52,6 @@ const App = () => {
                     <SplitButtonItem text="Item 1" svgIcon={clipboardTextIcon} />
                     <SplitButtonItem text="Item 2" svgIcon={clipboardHtmlIcon} />
                 </SplitButton>
-                <SplitButton themeColor="dark" disabled={isDisabled} text="Dark">
-                    <SplitButtonItem text="Item 1" svgIcon={clipboardTextIcon} />
-                    <SplitButtonItem text="Item 2" svgIcon={clipboardHtmlIcon} />
-                </SplitButton>
-                <SplitButton themeColor="light" disabled={isDisabled} text="Light">
-                    <SplitButtonItem text="Item 1" svgIcon={clipboardTextIcon} />
-                    <SplitButtonItem text="Item 2" svgIcon={clipboardHtmlIcon} />
-                </SplitButton>
                 <SplitButton themeColor="inverse" disabled={isDisabled} text="Inverse">
                     <SplitButtonItem text="Item 1" svgIcon={clipboardTextIcon} />
                     <SplitButtonItem text="Item 2" svgIcon={clipboardHtmlIcon} />

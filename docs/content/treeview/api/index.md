@@ -120,6 +120,9 @@ position: 1
         <a href="{% slug api_treeview_treeview %}">TreeView</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_treeview_treeview %}">TreeView</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_treeview_treeviewdragclue %}">TreeViewDragClue</a>
     </li>
     <li class="api-item">
@@ -140,6 +143,9 @@ position: 1
 
 
   <ul class="api-item-list">
+    <li class="api-item">
+        <a href="{% slug api_treeview_treeview %}">TreeView</a>
+    </li>
     <li class="api-item">
         <a href="{% slug api_treeview_treeviewdraganalyzer %}">TreeViewDragAnalyzer</a>
     </li>

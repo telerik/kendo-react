@@ -14,9 +14,9 @@ import {
 import { SvgIcon } from '@progress/kendo-react-common';
 import {
     facebookIcon,
-    twitterIcon,
+    xLogoIcon,
     vimeoIcon,
-    envelopIcon,
+    envelopeIcon,
 } from '@progress/kendo-svg-icons';
 
 interface Alignment {
@@ -84,7 +84,7 @@ const App = () => {
             </Badge>
           </BadgeContainer>
           <BadgeContainer>
-            <SvgIcon icon={twitterIcon} size={'xxlarge'} />
+            <SvgIcon icon={xLogoIcon} size={'xxlarge'} />
             <Badge align={alignment.value} position={position}>
               3
             </Badge>
@@ -96,7 +96,7 @@ const App = () => {
             </Badge>
           </BadgeContainer>
           <BadgeContainer>
-            <SvgIcon icon={envelopIcon} size={'xxlarge'} />
+            <SvgIcon icon={envelopeIcon} size={'xxlarge'} />
             <Badge align={alignment.value} position={position}>
               14+
             </Badge>

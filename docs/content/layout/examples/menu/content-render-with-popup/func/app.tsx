@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { Menu } from '@progress/kendo-react-layout';
 import Content from './content';
-import { filterSmallIcon, sortAscSmallIcon, sortDescSmallIcon } from '@progress/kendo-svg-icons';
+import { filterIcon, sortAscSmallIcon, sortDescSmallIcon } from '@progress/kendo-svg-icons';
 
 const items = [
     {
         text: 'Order ID',
         items: [
-            { text: 'Filter', svgIcon: filterSmallIcon },
+            { text: 'Filter', svgIcon: filterIcon },
             { text: 'Sort Ascending', svgIcon: sortAscSmallIcon },
             { text: 'Sort Descending', svgIcon: sortDescSmallIcon },
         ],
@@ -15,7 +15,7 @@ const items = [
     {
         text: 'Ship Country',
         items: [
-            { text: 'Filter', svgIcon: filterSmallIcon },
+            { text: 'Filter', svgIcon: filterIcon },
             { text: 'Sort Ascending', svgIcon: sortAscSmallIcon },
             { text: 'Sort Descending', svgIcon: sortDescSmallIcon },
         ],
@@ -23,7 +23,7 @@ const items = [
     {
         text: 'Ship Address',
         items: [
-            { text: 'Filter', svgIcon: filterSmallIcon },
+            { text: 'Filter', svgIcon: filterIcon },
             { text: 'Sort Ascending', svgIcon: sortAscSmallIcon },
             { text: 'Sort Descending', svgIcon: sortDescSmallIcon },
         ],

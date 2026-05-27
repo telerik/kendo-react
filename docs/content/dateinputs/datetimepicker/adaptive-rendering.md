@@ -4,7 +4,6 @@ description: 'Enable adaptive rendering for the KendoReact DateTimePicker in Rea
 components: ["datetimepicker"]
 slug: adaptive_rendering_datetimepicker
 position: 20
-tag: updated
 ---
 
 # Adaptive Rendering

@@ -5,6 +5,7 @@ components: ["timepicker"]
 slug: adaptive_rendering_timepicker
 position: 6
 tag: updated
+release_tag: Q2 2026
 ---
 
 # Adaptive Rendering

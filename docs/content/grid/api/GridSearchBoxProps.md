@@ -231,7 +231,7 @@ Sets a custom prefix to the TextBox component.
 <code>
 
 
-"none" | "small" | "medium" | "large" | "full"
+"small" | "none" | "medium" | "large" | "full"
 
 
 </code>
@@ -385,6 +385,54 @@ boolean
 
 
 Indicates if the component is in `valid` state
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
+#### webMcp?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+boolean | WebMcpProps
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Enables Web MCP tool registration for this component.
+Requires a parent `WebMcpProvider` from `@progress/kendo-react-webmcp`.
+
+Pass `true` for defaults or an object for fine-grained control.
+When absent or `false`, zero webMcp overhead.
+
+```tsx
+// Boolean — use provider's dataName
+<TextBox webMcp value={value} onChange={handleChange} />
+
+// Config object — override dataName per component
+<TextBox webMcp={{ dataName: 'firstName' }} value={value} onChange={handleChange} />
+```
+
 
 
 </td>

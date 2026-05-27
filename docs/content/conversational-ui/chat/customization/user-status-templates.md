@@ -4,7 +4,6 @@ description: 'Customize the appearance of user status indicators in the KendoRea
 components: ["chat"]
 slug: customization_user_status_templates_chat
 position: 70
-tag: new
 ---
 
 # User Status Templates

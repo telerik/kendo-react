@@ -100,6 +100,42 @@ Can be a boolean to enable/disable or an object with detailed settings.
 <td class="table-cell-name">
 
 
+#### httpClient?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+[GridAIHttpClient]({% slug api_grid_gridaihttpclient %})
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Optional custom HTTP client for the AI assistant.
+When provided, overrides the built-in fetch-based transport.
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### placeholder?
 
 
@@ -187,7 +223,7 @@ List of suggested prompts to display in the popup.
 <code>
 
 
-AxiosRequestConfig&lt;any&gt;
+[GridAIRequestConfig]({% slug api_grid_gridairequestconfig %})
 
 
 </code>
@@ -203,8 +239,11 @@ AxiosRequestConfig&lt;any&gt;
 <td class="table-cell-comment">
 
 
-Defines the options for the axios request.
-When set (with `url` property), enables auto mode where SmartBox handles requests automatically.
+Defines the options for the HTTP request.
+Accepts both `GridAIRequestConfig` (recommended) and `AxiosRequestConfig` (legacy).
+
+
+
 
 ```tsx
 // Auto mode - SmartBox handles everything

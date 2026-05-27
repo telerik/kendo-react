@@ -8,8 +8,8 @@ const App = () => {
     const [tags, setTags] = React.useState([
         {
             text: `${selected} tasks`,
-            data: [...value],
-        },
+            data: [...value]
+        }
     ]);
 
     const tagRender = (tagData, li) => {
@@ -24,10 +24,10 @@ const App = () => {
             icon = null;
         }
         return React.cloneElement(li, li.props, [
-      <span key={sizes.indexOf(tagData.data[0])} style={{ color: 'red' }}>
-        {icon ? icon : tagData.text}
-      </span>,
-      li.props.children,
+            <span key={sizes.indexOf(tagData.data[0])} style={{ color: 'red' }}>
+                {icon ? icon : tagData.text}
+            </span>,
+            li.props.children
         ]);
     };
 
@@ -40,8 +40,8 @@ const App = () => {
                     ...tags,
                     {
                         text: `${event.value[event.value.length - 1]}`,
-                        data: [...value],
-                    },
+                        data: [...value]
+                    }
                 ]);
             } else {
                 const deletedEl = event.nativeEvent.target.outerText;
@@ -54,31 +54,28 @@ const App = () => {
     );
 
     return (
-    <div>
-      <link
-        rel="stylesheet"
-        href="https://unpkg.com/@progress/kendo-font-icons/dist/index.css"
-      />
-      <div>T-shirt sizes:</div>
-      <MultiSelect
-        style={{
-          width: '300px',
-        }}
-        data={sizes}
-        value={value}
-        onChange={handleChange}
-        placeholder="Please select ..."
-        tags={tags}
-        tagRender={tagRender}
-      />
-      <style>
-        {`
+        <div>
+            <link rel="stylesheet" href="https://unpkg.com/@progress/kendo-font-icons@5/dist/index.css" />
+            <div>T-shirt sizes:</div>
+            <MultiSelect
+                style={{
+                    width: '300px'
+                }}
+                data={sizes}
+                value={value}
+                onChange={handleChange}
+                placeholder="Please select ..."
+                tags={tags}
+                tagRender={tagRender}
+            />
+            <style>
+                {`
         .k-chip-action.k-chip-remove-action {
           display: none;
         }
         `}
-      </style>
-    </div>
+            </style>
+        </div>
     );
 };
 export default App;

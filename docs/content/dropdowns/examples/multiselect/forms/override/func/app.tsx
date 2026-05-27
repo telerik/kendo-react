@@ -29,13 +29,13 @@ const App = () => {
     };
 
     const InterestsField = (fieldRenderProps: FieldRenderProps) => {
-        const { validationMessage, visited, ...others } = fieldRenderProps;
+        const { validationMessage, visited, valid, ...others } = fieldRenderProps;
         return (
             <MultiSelect
                 style={{ width: '100%' }}
                 data={interests}
                 valid={visited && !validationMessage}
-                validationMessage={visited ? validationMessage : ''}
+                validationMessage={visited ? validationMessage ?? '' : ''}
                 {...others}
             />
         );
@@ -61,28 +61,33 @@ const App = () => {
                                             Conference Sessions
                                         </Label>
                                         <FieldWrapper>
-                                          <Field
-                                            name="sessions"
-                                            component={MultiSelect}
-                                            data={sessions}
-                                            style={{ width: '100%' }}
-                                        />
+                                            <Field
+                                                name="sessions"
+                                                component={MultiSelect}
+                                                data={sessions}
+                                                style={{ width: '100%' }}
+                                            />
                                         </FieldWrapper>
                                         <Label editorId="interests" className="k-form-field k-mt-4">
                                             Networking Interests
                                         </Label>
                                         <FieldWrapper>
-                                          <Field
-                                            name="interests"
-                                            component={InterestsField}
-                                            validator={interestsValidator}
-                                        />
+                                            <Field
+                                                name="interests"
+                                                component={InterestsField}
+                                                validator={interestsValidator}
+                                            />
                                         </FieldWrapper>
                                         <Label editorId="comments" className="k-form-field k-mt-4">
                                             Additional Comments
                                         </Label>
                                         <FieldWrapper>
-                                          <Field id="comments" name="additionalComments" component={TextArea} rows={4} />
+                                            <Field
+                                                id="comments"
+                                                name="additionalComments"
+                                                component={TextArea}
+                                                rows={4}
+                                            />
                                         </FieldWrapper>
                                     </fieldset>
                                     <Button themeColor={'primary'} className="k-mt-4">

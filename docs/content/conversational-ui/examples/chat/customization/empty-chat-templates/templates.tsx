@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {
-    smsOutlineIcon,
+    smsIcon,
     commentsRemoveIcon,
     paperPlaneIcon,
     redditIcon,
@@ -24,7 +24,7 @@ export const SmsEmptyTemplate = () => (
         }}
     >
         <SvgIcon
-            icon={smsOutlineIcon}
+            icon={smsIcon}
             style={{ fontSize: '64px', width: '64px', height: '64px', color: 'var(--kendo-color-primary-emphasis)' }}
         />
         <div>

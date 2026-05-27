@@ -16,7 +16,7 @@ import { Button } from '@progress/kendo-react-buttons';
 import { filterIcon, sparklesIcon, paperPlaneIcon } from '@progress/kendo-svg-icons';
 import { customers, addColumnsValues } from './data';
 import { ColumnMenu } from './columnMenu';
-import axios, { AxiosResponse } from 'axios';
+
 import {
     CustomRatingCell,
     CustomAmountCell,
@@ -220,16 +220,14 @@ export const CustomersGrid = ({ isSmart }: CustomersGridProps) => {
         };
         setMessages((prev) => [...prev, typingMessage]);
 
-        axios({
+        fetch('https://demos.telerik.com/service/v2/ai/grid/smart-state', {
             method: 'POST',
-            withCredentials: false,
-            responseType: 'json',
-            url: 'https://demos.telerik.com/service/v2/ai/grid/smart-state',
+            credentials: 'omit',
             headers: {
                 Accept: '*/*',
                 'Content-Type': 'application/json'
             },
-            data: {
+            body: JSON.stringify({
                 role: 'user',
                 contents: [
                     {
@@ -238,13 +236,14 @@ export const CustomersGrid = ({ isSmart }: CustomersGridProps) => {
                     }
                 ],
                 columns: event.columns
-            }
+            })
         })
-            .then((e) => onResponseSuccess(e, event.prompt, isRetry))
+            .then((res) => res.json().then((data) => ({ res, data })))
+            .then(({ res, data }) => onResponseSuccess({ data, status: res.status, statusText: res.statusText, headers: res.headers }, event.prompt, isRetry))
             .catch(onResponseError);
     };
 
-    const onResponseSuccess = (response: AxiosResponse<any>, promptMessage?: string, isRetry?: boolean) => {
+    const onResponseSuccess = (response: { data: any }, promptMessage?: string, isRetry?: boolean) => {
         // Remove typing indicator
         setMessages((prev) => prev.filter((msg) => msg.id !== 'typing'));
 
@@ -340,7 +339,7 @@ export const CustomersGrid = ({ isSmart }: CustomersGridProps) => {
                     //a custom SVG icon
                     [paperPlaneIcon.name]: submitIcon
                     //or any of the built-in SVG icons
-                    //[caretAltDownIcon.name]: filterIcon,
+                    //[chevronDownIcon.name]: filterIcon,
                 }
             }}
         >

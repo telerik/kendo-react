@@ -1,40 +1,16 @@
 import * as React from 'react';
-
+import { ButtonProps } from '@progress/kendo-react-buttons';
 import { Label } from '@progress/kendo-react-labels';
 import { DropDownList, DropDownListChangeEvent, ListItemProps } from '@progress/kendo-react-dropdowns';
 
 interface StyleConfiguratorProps {
-    size?: 'small' | 'medium' | 'large';
+    size?: ButtonProps['size'];
     sizes?: Array<'small' | 'medium' | 'large'>;
     onSizeChange?: (size: 'small' | 'medium' | 'large') => void;
 
-    themeColor?:
-        | 'base'
-        | 'primary'
-        | 'secondary'
-        | 'tertiary'
-        | 'info'
-        | 'success'
-        | 'warning'
-        | 'dark'
-        | 'light'
-        | 'inverse';
-    themeColors?: Array<
-        'base' | 'primary' | 'secondary' | 'tertiary' | 'info' | 'success' | 'warning' | 'dark' | 'light' | 'inverse'
-    >;
-    onThemeColorChange?: (
-        themeColor:
-            | 'base'
-            | 'primary'
-            | 'secondary'
-            | 'tertiary'
-            | 'info'
-            | 'success'
-            | 'warning'
-            | 'dark'
-            | 'light'
-            | 'inverse'
-    ) => void;
+    themeColor?: ButtonProps['themeColor'];
+    themeColors?: Array<ButtonProps['themeColor']>;
+    onThemeColorChange?: (themeColor: ButtonProps['themeColor']) => void;
 
     fillMode?: 'solid' | 'outline' | 'flat' | 'link' | 'clear';
     fillModes?: Array<'solid' | 'outline' | 'flat' | 'link' | 'clear'>;
@@ -188,24 +164,12 @@ const ColorItemRender = (li: React.ReactElement<HTMLLIElement>, itemProps: ListI
 };
 
 StyleConfigurator.defaultProps = {
-    sizes: ['small', 'medium', 'large'],
+    sizes: ['xs', 'small', 'medium', 'large'],
     onSizeChange: () => {
         /* noop */
     },
 
-    themeColors: [
-        'base',
-        'primary',
-        'secondary',
-        'tertiary',
-        'info',
-        'success',
-        'warning',
-        'error',
-        'dark',
-        'light',
-        'inverse'
-    ],
+    themeColors: ['base', 'primary', 'secondary', 'tertiary', 'info', 'success', 'warning', 'error', 'inverse'],
     onThemeColorChange: () => {
         /* noop */
     },

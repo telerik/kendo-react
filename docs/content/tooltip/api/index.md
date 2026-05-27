@@ -152,6 +152,9 @@ position: 1
     <li class="api-item">
         <a href="{% slug api_tooltip_popoverposition %}">PopoverPosition</a>
     </li>
+    <li class="api-item">
+        <a href="{% slug api_tooltip_tooltipthemecolor %}">TooltipThemeColor</a>
+    </li>
   </ul>
 </div>
 

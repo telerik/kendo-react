@@ -1607,8 +1607,11 @@ Fires when the input value changes. Provides the new input value.
 <td class="table-cell-comment">
 
 
-Fires only in remote mode (`messages.length < total`) when the user scrolls near the edge
+Fires in both built-in and remote endless scroll modes when the user scrolls near the edge
 of the rendered message window.
+In built-in mode, the Chat manages rendering internally and this callback is informational.
+In remote mode (`messages.length < total`), the consumer must provide the requested range.
+The event contains the full range that should be rendered (not just the delta).
 
 
 </td>
@@ -2908,8 +2911,7 @@ number
 
 The total number of messages in the conversation.
 Used to determine the mode: when `messages.length === total`, the Chat manages rendering
-internally (built-in mode); when `messages.length < total`, the Chat fires `onLoadMoreMessages`
-for the consumer to fetch data (remote mode).
+internally (built-in mode); when `messages.length < total`, the consumer manages data (remote mode).
 
 
 </td>
@@ -3027,6 +3029,53 @@ React.ComponentType&lt;[UserStatusTemplateProps]({% slug api_conversational-ui_u
 
 Template for user status display next to avatars.
 Only rendered when an avatar for the user is provided.
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
+#### webMcp?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+boolean | WebMcpProps
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Enables browser-native AI agent tools via Web MCP (Chrome 146+).
+
+Pass `true` for defaults or an object for fine-grained control.
+AI agents are multilingual — `dataName` accepts any language.
+
+```tsx
+// Boolean: generic "chat" label
+<Chat webMcp messages={messages} authorId={1} onSendMessage={handleSend} />
+
+// Config object: explicit name
+<Chat webMcp={{ dataName: 'support' }} messages={messages} authorId={1} onSendMessage={handleSend} />
+```
+
 
 
 </td>

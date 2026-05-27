@@ -264,7 +264,7 @@ Receives the `value` of the newly selected item.
 <code>
 
 
-"small" | "medium" | "large"
+"small" | "medium" | "large" | "xs"
 
 
 </code>

@@ -6,6 +6,7 @@ slug: pinning_rows_grid
 position: 35
 tier: premium
 tag: new
+release_tag: Q2 2026
 ---
 
 # Pinning Rows

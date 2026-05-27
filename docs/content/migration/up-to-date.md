@@ -5,7 +5,6 @@ components: ["general"]
 slug: up_to_date
 position: 1
 previous_url: /installation/up-to-date
-tag: updated
 ---
 
 # Keeping Up to Date

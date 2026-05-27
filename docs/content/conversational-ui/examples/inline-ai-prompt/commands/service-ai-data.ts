@@ -1,7 +1,7 @@
 import { CommandInterface, OutputActionInterface } from '@progress/kendo-react-conversational-ui';
 import {
     arrowRotateCwIcon,
-    cancelOutlineIcon,
+    cancelIcon,
     checkIcon,
     colResizeIcon,
     copyIcon,
@@ -132,7 +132,7 @@ export const outputActions: OutputActionInterface[] = [
     {
         id: 'discard',
         text: 'Discard',
-        svgIcon: cancelOutlineIcon,
+        svgIcon: cancelIcon,
         themeColor: 'base',
         title: 'Discard'
     }

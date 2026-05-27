@@ -7,7 +7,7 @@ import { clipboardHtmlIcon, clipboardMarkdownIcon, clipboardTextIcon } from '@pr
 const App = () => {
     const [size, setSize] = React.useState<'small' | 'medium' | 'large'>('medium');
     const [themeColor, setThemeColor] = React.useState<
-        'base' | 'primary' | 'secondary' | 'tertiary' | 'info' | 'success' | 'warning' | 'dark' | 'light' | 'inverse'
+        'base' | 'primary' | 'secondary' | 'tertiary' | 'info' | 'success' | 'warning' | 'inverse'
     >('base');
     const [fillMode, setFillMode] = React.useState<'solid' | 'outline' | 'flat' | 'link'>('solid');
     const [rounded, setRounded] = React.useState<'small' | 'medium' | 'large' | 'full'>('medium');

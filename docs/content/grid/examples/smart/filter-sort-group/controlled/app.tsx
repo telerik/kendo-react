@@ -13,7 +13,6 @@ import { arrowRotateCcwIcon, filterIcon } from '@progress/kendo-svg-icons';
 import { customers, addColumnsValues } from './data';
 import { ColumnMenu } from './columnMenu';
 import { AIPromptOutputInterface } from '@progress/kendo-react-conversational-ui';
-import { AxiosResponse } from 'axios';
 import { CustomAmountCell, CustomStatusCell, CustomAccountTypeCell } from './custom-cells';
 
 const App = () => {
@@ -33,7 +32,7 @@ const App = () => {
         setLoading(true);
     };
 
-    const onResponseSuccess = (req: AxiosResponse<any>, promptMessage?: string, isRetry?: boolean) => {
+    const onResponseSuccess = (req: { data: any }, promptMessage?: string, isRetry?: boolean) => {
         setStreaming(false);
         setLoading(false);
         if (req && req.data) {

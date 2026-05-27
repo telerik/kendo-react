@@ -54,7 +54,6 @@ const App = () => {
     const customMessage = (props: ChatMessageBoxProps) => {
         return (
             <>
-                {props.sendButton}
                 {props.messageInput}
                 <>
                     <input type="file" onChange={handleInputChange} style={{ display: 'none' }} ref={fileUpload} />

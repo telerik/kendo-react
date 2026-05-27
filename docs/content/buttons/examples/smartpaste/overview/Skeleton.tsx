@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import './Skeleton.css';
 import { Button } from '@progress/kendo-react-buttons';
-import { caretAltDownIcon, moreVerticalIcon } from '@progress/kendo-svg-icons';
+import { chevronDownIcon, moreVerticalIcon } from '@progress/kendo-svg-icons';
 import { SvgIcon } from '@progress/kendo-react-common';
 
 const content =
@@ -57,7 +57,7 @@ export function Skeleton({ isCopied, onButtonCopy, onTextCopy, showCopiedText }:
                                 <span className="label wide" />
                             </div>
                             <div className="skeleton-btn skeleton-btn-split-arrow">
-                                <SvgIcon icon={caretAltDownIcon} />
+                                <SvgIcon icon={chevronDownIcon} />
                             </div>
                         </div>
                         <div className="skeleton-btn skeleton-btn-icon">

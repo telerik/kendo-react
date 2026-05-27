@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Button, ButtonGroup } from '@progress/kendo-react-buttons';
 import { userIcon, starIcon, trashIcon } from '@progress/kendo-svg-icons';
-import './styles.css';
 
 const App = () => {
     return (

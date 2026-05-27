@@ -6,7 +6,7 @@ import {
     pencilIcon,
     heartIcon,
     minusIcon,
-    globeOutlineIcon,
+    globeIcon,
     menuIcon,
     chevronDownIcon,
     chevronRightIcon
@@ -72,7 +72,7 @@ const DrawerContainer = (props) => {
         },
         {
             text: 'Travel',
-            svgIcon: globeOutlineIcon,
+            svgIcon: globeIcon,
             dataExpanded: true,
             id: 3,
             route: '/drawer-hierarchical/travel'

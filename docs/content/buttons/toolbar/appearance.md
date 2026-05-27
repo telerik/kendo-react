@@ -5,6 +5,7 @@ components: ['toolbar']
 slug: appearance_toolbar
 position: 3
 tag: updated
+release_tag: Q2 2026
 ---
 
 # Appearance

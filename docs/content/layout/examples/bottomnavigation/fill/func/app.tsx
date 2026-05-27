@@ -2,10 +2,10 @@ import * as React from 'react';
 
 import { BottomNavigation, BottomNavigationFill, BottomNavigationSelectEvent } from '@progress/kendo-react-layout';
 import { RadioGroup } from '@progress/kendo-react-inputs';
-import { envelopIcon, heartIcon, plusIcon, trashIcon } from '@progress/kendo-svg-icons';
+import { envelopeIcon, heartIcon, plusIcon, trashIcon } from '@progress/kendo-svg-icons';
 
 const items = [
-    { svgIcon: envelopIcon, text: 'Inbox', selected: true },
+    { svgIcon: envelopeIcon, text: 'Inbox', selected: true },
     { svgIcon: plusIcon, text: 'Contacts' },
     { svgIcon: heartIcon, text: 'Favorites' },
     { svgIcon: trashIcon, text: 'Deleted' }

@@ -4,7 +4,6 @@ description: 'Add styling options to the KendoReact Chart in React projects.'
 components: ["chart"]
 slug: appearance_chart_charts
 position: 10
-tag: updated
 ---
 
 # Appearance

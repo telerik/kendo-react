@@ -15,9 +15,9 @@ import { exportPDF } from '@progress/kendo-drawing';
 import { saveAs } from '@progress/kendo-file-saver';
 
 import {
-    thumbUpOutlineIcon,
-    thumbDownOutlineIcon,
-    arrowsRotateOutlineIcon,
+    thumbUpIcon,
+    thumbDownIcon,
+    arrowsRotateIcon,
     downloadIcon
 } from '@progress/kendo-svg-icons';
 
@@ -102,9 +102,9 @@ const FinanceChatHeader = () => {
 const ChartFeedback = () => {
     return (
         <div style={{ display: 'flex', gap: 8, marginTop: 10 }}>
-            <Button fillMode="flat" size="small" svgIcon={thumbUpOutlineIcon} />
-            <Button fillMode="flat" size="small" svgIcon={thumbDownOutlineIcon} />
-            <Button fillMode="flat" size="small" svgIcon={arrowsRotateOutlineIcon} />
+            <Button fillMode="flat" size="small" svgIcon={thumbUpIcon} />
+            <Button fillMode="flat" size="small" svgIcon={thumbDownIcon} />
+            <Button fillMode="flat" size="small" svgIcon={arrowsRotateIcon} />
         </div>
     );
 };

@@ -5,19 +5,7 @@ import { FloatingActionButton, FloatingActionButtonThemeColor } from '@progress/
 import './styles.css';
 import { checkIcon } from '@progress/kendo-svg-icons';
 
-const themeColors: Array<FloatingActionButtonThemeColor> = [
-    'primary',
-    'secondary',
-    'tertiary',
-    'info',
-    'success',
-    'error',
-    'warning',
-    'dark',
-    'light',
-    'inverse',
-    null
-];
+const themeColors: Array<FloatingActionButtonThemeColor> = ['base', 'primary', 'secondary', 'tertiary'];
 
 const App = () => {
     return (

@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { AppBar, AppBarPositionMode, AppBarSection, AppBarSpacer, Avatar } from '@progress/kendo-react-layout';
 import { DropDownList, DropDownListChangeEvent } from '@progress/kendo-react-dropdowns';
-import { facebookIcon, googlePlusIcon, pinterestIcon, twitterIcon } from '@progress/kendo-svg-icons';
+import { facebookIcon, googlePlusIcon, pinterestIcon, xLogoIcon } from '@progress/kendo-svg-icons';
 import { Button } from '@progress/kendo-react-buttons';
 
 const kendokaAvatar = (import.meta.env.VITE_REACT_DEMOS_BASE_URL || '') + 'assets/suite/kendoka-react.png';
@@ -34,7 +34,7 @@ const App = () => {
                 <AppBarSection className="social-section">
                     <Button fillMode="flat" type="button" svgIcon={facebookIcon} />
 
-                    <Button fillMode="flat" type="button" svgIcon={twitterIcon} />
+                    <Button fillMode="flat" type="button" svgIcon={xLogoIcon} />
 
                     <Button fillMode="flat" type="button" svgIcon={pinterestIcon} />
 

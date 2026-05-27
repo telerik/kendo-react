@@ -12,6 +12,8 @@ The `CalendarCell` component is internally used for rendering the items in the c
 * [Customizing the cells inside the Calendar view](https://www.telerik.com/kendo-react-ui/components/dateinputs/calendar/custom-rendering#toc-cells-inside-the-view)
 * [Customizing the cells inside the MultiViewCalendar view](https://www.telerik.com/kendo-react-ui/components/dateinputs/multiviewcalendar/custom-rendering#toc-cells-inside-the-view)
 
+A [Functional Component](https://react.dev/reference/react/Component).
+
 
 <table class="api-table api-table-properties">
 <thead>
@@ -37,7 +39,7 @@ The `CalendarCell` component is internally used for rendering the items in the c
 <code>
 
 
-Readonly&lt;[CalendarCellProps]({% slug api_dateinputs_calendarcellprops %})&gt;
+[CalendarCellProps]({% slug api_dateinputs_calendarcellprops %})
 
 
 </code>
@@ -56,72 +58,6 @@ Readonly&lt;[CalendarCellProps]({% slug api_dateinputs_calendarcellprops %})&gt;
 The props of the CalendarCell component.
 
 
-</td>
-</tr>
-</tbody>
-</table>
-
-
-
-## Methods
-
-<table class="api-table api-table-methods">
-<thead class="api-table-methods-head">
-<tr>
-<th>
-
-
-#### render
-
-
-</th>
-</tr>
-</thead>
-<tbody class="api-table-body">
-<tr>
-<td>
-
-
-
-
-
-</td>
-</tr>
-
-<tr class="nested-table">
-<td>
-<table class="api-table api-table-returns">
-<thead class="api-table-returns-head">
-<tr>
-<th class="th-type">Returns</th>
-<th class="th-desc"></th>
-</tr>
-</thead>
-<tbody class="api-table-body">
-<tr>
-<td type>
-
-
-<code>
-
-
-Element
-
-
-</code>
-
-
-</td>
-<td>
-
-
-
-
-
-</td>
-</tr>
-</tbody>
-</table>
 </td>
 </tr>
 </tbody>

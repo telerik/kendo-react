@@ -34,7 +34,7 @@ const App = () => {
                 </Button>
             </div>
             <div style={{ display: 'inline-block' }}>
-                <Calendar value={date} onChange={(e) => setDate(e.target.value)} />
+                <Calendar value={date} onChange={(e) => setDate(e.value)} />
             </div>
         </div>
     );

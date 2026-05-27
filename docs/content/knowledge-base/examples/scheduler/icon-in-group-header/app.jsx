@@ -14,7 +14,7 @@ const resources = [
           <span>
             Meeting room 101{' '}
             <span
-              class="k-icon k-i-check-outline
+              class="k-icon k-i-check
 .k-i-checkmark-outline"
             ></span>
           </span>
@@ -41,7 +41,7 @@ const resources = [
           <span>
             Peter{' '}
             <span
-              class="k-icon k-i-check-outline
+              class="k-icon k-i-check
 .k-i-checkmark-outline"
             ></span>
           </span>

@@ -4,7 +4,6 @@ description: 'Add alternative styling options to the KendoReact MultiColumnCombo
 components: ['multicolumncombobox']
 slug: appearance_multicolumncombobox
 position: 6
-tag: updated
 ---
 
 # Appearance

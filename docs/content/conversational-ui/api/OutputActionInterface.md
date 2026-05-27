@@ -175,7 +175,7 @@ Text displayed on the button.
 <code>
 
 
-"base" | "error" | "primary" | "secondary" | "tertiary" | "info" | "success" | "warning" | "dark" | "light" | "inverse"
+"base" | "error" | "primary" | "secondary" | "tertiary" | "info" | "success" | "warning" | "inverse"
 
 
 </code>

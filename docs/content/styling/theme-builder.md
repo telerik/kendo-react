@@ -30,7 +30,7 @@ To improve the collaboration between designers and developers, KendoReact comes 
     ![Color Styles in a UI Kit for Figma](./images/theme-builder-ui-kit-color-styles.png)
 
 1. Create a new theme in the ThemeBuilder application.
-    - To select the correct **Base Theme**, ask your designer which UI Kit was used: **Default**, **Bootstrap**, or **Material**.
+    - To select the correct **Base Theme**, ask your designer which UI Kit was used: **Default**, **Bootstrap**, **Material**, **Fluent**, or **Meridian**.
 1. Copy the color codes from the **Color Styles** in Figma and paste them in the ThemeBuilder color editor with the same name. For example, copy the value of the `$kendo-color-primary` color in Figma and paste it in the **Primary** color editor in the ThemeBuilder.
 
 ## Suggested Links

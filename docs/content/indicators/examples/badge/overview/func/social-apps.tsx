@@ -4,9 +4,9 @@ import { Badge, BadgeContainer } from '@progress/kendo-react-indicators';
 import { SvgIcon } from '@progress/kendo-react-common';
 import {
     facebookIcon,
-    twitterIcon,
+    xLogoIcon,
     vimeoIcon,
-    envelopIcon,
+    envelopeIcon,
 } from '@progress/kendo-svg-icons';
 
 export const SocialApps = () => {
@@ -17,7 +17,7 @@ export const SocialApps = () => {
         <Badge>11</Badge>
       </BadgeContainer>
       <BadgeContainer>
-        <SvgIcon icon={twitterIcon} className="social" size={'large'} />
+        <SvgIcon icon={xLogoIcon} className="social" size={'large'} />
         <Badge>3</Badge>
       </BadgeContainer>
       <BadgeContainer>
@@ -25,7 +25,7 @@ export const SocialApps = () => {
         <Badge>77</Badge>
       </BadgeContainer>
       <BadgeContainer>
-        <SvgIcon icon={envelopIcon} className="social" size={'large'} />
+        <SvgIcon icon={envelopeIcon} className="social" size={'large'} />
         <Badge>14+</Badge>
       </BadgeContainer>
       <style>

@@ -7,8 +7,8 @@ type ChipData = {
     value: string;
     removable?: boolean;
     size?: 'small' | 'medium' | 'large';
-    themeColor?: 'base' | 'error' | 'info' | 'success' | 'warning' | null;
-    fillMode?: 'solid' | 'outline' | null;
+    themeColor?: 'base' | 'error' | 'info' | 'success' | 'warning';
+    fillMode?: 'solid' | 'outline';
     disabled?: boolean;
 };
 

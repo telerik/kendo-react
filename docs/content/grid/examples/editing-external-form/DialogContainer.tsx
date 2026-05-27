@@ -11,11 +11,11 @@ const DialogContainer = (props) => {
     };
 
     const CheckboxField = (fieldRenderProps: FieldRenderProps) => {
-        const { value, onChange, label, ...others } = fieldRenderProps;
+        const { value, onChange, label, validationMessage, ...others } = fieldRenderProps;
         const handleChange = (event: any) => {
             onChange({ value: event.target.checked });
         };
-        return <Checkbox checked={value} onChange={handleChange} label={label} {...others} />;
+        return <Checkbox checked={value} onChange={handleChange} label={label} validationMessage={validationMessage || undefined} {...others} />;
     };
 
     return (

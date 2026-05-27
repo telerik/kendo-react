@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Chip } from '@progress/kendo-react-buttons';
 import { GridCustomCellProps } from '@progress/kendo-react-grid';
-import { buildingsSolidIcon, moneyExchangeIcon, walletSolidIcon } from '@progress/kendo-svg-icons';
+import { buildingsIcon, moneyExchangeIcon, walletIcon } from '@progress/kendo-svg-icons';
 
 const CustomAmountCell = (props: GridCustomCellProps) => {
     return <td {...props.tdProps}>{props.dataItem.Amount < 0 ? <b>{props.children}</b> : props.children}</td>;
@@ -29,9 +29,9 @@ const CustomAccountTypeCell = (props: GridCustomCellProps) => {
         props.dataItem.AccountType === 'Checking'
             ? moneyExchangeIcon
             : props.dataItem.AccountType === 'Savings'
-            ? walletSolidIcon
+            ? walletIcon
             : props.dataItem.AccountType === 'Business'
-            ? buildingsSolidIcon
+            ? buildingsIcon
             : undefined;
 
     return (

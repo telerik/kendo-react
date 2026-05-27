@@ -129,6 +129,42 @@ The current grid state.
 <td class="table-cell-name">
 
 
+#### httpClient?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+[GridAIHttpClient]({% slug api_grid_gridaihttpclient %})
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Optional custom HTTP client.
+When provided, overrides the built-in fetch-based transport.
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### onExportPdf?
 
 
@@ -279,7 +315,7 @@ Callback fired when the response returns an error.
 <code>
 
 
-(response: AxiosResponse&lt;any&gt;, promptMessage?: string, isRetry?: boolean) => void
+(response: [GridAIResponse]({% slug api_grid_gridairesponse %})&lt;any&gt;, promptMessage?: string, isRetry?: boolean) => void
 
 
 </code>
@@ -349,7 +385,7 @@ Callback fired when the grid state should be updated.
 <code>
 
 
-AxiosRequestConfig&lt;any&gt;
+[GridAIRequestConfig]({% slug api_grid_gridairequestconfig %})
 
 
 </code>
@@ -365,7 +401,7 @@ AxiosRequestConfig&lt;any&gt;
 <td class="table-cell-comment">
 
 
-Additional axios request options.
+Additional HTTP request options.
 
 
 </td>

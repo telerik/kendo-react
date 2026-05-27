@@ -4,7 +4,6 @@ description: 'Get started with the KendoKendoReact Data Grid supporting row reor
 components: ["datagrid"]
 slug: rowreordering_grid
 position: 20
-tag: updated
 ---
 
 # Reordering Rows

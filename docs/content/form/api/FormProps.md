@@ -378,6 +378,53 @@ const validator = values => ({ user: { name: values.user.name ? "" : "Name is re
 
 </td>
 </tr>
+<tr>
+<td class="table-cell-name">
+
+
+#### webMcp?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+boolean | WebMcpProps
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Enables browser-native AI agent tools via Web MCP (Chrome 146+).
+
+Pass `true` for defaults or an object for fine-grained control.
+AI agents are multilingual — `dataName` accepts any language.
+
+```tsx
+// Boolean: generic "form" label
+<Form webMcp render={props => <FormElement>...</FormElement>} />
+
+// Config object: explicit name
+<Form webMcp={{ dataName: 'employee' }} render={props => <FormElement>...</FormElement>} />
+```
+
+
+
+</td>
+</tr>
 </tbody>
 </table>
 

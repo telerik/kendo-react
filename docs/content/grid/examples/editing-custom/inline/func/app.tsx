@@ -12,6 +12,7 @@ import { DropDownCell } from './myDropDownCell';
 import { Button } from '@progress/kendo-react-buttons';
 import * as OriginalArrayServices from './gd-services';
 import { Product } from './gd-interfaces';
+import { classNames } from '@progress/kendo-react-common';
 import { EditDescriptor, NavigatableMode } from '@progress/kendo-react-data-tools';
 
 const generateId = (data) => data.reduce((acc, current) => Math.max(acc, current.ProductID), 0) + 1;
@@ -24,6 +25,7 @@ const CommandCell = (props: GridCustomCellProps) => {
     return (
         <MyCommandCell
             {...props}
+            className={classNames(props.tdProps?.className)}
             enterEdit={enterEdit}
             remove={remove}
             add={add}

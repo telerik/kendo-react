@@ -4,7 +4,6 @@ description: 'Configure the on-screen keyboard for the KendoReact MaskedTextBox 
 components: ["maskedtextbox"]
 slug: adaptive_rendering_maskedtextbox
 position: 10
-tag: new
 ---
 
 # Adaptive Rendering

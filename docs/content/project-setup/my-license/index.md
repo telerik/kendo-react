@@ -32,7 +32,6 @@ If you’re in a hurry, skip the rest of the article and run this command sequen
 npm install --save @progress/kendo-licensing
 npx kendo-ui-license refresh && npx kendo-ui-license activate
 ```
-
 ```sh YARN
 yarn add @progress/kendo-licensing
 yarn run kendo-ui-license refresh && yarn run kendo-ui-license activate

@@ -3,38 +3,16 @@ import * as React from 'react';
 import { Label } from '@progress/kendo-react-labels';
 import { DropDownList, DropDownListChangeEvent, ListItemProps } from '@progress/kendo-react-dropdowns';
 
+type ThemeColorType = 'base' | 'primary' | 'secondary' | 'tertiary' | 'info' | 'success' | 'warning' | 'inverse';
+
 interface StyleConfiguratorProps {
     size?: 'small' | 'medium' | 'large';
     sizes?: Array<'small' | 'medium' | 'large'>;
     onSizeChange?: (size: 'small' | 'medium' | 'large') => void;
 
-    themeColor?:
-        | 'base'
-        | 'primary'
-        | 'secondary'
-        | 'tertiary'
-        | 'info'
-        | 'success'
-        | 'warning'
-        | 'dark'
-        | 'light'
-        | 'inverse';
-    themeColors?: Array<
-        'base' | 'primary' | 'secondary' | 'tertiary' | 'info' | 'success' | 'warning' | 'dark' | 'light' | 'inverse'
-    >;
-    onThemeColorChange?: (
-        themeColor:
-            | 'base'
-            | 'primary'
-            | 'secondary'
-            | 'tertiary'
-            | 'info'
-            | 'success'
-            | 'warning'
-            | 'dark'
-            | 'light'
-            | 'inverse'
-    ) => void;
+    themeColor?: ThemeColorType;
+    themeColors?: Array<ThemeColorType>;
+    onThemeColorChange?: (themeColor: ThemeColorType) => void;
 
     fillMode?: 'solid' | 'outline' | 'flat' | 'link';
     fillModes?: Array<'solid' | 'outline' | 'flat' | 'link'>;
@@ -179,19 +157,7 @@ StyleConfigurator.defaultProps = {
         /* noop */
     },
 
-    themeColors: [
-        'base',
-        'primary',
-        'secondary',
-        'tertiary',
-        'info',
-        'success',
-        'warning',
-        'error',
-        'dark',
-        'light',
-        'inverse'
-    ],
+    themeColors: ['base', 'primary', 'secondary', 'tertiary', 'info', 'success', 'warning', 'error', 'inverse'],
     onThemeColorChange: () => {
         /* noop */
     },

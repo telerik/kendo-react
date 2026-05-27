@@ -4,7 +4,6 @@ description: 'Add alternative styling options to the KendoReact TreeView in Reac
 components: ["treeview"]
 slug: appearance_treeview
 position: 70
-tag: updated
 ---
 
 # Appearance

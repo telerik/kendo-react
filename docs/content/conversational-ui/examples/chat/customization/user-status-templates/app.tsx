@@ -29,7 +29,7 @@ const UserStatusTemplate = ({ message }: any) => {
     return (
         <div style={{ width: '10px', height: '10px' }}>
             <Badge
-                themeColor={authorStatus === 'online' ? 'success' : 'light'}
+                themeColor={authorStatus === 'online' ? 'success' : 'secondary'}
                 style={{
                     width: '10px',
                     height: '10px',
@@ -142,7 +142,7 @@ const App = () => {
                         onClick={() => handleStatusChange('offline')}
                         selected={botStatus === 'offline'}
                         fillMode={botStatus === 'offline' ? 'solid' : 'outline'}
-                        themeColor={botStatus === 'offline' ? 'light' : 'base'}
+                        themeColor={botStatus === 'offline' ? 'secondary' : 'base'}
                         size="small"
                         rounded="medium"
                     >

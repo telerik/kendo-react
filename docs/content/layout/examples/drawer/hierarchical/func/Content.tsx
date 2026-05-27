@@ -12,7 +12,7 @@ import {
 import { Button } from '@progress/kendo-react-buttons';
 
 import { SvgIcon } from '@progress/kendo-react-common';
-import { starIcon, starOutlineIcon } from '@progress/kendo-svg-icons';
+import { starIcon } from '@progress/kendo-svg-icons';
 
 const reactImagePath = (import.meta.env.VITE_REACT_DEMOS_BASE_URL || '') + 'assets/layout/drawer/react-logo.jpg';
 const jsImagePath = (import.meta.env.VITE_REACT_DEMOS_BASE_URL || '') + 'assets/layout/drawer/js-logo.png';
@@ -72,7 +72,7 @@ export const Education = (props) => {
                                     <SvgIcon icon={starIcon} style={{ color: '#ffce2a' }} />
                                     <SvgIcon icon={starIcon} style={{ color: '#ffce2a' }} />
                                     <SvgIcon icon={starIcon} style={{ color: '#ffce2a' }} />
-                                    <SvgIcon icon={starOutlineIcon} style={{ color: '#ffce2a' }} />
+                                    <SvgIcon icon={starIcon} style={{ color: '#ffce2a' }} />
                                     <div>4/5 (681)</div>
                                 </span>
                             </CardSubtitle>
@@ -195,7 +195,7 @@ export const ItalianFood = (props) => {
                                     <SvgIcon icon={starIcon} style={{ color: '#ffce2a' }} />
                                     <SvgIcon icon={starIcon} style={{ color: '#ffce2a' }} />
                                     <SvgIcon icon={starIcon} style={{ color: '#ffce2a' }} />
-                                    <SvgIcon icon={starOutlineIcon} style={{ color: '#ffce2a' }} />
+                                    <SvgIcon icon={starIcon} style={{ color: '#ffce2a' }} />
                                     <div>4/5 (681)</div>
                                 </span>
                             </CardSubtitle>
@@ -227,7 +227,7 @@ export const ItalianFood = (props) => {
                                     <SvgIcon icon={starIcon} style={{ color: '#ffce2a' }} />
                                     <SvgIcon icon={starIcon} style={{ color: '#ffce2a' }} />
                                     <SvgIcon icon={starIcon} style={{ color: '#ffce2a' }} />
-                                    <SvgIcon icon={starOutlineIcon} style={{ color: '#ffce2a' }} />
+                                    <SvgIcon icon={starIcon} style={{ color: '#ffce2a' }} />
                                     <div>4/5 (681)</div>
                                 </span>
                             </CardSubtitle>
@@ -279,7 +279,7 @@ export const Europe = (props) => {
                                     <SvgIcon icon={starIcon} style={{ color: '#ffce2a' }} />
                                     <SvgIcon icon={starIcon} style={{ color: '#ffce2a' }} />
                                     <SvgIcon icon={starIcon} style={{ color: '#ffce2a' }} />
-                                    <SvgIcon icon={starOutlineIcon} style={{ color: '#ffce2a' }} />
+                                    <SvgIcon icon={starIcon} style={{ color: '#ffce2a' }} />
                                     <div>4/5 (391)</div>
                                 </span>
                             </CardSubtitle>
@@ -351,7 +351,7 @@ export const NorthAmerica = (props) => {
                                     <SvgIcon icon={starIcon} style={{ color: '#ffce2a' }} />
                                     <SvgIcon icon={starIcon} style={{ color: '#ffce2a' }} />
                                     <SvgIcon icon={starIcon} style={{ color: '#ffce2a' }} />
-                                    <SvgIcon icon={starOutlineIcon} style={{ color: '#ffce2a' }} />
+                                    <SvgIcon icon={starIcon} style={{ color: '#ffce2a' }} />
                                     <div>4/5 (2523)</div>
                                 </span>
                             </CardSubtitle>

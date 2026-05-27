@@ -42,6 +42,9 @@ position: 1
         <a href="{% slug api_upload_upload %}">Upload</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_upload_upload %}">Upload</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_upload_uploadui %}">UploadUI</a>
     </li>
   </ul>
@@ -115,6 +118,27 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_upload_uploadselectmessageprops %}">UploadSelectMessageProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_upload_xhrresponsedata %}">XHRResponseData</a>
+    </li>
+  </ul>
+</div>
+<div class="api-index-section">
+
+
+<span class="section-key">
+
+
+## Class
+
+
+</span>
+
+
+  <ul class="api-item-list">
+    <li class="api-item">
+        <a href="{% slug api_upload_upload %}">Upload</a>
     </li>
   </ul>
 </div>

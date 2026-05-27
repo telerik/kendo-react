@@ -70,8 +70,6 @@ The `themeColor` option supports the following values:
 -   `success`—Applies coloring based on the success theme color
 -   `warning`—Applies coloring based on the warning theme color
 -   `error`—Applies coloring based on the error theme color
--   `dark`—Applies coloring based on the dark theme color
--   `light`—Applies coloring based on the light theme color
 -   `inverse`—Applies coloring based on the inverse theme color
 
 <demo metaUrl="buttons/smartpaste/themecolor/" height="220"></demo>

@@ -34,7 +34,7 @@ const App = () => {
             <BottomNavigation
                 items={items}
                 fillMode={'solid'}
-                themeColor={'light'}
+                themeColor={'base'}
                 itemRender={buttonItemRender}
                 positionMode={'sticky'}
             />
@@ -43,7 +43,7 @@ const App = () => {
             <BottomNavigation
                 items={items}
                 fillMode={'solid'}
-                themeColor={'light'}
+                themeColor={'base'}
                 itemRender={anchorItemRender}
                 positionMode={'sticky'}
             />

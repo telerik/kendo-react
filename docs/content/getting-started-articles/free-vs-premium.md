@@ -6,6 +6,7 @@ position: 40
 category: getting-started
 tier: mixed
 tag: new
+release_tag: Q2 2026
 ---
 
 # KendoReact Free vs. Premium

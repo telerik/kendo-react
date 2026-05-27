@@ -100,6 +100,44 @@ ARIA description for additional context
 <td class="table-cell-name">
 
 
+#### ariaHasPopup?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+boolean | "dialog" | "menu" | "grid" | "listbox" | "tree"
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Indicates the type of popup triggered by the element.
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### ariaLabel?
 
 

@@ -13,12 +13,6 @@ The possible values are:
 * `primary` (Default)&mdash;Applies coloring based on the primary theme color.
 * `secondary`&mdash;Applies coloring based on the secondary theme color.
 * `tertiary`&mdash; Applies coloring based on the tertiary theme color.
-* `info`&mdash;Applies coloring based on the info theme color.
-* `success`&mdash; Applies coloring based on the success theme color.
-* `warning`&mdash; Applies coloring based on the warning theme color.
-* `error`&mdash; Applies coloring based on the error theme color.
-* `dark`&mdash; Applies coloring based on the dark theme color.
-* `light`&mdash; Applies coloring based on the light theme color.
-* `inverse`&mdash; Applies coloring based on the inverse theme color.
+* `base`&mdash; Applies coloring based on the base theme color.
 
-`type` FloatingActionButtonThemeColor = "primary" | "secondary" | "tertiary" | "info" | "success" | "warning" | "error" | "dark" | "light" | "inverse";
+`type` FloatingActionButtonThemeColor = "base" | "primary" | "secondary" | "tertiary";

@@ -4,7 +4,6 @@ description: 'Configure the on-screen keyboard for the KendoReact TextArea to im
 components: ["textarea"]
 slug: adaptive_rendering_textarea
 position: 9
-tag: new
 ---
 
 # Adaptive Rendering

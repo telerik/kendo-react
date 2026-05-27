@@ -31,7 +31,7 @@ export const MyCommandCell = (props) => {
     }
 
     return (
-        <td className="k-command-cell">
+        <td className={`${props.className} k-command-cell`}>
             <Button
                 themeColor={'primary'}
                 onClick={() => {

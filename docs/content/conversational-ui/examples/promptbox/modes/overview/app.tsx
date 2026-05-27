@@ -2,7 +2,7 @@ import * as React from 'react';
 import { PromptBox, PromptBoxChangeEvent } from '@progress/kendo-react-conversational-ui';
 import { RadioGroup, RadioGroupChangeEvent } from '@progress/kendo-react-inputs';
 import { SvgIcon } from '@progress/kendo-react-common';
-import { globeOutlineIcon } from '@progress/kendo-svg-icons';
+import { globeIcon } from '@progress/kendo-svg-icons';
 import './styles.css';
 
 const modeOptions = [
@@ -49,7 +49,7 @@ const App = () => {
                 mode={mode}
                 uploadButtonConfig={true}
                 maxTextAreaHeight="100"
-                startAffix={<SvgIcon icon={globeOutlineIcon} />}
+                startAffix={<SvgIcon icon={globeIcon} />}
             />
         </div>
     );

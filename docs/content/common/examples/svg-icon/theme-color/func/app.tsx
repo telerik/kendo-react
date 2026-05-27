@@ -13,8 +13,6 @@ const themeColors: IconThemeColor[] = [
     'success',
     'warning',
     'error',
-    'dark',
-    'light',
     'inverse'
 ];
 

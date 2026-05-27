@@ -4,7 +4,6 @@ description: 'Customize the KendoReact FlatColorPicker header or footer in React
 components: ["flatcolorpicker"]
 slug: views_flatcolorpicker
 position: 4
-tag: new
 ---
 
 # FlatColorPicker Views

@@ -38,6 +38,39 @@ position: 1
     <li class="api-item">
         <a href="{% slug api_sortable_sortable %}">Sortable</a>
     </li>
+    <li class="api-item">
+        <a href="{% slug api_sortable_sortable %}">Sortable</a>
+    </li>
+  </ul>
+</div>
+<div class="api-index-section">
+
+
+<span class="section-key">
+
+
+## Class
+
+
+</span>
+
+
+  <ul class="api-item-list">
+    <li class="api-item">
+        <a href="{% slug api_sortable_sortable %}">Sortable</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_sortable_sortableondragendevent %}">SortableOnDragEndEvent</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_sortable_sortableondragoverevent %}">SortableOnDragOverEvent</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_sortable_sortableondragstartevent %}">SortableOnDragStartEvent</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_sortable_sortableonnavigateevent %}">SortableOnNavigateEvent</a>
+    </li>
   </ul>
 </div>
 <div class="api-index-section">
@@ -61,33 +94,6 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_sortable_sortableprops %}">SortableProps</a>
-    </li>
-  </ul>
-</div>
-<div class="api-index-section">
-
-
-<span class="section-key">
-
-
-## Class
-
-
-</span>
-
-
-  <ul class="api-item-list">
-    <li class="api-item">
-        <a href="{% slug api_sortable_sortableondragendevent %}">SortableOnDragEndEvent</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_sortable_sortableondragoverevent %}">SortableOnDragOverEvent</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_sortable_sortableondragstartevent %}">SortableOnDragStartEvent</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_sortable_sortableonnavigateevent %}">SortableOnNavigateEvent</a>
     </li>
   </ul>
 </div>

@@ -5,13 +5,13 @@ import { Icon } from '@progress/kendo-react-common';
 const App = () => {
     return (
         <React.Fragment>
-            <link rel="stylesheet" href="https://unpkg.com/@progress/kendo-font-icons/dist/index.css" />
+            <link rel="stylesheet" href="https://unpkg.com/@progress/kendo-font-icons@5/dist/index.css" />
             <div className="text-center social-icons">
                 <div className="icon facebook">
                     <Icon name="facebook" />
                 </div>
-                <div className="icon twitter">
-                    <Icon name="twitter" />
+                <div className="icon x-logo">
+                    <Icon name="x-logo" />
                 </div>
                 <div className="icon google">
                     <Icon name="google" />
@@ -46,11 +46,11 @@ const App = () => {
                 .social-icons .icon.facebook .k-icon {
                   color: #3b5998;
                 }
-                .social-icons .icon.twitter:before {
-                  background-color: #3cf;
+                .social-icons .icon.x-logo:before {
+                  background-color: #000;
                 }
-                .social-icons .icon.twitter .k-icon {
-                  color: #3cf;
+                .social-icons .icon.x-logo .k-svg-icon {
+                  color: #000;
                 }
                 .social-icons .icon.google:before {
                   background-color: #dc4a38;

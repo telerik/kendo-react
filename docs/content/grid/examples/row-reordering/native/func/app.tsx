@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
-import { SvgIcon } from '@progress/kendo-react-common';
+import { Grid, GridColumn as Column, GridCustomCellProps } from '@progress/kendo-react-grid';
+import { classNames, SvgIcon } from '@progress/kendo-react-common';
 import { reorderIcon } from '@progress/kendo-svg-icons';
 import products from './gd-products';
 import { Product } from './gd-interfaces';
@@ -12,10 +12,12 @@ type ContextProps = {
 
 const MyContext = React.createContext<ContextProps>({ reorder: (dataItem) => {}, dragStart: (dataItem) => {} });
 
-const DragCell = (props) => {
+const DragCell = (props: GridCustomCellProps) => {
     const currentContext = React.useContext(MyContext);
     return (
         <td
+            {...props.tdProps}
+            className={classNames(props.tdProps?.className, 'k-drag-cell')}
             onDragOver={(e) => {
                 currentContext.reorder(props.dataItem);
 

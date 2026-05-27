@@ -50,7 +50,7 @@ Represent the `ref` of the Menu component.
 <td class="table-cell-comment">
 
 
-
+The current element or `null` if there is no one.
 
 
 </td>
@@ -59,7 +59,7 @@ Represent the `ref` of the Menu component.
 <td class="table-cell-name">
 
 
-#### props
+#### reset
 
 
 </td>
@@ -69,7 +69,7 @@ Represent the `ref` of the Menu component.
 <code>
 
 
-Readonly&lt;[MenuProps]({% slug api_layout_menuprops %})&gt;
+() => void
 
 
 </code>
@@ -85,41 +85,11 @@ Readonly&lt;[MenuProps]({% slug api_layout_menuprops %})&gt;
 <td class="table-cell-comment">
 
 
-The props of the MenuHandle component.
-
-
-</td>
-</tr>
-</tbody>
-</table>
-
-
-
-## Methods
-
-<table class="api-table api-table-methods">
-<thead class="api-table-methods-head">
-<tr>
-<th>
-
-
-#### reset
-
-
-</th>
-</tr>
-</thead>
-<tbody class="api-table-body">
-<tr>
-<td>
-
-
 Resets the selection and opening of Menu items.
 
 
 </td>
 </tr>
-
 </tbody>
 </table>
 

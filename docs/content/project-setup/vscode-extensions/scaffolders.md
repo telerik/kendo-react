@@ -4,7 +4,6 @@ description: "Use scaffolders to add KendoReact components to your project by us
 components: ["general"]
 slug: scaffolders_vscode_installation
 position: 4
-tag: updated
 ---
 
 # Generating Complex Components by Scaffolding

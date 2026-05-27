@@ -66,7 +66,7 @@ const CommandCell = (props: CustomCommandCellProps) => {
     const inEdit = props.isInEdit;
     const productID = dataItem.ProductID;
     return (
-        <td>
+        <td {...props.tdProps}>
             <Button
                 className={inEdit ? 'k-grid-save-command' : 'k-grid-edit-command'}
                 themeColor="primary"

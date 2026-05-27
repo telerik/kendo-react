@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { BottomNavigation, BottomNavigationItemFlow, BottomNavigationSelectEvent } from '@progress/kendo-react-layout';
-import { envelopIcon, heartIcon, plusIcon, trashIcon } from '@progress/kendo-svg-icons';
+import { envelopeIcon, heartIcon, plusIcon, trashIcon } from '@progress/kendo-svg-icons';
 
 const content = [
-    { svgIcon: envelopIcon, text: 'Inbox', selected: true },
+    { svgIcon: envelopeIcon, text: 'Inbox', selected: true },
     { svgIcon: plusIcon, text: 'Contacts' },
     { svgIcon: heartIcon, text: 'Favorites' },
     { svgIcon: trashIcon, text: 'Deleted' }

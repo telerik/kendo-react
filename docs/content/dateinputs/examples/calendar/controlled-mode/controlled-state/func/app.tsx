@@ -8,7 +8,7 @@ const App = () => {
     return (
         <div>
             <div className="example-config">Selected date: {formatDate(date, 'd MMMM y')}</div>
-            <Calendar value={date} onChange={(e) => setDate(e.target.value)} />
+            <Calendar value={date} onChange={(e) => setDate(e.value)} />
         </div>
     );
 };

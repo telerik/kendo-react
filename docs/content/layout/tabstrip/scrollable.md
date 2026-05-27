@@ -4,7 +4,6 @@ description: 'Use the KendoReact TabStrip for TabStrip scrollable feature.'
 components: ['tabstrip']
 slug: scrollable_tabstrip
 position: 40
-tag: updated
 ---
 
 # Scrollable Tabs

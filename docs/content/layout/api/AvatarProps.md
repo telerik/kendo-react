@@ -400,7 +400,7 @@ Sets additional CSS styles to the Avatar.
 <code>
 
 
-"base" | "error" | "primary" | "secondary" | "tertiary" | "info" | "success" | "warning" | "dark" | "light" | "inverse"
+"base" | "primary" | "secondary" | "tertiary"
 
 
 </code>
@@ -430,13 +430,6 @@ The available options are:
 - primary
 - secondary
 - tertiary
-- info
-- success
-- error
-- warning
-- dark
-- light
-- inverse
 
 
 

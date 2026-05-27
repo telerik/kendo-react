@@ -48,6 +48,9 @@ position: 1
         <a href="{% slug api_form_fieldwrapper %}">FieldWrapper</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_form_form %}">Form</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_form_formvalidatortype %}">FormValidatorType</a>
     </li>
   </ul>
@@ -73,6 +76,9 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_form_fieldwrapper %}">FieldWrapper</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_form_form %}">Form</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_form_form %}">Form</a>

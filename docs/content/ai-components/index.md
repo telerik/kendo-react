@@ -12,12 +12,21 @@ Accelerate development with cutting-edge AI-powered KendoReact components and fe
 
 <article-card-container>
     <article-card
+        href="slug://web_mcp_overview"
+        src="./images/WebMCP_Light.svg"
+        title="WebMCP Support"
+        subTitle="UI Component Feature"
+        darkSrc="./images/WebMCP_Dark.svg"
+        tag="new"
+        description="Perform operations like data sorting, data filtering, navigation, value changes, and more through natural language user prompts.">
+    </article-card>
+    <article-card
         href="slug://overview_chat"
         src="./images/AI-Chat-Light.svg"
         darkSrc="./images/AI-Chat-Dark.svg"
         title="AI Chat"
         subTitle="Chat Feature"
-        tag="updated"
+        tag="updated" release_tag="Q2 2026"
         description="Build intelligent conversational experiences with the powerful AI integration of this React Chat component.">
     </article-card>
     <article-card
@@ -26,7 +35,6 @@ Accelerate development with cutting-edge AI-powered KendoReact components and fe
         darkSrc="./images/SemanticSearch-Dark.svg"
         title="Sematic Search"
         subTitle="Smart Data Grid Feature"
-        tag="new"
         description="Enhance data discovery using the KendoReact Grid Semantic Search - intelligent meaning-based search capabilities.">
     </article-card>
         <article-card
@@ -35,7 +43,6 @@ Accelerate development with cutting-edge AI-powered KendoReact components and fe
         darkSrc="./images/SmartPaste-Dark.svg"
         title="SmartPaste"
         subTitle="UI Component"
-        tag="new"
         description="Streamline data entry with the KendoReact SmartPaste component - map and insert clipboard content into input fields with a single click.">
     </article-card>
     <article-card
@@ -44,7 +51,6 @@ Accelerate development with cutting-edge AI-powered KendoReact components and fe
         darkSrc="./images/AIDataOperations-Dark.svg"
         title="AI Data Operations"
         subTitle="Smart Data Grid Feature"
-        tag="updated"
         description="Transform data management with React Grid's advanced AI-powered operations and intelligent processing.">
     </article-card>
     <article-card
@@ -53,7 +59,6 @@ Accelerate development with cutting-edge AI-powered KendoReact components and fe
         darkSrc="./images/AIDataHighlights-Dark.svg"
         title="AI Data Highlight"
         subTitle="Smart Data Grid Feature"
-        tag="updated"
         description="Unlock insights instantly with React Grid's smart AI highlighting of critical business data.">
     </article-card>
     <article-card
@@ -70,7 +75,6 @@ Accelerate development with cutting-edge AI-powered KendoReact components and fe
         darkSrc="./images/PromptBox-Dark.svg"
         title="PromptBox"
         subTitle="UI Component"
-        tag="new"
         description="Improve AI prompting with the KendoReact PromptBox component - smart input for conversational apps.">
     </article-card>
         </article-card>
@@ -80,7 +84,6 @@ Accelerate development with cutting-edge AI-powered KendoReact components and fe
         darkSrc="./images/GridAIChatIntegration-Dark.svg"
         title="AI Chat Integration"
         subTitle="Grid Integration"
-        tag="new"
         description="Transform Grid workflows using the KendoReact Grid AI Chat Integration - contextual assistance and advanced AI experience.">
     </article-card>
     <article-card

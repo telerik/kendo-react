@@ -1,32 +1,32 @@
 import * as React from 'react';
 
 const App = () => {
-	return (
-		<>
-			<link rel="stylesheet" href="https://unpkg.com/@progress/kendo-theme-default@latest/dist/all.css" />
-			<link rel="stylesheet" href="https://unpkg.com/@progress/kendo-font-icons/dist/index.css" />
-			<ul className="WebComponentsIcons">
-				<li>
-					<span className="k-icon k-font-icon k-i-globe-outline"></span> .k-i-globe-outline
-				</li>
-				<li>
-					<span className="k-icon k-font-icon k-i-globe"></span> .k-i-globe
-				</li>
-				<li>
-					<span className="k-icon k-font-icon k-i-marker-pin"></span> .k-i-marker-pin
-				</li>
-				<li>
-					<span className="k-icon k-font-icon k-i-marker-pin-target"></span> .k-i-marker-pin-target
-				</li>
-				<li>
-					<span className="k-icon k-font-icon k-i-pin"></span> .k-i-pin
-				</li>
-				<li>
-					<span className="k-icon k-font-icon k-i-unpin"></span> .k-i-unpin
-				</li>
-			</ul>
-			<style>
-				{`
+    return (
+        <>
+            <link rel="stylesheet" href="https://unpkg.com/@progress/kendo-theme-default@latest/dist/all.css" />
+            <link rel="stylesheet" href="https://unpkg.com/@progress/kendo-font-icons@5/dist/index.css" />
+            <ul className="WebComponentsIcons">
+                <li>
+                    <span className="k-icon k-font-icon k-i-globe"></span> .k-i-globe
+                </li>
+                <li>
+                    <span className="k-icon k-font-icon k-i-globe"></span> .k-i-globe
+                </li>
+                <li>
+                    <span className="k-icon k-font-icon k-i-marker-pin"></span> .k-i-marker-pin
+                </li>
+                <li>
+                    <span className="k-icon k-font-icon k-i-marker-pin-target"></span> .k-i-marker-pin-target
+                </li>
+                <li>
+                    <span className="k-icon k-font-icon k-i-pin"></span> .k-i-pin
+                </li>
+                <li>
+                    <span className="k-icon k-font-icon k-i-unpin"></span> .k-i-unpin
+                </li>
+            </ul>
+            <style>
+                {`
         .WebComponentsIcons {
             list-style: none;
             margin: 0;
@@ -96,9 +96,9 @@ const App = () => {
         .ref-icon {
             width: 60px;
         }`}
-			</style>
-		</>
-	);
+            </style>
+        </>
+    );
 };
 
 export default App;

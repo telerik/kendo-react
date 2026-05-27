@@ -4,7 +4,6 @@ description: 'Enable adaptive rendering for the KendoKendoReact Data Grid in Rea
 components: ["datagrid"]
 slug: grid_adaptive_rendering
 position: 160
-tag: new
 ---
 
 # Adaptive Rendering

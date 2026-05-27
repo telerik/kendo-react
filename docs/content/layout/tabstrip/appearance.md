@@ -4,7 +4,6 @@ description: The KendoReact Tabstrip allows you to set different styles based on
 components: ['tabstrip']
 slug: sizing_tabstrip
 position: 50
-tag: updated
 ---
 
 # Appearance

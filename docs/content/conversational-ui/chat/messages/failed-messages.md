@@ -4,7 +4,6 @@ description: 'Handle and display failed message delivery in the KendoReact Chat 
 components: ['chat']
 slug: messages_failed_messages_chat
 position: 50
-tag: new
 ---
 
 # Failed Messages

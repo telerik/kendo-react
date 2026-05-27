@@ -130,7 +130,7 @@ Need something unique that is tailor-made for your project? Progress offers its 
 
 ## Suggested Links
 
--   [Getting Started with the KendoReact Free Components](https://www.telerik.com/kendo-react-ui/components/free)
+-   [Getting Started with the KendoReact Free Components](https://www.telerik.com/kendo-react-ui/components/getting-started)
 
 -   [Getting Started with the KendoReact Pager](slug://get_started_datatools)
 -   [Overview of the KendoReact Filter](slug://overview_filter)

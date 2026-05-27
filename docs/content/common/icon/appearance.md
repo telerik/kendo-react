@@ -1,7 +1,7 @@
 ---
 title: Appearance
 description: 'Specify the appearance of the KendoReact Icon component in React projects.'
-components: ["general"]
+components: ['general']
 slug: appearance_icon
 position: 2
 ---
@@ -10,6 +10,8 @@ position: 2
 
 The Icon component provides many predefined appearance options such as different sizes, theme colors and flipping.
 
+> Kendo UI Icons version `^5.x.x` requires KendoReact `v15.0.0` or later. For more information, refer to the [Icon Package Compatibility](slug:icons#icon-package-compatibility) section.
+
 ## Theme Color
 
 Icons can be colored in terms of the current theme using the [`themeColor`]({% slug api_common_iconthemecolor %}) property. The available values are:
@@ -17,14 +19,12 @@ Icons can be colored in terms of the current theme using the [`themeColor`]({% s
 -   `inherit` (Default)&mdash;Applies coloring based on the current color.
 -   `primary`&mdash;Applies coloring based on primary theme color.
 -   `secondary`&mdash;Applies coloring based on secondary theme color.
--   `tertiary`&mdash; Applies coloring based on tertiary theme color.
+-   `tertiary`&mdash;Applies coloring based on tertiary theme color.
 -   `info`&mdash;Applies coloring based on info theme color.
--   `success`&mdash; Applies coloring based on success theme color.
--   `warning`&mdash; Applies coloring based on warning theme color.
--   `error`&mdash; Applies coloring based on error theme color.
--   `dark`&mdash; Applies coloring based on dark theme color.
--   `light`&mdash; Applies coloring based on light theme color.
--   `inverse`&mdash; Applies coloring based on inverse theme color.
+-   `success`&mdash;Applies coloring based on success theme color.
+-   `warning`&mdash;Applies coloring based on warning theme color.
+-   `error`&mdash;Applies coloring based on error theme color.
+-   `inverse`&mdash;Applies coloring based on inverse theme color.
 
 > The Icon allows you to use predefined theme colors through the `themeColor` property. Any custom color could by applied via [`style`]({% slug api_common_iconprops %}#style) property.
 
@@ -72,4 +72,3 @@ The Icon allows you to invert it through an axis in different directions by usin
 -   [API Reference of the Icon]({% slug api_common_icon %})
 -   [API Reference of the IconProps]({% slug api_common_iconprops %})
 -   [Creating Custom Styles]({% slug themebuilder %})
-

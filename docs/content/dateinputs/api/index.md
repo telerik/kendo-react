@@ -69,10 +69,10 @@ position: 1
         <a href="{% slug api_dateinputs_calendar %}">Calendar</a>
     </li>
     <li class="api-item">
-        <a href="{% slug api_dateinputs_calendarcell %}">CalendarCell</a>
+        <a href="{% slug api_dateinputs_calendar %}">Calendar</a>
     </li>
     <li class="api-item">
-        <a href="{% slug api_dateinputs_calendarhandle %}">CalendarHandle</a>
+        <a href="{% slug api_dateinputs_calendarcell %}">CalendarCell</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_dateinputs_calendarheadertitle %}">CalendarHeaderTitle</a>
@@ -120,7 +120,7 @@ position: 1
         <a href="{% slug api_dateinputs_multiviewcalendar %}">MultiViewCalendar</a>
     </li>
     <li class="api-item">
-        <a href="{% slug api_dateinputs_multiviewcalendarhandle %}">MultiViewCalendarHandle</a>
+        <a href="{% slug api_dateinputs_multiviewcalendar %}">MultiViewCalendar</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_dateinputs_multiviewcalendarpropscontext %}">MultiViewCalendarPropsContext</a>
@@ -160,6 +160,9 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_dateinputs_calendarchangeevent %}">CalendarChangeEvent</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_dateinputs_calendarhandle %}">CalendarHandle</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_dateinputs_calendarheaderprops %}">CalendarHeaderProps</a>
@@ -250,6 +253,9 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_dateinputs_multiviewcalendarchangeevent %}">MultiViewCalendarChangeEvent</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_dateinputs_multiviewcalendarhandle %}">MultiViewCalendarHandle</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_dateinputs_multiviewcalendarprops %}">MultiViewCalendarProps</a>

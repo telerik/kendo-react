@@ -2,10 +2,10 @@ import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { BottomNavigation, BottomNavigationSelectEvent } from '@progress/kendo-react-layout';
-import { envelopIcon, calendarIcon, userIcon } from '@progress/kendo-svg-icons';
+import { envelopeIcon, calendarIcon, userIcon } from '@progress/kendo-svg-icons';
 
 const items: any = [
-    { text: 'Inbox', id: 1, svgIcon: envelopIcon, route: '/bottomnavigation-basic-usage', selected: true },
+    { text: 'Inbox', id: 1, svgIcon: envelopeIcon, route: '/bottomnavigation-basic-usage', selected: true },
     { text: 'Calendar', id: 2, svgIcon: calendarIcon, route: '/bottomnavigation-basic-usage/calendar' },
     { text: 'Profile', id: 3, svgIcon: userIcon, route: '/bottomnavigation-basic-usage/profile' }
 ];

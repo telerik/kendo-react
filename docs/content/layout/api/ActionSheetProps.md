@@ -104,6 +104,58 @@ Specifies the duration of the transition for the entering and closing Animation.
 <td class="table-cell-name">
 
 
+#### appendTo?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+"null" | HTMLElement
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+<code>
+
+
+null
+
+
+</code>
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Specifies the container element where the ActionSheet will be appended.
+Defaults to `null` (renders in place). Set to a DOM element (e.g. `document.body`)
+to escape CSS containing blocks created by `transform`, `backdrop-filter`, etc.
+
+
+
+
+```jsx
+<ActionSheet appendTo={document.body} />
+```
+
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### className?
 
 

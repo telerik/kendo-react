@@ -49,7 +49,7 @@ Globalization is a process which combines the translation of component messages 
 
 ## Suggested Links
 
--   [Get Started with KendoReact Free](https://www.telerik.com/kendo-react-ui/components/free)
+-   [Get Started with KendoReact Free](https://www.telerik.com/kendo-react-ui/components/getting-started)
 
 -   [Get Started with KendoReact Free](slug://getting_started_free_vs_premium)
 -   [KendoReact Data Grid]({% slug overview_grid %})

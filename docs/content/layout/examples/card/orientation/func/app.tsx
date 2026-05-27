@@ -8,7 +8,7 @@ import {
     CardImage,
     CardSubtitle
 } from '@progress/kendo-react-layout';
-import { starIcon, starOutlineIcon } from '@progress/kendo-svg-icons';
+import { starIcon } from '@progress/kendo-svg-icons';
 import { SvgIcon } from '@progress/kendo-react-common';
 import { Button } from '@progress/kendo-react-buttons';
 
@@ -31,7 +31,7 @@ const App = () => {
                                     <SvgIcon icon={starIcon} style={{ color: '#ffce2a' }} />
                                     <SvgIcon icon={starIcon} style={{ color: '#ffce2a' }} />
                                     <SvgIcon icon={starIcon} style={{ color: '#ffce2a' }} />
-                                    <SvgIcon icon={starOutlineIcon} />
+                                    <SvgIcon icon={starIcon} />
                                     <div>4/5 (681)</div>
                                 </span>
                             </CardSubtitle>
@@ -64,7 +64,7 @@ const App = () => {
                                     <SvgIcon icon={starIcon} style={{ color: '#ffce2a' }} />
                                     <SvgIcon icon={starIcon} style={{ color: '#ffce2a' }} />
                                     <SvgIcon icon={starIcon} style={{ color: '#ffce2a' }} />
-                                    <SvgIcon icon={starOutlineIcon} />
+                                    <SvgIcon icon={starIcon} />
                                     <div>4/5 (681)</div>
                                 </span>
                             </CardSubtitle>

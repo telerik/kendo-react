@@ -4,7 +4,6 @@ description: 'Enable adaptive rendering for the KendoReact AutoComplete in React
 components: ['autocomplete']
 slug: adaptive_rendering_autocomplete
 position: 9
-tag: new
 ---
 
 # Adaptive Rendering

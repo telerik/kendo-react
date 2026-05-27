@@ -5,7 +5,6 @@ components: ["general"]
 slug: overview_vscode_installation
 position: 1
 category: setup
-tag: updated
 ---
 
 # Productivity Tools Extension for VS Code

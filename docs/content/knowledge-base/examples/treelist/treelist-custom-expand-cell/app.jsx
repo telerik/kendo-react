@@ -6,7 +6,7 @@ import {
 } from '@progress/kendo-react-treelist';
 import { getter, SvgIcon } from '@progress/kendo-react-common';
 import { useTableKeyboardNavigation } from '@progress/kendo-react-data-tools';
-import { caretAltDownIcon, caretAltRightIcon } from '@progress/kendo-svg-icons';
+import { chevronDownIcon, chevronRightIcon } from '@progress/kendo-svg-icons';
 import employees from './data';
 
 const DATA_ITEM_KEY = 'id';
@@ -43,7 +43,7 @@ const nameCell = (props) => {
     if (hasChildren) {
         icons.push(
             <SvgIcon
-                icon={props.expanded ? caretAltDownIcon : caretAltRightIcon}
+                icon={props.expanded ? chevronDownIcon : chevronRightIcon}
                 key="expand-collapse"
                 onClick={onClick}
                 style={{ cursor: 'pointer' }}

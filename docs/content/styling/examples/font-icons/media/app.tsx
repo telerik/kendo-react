@@ -1,50 +1,50 @@
 import * as React from 'react';
 
 const App = () => {
-	return (
-		<>
-			<link rel="stylesheet" href="https://unpkg.com/@progress/kendo-theme-default@latest/dist/all.css" />
-			<link rel="stylesheet" href="https://unpkg.com/@progress/kendo-font-icons/dist/index.css" />
-			<ul className="WebComponentsIcons">
-				<li>
-					<span className="k-icon k-font-icon k-i-play"></span> .k-i-play
-				</li>
-				<li>
-					<span className="k-icon k-font-icon k-i-pause"></span> .k-i-pause
-				</li>
-				<li>
-					<span className="k-icon k-font-icon k-i-stop"></span> .k-i-stop
-				</li>
-				<li>
-					<span className="k-icon k-font-icon k-i-rewind"></span> .k-i-rewind
-				</li>
-				<li>
-					<span className="k-icon k-font-icon k-i-forward"></span> .k-i-forward
-				</li>
-				<li>
-					<span className="k-icon k-font-icon k-i-volume-down"></span> .k-i-volume-down
-				</li>
-				<li>
-					<span className="k-icon k-font-icon k-i-volume-up"></span> .k-i-volume-up
-				</li>
-				<li>
-					<span className="k-icon k-font-icon k-i-volume-off"></span> .k-i-volume-off
-				</li>
-				<li>
-					<span className="k-icon k-font-icon k-i-hd"></span> .k-i-hd
-				</li>
-				<li>
-					<span className="k-icon k-font-icon k-i-subtitles"></span> .k-i-subtitles
-				</li>
-				<li>
-					<span className="k-icon k-font-icon k-i-playlist"></span> .k-i-playlist
-				</li>
-				<li>
-					<span className="k-icon k-font-icon k-i-audio"></span> .k-i-audio
-				</li>
-			</ul>
-			<style>
-				{`
+    return (
+        <>
+            <link rel="stylesheet" href="https://unpkg.com/@progress/kendo-theme-default@latest/dist/all.css" />
+            <link rel="stylesheet" href="https://unpkg.com/@progress/kendo-font-icons@5/dist/index.css" />
+            <ul className="WebComponentsIcons">
+                <li>
+                    <span className="k-icon k-font-icon k-i-play"></span> .k-i-play
+                </li>
+                <li>
+                    <span className="k-icon k-font-icon k-i-pause"></span> .k-i-pause
+                </li>
+                <li>
+                    <span className="k-icon k-font-icon k-i-stop"></span> .k-i-stop
+                </li>
+                <li>
+                    <span className="k-icon k-font-icon k-i-rewind"></span> .k-i-rewind
+                </li>
+                <li>
+                    <span className="k-icon k-font-icon k-i-forward"></span> .k-i-forward
+                </li>
+                <li>
+                    <span className="k-icon k-font-icon k-i-volume-down"></span> .k-i-volume-down
+                </li>
+                <li>
+                    <span className="k-icon k-font-icon k-i-volume-up"></span> .k-i-volume-up
+                </li>
+                <li>
+                    <span className="k-icon k-font-icon k-i-volume-off"></span> .k-i-volume-off
+                </li>
+                <li>
+                    <span className="k-icon k-font-icon k-i-hd"></span> .k-i-hd
+                </li>
+                <li>
+                    <span className="k-icon k-font-icon k-i-subtitles"></span> .k-i-subtitles
+                </li>
+                <li>
+                    <span className="k-icon k-font-icon k-i-playlist"></span> .k-i-playlist
+                </li>
+                <li>
+                    <span className="k-icon k-font-icon k-i-audio"></span> .k-i-audio
+                </li>
+            </ul>
+            <style>
+                {`
         .WebComponentsIcons {
             list-style: none;
             margin: 0;
@@ -114,9 +114,9 @@ const App = () => {
         .ref-icon {
             width: 60px;
         }`}
-			</style>
-		</>
-	);
+            </style>
+        </>
+    );
 };
 
 export default App;

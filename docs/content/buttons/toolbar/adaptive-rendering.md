@@ -5,6 +5,7 @@ components: ["toolbar"]
 slug: adaptive_rendering_toolbar
 position: 4
 tag: new
+release_tag: Q2 2026
 ---
 
 # Adaptive Rendering

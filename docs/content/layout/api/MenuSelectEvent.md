@@ -174,7 +174,7 @@ A React Synthetic Event.
 <code>
 
 
-[Menu]({% slug api_layout_menu %})
+[MenuHandle]({% slug api_layout_menuhandle %})
 
 
 </code>

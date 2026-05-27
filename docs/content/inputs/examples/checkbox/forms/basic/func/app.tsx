@@ -49,7 +49,7 @@ const App = () => {
                     initialValues={{ email: '', checkbox: false }}
                     render={(formRenderProps: FormRenderProps) => (
                         <FormElement>
-                            <FormFieldSet legend="Subscribe to our Newsletter:">
+                            <FormFieldSet legend="Subscribe to our Newsletter:" style={{ marginBottom: '2em' }}>
                                 <FieldWrapper>
                                     <div className="k-form-field-wrap">
                                         <Field

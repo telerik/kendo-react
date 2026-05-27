@@ -7,28 +7,7 @@ slug: api_dropdowns_autocomplete
 ---
 
 # AutoComplete
-Represents the [KendoReact AutoComplete component](https://www.telerik.com/kendo-react-ui/components/dropdowns/autocomplete).
-
-Accepts properties of type [AutoCompleteProps](https://www.telerik.com/kendo-react-ui/components/dropdowns/api/autocompleteprops).
-Obtaining the `ref` returns an object of type [AutoCompleteHandle](https://www.telerik.com/kendo-react-ui/components/dropdowns/api/autocompletehandle).
-
 A [Functional Component](https://react.dev/reference/react/Component).
-
-```jsx
-const App = () => {
-   const autocomplete = React.useRef(null);
-   return (
-      <div>
-          <AutoComplete
-              data={[ "Albania", "Andorra", "Austria", "Belarus" ]}
-              ref={autocomplete}
-          />
-          <Button onClick={() => alert(autocomplete.current.value)}>alert value</Button>
-      </div>
-   );
-}
-```
-
 
 
 <table class="api-table api-table-properties">

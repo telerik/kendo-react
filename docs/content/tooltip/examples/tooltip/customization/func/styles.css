@@ -1,0 +1,19 @@
+.tooltip-host-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.tooltip-host-actions,
+.tooltip-outside-action {
+    border: 1px dashed var(--kendo-color-border);
+    border-radius: 6px;
+    padding: 16px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.tooltip-host-actions {
+    gap: 12px;
+    background: var(--kendo-color-warning-subtle);
+}

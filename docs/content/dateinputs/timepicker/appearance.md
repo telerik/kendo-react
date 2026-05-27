@@ -4,7 +4,6 @@ description: 'Add alternative styling options to the KendoReact timepicker in Re
 components: ['timepicker']
 slug: appearance_timepicker
 position: 6
-tag: updated
 ---
 
 # Appearance

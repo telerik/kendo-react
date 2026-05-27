@@ -7,7 +7,7 @@ slug: api_layout_menuitemlink
 ---
 
 # MenuItemLink
-
+A [Functional Component](https://react.dev/reference/react/Component).
 
 
 <table class="api-table api-table-properties">
@@ -34,7 +34,7 @@ slug: api_layout_menuitemlink
 <code>
 
 
-Readonly&lt;[MenuItemLinkProps]({% slug api_layout_menuitemlinkprops %})&gt;
+[MenuItemLinkProps]({% slug api_layout_menuitemlinkprops %})
 
 
 </code>

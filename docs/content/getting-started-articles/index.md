@@ -6,6 +6,7 @@ slug: getting_started
 position: 10
 category: getting-started
 tag: updated
+release_tag: Q2 2026
 ---
 
 # Getting Started with KendoReact
@@ -46,13 +47,13 @@ The [Kendo CLI](https://www.npmjs.com/package/@progress/kendo-cli) generates rea
 1.  Generate a new project by running the [preferred command](slug:kendo_cli_options#generate-a-kendoreact-project) in the terminal:
 
     ```sh Vite
-    npx kendo react create vite MyKendoApp
+    npx kendo create react vite MyKendoApp
     ```
     ```sh Next.js
-    npx kendo react create nextjs MyKendoApp
+    npx kendo create react nextjs MyKendoApp
     ```
     ```sh Astro
-    npx kendo react create astro MyKendoApp
+    npx kendo create react astro MyKendoApp
     ```
 
 1.  Navigate to the project and start the dev server:
@@ -86,7 +87,7 @@ Use the [Kendo UI Productivity Tools extension for VS Code](slug:vscodewizard_in
     - **Product tier** - KendoReact Free (50+ components) or KendoReact Premium (120+ components)
     - **Framework** - Vite, Next.js, or Astro
     - **Programming language** - JavaScript or TypeScript
-    - **Theme** - Default, Bootstrap, Material, or Fluent
+    - **Theme** - Default, Bootstrap, Material, Fluent, or Meridian
     - **Styling** - CSS or Sass
 
 1. Click **Create Project**, then install dependencies and run:

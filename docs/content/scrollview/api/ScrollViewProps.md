@@ -462,7 +462,7 @@ Toggles the built-in pager ([see example](https://www.telerik.com/kendo-react-ui
 <code>
 
 
-"dark" | "light" | "none"
+"none" | "dark" | "light"
 
 
 </code>
@@ -529,6 +529,42 @@ Sets additional CSS styles to the ScrollView.
 <ScrollView style={{ width: '100%' }} />
 ```
 
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
+#### webMcp?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+boolean | WebMcpProps
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Enables Web MCP tool registration for this component.
+Requires a parent `WebMcpProvider` from `@progress/kendo-react-webmcp`.
 
 
 </td>

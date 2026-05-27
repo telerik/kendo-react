@@ -27,8 +27,12 @@ const App = () => {
   const gridRef = useRef<GridHandle>(null);
 
   const handleAIRequest = async (prompt: string) => {
-    const response = await axios.post('/api/ai/grid', { prompt, columns: gridState.columnsState });
-    const result = handleAIResponse(response, gridState, gridRef.current);
+    const data = await fetch('/api/ai/grid', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ prompt, columns: gridState.columnsState })
+    }).then((res) => res.json());
+    const result = handleAIResponse({ data }, gridState, gridRef.current);
 
     // Update state with AI changes
     setGridState(result.state);
@@ -63,11 +67,11 @@ const App = () => {
 <code>
 
 
-AxiosResponse&lt;any&gt;
+[GridAIResponse]({% slug api_grid_gridairesponse %})&lt;any&gt;
 
 
 </code>
-The axios response from the AI service containing commands
+The response from the AI service containing commands
 
 ##### currentState
 <code>

@@ -6,7 +6,6 @@ slug: vscodewizard_installation
 position: 2
 category: setup
 level: 1
-tag: updated
 ---
 
 # Using the Create New Project Wizard for VS Code

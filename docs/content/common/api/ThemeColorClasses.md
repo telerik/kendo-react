@@ -24,41 +24,6 @@ Theme color options for the wrapper
 <td class="table-cell-name">
 
 
-#### dark?
-
-
-</td>
-<td type class="table-cell-type">
-
-
-<code>
-
-
-string
-
-
-</code>
-
-
-</td>
-<td class="table-cell-default">
-
-
-
-
-</td>
-<td class="table-cell-comment">
-
-
-Text color for dark theme
-
-
-</td>
-</tr>
-<tr>
-<td class="table-cell-name">
-
-
 #### error?
 
 
@@ -164,7 +129,7 @@ The text color should inherit from its parent
 <td class="table-cell-name">
 
 
-#### light?
+#### inverse?
 
 
 </td>
@@ -190,7 +155,7 @@ string
 <td class="table-cell-comment">
 
 
-Text color for light theme
+Text color for inverse theme
 
 
 </td>

@@ -2,8 +2,7 @@ import React from 'react';
 import { SpeechToTextButton } from '@progress/kendo-react-buttons';
 import './styles.css';
 
-const themeColors = ['base', 'primary', 'secondary', 'tertiary', 'info', 'success', 'warning', 'error'];
-
+const themeColors = ['base', 'primary', 'secondary', 'tertiary', 'info', 'success', 'warning', 'error', 'inverse'];
 const App = () => {
     const onStart = () => {
         console.log('Speech recognition started');

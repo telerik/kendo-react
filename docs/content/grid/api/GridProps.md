@@ -4343,6 +4343,58 @@ Defines the total number of data items in all pages. Required for paging functio
 
 </td>
 </tr>
+<tr>
+<td class="table-cell-name">
+
+
+#### webMcp?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+[GridWebMcpProps]({% slug api_grid_gridwebmcpprops %})
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Enables Web MCP tools for browser-native AI agent interaction (Chrome 146+).
+
+When enabled, the Grid registers tools that AI agents can discover and invoke.
+Data reading tools (`get_data`, `get_state`) are always registered.
+Additional tools are registered based on Grid props:
+- `sortable` → `sort` and `clear_sort` tools.
+
+Pass `true` for defaults or an object for fine-grained control.
+AI agents are multilingual — `dataName` accepts any language.
+
+```tsx
+// Boolean: generic "data" label
+<Grid webMcp sortable />
+
+// Config object: explicit name
+<Grid webMcp={{ dataName: 'employees' }} sortable />
+```
+
+
+
+</td>
+</tr>
 </tbody>
 </table>
 

@@ -51,14 +51,6 @@ const App = () => {
                     <DropDownButtonItem text="Item 1" />
                     <DropDownButtonItem text="Item 2" />
                 </DropDownButton>
-                <DropDownButton themeColor="dark" disabled={isDisabled} text="Dark">
-                    <DropDownButtonItem text="Item 1" />
-                    <DropDownButtonItem text="Item 2" />
-                </DropDownButton>
-                <DropDownButton themeColor="light" disabled={isDisabled} text="Light">
-                    <DropDownButtonItem text="Item 1" />
-                    <DropDownButtonItem text="Item 2" />
-                </DropDownButton>
                 <DropDownButton themeColor="inverse" disabled={isDisabled} text="Inverse">
                     <DropDownButtonItem text="Item 1" />
                     <DropDownButtonItem text="Item 2" />

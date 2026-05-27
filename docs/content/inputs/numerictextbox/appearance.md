@@ -64,7 +64,7 @@ The [`rounded`]({% slug api_inputs_numerictextboxprops %}#toc-rounded) option su
 -   `full`
 -   `none`
 
-{% meta height:300 %}
+{% meta height:420 %}
 {% embed_file numerictextbox/appearance/borderradius/app.tsx preview %}
 {% embed_file numerictextbox/appearance/borderradius/main.tsx %}
 {% endmeta %}

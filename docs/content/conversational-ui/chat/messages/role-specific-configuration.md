@@ -4,7 +4,6 @@ description: 'Configure different behaviors and appearances for author and recei
 components: ["chat"]
 slug: messages_role_specific_configuration_chat
 position: 30
-tag: new
 ---
 
 # Role-Specific Message Configuration

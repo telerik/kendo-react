@@ -6,25 +6,20 @@ import {
     BottomNavigationThemeColor
 } from '@progress/kendo-react-layout';
 import { RadioGroup } from '@progress/kendo-react-inputs';
-import { envelopIcon, heartIcon, plusIcon, trashIcon } from '@progress/kendo-svg-icons';
+import { envelopeIcon, heartIcon, plusIcon, trashIcon } from '@progress/kendo-svg-icons';
 
 const items = [
-    { svgIcon: envelopIcon, text: 'Inbox', selected: true },
+    { svgIcon: envelopeIcon, text: 'Inbox', selected: true },
     { svgIcon: plusIcon, text: 'Contacts' },
     { svgIcon: heartIcon, text: 'Favorites' },
     { svgIcon: trashIcon, text: 'Deleted' }
 ];
 
 const themeColorOptions = [
+    { label: 'Base', value: 'base' },
     { label: 'Primary', value: 'primary' },
     { label: 'Secondary', value: 'secondary' },
     { label: 'Tertiary', value: 'tertiary' },
-    { label: 'Info', value: 'info' },
-    { label: 'Success', value: 'success' },
-    { label: 'Warning', value: 'warning' },
-    { label: 'Error', value: 'error' },
-    { label: 'Dark', value: 'dark' },
-    { label: 'Light', value: 'light' },
     { label: 'Inverse', value: 'inverse' }
 ];
 
