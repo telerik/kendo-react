@@ -51,7 +51,7 @@ const NameCell = (props: GridCellProps) => {
   const navigationAttributes = useTableKeyboardNavigation(props.id);
   const name = getName(props.dataItem.path);
   const { svgIcon } = props.dataItem.icon;
-console.log(props)
+
   return (
     <td
       className={'k-table-td'}

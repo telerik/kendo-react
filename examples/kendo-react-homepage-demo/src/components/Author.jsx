@@ -1,7 +1,6 @@
 import React from 'react';
 
 export const Author = (props) => {
-    console.log(props)
     return (
         <td className={props.tdProps.className}>
             <p className="author-container">
