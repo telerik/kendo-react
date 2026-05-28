@@ -16,7 +16,7 @@ do
   npm run build
   mkdir -p ../../live/build/${PROJECT}
 
-if [ "$PROJECT" = "kendo-react-e-commerce-astro-app" ] || [ "$PROJECT" = "kendo-react-project-tracker-app" ] || [ "$PROJECT" = "kendo-react-tailwind" ] || [ "$PROJECT" = "kendo-react-personal-finance" ] || [ "$PROJECT" = "kendo-unstyled-tailwind-v4" ] || [ "$PROJECT" = "react-health-app" ] || [ "$PROJECT" = "ai-usage-monitoring-dashboard" ] || [ "$PROJECT" = "kendo-react-finance-portfolio" ] || [ "$PROJECT" = "react-admin-dashboard" ]; then
+if [ "$PROJECT" = "kendo-react-e-commerce-astro-app" ] || [ "$PROJECT" = "kendo-react-project-tracker-app" ] || [ "$PROJECT" = "kendo-react-tailwind" ] || [ "$PROJECT" = "kendo-react-personal-finance" ] || [ "$PROJECT" = "kendo-unstyled-tailwind-v4" ] || [ "$PROJECT" = "react-health-app" ] || [ "$PROJECT" = "ai-usage-monitoring-dashboard" ] || [ "$PROJECT" = "kendo-react-finance-portfolio" ] || [ "$PROJECT" = "kendo-react-homepage-demo" ]; then
   mv -v dist/* "../../live/build/${PROJECT}"
 else
   mv -v build/* "../../live/build/${PROJECT}"
