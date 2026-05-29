@@ -52,6 +52,7 @@ All tool names use the pattern `{dataName}_{component}_{action}` where `{dataNam
 | Tool     | Default Name                 | Condition |
 | -------- | ---------------------------- | --------- |
 | `open`   | `{dataName}_combobox_open`   | Always    |
+| `type`   | `{dataName}_combobox_type`   | Always    |
 | `select` | `{dataName}_combobox_select` | Always    |
 | `clear`  | `{dataName}_combobox_clear`  | Always    |
 | `close`  | `{dataName}_combobox_close`  | Always    |
@@ -104,16 +105,19 @@ All tool names use the pattern `{dataName}_{component}_{action}` where `{dataNam
 | Tool     | Default Name                     | Condition |
 | -------- | -------------------------------- | --------- |
 | `open`   | `{dataName}_dropdowntree_open`   | Always    |
+| `expand` | `{dataName}_dropdowntree_expand` | Always    |
 | `select` | `{dataName}_dropdowntree_select` | Always    |
 | `clear`  | `{dataName}_dropdowntree_clear`  | Always    |
 | `close`  | `{dataName}_dropdowntree_close`  | Always    |
 
 ## Editor
 
-| Tool         | Default Name                    | Condition           |
-| ------------ | ------------------------------- | ------------------- |
-| `getContent` | `{dataName}_editor_get_content` | Always              |
-| `setContent` | `{dataName}_editor_set_content` | `readOnly !== true` |
+| Tool           | Default Name                      | Condition           |
+| -------------- | --------------------------------- | ------------------- |
+| `getContent`   | `{dataName}_editor_get_content`   | Disabled by default. Enable via `webMcp.tools` callback. |
+| `setContent`   | `{dataName}_editor_set_content`   | `readOnly !== true` |
+| `insertHtml`   | `{dataName}_editor_insert_html`   | `readOnly !== true` |
+| `clearContent` | `{dataName}_editor_clear_content` | `readOnly !== true` |
 
 ## Gantt
 
@@ -126,8 +130,10 @@ All tool names use the pattern `{dataName}_{component}_{action}` where `{dataNam
 | `reorderColumn` | `{dataName}_gantt_reorder_column` | `reorderable={true}`                                                                |
 | `resizeColumn`  | `{dataName}_gantt_resize_column`  | `resizable={true}`                                                                  |
 | `changeView`    | `{dataName}_gantt_set_view`       | More than one view defined                                                          |
-| `createTask`    | `{dataName}_gantt_add_task`       | `onAdd` callback present                                                            |
+| `addTask`       | `{dataName}_gantt_add_task`       | `onAdd` callback present                                                            |
+| `updateTask`    | `{dataName}_gantt_update_task`    | `onDataStateChange` callback present                                                |
 | `deleteTask`    | `{dataName}_gantt_delete_task`    | `onRemove` callback present                                                         |
+| `select`        | `{dataName}_gantt_select`         | `selectable` prop enabled                                                           |
 | `showColumn`    | `{dataName}_gantt_show_column`    | Always                                                                              |
 | `hideColumn`    | `{dataName}_gantt_hide_column`    | Always                                                                              |
 | `expand`        | `{dataName}_gantt_expand`         | Always                                                                              |
@@ -138,30 +144,43 @@ All tool names use the pattern `{dataName}_{component}_{action}` where `{dataNam
 
 ## Grid
 
-| Tool             | Default Name                      | Condition                                                                           |
-| ---------------- | --------------------------------- | ----------------------------------------------------------------------------------- |
-| `filter`         | `{dataName}_grid_filter`          | `filterable={true}`                                                                 |
-| `clearFilters`   | `{dataName}_grid_clear_filters`   | `filterable={true}`                                                                 |
-| `sort`           | `{dataName}_grid_sort`            | `sortable={true}`                                                                   |
-| `clearSort`      | `{dataName}_grid_clear_sort`      | `sortable={true}`                                                                   |
-| `group`          | `{dataName}_grid_group`           | `groupable={true}`                                                                  |
-| `clearGroup`     | `{dataName}_grid_clear_group`     | `groupable={true}`                                                                  |
-| `page`           | `{dataName}_grid_page`            | `pageable={true}`                                                                   |
-| `setPageSize`    | `{dataName}_grid_set_page_size`   | `pageable={true}` and `pageSizes` has values                                        |
-| `select`         | `{dataName}_grid_select`          | `selectable` prop enabled                                                           |
-| `clearSelect`    | `{dataName}_grid_clear_select`    | `selectable` prop enabled                                                           |
-| `reorderColumn`  | `{dataName}_grid_reorder_column`  | `reorderable={true}`                                                                |
-| `resizeColumn`   | `{dataName}_grid_resize_column`   | `resizable={true}`                                                                  |
-| `exportExcel`    | `{dataName}_grid_export_excel`    | `<ExcelExport>` or export toolbar button present                                    |
-| `exportPdf`      | `{dataName}_grid_export_pdf`      | `<GridPDFExport>` present                                                           |
-| `exportCsv`      | `{dataName}_grid_export_csv`      | CSV export configured                                                               |
-| `highlight`      | `{dataName}_grid_highlight`       | Always                                                                              |
-| `clearHighlight` | `{dataName}_grid_clear_highlight` | Always                                                                              |
-| `showColumn`     | `{dataName}_grid_show_column`     | Always                                                                              |
-| `hideColumn`     | `{dataName}_grid_hide_column`     | Always                                                                              |
-| `lockColumn`     | `{dataName}_grid_lock_column`     | Always                                                                              |
-| `unlockColumn`   | `{dataName}_grid_unlock_column`   | Always                                                                              |
-| `getData`        | `{dataName}_grid_get_data`        | Disabled by default. Enable explicitly via `tools: { getData: { enabled: true } }`. |
+| Tool               | Default Name                          | Condition                                                                           |
+| ------------------ | ------------------------------------- | ----------------------------------------------------------------------------------- |
+| `filter`           | `{dataName}_grid_filter`              | `filterable={true}`                                                                 |
+| `clearFilters`     | `{dataName}_grid_clear_filters`       | `filterable={true}`                                                                 |
+| `sort`             | `{dataName}_grid_sort`                | `sortable={true}`                                                                   |
+| `clearSort`        | `{dataName}_grid_clear_sort`          | `sortable={true}`                                                                   |
+| `group`            | `{dataName}_grid_group`               | `groupable={true}`                                                                  |
+| `clearGroup`       | `{dataName}_grid_clear_group`         | `groupable={true}`                                                                  |
+| `page`             | `{dataName}_grid_page`                | `pageable={true}`                                                                   |
+| `setPageSize`      | `{dataName}_grid_set_page_size`       | `pageable={true}` and `pageSizes` has values                                        |
+| `highlight`        | `{dataName}_grid_highlight`           | `onHighlightChange` callback present                                                |
+| `clearHighlight`   | `{dataName}_grid_clear_highlight`     | `onHighlightChange` callback present                                                |
+| `select`           | `{dataName}_grid_select`              | `selectable` prop enabled                                                           |
+| `clearSelect`      | `{dataName}_grid_clear_select`        | `selectable` prop enabled                                                           |
+| `selectAll`        | `{dataName}_grid_select_all`          | `selectable` prop enabled with `onHeaderSelectionChange` or `dataItemKey`            |
+| `detailExpand`     | `{dataName}_grid_detail_expand`       | `detail` and `onDetailExpandChange` present                                         |
+| `detailCollapse`   | `{dataName}_grid_detail_collapse`     | `detail` and `onDetailExpandChange` present                                         |
+| `detailExpandAll`  | `{dataName}_grid_detail_expand_all`   | `detail` and `onDetailExpandChange` present                                         |
+| `detailCollapseAll`| `{dataName}_grid_detail_collapse_all` | `detail` and `onDetailExpandChange` present                                         |
+| `groupExpand`      | `{dataName}_grid_group_expand`        | `groupable={true}` and `onGroupExpandChange` present                                |
+| `groupCollapse`    | `{dataName}_grid_group_collapse`      | `groupable={true}` and `onGroupExpandChange` present                                |
+| `groupExpandAll`   | `{dataName}_grid_group_expand_all`    | `groupable={true}` and `onGroupExpandChange` present                                |
+| `groupCollapseAll` | `{dataName}_grid_group_collapse_all`  | `groupable={true}` and `onGroupExpandChange` present                                |
+| `setAggregates`    | `{dataName}_grid_set_aggregates`      | `groupable={true}` and `onGroupExpandChange` present                                |
+| `exportPdf`        | `{dataName}_grid_export_pdf`          | `pdf` prop set                                                                      |
+| `exportCsv`        | `{dataName}_grid_export_csv`          | `csv` prop set                                                                      |
+| `exportExcel`      | `{dataName}_grid_export_excel`        | Custom tool (C). Use `ExcelExport` wrapper with `webMcp.tools` callback.            |
+| `reorderColumn`    | `{dataName}_grid_reorder_column`      | `reorderable={true}`                                                                |
+| `resizeColumn`     | `{dataName}_grid_resize_column`       | `resizable={true}`                                                                  |
+| `showColumn`       | `{dataName}_grid_show_column`         | `onColumnsStateChange` present                                                      |
+| `hideColumn`       | `{dataName}_grid_hide_column`         | `onColumnsStateChange` present                                                      |
+| `lockColumn`       | `{dataName}_grid_lock_column`         | `onColumnsStateChange` present                                                      |
+| `unlockColumn`     | `{dataName}_grid_unlock_column`       | `onColumnsStateChange` present                                                      |
+| `add`              | `{dataName}_grid_add`                 | `onItemChange` or `editable` prop set                                               |
+| `update`           | `{dataName}_grid_update`              | `onItemChange` or `editable` prop set                                               |
+| `delete`           | `{dataName}_grid_delete`              | `onItemChange` or `editable` prop set                                               |
+| `getData`          | `{dataName}_grid_get_data`            | Disabled by default. Enable via `webMcp.tools` callback.                            |
 
 ## ListBox
 
@@ -249,12 +268,13 @@ All tool names use the pattern `{dataName}_{component}_{action}` where `{dataNam
 
 ## Scheduler
 
-| Tool         | Default Name                        | Condition                   |
-| ------------ | ----------------------------------- | --------------------------- |
-| `create`     | `{dataName}_scheduler_create_event` | `onAdd` callback present    |
-| `delete`     | `{dataName}_scheduler_delete_event` | `onRemove` callback present |
-| `changeView` | `{dataName}_scheduler_set_view`     | More than one view defined  |
-| `navigate`   | `{dataName}_scheduler_navigate`     | Always                      |
+| Tool          | Default Name                        | Condition                          |
+| ------------- | ----------------------------------- | ---------------------------------- |
+| `createEvent` | `{dataName}_scheduler_create_event` | `onAdd` callback present           |
+| `updateEvent` | `{dataName}_scheduler_update_event` | `onDataStateChange` present        |
+| `deleteEvent` | `{dataName}_scheduler_delete_event` | `onRemove` callback present        |
+| `setView`     | `{dataName}_scheduler_set_view`     | More than one view defined         |
+| `navigate`    | `{dataName}_scheduler_navigate`     | Always                             |
 
 ## ScrollView
 
@@ -272,13 +292,20 @@ All tool names use the pattern `{dataName}_{component}_{action}` where `{dataNam
 
 ## Spreadsheet
 
-| Tool            | Default Name                            | Condition |
-| --------------- | --------------------------------------- | --------- |
-| `setCell`       | `{dataName}_spreadsheet_set_cell`       | Always    |
-| `navigateSheet` | `{dataName}_spreadsheet_navigate_sheet` | Always    |
-| `addSheet`      | `{dataName}_spreadsheet_add_sheet`      | Always    |
-| `renameSheet`   | `{dataName}_spreadsheet_rename_sheet`   | Always    |
-| `export`        | `{dataName}_spreadsheet_export`         | Always    |
+| Tool             | Default Name                              | Condition |
+| ---------------- | ----------------------------------------- | --------- |
+| `setCell`        | `{dataName}_spreadsheet_set_cell`         | Always    |
+| `setCells`       | `{dataName}_spreadsheet_set_cells`        | Always    |
+| `getCell`        | `{dataName}_spreadsheet_get_cell`         | Disabled by default. Enable via `webMcp.tools` callback. |
+| `getData`        | `{dataName}_spreadsheet_get_data`         | Disabled by default. Enable via `webMcp.tools` callback. |
+| `setData`        | `{dataName}_spreadsheet_set_data`         | Always    |
+| `getSheets`      | `{dataName}_spreadsheet_get_sheets`       | Disabled by default. Enable via `webMcp.tools` callback. |
+| `switchSheet`    | `{dataName}_spreadsheet_switch_sheet`     | Always    |
+| `navigateSheet`  | `{dataName}_spreadsheet_navigate_sheet`   | Always    |
+| `addSheet`       | `{dataName}_spreadsheet_add_sheet`        | Always    |
+| `renameSheet`    | `{dataName}_spreadsheet_rename_sheet`     | Always    |
+| `export`         | `{dataName}_spreadsheet_export`           | Always    |
+| `executeCommand` | `{dataName}_spreadsheet_execute_command`  | Always    |
 
 ## Stepper
 
@@ -351,6 +378,8 @@ All tool names use the pattern `{dataName}_{component}_{action}` where `{dataNam
 | `collapse`      | `{dataName}_treelist_collapse`       | Always                                                                              |
 | `expandAll`     | `{dataName}_treelist_expand_all`     | Always                                                                              |
 | `collapseAll`   | `{dataName}_treelist_collapse_all`   | Always                                                                              |
+| `exportPdf`     | `{dataName}_treelist_export_pdf`     | Custom tool (C). Use PDF export wrapper with `webMcp.tools` callback.               |
+| `exportExcel`   | `{dataName}_treelist_export_excel`   | Custom tool (C). Use `ExcelExport` wrapper with `webMcp.tools` callback.            |
 | `getData`       | `{dataName}_treelist_get_data`       | Disabled by default. Enable explicitly via `tools: { getData: { enabled: true } }`. |
 
 ## TreeView
@@ -365,13 +394,75 @@ All tool names use the pattern `{dataName}_{component}_{action}` where `{dataNam
 
 ## Window
 
-| Tool       | Default Name                 | Condition |
-| ---------- | ---------------------------- | --------- |
-| `open`     | `{dataName}_window_open`     | Always    |
-| `close`    | `{dataName}_window_close`    | Always    |
-| `minimize` | `{dataName}_window_minimize` | Always    |
-| `maximize` | `{dataName}_window_maximize` | Always    |
-| `restore`  | `{dataName}_window_restore`  | Always    |
+| Tool        | Default Name                   | Condition                  |
+| ----------- | ------------------------------ | -------------------------- |
+| `minimize`  | `{dataName}_window_minimize`   | `onStageChange` provided   |
+| `maximize`  | `{dataName}_window_maximize`   | `onStageChange` provided   |
+| `restore`   | `{dataName}_window_restore`    | `onStageChange` provided   |
+
+## AIPrompt
+
+| Tool             | Default Name                          | Condition |
+| ---------------- | ------------------------------------- | --------- |
+| `sendPrompt`     | `{dataName}_aiprompt_send_prompt`     | Always    |
+| `setSuggestions` | `{dataName}_aiprompt_set_suggestions` | Always    |
+
+## Button
+
+| Tool    | Default Name               | Condition |
+| ------- | -------------------------- | --------- |
+| `click` | `{dataName}_button_click`  | Always    |
+
+## Chat
+
+| Tool          | Default Name                   | Condition |
+| ------------- | ------------------------------ | --------- |
+| `sendMessage` | `{dataName}_chat_send_message` | Always    |
+
+## Form
+
+| Tool       | Default Name                | Condition |
+| ---------- | --------------------------- | --------- |
+| `fill`     | `{dataName}_form_fill`      | Always    |
+| `validate` | `{dataName}_form_validate`  | Always    |
+| `submit`   | `{dataName}_form_submit`    | Always    |
+| `reset`    | `{dataName}_form_reset`     | Always    |
+
+## Notification
+
+| Tool      | Default Name                        | Condition |
+| --------- | ----------------------------------- | --------- |
+| `show`    | `{dataName}_notification_show`      | Always    |
+| `dismiss` | `{dataName}_notification_dismiss`   | Always    |
+
+## PivotGrid
+
+| Tool          | Default Name                      | Condition |
+| ------------- | --------------------------------- | --------- |
+| `setRows`     | `{dataName}_pivot_set_rows`       | Always    |
+| `setColumns`  | `{dataName}_pivot_set_columns`    | Always    |
+| `setMeasures` | `{dataName}_pivot_set_measures`   | Always    |
+| `expand`      | `{dataName}_pivot_expand`         | Always    |
+| `collapse`    | `{dataName}_pivot_collapse`       | Always    |
+| `exportPdf`   | `{dataName}_pivot_export_pdf`     | Always    |
+
+## Signature
+
+| Tool    | Default Name                   | Condition |
+| ------- | ------------------------------ | --------- |
+| `clear` | `{dataName}_signature_clear`   | Always    |
+
+## Sortable
+
+| Tool      | Default Name                    | Condition |
+| --------- | ------------------------------- | --------- |
+| `reorder` | `{dataName}_sortable_reorder`   | Always    |
+
+## Upload
+
+| Tool    | Default Name               | Condition |
+| ------- | -------------------------- | --------- |
+| `clear` | `{dataName}_upload_clear`  | Always    |
 
 ## See Also
 

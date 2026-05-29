@@ -31,13 +31,13 @@ Follow these steps to set up the Agentic UI Generator and use it in your IDE (VS
 1. Open your terminal and install the Kendo CLI globally:
 
     ```sh
-    npm i -g @progress/kendo-cli
+    npm i -g @progress/kendo-cli@latest
     ```
 
 1. Configure the KendoReact MCP server for your IDE and set up your Telerik license in a single step with the Kendo CLI:
 
     ```sh
-    npx kendo react setup
+    npx kendo setup react
     ```
 
 1. Create a new empty folder for your project and open it in your IDE. Then, in the AI chat interface, invoke the **Getting Started Assistant**:

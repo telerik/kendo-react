@@ -129,6 +129,76 @@ Whether this tool should be registered (typically derived from component props).
 <td class="table-cell-name">
 
 
+#### execute?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+(args: Record&lt;string&gt;) => Promise&lt;{ content: { text: string; type: string; }[]; isError?: boolean; }&gt; | { content: { text: string; type: string; }[]; isError?: boolean; }
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Optional custom execute function. When provided, bypasses the adapter's built-in command router.
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
+#### inputSchema?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+Record&lt;string&gt;
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Optional JSON Schema for the tool's input parameters.
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### name
 
 

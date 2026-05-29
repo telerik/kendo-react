@@ -63,9 +63,6 @@ position: 1
         <a href="{% slug api_webmcp_comboboxcommands %}">ComboBoxCommands</a>
     </li>
     <li class="api-item">
-        <a href="{% slug api_webmcp_dashboardcommands %}">DashboardCommands</a>
-    </li>
-    <li class="api-item">
         <a href="{% slug api_webmcp_datepickercommands %}">DatePickerCommands</a>
     </li>
     <li class="api-item">

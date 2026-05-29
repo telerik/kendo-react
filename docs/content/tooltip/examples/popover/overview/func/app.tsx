@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Popover, PopoverActionsBar } from '@progress/kendo-react-tooltip';
 import { Button } from '@progress/kendo-react-buttons';
-import { Calendar, CalendarCellProps } from '@progress/kendo-react-dateinputs';
+import { Calendar, CalendarCell, CalendarCellProps } from '@progress/kendo-react-dateinputs';
 import { classNames } from '@progress/kendo-react-common';
 import { useInternationalization } from '@progress/kendo-react-intl';
 import { Events } from './events';
@@ -51,9 +51,9 @@ const CustomCell = (props: CalendarCellProps) => {
     });
 
     return (
-        <td onClick={handleClick} className={className} style={style} ref={tdRef}>
+        <CalendarCell {...props} onClick={handleClick} className={className} style={style} ref={tdRef}>
             <span className="k-link">{props.children}</span>
-        </td>
+        </CalendarCell>
     );
 };
 

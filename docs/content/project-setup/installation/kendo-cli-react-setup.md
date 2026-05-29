@@ -159,10 +159,10 @@ The Kendo CLI can scaffold KendoReact apps for Vite, Next.js, and Astro.
 <TabStripTab title="Vite">
 
 ```sh Theme example
-npx kendo react create vite MyKendoApp --theme=bootstrap
+npx kendo create react vite MyKendoApp --theme=bootstrap
 ```
 ```sh Styling example
-npx kendo react create vite MyKendoApp --styling=Sass
+npx kendo create react vite MyKendoApp --styling=Sass
 ```
 
 Vite options:
@@ -175,7 +175,7 @@ Vite options:
 Synopsis:
 
 ```sh
-kendo react create vite [name]
+kendo create react vite [name]
 ```
 
 </TabStripTab>
@@ -183,16 +183,16 @@ kendo react create vite [name]
 <TabStripTab title="Next.js">
 
 ```sh JavaScript with App Router
-npx kendo react create nextjs MyKendoApp --js --theme=bootstrap
+npx kendo create react nextjs MyKendoApp --js --theme=bootstrap
 ```
 ```sh JavaScript without App Router
-npx kendo react create nextjs MyKendoApp --js --no-app --theme=bootstrap
+npx kendo create react nextjs MyKendoApp --js --no-app --theme=bootstrap
 ```
 ```sh TypeScript with App Router
-npx kendo react create nextjs MyKendoApp --ts --theme=bootstrap
+npx kendo create react nextjs MyKendoApp --ts --theme=bootstrap
 ```
 ```sh TypeScript without App Router
-npx kendo react create nextjs MyKendoApp --ts --no-app --theme=bootstrap
+npx kendo create react nextjs MyKendoApp --ts --no-app --theme=bootstrap
 ```
 
 Next.js options:
@@ -204,7 +204,7 @@ Next.js options:
 Synopsis:
 
 ```sh
-kendo react create nextjs [name]
+kendo create react nextjs [name]
 ```
 
 </TabStripTab>
@@ -212,11 +212,11 @@ kendo react create nextjs [name]
 <TabStripTab title="Astro">
 
 ```sh Theme example
-npx kendo react create astro MyKendoApp --theme=bootstrap
+npx kendo create react astro MyKendoApp --theme=bootstrap
 ```
 
 ```sh Styling example
-npx kendo react create astro MyKendoApp --styling=Sass
+npx kendo create react astro MyKendoApp --styling=Sass
 ```
 
 Astro options:
@@ -228,7 +228,7 @@ Astro options:
 Synopsis:
 
 ```sh
-kendo react create astro [name]
+kendo create react astro [name]
 ```
 
 </TabStripTab>
@@ -257,6 +257,12 @@ npm i -g @progress/kendo-cli
 Run migration from your project root:
 
 ```sh
+kendo migrate
+```
+
+If you have not installed the CLI globally, use:
+
+```sh
 npx @progress/kendo-cli migrate
 ```
 
@@ -278,25 +284,25 @@ After migration, review added code comments and run your app/tests.
 ### Quick Migration Commands
 
 ```sh Guided migration
-npx @progress/kendo-cli migrate
+kendo migrate
 ```
 ```sh Specific package
-npx @progress/kendo-cli migrate @progress/kendo-react-grid
+kendo migrate @progress/kendo-react-grid
 ```
 ```sh Specific versions
-npx @progress/kendo-cli migrate @progress/kendo-react-grid --from 10 --to 11
+kendo migrate @progress/kendo-react-grid --from 10 --to 11
 ```
 ```sh Force mode (no prompts)
-npx @progress/kendo-cli migrate --force
+kendo migrate --force
 ```
 ```sh Install updates only (no codemods)
-npx @progress/kendo-cli migrate --no-codemods
+kendo migrate --no-codemods
 ```
 ```sh Codemods only (no install)
-npx @progress/kendo-cli migrate @progress/kendo-react-grid --no-install
+kendo migrate @progress/kendo-react-grid --no-install
 ```
 ```sh Ignore files/directories
-npx @progress/kendo-cli migrate @progress/kendo-react-grid --no-install --ignore-pattern="dist/**"
+kendo migrate @progress/kendo-react-grid --no-install --ignore-pattern="dist/**"
 ```
 
 ### Migration Arguments Reference

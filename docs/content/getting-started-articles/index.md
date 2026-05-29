@@ -35,13 +35,13 @@ The [Kendo CLI](https://www.npmjs.com/package/@progress/kendo-cli) generates rea
 1.  Install the CLI globally:
 
     ```sh
-    npm i -g @progress/kendo-cli
+    npm i -g @progress/kendo-cli@latest
     ```
 
 1.  Configure the MCP server for your IDE and set up your Telerik license:
 
     ```sh
-    npx kendo react setup
+    npx kendo setup react
     ```
 
 1.  Generate a new project by running the [preferred command](slug:kendo_cli_options#generate-a-kendoreact-project) in the terminal:
