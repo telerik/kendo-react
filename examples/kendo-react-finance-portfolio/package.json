@@ -34,7 +34,7 @@
     "@progress/kendo-react-treeview": "^15.0.0",
     "@progress/kendo-svg-icons": "^5.0.0",
     "@progress/kendo-theme-bootstrap": "^14.1.0",
-    "@progress/kendo-ui": "^2025.4.1111",
+    "@progress/kendo-ui": "^2026.2.520",
     "bootstrap": "5.2.1",
     "cldr-core": "^44.0.1",
     "cldr-dates-full": "^44.1.0",
