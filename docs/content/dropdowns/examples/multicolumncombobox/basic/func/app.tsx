@@ -24,6 +24,7 @@ const MultiColumnComboBoxField = (fieldRenderProps: FieldRenderProps) => {
             value={value ?? null}
             onChange={(e) => onChange(e)}
             style={{ width: '300px' }}
+            popupSettings={{ width: 700 }}
             placeholder="Please select ..."
         />
     );

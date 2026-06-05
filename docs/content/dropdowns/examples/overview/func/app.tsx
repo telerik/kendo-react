@@ -40,7 +40,13 @@ const App = () => {
             </div>
             <div className="col-xs-12 col-sm-7 example-col">
                 <p>MultiColumnComboBox</p>
-                <MultiColumnComboBox style={{ width: '300px' }} data={data} columns={columns} textField={'name'} />
+                <MultiColumnComboBox
+                    style={{ width: '300px' }}
+                    popupSettings={{ width: 700 }}
+                    data={data}
+                    columns={columns}
+                    textField={'name'}
+                />
             </div>
             <div className="col-xs-12 col-sm-7 example-col">
                 <p>DropDownList</p>

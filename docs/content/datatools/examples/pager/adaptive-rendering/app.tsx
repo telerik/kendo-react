@@ -7,7 +7,7 @@ interface PageInterface {
 }
 
 const App = () => {
-    const [page, setPage] = React.useState<PageInterface>({ skip: 0, take: 5 });
+    const [page, setPage] = React.useState<PageInterface>({ skip: 0, take: 10 });
 
     const handlePageChange = (event: PageChangeEvent) => {
         setPage({ skip: event.skip, take: event.take });
@@ -19,13 +19,13 @@ const App = () => {
             responsive={true}
             skip={page.skip}
             take={page.take}
-            total={200}
+            total={50}
             onPageChange={handlePageChange}
-            buttonCount={10}
+            buttonCount={5}
             info={true}
             previousNext={true}
             type="numeric"
-            pageSizes={[5, 10, 15, 20]}
+            pageSizes={[10, 20]}
         />
     );
 };

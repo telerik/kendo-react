@@ -1,7 +1,7 @@
 ---
 title: Kendo CLI Options
 page_title: Kendo CLI for React Setup - KendoReact
-description: 'Install and use the Kendo CLI for KendoReact projects: licensing, MCP configuration, project generation, and assisted migration.'
+description: 'Install and use the Kendo CLI for KendoReact projects: interactive wizard, licensing, MCP configuration, project generation, and assisted migration.'
 components: ['general']
 slug: kendo_cli_options
 position: 2
@@ -14,15 +14,97 @@ release_tag: Q2 2026
 
 # Kendo CLI Options for React
 
-This article covers all React-related setup tasks you can perform with the Kendo CLI: installation, license management, MCP server configuration, project generation, and assisted migration.
+This article covers all React-related setup tasks you can perform with the Kendo CLI: installation, the interactive wizard, license management, MCP server configuration, project generation, and assisted migration.
 
 ## Install the Kendo CLI
 
 Install the CLI globally:
 
 ```sh
-npm i -g @progress/kendo-cli
+npm i -g @progress/kendo-cli@latest
 ```
+
+## Interactive Wizard
+
+Run `kendo` with no arguments to open the interactive wizard — a guided, experience that walks you through every command with a visual, step-by-step flow.
+
+```sh
+kendo
+```
+
+The wizard greets you with a categorized command menu:
+
+| Group           | Commands                                                               |
+| --------------- | ---------------------------------------------------------------------- |
+| **Quick Start** | Create a new project, Scaffold components                              |
+| **Environment** | Set up your environment, Configure AI assistant (MCP), Manage license  |
+| **Manage**      | Migrate to the latest version, Build custom Kendo UI for jQuery bundle |
+| **Utilities**   | Print machine ID                                                       |
+
+### Guided Flows
+
+Each command in the wizard prompts you through its options interactively:
+
+-   **Create** — Select product, template, app name, theme, swatch, and styling
+-   **Scaffold** — Detect and confirm project directory, then choose a component
+-   **Setup** — Detects already-configured products and prompts only for the remaining ones
+-   **MCP** — Detects already-configured servers, then prompts for product and IDE
+-   **Migrate** — Choose scope, target version, mode (full / install-only / codemods-only), optional codemods, and AI mode
+-   **License** — Choose from activate, refresh, or info
+
+### Wizard Features
+
+-   Color-coded UI with selection indicators and completion confirmations
+-   Automatic detection of already-configured products (setup, MCP)
+-   Project directory detection for scaffold commands
+-   Progress spinner during command execution
+-   Success summary box after each completed command
+-   **"Run another command?"** loop — chain operations in a single session without relaunching the CLI
+
+### Example Session
+
+```
+$ kendo
+
+  ██████╗ ██████╗  ██████╗  ██████╗ ██████╗ ███████╗███████╗███████╗
+  ██╔══██╗██╔══██╗██╔═══██╗██╔════╝ ██╔══██╗██╔════╝██╔════╝██╔════╝
+  ██████╔╝██████╔╝██║   ██║██║  ███╗██████╔╝█████╗  ███████╗███████╗
+  ██╔═══╝ ██╔══██╗██║   ██║██║   ██║██╔══██╗██╔══╝  ╚════██║╚════██║
+  ██║     ██║  ██║╚██████╔╝╚██████╔╝██║  ██║███████╗███████║███████║
+  ╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
+
+  ? What would you like to do?
+  Quick Start
+  › Create a new project          kendo create
+    Scaffold components           kendo scaffold
+    ...
+
+  ? Which product?
+  › KendoReact
+    Kendo UI for Angular
+    ...
+
+  ╭───────────────────────────────────────────────────────────────╮
+  │  ✓ KendoReact app ready                                       │
+  │                                                               │
+  │  Next steps:                                                  │
+  │    cd MyApp                                                   │
+  │    npm install                                                │
+  │    npm run dev                                                │
+  │                                                               │
+  │  Theme       Default                                          │
+  │                                                               │
+  │  Docs  https://www.telerik.com/kendo-react-ui/components      │
+  ╰───────────────────────────────────────────────────────────────╯
+
+  ? What would you like to do next?
+  ❯ Back to main menu
+    Exit
+```
+
+
+
+> All wizard operations are also available as direct CLI commands for scripting and CI. See the sections below for the full syntax reference.
 
 ## License Setup for KendoReact
 
@@ -214,7 +296,6 @@ kendo create react nextjs [name]
 ```sh Theme example
 npx kendo create react astro MyKendoApp --theme=bootstrap
 ```
-
 ```sh Styling example
 npx kendo create react astro MyKendoApp --styling=Sass
 ```

@@ -30,7 +30,7 @@ Set up your first KendoReact project and start building in minutes. Use the **Ke
 
 ### Create a Project with the Kendo CLI
 
-The [Kendo CLI](https://www.npmjs.com/package/@progress/kendo-cli) generates ready-to-run Vite projects with JavaScript or TypeScript.
+The [Kendo CLI](https://www.npmjs.com/package/@progress/kendo-cli) offers both an [interactive wizard](slug:kendo_cli_options#interactive-wizard) and direct setup commands. If you're new to Kendoreact, the wizard provides the easiest way to get started.
 
 1.  Install the CLI globally:
 
@@ -38,38 +38,34 @@ The [Kendo CLI](https://www.npmjs.com/package/@progress/kendo-cli) generates rea
     npm i -g @progress/kendo-cli@latest
     ```
 
-1.  Configure the MCP server for your IDE and set up your Telerik license:
+1.  Launch the interactive wizard by running `kendo` without any arguments:
 
     ```sh
-    npx kendo setup react
+    kendo
     ```
 
-1.  Generate a new project by running the [preferred command](slug:kendo_cli_options#generate-a-kendoreact-project) in the terminal:
+1. In the **Quick Start** section, select **Create a new project**, then follow the prompts to configure your project.
 
-    ```sh Vite
-    npx kendo create react vite MyKendoApp
-    ```
-    ```sh Next.js
-    npx kendo create react nextjs MyKendoApp
-    ```
-    ```sh Astro
-    npx kendo create react astro MyKendoApp
-    ```
+When setup is complete, the wizard displays a summary similar to the following:
 
-1.  Navigate to the project and start the dev server:
-
-    ```sh
-    cd MyKendoApp && npm i
-    npm run dev
-    ```
-
-Now that you have created your first KendoReact project and set up the [KendoReact MCP server](slug:ai_tools_overview), you can use the **Agentic UI Generator** in your IDE to add and customize components with natural language.
-
-```prompt
-#kendo_ui_generator Create an area chart with time data using date/time axis and enabled zooming.
+```sh
+╭───────────────────────────────────────────────────────────────╮
+│  ✓ KendoReact app ready                                       │
+│                                                               │
+│  Next steps:                                                  │
+│    cd MyApp                                                   │
+│    npm install                                                │
+│    npm run dev                                                │
+│                                                               │
+│  Theme       Default                                          │
+│                                                               │
+│  Docs  https://www.telerik.com/kendo-react-ui/components      │
+╰───────────────────────────────────────────────────────────────╯
 ```
 
-For a full list of example prompts, see the [Agentic UI Generator Prompt Library](slug:agentic_ui_generator_prompt_library).
+Run the commands shown in the **Next steps** section to install dependencies and start the development server.
+
+> Prefer to run commands manually? See [Generate a KendoReact Project](slug:kendo_cli_options#generate-a-kendoreact-project) for all available options.
 
 </TabStripTab>
 <TabStripTab title="VS Code Extension">
