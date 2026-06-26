@@ -12,9 +12,9 @@
         "deploy": "gh-pages -d build"
     },
     "dependencies": {
-        "@progress/kendo-data-query": "^1.7.2",
-        "@progress/kendo-drawing": "^1.23.0",
-        "@progress/kendo-licensing": "^1.7.1",
+        "@progress/kendo-data-query": "^1.7.4",
+        "@progress/kendo-drawing": "^1.25.2",
+        "@progress/kendo-licensing": "^1.11.2",
         "@progress/kendo-react-animation": "^15.0.0",
         "@progress/kendo-react-buttons": "^15.0.0",
         "@progress/kendo-react-common": "^15.0.0",
@@ -30,7 +30,7 @@
         "@progress/kendo-react-listview": "^15.0.0",
         "@progress/kendo-react-popup": "^15.0.0",
         "@progress/kendo-react-tooltip": "^15.0.0",
-        "@progress/kendo-svg-icons": "^5.0.0",
+        "@progress/kendo-svg-icons": "^5.1.0",
         "@progress/kendo-theme-default": "^14.1.0",
         "@tailwindcss/vite": "^4.0.9",
         "react": "^19.0.3",
