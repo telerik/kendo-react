@@ -20,8 +20,8 @@
     "@progress/kendo-react-progressbars": "^15.0.0",
     "@progress/kendo-react-treeview": "^15.0.0",
     "@progress/kendo-react-upload": "^15.0.0",
-    "@progress/kendo-svg-icons": "^5.0.0",
-    "@progress/kendo-theme-default": "^14.1.0",
+    "@progress/kendo-svg-icons": "^5.1.0",
+    "@progress/kendo-theme-default": "^14.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
