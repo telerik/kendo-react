@@ -5,7 +5,7 @@
   "homepage": "https://telerik.github.io/kendo-react/kendo-react-file-manager/",
   "dependencies": {
     "@progress/kendo-data-query": "^1.7.2",
-    "@progress/kendo-drawing": "^1.23.0",
+    "@progress/kendo-drawing": "^1.25.3",
     "@progress/kendo-licensing": "^1.7.2",
     "@progress/kendo-react-buttons": "^15.0.0",
     "@progress/kendo-react-data-tools": "^15.0.0",
@@ -20,8 +20,8 @@
     "@progress/kendo-react-progressbars": "^15.0.0",
     "@progress/kendo-react-treeview": "^15.0.0",
     "@progress/kendo-react-upload": "^15.0.0",
-    "@progress/kendo-svg-icons": "^5.0.0",
-    "@progress/kendo-theme-default": "^14.1.0",
+    "@progress/kendo-svg-icons": "^5.1.0",
+    "@progress/kendo-theme-default": "^14.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
