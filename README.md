@@ -44,7 +44,7 @@ Here you can:
 
 | 📖 Learn | 🆘 Get Help | 🐞 Report & Track | 🔍 Explore |
 | :--- | :--- | :--- | :--- |
-| <a href="https://www.telerik.com/kendo-react-ui/components/getting-started" target="_blank">Getting Started</a> | <a href="https://www.telerik.com/account/support-tickets" target="_blank">Open a Support Ticket</a> | <a href="https://github.com/telerik/kendo-react/issues" target="_blank">Open a Bug</a> | <a href="https://github.com/telerik/kendo-react/tree/update-readme/docs" target="_blank">Docs Examples</a> |
+| <a href="https://www.telerik.com/kendo-react-ui/components/getting-started" target="_blank">Getting Started</a> | <a href="https://www.telerik.com/account/support-tickets" target="_blank">Open a Support Ticket</a> | <a href="https://github.com/telerik/kendo-react/issues" target="_blank">Open a Bug</a> | <a href="https://github.com/telerik/kendo-react/tree/master/docs" target="_blank">Docs Examples</a> |
 | <a href="https://www.telerik.com/kendo-react-ui/components/" target="_blank">Components List</a> | <a href="https://www.telerik.com/forums/kendo-ui-react" target="_blank">Ask on the Forums</a> | <a href="https://github.com/telerik/kendo-react/issues?q=is%3Aissue+is%3Aclosed" target="_blank">Search Closed Issues</a> | <a href="https://github.com/telerik/kendo-react/tree/master/examples" target="_blank">Sample Projects</a> |
 | <a href="https://www.telerik.com/kendo-react-ui/components/faq/" target="_blank">Browse the FAQ</a> | <a href="https://stackoverflow.com/questions/tagged/kendo-react-ui" target="_blank">Ask on Stack Overflow</a> | <a href="https://feedback.telerik.com/kendo-react-ui" target="_blank">Open a Feature Request</a> | <a href="https://www.telerik.com/support/whats-new/kendo-react-ui/roadmap" target="_blank">See the Roadmap</a> |
 ---
@@ -76,8 +76,8 @@ When submitting a bug report, include:
 
 This repository includes the complete documentation and interactive examples used on the official KendoReact website:
 
-* **<a href="https://github.com/telerik/kendo-react/tree/update-readme/docs" target="_blank">Documentation</a>** — Full component reference, guides, and API documentation
-* **<a href="https://github.com/telerik/kendo-react/tree/update-readme/docs/content" target="_blank">Interactive Examples</a>** — Runnable component demos and code samples
+* **<a href="https://github.com/telerik/kendo-react/tree/master/docs" target="_blank">Documentation</a>** — Full component reference, guides, and API documentation
+* **<a href="https://github.com/telerik/kendo-react/tree/master/docs/content" target="_blank">Interactive Examples</a>** — Runnable component demos and code samples
 * **<a href="https://github.com/telerik/kendo-react/tree/master/examples" target="_blank">Sample Applications</a>** — Complete projects demonstrating real-world usage patterns
 
 Clone the repository and run the documentation locally to explore all examples and patterns.
