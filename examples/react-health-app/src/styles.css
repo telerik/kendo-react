@@ -47,84 +47,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ========================
-   Kendo Theme Refinements
-   (App-specific layout overrides on Kendo components)
-   ======================== */
-
-/* Grid: row hover & border cleanup */
-.k-grid tbody > tr.k-table-row:hover {
-  background-color: inherit;
-}
-.k-grid tbody > tr.k-table-alt-row {
-  background-color: var(--kendo-color-surface);
-}
-.k-grid tbody > tr.k-table-alt-row:hover {
-  background-color: var(--kendo-color-surface);
-}
-
-.k-grid {
-  border-width: 0;
-  border-radius: var(--kendo-border-radius-xxl);
-  overflow: hidden;
-}
-
-.k-grid .k-table-th,
-.k-grid .k-table-td,
-.k-grid td,
-.k-grid th {
-  border-inline-start-width: 0 !important;
-  border-inline-end-width: 0;
-  border-block-start-width: 0;
-  border-block-end-width: 0;
-}
-
-.k-grid div.k-grid-header {
-  border-block-end-width: 0;
-}
-
-/* FAB: custom gradient */
-.k-fab.k-fab-primary,
-.k-fab.k-fab-solid-primary,
-.k-fab.k-fab-primary.k-fab {
-  background-image: linear-gradient(135deg, #ac58ff 0%, #4b5ffa 100%);
-  background-color: transparent;
-  outline: none;
-  box-shadow: var(--kendo-elevation-5);
-}
-
-.k-fab.k-fab-primary:hover,
-.k-fab.k-fab-solid-primary:hover,
-.k-hover.k-fab.k-fab-primary {
-  background-image: linear-gradient(135deg, #9b40f0 0%, #3a4ee9 100%);
-  background-color: transparent;
-  outline: none;
-}
-
 /* Scheduler: layout overrides */
 .k-scheduler {
   flex: 1;
   min-width: 0;
-}
-
-.k-scheduler .k-scheduler-toolbar .k-button-group {
-  border-radius: var(--kendo-border-radius-full);
-  overflow: hidden;
-  flex-shrink: 0;
-}
-.k-scheduler .k-scheduler-toolbar .k-button-group .k-button {
-  outline: none;
-}
-
-.k-scheduler .k-scheduler-toolbar .k-nav-current {
-  color: var(--kendo-color-on-app-surface);
-  font-weight: var(--kendo-font-weight-semibold);
-}
-
-.k-scheduler .k-event {
-  border-radius: var(--kendo-border-radius-lg);
-  border: none;
-  padding: 0;
 }
 
 .k-scheduler .k-event.scheduler-event-solid {
@@ -687,10 +613,6 @@ body {
   align-items: center;
 }
 
-.k-segmented-control {
-  overflow: unset;
-}
-
 .app-topbar-right {
   gap: var(--kendo-spacing-3);
 }
@@ -699,20 +621,12 @@ body {
   border-color: var(--kendo-color-border, #17386314);
 }
 
-.k-input .k-input-prefix,
-.k-input .k-input-suffix {
-  background-color: var(--kendo-color-surface-alt);
-}
-
 /* SegmentedControl: slightly larger than medium */
 .app-topbar .k-segmented-control .k-segmented-control-button,
 .btn-segmented-size {
   padding-block: 7px;
   padding-inline: var(--kendo-spacing-3);
   font-size: var(--kendo-font-size-md);
-}
-.k-segmented-control {
-  background-color: var(--kendo-color-base-active);
 }
 
 /* Custom icon button (matches Kendo flat button size) */
@@ -1802,10 +1716,6 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   color: var(--kendo-color-subtle);
 }
 
-.k-checkbox {
-  border-radius: var(--kendo-border-radius-full);
-}
-
 .task-text {
   flex: 1;
   font-size: var(--kendo-font-size-sm);
@@ -1823,24 +1733,6 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   height: var(--kendo-spacing-7\.5);
   display: inline-flex;
   align-items: center;
-}
-
-/* ========================
-   Utility: Status Badges (Chip-based: patients grid, task list)
-   ======================== */
-.k-chip .k-chip-label {
-  font-family: var(--kendo-font-family);
-  font-weight: var(--kendo-font-weight-normal);
-  font-style: normal;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: var(--kendo-letter-spacing, normal);
-  text-align: center;
-  vertical-align: middle;
-}
-
-.k-chip {
-  padding: var(--kendo-spacing-1\.5) var(--kendo-spacing-0\.5);
 }
 
 /* ========================
