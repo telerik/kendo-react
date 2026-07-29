@@ -80,41 +80,41 @@ const Planning = (props) => {
           {localizationService.toLanguageString("custom.teamCalendar")}
         </h3>
         {orderEmployees.map((employee) => {
+          const employeeTeamColor = teams.find(
+            ({ teamID }) => teamID === employee.teamId
+          ).teamColor;
+
           return (
             <div
               key={employee.id}
               onClick={() => onEmployeeClick(employee.id)}
-              style={!filterState[employee.id] ? { opacity: 0.5 } : {}}
+              className={`employee-card${
+                !filterState[employee.id] ? " employee-card--inactive" : ""
+              }`}
             >
-              <Card style={{ borderWidth: 0, cursor: "pointer" }}>
-                <CardHeader className="k-hbox">
+              <Card className="employee-card__surface">
+                <CardHeader className="employee-card__header">
                   <Avatar
                     type="image"
                     shape="circle"
                     size={"large"}
+                    className="employee-card__avatar"
                     style={{
-                      borderWidth: 2,
-                      borderColor: teams.find(
-                        ({ teamID }) => teamID === employee.teamId
-                      ).teamColor,
+                      "--employee-team-color": employeeTeamColor,
                     }}
                   >
                     <div
-                      className="k-avatar-image"
+                      className="k-avatar-image employee-card__avatar-image"
                       style={{
-                        backgroundImage:
-                          images[employee.imgId + employee.gender],
-                        backgroundSize: "cover",
-                        backgroundPosition: "center center",
+                        "--employee-image": images[employee.imgId + employee.gender],
                       }}
                     />
                   </Avatar>
                   <div>
                     <CardTitle
+                      className="employee-card__title"
                       style={{
-                        color: teams.find(
-                          ({ teamID }) => teamID === employee.teamId
-                        ).teamColor,
+                        "--employee-team-color": employeeTeamColor,
                       }}
                     >
                       {employee.fullName}

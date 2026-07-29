@@ -1,3 +1,20 @@
+:root {
+    --kendo-font-family: "Roboto", sans-serif;
+    --kendo-font-family-sans-serif: "Roboto", sans-serif;
+    --kendo-color-app-surface: #d4d6e4;
+    --kendo-color-primary: #53d2fa;
+    --kendo-color-info: #71a6ff;
+    --kendo-color-series-a: #ff6358;
+    --kendo-color-series-b: #ffd246;
+    --kendo-color-series-c: #55ab1d;
+    --kendo-color-series-d: #28b4c8;
+    --kendo-translucency-base: 28%;
+    --kendo-translucency-blur-base: 12px;
+    --kendo-translucency-blur-step: 3px;
+}
+
+@import "./styles/main";
+
 body {
     margin: 0;
     padding: 0;
@@ -12,5 +29,5 @@ body {
 }
 
 header {
-    background-image: url('./assets/header-bg.png');
+    background-image: url("./assets/header-bg.png");
 }

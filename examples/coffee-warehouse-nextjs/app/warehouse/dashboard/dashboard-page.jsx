@@ -147,7 +147,7 @@ export default function DashBoard(props) {
         <div className="card-component">
           <Grid
             data={filterBy(data, gridFilterExpression)}
-            style={{ height: 450 }}
+            className="dashboard-grid"
             onDataChange={(data) => setData(data)}
           >
             <Column
