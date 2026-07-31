@@ -189,7 +189,9 @@ h2 {
 
 .filters,
 .metric-card,
+.metric-card::before,
 .chart-card,
+.chart-card::before,
 .table-section {
   background: var(--panel-bg);
   border-radius: var(--card-radius);

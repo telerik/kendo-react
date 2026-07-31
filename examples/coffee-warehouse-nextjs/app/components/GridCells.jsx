@@ -1,9 +1,7 @@
 "use client";
 import * as React from "react";
 
-import {
-  Sparkline,
-} from "@progress/kendo-react-charts";
+import { Sparkline } from "@progress/kendo-react-charts";
 import { Badge } from "@progress/kendo-react-indicators";
 import { useInternationalization } from "@progress/kendo-react-intl";
 import { SvgIcon } from "@progress/kendo-react-common";
@@ -22,7 +20,8 @@ export const FullNameCell = (props) => {
       <div
         className="employee-photo"
         style={{
-          "--employee-photo": images[props.dataItem.imgId + props.dataItem.gender],
+          "--employee-photo":
+            images[props.dataItem.imgId + props.dataItem.gender],
         }}
       />
       <div className="employee-name">{props.dataItem.fullName}</div>
@@ -36,7 +35,11 @@ export const FlagCell = (props) => {
   }
 
   return (
-    <td className={[props.tdProps.className, "cell-content--center"].filter(Boolean).join(" ")}>
+    <td
+      className={[props.tdProps.className, "cell-content--center"]
+        .filter(Boolean)
+        .join(" ")}
+    >
       <Image
         src={images[props.dataItem.country]}
         className="flag-icon"
@@ -64,7 +67,11 @@ export const RatingCell = (props) => {
           <SvgIcon
             key={idx}
             icon={starIcon}
-            className={!isActive ? "grid-rating__icon--filled" : "grid-rating__icon--inactive"}
+            className={
+              !isActive
+                ? "grid-rating__icon--filled"
+                : "grid-rating__icon--inactive"
+            }
           />
         );
       })}
@@ -78,13 +85,28 @@ export const OnlineCell = (props) => {
   }
 
   return (
-    <td className={[props.tdProps.className, "cell-content--center"].filter(Boolean).join(" ")}>
+    <td
+      className={[props.tdProps.className, "cell-content--center"]
+        .filter(Boolean)
+        .join(" ")}
+      style={{ position: "relative" }}
+    >
       {props.dataItem.isOnline === true ? (
-        <Badge themeColor={"success"} shape={"rounded"} className="status-badge">
+        <Badge
+          themeColor={"success"}
+          shape={"rounded"}
+          className="status-badge"
+          style={{ position: "relative", display: "inline" }}
+        >
           Online
         </Badge>
       ) : (
-        <Badge themeColor={"error"} shape={"rounded"} className="status-badge">
+        <Badge
+          themeColor={"error"}
+          shape={"rounded"}
+          className="status-badge"
+          style={{ position: "relative", display: "inline" }}
+        >
           Offline
         </Badge>
       )}
@@ -113,7 +135,9 @@ export const CurrencyCell = (props) => {
 
   return (
     <td className={props.tdProps.className}>
-      <span className={props.dataItem.budget < 0 ? "currency-negative" : undefined}>
+      <span
+        className={props.dataItem.budget < 0 ? "currency-negative" : undefined}
+      >
         {intlService.formatNumber(props.dataItem.budget, "c")}
       </span>
     </td>
