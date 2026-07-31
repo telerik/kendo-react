@@ -1,4 +1,4 @@
-# Kendo React Data Grid ASP.NET Core
+# Kendo React Grid ASP.NET Core
 
 This repository contains a sample application showcasing how to implement common data operations for the KendoReact Data Grid with an ASP.NET Core backend. The project focuses on how data operations like paging, sorting, filtering, and grouping are triggered on the client and can be handled on the sever-side of things. The ultimate goal is to showcase a full-stack project and demystify the client and server-side interactions with an advanced UI component like the data grid.
 

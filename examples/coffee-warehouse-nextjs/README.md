@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## The following KendoReact components are used in the sample application:
 
-- [Data Grid](https://www.telerik.com/kendo-react-ui/components/grid/)
+- [Grid](https://www.telerik.com/kendo-react-ui/components/grid/)
 
 - [Chart](https://www.telerik.com/kendo-react-ui/components/chart/)
 

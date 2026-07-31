@@ -1,4 +1,4 @@
-# KendoReact Data Grid and Chart With MarkLogic
+# KendoReact Grid and Chart With MarkLogic
 
 A sample application that showcases how to Integrate MarkLogic and the KendoReact Grid with CRUD operations and a KendoReact Chart that displays  GeoJSON data.
 
