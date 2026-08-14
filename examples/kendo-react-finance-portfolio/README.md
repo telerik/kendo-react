@@ -6,7 +6,7 @@ You can see the following ten KendoReact components implemented in this sample a
  - Candle Chart
  - Line Chart
  - Area Chart
-- [KendoReact Data Grid](https://www.telerik.com/kendo-react-ui/components/grid/)
+- [KendoReact Grid](https://www.telerik.com/kendo-react-ui/components/grid/)
 - [KendoReact DropDownList](https://www.telerik.com/kendo-react-ui/components/dropdowns/)
 - [KendoReact DateRangePicker](https://www.telerik.com/kendo-react-ui/components/dateinputs/daterangepicker/)
 - [KendoReact Splitter](https://www.telerik.com/kendo-react-ui/components/layout/splitter/)

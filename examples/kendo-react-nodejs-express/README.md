@@ -1,6 +1,6 @@
-# KendoReact Data Grid With Express Server
+# KendoReact Grid With Express Server
 
-This is a sample application that uses the KendoReact Data Grid with an Express server. The Grid has server data operations and CRUD operations.
+This is a sample application that uses the KendoReact Grid with an Express server. The Grid has server data operations and CRUD operations.
 
 ## Running the Application
 

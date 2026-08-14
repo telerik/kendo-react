@@ -1,4 +1,4 @@
-# KendoReact Data Grid With MarkLogic
+# KendoReact Grid With MarkLogic
 
 A sample application that showcases how to Integrate MarkLogic and the KendoReact Grid.
 
