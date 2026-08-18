@@ -2,4 +2,3 @@ node_modules/
 dist/
 .vite/
 *.local
-package-lock.json
