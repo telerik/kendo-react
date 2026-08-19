@@ -1,7 +1,7 @@
 ---
 title: Hiding Columns
-description: 'Get started with the KendoKendoReact Data Grid and learn how to implement hidden columns.'
-components: ["datagrid"]
+description: 'Get started with the KendoReact Grid and learn how to implement hidden columns.'
+components: ['grid']
 slug: hidden_columns
 position: 55
 subject: Grid Hidden columns feature
@@ -15,9 +15,9 @@ changes in the Grid can be visualized.
 
 <CtaPanelOverview></CtaPanelOverview>
 
-In the example below, the Data Grid has its [`columnsState`]({% slug api_grid_gridprops %}#toc-columnsstate) property set. The hidden property of each column is controlled by the checkboxes above the Grid. The [`onChange`]({% slug api_inputs_checkboxprops %}#toc-onchange) event handlers cause state changes that re-render the Grid with the corresponding columns removed or added.
+In the example below, the Grid has its [`columnsState`]({% slug api_grid_gridprops %}#toc-columnsstate) property set. The hidden property of each column is controlled by the checkboxes above the Grid. The [`onChange`]({% slug api_inputs_checkboxprops %}#toc-onchange) event handlers cause state changes that re-render the Grid with the corresponding columns removed or added.
 
-{% meta height:640 %}
+{% meta height:730 %}
 {% embed_file hidden-columns/app.tsx preview %}
 {% embed_file hidden-columns/main.tsx %}
 {% endmeta %}

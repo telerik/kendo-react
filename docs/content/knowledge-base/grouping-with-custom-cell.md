@@ -32,12 +32,12 @@ How to make a KendoReact Grid that combines custom data cells and grouping.
 
 ## Solution
 
-To enable custom data cells in a Grid that uses grouping, utilize the Column's [`cells`]({% slug api_grid_gridcolumnprops %}#toc-cells) property. The `cells` property lets you specify which cells to customize so you can apply the customizations only to the data cells.
-Unlike `cells`, the [`cell`]({% slug api_grid_gridcolumnprops %}#toc-cell) property is applied to all cells in the column, not just the data cells. This could lead to various issues, for example, losing cell stylization, decreasing code readability and making it prone to other bugs.
+To enable custom data cells in a Grid that uses grouping, utilize the Column's [`cells`]({% slug api_grid_gridcolumnprops %}) property. The `cells` property lets you specify which cells to customize so you can apply the customizations only to the data cells.
+Unlike `cells`, the [`cell`]({% slug api_grid_gridcolumnprops %}) property is applied to all cells in the column, not just the data cells. This could lead to various issues, for example, losing cell stylization, decreasing code readability and making it prone to other bugs.
 
 The following example demonstrates how to use the `cells` property to set custom stylization to the data cells and enable grouping:
 
-{% meta height:600 %}
+{% meta height:700 %}
 {% embed_file grid/grouping-with-custom-cell/app.jsx preview %}
 {% embed_file grid/grouping-with-custom-cell/main.jsx %}
 {% endmeta %}

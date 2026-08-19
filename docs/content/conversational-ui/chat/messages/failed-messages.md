@@ -24,7 +24,7 @@ When a message is marked as failed, the Chat automatically displays a resend act
 
 The [`onResendMessage`](slug:api_conversational-ui_chatprops#onresendmessage) event is triggered when a user attempts to resend a failed message, allowing you to implement the retry logic, such as re-attempting the API call or re-validating the message content.
 
-{% meta height:680 %}
+{% meta height:860 %}
 {% embed_file chat/messages/failed-message/app.tsx preview %}
 {% embed_file chat/messages/failed-message/main.tsx %}
 {% endmeta %}

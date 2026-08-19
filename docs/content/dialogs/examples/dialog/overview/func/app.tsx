@@ -3,25 +3,26 @@ import { Dialog, DialogActionsBar } from '@progress/kendo-react-dialogs';
 import { Button } from '@progress/kendo-react-buttons';
 
 const App = () => {
-    const [visible, setVisible] = React.useState<boolean>(true);
+    const [opened, setOpened] = React.useState<boolean>(true);
 
-    const toggleDialog = () => {
-        setVisible(!visible);
-    };
+    const open = () => setOpened(true);
+    const close = () => setOpened(false);
 
     return (
         <div>
-            <Button type="button" onClick={toggleDialog} id="open-dialog">
-                Open Dialog
-            </Button>
-            {visible && (
-                <Dialog title={'Please confirm'} onClose={toggleDialog}>
-                    <p style={{ margin: '25px', textAlign: 'center' }}>Are you sure you want to continue?</p>
+            {!opened && (
+                <Button type="button" onClick={open} id="open-dialog">
+                    Open Dialog
+                </Button>
+            )}
+            {opened && (
+                <Dialog title={'Please confirm'} onClose={close} minWidth={250} width={450}>
+                    <p style={{ margin: '30px', textAlign: 'center' }}>Are you sure you want to continue?</p>
                     <DialogActionsBar>
-                        <Button type="button" onClick={toggleDialog}>
+                        <Button type="button" onClick={close}>
                             No
                         </Button>
-                        <Button type="button" onClick={toggleDialog}>
+                        <Button type="button" themeColor="primary" onClick={close}>
                             Yes
                         </Button>
                     </DialogActionsBar>
@@ -30,4 +31,5 @@ const App = () => {
         </div>
     );
 };
+
 export default App;

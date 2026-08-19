@@ -199,6 +199,42 @@ The resource name. If not set, the value of the `field` option is used.
 <td class="table-cell-name">
 
 
+#### svgIcon?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+SVGIcon
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Specifies an SVG icon to render next to the resource editor in the Scheduler form.
+If not set, no icon is rendered.
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### textField
 
 

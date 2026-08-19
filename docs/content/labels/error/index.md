@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: 'Get an overview of the features the KendoReact Error delivers and use the component in React projects.'
-components: ["error"]
+components: ['error']
 slug: error_labels
 position: 0
 ---
@@ -12,14 +12,12 @@ The Error component enables you to display an error message to React components.
 
 <CtaPanelOverview></CtaPanelOverview>
 
-The following example shows how to set up the Error component:
+The following example demonstrates the Error component in action.
 
-1. Add the Error component after the desired editor.
-1. Set the [`id`]({% slug api_labels_errorprops %}#toc-id) property of the Error and the `aria-describedby` property of the editor.
-
-{% meta height:160 %}
+{% meta height:770 %}
 {% embed_file error/basic/func/app.tsx preview %}
 {% embed_file error/basic/func/main.tsx %}
+{% embed_file error/basic/func/styles.css %}
 {% endmeta %}
 
 > The Error is part of the [KendoReact Labels]({% slug overview_labels %}) component library. All KendoReact Labels are freely available for use without a commercial license. The procedures for installing, importing, and using the Labels are identical for all components in the package. To learn how to use the Error and the rest of the Labels, see the [Getting Started with the KendoReact Labels]({% slug get_started_labels %}) guide.

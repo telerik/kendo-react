@@ -12,7 +12,7 @@ category: getting-started
 
 All developers with an active trial or commercial license have access to a [KendoReact Getting Started Video Course](https://learn.telerik.com/learn/course/14/KendoReact) available in Telerik's Virtual Classroom. The course is developed to help you get started with KendoReact. It will put you in the shoes of an engineer and you will add new components and features to an existing React application.
 
-The video course starts with adding basic KendoReact components to a React application and shows how to harness the power of KendoReact in no time. Further, you get into more advanced components, such as Chart, Data Grid, and Scheduler. You will learn how to incorporate KendoReact components to interact with existing functionality and with each other. Finally, the course explores how to build your own theme and change it for all components at once.
+The video course starts with adding basic KendoReact components to a React application and shows how to harness the power of KendoReact in no time. Further, you get into more advanced components, such as Chart, Grid, and Scheduler. You will learn how to incorporate KendoReact components to interact with existing functionality and with each other. Finally, the course explores how to build your own theme and change it for all components at once.
 
 ## Course Overview
 
@@ -41,7 +41,7 @@ The KendoReact technical online training has an approximate duration of 3 hours 
 -   **Chapter 3: KendoReact Workflow** (KendoReact Components, Create React App and Create KendoReact App Workflows, Button Component Example, Licensing)
 -   **Chapter 4: Basic UI Components** (Inputs, DropdownList and DropdownListCustom Rendering, TabStrip, ComboBox, ComboBox Item Rendering)
 -   **Chapter 5: Chart** (Chart Anatomy and Setup, Chart Data Setup, Chart Series, Chart Categories)
--   **Chapter 6: Data Grid** (Grid Setup, Rendering, Column Definitions, Custom Rendering, Grid Paging, Grid Sorting, Data Query State)
+-   **Chapter 6: Grid** (Grid Setup, Rendering, Column Definitions, Custom Rendering, Grid Paging, Grid Sorting, Data Query State)
 -   **Chapter 7: Scheduler** (Scheduler Setup, Views and Defaults, Editing)
 -   **Chapter 8: Styling and Themes** (Changing the Theme, ThemeBuilder, Icons)
 

@@ -1,7 +1,7 @@
 ---
 title: Performance
-description: 'Get more information on how to improve the KendoKendoReact Data Grid performance when working with large data sets.'
-components: ["datagrid"]
+description: 'Get more information on how to improve the KendoReact Grid performance when working with large data sets.'
+components: ['grid']
 slug: performance_grid
 position: 5
 ---
@@ -10,7 +10,7 @@ position: 5
 
 ## Performance Architecture
 
-The KendoKendoReact Data Grid leverages a sophisticated performance architecture built on modern React patterns and optimized rendering strategies:
+The KendoReact Grid leverages a sophisticated performance architecture built on modern React patterns and optimized rendering strategies:
 
 -   **Intelligent DOM Management**: Minimizes DOM operations through strategic element reuse and efficient rendering cycles
 -   **Memory Optimization**: Smart data handling that prevents memory leaks and reduces garbage collection overhead
@@ -19,23 +19,25 @@ The KendoKendoReact Data Grid leverages a sophisticated performance architecture
 
 ## Core Performance Features
 
-The KendoReact Data Grid offers several powerful performance optimization features:
+The KendoReact Grid offers several powerful performance optimization features:
 
 -   **[Virtual Scrolling (row virtualization)]({% slug virtualscrolling_grid %})**&mdash;Only renders visible rows plus a buffer, enabling the Grid to handle millions of records with consistent performance and minimal memory usage (enabled by default for licensed users as of v11.0.0).
 -   **[Column Virtualization]({% slug virtual_columns_grid %})**&mdash;Renders only visible columns dynamically during horizontal scrolling, significantly reducing DOM elements for datasets with many columns.
 -   **[Paging]({% slug paging_grid %})**&mdash;Renders only data for the current page, ideal for analytical interfaces and SEO-friendly scenarios. It could be combined with virtual scrolling.
 -   **[autoProcessData]({% slug api_grid_gridprops %}#toc-autoprocessdata)**&mdash;Built-in data processing that handles sorting, filtering, grouping, and paging automatically, reducing boilerplate code and improving maintainability.
 
-> When testing the performance of the KendoReact Data Grid, make sure to use a production build. React is significantly faster when using a production build, providing a more accurate representation of end-user experience.
+> When testing the performance of the KendoReact Grid, make sure to use a production build. React is significantly faster when using a production build, providing a more accurate representation of end-user experience.
 
-{% meta height:880 %}
+The following example demonstrates a high-performance Grid with 1,000 rows and 10 columns, using paging and an on-demand data generation tool to measure rendering throughput.
+
+{% meta height:900 %}
 {% embed_file performance/basic/func/app.tsx preview %}
 {% embed_file performance/basic/func/main.tsx %}
 {% endmeta %}
 
 ### Virtual Scrolling Performance
 
-**[Virtual Scrolling]({% slug virtualscrolling_grid %})** is the primary performance optimization technique for handling large datasets in the KendoKendoReact Data Grid. This feature renders only the visible rows plus a buffer, enabling seamless handling of millions of records with constant memory usage.
+**[Virtual Scrolling]({% slug virtualscrolling_grid %})** is the primary performance optimization technique for handling large datasets in the KendoReact Grid. This feature renders only the visible rows plus a buffer, enabling seamless handling of millions of records with constant memory usage.
 
 **When to Use:**
 
@@ -88,7 +90,9 @@ This demo below showcases virtual scrolling (row virtualization), which renders 
 -   **Memory Efficiency**: Only current page data is held in memory
 -   **User Control**: Users can adjust page size based on their needs
 
-{% meta height:760 %}
+The following example demonstrates a high-performance Grid with virtual scrolling and configurable row and column counts, where you can select from preset options to measure rendering performance across different dataset sizes.
+
+{% meta height:940 %}
 {% embed_file performance/virtual/func/app.tsx preview %}
 {% embed_file performance/virtual/func/main.tsx %}
 {% endmeta %}
@@ -180,11 +184,11 @@ Learn more about [Grid RSC Mode]({% slug overview_rsc_grid %}) and [RSC Performa
 -   **Web Vitals Extension**: Real-time performance monitoring
 -   **React DevTools Profiler**: Component-level performance insights
 
-<!-- Performance is a story best told in numbers. That is why we have made a sample application that uses [React.Profiler](https://react.dev/reference/react/Profiler) to test the actual performance numbers of the KendoReact Data Grid. This sample application allows you to see how different features impact the performance.
+<!-- Performance is a story best told in numbers. That is why we have made a sample application that uses [React.Profiler](https://react.dev/reference/react/Profiler) to test the actual performance numbers of the KendoReact Grid. This sample application allows you to see how different features impact the performance.
 
 You can download [the sample application from GitHub](https://github.com/telerik/kendo-react-grid-performance). -->
 
-> We advise testing with a production build as well. That shows the real power of the KendoKendoReact Data Grid with up to 6 times improved performance compared to when testing with a development build.
+> We advise testing with a production build as well. That shows the real power of the KendoReact Grid with up to 6 times improved performance compared to when testing with a development build.
 
 <!-- To play with the demo and see how we built it, you may want to run it locally:
 

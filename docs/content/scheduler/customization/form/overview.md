@@ -1,7 +1,7 @@
 ---
 title: Form
 description: 'Get started with the SchedulerForm component and learn how to customize through properties, or completely override it by providing a custom component.'
-components: ["scheduler"]
+components: ['scheduler']
 slug: overview_customization_form_scheduler
 position: 1
 ---
@@ -10,7 +10,7 @@ position: 1
 
 The `SchedulerForm` is a composite component, built on top of the [`KendoReact Form`]({% slug api_form_form %}) component, and provides default rendering and functionality to enable creating a new `dataItem` or edit an existing one.
 
-In order to allow gradual customization, we've exposed the [`form`]({% slug api_scheduler_schedulerprops %}#toc-form) property on a couple of different levels:
+In order to allow gradual customization, we've exposed the [`form`]({% slug api_scheduler_schedulerprops %}) property on a couple of different levels:
 
 -   Scheduler `form` customization&mdash;Customize all `form` components across the Scheduler.
 
@@ -92,13 +92,14 @@ To provide out of the box functionality we distribute the `SchedulerForm` as a s
 
 > Customizing the `SchedulerFormEditor` component is the most common (and complex) scenario for a custom component. We are covering it in depth in the [SchedulerFormEditor Customization]({% slug overview_customization_form_editor_scheduler %}) article.
 
-The following example demonstrates customizing the `Dialog` component through the `dialog` property of the `SchedulerForm` by adding a `remove` icon next to the title which triggers the `remove` sequence of actions when clicked. For the full list of properties accepted by the `dialog`, please refer to the [`DialogProps`]({% slug api_dialogs_dialog %}) API.
+The following example demonstrates customizing the `Dialog` component through the `dialog` property of the `SchedulerForm` by setting a wider width and adding a custom CSS class. For the full list of properties accepted by the `dialog`, please refer to the [`DialogProps`]({% slug api_dialogs_dialog %}) API.
 
 {% meta height:800 %}
 {% embed_file customization/form/custom-components/func/app.tsx preview %}
 {% embed_file customization/form/custom-components/func/main.tsx %}
 {% embed_file customization/form/custom-components/func/custom-form-dialog.tsx %}
 {% embed_file customization/form/custom-components/func/custom-form.tsx %}
+{% embed_file customization/form/custom-components/func/styles.css %}
 {% endmeta %}
 
 ## Suggested Links

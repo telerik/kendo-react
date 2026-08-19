@@ -16,7 +16,7 @@ The KendoReact QR Code is distributed through the [kendo-react-barcodes NPM pack
 
 The following example demonstrates the QR Code in action.
 
-{% meta height:350 %}
+{% meta height:470 %}
 {% embed_file qrcode/overview/func/app.tsx preview %}
 {% embed_file qrcode/overview/func/main.tsx %}
 {% endmeta %}

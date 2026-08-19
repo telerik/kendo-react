@@ -1,36 +1,62 @@
 import * as React from 'react';
 
-import { DateInput } from '@progress/kendo-react-dateinputs';
-import { StyleConfigurator } from './shared-di-style-configurator';
+import { DateInput, DateInputProps } from '@progress/kendo-react-dateinputs';
+import { useConfigurator, sizeOptions, roundedOptions, fillModeOptions } from '@docs-shared/configurator';
 
 const App = () => {
-    const [size, setSize] = React.useState<'small' | 'medium' | 'large'>('medium');
-    const [fillMode, setFillMode] = React.useState<'solid' | 'outline' | 'flat'>('solid');
-    const [rounded, setRounded] = React.useState<'small' | 'medium' | 'large'>('medium');
+    const config = useConfigurator({
+        sections: [
+            {
+                label: 'Size',
+                controls: [
+                    {
+                        type: 'segmented',
+                        name: 'size',
+                        options: sizeOptions(['default', 'small', 'medium', 'large']),
+                        defaultValue: 'default'
+                    }
+                ]
+            },
+            {
+                label: 'Border Radius',
+                controls: [
+                    {
+                        type: 'segmented',
+                        name: 'rounded',
+                        options: roundedOptions(['default', 'small', 'medium', 'large', 'full']),
+                        defaultValue: 'default'
+                    }
+                ]
+            },
+            {
+                label: 'Fill Mode',
+                controls: [
+                    {
+                        type: 'segmented',
+                        name: 'fillMode',
+                        options: fillModeOptions(['default', 'solid', 'outline', 'flat']),
+                        defaultValue: 'default'
+                    }
+                ]
+            }
+        ]
+    }) as {
+        size: DateInputProps['size'];
+        fillMode: DateInputProps['fillMode'];
+        rounded: Exclude<DateInputProps['rounded'], 'none'>;
+    };
 
     return (
-        <section className="k-container k-gap-1 k-gap-sm-6">
-            <div className="k-row k-col-gap-1 k-col-gap-sm-6">
-                <div className="k-col">
-                    <h4>Size</h4>
-                    <DateInput size={'small'} label={'small'} spinners={true} width={200} />
-                    <DateInput size={'medium'} label={'medium'} spinners={true} width={200} />
-                    <DateInput size={'large'} label={'large'} spinners={true} width={200} />
-                </div>
-                <div className="k-col">
-                    <h4>Fill Mode</h4>
-                    <DateInput fillMode={'solid'} label={'solid'} spinners={true} width={200} />
-                    <DateInput fillMode={'outline'} label={'outline'} spinners={true} width={200} />
-                    <DateInput fillMode={'flat'} label={'flat'} spinners={true} width={200} />
-                </div>
-                <div className="k-col">
-                    <h4>Rounded</h4>
-                    <DateInput rounded={'small'} label={'small'} spinners={true} width={200} />
-                    <DateInput rounded={'medium'} label={'medium'} spinners={true} width={200} />
-                    <DateInput rounded={'large'} label={'large'} spinners={true} width={200} />
-                </div>
-            </div>
-        </section>
+        <div className="example-wrapper-center">
+            <DateInput
+                size={config.size}
+                fillMode={config.fillMode}
+                rounded={config.rounded}
+                label={'Date'}
+                spinners={true}
+                width={200}
+            />
+        </div>
     );
 };
 

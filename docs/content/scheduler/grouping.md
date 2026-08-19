@@ -26,7 +26,7 @@ To configure the group rendering, set the `group` and `resources` properties. Th
 
 The following example demonstrates how to group events based on their `roomId` and `personIds` and with the corresponding coloring based on the `roomId`.
 
-{% meta height:770 %}
+{% meta height:780 %}
 {% embed_file data-operations/grouping/configuration/func/app.tsx preview %}
 {% embed_file data-operations/grouping/configuration/func/main.tsx %}
 {% embed_file data-operations/grouping/configuration/func/data.ts %}
@@ -38,7 +38,7 @@ Based on the resource value, a single event can appear in multiple resource grou
 
 The following example demonstrates how to render an event in two or more groups based on the provided resources.
 
-{% meta height:770 %}
+{% meta height:780 %}
 {% embed_file data-operations/grouping/multiple/func/app.tsx preview %}
 {% embed_file data-operations/grouping/multiple/func/main.tsx %}
 {% embed_file data-operations/grouping/multiple/func/data.ts %}

@@ -10,7 +10,9 @@ position: 4
 
 The data of the KendoReact TreeList can be edited by using an external form.
 
-{% meta height:580 %}
+The following example demonstrates how to open a [`Dialog`]({% slug overview_dialog %}) as a popup editing form when the user clicks the **Edit** button of a row, and how to save or discard the changes from within the dialog.
+
+{% meta height:690 %}
 {% embed_file editing-external-form/func/app.tsx preview %}
 {% embed_file editing-external-form/func/main.tsx %}
 {% embed_file editing-external-form/func/EditingDialog.tsx %}

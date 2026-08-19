@@ -16,7 +16,7 @@ The KendoReact Chat, AIPrompt, and InlineAIPrompt components are distributed thr
 
 The following example demonstrates the Chat, AIPrompt, and InlineAIPrompt components in action.
 
-{% meta height:780 %}
+{% meta height:890 %}
 {% embed_file overview/func/app.tsx preview %}
 {% embed_file overview/func/Chat.tsx preview %}
 {% embed_file overview/func/AIPrompt.tsx preview %}

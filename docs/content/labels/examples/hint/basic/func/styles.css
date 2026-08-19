@@ -1,0 +1,75 @@
+.demo-container {
+    padding: var(--kendo-spacing-12);
+    display: flex;
+    justify-content: center;
+}
+
+.form-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--kendo-spacing-4);
+    width: 100%;
+    max-width: 600px;
+    padding: var(--kendo-spacing-6);
+    background: var(--kendo-color-surface-alt);
+    border: 1px solid var(--kendo-color-border);
+    border-top: 3px solid var(--kendo-color-primary);
+    border-radius: var(--kendo-border-radius-md);
+    box-shadow: var(--kendo-elevation-4);
+}
+
+.form-header {
+    padding-bottom: var(--kendo-spacing-4);
+    border-bottom: 1px solid var(--kendo-color-border);
+    margin-bottom: var(--kendo-spacing-2);
+}
+
+.form-title {
+    font-size: var(--kendo-font-size-xl);
+    font-weight: 600;
+    color: var(--kendo-color-on-app-surface);
+    margin: 0;
+}
+
+.form-description {
+    font-size: var(--kendo-font-size-md);
+    color: var(--kendo-color-subtle);
+    margin: var(--kendo-spacing-1) 0 0;
+}
+
+.form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: var(--kendo-spacing-4);
+}
+
+.form-row {
+    display: flex;
+    gap: var(--kendo-spacing-4);
+}
+
+.form-row > * {
+    flex: 1;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-actions {
+    display: flex;
+    gap: var(--kendo-spacing-3);
+    padding-top: var(--kendo-spacing-4);
+    border-top: 1px solid var(--kendo-color-border);
+}
+
+@media (max-width: 767px) {
+    .demo-container {
+        padding: var(--kendo-spacing-6);
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+}

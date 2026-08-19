@@ -88,5 +88,5 @@ To resolve the issue, follow these steps:
 
 -   [Setting Up Your KendoReact License Key](slug:my_license)
 -   [License Activation Errors and Warnings](slug:license_activation_errors)
--   [Adding the License Key to CI Services](slug:ci_services_license)
+-   [Adding Deployment Keys to CI/CD Services](slug:ci_services_license)
 -   [Frequently Asked Questions about Your KendoReact License Key](slug:faq_license)

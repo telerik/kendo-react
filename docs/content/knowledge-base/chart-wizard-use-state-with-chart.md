@@ -39,7 +39,7 @@ This KB article also answers the following questions:
 
 The ChartWizard component generates a `ChartWizardState` object that contains all the configuration needed to render a Chart. You can use this state object to control the Chart component by spreading its properties and mapping its arrays to the appropriate Chart child components.
 
-{% meta height:600 %}
+{% meta height:620 %}
 {% embed_file chart-wizard/use-state-with-chart/app.tsx preview %}
 {% embed_file chart-wizard/use-state-with-chart/main.tsx %}
 {% endmeta %}

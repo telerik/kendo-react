@@ -13,7 +13,7 @@ The **Month** view displays a high-level schedule overview organized by weeks.
 
 The following example demonstrates how to set common properties of the **Month** view of the Scheduler. For the full list of configuration options, refer to the API reference of the [`MonthView`]({% slug api_scheduler_monthviewprops %}) properties.
 
-{% meta height:670 %}
+{% meta height:780 %}
 {% embed_file views/month/configuration/func/app.tsx preview %}
 {% embed_file views/month/configuration/func/main.tsx %}
 {% endmeta %}
@@ -22,7 +22,9 @@ The following example demonstrates how to set common properties of the **Month**
 
 You can configure the **Month** view to display events that are grouped by a resource.
 
-{% meta height:760 %}
+The following example demonstrates how to group events by multiple resources in both horizontal and vertical orientations.
+
+{% meta height:800 %}
 {% embed_file views/month/grouping/func/app.tsx preview %}
 {% embed_file views/month/grouping/func/main.tsx %}
 {% endmeta %}

@@ -20,7 +20,7 @@ To configure recurring behavior for a Scheduler event, use any of the following 
 
 The following example demonstrates how to set a recurrence rule and a recurrence exception.
 
-{% meta height:770 %}
+{% meta height:780 %}
 {% embed_file recurring/overview/overview/func/app.tsx preview %}
 {% embed_file recurring/overview/overview/func/main.tsx %}
 {% embed_file recurring/overview/overview/func/data.ts %}
@@ -78,7 +78,7 @@ If server-side expansion of the events occurs, the Scheduler will receive the ev
 
 The following example simulates a server-side expansion of events by providing all of the occurrences together with the original recurring event.
 
-{% meta height:770 %}
+{% meta height:780 %}
 {% embed_file recurring/overview/id/func/app.tsx preview %}
 {% embed_file recurring/overview/id/func/main.tsx %}
 {% embed_file recurring/overview/id/func/server-data.ts %}

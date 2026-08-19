@@ -42,7 +42,7 @@ The KendoReact Popup provides the following key features. Note that this is not 
 
 ## How Does the KendoReact Popup Work?
 
-> The KendoReact Popup provides [free React popup](#package-contents) that don't require a commercial license key or an active trial license key to install or use.
+> The KendoReact Popup provides [free React popup](slug:getting_started_free_vs_premium) that don't require a commercial license key or an active trial license key to install or use.
 
 The KendoReact Popup is built natively for React, with no dependencies. They leverage key React concepts such as components-based architecture, props and state management, conditional rendering, and event handling.
 

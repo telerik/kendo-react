@@ -14,7 +14,7 @@ The Chat component provides a powerful configuration system that allows you to c
 
 Both `authorMessageSettings` and `receiverMessageSettings` accept a `MessageSettings` object that allows you to override global message settings for each message type independently:
 
--   [`allowMessageCollapse`](slug:messages_appearance_chat#collapsible-messages)
+-   [`allowMessageCollapse`](slug:messages_appearance_chat#expanding-and-collapsing-messages)
 -   [`messageWidthMode`](slug:messages_appearance_chat#messages-width)
 -   [`messageTemplate`](slug:customization_message_templates_chat)
 -   [`messageContentTemplate`](slug:customization_message_content_templates_chat)

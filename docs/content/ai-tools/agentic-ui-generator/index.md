@@ -5,7 +5,7 @@ description: Discover the KendoReact MCP server tools and learn how the Agentic 
 slug: ai_tools_overview
 position: 0
 tag: updated
-release_tag: Q2 2026
+release_tag: Q3 2026
 ---
 
 # KendoReact AI Tools Overview
@@ -51,10 +51,16 @@ The KendoReact MCP server uses an orchestration-first model, centered on the Age
     <Column count={[24,12,6]}>
         <Component className="tile card-icon" href="#styling-assistant">
         <ComponentTitle>Styling Assistant</ComponentTitle>
+        </Component>
     </Column>
     <Column count={[24,12,6]}>
       <Component className="tile card-icon" href="#accessibility-assistant">
         <ComponentTitle>Accessibility Assistant</ComponentTitle>
+        </Component>
+    </Column>
+    <Column count={[24,12,6]}>
+        <Component className="tile card-icon" href="#upgrade-assistant">
+            <ComponentTitle>Upgrade Assistant</ComponentTitle>
         </Component>
     </Column>
 </Row>
@@ -116,9 +122,21 @@ It is especially useful for interactive templates, complex component flows, and 
 
 <img alt="Icon Assistant" src="../images/accessibility-assistant.png" style="width: 50%"/>
 
+### Upgrade Assistant
+
+Use the Upgrade Assistant when upgrading between major KendoReact versions. It runs the available [Kendo CLI codemods](slug:assisted_migration) for the specified migration path automatically, then uses AI reasoning to resolve any remaining compilation errors and project-specific edge cases.
+
+> For a full step-by-step guide, see [AI-Assisted Migration](slug:ai_upgrade_assistant).
+
 ### When to Use Orchestrated vs Targeted Mode
 
-Use `#kendo_ui_generator` for a complete orchestration-first workflow from a single prompt. When you need finer control or want to adjust just one aspect (such as layout, theme, or a component), you can call a specialized assistant directly by its dedicated handle. For details, see [Target the Assistants (Advanced)](slug:agentic_ui_generator_prompt_library#assistant-specific-prompts).
+Use `#kendo_ui_generator` for a complete orchestration-first workflow from a single prompt. When you need finer control or want to adjust just one aspect (such as layout, theme, or a component), you can call a specialized assistant directly by its dedicated handle. For details, see the [assistant-specific prompts](slug:agentic_ui_generator_prompt_library).
+
+## AI Plugin
+
+The Agentic UI Generator also comes with an AI `kendo-react-plugin` that brings the same capabilities directly into your agent without any manual MCP configuration. Instead of tools, the plugin delivers the functionality as skills: purpose-built instructions that your agent picks up automatically from context or that you can call explicitly with a slash command. It is the fastest way to get started and an alternative to setting up the MCP Server through the Kendo CLI.
+
+To explore the available skills and usage examples, see the [Prompt Library](slug:agentic_ui_generator_prompt_library#skills-and-assistant-prompts).
 
 ## Start Building in Minutes
 
@@ -174,6 +192,8 @@ The KendoReact MCP server operates under the following conditions:
 
 -   Install the KendoReact MCP server and get started with the [Agentic UI Generator Getting Started](slug:agentic_ui_generator_getting_started) guide.
 -   Check out the [Agentic UI Generator Prompt Library](slug:agentic_ui_generator_prompt_library).
+-   Upgrade your project with the [Upgrade Assistant](slug:ai_upgrade_assistant).
+-   Use the [KendoReact AI Plugin](slug:ai_tools_overview#ai-plugin) to bring the same MCP capabilities directly into Claude Code, GitHub Copilot CLI, or VS Code Copilot without manual MCP configuration.
 -   Review the [Changelog](slug:ai_tools_changelog) for the latest updates.
 
 <style>

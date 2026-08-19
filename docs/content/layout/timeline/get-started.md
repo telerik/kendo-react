@@ -14,7 +14,7 @@ This guide provides essential information about using the KendoReact Timeline co
 
 After completing this guide, you will be able to reproduce the following example.
 
-{% meta height:780 %}
+{% meta height:1210 %}
 {% embed_file timeline/overview/func/app.tsx preview %}
 {% embed_file timeline/overview/func/main.tsx %}
 {% embed_file timeline/overview/func/events.ts %}

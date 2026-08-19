@@ -27,6 +27,8 @@ The following example demonstrates the Donut chart in action.
 
 The Donut chart renders multiple series in the form of concentric rings. This behavior is different from the behavior of the Pie chart, which supports only one series.
 
+The following example demonstrates how to render multiple data series as concentric rings in a Donut chart.
+
 {% meta height:465 %}
 {% embed_file chart/donut-series/func/app.tsx preview %}
 {% embed_file chart/donut-series/func/main.tsx %}
@@ -44,6 +46,8 @@ To display content in the center of the Donut chart, either:
 The center template is an HTML overlay that is positioned over the center of the Donut chart. To implement the content use the [donutCenterRender]({% slug api_charts_chartprops %}#toc-donutcenterrender) render prop of the `Chart` component.
 
 > While documents which are exported through the [HTML Drawing API]({% slug drawingofhtmlelements_drawing %}) display the content of the center template, vector graphics and [exported files]({% slug export_chart_charts %}) do not render it.
+
+The following example demonstrates how to use the [`donutCenterRender`]({% slug api_charts_chartprops %}#toc-donutcenterrender) prop to display a dynamic HTML overlay in the center of the Donut chart.
 
 {% meta height:465 %}
 {% embed_file chart/donut-center/func/app.tsx preview %}

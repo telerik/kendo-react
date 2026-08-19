@@ -12,7 +12,7 @@ The KendoReact SpeechToTextButton component provides programmatic control throug
 
 The following example demonstrates how to create `ref` for the SpeechToTextButton and use it to programmatically invoke the `start()`, `stop()`, `abort()` and the `isActive()` methods.
 
-{% meta height:600 %}
+{% meta height:720 %}
 {% embed_file speechtotextbutton/using-ref/app.tsx preview %}
 {% embed_file speechtotextbutton/using-ref/main.tsx %}
 {% embed_file speechtotextbutton/using-ref/styles.css %}

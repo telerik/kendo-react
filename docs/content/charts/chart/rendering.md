@@ -12,7 +12,7 @@ The Chart supports two mode for rendering its data&mdash;Canvas (bitmap) and SVG
 
 By default, the Chart delivers its data in SVG. You can navigate between the rendering modes and modify them by setting the [`renderAs`]({% slug api_charts_chartprops %}#toc-renderas) property.
 
-{% meta height:610 %}
+{% meta height:640 %}
 {% embed_file chart/rendering/func/app.tsx preview %}
 {% embed_file chart/rendering/func/main.tsx %}
 {% endmeta %}

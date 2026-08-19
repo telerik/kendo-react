@@ -30,7 +30,7 @@ These layers are stacked by type, regardless of declaration order. The default o
 
 The order can be changed by setting a `zIndex` on each layers. The following example demonstrates how to place a Bubble layer on top of a Shape layer using z-index.
 
-{% meta height:660 %}
+{% meta height:780 %}
 {% embed_file layers/zindex/func/app.tsx preview %}
 {% embed_file layers/zindex/func/main.tsx %}
 {% endmeta %}

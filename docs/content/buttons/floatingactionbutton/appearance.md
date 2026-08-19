@@ -14,6 +14,13 @@ The FloatingActionButton component provides many predefined appearance options s
 -   [Rounded](#rounded)
 -   [Theme Color](#theme-color)
 
+The following example demonstrates all the available appearance options of the FloatingActionButton in a single, configurable demo.
+
+{% meta height:220 %}
+{% embed_file floatingactionbutton/appearance/func/app.tsx preview %}
+{% embed_file floatingactionbutton/appearance/func/main.tsx %}
+{% endmeta %}
+
 ## Size
 
 The FloatingActionButton allows you to set different sizes.

@@ -20,6 +20,8 @@ After completing this guide, you will have a free React [Date Picker](slug://ove
 
 ## Before You Begin
 
+To follow the steps in this guide, you need to have a React project set up. If you don't have one, you can create a new React application using Vite by running the following command in your terminal:
+
 ```sh
 npm create vite@latest my-app -- --template react
 ```
@@ -30,6 +32,8 @@ This guide requires that you have **basic knowledge of React and TypeScript**, a
 
 ## Install the Components
 
+To install the Date Inputs package, run the following command in the root folder of your React project:
+
 ```sh
 npm i @progress/kendo-react-dateinputs
 ```
@@ -38,12 +42,12 @@ Run these commands in the root of your React project to install the KendoReact D
 
 ## Import the Components
 
+Place the `import` statements in the App component file (for example: `src/App.tsx`) for your project. Note that the steps for installing and importing all Date Inputs components are identical.
+
 ```tsx
 import { DatePicker } from '@progress/kendo-react-dateinputs';
 import '@progress/kendo-theme-default/dist/all.css';
 ```
-
-Place the `import` statements in the App component file (for example: `src/App.tsx`) for your project. Note that the steps for installing and importing all Date Inputs components are identical.
 
 ## Use the Components
 

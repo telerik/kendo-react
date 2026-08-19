@@ -1,0 +1,17 @@
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--kendo-spacing-8, 32px);
+    padding: 16px;
+}
+
+.charts-grid .k-chart {
+    height: 200px;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+}

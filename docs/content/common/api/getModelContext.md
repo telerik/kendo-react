@@ -7,7 +7,7 @@ slug: api_common_getmodelcontext
 ---
 
 # getModelContext
-Returns the `navigator.modelContext` if available (Chrome 146+), or `null`.
+Returns the `document.modelContext` if available, or `null`.
 
 #### Returns
 <code>

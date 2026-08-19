@@ -1,14 +1,14 @@
 ---
 title: Chart Integration
-description: 'Learn how to use the KendoReact Chart Wizard with the KendoReact Data Grid and integrate the two components.'
-components: ["datagrid"]
+description: 'Learn how to use the KendoReact Chart Wizard with the KendoReact Grid and integrate the two components.'
+components: ['grid']
 slug: grid_integration_with_chart
 position: 240
-subject: Data Grid Chart Integration option
+subject: Grid Chart Integration option
 tier: premium
 ---
 
-# KendoReact Data Grid Chart Integration
+# KendoReact Grid Chart Integration
 
 Integrating charts within the Grid provides a visual representation of the data, making trends, patterns, and outliers more clear compared to raw table data.
 
@@ -18,7 +18,7 @@ Use the [KendoReact Chart Wizard](slug:overview_chart-wizard) to quickly create 
 
 The following example demonstrates how to launch the Chart Wizard from a [Context Menu](slug:overview_contextmenu).
 
-{% meta height:650 %}
+{% meta height:700 %}
 {% embed_file chart-integration/context-menu/app.tsx preview %}
 {% embed_file chart-integration/context-menu/main.tsx %}
 {% endmeta %}
@@ -28,7 +28,7 @@ The following example demonstrates how to launch the Chart Wizard from a [Contex
 You can create charts from the Grid row and cell selection. Use one of the following methods to set up the [Chart Wizard](slug:overview_chart-wizard) component:
 
 -   [Using Data-Binding](#toc-using-data-binding)&mdash;Reduce the repetitive boilerplate code when creating charts from the Grid data.
--   [Using Grid Selected Keys](#toc-using-grid-selected-keys)&mdash;Create charts from the Grid `selectedKeys` property collection.
+-   [Using Grid Selected Keys](#using-selected-keys)&mdash;Create charts from the Grid `selectedKeys` property collection.
 
 ### Using Data-Binding
 
@@ -42,7 +42,7 @@ To bind the Chart Wizard component and create charts based on the Grid selection
 
 The following example demonstrates how to bind the Chart Wizard to the selection of the Grid:
 
-{% meta height:650 %}
+{% meta height:700 %}
 {% embed_file chart-integration/data-binding/app.tsx preview %}
 {% embed_file chart-integration/data-binding/main.tsx %}
 {% endmeta %}
@@ -89,7 +89,7 @@ You can bind the [Chart Wizard](slug:overview_chart-wizard) component without se
 
 The following example demonstrates how plot all data of the Grid through a floating button:
 
-{% meta height:660 %}
+{% meta height:780 %}
 {% embed_file chart-integration/all-data/app.tsx preview %}
 {% embed_file chart-integration/all-data/main.tsx %}
 {% endmeta %}
@@ -99,4 +99,4 @@ The following example demonstrates how plot all data of the Grid through a float
 -   [Chart Wizard Overview](slug:overview_chart-wizard)
 -   [API Index of the Grid](slug:api_grid)
 -   [API Index of the Chart Wizard](slug:api_chart-wizard)
--   [KendoReact Data Grid Context Menu](slug:context_menu_grid)
+-   [KendoReact Grid Context Menu](slug:context_menu_grid)

@@ -12,7 +12,7 @@ The KendoReact TreeList enables you to reorder its columns by dragging the heade
 
 To enable column reordering, set the [`reorderable`]({% slug api_treelist_treelistprops %}#toc-reorderable) property to `true` and update the TreeList [`columns`]({% slug api_treelist_treelistprops %}#toc-columns) collection using [`onColumnReorder`]({% slug api_treelist_treelistprops %}#toc-oncolumnreorder) event.
 
-{% meta height:580 %}
+{% meta height:690 %}
 {% embed_file reordering/func/app.tsx preview %}
 {% embed_file reordering/func/main.tsx %}
 {% endmeta %}

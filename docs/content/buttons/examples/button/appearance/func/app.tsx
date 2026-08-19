@@ -1,28 +1,77 @@
 import * as React from 'react';
 
 import { Button, ButtonProps } from '@progress/kendo-react-buttons';
-
-import { StyleConfigurator } from './style-configurator';
+import {
+    useConfigurator,
+    sizeOptions,
+    roundedOptions,
+    fillModeOptions,
+    themeColorOptions
+} from '@docs-shared/configurator';
 
 const App = () => {
-    const [size, setSize] = React.useState<ButtonProps['size']>('medium');
-    const [themeColor, setThemeColor] = React.useState<ButtonProps['themeColor']>('base');
-    const [fillMode, setFillMode] = React.useState<'solid' | 'outline' | 'flat' | 'link' | 'clear'>('solid');
-    const [rounded, setRounded] = React.useState<'small' | 'medium' | 'large' | 'full'>('medium');
+    const config = useConfigurator({
+        sections: [
+            {
+                label: 'Size',
+                controls: [
+                    {
+                        type: 'segmented',
+                        name: 'size',
+                        options: sizeOptions(['default', 'xs', 'small', 'medium', 'large']),
+                        defaultValue: 'default'
+                    }
+                ]
+            },
+            {
+                label: 'Border Radius',
+                controls: [
+                    {
+                        type: 'segmented',
+                        name: 'rounded',
+                        options: roundedOptions(['default', 'none', 'small', 'medium', 'large', 'full']),
+                        defaultValue: 'default'
+                    }
+                ]
+            },
+            {
+                label: 'Fill Mode',
+                controls: [
+                    {
+                        type: 'segmented',
+                        name: 'fillMode',
+                        options: fillModeOptions(['default', 'solid', 'outline', 'flat', 'link', 'clear']),
+                        defaultValue: 'default'
+                    }
+                ]
+            },
+            {
+                label: 'Theme Color',
+                controls: [
+                    {
+                        type: 'dropdown',
+                        name: 'themeColor',
+                        options: themeColorOptions(),
+                        defaultValue: 'primary'
+                    }
+                ]
+            }
+        ]
+    }) as {
+        size: ButtonProps['size'];
+        themeColor: ButtonProps['themeColor'];
+        fillMode: ButtonProps['fillMode'];
+        rounded: ButtonProps['rounded'];
+    };
 
     return (
-        <div>
-            <StyleConfigurator
-                size={size}
-                onSizeChange={setSize}
-                themeColor={themeColor}
-                onThemeColorChange={setThemeColor}
-                fillMode={fillMode}
-                onFillModeChange={setFillMode}
-                rounded={rounded}
-                onRoundedChange={setRounded}
-            />
-            <Button size={size} themeColor={themeColor} fillMode={fillMode} rounded={rounded}>
+        <div className="example-wrapper-center">
+            <Button
+                size={config.size}
+                themeColor={config.themeColor}
+                fillMode={config.fillMode}
+                rounded={config.rounded}
+            >
                 Button
             </Button>
         </div>

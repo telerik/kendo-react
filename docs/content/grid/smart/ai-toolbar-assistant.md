@@ -1,13 +1,13 @@
 ---
 title: AI Toolbar Assistant
-description: 'Learn how to use the AI Toolbar Assistant in the KendoKendoReact Data Grid to enable your end users to interact with your data using natural language prompts.'
-components: ['datagrid']
+description: 'Learn how to use the AI Toolbar Assistant in the KendoReact Grid to enable your end users to interact with your data using natural language prompts.'
+components: ['grid']
 slug: smart_grid_toolbar_assistant
 position: 80
 tier: premium
 ---
 
-# KendoReact DataGrid AI Toolbar Assistant
+# KendoReact Grid AI Toolbar Assistant
 
 > tip For an enhanced user experience with additional search capabilities, prompt suggestions, and streamlined UI, we recommend using the [AI Smart Box](slug:smart_grid_basic_operations). The AI Smart Box combines traditional search, semantic search, and AI-powered operations in a single, unified interface.
 
@@ -17,7 +17,7 @@ The AI Toolbar Assistant interprets user requests and automatically applies the 
 
 The following example demonstrates a Smart Grid that processes natural language requests for performing data operations, column management, selection, highlighting, and export operations.
 
-<demo metaUrl="grid/smart/resize-reorder-show-lock/basic/" height="770"></demo>
+<demo metaUrl="grid/smart/resize-reorder-show-lock/basic/" height="880"></demo>
 
 ## Implementation Steps
 
@@ -43,7 +43,7 @@ To configure the Grid's AI Toolbar Assistant:
     </Grid>;
     ```
 
-3. Configure the [`requestUrl`](slug:api_grid_gridtoolbaraiassistant#requesturl) property to point to your custom AI service endpoint:
+3. Configure the [`requestUrl`](slug:api_grid_gridtoolbaraiassistantprops#requesturl) property to point to your custom AI service endpoint:
 
     ```tsx
     <GridToolbarAIAssistant requestUrl="https://your-ai-service.com/api/grid" />
@@ -71,7 +71,7 @@ The AI Toolbar Assistant provides various configuration options to customize the
 
 ### Prompt Suggestions
 
-You can guide users with predefined prompts by using the [`suggestionsList`](slug:api_grid_gridtoolbaraiassistant#suggestionslist) property. This helps users understand the types of commands your AI service can process and provides quick access to common operations.
+You can guide users with predefined prompts by using the [`suggestionsList`](slug:api_grid_gridtoolbaraiassistantprops#suggestionslist) property. This helps users understand the types of commands your AI service can process and provides quick access to common operations.
 
 ```tsx
 <GridToolbarAIAssistant
@@ -88,7 +88,7 @@ You can guide users with predefined prompts by using the [`suggestionsList`](slu
 
 ### Placeholder Text
 
-Use the [`promptPlaceHolder`](slug:api_grid_gridtoolbaraiassistant#promptplaceholder) property to customize the placeholder text that appears in the AI prompt input field:
+Use the [`promptPlaceHolder`](slug:api_grid_gridtoolbaraiassistantprops#promptPlaceHolder) property to customize the placeholder text that appears in the AI prompt input field:
 
 ```tsx
 <GridToolbarAIAssistant
@@ -99,7 +99,7 @@ Use the [`promptPlaceHolder`](slug:api_grid_gridtoolbaraiassistant#promptplaceho
 
 ### Speech-to-Text
 
-Enable voice input capabilities using the [`enableSpeechToText`](slug:api_grid_gridtoolbaraiassistant#enablespeechtotext) property. This enhances accessibility by allowing users to speak their commands instead of typing:
+Enable voice input capabilities using the [`enableSpeechToText`](slug:api_grid_gridtoolbaraiassistantprops#enablespeechtotext) property. This enhances accessibility by allowing users to speak their commands instead of typing:
 
 ```tsx
 <GridToolbarAIAssistant requestUrl="https://your-ai-service.com/api/grid" enableSpeechToText={true} />
@@ -110,8 +110,8 @@ Enable voice input capabilities using the [`enableSpeechToText`](slug:api_grid_g
 -   [Smart Grid AI Assistant Tools Setup](slug:ai_assistant_tools_setup)
 -   [AI Service Setup](slug:ai_service_setup)
 -   [Smart Grid Overview](slug:smart_grid)
--   [KendoKendoReact Data Grid Configuring the ToolBar](slug:toolbar_tools_grid)
+-   [KendoReact Grid Configuring the ToolBar](slug:toolbar_tools_grid)
 -   [Grid Sorting](slug:sorting_grid)
--   [KendoKendoReact Data Grid Row and Cell Highlighting](slug:ai_highlight)
+-   [KendoReact Grid Row and Cell Highlighting](slug:ai_highlight)
 -   [KendoReact AIPrompt Overview](slug:overview_aiprompt)
 -   [API Reference of the GridToolbarAIAssistant](slug:api_grid_gridtoolbaraiassistant)

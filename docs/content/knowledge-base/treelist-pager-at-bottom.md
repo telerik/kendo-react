@@ -34,7 +34,7 @@ How can I make the pager stick to the bottom of the TreeList, even if the page s
 
 A custom [`Pager`]({% slug api_data-tools_pagerprops %}) should be rendered below the TreeList component and the [`onPageChange`]({% slug api_data-tools_pagerprops %}#toc-onpagechange) event should be handled to update accordingly the data visible on the current page.
 
-{% meta height:650 %}
+{% meta height:740 %}
 {% embed_file treelist/pager-at-bottom/app.tsx preview %}
 {% embed_file treelist/pager-at-bottom/main.tsx %}
 {% embed_file treelist/pager-at-bottom/pager.tsx %}

@@ -25,7 +25,7 @@ To load the main series data for the selected period on demand, use the [`onNavi
 
 ## Navigator on Top
 
-To display the navigator on top, set the [`position`]({% slug api_charts_chartnavigator %}#toc-position) prop to `"top"`.
+To display the navigator on top, set the [`position`](slug:api_charts_chartnavigatorprops#position) prop to `"top"`.
 
 {% meta height:500 %}
 {% embed_file stock-chart/navigator-top/func/app.tsx preview %}
@@ -36,7 +36,9 @@ To display the navigator on top, set the [`position`]({% slug api_charts_chartna
 
 Similar to the Chart component, the StockChart supports multiple panes and displays all additional panes above the navigator pane.
 
-{% meta height:700 %}
+The following example demonstrates a StockChart with multiple panes, where each pane displays a separate series above the navigator.
+
+{% meta height:980 %}
 {% embed_file stock-chart/multiple-panes/func/app.tsx preview %}
 {% embed_file stock-chart/multiple-panes/func/main.tsx %}
 {% endmeta %}

@@ -1,16 +1,16 @@
 ---
 title: Custom Pagination
-description: 'Get started with the paging functionality of the KendoKendoReact Data Grid and learn how to split content into pages.'
-components: ["datagrid"]
+description: 'Get started with the paging functionality of the KendoReact Grid and learn how to split content into pages.'
+components: ['grid']
 slug: custom_paging_grid
 position: 20
 tier: premium
 subject: Custom Pagination feature of the Grid
 ---
 
-# KendoReact Data Grid Custom Pagination
+# KendoReact Grid Custom Pagination
 
-Custom paging in the KendoReact Data Grid allows you to replace the default pager with a custom component tailored to your needs.
+Custom paging in the KendoReact Grid allows you to replace the default pager with a custom component tailored to your needs.
 
 <CtaPanelOverview></CtaPanelOverview>
 
@@ -40,7 +40,7 @@ It is possible to render a custom responsive pager by passing a component to the
 {% embed_file custom-pager-responsive/func/main.tsx %}
 {% endmeta %}
 
-## KendoReact Data Grid Paging APIs
+## KendoReact Grid Paging APIs
 
 -   [Grid Pageable Prop]({% slug api_grid_gridprops %}#toc-pageable)
 -   [Grid Pager Prop]({% slug api_grid_gridprops %}#toc-pager)

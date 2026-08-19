@@ -1,19 +1,26 @@
 ---
 title: Sticky Group Headers and Footers
-description: 'Learn how to enable sticky (pinned) group headers and footers in the KendoReact Data Grid so they remain visible while scrolling through grouped data.'
-components: ['datagrid']
+description: 'Learn how to enable sticky (pinned) group headers and footers in the KendoReact Grid so they remain visible while scrolling through grouped data.'
+components: ['grid']
 slug: groupingstickyheaders_grid
 position: 40
 subject: Grouping feature of the Grid
-tag: new
-release_tag: Q2 2026
 ---
 
 # Sticky Group Headers and Footers
 
-The KendoReact Data Grid supports sticky (pinned) group header and footer rows that remain visible at the top or bottom of the scrollable area while the user scrolls through grouped data. This makes it easy to always see which group the current data belongs to and what the aggregate values are.
+The KendoReact Grid supports sticky (pinned) group header and footer rows that remain visible at the top or bottom of the scrollable area while the user scrolls through grouped data. This makes it easy to always see which group the current data belongs to and what the aggregate values are.
 
 <CtaPanelOverview></CtaPanelOverview>
+
+The following example demonstrates a Grid with both sticky group headers and sticky group footers enabled. Scroll the Grid content to see the headers and footers pinned at the edges of the viewport.
+
+{% meta height:700 %}
+{% embed_file sticky-group-headers/func/app.tsx preview %}
+{% embed_file sticky-group-headers/func/main.tsx %}
+{% embed_file sticky-group-headers/func/gd-products.ts %}
+{% embed_file sticky-group-headers/func/gd-interfaces.ts %}
+{% endmeta %}
 
 ## Enabling Sticky Group Headers
 
@@ -49,20 +56,17 @@ When the user scrolls and the original group footer row is not yet in the viewpo
 >
 ```
 
-## Example
+## Sticky Group Headers and Footers Across Grouping Modes
 
-The following example demonstrates a Grid with both sticky group headers and sticky group footers enabled. Scroll the Grid content to see the headers and footers pinned at the edges of the viewport.
+You can keep group header and footer rows visible while scrolling across all four `displayMode` values.
 
-{% meta height:580 %}
-{% embed_file sticky-group-headers/func/app.tsx preview %}
-{% embed_file sticky-group-headers/func/main.tsx %}
-{% embed_file sticky-group-headers/func/gd-products.ts %}
-{% embed_file sticky-group-headers/func/gd-interfaces.ts %}
-{% endmeta %}
+The following example demonstrates a Grid with sticky group headers and footers that you can toggle on and off. Use the display mode selector to verify that stickiness is preserved in every grouping layout mode.
+
+<demo metaUrl="grid/grouping/sticky-headers-footers/" height="680"></demo>
 
 ## Suggested Links
 
--   [Overview of Grouping]({% slug groupingbasics_grid %})
--   [Grouping Aggregates]({% slug groupingaggregates_grid %})
--   [Locked Group Headers]({% slug groupinglockedcolumns_grid %})
--   [API Reference of the Grid Component]({% slug api_grid_gridprops %})
+- [Overview of Grouping]({% slug groupingbasics_grid %})
+- [Grouping Aggregates]({% slug groupingaggregates_grid %})
+- [Locked Group Headers]({% slug groupinglockedcolumns_grid %})
+- [API Reference of the Grid Component]({% slug api_grid_gridprops %})

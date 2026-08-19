@@ -119,7 +119,7 @@ If the invalid license attributes are still displayed after you have installed o
 
 ## Suggested Links
 
--   [Adding the License Key to CI Services](slug:ci_services_license)
+-   [Adding Deployment Keys to CI/CD Services](slug:ci_services_license)
 -   [Per-Project License Key Setup](slug:license_per_project_setup)
 -   [License Activation Errors and Warnings](slug:license_activation_errors)
 -   [Frequently Asked Questions](slug:faq_license)

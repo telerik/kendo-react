@@ -12,6 +12,13 @@ The DateInput provides a predefined set of appearance options.
 
 Apart from the default vision of the DateInput, these alternative styling options enable you to configure each individual aspect of the appearance of a DateInput.
 
+The following example demonstrates all the available appearance options of the DateInput in a single, configurable demo.
+
+{% meta height:140 %}
+{% embed_file dateinput/appearance/func/app.tsx preview %}
+{% embed_file dateinput/appearance/func/main.tsx %}
+{% endmeta %}
+
 ## Size
 
 You can set the size of the DateInput through the [`size`]({% slug api_dateinputs_dateinputprops %}#toc-size) property. The DateInput component comes in three different sizes: `small`, `medium` (default), and `large`.

@@ -22,7 +22,7 @@ The key benefits of the Typography component are:
 
 The following example demonstrates the Typography variants and styles in action.
 
-{% meta height:720 %}
+{% meta height:770 %}
 {% embed_file typography/overview/func/app.tsx preview %}
 {% embed_file typography/overview/func/main.tsx %}
 {% endmeta %}

@@ -34,7 +34,7 @@ defineFunction('distance', function(x1: number, y1: number, x2: number, y2: numb
 
 If you include the above JavaScript code, you can then use `DISTANCE` in formulas. For example, to find the distance between coordinate points `(2,2)` and `(5,6)`, type in a cell `=DISTANCE(2, 2, 5, 6)`. Optionally, you can use the function in combined expressions such as `=DISTANCE(0, 0, 1, 1) + DISTANCE(2, 2, 5, 6)`. Below you will find a runnable example:
 
-{% meta height:680 %}
+{% meta height:780 %}
 {% embed_file custom-functions/func/app.tsx preview %}
 {% embed_file custom-functions/func/main.tsx %}
 {% embed_file custom-functions/func/sheets.ts %}

@@ -16,7 +16,7 @@ The `PivotConfigurator` can be used for configuring the column and row dimension
 
 The following example demonstrates how to configure the `PivotConfigurator`.
 
-{% meta height:770 %}
+{% meta height:880 %}
 {% embed_file configurator/basic/func/app.tsx preview %}
 {% embed_file configurator/basic/func/main.tsx %}
 {% embed_file configurator/basic/func/wide-column.tsx %}

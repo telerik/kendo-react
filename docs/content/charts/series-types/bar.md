@@ -80,6 +80,8 @@ Stacked bar charts are suitable for indicating the proportion of individual valu
 
 Series are plotted on top of each other. The stack value is the sum of all values up until the current series. Negative values are placed on a separate stack.
 
+The following example demonstrates how to enable the stacked bar sub-type by setting the [`stack`]({% slug api_charts_chartseriesitemprops %}#toc-stack) property on the first series item to `true`.
+
 {% meta height:465 %}
 {% embed_file series-types/bar/stacked-bar/func/app.tsx preview %}
 {% embed_file series-types/bar/stacked-bar/func/main.tsx %}

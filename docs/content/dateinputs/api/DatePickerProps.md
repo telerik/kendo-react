@@ -805,10 +805,7 @@ boolean
 <td class="table-cell-comment">
 
 
-/**
- * Enable mouse wheel to increment or decrement segments.
- *
- *
+Enable mouse wheel to increment or decrement segments.
 
 
 
@@ -1873,11 +1870,8 @@ number
 <td class="table-cell-comment">
 
 
-/**
- * Set the upper threshold for interpreting a two-digit year as part of the current century ([see example](https://www.telerik.com/kendo-react-ui/components/dateinputs/dateinput/formats#toc-two---digit-year-max)).
- * Values smaller than (`twoDigitYearMax` + 1) map to 20xx. Larger map to 19xx.
- *
- *
+Set the upper threshold for interpreting a two-digit year as part of the current century ([see example](https://www.telerik.com/kendo-react-ui/components/dateinputs/dateinput/formats#toc-two---digit-year-max)).
+Values smaller than (`twoDigitYearMax` + 1) map to 20xx. Larger map to 19xx.
 
 
 

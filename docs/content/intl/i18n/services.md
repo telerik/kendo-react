@@ -35,7 +35,7 @@ The [`toLanguageString`]({% slug api_intl_localizationservice %}#toc-tolanguages
     - In Functional Components&mdash;Through the [`useLocalization`]({% slug api_intl_uselocalization %}) hook.
     - In Class Components &mdash;Register your child component for internationalization by using the [`registerForLocalization`]({% slug api_intl_registerforlocalization %}) function and consume it through the [`provideLocalizationService`]({% slug api_intl_providelocalizationservice %}) function.
 
-{% meta height:590 %}
+{% meta height:640 %}
 {% embed_file localization/overview/func/Message.tsx %}
 {% embed_file localization/overview/func/app.tsx preview %}
 {% embed_file localization/overview/func/main.tsx %}

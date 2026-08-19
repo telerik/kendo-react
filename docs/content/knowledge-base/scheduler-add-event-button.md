@@ -42,14 +42,14 @@ To achieve the addition of Scheduler entries through an external button, you can
 Below are examples showcasing both approaches:
 
 -   **Using Props**:
-    {% meta height:600 %}
+    {% meta height:820 %}
     {% embed_file scheduler/add-event-button/with-props/app.tsx preview %}
     {% embed_file scheduler/add-event-button/with-props/main.tsx %}
     {% embed_file scheduler/add-event-button/with-props/sc-events-utc.ts %}
     {% endmeta %}
 
 -   **Using Context**:
-    {% meta height:600 %}
+    {% meta height:820 %}
     {% embed_file scheduler/add-event-button/with-context/app.tsx preview %}
     {% embed_file scheduler/add-event-button/with-context/main.tsx %}
     {% embed_file scheduler/add-event-button/with-context/sc-events-utc.ts %}

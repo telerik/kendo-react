@@ -1,16 +1,16 @@
 ---
 title: Performance
-page_title: 'Optimal performance of React Data Grid RSC Mode'
-description: 'Configure the IOptimal performance of the RSC mode of KendoReact Data Grid'
-components: ["datagrid"]
+page_title: 'Optimal performance of React Grid RSC Mode'
+description: 'Configure the IOptimal performance of the RSC mode of KendoReact Grid'
+components: ['grid']
 slug: performance_rsc_grid
 subject: RSC Mode of the Grid
 position: 75
 ---
 
-# Optimizing KendoKendoReact Data Grid Performance in RSC Mode
+# Optimizing KendoReact Grid Performance in RSC Mode
 
-KendoKendoReact Data Grid is a powerful component for building data-driven applications in React. However, as applications grow in complexity, optimizing performance becomes crucial—especially when using the Grid in React Server Components (RSC) mode with Next.js.
+KendoReact Grid is a powerful component for building data-driven applications in React. However, as applications grow in complexity, optimizing performance becomes crucial—especially when using the Grid in React Server Components (RSC) mode with Next.js.
 
 <CtaPanelOverview></CtaPanelOverview>
 
@@ -24,7 +24,7 @@ When a package is added to optimizePackageImports, Next.js automatically tree-sh
 -   Smaller client-side JavaScript bundles.
 -   Improved server-side rendering (SSR) and React Server Components (RSC) performance.
 
-## Configuring KendoKendoReact Data Grid for Optimal Performance
+## Configuring KendoReact Grid for Optimal Performance
 
 To take advantage of `optimizePackageImports`, modify your Next.js configuration file (_next.config.js_) by adding all KendoReact packages (or at least the Grid dependencies):
 
@@ -82,4 +82,4 @@ module.exports = {
 
 ## Suggested Links
 
--   [KendoKendoReact Data Grid RSC Mode Overview](slug:overview_rsc_grid)
+-   [KendoReact Grid RSC Mode Overview](slug:overview_rsc_grid)

@@ -1536,6 +1536,41 @@ Represents the current range in which the item is rendered.
 <td class="table-cell-name">
 
 
+#### readonly?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+boolean
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Specifies if the event is read-only. When `true`, applies the `k-readonly` CSS class.
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### resizeHint?
 
 

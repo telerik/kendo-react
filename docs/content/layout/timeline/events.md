@@ -15,7 +15,7 @@ The KendoReact Timeline component exposes several events that you can use to han
 
 The following example demonstrates basic Timeline events:
 
-{% meta height:780 %}
+{% meta height:1210 %}
 {% embed_file timeline/events/func/app.tsx preview %}
 {% embed_file timeline/events/func/main.tsx %}
 {% embed_file timeline/events/func/events.ts %}

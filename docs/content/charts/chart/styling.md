@@ -8,7 +8,7 @@ position: 10
 
 # Appearance
 
-The colors of the Chart are derived from the active [KendoReact theme](https://github.com/telerik/kendo-themes). For customization of the themes, refer to the [customizing themes]({% slug themesandstyles %}#toc-customizing-themes) article.
+The colors of the Chart are derived from the active [KendoReact theme](https://github.com/telerik/kendo-themes). For customization of the themes, refer to the [customizing themes]({% slug themesandstyles %}) article.
 
 ## Setting the Dimensions
 
@@ -81,7 +81,7 @@ import '@progress/kendo-theme-material/dist/material-dataviz-v4.css';
     @import 'all.scss';
     ```
 
-*   Use the [`seriesColors`]({% slug api_charts_chart %}#toc-series-colors) prop on individual Chart instances:
+*   Use the [`seriesColors`]({% slug api_charts_chart %}) prop on individual Chart instances:
 
 {% meta height:470 %}
 {% embed_file styling/v4-series-colors/func/app.tsx preview %}

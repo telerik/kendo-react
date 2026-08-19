@@ -34,7 +34,7 @@ How to add a context menu to the Grid?
 
 You can implement a context menu in the Grid by using the [KendoReact Popup component]({% slug overview_popup %}) and then and display it on a right click.
 
-1. Attach the `onContextMenu` to the Grid rows and pass the row data to the context menu by utilizing the [`rowRender`]({% slug api_grid_gridprops %}#toc-rowRender) property.
+1. Attach the `onContextMenu` to the Grid rows and pass the row data to the context menu by utilizing the [`rowRender`]({% slug api_grid_gridprops %}) property (derecated as of v10.0.0).
 
     ```tsx-no-run
         rowRender = (trElement, dataItem) => {

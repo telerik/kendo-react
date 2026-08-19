@@ -12,12 +12,10 @@ By default, the Checkbox is enabled.
 
 To disable the component, set its [`disabled`]({% slug api_inputs_checkboxprops %}#toc-disabled) property to `true`.
 
-
 {% meta height:480 %}
 {% embed_file checkbox/disabled/func/app.tsx preview %}
 {% embed_file checkbox/disabled/func/main.tsx %}
 {% endmeta %}
-
 
 ## Suggested Links
 

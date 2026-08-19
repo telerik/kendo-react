@@ -32,7 +32,7 @@ I want to implement a scroll-to-bottom behavior for the ListBox when an item is 
 
 ## Solution
 
-To implement the scroll-to-bottom behavior, first, obtain a reference to the ListBox component. In the [onToolClick]({% slug api_listbox_listboxtoolbarprops %}#toc-ontoolbarclick) event of the `ListBoxToolbar` and the [onDrop]({% slug api_listbox_listboxprops %}#toc-ondrop) event of the ListBox, use the `scrollIntoView` method to scroll to the bottom whenever an item is dropped or transferred using the arrows.
+To implement the scroll-to-bottom behavior, first, obtain a reference to the ListBox component. In the [onToolClick]({% slug api_listbox_listboxtoolbarprops %}) event of the `ListBoxToolbar` and the [onDrop]({% slug api_listbox_listboxprops %}#toc-ondrop) event of the ListBox, use the `scrollIntoView` method to scroll to the bottom whenever an item is dropped or transferred using the arrows.
 
 {% meta height:500 %}
 {% embed_file listbox/scroll-to-bottom/app.jsx preview %}

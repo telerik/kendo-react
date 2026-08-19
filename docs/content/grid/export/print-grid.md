@@ -1,13 +1,13 @@
 ---
 title: Printing the Grid
-description: 'Learn how to print the KendoKendoReact Data Grid in different use case scenarios.'
-components: ["datagrid"]
+description: 'Learn how to print the KendoReact Grid in different use case scenarios.'
+components: ['grid']
 slug: print_grid
 position: 10
 tier: free
 ---
 
-# Printing the KendoKendoReact Data Grid
+# Printing the KendoReact Grid
 
 This article shows how to print the Grid in multiple use-case scenarios using the browser's print window.
 
@@ -27,7 +27,7 @@ The following example shows how to print a scrollable Grid by:
 -   Setting component's **scrollable** property to `none` for the time of printing
 -   Restoring the original Grid configuration after printing
 
-{% meta height:690 %}
+{% meta height:720 %}
 {% embed_file print/scrollable/app.tsx preview %}
 {% embed_file print/scrollable/main.tsx %}
 {% embed_file print/scrollable/style.css %}
@@ -42,7 +42,7 @@ The example shows how to prepare the pageable Grid for printing by:
 -   Setting the **scrollable** property to `none` for the time of printing
 -   Restoring the original configuration after printing
 
-{% meta height:580 %}
+{% meta height:630 %}
 {% embed_file print/pageable/app.tsx preview %}
 {% embed_file print/pageable/main.tsx %}
 {% embed_file print/pageable/style.css %}
@@ -61,7 +61,7 @@ The following example demonstrates how to control which Grid columns to print.
 
 This approach is useful when you have many columns that cannot all fit in the print window. Another option you can use the following implementation for is when only essential data should be printed. To test the example, deselect some of the checkboxes and print the Grid.
 
-{% meta height:770 %}
+{% meta height:870 %}
 {% embed_file print/scrollable-controlled/app.tsx preview %}
 {% embed_file print/scrollable-controlled/main.tsx %}
 {% embed_file print/scrollable-controlled/style.css %}
@@ -71,7 +71,7 @@ This approach is useful when you have many columns that cannot all fit in the pr
 
 The below example shows how we can resize the Grid's columns just before printing and then restore the original width when the printing is done. Using this approach, each column can have a specific width that is applied only during printing.
 
-{% meta height:660 %}
+{% meta height:720 %}
 {% embed_file print/contol-column-widths/app.tsx preview %}
 {% embed_file print/contol-column-widths/main.tsx %}
 {% embed_file print/contol-column-widths/style.css %}

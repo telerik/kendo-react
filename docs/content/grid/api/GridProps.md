@@ -3742,7 +3742,7 @@ Enables the built-in row span feature of the Grid.
 <code>
 
 
-[ScrollMode]({% slug api_grid_scrollmode %})
+[ScrollMode]({% slug api_grid_scrollmode %}) | [GridScrollableSettings]({% slug api_grid_gridscrollablesettings %})
 
 
 </code>

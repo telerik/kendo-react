@@ -80,7 +80,7 @@ WCAG sections [1.4.3 Contrast (Minimum)](https://www.w3.org/TR/WCAG22/#contrast-
 You can [obtain and use the Default Ocean Blue A11y swatch](https://www.telerik.com/design-system/docs/themes/kendo-themes/default/swatches/#ocean-blue-accessibility-swatch) starting from the following component and theme versions:
 
 -   [KendoReact version 5.10.0](https://www.telerik.com/kendo-react-ui/components/changelogs/ui-for-react#v5.10.0)
--   [Themes version 6.0.3](https://github.com/telerik/kendo-themes/releases/tag/v6.0.3). Check section [Theme Version Compatibility](slug:compliance_accessibilty#compatibility-and-maintenance) on how to align KendoReact versions with theme versions.
+-   [Themes version 6.0.3](https://github.com/telerik/kendo-themes/releases/tag/v6.0.3). Check section [Theme Version Compatibility](slug:compliance_accessibilty) on how to align KendoReact versions with theme versions.
 
 ## Development Practices
 

@@ -25,10 +25,9 @@ You can configure the Pager by using the following properties:
 -   [`adaptive`]({% slug api_data-tools_pagerprops %}#toc-adaptive)&mdash;Toggles the adaptive page sizes drop-down.
 -   [`adaptiveTitle`]({% slug api_data-tools_pagerprops %}#toc-adaptiveTitle)&mdash;Specifies the text that is rendered as title in the adaptive page sizes drop-down element.
 
-{% meta height:450 %}
+{% meta height:760 %}
 {% embed_file pager/overview/func/app.tsx preview %}
 {% embed_file pager/overview/func/main.tsx %}
-{% embed_file pager/overview/func/configurator.tsx %}
 {% endmeta %}
 
 > The Pager is part of the [KendoReact Data Tools]({% slug overview_datatools %}) component library. The procedures for installing, importing, and using the Data Tools are identical for all components in the package. To learn how to use the Pager and the rest of the Data Tools, see the [Getting Started with the KendoReact Data Tools]({% slug overview_datatools %}) guide.

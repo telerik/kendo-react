@@ -104,7 +104,7 @@ The dash type of the border line.
 <code>
 
 
-string | number
+number
 
 
 </code>

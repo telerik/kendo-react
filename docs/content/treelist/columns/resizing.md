@@ -12,7 +12,7 @@ The KendoReact Data TreeList enables you to resize its columns by dragging the e
 
 To enable column resizing, set the [`resizable`]({% slug api_treelist_treelistprops %}#toc-resizable) property of the TreeList to `true`.
 
-{% meta height:580 %}
+{% meta height:710 %}
 {% embed_file resizing/func/app.tsx preview %}
 {% embed_file resizing/func/main.tsx %}
 {% endmeta %}

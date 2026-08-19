@@ -20,6 +20,8 @@ After completing this guide, you will be able to reproduce the following example
 
 ## Install the Component
 
+To install the Charts package, run the following command in the root folder of your React project:
+
 ```sh
 npm i @progress/kendo-react-charts
 ```

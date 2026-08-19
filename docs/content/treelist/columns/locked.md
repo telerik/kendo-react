@@ -18,7 +18,9 @@ In order for the locked columns to work properly, configure the following option
 
 > By default, the columns of the TreeList are not locked.
 
-{% meta height:580 %}
+The following example demonstrates how to lock the `Name` and `Full Time` columns so they remain visible while the user scrolls the TreeList horizontally.
+
+{% meta height:710 %}
 {% embed_file locked/func/app.tsx preview %}
 {% embed_file locked/func/main.tsx %}
 {% endmeta %}

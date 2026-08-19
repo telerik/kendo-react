@@ -1,16 +1,16 @@
 ---
 title: AI Column Assistant
-description: 'Learn how to implement an AI Custom Column in the KendoReact Data Grid that provides personalized insights and analysis for individual rows using natural language interactions.'
-components: ['datagrid']
+description: 'Learn how to implement an AI Custom Column in the KendoReact Grid that provides personalized insights and analysis for individual rows using natural language interactions.'
+components: ['grid']
 slug: ai_custom_column
 position: 90
 tier: premium
 subject: Custom Smart feature of the Grid
 ---
 
-# KendoReact Data Grid AI Column Assistant
+# KendoReact Grid AI Column Assistant
 
-The KendoReact Data Grid can be enhanced with custom AI-powered custom columns that provide personalized insights, summaries, and explanations about individual Grid rows.
+The KendoReact Grid can be enhanced with custom AI-powered custom columns that provide personalized insights, summaries, and explanations about individual Grid rows.
 
 By integrating the Inline AI Prompt component with [Custom Cells](slug:cells_grid), you can create an interactive experience where users can ask natural language questions about specific data records and receive contextual AI-generated responses.
 
@@ -126,7 +126,7 @@ To implement an AI Custom Column in your Grid:
 
 The following example demonstrates a Grid with an AI Custom Column that allows users to ask questions and get insights about specific customer data:
 
-<demo metaUrl="grid/smart/custom-column/" height="540"></demo>
+<demo metaUrl="grid/smart/custom-column/" height="630"></demo>
 
 ## Suggested Links
 

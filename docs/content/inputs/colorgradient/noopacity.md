@@ -12,8 +12,6 @@ The ColorGradient provides options for the user to specify whether an alpha slid
 
 The following example demonstrates how to remove the opacity-related fields.
 
-
-
 {% meta height:500 %}
 {% embed_file colorgradient/opacity/func/app.tsx preview %}
 {% embed_file colorgradient/opacity/func/main.tsx %}

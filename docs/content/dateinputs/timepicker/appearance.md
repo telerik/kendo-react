@@ -16,6 +16,13 @@ Apart from the default vision of the TimePicker, these alternative styling optio
 -   [Fill Mode](#fill-mode)
 -   [Rounded](#rounded)
 
+The following example demonstrates all the available appearance options of the TimePicker in a single, configurable demo.
+
+{% meta height:470 %}
+{% embed_file timepicker/appearance/func/app.tsx preview %}
+{% embed_file timepicker/appearance/func/main.tsx %}
+{% endmeta %}
+
 ## Size
 
 You can set the size of the TimePicker through the [`size`]({% slug api_dateinputs_timepickerprops %}#toc-size) property. The TimePicker component comes in three different sizes: `small`, `medium` (default), and `large`.

@@ -35,7 +35,7 @@ To customize a specific part of the `Task` tree, provide the corresponding [task
 
 The following example demonstrates basic customization of the `SchedulerTask` component.
 
-{% meta height:770 %}
+{% meta height:780 %}
 {% embed_file tasks/overview/func/app.tsx preview %}
 {% embed_file tasks/overview/func/main.tsx %}
 {% endmeta %}

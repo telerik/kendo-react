@@ -4,8 +4,6 @@ description: 'Add alternative styling options to the KendoReact SplitButton in R
 components: ['splitbutton']
 slug: appearance_splitbutton
 position: 6
-tag: updated
-release_tag: Q2 2026
 ---
 
 # Appearance
@@ -18,6 +16,13 @@ Apart from the default vision of the SplitButton, these alternative styling opti
 -   [Border Radius](#border-radius)
 -   [Fill Mode](#fill-mode)
 -   [Theme Colors](#theme-colors)
+
+The following example demonstrates all the available appearance options of the SplitButton in a single, configurable demo.
+
+{% meta height:270 %}
+{% embed_file splitbutton/appearance/func/app.tsx preview %}
+{% embed_file splitbutton/appearance/func/main.tsx %}
+{% endmeta %}
 
 ## Size
 

@@ -23,7 +23,7 @@ The forms supports enables you to validate input values and prevent the submissi
 
 The DropDownList supports props for setting basic validation requirements. The [`required`]({% slug api_dropdowns_dropdownlistprops %}#toc-required) property enables the user to pre-define a selection that is required for a successful form submission.
 
-{% meta height:570 %}
+{% meta height:620 %}
 {% embed_file dropdownlist/forms/basic/func/app.tsx preview %}
 {% embed_file dropdownlist/forms/basic/func/main.tsx %}
 {% endmeta %}

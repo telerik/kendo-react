@@ -23,7 +23,7 @@ To manually specify the page breaks, use the [`forcePageBreak`]({% slug api_pdf_
 
 The following example demonstrates how to split the content into multiple pages.
 
-{% meta height:612 %}
+{% meta height:640 %}
 {% embed_file multi-page-content-manual/func/app.tsx preview %}
 {% embed_file multi-page-content-manual/func/main.tsx %}
 {% endmeta %}
@@ -34,7 +34,7 @@ The PDF Processing component supports automatic page breaking. To automatically 
 
 For more information, refer to the [known limitations of the Drawing library and the PDF Export component]({% slug limitationsbrowsersupport_drawing %}).
 
-{% meta height:870 %}
+{% meta height:1340 %}
 {% embed_file multi-page-content-auto/func/app.tsx preview %}
 {% embed_file multi-page-content-auto/func/main.tsx %}
 {% endmeta %}

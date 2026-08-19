@@ -1,15 +1,15 @@
 import * as React from 'react';
 import { Button } from '@progress/kendo-react-buttons';
 import { saveAs } from '@progress/kendo-file-saver';
-import { Barcode, QRCode } from '@progress/kendo-react-barcodes';
+import { Barcode, BarcodeHandle, QRCode, QRCodeHandle } from '@progress/kendo-react-barcodes';
 
 const cardStyles = {
     width: '200px'
 };
 
 const App = () => {
-    const barcode = React.createRef<Barcode>();
-    const qrcode = React.createRef<QRCode>();
+    const barcode = React.createRef<BarcodeHandle>();
+    const qrcode = React.createRef<QRCodeHandle>();
 
     const exportBarcode = () => {
         if (!barcode.current) {

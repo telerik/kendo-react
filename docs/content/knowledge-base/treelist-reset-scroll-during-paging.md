@@ -32,7 +32,7 @@ When navigating between pages in the TreeList, the scroll position is not automa
 
 Use the [`onPageChange`]({% slug api_treelist_treelistprops %}#toc-onpagechange) event to detect page changes and manually reset the scroll position of the TreeList container. Access the TreeList's scrollable container using a ref and set its `scrollTop` property to `0`.
 
-<demo metaUrl="knowledge-base/treelist/treelist-reset-scroll-during-paging/" height="550"></demo>
+<demo metaUrl="knowledge-base/treelist/treelist-reset-scroll-during-paging/" height="610"></demo>
 
 ## See Also
 

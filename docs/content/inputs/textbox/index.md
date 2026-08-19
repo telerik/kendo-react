@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: 'Try the React Textbox component by KendoReact that covers everything from configuring default values to form validation.'
-components: ["textbox"]
+components: ['textbox']
 slug: overview_textbox
 position: 0
 ---
@@ -14,7 +14,7 @@ The KendoReact TextBox component provides options for creating composite inputs 
 
 The following example demonstrates the TextBox in action.
 
-{% meta height:300 %}
+{% meta height:450 %}
 {% embed_file textbox/overview/func/app.tsx preview %}
 {% embed_file textbox/overview/func/main.tsx %}
 {% embed_file textbox/overview/func/overview-styles.css %}

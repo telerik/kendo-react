@@ -123,6 +123,9 @@ position: 1
         <a href="{% slug api_webmcp_numerictextboxcommands %}">NumericTextBoxCommands</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_webmcp_otpinputcommands %}">OTPInputCommands</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_webmcp_panelbarcommands %}">PanelBarCommands</a>
     </li>
     <li class="api-item">

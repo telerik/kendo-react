@@ -20,6 +20,8 @@ After completing this guide, you will be able to reproduce the following example
 
 ## Before You Begin
 
+To follow the steps in this guide, you need to have a React project set up. If you don't have one, you can create a new React application using Vite by running the following command in your terminal:
+
 ```sh
 npm create vite@latest my-app -- --template react
 ```
@@ -30,6 +32,8 @@ This guide requires that you have **basic knowledge of React and TypeScript**, a
 
 ## Install the Components
 
+To install the Progress Bars package, run the following command in the root folder of your React project:
+
 ```sh
 npm i @progress/kendo-react-progressbars
 ```
@@ -38,11 +42,11 @@ Run these commands in the root of your React project to install the KendoReact P
 
 ## Import the Components
 
+Place the `import` statements in the App component file (for example: `src/App.tsx`) for your project. Note that the steps for installing and importing all Progress Bars components are identical.
+
 ```tsx
 import { Progressbar } from '@progress/kendo-react-progressbars';
 ```
-
-Place the `import` statements in the App component file (for example: `src/App.tsx`) for your project. Note that the steps for installing and importing all Progress Bars components are identical.
 
 ## Use the Components
 

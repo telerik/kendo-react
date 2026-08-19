@@ -14,7 +14,7 @@ The [`onClick`](slug:api_buttons_smartpastebuttonprops#toc-onClick) event is the
 
 The following example demonstrates the SmartPasteButton events.
 
-<demo metaUrl="buttons/smartpaste/events/" height="710"></demo>
+<demo metaUrl="buttons/smartpaste/events/" height="790"></demo>
 
 ## Suggested Links
 

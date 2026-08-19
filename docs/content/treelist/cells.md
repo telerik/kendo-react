@@ -35,7 +35,24 @@ The [`TreeListHeaderCell`]({% slug api_treelist_treelistheadercell %}) component
 
 ## Customizing the Cells
 
-The following example demonstrates how to set a custom cell in the TreeList.
+To replace a default cell with a custom one, create a React component that accepts [`TreeListCellProps`]({% slug api_treelist_treelistcellprops %}) and returns a `<td />` element, then pass it to the [`cell`]({% slug api_treelist_treelistcolumnprops %}#toc-cell) property of the column.
+
+```tsx
+const MyCell = (props: TreeListCellProps) => {
+    const cellData = props.dataItem[props.field || ''];
+    return (
+        <td>
+            <span style={{ color: cellData ? 'green' : 'red' }}>{String(cellData)}</span>
+        </td>
+    );
+};
+
+const columns = [
+    { field: 'fullTime', title: 'Full Time', cell: MyCell }
+];
+```
+
+The following example demonstrates how to replace the default **Full Time** column cell with a custom cell that renders the boolean value in green or red.
 
 {% meta height:580 %}
 {% embed_file cells-custom/func/app.tsx preview %}

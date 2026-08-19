@@ -1,7 +1,7 @@
 ---
 title: Editor
 description: 'Get started with the SchedulerFormEditor component and learn how to customize it through properties, or completely override it by providing a custom component.'
-components: ["scheduler"]
+components: ['scheduler']
 slug: overview_customization_form_editor_scheduler
 position: 2
 ---
@@ -35,9 +35,9 @@ Since the `SchedulerFormEditor` is a composite component of the [`KendoReact For
 
 Through the `editor` property of the `SchedulerForm` we can pass a modified version of the default `SchedulerFormEditor` component. Such modifications can include passing additional `className`, `style` or `horizontal` properties. For the full list of properties please refer to the [`SchedulerFormEditorProps`]({% slug api_scheduler_schedulerformeditorprops %}) API.
 
-The following example demonstrates how to customize the default `SchedulerFormEditor` component, by setting the `horizontal` property to true, which will render the component in horizontal mode.
+The following example demonstrates how to customize the default `SchedulerFormEditor` component, by setting the `horizontal` property to false, which will render the component in vertical mode.
 
-{% meta height:700 %}
+{% meta height:780 %}
 {% embed_file customization/editor/default-editor/extending-root/func/app.tsx preview %}
 {% embed_file customization/editor/default-editor/extending-root/func/main.tsx %}
 {% embed_file customization/editor/default-editor/extending-root/func/custom-form-editor.tsx %}
@@ -48,9 +48,9 @@ The following example demonstrates how to customize the default `SchedulerFormEd
 
 Another common scenario is replacing some of the internal `field` editors we expose, without explicitly having to re-write the whole editor by yourself.
 
-For each `field`, we expose a set of `Error`, `Label` and `Editor` property. For example, the `title` field have three components corresponding to its state, each of which can be modified through the `titleError`,`titleLabel` and `titleEditor` properties. For the full list of properties please refer to the [`SchedulerFormEditorProps`]({% slug api_scheduler_schedulerformeditorprops %}) API.
+For each `field`, we expose an `Editor` property and where applicable a `Label` property. For example, the `title` field editor can be replaced through the `titleEditor` property, the `start` and `end` fields expose both `startEditor`/`startLabel` and `endEditor`/`endLabel`, and the `allDay` field exposes `allDayEditor`/`allDayLabel`. For the full list of properties please refer to the [`SchedulerFormEditorProps`]({% slug api_scheduler_schedulerformeditorprops %}) API.
 
-The following example demonstrates how to provide custom `error` components which are only displayed once the user have interacted with the field, or tried submitting the form.
+The following example demonstrates how to provide custom editor components.
 
 {% meta height:500 %}
 {% embed_file customization/editor/default-editor/replacing-editors/func/app.tsx preview %}
@@ -66,7 +66,7 @@ The communication between the `form` and the editor `fields` is achieved through
 
 The following example demonstrates building an entirely custom `editor` in combination with custom `form`.
 
-{% meta height:900 %}
+{% meta height:1000 %}
 {% embed_file customization/editor/custom-editor/func/app.tsx preview %}
 {% embed_file customization/editor/custom-editor/func/main.tsx %}
 {% embed_file customization/editor/custom-editor/func/custom-dialog.tsx %}

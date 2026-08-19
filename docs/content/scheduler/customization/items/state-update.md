@@ -84,7 +84,7 @@ For example, the default `onDoubleClick` handler is changing the internal `formI
 
 The following example extends the [Attaching callback handlers]({% slug item_items_scheduler %}#toc-attaching-callback-handlers) demo, to provide editing through the visualized popup.
 
-{% meta height:700 %}
+{% meta height:780 %}
 {% embed_file items/context/action-binding/func/app.tsx preview %}
 {% embed_file items/context/action-binding/func/main.tsx %}
 {% endmeta %}

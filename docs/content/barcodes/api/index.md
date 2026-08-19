@@ -57,6 +57,9 @@ position: 1
 
   <ul class="api-item-list">
     <li class="api-item">
+        <a href="{% slug api_barcodes_barcodehandle %}">BarcodeHandle</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_barcodes_barcodeprops %}">BarcodeProps</a>
     </li>
     <li class="api-item">
@@ -70,6 +73,9 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_barcodes_padding %}">Padding</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_barcodes_qrcodehandle %}">QRCodeHandle</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_barcodes_qrcodeoverlay %}">QRCodeOverlay</a>

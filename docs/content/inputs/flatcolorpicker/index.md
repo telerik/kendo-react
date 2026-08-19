@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: 'Get an overview of the features the KendoReact FlatColorPicker delivers and use the component in React projects.'
-components: ["flatcolorpicker"]
+components: ['flatcolorpicker']
 slug: overview_flatcolorpicker
 position: 1
 ---
@@ -14,10 +14,10 @@ The FlatColorPicker component provides a flat view for the ColorGradient and the
 
 The following example demonstrates the FlatColorPicker in action.
 
-{% meta height:580 %}
-{% embed_file flatcolorpicker/basic/func/app.tsx preview %}
-{% embed_file flatcolorpicker/basic/func/main.tsx %}
-{% embed_file flatcolorpicker/basic/func/styles.css %}
+{% meta height:750 %}
+{% embed_file flatcolorpicker/overview/func/app.tsx preview %}
+{% embed_file flatcolorpicker/overview/func/main.tsx %}
+{% embed_file flatcolorpicker/overview/func/styles.css %}
 {% endmeta %}
 
 ## Key Features

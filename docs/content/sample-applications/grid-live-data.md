@@ -29,7 +29,7 @@ To play with the demo and see how it’s built, you may want to run it locally:
 
 ## About the App
 
-This application shows how to use the KendoReact Grid to render multiple live updates in a short time (also referred to as streaming updates). The Data Grid will only re-renderer (not re-mount) the updated rows when it receives the new data real-time. That makes each streaming update very efficient. In this application, we use the KendoReact Data Grid and Charts to visualize the data and to show both the data trends in the Chart and the details in the Grid. The application also uses the KendoReact Badge and Cards to display different data.
+This application shows how to use the KendoReact Grid to render multiple live updates in a short time (also referred to as streaming updates). The Grid will only re-renderer (not re-mount) the updated rows when it receives the new data real-time. That makes each streaming update very efficient. In this application, we use the KendoReact Grid and Charts to visualize the data and to show both the data trends in the Chart and the details in the Grid. The application also uses the KendoReact Badge and Cards to display different data.
 
 ## Full List of the Used KendoReact Components
 
@@ -37,7 +37,7 @@ You can see the following five KendoReact components implemented in this sample 
 
 -   [KendoReact Charts]({% slug overview_charts %})
 -   [Area Chart]({% slug area_seriestypes_charts %})
--   [KendoReact Data Grid]({% slug overview_grid %})
+-   [KendoReact Grid]({% slug overview_grid %})
 -   [KendoReact Badge]({% slug overview_badge %})
 -   [KendoReact Card]({% slug overview_card %})
 -   [KendoReact Avatar]({% slug overview_avatar %})

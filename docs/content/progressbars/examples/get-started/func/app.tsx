@@ -4,7 +4,11 @@ import {
 } from '@progress/kendo-react-progressbars';
 
 const App = () => {
-    return <ProgressBar value={50} />;
+    return (
+        <div className="example-wrapper-center">
+            <ProgressBar value={50} />
+        </div>
+    );
 };
 
 export default App;

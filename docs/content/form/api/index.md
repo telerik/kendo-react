@@ -28,39 +28,6 @@ position: 1
 <span class="section-key">
 
 
-## Class
-
-
-</span>
-
-
-  <ul class="api-item-list">
-    <li class="api-item">
-        <a href="{% slug api_form_field %}">Field</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_form_fieldarray %}">FieldArray</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_form_fieldvalidatortype %}">FieldValidatorType</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_form_fieldwrapper %}">FieldWrapper</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_form_form %}">Form</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_form_formvalidatortype %}">FormValidatorType</a>
-    </li>
-  </ul>
-</div>
-<div class="api-index-section">
-
-
-<span class="section-key">
-
-
 ## Component
 
 
@@ -76,9 +43,6 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_form_fieldwrapper %}">FieldWrapper</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_form_form %}">Form</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_form_form %}">Form</a>
@@ -160,6 +124,27 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_form_responsiveformbreakpoint %}">ResponsiveFormBreakPoint</a>
+    </li>
+  </ul>
+</div>
+<div class="api-index-section">
+
+
+<span class="section-key">
+
+
+## Class
+
+
+</span>
+
+
+  <ul class="api-item-list">
+    <li class="api-item">
+        <a href="{% slug api_form_fieldvalidatortype %}">FieldValidatorType</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_form_formvalidatortype %}">FormValidatorType</a>
     </li>
   </ul>
 </div>

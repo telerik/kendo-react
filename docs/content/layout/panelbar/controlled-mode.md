@@ -17,7 +17,7 @@ To manage the state of the PanelBar:
 * Set the new value trough the props.
 
 
-{% meta height:550 %}
+{% meta height:620 %}
 {% embed_file panelbar/controlled-state/basic/func/app.tsx preview %}
 {% embed_file panelbar/controlled-state/basic/func/main.tsx %}
 {% endmeta %}
@@ -27,7 +27,7 @@ To manage the state of the PanelBar:
 
 The following example demonstrates how to collapse and expand all PanelBar items while controlling the state and implementing own unique ids for each PanelBar item.
 
-{% meta height:550 %}
+{% meta height:620 %}
 {% embed_file panelbar/controlled-state/all/func/app.tsx preview %}
 {% embed_file panelbar/controlled-state/all/func/main.tsx %}
 {% endmeta %}

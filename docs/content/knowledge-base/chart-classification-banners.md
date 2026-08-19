@@ -42,7 +42,7 @@ To add classification banners to KendoReact Charts that persist in exported imag
 
 The following example demonstrates adding "UNCLASSIFIED" labels that appear both on screen and in the exported image:
 
-<demo metaUrl="charts/chart/classification-banners/" height="600"></demo>
+<demo metaUrl="charts/chart/classification-banners/" height="710"></demo>
 
 ## See Also
 

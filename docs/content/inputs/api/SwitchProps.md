@@ -93,6 +93,9 @@ string
 Identifies the element(s) which will describe the component.
 For example these elements could contain error or hint message.
 
+
+
+
 ```jsx
 <Switch ariaDescribedBy="description-id" />
 ```
@@ -698,6 +701,49 @@ Sets a custom label for the **On** state.
 
 ```jsx
 <Switch onLabel="Yes" />
+```
+
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
+#### readOnly?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+boolean
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Makes the Switch read-only when set to `true`. The Switch will remain focusable but its value cannot be changed by the user.
+
+
+
+
+```jsx
+<Switch readOnly={true} />
 ```
 
 

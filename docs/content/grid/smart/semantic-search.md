@@ -7,7 +7,7 @@ components: ['grid']
 tier: premium
 ---
 
-# KendoReact Data Grid Semantic Search
+# KendoReact Grid Semantic Search
 
 The Semantic Search mode of the [AI Smart Box](slug:smart_grid_basic_operations) interprets user intent and matches related terms, synonyms, and contextual meanings rather than exact keywords. When users enter a search term, your implementation uses semantic matching techniques to return filter criteria that capture semantically related content.
 
@@ -17,7 +17,7 @@ For example, try searching for "workout essentials" in the demo below to look fo
 
 The following example demonstrates Semantic Search mode in action:
 
-<demo metaUrl="grid/smart/semantic-search/" height="920"></demo>
+<demo metaUrl="grid/smart/semantic-search/" height="930"></demo>
 
 ## Semantic Search Implementation
 
@@ -28,7 +28,9 @@ Generally, such capabilities rely on machine learning models that understand lan
 The typical workflow is:
 
 1. User enters a search query in natural language.
-2. The [`onSemanticSearch`](slug:api_grid_smartbox#onsemanticsearch) event of the AI Smart Box fires with the query text.
+1. User enters a search query in natural language.
+1. User enters a search query in natural language.
+2. The [`onSemanticSearch`](slug:api_grid_gridsmartboxaiassistantprops#onSemanticSearch) event of the AI Smart Box fires with the query text.
 3. You process the query using your chosen semantic matching technique.
 4. Your implementation returns filter criteria based on semantic matching.
 5. You apply the filters to the Grid data.
@@ -73,7 +75,7 @@ To implement Semantic Search in the AI Smart Box tool:
     <SmartBox semanticSearchConfig={semanticSearchConfig} />;
     ```
 
-3. Handle the [`onSemanticSearch`](slug:api_grid_smartbox#onsemanticsearch) event to implement your semantic search logic:
+3. Handle the [`onSemanticSearch`](slug:api_grid_gridsmartboxaiassistantprops#onSemanticSearch) event to implement your semantic search logic:
 
     ```tsx
     import { GridSmartBoxSearchEvent } from '@progress/kendo-react-grid';
@@ -166,8 +168,8 @@ const semanticSearchConfig = {
 ## Suggested Links
 
 -   [AI Smart Box](slug:smart_grid_basic_operations)
--   [KendoReact Data Grid Searching](slug:smart_grid_basic_operations#available_modes)
+-   [KendoReact Grid Searching](slug:smart_grid_basic_operations#available-modes)
 -   [AI Assistant Tools Setup](slug:ai_assistant_tools_setup)
 -   [Smart Grid Overview](slug:smart_grid)
--   [KendoKendoReact Data Grid Configuring the ToolBar](slug:toolbar_tools_grid)
+-   [KendoReact Grid Configuring the ToolBar](slug:toolbar_tools_grid)
 -   [API Reference of the SmartBox](slug:api_grid_smartbox)

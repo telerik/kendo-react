@@ -17,7 +17,7 @@ This architecture allows the user to define `what` is happening on every action.
 
 The `SchedulerEditSlot` internal state can be modified by accessing the `value/callback` pair you want to modify, and call the `callback` to trigger an action.
 
-> Accessing the parent state through its children does not toggle `controlled-state` of the component, but rather define `when` a state change must happen. If you want to control the internal state from outside, please refer to the [SchedulerEditSlot Controlled State]({% slug api_scheduler_schedulereditslot %}#toc-controllingtheediting)
+> Accessing the parent state through its children does not toggle `controlled-state` of the component, but rather define `when` a state change must happen. If you want to control the internal state from outside, please refer to the [SchedulerEditSlot Controlled State]({% slug api_scheduler_schedulereditslot %})
 
 Accessing the internal state can be done through:
 
@@ -74,7 +74,7 @@ For example, the default `onDoubleClick` handler is changing the internal `formI
 
 The following example demonstrates changing the internal `formItem` state of the `SchedulerEditSlot` through the `onClick` event of the `SchedulerSlot`.
 
-{% meta height:700 %}
+{% meta height:780 %}
 {% embed_file slots/context/action-binding/func/app.tsx preview %}
 {% embed_file slots/context/action-binding/func/main.tsx %}
 {% endmeta %}

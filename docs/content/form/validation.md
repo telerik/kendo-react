@@ -37,7 +37,7 @@ To use validation with `errors` and `onChange`, follow these steps:
 
 The following example demonstrates both client-side and server-side validation using the `errors` and `onChange` props. To trigger server-side validation, enter `admin` in the username field and `test@blocked.com` in the email field.
 
-{% meta height:600 %}
+{% meta height:670 %}
 {% embed_file client-server-validation/app.tsx preview %}
 {% embed_file client-server-validation/serverMock.ts %}
 {% embed_file client-server-validation/main.tsx %}

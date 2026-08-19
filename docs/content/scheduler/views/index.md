@@ -39,7 +39,7 @@ To specify the available views and set their configuration options, place them a
 
 The following example demonstrates how to render the **Day**, **Week**, and **Month** Scheduler views.
 
-{% meta height:670 %}
+{% meta height:780 %}
 {% embed_file views/getting-started/func/app.tsx preview %}
 {% embed_file views/getting-started/func/main.tsx %}
 {% endmeta %}
@@ -62,7 +62,7 @@ To control the view selection, provide a pair of the [`view`]({% slug api_schedu
 
 The following example demonstrates how to control the view state based on an external source.
 
-{% meta height:760 %}
+{% meta height:800 %}
 {% embed_file views/controlled-state/func/app.tsx preview %}
 {% embed_file views/controlled-state/func/main.tsx %}
 {% endmeta %}

@@ -4,8 +4,6 @@ description: 'Enable adaptive rendering for the KendoReact ColorPicker in React 
 components: ["colorpicker"]
 slug: adaptive_rendering_colorpicker
 position: 7
-tag: new
-release_tag: Q2 2026
 ---
 
 # Adaptive Rendering
@@ -25,6 +23,8 @@ The Adaptive Mode adjusts the rendering of the ColorPicker's popup element based
 > You can further customize the adaptive breakpoints using the [AdaptiveMode React Context]({% slug overview_adaptive_mode %}).
 
 > Switch between the device options below to see how the ColorPicker adapts to different resolutions.
+
+The following example demonstrates how to enable adaptive rendering for the ColorPicker and configure the `adaptiveTitle` for the action sheet.
 
 {% meta height:570 %}
 {% embed_file colorpicker/adaptive-rendering/app.tsx preview %}

@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: 'Learn about the features that the KendoReact Stepper delivers and use the component in React projects.'
-components: ["stepper"]
+components: ['stepper']
 slug: overview_stepper
 position: 1
 tier: free
@@ -19,9 +19,10 @@ The KendoReact Stepper component is part of the KendoReact library of React UI c
 
 The following example demonstrates the Stepper in action.
 
-{% meta height:130 %}
+{% meta height:460 %}
 {% embed_file stepper/getting-started/func/app.tsx preview %}
 {% embed_file stepper/getting-started/func/main.tsx %}
+{% embed_file stepper/getting-started/func/styles.css %}
 {% endmeta %}
 
 > The Stepper is part of the [KendoReact Layout]({% slug overview_layout %}) component library. The procedures for installing, importing, and using all components in the library are identical. To learn how to use the Stepper and the rest of the components in the package, see the [Getting Started with the KendoReact Layout Package]({% slug getstarted_layout %}) guide.

@@ -58,7 +58,7 @@ This approach prevents edit mode from being triggered for events that should be 
 
 The following example demonstrates a complete implementation:
 
-{% meta height:830 %}
+{% meta height:970 %}
 {% embed_file scheduler/scheduler-conditional-editing/app.tsx preview %}
 {% embed_file scheduler/scheduler-conditional-editing/main.tsx %}
 {% endmeta %}

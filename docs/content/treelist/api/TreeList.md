@@ -7,6 +7,8 @@ slug: api_treelist_treelist
 ---
 
 # TreeList
+Represents the [KendoReact TreeList component](https://www.telerik.com/kendo-react-ui/components/treelist/get-started).
+
 A [Functional Component](https://react.dev/reference/react/Component).
 
 
@@ -34,7 +36,7 @@ A [Functional Component](https://react.dev/reference/react/Component).
 <code>
 
 
-[TreeListProps]({% slug api_treelist_treelistprops %}) [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with RefAttributes&lt;[TreeList]({% slug api_treelist_treelist %})&gt;
+[TreeListProps]({% slug api_treelist_treelistprops %}) [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with RefAttributes&lt;[TreeListHandle]({% slug api_treelist_treelisthandle %})&gt;
 
 
 </code>

@@ -1,7 +1,7 @@
 ---
 title: Multi-row Selection
-description: 'Get started with the KendoReact Data Grid by KendoReact supporting selection of a single row or multiple rows.'
-components: ["datagrid"]
+description: 'Get started with the KendoReact Grid by KendoReact supporting selection of a single row or multiple rows.'
+components: ['grid']
 slug: multi_row_selection_grid
 position: 40
 tier: premium
@@ -16,7 +16,7 @@ Multiple row selection can be enabled by setting [`enabled`](slug:api_grid_grids
 
 The following example demonstrates multiple-row selection with enabled drag selection where the `select` state is handled internally by the Grid.
 
-{% meta height:520 %}
+{% meta height:640 %}
 {% embed_file selection/multi-row-selection/built-in/func/app.tsx preview %}
 {% embed_file selection/multi-row-selection/built-in/func/main.tsx %}
 {% endmeta %}
@@ -50,7 +50,7 @@ The following example demonstrates how to implement multiple selection both on r
 
 The following example demonstrates how to integrate checkbox selection with enabled grouping, filtering, sorting and paging. The main idea is to apply the selected state to the dataItems before or after processing the filter, group, and sort expressions.
 
-{% meta height:550 %}
+{% meta height:660 %}
 {% embed_file selection/data-operations/func/app.tsx preview %}
 {% embed_file selection/data-operations/func/main.tsx %}
 {% embed_file selection/data-operations/func/columnMenu.tsx %}
@@ -63,14 +63,16 @@ To persist the selection state and restore it later, follow these steps:
 1. Set the [`selectable`](slug:api_grid_gridprops#selectable) option.
 2. Store the selection object in `localStorage`.
 
-{% meta height:530 %}
+The following example demonstrates how to persist and restore multiple-row selection state by storing the selection object in `localStorage`.
+
+{% meta height:640 %}
 {% embed_file selection/multi-row-selection/persisting-selection/app.tsx preview %}
 {% embed_file selection/multi-row-selection/persisting-selection/main.tsx %}
 {% endmeta %}
 
 ## Multi-row Reordering
 
-The KendoKendoReact Data Grid comes with a built-in row-reordering feature that could be easily enhanced to allow the reordering of all selected rows.
+The KendoReact Grid comes with a built-in row-reordering feature that could be easily enhanced to allow the reordering of all selected rows.
 
 The following example demonstrates how the row reordering functionality can be combined with multi-row selection.
 
@@ -86,6 +88,10 @@ The following example demonstrates how the row reordering functionality can be c
 
 ## Suggested Links
 
+-   [Selection Overview](slug:selection_grid)
+-   [Row Selection](slug:row_selection_grid)
+-   [Cell Range Selection](slug:cell_range_selection_grid)
+-   [Selection Aggregates](slug:aggregates_selection_grid)
 -   [Reordering of Rows](slug:rowreordering_grid)
 -   [API Reference of the Grid]({% slug api_grid_grid %})
 -   [API Index of the Grid]({% slug api_grid %})

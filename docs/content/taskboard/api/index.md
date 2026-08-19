@@ -82,57 +82,6 @@ position: 1
 <span class="section-key">
 
 
-## Class
-
-
-</span>
-
-
-  <ul class="api-item-list">
-    <li class="api-item">
-        <a href="{% slug api_taskboard_taskboardaddcard %}">TaskBoardAddCard</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_taskboard_taskboardcard %}">TaskBoardCard</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_taskboard_taskboardcardbody %}">TaskBoardCardBody</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_taskboard_taskboardcardheader %}">TaskBoardCardHeader</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_taskboard_taskboardcolumn %}">TaskBoardColumn</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_taskboard_taskboardcolumnbody %}">TaskBoardColumnBody</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_taskboard_taskboardcolumnheader %}">TaskBoardColumnHeader</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_taskboard_taskboardconfirmdialog %}">TaskBoardConfirmDialog</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_taskboard_taskboardeditcard %}">TaskBoardEditCard</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_taskboard_taskboardpreviewdialog %}">TaskBoardPreviewDialog</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_taskboard_taskboardtaskeditpane %}">TaskBoardTaskEditPane</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_taskboard_taskboardtoolbar %}">TaskBoardToolbar</a>
-    </li>
-  </ul>
-</div>
-<div class="api-index-section">
-
-
-<span class="section-key">
-
-
 ## Interface
 
 

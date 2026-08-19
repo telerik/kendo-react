@@ -4,7 +4,7 @@ import { ColorPicker } from '@progress/kendo-react-inputs';
 
 const App = () => {
     return (
-    <div>
+    <div className="example-wrapper-center">
       <ColorPicker view="gradient" defaultValue={'green'} />
     </div>
     );

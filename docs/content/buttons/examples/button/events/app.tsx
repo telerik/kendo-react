@@ -1,66 +1,25 @@
 import * as React from 'react';
-
 import { Button } from '@progress/kendo-react-buttons';
-
-interface EventLogProps {
-    title: string;
-    logs: string[];
-}
-
-const EventLog = (props: EventLogProps) => {
-    const renderLogs = () => {
-        return props.logs.map((log, index) => {
-            return (
-                <li key={index} className="k-list-item">
-                    {log}
-                </li>
-            );
-        });
-    };
-
-    return (
-        <div className="example-config">
-            <h5>{props.title}</h5>
-            <ul className="event-log k-list">{renderLogs()}</ul>
-        </div>
-    );
-};
+import { EventLog } from '@docs-shared/EventLog';
 
 const ButtonContainer = () => {
-    const [logs, setLogs] = React.useState<string[]>([]);
+    const [events, setEvents] = React.useState<string[]>([]);
 
-    const logEvent = (event: any) => {
-        let newLogs: Array<string> = logs.slice();
-        newLogs.unshift(event.type);
-        setLogs(newLogs);
-    };
-
-    const handleMouseEvent = (event: React.MouseEvent<HTMLButtonElement>) => {
-        logEvent(event);
-    };
-
-    const handleFocusEvent = (event: React.FocusEvent<HTMLButtonElement>) => {
-        logEvent(event);
-    };
-
-    const handleKeyBoardEvent = (event: React.KeyboardEvent<HTMLButtonElement>) => {
-        logEvent(event);
-    };
+    const log = (type: string) => setEvents((prev) => [type, ...prev]);
 
     return (
-        <React.Fragment>
+        <EventLog events={events} onClear={() => setEvents([])}>
             <Button
-                onClick={handleMouseEvent}
-                onMouseDown={handleMouseEvent}
-                onMouseUp={handleMouseEvent}
-                onFocus={handleFocusEvent}
-                onBlur={handleFocusEvent}
-                onKeyPress={handleKeyBoardEvent}
+                onClick={() => log('click')}
+                onMouseDown={() => log('mousedown')}
+                onMouseUp={() => log('mouseup')}
+                onFocus={() => log('focus')}
+                onBlur={() => log('blur')}
+                onKeyDown={() => log('keydown')}
             >
                 My Button
             </Button>
-            <EventLog title="Event Log" logs={logs} />
-        </React.Fragment>
+        </EventLog>
     );
 };
 

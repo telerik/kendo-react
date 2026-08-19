@@ -12,6 +12,13 @@ The MultiSelect provides a predefined set of appearance options.
 
 Apart from the default vision of the MultiSelect, these alternative styling options enable you to configure each individual aspect of the appearance of a MultiSelect.
 
+The following example demonstrates all the available appearance options of the MultiSelect in a single, configurable demo.
+
+{% meta height:310 %}
+{% embed_file multiselect/appearance/overview/app.tsx preview %}
+{% embed_file multiselect/appearance/overview/main.tsx %}
+{% endmeta %}
+
 ## Size
 
 You can set the size of the MultiSelect through the [`size`]({% slug api_dropdowns_multiselectprops %}#toc-size) property. The MultiSelect component comes in three different sizes: `small`, `medium` (default), and `large`.

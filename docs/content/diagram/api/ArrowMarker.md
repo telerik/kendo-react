@@ -608,7 +608,7 @@ The path on which to position the arrow marker
 <td>
 
 
-Redraws the marker with updated options.
+
 
 
 </td>
@@ -648,7 +648,7 @@ any
 <td>
 
 
-New options to apply to the marker
+
 
 
 </td>

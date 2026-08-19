@@ -1,9 +1,31 @@
 ---
 title: Overview
 description: 'Discover the React Inputs package by KendoReact, learn more about its features and how to get started with the Inputs components in React projects.'
-components: ["checkbox", "colorgradient", "colorpalette", "colorpicker", "flatcolorpicker", "input", "maskedtextbox", "numerictextbox", "radiobutton", "radiogroup", "rangeslider", "rating", "signature", "slider", "switch", "textarea", "textbox"]
+components:
+    [
+        'checkbox',
+        'colorgradient',
+        'colorpalette',
+        'colorpicker',
+        'flatcolorpicker',
+        'input',
+        'maskedtextbox',
+        'numerictextbox',
+        'radiobutton',
+        'radiogroup',
+        'rangeslider',
+        'rating',
+        'signature',
+        'slider',
+        'switch',
+        'textarea',
+        'textbox',
+        'otpinput'
+    ]
 slug: overview_inputs
 position: 0
+tag: updated
+release_tag: Q3 2026
 ---
 
 # KendoReact Inputs Overview
@@ -14,9 +36,10 @@ The KendoReact Inputs are fields that allow users to enter data based on specifi
 
 The following demo shows the components included in the KendoReact Inputs package:
 
-{% meta height:1200 %}
+{% meta height:1440 %}
 {% embed_file overview/func/app.tsx preview %}
 {% embed_file overview/func/main.tsx %}
+{% embed_file overview/func/styles.css %}
 {% endmeta %}
 
 ## What are the KendoReact Inputs?
@@ -25,7 +48,7 @@ The Inputs are native KendoReact components built specifically for the React eco
 
 > [@progress/kendo-react-inputs](https://www.npmjs.com/package/@progress/kendo-react-inputs)
 
-###  Package Contents
+### Package Contents
 
 The package includes a rich selection of fully configurable inputs that help you create stylish and practical applications.
 
@@ -93,6 +116,17 @@ The package includes a rich selection of fully configurable inputs that help you
         </Component>
     </Column>
     <Column count={8}>
+    <Component href="slug:overview_otpinput">
+        <svg id="otpinput" viewbox="0 0 24 24">
+            <path d="M6 10.8L4 12.8H3V10.8H6ZM10 10.8V12.8H11L13 10.8H10ZM17 10.8V12.8H18L20 10.8H17ZM23 6.79999V16.8H0V6.79999H23ZM7 8.79999H2V14.8H7V8.79999ZM14 8.79999H9V14.8H14V8.79999ZM21 8.79999H16V14.8H21V8.79999Z"/>
+        </svg>
+        <ComponentTitle>OTPInput</ComponentTitle>
+        <ComponentDescription>
+        A component for entering a one-time password.
+        </ComponentDescription>
+    </Component>
+    </Column>
+    <Column count={8}>
         <Component href="{% slug overview_radiobutton %}">
             <svg id="radiobutton" viewBox="0 0 24 24">
                 <path d="M12,7a5,5,0,1,0,5,5A5,5,0,0,0,12,7Zm0-7A12,12,0,1,0,24,12,12,12,0,0,0,12,0Zm0,22A10,10,0,1,1,22,12,10,10,0,0,1,12,22Z"/>
@@ -146,6 +180,7 @@ The package includes a rich selection of fully configurable inputs that help you
             <ComponentDescription>A component for getting or displaying text input on multiple lines submitted by the user.</ComponentDescription>
         </Component>
     </Column>
+
 </Row>
 
 #### Premium React Inputs
@@ -220,7 +255,7 @@ The KendoReact Inputs provide the following key features. Note that this is not 
 
 ## How Do the KendoReact Inputs Work?
 
-> The KendoReact Inputs provide both [free React inputs](#free-react-inputs) and premium inputs which require a commercial license key or an active trial license key. If you need to develop apps using the [advanced React inputs](#advanced-react-inputs) or other advanced KendoReact components and features, follow the instructions on the [My License page](slug://my_license) to activate your license.
+> The KendoReact Inputs provide both [free React inputs](#free-react-inputs) and premium inputs which require a commercial license key or an active trial license key. If you need to develop apps using the [premium React inputs](#premium-react-inputs) or other advanced KendoReact components and features, follow the instructions on the [My License page](slug://my_license) to activate your license.
 
 The KendoReact Inputs are built natively for React, with no dependencies. They leverage key React concepts such as components-based architecture, props and state management, conditional rendering, and event handling.
 

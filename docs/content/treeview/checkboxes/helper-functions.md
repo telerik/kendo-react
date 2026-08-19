@@ -17,6 +17,8 @@ To implement such use case scenarios, use the following helper functions:
 -   [`handleTreeViewCheckChange`]({% slug api_treeview_handletreeviewcheckchange %})&mdash;Provides the ids of the checked TreeView items. Allows you to automatically check parent and child nodes, and to configure a single or multiple selection mode. For more information, refer to [`TreeViewCheckChangeSettings`]({% slug api_treeview_treeviewcheckchangesettings %}).
 -   [`processTreeViewItems`]({% slug api_treeview_processtreeviewitems %})&mdash;Based on the provided ids of the checked TreeView items, updates the data in an immutable way. Enables you to configure the application of an [indeterminate state](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#Indeterminate_state_checkboxes) to the items.
 
+The following example demonstrates how to use the `handleTreeViewCheckChange` and `processTreeViewItems` helper functions to manage checkbox state with configurable single-mode, check-children, and check-parents behavior.
+
 {% meta height:520 %}
 {% embed_file checkbox-helper/func/app.tsx preview %}
 {% embed_file checkbox-helper/func/main.tsx %}

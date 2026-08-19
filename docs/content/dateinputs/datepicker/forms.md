@@ -43,7 +43,7 @@ You can implement custom error messages which will be displayed when the DatePic
 
 The DatePicker enables you to set its validity state by utilizing its props. Setting the validity state allows for the implementation of complex validation scenarios that are based on multiple sources. To override the current validity state and apply the corresponding styles, use the [`valid`]({% slug api_dateinputs_datepickerprops %}#toc-valid) prop.
 
-{% meta height:630 %}
+{% meta height:770 %}
 {% embed_file datepicker/forms/override/func/app.tsx preview %}
 {% embed_file datepicker/forms/override/func/main.tsx %}
 {% endmeta %}
@@ -52,7 +52,7 @@ The DatePicker enables you to set its validity state by utilizing its props. Set
 
 By default, to achieve a visual representation of its invalid state, the DatePicker applies the `k-invalid` class name to the wrapping component. To disable the utilization of `k-invalid`, set the [`validityStyles`]({% slug api_dateinputs_datepickerprops %}#toc-validitystyles) property to `false`.
 
-{% meta height:570 %}
+{% meta height:680 %}
 {% embed_file datepicker/forms/disable-styles/func/app.tsx preview %}
 {% embed_file datepicker/forms/disable-styles/func/main.tsx %}
 {% endmeta %}

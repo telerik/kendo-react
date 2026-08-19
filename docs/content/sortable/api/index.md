@@ -38,9 +38,6 @@ position: 1
     <li class="api-item">
         <a href="{% slug api_sortable_sortable %}">Sortable</a>
     </li>
-    <li class="api-item">
-        <a href="{% slug api_sortable_sortable %}">Sortable</a>
-    </li>
   </ul>
 </div>
 <div class="api-index-section">
@@ -56,9 +53,6 @@ position: 1
 
 
   <ul class="api-item-list">
-    <li class="api-item">
-        <a href="{% slug api_sortable_sortable %}">Sortable</a>
-    </li>
     <li class="api-item">
         <a href="{% slug api_sortable_sortableondragendevent %}">SortableOnDragEndEvent</a>
     </li>

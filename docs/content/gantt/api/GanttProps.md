@@ -1731,7 +1731,7 @@ boolean | WebMcpProps
 
 Enables Web MCP tool registration for the Gantt component.
 When set, browser-native AI agent tools are registered via
-`navigator.modelContext.registerTool()` (Chrome 146+).
+`document.modelContext.registerTool()`.
 
 ```tsx
 // Boolean: generic "gantt" label

@@ -13,7 +13,7 @@ The KendoReact Diagram lets you display tooltips when hovering over [shapes]({% 
 
 The following example demonstrates shape and connection tooltips with custom React templates, showing employee details and relationship information on hover.
 
-<demo metaUrl="diagram/tooltips/overview/" height="650"></demo>
+<demo metaUrl="diagram/tooltips/overview/" height="730"></demo>
 
 ## Basic Configuration
 
@@ -43,7 +43,7 @@ const connections: ConnectionOptions[] = [
 
 The following example demonstrates basic tooltip configuration with simple text tooltips for shapes and connections.
 
-<demo metaUrl="diagram/tooltips/basic-configuration/" height="650"></demo>
+<demo metaUrl="diagram/tooltips/basic-configuration/" height="730"></demo>
 
 ## Controlling Tooltip Visibility
 
@@ -102,7 +102,7 @@ The Diagram provides several options for customizing tooltip appearance and cont
 
 The following example demonstrates how to use both shape and connection tooltip templates together to create a comprehensive tooltip experience.
 
-<demo metaUrl="diagram/tooltips/template-overview/" height="650"></demo>
+<demo metaUrl="diagram/tooltips/template-overview/" height="750"></demo>
 
 ### Styling Tooltips
 
@@ -124,7 +124,7 @@ const shapes: ShapeOptions[] = [
 
 The following example demonstrates how to style tooltips using the [`cssClass`](slug:api_diagram_tooltipoptions#cssClass) option.
 
-<demo metaUrl="diagram/tooltips/styling-tooltips/" height="540"></demo>
+<demo metaUrl="diagram/tooltips/styling-tooltips/" height="630"></demo>
 
 ### Shape Tooltip Template
 
@@ -182,7 +182,7 @@ You can access any properties defined in your connection's data model through th
 
 The following example demonstrates a custom connection tooltip template with financial transfer information.
 
-<demo metaUrl="diagram/tooltips/connection-template/" height="660"></demo>
+<demo metaUrl="diagram/tooltips/connection-template/" height="730"></demo>
 
 ## See Also
 

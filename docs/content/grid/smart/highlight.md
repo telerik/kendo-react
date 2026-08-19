@@ -1,16 +1,16 @@
 ---
 title: AI-Powered Row Highlight
-description: 'Learn how to use the highlight in the KendoKendoReact Data Grid to interact with your data using natural language prompts.'
-components: ['datagrid']
+description: 'Learn how to use the highlight in the KendoReact Grid to interact with your data using natural language prompts.'
+components: ['grid']
 slug: ai_highlight
 position: 60
 tier: premium
 subject: AI Toolbar Assistant feature of the Grid
 ---
 
-# KendoReact Data Grid AI-Powered Highlighting
+# KendoReact Grid AI-Powered Highlighting
 
-The KendoReact Data Grid provides intelligent row highlighting functionality through its AI Toolbar Assistant. This feature enables users to visually identify specific data patterns and outliers using natural language prompts, without applying traditional filters that hide data.
+The KendoReact Grid provides intelligent row highlighting functionality through its AI Toolbar Assistant. This feature enables users to visually identify specific data patterns and outliers using natural language prompts, without applying traditional filters that hide data.
 
 AI-powered highlighting interprets user requests and automatically highlights relevant rows based on the specified criteria, making data exploration more intuitive and keeping all data visible while emphasizing important patterns.
 
@@ -54,7 +54,7 @@ Your AI service should return responses that include highlighting information, w
 
 The following example demonstrates automatic highlighting where users can request patterns like "highlight customers with high balances" or "show me overdue accounts":
 
-<demo metaUrl="grid/smart/highlight/basic/" height="670"></demo>
+<demo metaUrl="grid/smart/highlight/basic/" height="780"></demo>
 
 > By default, the `GridToolbarAIAssistant` doesn't keep the prompt history and result returned by the AI model. If you need to keep the history, check the following two examples that use the `outputs` prop.
 
@@ -92,7 +92,7 @@ const handleBeforeRequest = (event, isRetry) => {
 
 This approach is ideal when you need custom highlighting styles, complex highlighting rules, or integration with existing business logic. The following example demonstrates manual integration where you have complete control over the highlighting interaction. Because this demo showcases the manual mode of the component, it demonstrates how to use the `outputs` prop along with additional logic to display the prompt output history.
 
-<demo metaUrl="grid/smart/highlight/manual/" height="670"></demo>
+<demo metaUrl="grid/smart/highlight/manual/" height="780"></demo>
 
 ### Controlled Highlighting
 
@@ -117,7 +117,7 @@ This approach is perfect when you need to integrate highlighting with your appli
 
 The following example showcases controlled highlighting with custom validation and response handling. Because this demo showcases the controlled mode of the component, it demonstrates how to use the `outputs` prop along with additional logic to display the prompt output history.
 
-<demo metaUrl="grid/smart/highlight/controlled/" height="670"></demo>
+<demo metaUrl="grid/smart/highlight/controlled/" height="780"></demo>
 
 #### Highlighting Event Handling
 

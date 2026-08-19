@@ -1,8 +1,8 @@
 ---
-title: Reducing Data Grid Column Header Height in KendoReact
-description: Learn how to reduce the column header height in KendoReact Data Grid using custom CSS.
+title: Reducing Grid Column Header Height in KendoReact
+description: Learn how to reduce the column header height in KendoReact Grid using custom CSS.
 type: how-to
-page_title: Adjusting Header Height in KendoReact Data Grid
+page_title: Adjusting Header Height in KendoReact Grid
 slug: grid-reduce-header-height
 tags: grid, kendoreact, header, css, styling
 ticketid: 1701215
@@ -28,17 +28,17 @@ components: ["grid"]
 
 ## Description
 
-I want to reduce the height of column headers in the KendoReact Data Grid to better fit my design requirements.
+I want to reduce the height of column headers in the KendoReact Grid to better fit my design requirements.
 
 This knowledge base article also answers the following questions:
 
--   How to change KendoReact Data Grid header height?
--   How to apply custom styling to KendoReact Data Grid headers?
--   How to reduce padding in KendoReact Data Grid headers?
+-   How to change KendoReact Grid header height?
+-   How to apply custom styling to KendoReact Grid headers?
+-   How to reduce padding in KendoReact Grid headers?
 
 ## Solution
 
-To reduce the column header height in KendoReact Data Grid, apply custom CSS targeting the relevant header elements. The header uses the `.k-grid-header` and `.k-header` classes, which can be styled directly.
+To reduce the column header height in KendoReact Grid, apply custom CSS targeting the relevant header elements. The header uses the `.k-grid-header` and `.k-header` classes, which can be styled directly.
 
 Follow these steps:
 

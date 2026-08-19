@@ -1,59 +1,45 @@
-
 import * as React from 'react';
-import { Menu, MenuItem } from '@progress/kendo-react-layout';
-import { Offset, Popup } from '@progress/kendo-react-popup';
+import { ContextMenu, MenuItem, MenuSelectEvent } from '@progress/kendo-react-layout';
+import { Offset } from '@progress/kendo-react-popup';
+import { copyIcon, cutIcon, clipboardIcon, trashIcon } from '@progress/kendo-svg-icons';
 
 const App = () => {
-    const offSet = React.useRef<Offset>({left: 0, top: 0});
     const [show, setShow] = React.useState(false);
+    const offset = React.useRef<Offset>({ left: 0, top: 0 });
 
-    const handleContextMenu = (e) => {
+    const handleContextMenu = (e: React.MouseEvent) => {
         e.preventDefault();
-        offSet.current = { left: e.clientX, top: e.clientY };
+        offset.current = { left: e.pageX, top: e.pageY };
         setShow(true);
-    }
+    };
 
-    React.useEffect(()=>{
-        document.addEventListener('click', () => {
-            if(show){
-                setShow(false);
-            }
-        })
-    },[show])
+    const handleSelect = (e: MenuSelectEvent) => {
+        setShow(false);
+    };
 
     return (
-    <div>
-      <div style={{
-              width: 300,
-              height: 200,
-              backgroundColor: "#5392e4",
-              justifyContent: "center",
-              display: "flex",
-              position: "absolute",
-              alignItems: "center"
-          }}
-        onContextMenu={handleContextMenu}>
-        <p>Right click here to open Context menu</p>
-      </div>
-      <Popup show={show} offset={offSet.current}>
-        <Menu vertical={true} style={{ display: 'inline-block' }}
->
-          <MenuItem text="Item1">
-            <MenuItem text="Item1.1" />
-            <MenuItem text="Item1.2">
-              <MenuItem text="Item1.2.1" />
-              <MenuItem text="Item1.2.2" />
-            </MenuItem>
-          </MenuItem>
-          <MenuItem text="Item2">
-            <MenuItem text="Item2.1" />
-            <MenuItem text="Item2.2" />
-          </MenuItem>
-          <MenuItem text="Item3" />
-        </Menu>
-      </Popup>
-    </div>
+        <div
+            style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                height: 200,
+                borderRadius: 8,
+                background: '#f6f6f6',
+                boxShadow: '0 1px 5px 0 rgb(0 0 0 / 12%)'
+            }}
+            onContextMenu={handleContextMenu}
+        >
+            <p style={{ color: '#656565', fontSize: 16 }}>Right-click to open the Context Menu</p>
+
+            <ContextMenu show={show} offset={offset.current} onSelect={handleSelect} onClose={() => setShow(false)}>
+                <MenuItem text="Cut" svgIcon={cutIcon} />
+                <MenuItem text="Copy" svgIcon={copyIcon} />
+                <MenuItem text="Paste" svgIcon={clipboardIcon} />
+                <MenuItem text="Delete" svgIcon={trashIcon} />
+            </ContextMenu>
+        </div>
     );
-}
+};
 
 export default App;

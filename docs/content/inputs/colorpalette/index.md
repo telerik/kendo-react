@@ -16,7 +16,7 @@ The KendoReact ColorPalette component is part of the KendoReact library of React
 
 The following example demonstrates the ColorPalette in action.
 
-{% meta height:550 %}
+{% meta height:680 %}
 {% embed_file colorpalette/overview/basic/func/app.tsx preview %}
 {% embed_file colorpalette/overview/basic/func/main.tsx %}
 {% embed_file colorpalette/overview/basic/func/styles.css %}

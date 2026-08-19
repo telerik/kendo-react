@@ -34,7 +34,7 @@ A [Functional Component](https://react.dev/reference/react/Component).
 <code>
 
 
-[UploadProps]({% slug api_upload_uploadprops %}) [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with RefAttributes&lt;any&gt;
+[UploadProps]({% slug api_upload_uploadprops %}) [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with RefAttributes&lt;[UploadHandle]({% slug api_upload_uploadhandle %})&gt;
 
 
 </code>

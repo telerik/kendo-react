@@ -3,8 +3,6 @@ title: Affix Templates
 description: 'Extend the built-in message box of the KendoReact Chat component with extra controls using affix templates.'
 components: ["chat"]
 slug: customization_affix_templates_chat
-tag: new
-release_tag: Q2 2026
 position: 55
 ---
 
@@ -18,7 +16,7 @@ The affix templates let you extend the built-in message box with extra controls 
 
 The following example demonstrates all three affix positions. Use the configurator to toggle each affix on or off and switch between message box modes.
 
-{% meta height:670 %}
+{% meta height:780 %}
 {% embed_file chat/customization/affix-templates/app.tsx preview %}
 {% embed_file chat/customization/affix-templates/main.tsx %}
 {% embed_file chat/customization/affix-templates/templates.tsx %}

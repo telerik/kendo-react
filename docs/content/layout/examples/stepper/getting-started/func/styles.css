@@ -1,0 +1,264 @@
+/* Shell & card */
+.ob-shell {
+    max-width: 640px;
+    margin: 16px auto;
+}
+
+.ob-card {
+    border-radius: 12px;
+    border: 1px solid var(--kendo-color-border, #e2e8f0);
+    background: var(--kendo-color-surface, #fff);
+    overflow: hidden;
+}
+
+/* Stepper row */
+.ob-stepper-wrap {
+    padding: 20px 24px 16px;
+    border-bottom: 1px solid var(--kendo-color-border, #e2e8f0);
+}
+
+/* Step body */
+.ob-body {
+    padding: 20px 24px;
+    min-height: 195px;
+}
+
+.ob-step-title {
+    margin: 0 0 14px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* ── Plan selector ── */
+.ob-plans {
+    display: flex;
+    gap: 10px;
+}
+
+.ob-plan {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 2px solid var(--kendo-color-border, #e2e8f0);
+    background: transparent;
+    cursor: pointer;
+    text-align: left;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.ob-plan:hover {
+    border-color: var(--kendo-color-primary, #ff6358);
+}
+
+.ob-plan--selected {
+    border-color: var(--kendo-color-primary, #ff6358);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--kendo-color-primary, #ff6358) 15%, transparent);
+}
+
+.ob-plan-name {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.ob-plan-price {
+    font-size: 13px;
+    color: var(--kendo-color-primary, #ff6358);
+    font-weight: 600;
+}
+
+.ob-plan-desc {
+    font-size: 11px;
+    color: var(--kendo-color-subtle-text, #64748b);
+    line-height: 1.4;
+}
+
+/* ── Form fields ── */
+.ob-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.ob-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.ob-field label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--kendo-color-subtle-text, #64748b);
+}
+
+.ob-field input {
+    padding: 7px 10px;
+    border: 1px solid var(--kendo-color-border, #e2e8f0);
+    border-radius: 6px;
+    font-size: 14px;
+    background: var(--kendo-color-surface-alt, #f8fafc);
+    color: inherit;
+    outline: none;
+    transition: border-color 0.15s;
+}
+
+.ob-field input:focus {
+    border-color: var(--kendo-color-primary, #ff6358);
+}
+
+/* ── Industry chips ── */
+.ob-chips-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--kendo-color-subtle-text, #64748b);
+    margin-bottom: 6px;
+}
+
+.ob-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.ob-chip {
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--kendo-color-border, #e2e8f0);
+    background: transparent;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+
+.ob-chip--on {
+    background: var(--kendo-color-primary, #ff6358);
+    border-color: var(--kendo-color-primary, #ff6358);
+    color: #fff;
+}
+
+/* ── Teammate invites ── */
+.ob-teammates {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.ob-teammate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--kendo-color-border, #f1f5f9);
+}
+
+.ob-teammate:last-child {
+    border-bottom: none;
+}
+
+.ob-teammate-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.ob-teammate-name {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.ob-teammate-email {
+    font-size: 12px;
+    color: var(--kendo-color-subtle-text, #64748b);
+}
+
+.ob-invite-btn {
+    padding: 5px 14px;
+    border-radius: 6px;
+    border: 1px solid var(--kendo-color-primary, #ff6358);
+    color: var(--kendo-color-primary, #ff6358);
+    background: transparent;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    min-width: 78px;
+    transition: background 0.12s, color 0.12s;
+}
+
+.ob-invite-btn:hover {
+    background: color-mix(in srgb, var(--kendo-color-primary, #ff6358) 10%, transparent);
+}
+
+.ob-invite-btn--sent {
+    background: color-mix(in srgb, var(--kendo-color-primary, #ff6358) 12%, transparent);
+    border-color: transparent;
+    color: var(--kendo-color-primary, #ff6358);
+}
+
+/* ── Success step ── */
+.ob-step--success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.ob-success-icon {
+    color: #10b981;
+    line-height: 0;
+    margin-bottom: 10px;
+}
+
+.ob-success-title {
+    margin: 0 0 4px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.ob-success-sub {
+    margin: 0 0 16px;
+    font-size: 13px;
+    color: var(--kendo-color-subtle-text, #64748b);
+}
+
+.ob-stats {
+    display: flex;
+    gap: 32px;
+}
+
+.ob-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.ob-stat-val {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.ob-stat-lbl {
+    font-size: 11px;
+    color: var(--kendo-color-subtle-text, #64748b);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Footer with nav buttons */
+.ob-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 24px;
+    border-top: 1px solid var(--kendo-color-border, #e2e8f0);
+}

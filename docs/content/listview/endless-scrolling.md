@@ -14,7 +14,7 @@ The KendoReact ListView can achieve `endless scrolling` allowing to dynamically 
 
 The following example demonstrates the ListView that dynamically adds more items while the user scrolls, using the [onScroll event]({% slug api_listview_listviewprops %}#toc-onScroll).
 
-{% meta height:600 %}
+{% meta height:710 %}
 {% embed_file endless-scrolling/func/app.tsx preview %}
 {% embed_file endless-scrolling/func/main.tsx %}
 {% embed_file endless-scrolling/func/destinations.json %}

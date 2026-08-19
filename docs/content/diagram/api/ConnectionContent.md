@@ -159,6 +159,13 @@ string
 <td class="table-cell-default">
 
 
+<code>
+
+
+"sans-serif"
+
+
+</code>
 
 
 </td>
@@ -166,6 +173,9 @@ string
 
 
 The font family of the connection content text.
+
+
+
 
 
 </td>
@@ -194,13 +204,23 @@ number
 <td class="table-cell-default">
 
 
+<code>
+
+
+15
+
+
+</code>
 
 
 </td>
 <td class="table-cell-comment">
 
 
-The font size of the connection content text.
+The font size in pixels of the connection content text.
+
+
+
 
 
 </td>

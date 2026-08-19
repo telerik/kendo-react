@@ -18,6 +18,8 @@ To manage the value of the Editor:
 1. Handle the [`onChange`]({% slug api_editor_editorprops %}#toc-onchange) event.
 1. Pass the new value through the props.
 
+The following example demonstrates how to control the Editor value by binding the [`value`]({% slug api_editor_editorprops %}#toc-value) prop and handling the [`onChange`]({% slug api_editor_editorprops %}#toc-onchange) event.
+
 {% meta height:225 %}
 {% embed_file controlled-value-doc/func/app.tsx preview %}
 {% embed_file controlled-value-doc/func/main.tsx %}

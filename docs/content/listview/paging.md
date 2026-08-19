@@ -12,9 +12,11 @@ The KendoReact ListView can be easily integrated with the [KendoReact Pager]({% 
 
 ## Basic Usage
 
-The following example demonstrates the ListView using the `Pager` placed in its [footer]({% slug api_listview_listviewprops %}#toc-footer).
+To page the ListView data, pass a data slice to the ListView and render a [Pager](slug:overview_pager) in the [`footer`]({slug:api_listview_listviewprops#footer) prop. Handle the [`onPageChange`](slug:api_data-tools_pagerprops#onPageChange) event to update the `skip` and `take` values and re-slice the data accordingly.
 
-{% meta height:820 %}
+The following example demonstrates how to split ListView items across pages using the `Pager` component.
+
+{% meta height:830 %}
 {% embed_file paging/func/app.tsx preview %}
 {% embed_file paging/func/main.tsx %}
 {% embed_file paging/func/articles.json %}

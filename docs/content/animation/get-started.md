@@ -22,6 +22,8 @@ After completing this guide, you will have a free React [Animation](slug://overv
 
 ## Before You Begin
 
+To follow this guide, you need to have a React project set up. If you don't have one, you can create a new React application using the following command:
+
 ```sh
 npm create vite@latest my-app -- --template react
 ```
@@ -32,20 +34,20 @@ This guide requires that you have **basic knowledge of React and TypeScript**, a
 
 ## Install the Component
 
+Run these commands in the root of your React project to install the KendoReact Animation package and its [dependencies](#kendoreact-animation-dependencies), and the Kendo UI [Default theme](https://www.telerik.com/kendo-react-ui/components/styling/theme-default/):
+
 ```sh
 npm i @progress/kendo-react-animation @progress/kendo-theme-default
 ```
 
-Run these commands in the root of your React project to install the KendoReact Animation package and its [dependencies](#kendoreact-animation-dependencies), and the Kendo UI [Default theme](https://www.telerik.com/kendo-react-ui/components/styling/theme-default/).
-
 ## Import the Component
+
+Place the `import` statements in the App component file (for example: `src/App.tsx`) for your project. Note that the steps for installing and importing all Animation components are identical.
 
 ```tsx
 import { Reveal } from '@progress/kendo-react-animation';
 import '@progress/kendo-theme-default/dist/all.css';
 ```
-
-Place the `import` statements in the App component file (for example: `src/App.tsx`) for your project. Note that the steps for installing and importing all Animation components are identical.
 
 ## Use the Component
 

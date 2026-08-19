@@ -16,6 +16,13 @@ Apart from the default vision of the ColorPicker, these alternative styling opti
 -   [Fill Mode](#fill-mode)
 -   [Border Radius](#border-radius)
 
+The following example demonstrates all the available appearance options of the ColorPicker in a single, configurable demo.
+
+{% meta height:620 %}
+{% embed_file colorpicker/appearance/func/app.tsx preview %}
+{% embed_file colorpicker/appearance/func/main.tsx %}
+{% endmeta %}
+
 ## Size
 
 The KendoReact ColorPicker enables you to configure its [`size`](slug:api_inputs_colorpickerprops#size).

@@ -27,7 +27,7 @@ To configure a chart series for drilldown:
 -   Set the [`drilldownSeriesFactory`](slug:api_charts_chartseriesitemprops#toc-drilldownseriesfactory) prop to the component that will create the series.
 -   Add a [`ChartBreadcrumb`](slug:api_charts_chartbreadcrumb) component.
 -   Add a state variable to store the [`ChartDrilldownState`](slug:api_charts_chartdrilldownstate).
--   Add a shared handler for the Chart [`onDrilldown`](slug:api_charts_chartprops#toc-ondrilldown) event and the Breadcrumb [`onDrilldownStateChange`](slug:api_charts_chartbreadcrumb#toc-ondrilldownstatechange) event. Set the state variable to the [`nextState`](slug:api_charts_drilldownevent#toc-nextstate) passed to the handler.
+-   Add a shared handler for the Chart [`onDrilldown`](slug:api_charts_chartprops#toc-ondrilldown) event and the Breadcrumb [`onDrilldownStateChange`](slug:api_charts_chartbreadcrumbprops) event. Set the state variable to the [`nextState`](slug:api_charts_drilldownevent#toc-nextstate) passed to the handler.
 
 {% meta height:500 %}
 {% embed_file chart/drilldown/overview/func/app.tsx preview %}
@@ -63,7 +63,7 @@ To implement a custom drilldown navigation:
 -   Update the navigation with the current dropdown level in the [`onDrilldown`](slug:api_charts_chartprops#toc-ondrilldown) handler for the Chart.
 -   Update the drilldown state after navigation.
 
-{% meta height:700 %}
+{% meta height:780 %}
 {% embed_file chart/drilldown/custom-navigation/func/app.tsx preview %}
 {% embed_file chart/drilldown/custom-navigation/func/main.tsx %}
 {% endmeta %}

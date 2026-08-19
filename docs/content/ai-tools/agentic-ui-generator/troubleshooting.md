@@ -4,6 +4,9 @@ page_title: KendoReact AI Tools Troubleshooting Guide
 description: Common issues and solutions when using the KendoReact MCP Server for AI-powered development tools.
 slug: ai_tools_troubleshooting
 position: 45
+components: ['general']
+tag: updated
+release_tag: Q3 2026
 ---
 
 # Troubleshooting
@@ -68,6 +71,22 @@ To resolve this:
 1. **Restart your IDE**&mdash;Close and reopen VS Code to ensure all changes take effect.
 
 If the issue persists after following these steps, check your license status in your Telerik account to confirm it's active and includes access to the AI Tools.
+
+## AI Plugin and MCP Server Running Simultaneously
+
+The [`kendo-react-plugin`](slug:ai_tools_overview#ai-plugin) and the KendoReact MCP server are two alternative ways to connect your agent to KendoReact&mdash;they are mutually exclusive. The plugin comes with its own predefined MCP server configuration tuned for skills, so if you already have the MCP server configured in your IDE, you must disable or remove it before installing the plugin.
+
+Running both at the same time can cause the following issues:
+
+- **Tool vs. skill confusion**&mdash;The MCP server exposes a `kendo_ui_generator` tool. The plugin intentionally disables that tool and provides a `kendo-react-ui-generator` skill instead, to avoid ambiguity. When the MCP server is also active, that protection no longer works and the agent may be unsure which entry point to use.
+
+- **Duplicated context**&mdash;MCP tools carry static context that is injected into the model on every invocation. The plugin replaces this with skills that are loaded on demand. If both configurations are active, the agent receives both the skill instructions and the tool's static context&mdash;duplicate information that leads to higher token usage and inconsistent responses.
+
+- **Double invocation**&mdash;When both are present, the agent may read the plugin skill and then also call the MCP tool. The result is even more context, more confusion, and less predictable output.
+
+**Resolution:**
+
+Disable or remove the KendoReact MCP server configuration from your IDE before using the plugin. For example, for VS Code, remove or comment out the `kendo-react-mcp-server` entry from your `.vscode/mcp.json` or user-level `mcp.json`. Then reload the window (`Developer: Reload Window`) before starting a new session.
 
 ## See Also
 

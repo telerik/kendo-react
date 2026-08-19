@@ -12,7 +12,7 @@ The Slider component can be easily integrated with our [KendoReact Form]({% slug
 
 The form enables you to validate the slider and prevent the submission of forms which are in an invalid state.
 
-{% meta height:650 %}
+{% meta height:700 %}
 {% embed_file slider/form-support/app.tsx preview %}
 {% embed_file slider/form-support/main.tsx %}
 {% endmeta %}

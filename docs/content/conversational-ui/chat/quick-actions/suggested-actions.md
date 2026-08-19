@@ -27,7 +27,7 @@ To define quick actions for a message, populate the [`suggestedActions`](slug:ap
 
 You can control how suggested actions are displayed using the [`quickActionsLayout`](slug:api_conversational-ui_chatprops#toc-quickactionslayout) property, which supports three layout modes: `scroll` (actions scroll horizontally), `wrap` (actions wrap to new rows), and `scrollbuttons` (horizontal scroll with navigation buttons).
 
-{% meta height:870 %}
+{% meta height:990 %}
 {% embed_file chat/quick-actions/suggested-actions/app.tsx preview %}
 {% embed_file chat/quick-actions/suggested-actions/main.tsx %}
 {% endmeta %}

@@ -15,7 +15,7 @@ For the full list of configuration options, refer to the API reference of the [`
 
 The following example demonstrates how to set common properties for the **Agenda** view of the Scheduler.
 
-{% meta height:670 %}
+{% meta height:780 %}
 {% embed_file views/agenda/configuration/func/app.tsx preview %}
 {% embed_file views/agenda/configuration/func/main.tsx %}
 {% endmeta %}
@@ -24,7 +24,9 @@ The following example demonstrates how to set common properties for the **Agenda
 
 You can configure the **Agenda** view to display events that are grouped by a resource.
 
-{% meta height:670 %}
+The following example demonstrates how to group events by multiple resources in the Agenda view.
+
+{% meta height:780 %}
 {% embed_file views/agenda/grouping/func/app.tsx preview %}
 {% embed_file views/agenda/grouping/func/main.tsx %}
 {% endmeta %}

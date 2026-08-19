@@ -265,7 +265,7 @@ Based on the frameworks and technologies used in your project, you can combine U
 
 ### Are the KendoReact Layout Components Free to Use?
 
-The KendoReact Layout components provide both [free React layout components](#free-react-layout-components) and [advanced latyout components](#advanced-react-layout-components) which require a commercial license key or an active trial license key.
+The KendoReact Layout components provide both [free React layout components](#free-react-layout-components) and [advanced layout components](#premium-react-layout-components) which require a commercial license key or an active trial license key.
 
 You can start using the free components without any license or registration with Progress or Telerik.
 
@@ -275,7 +275,7 @@ To create a layout component, you need to install the KendoReact Layout package 
 
 ### How to Upgrade to the Premium Layout Components?
 
-If you want to use any of the advanced [React layout](#advanced-react-layout-components), UI components, or component features, you need a valid commercial license or an active trial license. A [free trial](https://www.telerik.com/try/kendo-react-ui) is available, if you want to try out the advanced features before purchase.
+If you want to use any of the advanced [React layout](#premium-react-layout-components), UI components, or component features, you need a valid commercial license or an active trial license. A [free trial](https://www.telerik.com/try/kendo-react-ui) is available, if you want to try out the advanced features before purchase.
 
 ### What Are the Available Support Options?
 

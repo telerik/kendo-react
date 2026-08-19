@@ -12,9 +12,9 @@ The KendoReact TabStrip allows selecting a predefined size options that changes 
 
 ## Size
 
-To change the default size of the TabStrip, set the [`size`]({% slug api_layout_tabstriptabprops %}#toc-size) property which will change the padding of the TabStrip tabs and scroll buttons.
+To change the default size of the TabStrip, set the [`size`]({% slug api_layout_tabstriptabprops %}) property which will change the padding of the TabStrip tabs and scroll buttons.
 
-The [`size`]({% slug api_layout_tabstriptabprops %}#toc-size) property supports the following values:
+The [`size`]({% slug api_layout_tabstriptabprops %}) property supports the following values:
 
 -   `small`&mdash;Reduces the default `padding` of the building blocks of the TabStrip. Especially useful when you want to fit more tabs in a limited space.
 -   `medium` (default)&mdash;Represents the default `padding` of the building blocks of the TabStrip.

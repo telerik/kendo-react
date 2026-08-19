@@ -19,7 +19,7 @@ The following example demonstrates how to:
 
 > In this example the selected image files are handled on the client side, i.e., no actual upload process is being initiated. You can still re-create the scenario by using a real backend service.
 
-{% meta height:550 %}
+{% meta height:670 %}
 {% embed_file images/func/app.tsx preview %}
 {% embed_file images/func/main.tsx %}
 {% embed_file images/func/insertImageDialog.tsx %}

@@ -10,7 +10,7 @@ position: 5
 
 The KendoReact Gantt enables you to customize the height of its rows by setting the `rowHeight` property.
 
-{% meta height:580 %}
+{% meta height:680 %}
 {% embed_file row-size/func/app.tsx preview %}
 {% embed_file row-size/func/main.tsx %}
 {% endmeta %}

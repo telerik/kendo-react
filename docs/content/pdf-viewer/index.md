@@ -16,7 +16,7 @@ The KendoReact PDF Viewer component is part of the KendoReact library of React U
 
 The following example demonstrates the KendoReact PDF Viewer in action.
 
-{% meta height:680 %}
+{% meta height:800 %}
 {% embed_file overview/func/app.tsx preview %}
 {% embed_file overview/func/main.tsx %}
 {% endmeta %}

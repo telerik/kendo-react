@@ -175,7 +175,7 @@ A React Synthetic Event.
 <code>
 
 
-[TreeView]({% slug api_treeview_treeview %})
+[TreeViewHandle]({% slug api_treeview_treeviewhandle %})
 
 
 </code>

@@ -18,7 +18,7 @@ To customize the styles of the `SchedulerItem`, we recommend using either [style
 
 The following examples demonstrates customizing the `background` to a gradient one, based on the items [orientation]({% slug api_scheduler_scheduleritemprops %}#toc-vertical).
 
-{% meta height:700 %}
+{% meta height:780 %}
 {% embed_file items/item/style/func/app.tsx preview %}
 {% embed_file items/item/style/func/main.tsx %}
 {% endmeta %}
@@ -29,7 +29,7 @@ To customize what is rendered inside the `Scheduler` item, provide the `children
 
 The following examples demonstrates rendering custom nodes inside the default `SchedulerItem` component.
 
-{% meta height:700 %}
+{% meta height:780 %}
 {% embed_file items/item/children/func/app.tsx preview %}
 {% embed_file items/item/children/func/main.tsx %}
 {% endmeta %}
@@ -42,7 +42,7 @@ The [SchedulerItem]({% slug api_scheduler_scheduleritem %}) exposes various call
 
 The following example demonstrates attaching `onFocus` and `onBlur` handlers and showing a custom `Popup` next an item. We will be calling the default `props.onFocus` and `props.onBlur` callbacks to not brake anything.
 
-{% meta height:700 %}
+{% meta height:780 %}
 {% embed_file items/item/callbacks/func/app.tsx preview %}
 {% embed_file items/item/callbacks/func/main.tsx %}
 {% endmeta %}

@@ -1,8 +1,8 @@
 ---
 title: Templates
-page_title: 'React Data Grid Overview - KendoReact Docs & Demos'
-description: 'The React Data Grid provides everything from paging, sorting and filtering to editing, grouping and more.'
-components: ["datagrid"]
+page_title: 'React Grid Overview - KendoReact Docs & Demos'
+description: 'The React Grid provides everything from paging, sorting and filtering to editing, grouping and more.'
+components: ['grid']
 subject: RSC Mode Templates feature of the Grid
 slug: templates_rsc_grid
 position: 20
@@ -10,7 +10,7 @@ position: 20
 
 # RSC Mode Templates Overview
 
-The server templates in the RSC mode of the KendoKendoReact Data Grid can be defined similarly to [custom cells in the client mode](slug:cells_grid), but their behavior depends on whether they are defined in a **server-rendered page** or a **client-rendered page**. This hybrid approach allows developers to choose between server-rendered templates for performance optimization or client-side templates for interactive functionality.
+The server templates in the RSC mode of the KendoReact Grid can be defined similarly to [custom cells in the client mode](slug:cells_grid), but their behavior depends on whether they are defined in a **server-rendered page** or a **client-rendered page**. This hybrid approach allows developers to choose between server-rendered templates for performance optimization or client-side templates for interactive functionality.
 
 <CtaPanelOverview></CtaPanelOverview>
 
@@ -91,7 +91,7 @@ In this way you will utilize the hybrid capabilities of the Grid, having custom 
     }
     ```
 
-Below, you will find a demo illustrating how a custom client cell template can be seamlessly integrated with the RSC mode of KendoKendoReact Data Grid.
+Below, you will find a demo illustrating how a custom client cell template can be seamlessly integrated with the RSC mode of KendoReact Grid.
 
 {% meta height:510 %}
 {% embed_file server-components/customcells-basic/client/app.tsx preview %}
@@ -99,8 +99,8 @@ Below, you will find a demo illustrating how a custom client cell template can b
 
 ## Suggested Links
 
--   [KendoKendoReact Data Grid Custom Cells Documentation](slug:cells_grid)
--   [KendoKendoReact Data Grid RSC Mode Data Operations](slug:data_operations_rsc_grid)
--   [KendoKendoReact Data Grid RSC Mode Server Actions](slug:server_actions_rsc_grid)
--   [КendoReact Data Grid RSC Mode Overview](slug:overview_rsc_grid)
--   [Getting Started with КendoReact Data Grid RSC Mode](slug:getstarted_rsc_grid)
+-   [KendoReact Grid Custom Cells Documentation](slug:cells_grid)
+-   [KendoReact Grid RSC Mode Data Operations](slug:data_operations_rsc_grid)
+-   [KendoReact Grid RSC Mode Server Actions](slug:server_actions_rsc_grid)
+-   [КendoReact Grid RSC Mode Overview](slug:overview_rsc_grid)
+-   [Getting Started with КendoReact Grid RSC Mode](slug:getstarted_rsc_grid)

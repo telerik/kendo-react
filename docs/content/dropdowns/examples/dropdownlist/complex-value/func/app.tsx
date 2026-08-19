@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { DropDownList, DropDownListChangeEvent } from '@progress/kendo-react-dropdowns';
 import { Label } from '@progress/kendo-react-labels';
+import { DataBinding } from '@docs-shared/DataBinding';
 
 const App = () => {
     const sports = [
@@ -23,20 +24,21 @@ const App = () => {
     };
 
     return (
-        <div>
-            <div className="example-config">Selected Value: {JSON.stringify(state.value)}</div>
-            <Label editorId="sport">Select sport</Label>
-            <br />
-            <DropDownList
-                id="sport"
-                data={sports}
-                textField="text"
-                dataItemKey="id"
-                value={state.value}
-                onChange={handleChange}
-                style={{ width: '300px' }}
-            />
-        </div>
+        <DataBinding fields={[{ label: 'Selected Value', value: state.value }]}>
+            <div>
+                <Label editorId="sport">Select sport</Label>
+                <br />
+                <DropDownList
+                    id="sport"
+                    data={sports}
+                    textField="text"
+                    dataItemKey="id"
+                    value={state.value}
+                    onChange={handleChange}
+                    style={{ width: '300px' }}
+                />
+            </div>
+        </DataBinding>
     );
 };
 

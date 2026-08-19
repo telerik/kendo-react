@@ -27,7 +27,7 @@ As a result, the TreeList allows you to:
 
 The `selectedField` option represents a field inside the data collection which determines the rows that will render as selected.
 
-{% meta height:690 %}
+{% meta height:810 %}
 {% embed_file selection-basic/func/app.tsx preview %}
 {% embed_file selection-basic/func/main.tsx %}
 {% endmeta %}
@@ -46,7 +46,7 @@ To configure the checkbox selection:
 
 The following example demonstrates how to implement multiple selection both on row click and with checkboxes.
 
-{% meta height:580 %}
+{% meta height:690 %}
 {% embed_file selection/func/app.tsx preview %}
 {% embed_file selection/func/main.tsx %}
 {% endmeta %}

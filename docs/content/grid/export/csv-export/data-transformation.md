@@ -1,7 +1,7 @@
 ---
 title: Data Transformation
 description: 'Learn how to transform and manipulate Grid data before exporting to CSV using the onCsvExport callback.'
-components: ['datagrid']
+components: ['grid']
 slug: datatransformation_csvexport_grid
 position: 30
 subject: CSV Export feature of the Grid
@@ -165,5 +165,5 @@ const handleCsvExport = (data) => {
 -   [Customizing Exported Columns]({% slug customcolumns_csvexport_grid %})
 -   [Exporting Custom Data]({% slug customdata_csvexport_grid %})
 -   [Formula Injection Protection]({% slug formulainjection_csvexport_grid %})
--   [React Data Grid](slug://overview_grid)
+-   [React Grid](slug://overview_grid)
 -   [API Reference of the Grid]({% slug api_grid_gridprops %})

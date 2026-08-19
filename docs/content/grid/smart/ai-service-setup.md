@@ -160,7 +160,7 @@ With this setup, the library automatically handles the following tasks:
 
 ### Configure the Frontend
 
-Now that your backend is ready, configure your KendoKendoReact Data Grid to use this API endpoint. See [Smart Grid AI Assistant Tools Setup](slug:ai_assistant_tools_setup) for frontend setup options.
+Now that your backend is ready, configure your KendoReact Grid to use this API endpoint. See [Smart Grid AI Assistant Tools Setup](slug:ai_assistant_tools_setup) for frontend setup options.
 
 ## Request and Response Format
 

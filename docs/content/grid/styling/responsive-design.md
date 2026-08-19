@@ -1,21 +1,21 @@
 ---
 title: Responsive Design
-description: 'Find out how the responsive web design of the KendoKendoReact Data Grid allows your apps to adapt their layout to the available screen size.'
-components: ["datagrid"]
+description: 'Find out how the responsive web design of the KendoReact Grid allows your apps to adapt their layout to the available screen size.'
+components: ['grid']
 slug: responsive_grid
 position: 30
 ---
 
-# KendoReact Data Grid Responsive Design
+# KendoReact Grid Responsive Design
 
 The Grid offers responsive web design and adapts its layout based on the available screen size.
 
-The responsive features of the KendoKendoReact Data Grid are:
+The responsive features of the KendoReact Grid are:
 
 -   Responsive columns&mdash;Based on the viewport width, the visibility of the Grid columns toggles.
 -   Responsive height&mdash;Based on the height setting (for example, `"100%"`), the Grid adjusts its size depending on the height of its container.
 
-{% meta height:510 %}
+{% meta height:630 %}
 {% embed_file responsive-design/basic/app.tsx preview %}
 {% embed_file responsive-design/basic/main.tsx %}
 {% endmeta %}
@@ -30,6 +30,8 @@ To control the visibility of the columns, use their [`media`]({% slug api_grid_g
 | `"(max-width: 300px)"`                           | The viewport width is `300px` or less.                                                |
 | `"(min-width: 500px) and (max-width: 1200px)"`   | The viewport width is between `500px` and `1,200px`.                                  |
 | `"(max-width: 320px), (orientation: landscape)"` | The viewport width is more than `320px` and the device is in a landscape orientation. |
+
+The following example demonstrates how to use the [`media`]({% slug api_grid_gridcolumnprops %}#toc-media) property to show or hide columns based on viewport width breakpoints.
 
 {% meta height:370 %}
 {% embed_file responsive-design/multicolumn-grid/app.tsx preview %}
@@ -69,6 +71,8 @@ Using the Bootstrap 4 identifiers is a less flexible approach than declaring the
 
 You can control the height of the Grid through the `height` CSS property. If the height is set in percentage units, the Grid adjusts its layout accordingly just like a regular HTML element. In CSS, setting the `height` of an element to percentage units requires that its parent element has its `height` defined. Because this rule is applied recursively, to make the Grid fill 100% of the browser window, all elements up to the document root `<html>` element must have a height of 100%.
 
+The following example demonstrates how to set the Grid height using percentage units so it fills its parent container proportionally.
+
 {% meta height:460 %}
 {% embed_file responsive-design/height/app.tsx preview %}
 {% embed_file responsive-design/height/main.tsx %}
@@ -76,5 +80,5 @@ You can control the height of the Grid through the `height` CSS property. If the
 
 ## Suggested Links
 
--   [Using Responsive Columns with Virtualization]({% slug virtualscrolling_grid %}#toc-virtualization-with-responsive-columns)
+-   [Using Responsive Columns with Virtualization]({% slug virtualscrolling_grid %})
 -   [API Reference of the GridColumn]({% slug api_grid_gridcolumnprops %})

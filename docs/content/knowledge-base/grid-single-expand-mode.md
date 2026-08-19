@@ -59,7 +59,7 @@ To implement single-expand mode for detail rows in the KendoReact Grid, follow t
   };
 ```
 
-<demo metaUrl="knowledge-base/grid/grid-single-expand-mode/" height="600"></demo>
+<demo metaUrl="knowledge-base/grid/grid-single-expand-mode/" height="900"></demo>
 
 ## See Also
 

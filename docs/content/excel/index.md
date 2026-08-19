@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: 'React Excel Export allows you to export data to Excel files. It enables data transfer and integration with different formats and styles.'
-components: ["excelexport"]
+components: ['excelexport']
 slug: overview_excelexport
 position: 0
 ---
@@ -16,9 +16,10 @@ The provided functionality is suitable for users who want to export data to an E
 
 The following demo shows React Export to Excel file.
 
-{% meta height:100 %}
+{% meta height:880 %}
 {% embed_file overview/func/app.tsx preview %}
 {% embed_file overview/func/main.tsx %}
+{% embed_file overview/func/styles.css %}
 {% endmeta %}
 
 ## Key Features of React Excel Export

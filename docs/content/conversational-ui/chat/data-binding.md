@@ -25,7 +25,7 @@ Chat conversations involve multiple participants, so messages must be visually d
 
 The following example demonstrates how to bind the messages of the Chat when your data structure matches the expected Message interface. It also shows message status tracking and threaded reply functionality using the `replyToId` property.
 
-{% meta height:760 %}
+{% meta height:830 %}
 {% embed_file chat/data-binding/standard/app.tsx preview %}
 {% embed_file chat/data-binding/standard/main.tsx %}
 {% endmeta %}
@@ -46,7 +46,7 @@ The Chat component provides field mapping properties that allow you to specify w
 
 For a complete list of all available field mapping properties and their configuration options, refer to the [Chat API documentation](slug:api_conversational-ui_chatprops). Additional field mapping properties are available for advanced scenarios and custom data structures.
 
-{% meta height:730 %}
+{% meta height:830 %}
 {% embed_file chat/data-binding/field-mapping/app.tsx preview %}
 {% embed_file chat/data-binding/field-mapping/main.tsx %}
 {% endmeta %}

@@ -14,7 +14,7 @@ For more information on how globalization practices are implemented in KendoReac
 
 The following example demonstrates how the Chart component reacts to `local` changes and visualize the currency data based on the selected locale.
 
-{% meta height:565 %}
+{% meta height:640 %}
 {% embed_file chart/globalization/func/app.tsx preview %}
 {% embed_file chart/globalization/func/main.tsx %}
 {% embed_file chart/globalization/func/cldr.js %}

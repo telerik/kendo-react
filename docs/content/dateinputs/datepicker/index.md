@@ -47,5 +47,5 @@ This demo implements some of the features that are available in the DatePicker:
 
 -   [API Reference of the KendoReact DatePicker]({% slug api_dateinputs_datepicker %})
 -   [Getting Started with the KendoReact Date Inputs]({% slug get_started_dateinputs %})
--   [Support Options]({% slug overview_dateinputs %}#toc-support-options)
+-   [Support Options]({% slug overview_dateinputs %})
 -   [React Date Inputs](slug:overview_dateinputs)

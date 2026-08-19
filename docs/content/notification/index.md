@@ -41,7 +41,7 @@ The KendoReact Notification provides the following key features. Note that this 
 
 ## How Does the KendoReact Notification Work?
 
-> The KendoReact Notification is a [free React Notification](#package-contents) that doesn't require a commercial license key or an active trial license key to install or use.
+> The KendoReact Notification is a [free React Notification](slug:getting_started_free_vs_premium) that doesn't require a commercial license key or an active trial license key to install or use.
 
 The KendoReact Notification is built natively for React, with no dependencies. They leverage key React concepts such as components-based architecture, props and state management, conditional rendering, and event handling.
 

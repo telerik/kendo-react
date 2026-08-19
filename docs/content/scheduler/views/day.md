@@ -19,7 +19,7 @@ The **Day** view provides the following common settings:
 
 The following example demonstrates how to set common properties of the **Day** view of the Scheduler. For the full list of configuration options, refer to the API reference of the [`DayView`]({% slug api_scheduler_dayviewprops %}) properties.
 
-{% meta height:670 %}
+{% meta height:780 %}
 {% embed_file views/day/configuration/func/app.tsx preview %}
 {% embed_file views/day/configuration/func/main.tsx %}
 {% endmeta %}
@@ -28,7 +28,9 @@ The following example demonstrates how to set common properties of the **Day** v
 
 You can configure the **Day** view to display events that are grouped by a resource.
 
-{% meta height:760 %}
+The following example demonstrates how to group events by multiple resources in both horizontal and vertical orientations.
+
+{% meta height:800 %}
 {% embed_file views/day/grouping/func/app.tsx preview %}
 {% embed_file views/day/grouping/func/main.tsx %}
 {% endmeta %}
@@ -37,7 +39,9 @@ You can configure the **Day** view to display events that are grouped by a resou
 
 By default, the current time marker is enabled if the current `date` and `time` is visible in the view-range.
 
-{% meta height:760 %}
+The following example demonstrates the current time marker feature when displaying events in the Day view.
+
+{% meta height:800 %}
 {% embed_file views/day/current-time/func/app.tsx preview %}
 {% embed_file views/day/current-time/func/main.tsx %}
 {% endmeta %}

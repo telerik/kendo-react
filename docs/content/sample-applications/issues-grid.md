@@ -1,6 +1,6 @@
 ---
 title: Github Issues Grid
-description: 'Create a powerful KendoReact Data Grid component, bound to and showing complex data from the public GitHub GraphQL API, enabling you to beautifully visualize and list, sort, and filter issues descriptions, and rendering additional information about feature requests, bug fixes, and follow-up.'
+description: 'Create a powerful KendoReact Grid component, bound to and showing complex data from the public GitHub GraphQL API, enabling you to beautifully visualize and list, sort, and filter issues descriptions, and rendering additional information about feature requests, bug fixes, and follow-up.'
 components: ['general']
 slug: github_issues_grid
 position: 30
@@ -9,9 +9,9 @@ level: 0
 subject: Github Issues Grid
 ---
 
-# Github Issues Data Grid
+# Github Issues Grid
 
-KendoReact enables you to create powerful and beautiful Data Grids and to easily bind them with data from any API.
+KendoReact enables you to create powerful and beautiful Grids and to easily bind them with data from any API.
 
 <CtaPanelOverview message="The @Subject Sample App was created with KendoReact, an enterprise-grade React UI library with 120+ @FreemiumShortLink and premium components for building polished, performant apps. Test-drive the components used in this app with a free trial."></CtaPanelOverview>
 

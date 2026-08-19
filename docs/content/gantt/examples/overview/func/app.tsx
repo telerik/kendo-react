@@ -11,6 +11,7 @@ import {
     mapTree,
     extendDataItem,
     GanttTextFilter,
+    GanttNumericFilter,
     GanttDateFilter,
     GanttColumnResizeEvent,
     GanttColumnReorderEvent,
@@ -48,17 +49,23 @@ const dependencyModelFields = {
 const getTaskId = getter(taskModelFields.id);
 
 const columns = [
-    { field: taskModelFields.id, title: 'ID', width: 70 },
     { field: taskModelFields.title, title: 'Title', width: 200, expandable: true, filter: GanttTextFilter },
-    { field: taskModelFields.start, title: 'Start', width: 120, format: '{0:MM/dd/yyyy}', filter: GanttDateFilter },
-    { field: taskModelFields.end, title: 'End', width: 120, format: '{0:MM/dd/yyyy}', filter: GanttDateFilter }
+    { field: taskModelFields.start, title: 'Start', width: 200, format: '{0:dd-MMM-yyyy}', filter: GanttDateFilter },
+    { field: taskModelFields.end, title: 'End', width: 200, format: '{0:dd-MMM-yyyy}', filter: GanttDateFilter },
+    {
+        field: taskModelFields.percentComplete,
+        title: 'Progress',
+        width: 110,
+        format: '{0:p0}',
+        filter: GanttNumericFilter
+    }
 ];
 
 const App = () => {
     const [taskData] = React.useState(exampleTaskData);
     const [dependencyData] = React.useState(exampleDependencyData);
 
-    const [expandedState, setExpandedState] = React.useState([7, 11, 12, 13]);
+    const [expandedState, setExpandedState] = React.useState([7, 11, 12, 13, 14, 30, 31]);
     const [columnsState, setColumnsState] = React.useState<Array<any>>(columns);
 
     const onColumnResize = React.useCallback(

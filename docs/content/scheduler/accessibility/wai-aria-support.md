@@ -59,7 +59,7 @@ In case of an Agenda view, the role assigned to the Scheduler layout table (`k-s
 
 | Selector | Attribute | Usage |
 | -------- | --------- | ----- |
-| `.k-scheduler-agendaview` | `role=grid` | The main table of the Agenda view must indicate it is a Data Grid. |
+| `.k-scheduler-agendaview` | `role=grid` | The main table of the Agenda view must indicate it is a Grid. |
 | `.k-scheduler-agendaview>tbody` | `role=none/presentation` | The `<tbody>` element must have its semantics removed. |
 | `.k-scheduler-agendaview .k-scheduler-table` | `role=none/presentation` | Those `<table>` elements within the Scheduler must have their semantic role removed. |
 | `.k-scheduler-agendaview .k-scheduler-table>tbody` | `role=rowgroup` | Those elements must have their role explicitly set as it has been removed by the `<table>` role set (none/presentation). |

@@ -625,6 +625,49 @@ Fires when the value of the Slider changes.
 <td class="table-cell-name">
 
 
+#### readOnly?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+boolean
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Makes the Slider read-only when set to `true`. The Slider will remain focusable but its value cannot be changed by the user.
+
+
+
+
+```jsx
+<Slider readOnly={true} min={0} max={100} />
+```
+
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### required?
 
 

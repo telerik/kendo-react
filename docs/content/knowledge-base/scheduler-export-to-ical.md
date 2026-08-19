@@ -36,7 +36,7 @@ This can be done using [ical.js](https://mozilla-comm.github.io/ical.js/) to pro
 
 This is an example demonstrating the implementation:
 
-{% meta  height:760 %}
+{% meta  height:780 %}
 {% embed_file scheduler/export-to-ical/app.jsx preview %}
 {% embed_file scheduler/export-to-ical/main.jsx %}
 {% endmeta %}

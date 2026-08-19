@@ -19,7 +19,7 @@ You can set up your item layout using these configuration properties:
 
 The following demo shows how to create a colorful dashboard-like layout by positioning boxes of different sizes and colors using the `col`, `row`, `colSpan`, and `rowSpan` properties.
 
-{% meta height:580 %}
+{% meta height:690 %}
 {% embed_file gridlayout/items/func/app.tsx preview %}
 {% embed_file gridlayout/items/func/main.tsx %}
 {% embed_file gridlayout/items/func/styles.css %}

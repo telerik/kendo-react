@@ -37,7 +37,7 @@ You can prevent panning and zooming for an axis by using the `lock` configuratio
 
 By default, one click on the mousewheel will expand or contract the axis ranges by 30%. To set the zoom rate to a different value, set the [`rate`]({% slug api_charts_mousewheelzoom %}#toc-rate) to a number in the range from 0.01 to 0.9 (1% to 90%).
 
-{% meta height:600 %}
+{% meta height:640 %}
 {% embed_file chart/pan-zoom/rate/func/app.tsx preview %}
 {% embed_file chart/pan-zoom/rate/func/main.tsx %}
 {% embed_file chart/pan-zoom/rate/func/data.ts %}

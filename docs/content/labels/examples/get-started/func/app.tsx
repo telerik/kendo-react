@@ -5,7 +5,7 @@ import { Input } from '@progress/kendo-react-inputs';
 const App = () => {
     const editorId = 'firstName';
     return (
-        <div>
+        <div className="example-wrapper-center">
             <Label editorId={editorId}>First Name&nbsp;</Label>
             <Input id={editorId} />
             <Hint id={editorId}>e.g. Peter</Hint>

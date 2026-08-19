@@ -282,9 +282,6 @@ position: 1
 
   <ul class="api-item-list">
     <li class="api-item">
-        <a href="{% slug api_spreadsheet_alignment %}">Alignment</a>
-    </li>
-    <li class="api-item">
         <a href="{% slug api_spreadsheet_calcerror %}">CalcError</a>
     </li>
     <li class="api-item">
@@ -297,28 +294,10 @@ position: 1
         <a href="{% slug api_spreadsheet_defaulttabs %}">defaultTabs</a>
     </li>
     <li class="api-item">
-        <a href="{% slug api_spreadsheet_excelexport %}">ExcelExport</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_spreadsheet_fontfamily %}">FontFamily</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_spreadsheet_fontsize %}">FontSize</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_spreadsheet_format %}">Format</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_spreadsheet_gridlines %}">GridLines</a>
-    </li>
-    <li class="api-item">
         <a href="{% slug api_spreadsheet_matrix %}">Matrix</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_spreadsheet_nameref %}">NameRef</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_spreadsheet_open %}">Open</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_spreadsheet_range %}">Range</a>
@@ -334,9 +313,6 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_spreadsheet_spreadsheetwidget %}">SpreadsheetWidget</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_spreadsheet_textwrap %}">TextWrap</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_spreadsheet_unionref %}">UnionRef</a>

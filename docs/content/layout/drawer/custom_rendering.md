@@ -32,7 +32,7 @@ The following example demonstrates how to achieve this by toggling the visibilit
 
 The `level` property of each item sets its level of nesting beneath the parent element in the hierarchy tree.
 
-{% meta height:660 %}
+{% meta height:700 %}
 {% embed_file drawer/hierarchical/func/app.tsx preview %}
 {% embed_file drawer/hierarchical/func/main.tsx %}
 {% embed_file drawer/hierarchical/func/Content.tsx %}

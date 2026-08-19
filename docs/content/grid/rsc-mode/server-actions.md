@@ -1,15 +1,15 @@
 ---
 title: Server Actions
-page_title: 'React Data Grid Overview - KendoReact Docs & Demos'
-description: 'The React Data Grid provides everything from paging, sorting and filtering to editing, grouping and more.'
-components: ["datagrid"]
+page_title: 'React Grid Overview - KendoReact Docs & Demos'
+description: 'The React Grid provides everything from paging, sorting and filtering to editing, grouping and more.'
+components: ['grid']
 slug: server_actions_rsc_grid
 position: 15
 ---
 
 # RSC Mode Server Actions
 
-The [RSC](https://react.dev/blog/2023/03/22/react-labs-what-we-have-been-working-on-march-2023#react-server-components) architecture introduces [`server actions`](https://react.dev/reference/react/use-server), which are seamlessly integrated in the server mode of the KendoKendoReact Data Grid.
+The [RSC](https://react.dev/blog/2023/03/22/react-labs-what-we-have-been-working-on-march-2023#react-server-components) architecture introduces [`server actions`](https://react.dev/reference/react/use-server), which are seamlessly integrated in the server mode of the KendoReact Grid.
 
 Server-actions compatibility allows passing functions to the component's callbacks, such as `onDataStateChange` or `onItemChange`, enabling the execution of custom server-side logic.
 
@@ -50,6 +50,8 @@ const onDataStateChange = async (event: ServerEvent<GridDataStateChangeEvent>) =
 return <Grid onDataStateChange={onDataStateChange} dataItemKey={dataItemKey}></Grid>;
 ```
 
+The following example demonstrates how to wire a server action to the `onDataStateChange` event to persist sorting, filtering, paging, and grouping state in cookies across page reloads.
+
 {% meta height:400 %}
 {% embed_file server-components/server-actions/app.tsx preview %}
 {% endmeta %}
@@ -69,5 +71,5 @@ There are some current events of the Grid that only make sense in a client scena
 
 ## Suggested Links
 
--   [КendoReact Data Grid RSC Mode Overview](slug:overview_rsc_grid)
--   [Getting Started with КendoReact Data Grid RSC Mode](slug:getstarted_rsc_grid)
+-   [КendoReact Grid RSC Mode Overview](slug:overview_rsc_grid)
+-   [Getting Started with КendoReact Grid RSC Mode](slug:getstarted_rsc_grid)

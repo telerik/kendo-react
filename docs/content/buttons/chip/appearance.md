@@ -1,7 +1,7 @@
 ---
 title: Appearance
 description: 'Add alternative styling options to the KendoReact Chip in React projects.'
-components: ["chip"]
+components: ['chip']
 slug: appearance_chip
 position: 6
 ---
@@ -15,7 +15,14 @@ Apart from the default vision of the Chip, these alternative styling options ena
 -   [Size](#chip-size)
 -   [Border Radius](#chip-border-radius)
 -   [Fill Mode](#chip-fill-mode)
--   [Theme Colors](#chip-theme-colors)
+-   [Theme Colors](#chip-theme-color)
+
+The following example demonstrates all the available appearance options of the Chip in a single, configurable demo.
+
+{% meta height:180 %}
+{% embed_file chip/appearance/func/app.tsx preview %}
+{% embed_file chip/appearance/func/main.tsx %}
+{% endmeta %}
 
 ## Chip Size
 
@@ -29,7 +36,7 @@ The Chip provides the [`size`]({% slug api_buttons_chipprops %}#toc-size) proper
 
 ## Chip Fill Mode
 
-The Chip allows you to set different fill modes by using the [`fillMode`]({% slug api_buttons_chipprops %}#toc-fill-mode) property.
+The Chip allows you to set different fill modes by using the [`fillMode`]({% slug api_buttons_chipprops %}) property.
 
 {% meta height:180 %}
 {% embed_file chip/appearance/fill-mode/app.tsx preview %}
@@ -49,7 +56,7 @@ The Chip provides the [`rounded`]({% slug api_buttons_chipprops %}#rounded) prop
 
 ## Chip with SVG icons
 
-The Chip enables you to render an SVG icon through the [`svgIcon`]({% slug api_buttons_chipprops %}#svg-icon) property.
+The Chip enables you to render an SVG icon through the [`svgIcon`]({% slug api_buttons_chipprops %}) property.
 
 {% meta height:180 %}
 {% embed_file chip/svg-icon-chip/app.tsx preview %}
@@ -59,7 +66,7 @@ The Chip enables you to render an SVG icon through the [`svgIcon`]({% slug api_b
 
 ## Chip with Avatars
 
-The Chip enables you to render an avatar through the [`avatar`]({% slug api_buttons_chipprops %}#svg-avatar) property.
+The Chip enables you to render an avatar through the [`avatar`]({% slug api_buttons_chipprops %}) property.
 
 {% meta height:180 %}
 {% embed_file chip/avatar-chip/app.tsx preview %}
@@ -77,7 +84,7 @@ The Chip enables you to render a font icon through the [`icon`]({% slug api_butt
 
 ## Chip Theme Color
 
-The Chip allows you to set different theme colors by using the [`themeColor`]({% slug api_buttons_chipprops %}#toc-theme-color) property.
+The Chip allows you to set different theme colors by using the [`themeColor`](slug:api_buttons_chipprops#themecolor) property.
 
 {% meta height:180 %}
 {% embed_file chip/appearance/theme-color/app.tsx preview %}

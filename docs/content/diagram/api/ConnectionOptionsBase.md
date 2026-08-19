@@ -69,7 +69,7 @@ Defines accessibility options for the connection.
 <code>
 
 
-[ConnectionContent]({% slug api_diagram_connectioncontent %})
+[ConnectionContent]({% slug api_diagram_connectioncontent %}) | [ConnectionRichTextContent]({% slug api_diagram_connectionrichtextcontent %})
 
 
 </code>
@@ -604,7 +604,7 @@ Specifies the name of the target shape connector that should be used by default.
 <code>
 
 
-"polyline" | "cascading"
+[ConnectionType]({% slug api_diagram_connectiontype %})
 
 
 </code>

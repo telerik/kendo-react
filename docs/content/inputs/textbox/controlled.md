@@ -12,7 +12,7 @@ By default, the KendoReact TextBox component is in an uncontrolled mode.
 
 ## Controlling the Value
 
-1. Use its [`value`]({% slug api_inputs_textboxprops %}#toc-value) property.
+1. Use its [`value`]({% slug api_inputs_textboxprops %}) property.
 1. Handle the [`onChange`]({% slug api_inputs_textboxprops %}#toc-onchange) event.
 
 The following example showcases the controlled mode in action.

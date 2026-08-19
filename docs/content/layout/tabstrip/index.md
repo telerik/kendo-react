@@ -16,9 +16,10 @@ The KendoReact TabStrip component is part of the KendoReact library of React UI 
 
 The following example demonstrates the TabStrip in action.
 
-{% meta height:350 %}
+{% meta height:750 %}
 {% embed_file tabstrip/overview/basic/func/app.tsx preview %}
 {% embed_file tabstrip/overview/basic/func/main.tsx %}
+{% embed_file tabstrip/overview/basic/func/styles.css %}
 {% endmeta %}
 
 > The TabStrip is part of the [KendoReact Layout]({% slug overview_layout %}) component library. The procedures for installing, importing, and using all components in the library are identical. To learn how to use the TabStrip and the rest of the components in the package, see the [Getting Started with the KendoReact Layout Package]({% slug getstarted_layout %}) guide.

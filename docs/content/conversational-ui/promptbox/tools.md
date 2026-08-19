@@ -14,7 +14,7 @@ These tools include the **Action** button for submitting prompts, the **Upload**
 
 ## Action Button
 
-The **Action** button submits the prompt. Customize its [appearance](slug:appearance_promptbox) and behavior by setting the [`actionButtonConfig`](slug:api_conversational-ui_promptboxprops#actionbutton) property to an [`PromptBoxActionButton`](slug:api_conversational-ui_promptboxactionbuttonprops) object.
+The **Action** button submits the prompt. Customize its [appearance](slug:appearance_promptbox) and behavior by setting the [`actionButtonConfig`](slug:api_conversational-ui_promptboxprops#actionButtonConfig) property to an [`PromptBoxActionButton`](slug:api_conversational-ui_promptboxactionbuttonprops) object.
 
 The button supports a loading state for better user feedback during prompt submission and icon customizations for each state.
 
@@ -56,9 +56,9 @@ To restrict the minimum and maximum file size for attachments, set the [`restric
 
 ### File Type Restrictions
 
-To restrict the allowed file types for attachments, set the [`restrictions`](slug:api_conversational-ui_PromptBoxUploadButton#restrictions) property of the [`PromptBoxUploadButton`](slug:api_conversational-ui_PromptBoxUploadButton) to an object containing the `allowedExtensions` property.
+To restrict the allowed file types for attachments, set the [`restrictions`](slug:api_conversational-ui_promptboxuploadbuttonprops#restrictions) property of the [`PromptBoxUploadButton`](slug:api_conversational-ui_PromptBoxUploadButton) to an object containing the `allowedExtensions` property.
 
-Additionally, set the [`accept`](slug:api_conversational-ui_PromptBoxUploadButton#accept) property to enable the allowed file types in the file selection dialog.
+Additionally, set the [`accept`](slug:api_conversational-ui_promptboxuploadbuttonprops#accept) property to enable the allowed file types in the file selection dialog.
 
 This property accepts an array of strings representing the allowed file types or extensions.
 

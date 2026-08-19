@@ -16,7 +16,7 @@ By default, an item is taking the entire height of the `slot` it fits it. We wil
 
 The following example demonstrates `proportional` positioning.
 
-{% meta height:900 %}
+{% meta height:980 %}
 {% embed_file items/view-item/extending/func/app.tsx preview %}
 {% embed_file items/view-item/extending/func/main.tsx %}
 {% endmeta %}

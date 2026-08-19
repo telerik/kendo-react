@@ -1,14 +1,14 @@
 ---
 title: Reordering Rows
-description: 'Get started with the KendoKendoReact Data Grid supporting row reordering either by using built-in browser APIs or third-party libraries.'
-components: ["datagrid"]
+description: 'Get started with the KendoReact Grid supporting row reordering either by using built-in browser APIs or third-party libraries.'
+components: ['grid']
 slug: rowreordering_grid
 position: 20
 ---
 
 # Reordering Rows
 
-The Data Grid comes with a built-in reordering [column type](slug:api_grid_gridcolumntype), allowing you to easily change the order of each row by dragging it to the target position.
+The Grid comes with a built-in reordering [column type](slug:api_grid_gridcolumntype), allowing you to easily change the order of each row by dragging it to the target position.
 
 ## Getting Started
 
@@ -26,7 +26,7 @@ Implementing row reordering requires the following steps:
 <Column columnType="reorder" width={60} />
 ```
 
-1. Handle the [`onRowReorder`](sslug:api_grid_gridprops#onrowreorder) event of the Grid in order to update the data with the new row indexes. You can use the `dropPosition` available in the [`GridRowReorderEvent`](slug:api_grid_gridrowreorderevent#dropPosition) object to calculate the target position of the dragged row.
+1. Handle the [`onRowReorder`](slug:api_grid_gridprops#onRowReorder) event of the Grid in order to update the data with the new row indexes. You can use the `dropPosition` available in the [`GridRowReorderEvent`](slug:api_grid_gridrowreorderevent#dropPosition) object to calculate the target position of the dragged row.
 
 ```jsx
  <Grid onRowReorder={handleRowReorder}>

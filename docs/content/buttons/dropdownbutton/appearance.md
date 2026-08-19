@@ -4,8 +4,6 @@ description: 'Add alternative styling options to the KendoReact DropDownButton i
 components: ['dropdownbutton']
 slug: appearance_dropdownbutton
 position: 6
-tag: updated
-release_tag: Q2 2026
 ---
 
 # Appearance
@@ -18,6 +16,13 @@ Apart from the default vision of the DropDownButton, these alternative styling o
 -   [Border Radius](#border-radius)
 -   [Fill Mode](#fill-mode)
 -   [Theme Colors](#theme-colors)
+
+The following example demonstrates all the available appearance options of the DropDownButton in a single, configurable demo.
+
+{% meta height:250 %}
+{% embed_file dropdownbutton/appearance/func/app.tsx preview %}
+{% embed_file dropdownbutton/appearance/func/main.tsx %}
+{% endmeta %}
 
 ## Size
 

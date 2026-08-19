@@ -1,0 +1,944 @@
+/*
+ * Theming tokens. Each one mirrors an existing docs-builder global design token (see
+ * kendo-react-private ../docs-builder/src/styles/telerik/{light,dark}-theme/_styles.scss
+ * and theme-customizer.module.scss), via `var(--token, fallback)` — the fallback is what
+ * renders when running standalone (StackBlitz/CodeSandbox exports, "open in new window"),
+ * where no docs-builder shell exists to provide it.
+ *
+ * When embedded in docs-builder's demo iframe, the shell bridges its current light/dark
+ * mode by posting a `dark-mode-changed` message (see apps/docs/main.tsx) carrying the
+ * live values of the underlying tokens (--bg-primary, --border-accent, etc.) as inline
+ * custom properties on <html>, which take precedence over the fallbacks below — this is
+ * what makes the configurator look just like docs-builder's own "Theme Customization"
+ * panel, including its brand accent color, in both light and dark mode.
+ */
+:root {
+    /* Dark mode uses three distinct surface tiers (confirmed against the "Component
+     Properties" popup dark-mode spec, Figma node 15218:29600) that all collapse to the
+     same value in light mode, which is why a single shared token per tier is enough —
+     no need for one alias per component:
+       --cfg-bg         dropdown/tooltip popups             (card-bg:    #fff / #151950)
+       --cfg-control-bg buttons, dropdown, numeric buttons  (bg-primary: #fff / #20256c)
+       --cfg-input-bg   chip, radio/checkbox, switch track  (segment-bg: #fff-ish / #1a1f5e)
+       --cfg-field-bg   textbox, numeric shell, seg. track  (input-bg, translucent both modes)
+     */
+    --cfg-bg: var(--card-bg, #ffffff);
+    --cfg-control-bg: var(--bg-primary, #ffffff);
+    /* The floating trigger button (.cfg-trigger) is rendered directly on top of the demo
+     content rather than inside the panel, so it uses docs-builder's own "Theme
+     Customization" pill background instead of --cfg-control-bg — matching it exactly
+     (rather than the close-but-different --bg-primary) in both light and dark mode. */
+    --cfg-trigger-bg: var(--demo-customizer-surface-bg, #fafafa);
+    /* The panel's OWN surface is a distinct, slightly tinted tier (confirmed against the
+     "Component Properties" popup spec, Figma nodes 15206:27203 / 15282:49119) — it is
+     NOT the same as --cfg-bg/--cfg-border used by inner controls like the dropdown menu. */
+    --cfg-panel-bg: var(--bg-search, #f5f6f7);
+    --cfg-panel-border: var(--demo-customizer-icon-subtle, #b3bfc7);
+    --cfg-border: var(--theme-selector-border, #e0e5e8);
+    --cfg-text: var(--text-secondary, #383f55);
+    --cfg-text-secondary: var(--text-subtle, #64737d);
+    --cfg-text-strong: var(--text-primary, #000000);
+    --cfg-title-color: var(--text-label, #536071);
+    --cfg-input-bg: var(--demo-customizer-segment-bg, #e8ecef);
+    --cfg-field-bg: var(--theme-selector-border, rgba(224, 229, 232, 0.5));
+    --cfg-track-bg: var(--demo-customizer-slider-track, rgba(179, 191, 199, 0.5));
+    /* No dedicated docs-builder token for tick markers — reuses the bridged border token
+     so marks still darken/lighten with the shell's theme instead of staying static. */
+    --cfg-marker: var(--theme-selector-border, #b3bfc7);
+    --cfg-hover-bg: var(--demo-icon-button-hover-bg, #e0e5e8);
+    --cfg-accent: var(--border-accent, #3d57d8);
+    --cfg-accent-soft: var(--demo-accent-tint-bg, #ebf2fc);
+    /* Focus ring / border color for controls (buttons, dropdown trigger, switch) — kept
+     distinct from --cfg-accent because docs-builder's own dark-mode focus border
+     (--demo-customizer-focus-border, #98b9fe) differs from its --border-accent (#71a6ff). */
+    --cfg-focus-border: var(--demo-customizer-focus-border, #3d57d8);
+    /* Hover background for bordered surface controls (buttons, dropdown trigger) — mirrors
+     docs-builder's theme-customizer.module.scss dropdown/footer button hover fix. */
+    --cfg-control-hover-bg: var(--demo-customizer-dropdown-hover-bg, #eef0f2);
+    --cfg-icon-subtle: var(--demo-customizer-icon-subtle, #b3bfc7);
+    /* Switch ON track/thumb — mirrors docs-builder's .toggle/.toggleOn/.toggleThumb fix
+     (theme-customizer.module.scss), which uses --hyperlink-text rather than --border-accent
+     for the ON background (they differ in dark mode). */
+    --cfg-switch-on-bg: var(--hyperlink-text, #3d57d8);
+    --cfg-switch-on-hover-bg: var(--hyperlink-hover-text, #2b2bb2);
+    --cfg-switch-on-border: var(--demo-customizer-toggle-on-border, #e0e5e8);
+    --cfg-switch-on-hover-border: var(--demo-customizer-toggle-on-hover-border, #b3bfc7);
+    --cfg-switch-on-focus-border: var(--demo-customizer-toggle-on-focus-border, #2b2bb2);
+    --cfg-switch-off-thumb: var(--demo-customizer-toggle-off-handle, #b3bfc7);
+    --cfg-switch-on-thumb: var(--demo-customizer-toggle-on-handle, #ffffff);
+    /* Segmented control selected-item thumb — mirrors docs-builder's .elevationThumb
+     (theme-customizer.module.scss), which diverges from --cfg-control-bg/--cfg-border
+     in dark mode (a light-blue highlight with no border, not a plain navy surface). */
+    --cfg-segment-selected-bg: var(--demo-customizer-segment-selected-bg, #ffffff);
+    --cfg-segment-selected-border: var(--demo-customizer-segment-selected-border, #e0e5e8);
+    --cfg-segment-selected-icon: var(--demo-customizer-segment-selected-icon, #383f55);
+    /* Docs-builder's slider tooltip (theme-customizer.module.scss `.sliderTooltip`) is themed
+     per light/dark mode: navy-on-white in light, light-blue-on-navy in dark. */
+    --cfg-tooltip-bg: var(--demo-customizer-tooltip-bg, #06163e);
+    --cfg-tooltip-color: var(--demo-customizer-tooltip-text, #ffffff);
+}
+
+.cfg-panel {
+    position: fixed;
+    top: 64px;
+    right: 12px;
+    min-width: 300px;
+    max-height: 464px;
+    display: flex;
+    flex-direction: column;
+    overflow: clip;
+    background: var(--cfg-panel-bg);
+    border: 1px solid var(--cfg-panel-border);
+    border-radius: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    font-family: Metric, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: var(--cfg-text);
+    z-index: 10000;
+}
+.cfg-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 8px 4px 20px;
+    flex-shrink: 0;
+    border-bottom: 1px solid var(--cfg-panel-border);
+}
+.cfg-panel-title {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--cfg-title-color);
+    line-height: 20px;
+}
+.cfg-panel-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+    box-sizing: content-box;
+    color: var(--cfg-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 99px;
+    flex-shrink: 0;
+    outline: none;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+.cfg-panel-close:hover {
+    background-color: var(--cfg-hover-bg);
+    color: var(--cfg-text-strong);
+}
+.cfg-panel-close:focus {
+    outline: unset;
+}
+.cfg-panel-content {
+    padding: 16px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    overflow-y: auto;
+    flex: 1;
+    /* Firefox: thin, panel-colored scrollbar instead of the OS default. */
+    scrollbar-width: thin;
+    scrollbar-color: var(--cfg-border) transparent;
+}
+/* Chromium/WebKit: same intent, since `scrollbar-color` alone doesn't reach them. */
+.cfg-panel-content::-webkit-scrollbar {
+    width: 6px;
+}
+.cfg-panel-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+.cfg-panel-content::-webkit-scrollbar-thumb {
+    background: var(--cfg-border);
+    border-radius: 99px;
+}
+.cfg-panel-empty {
+    color: var(--cfg-text-secondary);
+    font-size: 16px;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.cfg-section {
+    display: flex;
+    flex-direction: column;
+}
+/* A section is its label followed by the controls it groups. */
+.cfg-section > * + * {
+    margin-top: 8px;
+}
+.cfg-section-label {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--cfg-text-secondary);
+}
+
+.cfg-button-group {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.cfg-button {
+    font-family: Metric, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    height: 32px;
+    padding: 4px 8px;
+    border: 1px solid var(--cfg-border);
+    border-radius: 8px;
+    background: var(--cfg-control-bg);
+    color: var(--cfg-text);
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+.cfg-button:hover {
+    background-color: var(--cfg-control-hover-bg);
+}
+.cfg-button:focus-visible {
+    outline: none;
+    border-color: var(--cfg-focus-border);
+}
+.cfg-button-active {
+    border-color: var(--cfg-accent);
+    background: var(--cfg-accent-soft);
+}
+.cfg-button:focus {
+    outline: none;
+}
+
+.cfg-chips {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.cfg-chip {
+    display: inline-flex;
+    align-items: center;
+    height: 24px;
+    padding: 0 12px;
+    border: 1px solid var(--cfg-border);
+    border-radius: 16px;
+    line-height: 1;
+    background: var(--cfg-control-bg);
+    color: var(--cfg-text);
+    font-family: Metric, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+.cfg-chip:hover {
+    background-color: var(--cfg-control-hover-bg);
+}
+.cfg-chip:focus-visible {
+    border-color: var(--cfg-accent);
+    box-shadow: 0 0 0 2px var(--cfg-accent-soft);
+}
+button.cfg-chip:focus {
+    outline: none;
+}
+.cfg-chip-selected {
+    border-color: var(--cfg-accent);
+    background: var(--cfg-accent-soft);
+    color: var(--cfg-accent);
+}
+.cfg-chip-selected:hover {
+    border-color: var(--cfg-accent);
+    background: var(--cfg-accent-soft);
+}
+.cfg-chip-content {
+    display: flex;
+    align-items: center;
+}
+.cfg-chip-label {
+    white-space: nowrap;
+}
+
+.cfg-radios {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cfg-radio {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--cfg-text);
+}
+.cfg-radio input {
+    display: none;
+}
+.cfg-radio-indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid var(--cfg-border);
+    background: var(--cfg-control-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    transition: border-color 0.15s ease, border-width 0.15s ease, background 0.15s ease;
+}
+input:checked + .cfg-radio-indicator {
+    border: 4px solid var(--cfg-accent);
+    background: var(--cfg-control-bg);
+}
+.cfg-radio-label {
+    user-select: none;
+}
+
+.cfg-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 174px;
+    height: 32px;
+    padding: 4px 9px;
+    border: 1px solid var(--cfg-border);
+    border-radius: 8px;
+    background: var(--cfg-control-bg);
+    cursor: pointer;
+    user-select: none;
+    font-size: 16px;
+    color: var(--cfg-text);
+    box-sizing: border-box;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+.cfg-dropdown:hover {
+    background-color: var(--cfg-control-hover-bg);
+}
+.cfg-dropdown:focus-visible {
+    outline: none;
+    border-color: var(--cfg-focus-border);
+}
+.cfg-dropdown-open {
+    border-color: var(--cfg-focus-border);
+}
+.cfg-dropdown-value {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-transform: capitalize;
+}
+.cfg-dropdown-swatch {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+.cfg-dropdown-chevron {
+    color: var(--cfg-text);
+    flex-shrink: 0;
+    transition: transform 0.15s ease;
+}
+.cfg-dropdown-open .cfg-dropdown-chevron {
+    transform: rotate(180deg);
+}
+.cfg-dropdown-menu {
+    position: fixed;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background: var(--cfg-bg);
+    border: 1px solid var(--cfg-border);
+    border-radius: 8px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    z-index: 10001;
+    max-height: 200px;
+    /* Clip the scroll wrapper so it respects the rounded corners. */
+    overflow: hidden;
+    font-family: Metric, Helvetica, Arial, sans-serif;
+}
+/* Actual scroll container. Padding is top/bottom + left only, so the scrollbar
+   sits flush against the right border instead of floating in the padding. */
+.cfg-dropdown-menu-scroll {
+    flex: 1;
+    min-height: 0;
+    box-sizing: border-box;
+    overflow-y: auto;
+    padding: 8px 0 8px 8px;
+    /* Firefox: thin, panel-colored scrollbar instead of the OS default. */
+    scrollbar-width: thin;
+    scrollbar-color: var(--cfg-border) var(--cfg-bg);
+}
+/* Chromium/WebKit: same intent, since `scrollbar-color` alone doesn't reach them. */
+.cfg-dropdown-menu-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+.cfg-dropdown-menu-scroll::-webkit-scrollbar-track {
+    background: var(--cfg-bg);
+}
+.cfg-dropdown-menu-scroll::-webkit-scrollbar-thumb {
+    background: var(--cfg-border);
+    border-radius: 3px;
+}
+.cfg-dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 6px;
+    padding: 6px 9px;
+    margin-right: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--cfg-text);
+}
+.cfg-dropdown-item:hover {
+    background: var(--cfg-accent-soft);
+}
+.cfg-dropdown-item-active {
+    color: var(--cfg-accent);
+}
+
+.cfg-switch {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    user-select: none;
+}
+.cfg-switch-track {
+    width: 36px;
+    height: 18px;
+    border: 1px solid var(--cfg-border);
+    border-radius: 999px;
+    background: var(--cfg-control-bg);
+    position: relative;
+    box-sizing: border-box;
+    transition: background 0.2s ease, border-color 0.2s ease;
+    flex-shrink: 0;
+}
+.cfg-switch-track:hover {
+    background: var(--cfg-control-bg);
+    border-color: var(--cfg-icon-subtle);
+}
+.cfg-switch-track:focus-visible {
+    outline: none;
+    background: var(--cfg-control-bg);
+    border-color: var(--cfg-focus-border);
+}
+.cfg-switch-track-on {
+    background: var(--cfg-switch-on-bg);
+    border-color: var(--cfg-switch-on-border);
+}
+.cfg-switch-track-on:hover {
+    background: var(--cfg-switch-on-hover-bg);
+    border-color: var(--cfg-switch-on-hover-border);
+}
+.cfg-switch-track-on:focus-visible {
+    background: var(--cfg-switch-on-bg);
+    border-color: var(--cfg-switch-on-focus-border);
+}
+/* Figma's switch handle is a flat, shadowless fill circle (confirmed against the Switch
+   component assets, node 14467:57742) — no drop shadow, and its color depends on both
+   on/off state and light/dark mode rather than being a fixed white. */
+.cfg-switch-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--cfg-switch-off-thumb);
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    transition: left 0.2s ease, background-color 0.2s ease;
+}
+.cfg-switch-track-on .cfg-switch-thumb {
+    left: 19px;
+    background: var(--cfg-switch-on-thumb);
+}
+.cfg-switch-label {
+    font-size: 16px;
+    color: var(--cfg-text);
+}
+
+.cfg-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--cfg-text);
+    user-select: none;
+}
+.cfg-checkbox input {
+    display: none;
+}
+.cfg-checkbox-indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    border: 1px solid var(--cfg-border);
+    background: var(--cfg-control-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    transition: all 0.15s ease;
+}
+input:checked + .cfg-checkbox-indicator {
+    border: 4px solid var(--cfg-accent);
+    background: var(--cfg-accent);
+}
+
+.cfg-segmented {
+    position: relative;
+    display: inline-flex;
+    width: fit-content;
+    max-width: 100%;
+    background: var(--cfg-input-bg);
+    border-radius: 8px;
+    padding: 3px;
+    gap: 2px;
+    height: 32px;
+    box-sizing: border-box;
+}
+.cfg-segmented-thumb {
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    background: var(--cfg-segment-selected-bg);
+    border-radius: 6px;
+    box-sizing: border-box;
+    pointer-events: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 0 0 1px var(--cfg-segment-selected-border);
+    transition: left 350ms cubic-bezier(0, 0, 0.58, 1), width 350ms cubic-bezier(0, 0, 0.58, 1);
+}
+button.cfg-segmented-item {
+    position: relative;
+    z-index: 1;
+    /* Shrinks below its content width (never past 41px) so 4-6 item groups still fit the
+       panel instead of being clipped by the panel's `overflow: clip`. */
+    flex: 0 1 auto;
+    min-width: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 4px 9px;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--cfg-text-secondary);
+    cursor: pointer;
+    font-family: Metric, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    transition: color 0.15s ease;
+    outline: none;
+}
+button.cfg-segmented-item:hover {
+    color: var(--cfg-text);
+}
+button.cfg-segmented-item-active {
+    color: var(--cfg-segment-selected-icon);
+}
+
+button.cfg-segmented-item-active:hover {
+    color: var(--cfg-segment-selected-icon);
+}
+
+button.cfg-segmented-item:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--cfg-accent);
+}
+button.cfg-segmented-item svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Portaled to `document.body` (the panel clips its overflow), positioned via inline
+   left/top set to the hovered item's top-center. */
+.cfg-tooltip {
+    position: fixed;
+    transform: translate(-50%, calc(-100% - 8px));
+    background: var(--cfg-tooltip-bg);
+    color: var(--cfg-tooltip-color);
+    font-family: Metric, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    padding: 5px 8px;
+    border-radius: 6px;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 10001;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+.cfg-tooltip-callout {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid var(--cfg-tooltip-bg);
+}
+
+.cfg-slider {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.cfg-slider-track-wrap {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.cfg-slider-tooltip-anchor {
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+.cfg-slider-tooltip {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--cfg-tooltip-bg);
+    color: var(--cfg-tooltip-color);
+    font-size: 12px;
+    font-family: Metric, Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    line-height: 1;
+    padding: 5px 8px;
+    border-radius: 6px;
+    white-space: nowrap;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+.cfg-slider-tooltip-value {
+    display: block;
+}
+.cfg-slider-tooltip-callout {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid var(--cfg-tooltip-bg);
+}
+.cfg-slider-input {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(
+        to right,
+        var(--cfg-accent) 0%,
+        var(--cfg-accent) var(--cfg-slider-pct, 50%),
+        var(--cfg-track-bg) var(--cfg-slider-pct, 50%),
+        var(--cfg-track-bg) 100%
+    );
+    outline: none;
+    cursor: pointer;
+    display: block;
+    margin: 0;
+}
+/* Figma's slider handle is a literal white circle in both light and dark mode (not a
+   themed surface), so it's hardcoded rather than tied to a --cfg-* tier. */
+.cfg-slider-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid var(--cfg-marker);
+    cursor: pointer;
+    transition: border-color 0.15s ease;
+}
+.cfg-slider-input::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid var(--cfg-marker);
+    cursor: pointer;
+}
+.cfg-slider-input:hover::-webkit-slider-thumb {
+    border-color: var(--cfg-accent);
+}
+.cfg-slider-input:hover::-moz-range-thumb {
+    border-color: var(--cfg-accent);
+}
+.cfg-slider-ticks {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 7.5px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 5px;
+    align-items: center;
+}
+.cfg-slider-tick {
+    display: block;
+    width: 1px;
+    height: 5px;
+    background: var(--cfg-marker);
+    border-radius: 1px;
+    flex-shrink: 0;
+}
+/* Shown instead of the ticks when the step count would make them unreadable. */
+.cfg-slider-range {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8px;
+    font-size: 12px;
+    line-height: 1;
+    color: var(--cfg-text-secondary);
+}
+
+.cfg-textbox {
+    width: 174px;
+    height: 32px;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 8px;
+    background: var(--cfg-field-bg);
+    font-family: Metric, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: var(--cfg-text);
+    outline: none;
+    box-sizing: border-box;
+    transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+.cfg-textbox::placeholder {
+    color: var(--cfg-text-secondary);
+}
+.cfg-textbox:focus {
+    background: var(--cfg-control-bg);
+    box-shadow: 0 0 0 1px var(--cfg-accent);
+}
+/* Chrome/Safari render the picker glyph from a fixed dark bitmap, which disappears against
+   the dark-mode surface — recoloring it to the bridged text token keeps it readable. */
+.cfg-textbox[type='date']::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.65;
+    filter: none;
+}
+.cfg-textbox[type='date']:hover::-webkit-calendar-picker-indicator {
+    opacity: 1;
+}
+
+.cfg-numeric {
+    display: flex;
+    align-items: center;
+    width: 174px;
+    background: var(--cfg-field-bg);
+    border-radius: 8px;
+    padding: 2px;
+    gap: 2px;
+    height: 32px;
+}
+.cfg-numeric-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 28px;
+    border: 1px solid var(--cfg-border);
+    border-radius: 7px;
+    background: var(--cfg-control-bg);
+    color: var(--cfg-text);
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: border-color 0.15s ease;
+}
+.cfg-numeric-btn:hover {
+    border-color: var(--cfg-accent);
+}
+.cfg-numeric-btn:focus {
+    outline: none;
+}
+.cfg-numeric-input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    background: transparent;
+    text-align: center;
+    font-family: Metric, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: var(--cfg-text);
+    outline: none;
+}
+.cfg-numeric-input::-webkit-outer-spin-button,
+.cfg-numeric-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.cfg-numeric-input {
+    -moz-appearance: textfield;
+}
+
+button.cfg-trigger {
+    position: fixed;
+    top: 12px;
+    right: 272px;
+    z-index: 99999;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--cfg-border);
+    background: var(--cfg-trigger-bg);
+    color: var(--cfg-text);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+    outline: none;
+}
+.cfg-trigger:focus-visible {
+    outline: none;
+    border-color: var(--cfg-accent);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.cfg-trigger:hover {
+    background: var(--cfg-hover-bg);
+    color: var(--cfg-text-strong);
+}
+.cfg-trigger svg {
+    width: 16px;
+    height: 16px;
+}
+.cfg-standalone .cfg-trigger {
+    right: 12px;
+}
+.cfg-color-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 174px;
+}
+.cfg-color-swatch-button {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    padding: 0;
+    border: 1px solid var(--cfg-border);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: border-color 0.15s ease;
+}
+.cfg-color-swatch-button:hover {
+    border-color: var(--cfg-accent);
+}
+.cfg-color-swatch-button:focus-visible {
+    outline: none;
+    border-color: var(--cfg-focus-border);
+}
+.cfg-color-hidden-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+.cfg-color-input {
+    flex: 1;
+    min-width: 0;
+    height: 32px;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 8px;
+    background: var(--cfg-field-bg);
+    font-family: Metric, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: var(--cfg-text);
+    outline: none;
+    box-sizing: border-box;
+    transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+.cfg-color-input:focus {
+    background: var(--cfg-control-bg);
+    box-shadow: 0 0 0 1px var(--cfg-accent);
+}
+
+@media (max-width: 589px) {
+    button.cfg-trigger {
+        right: 201px;
+    }
+}
+
+/* Load animation — once the icon is rendered the four diamonds ripple outwards one
+   after another (clockwise from the top) and return to place. The 130ms stagger is
+   shorter than the 400ms travel time, so a diamond is still on its way out while the
+   previous one is already coming back. Plays once, on mount. */
+.cfg-trigger-icon {
+    /* The diamonds sit flush against the 16x16 viewBox, so they would be clipped by the
+       SVG viewport while travelling outwards. */
+    overflow: visible;
+}
+.cfg-trigger-shape {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: cfg-trigger-ripple 400ms ease-in-out both;
+}
+.cfg-trigger-shape-top {
+    --cfg-out-x: 0px;
+    --cfg-out-y: -2.5px;
+    animation-delay: 250ms;
+}
+.cfg-trigger-shape-right {
+    --cfg-out-x: 2.5px;
+    --cfg-out-y: 0px;
+    animation-delay: 380ms;
+}
+.cfg-trigger-shape-bottom {
+    --cfg-out-x: 0px;
+    --cfg-out-y: 2.5px;
+    animation-delay: 510ms;
+}
+.cfg-trigger-shape-left {
+    --cfg-out-x: -2.5px;
+    --cfg-out-y: 0px;
+    animation-delay: 640ms;
+}
+
+@keyframes cfg-trigger-ripple {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(var(--cfg-out-x), var(--cfg-out-y));
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cfg-trigger-shape {
+        animation: none;
+    }
+}

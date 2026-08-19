@@ -1,7 +1,7 @@
 ---
 title: Custom Rows
-description: 'Get started with the custom rows feature of the KendoReact Data Grid by KendoReact and see how to provide additional details about rows by expanding and collapsing content.'
-components: ["datagrid"]
+description: 'Get started with the custom rows feature of the KendoReact Grid by KendoReact and see how to provide additional details about rows by expanding and collapsing content.'
+components: ['grid']
 slug: custom-rows_grid
 position: 25
 tier: premium
@@ -10,7 +10,7 @@ subject: Grid Custom Rows feature
 
 # Custom Rows
 
-The Data Grid provides the option to override its internal row components, allowing you to customize the row data.
+The Grid provides the option to override its internal row components, allowing you to customize the row data.
 
 <CtaPanelOverview></CtaPanelOverview>
 

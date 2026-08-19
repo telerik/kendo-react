@@ -12,6 +12,8 @@ By default, the ColorPicker is enabled.
 
 To disable the component, set its [`disabled`]({% slug api_inputs_colorpickerprops %}#toc-disabled) property to `true`.
 
+The following example demonstrates the ColorPicker in its disabled state.
+
 {% meta height:150 %}
 {% embed_file colorpicker/disabled/func/app.tsx preview %}
 {% embed_file colorpicker/disabled/func/main.tsx %}

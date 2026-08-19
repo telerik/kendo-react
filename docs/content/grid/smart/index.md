@@ -1,13 +1,13 @@
 ---
 title: Overview
-description: 'Get started with the Smart functionality of the KendoKendoReact Data Grid.'
-components: ['datagrid']
+description: 'Get started with the Smart functionality of the KendoReact Grid.'
+components: ['grid']
 slug: smart_grid
 position: 0
 tier: premium
 ---
 
-# KendoReact Smart DataGrid
+# KendoReact Smart Grid
 
 The KendoReact Smart Grid enhances the traditional data grid with AI-powered capabilities that make data exploration more intuitive and efficient. By leveraging artificial intelligence, the Smart Grid can automatically analyze data patterns, suggest relevant operations, and provide intelligent insights to help users discover meaningful information faster.
 
@@ -155,7 +155,7 @@ Your custom backend must:
 
 -   Accept requests with the user's prompt and Grid column information.
 -   Process the prompt using your chosen AI provider or LLM.
--   Return responses in the format that the KendoKendoReact Data Grid expects.
+-   Return responses in the format that the KendoReact Grid expects.
 
 Use the detailed information about the expected request and response structures from the [AI Service Setup](slug:ai_service_setup#request-and-response-format) article to build a compatible custom service.
 

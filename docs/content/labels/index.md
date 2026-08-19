@@ -13,9 +13,10 @@ The KendoReact Labels package delivers components for adding hints, error messag
 
 The following demo shows the components included in the KendoReact Labels package:
 
-{% meta height:230 %}
+{% meta height:990 %}
 {% embed_file overview/func/app.tsx preview %}
 {% embed_file overview/func/main.tsx %}
+{% embed_file overview/func/styles.css %}
 {% endmeta %}
 
 ## What are the KendoReact Labels?

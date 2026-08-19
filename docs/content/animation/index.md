@@ -14,7 +14,7 @@ The KendoReact Animation uses the [`TransitionGroup`](https://github.com/reactjs
 
 The following demo shows the Animation component.
 
-{% meta height:400 %}
+{% meta height:450 %}
 {% embed_file overview/func/app.tsx preview %}
 {% embed_file overview/func/main.tsx %}
 {% embed_file overview/func/styles.css %}

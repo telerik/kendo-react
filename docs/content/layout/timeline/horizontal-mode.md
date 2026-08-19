@@ -10,7 +10,7 @@ position: 3
 
 The KendoReact Timeline allows you to display events in its horizontal layout. To enable horizontal mode, set the [`horizontal`]({% slug api_layout_timelineprops %}#toc-horizontal) prop to `true`.
 
-{% meta height:560 %}
+{% meta height:960 %}
 {% embed_file timeline/horizontal/func/app.tsx preview %}
 {% embed_file timeline/horizontal/func/main.tsx %}
 {% embed_file timeline/horizontal/func/events.ts %}

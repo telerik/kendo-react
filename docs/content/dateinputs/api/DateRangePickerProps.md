@@ -57,10 +57,7 @@ boolean
 <td class="table-cell-comment">
 
 
-/**
- * Enable adaptive popup rendering based on viewport width.
- *
- *
+Enable adaptive popup rendering based on viewport width.
 
 
 
@@ -98,9 +95,8 @@ string
 <td class="table-cell-comment">
 
 
-/**
- * Set the subtitle text in the adaptive popup (action sheet).
- * Use only when `adaptive` is `true`.
+Set the subtitle text in the adaptive popup (action sheet).
+Use only when `adaptive` is `true`.
 
 
 </td>
@@ -135,10 +131,9 @@ string
 <td class="table-cell-comment">
 
 
-/**
- * Set the title text in the adaptive popup (action sheet).
- * Use only when `adaptive` is `true`.
- * If not set, it matches the `label`.
+Set the title text in the adaptive popup (action sheet).
+Use only when `adaptive` is `true`.
+If not set, it matches the `label`.
 
 
 </td>
@@ -284,9 +279,7 @@ boolean
 <code>
 
 
-`false` 
- *
- *
+`false`
 
 
 </code>
@@ -296,10 +289,7 @@ boolean
 <td class="table-cell-comment">
 
 
-/**
- * Apply the `autoFocus` attribute to the first input.
- *
- *
+Apply the `autoFocus` attribute to the first input.
 
 
 
@@ -445,8 +435,7 @@ boolean
 <td class="table-cell-comment">
 
 
-/**
- * Show a clear button for start and end inputs. Clicking resets the range and fires `onChange`.
+Show a clear button for start and end inputs. Clicking resets the range and fires `onChange`.
 
 
 </td>

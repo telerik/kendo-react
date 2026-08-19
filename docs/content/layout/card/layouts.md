@@ -20,7 +20,7 @@ To arrange the Card in a specific layout, wrap the Cards in a container with on 
 
 The following example demonstrates how to dynamically change the Cards layout.
 
-{% meta height:700 %}
+{% meta height:800 %}
 {% embed_file card/layouts/func/app.tsx preview %}
 {% embed_file card/layouts/func/main.tsx %}
 {% endmeta %}

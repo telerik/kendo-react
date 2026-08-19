@@ -1,0 +1,122 @@
+.gallery-shell {
+    display: flex;
+    flex-direction: column;
+    background: #0f0f12;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.3),
+        0 12px 28px -8px rgba(0, 0, 0, 0.6);
+    max-width: 680px;
+    margin: 16px auto;
+}
+
+.gallery-titlebar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    background: linear-gradient(180deg, #1e1e24, #17171c);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    color: #e0e0e8;
+}
+
+.gallery-title {
+    font-size: 14px;
+    font-weight: 600;
+    flex: 1;
+}
+
+.gallery-count {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+    padding: 3px;
+    background: #0f0f12;
+}
+
+.photo-card {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    cursor: context-menu;
+    border-radius: 4px;
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+    transition: outline-color 0.15s ease;
+}
+
+.photo-card:hover {
+    outline-color: rgba(255, 255, 255, 0.25);
+}
+
+.photo-card--active {
+    outline-color: var(--kendo-color-primary, #ff6358);
+}
+
+.photo-img-wrap {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.photo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.photo-overlay {
+    position: absolute;
+    inset: auto 0 0;
+    padding: 20px 10px 8px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.72));
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.photo-card:hover .photo-overlay {
+    opacity: 1;
+}
+
+.photo-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.photo-location {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.photo-star {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    color: #fbbf24;
+    line-height: 0;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5));
+}
+
+.gallery-hint {
+    text-align: center;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.25);
+    padding: 8px;
+    margin: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cm-danger .k-menu-link {
+    color: var(--kendo-color-error, #f31700);
+}

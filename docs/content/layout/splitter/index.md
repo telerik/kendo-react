@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: 'Get an overview of the features the KendoReact Splitter delivers and use the component in React projects.'
-components: ["splitter"]
+components: ['splitter']
 slug: overview_splitter
 position: 1
 ---
@@ -16,7 +16,7 @@ The KendoReact Splitter component is part of the KendoReact library of React UI 
 
 The following example demonstrates the Splitter in action.
 
-{% meta height:720 %}
+{% meta height:790 %}
 {% embed_file splitter/overview/basic/func/app.tsx preview %}
 {% embed_file splitter/overview/basic/func/main.tsx %}
 {% embed_file splitter/overview/basic/func/styles.css %}

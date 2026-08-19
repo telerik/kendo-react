@@ -1,6 +1,6 @@
 ---
-title: Alternate the KendoReact Data Grid row colors with CSS
-description: An example on how to alternate the row colors of the KendoReact Data Grid.
+title: Alternate the KendoReact Grid row colors with CSS
+description: An example on how to alternate the row colors of the KendoReact Grid.
 type: how-to
 page_title: Alternate row colors - KendoReact Grid
 slug: grid-alternate-row-colors

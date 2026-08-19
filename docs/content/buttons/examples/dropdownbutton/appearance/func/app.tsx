@@ -1,29 +1,78 @@
 import * as React from 'react';
 
-import { DropDownButton, DropDownButtonItem } from '@progress/kendo-react-buttons';
-import { StyleConfigurator } from './shared-bn-style-configurator';
+import { DropDownButton, DropDownButtonItem, DropDownButtonProps } from '@progress/kendo-react-buttons';
+import {
+    useConfigurator,
+    sizeOptions,
+    roundedOptions,
+    fillModeOptions,
+    themeColorOptions
+} from '@docs-shared/configurator';
 
 const App = () => {
-    const [size, setSize] = React.useState<'small' | 'medium' | 'large'>('medium');
-    const [themeColor, setThemeColor] = React.useState<
-        'base' | 'primary' | 'secondary' | 'tertiary' | 'info' | 'success' | 'warning' | 'inverse'
-    >('base');
-    const [fillMode, setFillMode] = React.useState<'solid' | 'outline' | 'flat' | 'link'>('solid');
-    const [rounded, setRounded] = React.useState<'small' | 'medium' | 'large' | 'full'>('medium');
+    const config = useConfigurator({
+        sections: [
+            {
+                label: 'Size',
+                controls: [
+                    {
+                        type: 'segmented',
+                        name: 'size',
+                        options: sizeOptions(['default', 'small', 'medium', 'large']),
+                        defaultValue: 'default'
+                    }
+                ]
+            },
+            {
+                label: 'Border Radius',
+                controls: [
+                    {
+                        type: 'segmented',
+                        name: 'rounded',
+                        options: roundedOptions(['default', 'small', 'medium', 'large', 'full']),
+                        defaultValue: 'default'
+                    }
+                ]
+            },
+            {
+                label: 'Fill Mode',
+                controls: [
+                    {
+                        type: 'segmented',
+                        name: 'fillMode',
+                        options: fillModeOptions(['default', 'solid', 'outline', 'flat', 'link']),
+                        defaultValue: 'default'
+                    }
+                ]
+            },
+            {
+                label: 'Theme Color',
+                controls: [
+                    {
+                        type: 'dropdown',
+                        name: 'themeColor',
+                        options: themeColorOptions(),
+                        defaultValue: 'base'
+                    }
+                ]
+            }
+        ]
+    }) as {
+        size: DropDownButtonProps['size'];
+        themeColor: DropDownButtonProps['themeColor'];
+        fillMode: Exclude<DropDownButtonProps['fillMode'], 'clear'>;
+        rounded: Exclude<DropDownButtonProps['rounded'], 'none'>;
+    };
 
     return (
-        <div>
-            <StyleConfigurator
-                size={size}
-                onSizeChange={setSize}
-                themeColor={themeColor}
-                onThemeColorChange={setThemeColor}
-                fillMode={fillMode}
-                onFillModeChange={setFillMode}
-                rounded={rounded}
-                onRoundedChange={setRounded}
-            />
-            <DropDownButton size={size} themeColor={themeColor} fillMode={fillMode} rounded={rounded} text="Edit">
+        <div className="example-wrapper-center">
+            <DropDownButton
+                size={config.size}
+                themeColor={config.themeColor}
+                fillMode={config.fillMode}
+                rounded={config.rounded}
+                text="Edit"
+            >
                 <DropDownButtonItem text="Undo" icon="undo" />
                 <DropDownButtonItem text="Redo" icon="redo" disabled={true} />
                 <DropDownButtonItem text="Cut" icon="cut" />

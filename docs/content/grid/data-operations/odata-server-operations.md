@@ -1,7 +1,7 @@
 ---
 title: OData Server Operations
-description: 'Get started with the KendoReact Data Grid by KendoReact and utilize the server-side operations for sorting, filtering, or paging data by using the OData service.'
-components: ["datagrid"]
+description: 'Get started with the KendoReact Grid by KendoReact and utilize the server-side operations for sorting, filtering, or paging data by using the OData service.'
+components: ['grid']
 slug: odataserveroperations_grid
 position: 40
 tier: premium
@@ -16,7 +16,7 @@ You can bind the Grid to data and then sort, filter, or paginate it using the OD
 
 ## Using `useODataDataSource`
 
-The [`useODataDataSource`](slug://api_data-tools_useodatadatasource) hook of the [DataSource](slug://overview_datasource) component simplifies the integration of the KendoReact Data Grid with OData services by automatically handling the specifics of the OData protocol. This includes managing query parameters for sorting, filtering, paging, and other data operations.
+The [`useODataDataSource`](slug://api_data-tools_useodatadatasource) hook of the [DataSource](slug://overview_datasource) component simplifies the integration of the KendoReact Grid with OData services by automatically handling the specifics of the OData protocol. This includes managing query parameters for sorting, filtering, paging, and other data operations.
 
 ### Steps to Bind the Grid to OData Service Using the useODataDataSource Hook
 
@@ -46,7 +46,7 @@ The [`useODataDataSource`](slug://api_data-tools_useodatadatasource) hook of the
 
 4. Pass the data returned by the `useODataDataSource` hook to the Grid's `data` property. Additionally, handle the `onDataStateChange` event to update the Grid's state.
 
-The following example demonstrates how to configure and use the `useODataDataSource` hook with the KendoReact Data Grid:
+The following example demonstrates how to configure and use the `useODataDataSource` hook with the KendoReact Grid:
 
 {% meta height:460 %}
 {% embed_file odata-datasource/func/app.tsx preview %}
@@ -59,7 +59,7 @@ You can also apply data operations on the server by processing the parameters by
 
 ### Steps to Request and Process Data Using toODataString
 
-1. Configure the KendoReact Data Grid to use `DataState`. The `DataState` contains information about the current page, filter and sort expressions, grouping, and aggregates.
+1. Configure the KendoReact Grid to use `DataState`. The `DataState` contains information about the current page, filter and sort expressions, grouping, and aggregates.
 
 1. Handle the [onDataStateChange]({% slug api_grid_gridprops %}#toc-ondatastatechange) event. When this event is triggered, it returns the `DataState` object, which you will use to track the current state of the Grid.
 

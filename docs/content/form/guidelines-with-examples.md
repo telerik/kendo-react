@@ -21,7 +21,7 @@ Forms consist of form components (such as inputs, buttons, checkboxes, dropdowns
 
 Here’s an example of the Form and Labels packages in action, so you can get an idea of how they work.
 
-{% meta height:840 %}
+{% meta height:910 %}
 {% embed_file guideline/formcomponents/func/app.tsx preview %}
 {% embed_file guideline/formcomponents/func/main.tsx %}
 {% endmeta %}
@@ -45,7 +45,7 @@ For creating form layouts, the `Form` package provides following components:
 
 The following example demonstrates the KendoReact Inputs within a form in action:
 
-{% meta height:980 %}
+{% meta height:1000 %}
 {% embed_file guideline/inputs/func/app.tsx preview %}
 {% embed_file guideline/inputs/func/main.tsx %}
 {% endmeta %}
@@ -78,7 +78,7 @@ The following example demonstrates the KendoReact Upload within a form in action
 
 The following example demonstrates the KendoReact DropDowns within a form in action:
 
-{% meta height:570 %}
+{% meta height:650 %}
 {% embed_file guideline/dropdowns/func/app.tsx preview %}
 {% embed_file guideline/dropdowns/func/main.tsx %}
 {% endmeta %}
@@ -89,7 +89,7 @@ The following example demonstrates the KendoReact DropDowns within a form in act
 
 The following example demonstrates the KendoReact DateInputs within a form in action:
 
-{% meta height:620 %}
+{% meta height:670 %}
 {% embed_file guideline/datepickers/func/app.tsx preview %}
 {% embed_file guideline/datepickers/func/main.tsx %}
 {% endmeta %}
@@ -237,7 +237,7 @@ Grouping form components in a meaningful way makes for a cleaner and more concis
 
 Separators add a line break to the layout and improve the form conversion rate. The separation of sections allows you to make compound forms more approachable. To add a separator, add the `k-form-separator` class on a `span` element.
 
-{% meta height:520 %}
+{% meta height:630 %}
 {% embed_file guideline/groups/func/app.tsx preview %}
 {% embed_file guideline/groups/func/main.tsx %}
 {% endmeta %}

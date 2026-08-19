@@ -23,7 +23,7 @@ For more information on how to scale the content with the Drawing library, refer
 
 The following example demonstrates how to set a scale factor of `0.6` and keep an A4 page size and a two-centimeter page margin.
 
-{% meta height:550 %}
+{% meta height:810 %}
 {% embed_file content-scaling/func/app.tsx preview %}
 {% embed_file content-scaling/func/main.tsx %}
 {% endmeta %}

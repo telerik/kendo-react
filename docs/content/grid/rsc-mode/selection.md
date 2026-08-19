@@ -1,8 +1,8 @@
 ---
 title: Selection
-page_title: 'Selection in React Data Grid RSC Mode'
-description: 'Enable intuitive selection features in the RSC mode of KendoReact Data Grid to facilitate user interactions and streamline workflows.'
-components: ["datagrid"]
+page_title: 'Selection in React Grid RSC Mode'
+description: 'Enable intuitive selection features in the RSC mode of KendoReact Grid to facilitate user interactions and streamline workflows.'
+components: ['grid']
 subject: RSC Mode of the Grid
 slug: selection_rsc_grid
 position: 30
@@ -37,7 +37,7 @@ Here is an example of handling the selection change on the server, ensuring that
 
 ## Suggested Links
 
--   [KendoKendoReact Data Grid Selection Documentation](slug:selection_grid)
--   [KendoKendoReact Data Grid RSC Mode Server Actions](slug:server_actions_rsc_grid)
--   [КendoReact Data Grid RSC Mode Overview](slug:overview_rsc_grid)
--   [Getting Started with КendoReact Data Grid RSC Mode](slug:getstarted_rsc_grid)
+-   [KendoReact Grid Selection Documentation](slug:selection_grid)
+-   [KendoReact Grid RSC Mode Server Actions](slug:server_actions_rsc_grid)
+-   [КendoReact Grid RSC Mode Overview](slug:overview_rsc_grid)
+-   [Getting Started with КendoReact Grid RSC Mode](slug:getstarted_rsc_grid)

@@ -12,7 +12,7 @@ The Chat allows you to customize how file attachments are displayed through the 
 
 To set a custom attachment template, create a React component and assign it to the `attachmentTemplate` property of the Chat component.
 
-{% meta height:680 %}
+{% meta height:780 %}
 {% embed_file chat/customization/attachment-templates/app.tsx preview %}
 {% embed_file chat/customization/attachment-templates/main.tsx %}
 {% embed_file chat/customization/attachment-templates/templates.tsx %}

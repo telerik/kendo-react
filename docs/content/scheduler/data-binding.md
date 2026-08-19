@@ -25,7 +25,7 @@ The `data` property represents an array of objects which either have `id`, `star
 
 The following example demonstrates how to take a simple object and render it in the Scheduler. The **Breakfast with Tom** event is rendered between the **8:30 AM** and **9:00 AM** slots on **27th of August**. The example does no focus on the `timezone` property&mdash;for more information, refer to the article on [timezones]({% slug timezones_scheduler %}).
 
-{% meta height:770 %}
+{% meta height:780 %}
 {% embed_file data-binding/data/func/app.tsx preview %}
 {% embed_file data-binding/data/func/main.tsx %}
 {% endmeta %}
@@ -34,7 +34,7 @@ The following example demonstrates how to take a simple object and render it in 
 
 Since the `data` array items can be of any type, you can provide a custom mapping from the data items of the Scheduler by using the [`modelFields`]({% slug api_scheduler_schedulerprops %}#toc-modelfields) property.
 
-{% meta height:770 %}
+{% meta height:780 %}
 {% embed_file data-binding/model-fields/func/app.tsx preview %}
 {% embed_file data-binding/model-fields/func/main.tsx %}
 {% endmeta %}
@@ -55,7 +55,7 @@ The most common scenario is to update the entries in your database and fetch the
 
 The following example demonstrates how to handle the `onDataChange` callback and update the local state. To trigger a data change, drag the slot in a different time slot. For more information, refer to the article on [editing the KendoReact Scheduler]({% slug editing_scheduler %}).
 
-{% meta height:770 %}
+{% meta height:780 %}
 {% embed_file data-binding/data-change/func/app.tsx preview %}
 {% embed_file data-binding/data-change/func/main.tsx %}
 {% endmeta %}

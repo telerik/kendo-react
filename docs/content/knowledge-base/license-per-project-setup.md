@@ -66,8 +66,8 @@ The licensing mechanism will now use the `telerik-license.txt` file from your pr
 
 ## See Also
 
--   [Setting Up Your License Key](slug:my_license)
--   [Adding the License Key to CI Services](slug:ci_services_license)
--   [Downloading Your License Key File](slug:downloading_license_key)
--   [License Activation Errors and Warnings](slug:license_activation_errors)
--   [Frequently Asked Questions about Your KendoReact License Key](slug:faq_license)
+- [Setting Up Your License Key](slug:my_license)
+- [Adding Deployment Keys to CI/CD Services](slug:ci_services_license)
+- [Downloading Your License Key File](slug:downloading_license_key)
+- [License Activation Errors and Warnings](slug:license_activation_errors)
+- [Frequently Asked Questions about Your KendoReact License Key](slug:faq_license)

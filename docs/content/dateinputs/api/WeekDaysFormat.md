@@ -9,4 +9,4 @@ slug: api_dateinputs_weekdaysformat
 # WeekDaysFormat
 Specifies the possible format options for the displayed Calendar week days' names.
 
-`type` WeekDaysFormat = "short" | "narrow" | "abbreviated";
+`type` WeekDaysFormat = "short" | "narrow" | "abbreviated" | "wide";

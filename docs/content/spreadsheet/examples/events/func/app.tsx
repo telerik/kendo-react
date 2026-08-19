@@ -3,72 +3,38 @@ import {
     Spreadsheet,
     SpreadsheetSelectEvent,
     SpreadsheetChangeEvent,
-    SpreadsheetExcelImportEvent,
-    SpreadsheetExcelExportEvent
+    SpreadsheetExcelImportEvent
 } from '@progress/kendo-react-spreadsheet';
+import { EventLog } from '@docs-shared/EventLog';
 import { orders } from './shared-sp-orders';
-
-const EventsLogger = (props: { events: string[] }) => {
-    return (
-        <div className="example-config">
-            <h5>Event log</h5>
-            <ul
-                className="event-log"
-                style={{
-                    textAlign: 'right'
-                }}
-            >
-                {props.events
-                    .slice()
-                    .reverse()
-                    .map((event, index) => {
-                        return <li key={index}>{event}</li>;
-                    })}
-            </ul>
-        </div>
-    );
-};
 
 const App = () => {
     const [events, setEvents] = React.useState<string[]>([]);
 
-    const onSelect = React.useCallback(
-        (e: SpreadsheetSelectEvent) => {
-            setEvents([...events, `New range selected. New value: ${e.range.value()}`]);
-        },
-        [events]
-    );
+    const log = (message: string) => setEvents((prev) => [message, ...prev]);
 
-    const onChange = React.useCallback(
-        (e: SpreadsheetChangeEvent) => {
-            setEvents([...events, `Spreadsheet change. New value: ${e.range.value()}`]);
-        },
-        [events]
-    );
+    const onSelect = React.useCallback((e: SpreadsheetSelectEvent) => {
+        log(`New range selected. New value: ${e.range.value()}`);
+    }, []);
 
-    const onChangeFormat = React.useCallback(
-        (e: SpreadsheetChangeEvent) => {
-            setEvents([...events, `Format of the range with value ${e.range.value()} changed to ${e.range.format()}`]);
-        },
-        [events]
-    );
+    const onChange = React.useCallback((e: SpreadsheetChangeEvent) => {
+        log(`Spreadsheet change. New value: ${e.range.value()}`);
+    }, []);
 
-    const onExcelImport = React.useCallback(
-        (e: SpreadsheetExcelImportEvent) => {
-            setEvents([...events, `${(e.file as File).name} file is about to be imported in the Spreadsheet.`]);
-        },
-        [events]
-    );
+    const onChangeFormat = React.useCallback((e: SpreadsheetChangeEvent) => {
+        log(`Format of the range with value ${e.range.value()} changed to ${e.range.format()}`);
+    }, []);
 
-    const onExcelExport = React.useCallback(
-        (e: SpreadsheetExcelExportEvent) => {
-            setEvents([...events, 'Spreadsheet is exported to Excel.']);
-        },
-        [events]
-    );
+    const onExcelImport = React.useCallback((e: SpreadsheetExcelImportEvent) => {
+        log(`${(e.file as File).name} file is about to be imported in the Spreadsheet.`);
+    }, []);
+
+    const onExcelExport = React.useCallback(() => {
+        log('Spreadsheet is exported to Excel.');
+    }, []);
 
     return (
-        <>
+        <EventLog events={events} onClear={() => setEvents([])}>
             <Spreadsheet
                 style={{
                     width: '100%',
@@ -81,9 +47,7 @@ const App = () => {
                 onExcelImport={onExcelImport}
                 onExcelExport={onExcelExport}
             />
-            <br />
-            <EventsLogger events={events} />
-        </>
+        </EventLog>
     );
 };
 

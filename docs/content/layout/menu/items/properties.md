@@ -38,7 +38,7 @@ You can set the URL of the items by using the [`url`]({% slug api_layout_basemen
 
 ## Icon
 
-You can specify the name of a [font icon]({% slug icons %}#toc-list-of-font-icons) that will be rendered for the item by using the [`icon`]({% slug api_layout_basemenuitem %}#toc-icon) property.
+You can specify the name of a [font icon](slug:icons#Icons-List) that will be rendered for the item by using the [`icon`]({% slug api_layout_basemenuitem %}#toc-icon) property.
 
 {% meta height:120 %}
 {% embed_file menu/items/properties/icon/func/app.tsx preview %}

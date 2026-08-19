@@ -14,7 +14,7 @@ Load remote data to the TreeList component by either showing a loading indicator
 
 You can check when an item is expanded by checking if `event.value` if set to `false` in the `onExpandChange` event. In this case, set the `loading` state variable to `true` and set it to `null` when the data finishes its loading. Additionally, conditionally render the loading panel component when loading is true.
 
-{% meta height:580 %}
+{% meta height:690 %}
 {% embed_file loading/loading-component/app.tsx preview %}
 {% embed_file loading/loading-component/main.tsx %}
 {% endmeta %}
@@ -23,7 +23,7 @@ You can check when an item is expanded by checking if `event.value` if set to `f
 
 In this demo, we are also checking if an item is being expanded using the same approach. However, we are replacing the expanded icon with a loading icon for the expanded item using a [custom cell]({% slug cells_treelist %}) based on the value of `loadingID`.
 
-{% meta height:580 %}
+{% meta height:690 %}
 {% embed_file loading/loading-item/app.tsx preview %}
 {% embed_file loading/loading-item/main.tsx %}
 {% endmeta %}

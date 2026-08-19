@@ -6,8 +6,6 @@ components: ['general']
 slug: components_key_features
 position: 30
 category: getting-started
-tag: new
-release_tag: Q2 2026
 level: 0
 ---
 
@@ -21,14 +19,14 @@ All components included in KendoReact Free are also part of KendoReact (premium)
 
 KendoReact covers the full spectrum of UI needs for business applications, available in two tiers — **Free** (50+ components) and **Premium** (120+ components):
 
--   **Data components** — [Data Grid](slug:overview_grid), [TreeList](slug:overview_treelist), [ListView](slug:overview_listview), [PivotGrid](slug:overview_pivotgrid)
+-   **Data components** — [Grid](slug:overview_grid), [TreeList](slug:overview_treelist), [ListView](slug:overview_listview), [PivotGrid](slug:overview_pivotgrid)
 -   **Data visualization** — [Charts](slug:overview_charts) (70+ types), [Gauges](slug:overview_radialgauge_gauges), [Barcodes](slug:overview_barcode_barcodes), [Diagrams](slug:overview_diagram)
 -   **Scheduling & planning** — [Scheduler](slug:overview_scheduler), [Gantt](slug:overview_gantt)
 -   **Editors & inputs** — [Rich Text Editor](slug:overview_editor), [Date Pickers](slug:overview_datepicker), [Dropdowns](slug:overview_dropdownlist), [Form](slug:overview_form)
 -   **Layout & navigation** — [Dialog](slug:overview_dialog), [Drawer](slug:overview_drawer), [Tooltip](slug:overview_tooltip), [Notification](slug:overview_notification)
 -   **Productivity** — [PDF processing](slug:overview_pdfgenerator), [Excel export](slug:overview_excelexport), [Upload](slug:overview_upload)
 
-The Free tier includes the most widely used components — Data Grid, Date Inputs, Dropdowns, Buttons, and more — with full theming, accessibility, and localization support at no cost. All Free components are part of the Premium library and, with a few exceptions, include their complete functionality. For a component-by-component breakdown, see [KendoReact Free vs. Premium](slug:getting_started_free_vs_premium).
+The Free tier includes the most widely used components — Grid, Date Inputs, Dropdowns, Buttons, and more — with full theming, accessibility, and localization support at no cost. All Free components are part of the Premium library and, with a few exceptions, include their complete functionality. For a component-by-component breakdown, see [KendoReact Free vs. Premium](slug:getting_started_free_vs_premium).
 
 ## Accessibility Built In, Not Bolted On
 
@@ -40,7 +38,7 @@ All components ship with out-of-the-box support for:
 -   **Section 508** — meets US federal accessibility requirements for government and public sector applications
 -   **WAI-ARIA** — correct ARIA roles, states, and properties are applied automatically, so assistive technologies like screen readers work as expected
 
-Full keyboard navigation is supported across all interactive components, and focus management is handled correctly in complex patterns such as modals, dropdowns, and data grids.
+Full keyboard navigation is supported across all interactive components, and focus management is handled correctly in complex patterns such as modals, dropdowns, and grids.
 
 ## Controlled and Uncontrolled Modes
 
@@ -60,7 +58,7 @@ KendoReact also includes built-in components designed for AI-driven interfaces:
 
 -   **[AIPrompt](slug:overview_aiprompt)** — a prompt input component for embedding AI interactions directly in your app
 -   **[AI Chat](slug:overview_chat)** — a conversational UI component with LLM integration support
--   **[AI Grid Assistant](slug:ai_chat_assistant)** — a natural-language assistant built into the Data Grid for smart filtering, sorting, and data exploration
+-   **[AI Grid Assistant](slug:ai_chat_assistant)** — a natural-language assistant built into the Grid for smart filtering, sorting, and data exploration
 
 See [KendoReact AI Components Overview](slug:ai_components) for full setup and usage documentation.
 

@@ -1,7 +1,7 @@
 ---
 title: Appearance
 description: 'Add alternative styling options to the KendoReact TextBox in React projects.'
-components: ["textbox"]
+components: ['textbox']
 slug: appearance_textbox
 position: 6
 ---
@@ -16,6 +16,12 @@ Apart from the default vision of the TextBox, these alternative styling options 
 -   [Border Radius](#border-radius)
 -   [Fill Mode](#fill-mode)
 
+The following example demonstrates all the available appearance options of the TextBox in a single, configurable demo.
+
+{% meta height:220 %}
+{% embed_file textbox/appearance/func/app.tsx preview %}
+{% embed_file textbox/appearance/func/main.tsx %}
+{% endmeta %}
 
 ## Size
 

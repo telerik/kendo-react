@@ -1,24 +1,16 @@
 import * as React from 'react';
 import { Signature, SignatureChangeEvent } from '@progress/kendo-react-inputs';
-
+import { EventLog } from '@docs-shared/EventLog';
 
 const App = () => {
     const [value, setValue] = React.useState<string>();
     const [events, setEvents] = React.useState<string[]>([]);
-    const logElement = React.useRef<HTMLUListElement>(null);
-
-    React.useEffect(()=>{
-        if(logElement.current){
-            logElement.current.scrollTop = logElement.current.scrollHeight;
-        }
-    });
 
     const log = (message: string) => {
-        setEvents(data => [...data, message]);
+        setEvents((prev) => [message, ...prev]);
     };
 
     const onChange = (e: SignatureChangeEvent) => {
-        console.log('.');
         setValue(e.value);
         log(e.value ? 'Change' : 'Change (cleared)');
     };
@@ -40,23 +32,17 @@ const App = () => {
     };
 
     return (
-    <>
-      <Signature
-        value={value}
-        onChange={onChange}
-        onFocus={onFocus}
-        onBlur={onBlur}
-        onOpen={onOpen}
-        onClose={onClose}
-        popupScale={2}
-      />
-      <div className={'example-config'} style={{ marginTop: 20 }}>
-        <p>Event log:</p>
-        <ul className={'event-log'} ref={logElement}>
-          {events.map((event, idx) => <li key={idx}>{event}</li>)}
-        </ul>
-      </div>
-    </>
+        <EventLog events={events} onClear={() => setEvents([])}>
+            <Signature
+                value={value}
+                onChange={onChange}
+                onFocus={onFocus}
+                onBlur={onBlur}
+                onOpen={onOpen}
+                onClose={onClose}
+                popupScale={2}
+            />
+        </EventLog>
     );
 };
 

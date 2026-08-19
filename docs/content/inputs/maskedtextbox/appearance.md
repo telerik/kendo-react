@@ -16,6 +16,13 @@ Apart from the default vision of the MaskedTextBox, these alternative styling op
 -   [Fill Mode](#fill-mode)
 -   [Border Radius](#border-radius)
 
+The following example demonstrates all the available appearance options of the MaskedTextBox in a single, configurable demo.
+
+{% meta height:140 %}
+{% embed_file maskedtextbox/appearance/func/app.tsx preview %}
+{% embed_file maskedtextbox/appearance/func/main.tsx %}
+{% endmeta %}
+
 ## Size
 
 The KendoReact MaskedTextBox enables you to configure its [`size`](slug:api_inputs_maskedtextboxprops#size).

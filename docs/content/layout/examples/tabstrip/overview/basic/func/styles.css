@@ -1,38 +1,307 @@
-  .tab-image {
-      width: 17px;
-      height: 17px;
-      margin-right: 5px;
-  }
+/* Shell */
+.ts-shell {
+    max-width: 600px;
+    margin: 16px auto;
+}
 
-  .wrapper {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 80px;
-  }
+/* Panel padding — shared by all tab panes */
+.ts-panel {
+    padding: 20px;
+}
 
-  .main {
-      width: fit-content;
-      display: flex;
-  }
+/* ── Overview ── */
+.ts-hero {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 14px;
+}
 
-  .degree {
-      display: flex;
-      flex-direction: column;
-  }
+.ts-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #6366f1;
+    flex-shrink: 0;
+}
 
-  .main>img {
-      width: 50px;
-      height: 50px;
-      margin-right: 10px;
-  }
+.ts-name {
+    margin: 0 0 3px;
+    font-size: 18px;
+    font-weight: 700;
+}
 
-  .large-degree {
-      font-size: 2em;
-      font-weight: lighter;
-  }
+.ts-role {
+    margin: 0 0 2px;
+    font-size: 13px;
+    color: #6366f1;
+    font-weight: 500;
+}
 
-  .details {
-      display: flex;
-      flex-direction: column;
-  }
+.ts-location {
+    margin: 0;
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.ts-bio {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0 0 14px;
+}
+
+.ts-stats {
+    display: flex;
+    gap: 28px;
+    padding: 12px 0;
+    border-top: 1px solid #f1f5f9;
+    border-bottom: 1px solid #f1f5f9;
+    margin-bottom: 14px;
+}
+
+.ts-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.ts-stat-val {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.ts-stat-lbl {
+    font-size: 10px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.ts-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.ts-chip {
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+/* ── Projects ── */
+.ts-project {
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.ts-project:last-child {
+    border-bottom: none;
+}
+
+.ts-project-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.ts-project-name {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.ts-badge {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.ts-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ts-bar-track {
+    flex: 1;
+    height: 5px;
+    border-radius: 4px;
+    background: #f1f5f9;
+    overflow: hidden;
+}
+
+.ts-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+}
+
+.ts-pct {
+    font-size: 12px;
+    font-weight: 600;
+    color: #64748b;
+    min-width: 30px;
+    text-align: right;
+}
+
+/* ── Activity ── */
+.ts-activity {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.ts-activity:last-child {
+    border-bottom: none;
+}
+
+.ts-act-icon {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6366f1;
+}
+
+.ts-act-text {
+    margin: 0 0 2px;
+    font-size: 13px;
+}
+
+.ts-act-time {
+    margin: 0;
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+/* ── Settings ── */
+.ts-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 14px;
+}
+
+.ts-field-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.ts-input {
+    padding: 8px 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 14px;
+    background: #f8fafc;
+    outline: none;
+    transition: border-color 0.15s;
+}
+
+.ts-input:focus {
+    border-color: #6366f1;
+    background: #fff;
+}
+
+.ts-save-btn {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: #fff;
+    border: none;
+    padding: 9px 22px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.15s;
+}
+
+.ts-save-btn:hover {
+    opacity: 0.88;
+}
+
+/* ── Overview extras ── */
+.ts-section {
+    margin-top: 18px;
+}
+
+.ts-section-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #94a3b8;
+    margin: 0 0 10px;
+}
+
+.ts-upcoming {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.ts-upcoming:last-child {
+    border-bottom: none;
+}
+
+.ts-upcoming-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.ts-upcoming-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.ts-upcoming-title {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.ts-upcoming-date {
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+.ts-contact-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px 20px;
+    align-items: center;
+}
+
+.ts-contact-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.ts-contact-value {
+    font-size: 13px;
+    color: #334155;
+}
+

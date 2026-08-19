@@ -21,7 +21,7 @@ To enable sorting:
 
 The following example demonstrates the minimum required configuration for sorting the TreeList records.
 
-{% meta height:580 %}
+{% meta height:690 %}
 {% embed_file sorting-basic/func/app.tsx preview %}
 {% embed_file sorting-basic/func/main.tsx %}
 {% endmeta %}
@@ -33,7 +33,7 @@ The sorting feature of the TreeList enables you to unsort the columns and sort t
 -   To enable the unsorting of columns, utilize the `sortable.allowUnsort` option which determines if the columns can be unsorted.
 -   To enable the sorting of multiple columns, set the `sortable.mode` option which accepts a `single` or `multiple` value.
 
-{% meta height:700 %}
+{% meta height:720 %}
 {% embed_file sorting-customization/func/app.tsx preview %}
 {% embed_file sorting-customization/func/main.tsx %}
 {% endmeta %}

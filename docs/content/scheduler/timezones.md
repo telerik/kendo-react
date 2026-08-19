@@ -16,7 +16,7 @@ If no timezone is set, the Scheduler defaults to the local timezone of the brows
 
 For example, an event that is set up to occur at 09:00 AM in London (GMT+0000) will appear as 10:00 AM to a user in Berlin (GMT+0100). The following example demonstrates the resulting time for your local timezone.
 
-{% meta height:770 %}
+{% meta height:780 %}
 {% embed_file timezones/default/func/app.tsx preview %}
 {% embed_file timezones/default/func/main.tsx %}
 {% endmeta %}

@@ -40,7 +40,7 @@ This will require wrapping the Grid in a div element and attaching an `onPaste` 
 
 This can be seen in the following example:
 
-{% meta height:700 %}
+{% meta height:810 %}
 {% embed_file grid/paste-from-excel/app.tsx preview %}
 {% embed_file grid/paste-from-excel/main.tsx %}
 {% endmeta %}

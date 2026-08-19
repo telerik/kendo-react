@@ -4,8 +4,6 @@ description: 'Change the appearance of KendoReact Toolbar in a React project.'
 components: ['toolbar']
 slug: appearance_toolbar
 position: 3
-tag: updated
-release_tag: Q2 2026
 ---
 
 # Appearance
@@ -14,6 +12,13 @@ The KendoReact Toolbar allows selecting a predefined size and fill mode options 
 
 -   [Size](#size)
 -   [Fill Mode](#fill-mode)
+
+The following example demonstrates all the available appearance options of the Toolbar in a single, configurable demo.
+
+{% meta height:200 %}
+{% embed_file toolbar/appearance/func/app.tsx preview %}
+{% embed_file toolbar/appearance/func/main.tsx %}
+{% endmeta %}
 
 ## Size
 
@@ -42,7 +47,7 @@ To change the default fill mode of the Toolbar, set its [`fillMode`]({% slug api
 
 The following example demonstrates how to define a fill mode only for the ToolBar and including the ToolBar tools.
 
-{% meta height:610 %}
+{% meta height:800 %}
 {% embed_file toolbar/fill-mode/app.tsx preview %}
 {% embed_file toolbar/fill-mode/main.tsx %}
 {% endmeta %}

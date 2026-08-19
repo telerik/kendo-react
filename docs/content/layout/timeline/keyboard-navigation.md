@@ -19,7 +19,7 @@ The Vertical Timeline supports the following keyboard shortcuts:
 | `Tab`            | Sets the focus on the first or next item.   |
 | `Enter`, `Space` | Toggles the open state of the focused item. |
 
-{% meta height:1140 %}
+{% meta height:1210 %}
 {% embed_file timeline/keyboard-nav-vertical/func/app.tsx preview %}
 {% embed_file timeline/keyboard-nav-vertical/func/main.tsx %}
 {% embed_file timeline/keyboard-nav-vertical/func/events.ts %}
@@ -37,7 +37,7 @@ The Horizontal Timeline supports the following keyboard shortcuts:
 | `End`         | Selects the last item.                                                 |
 | `Tab`         | When the focus is on the Timeline tabs, focuses the current item card. |
 
-{% meta height:860 %}
+{% meta height:960 %}
 {% embed_file timeline/keyboard-nav-horizontal/func/app.tsx preview %}
 {% embed_file timeline/keyboard-nav-horizontal/func/main.tsx %}
 {% embed_file timeline/keyboard-nav-horizontal/func/events.ts %}

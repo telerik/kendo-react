@@ -63,6 +63,12 @@ position: 1
         <a href="{% slug api_conversational-ui_attachment %}">Attachment</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_conversational-ui_chainofthoughtexpandedchangeevent %}">ChainOfThoughtExpandedChangeEvent</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_conversational-ui_chainofthoughtprops %}">ChainOfThoughtProps</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_conversational-ui_chatactionexecuteevent %}">ChatActionExecuteEvent</a>
     </li>
     <li class="api-item">
@@ -97,6 +103,27 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_conversational-ui_chattoolbaractionexecuteevent %}">ChatToolbarActionExecuteEvent</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_conversational-ui_checkpointactionevent %}">CheckpointActionEvent</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_conversational-ui_checkpointprops %}">CheckpointProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_conversational-ui_checkpointtemplateprops %}">CheckpointTemplateProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_conversational-ui_citationbodytemplateprops %}">CitationBodyTemplateProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_conversational-ui_citationopenevent %}">CitationOpenEvent</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_conversational-ui_citationprops %}">CitationProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_conversational-ui_citationsource %}">CitationSource</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_conversational-ui_commandinterface %}">CommandInterface</a>
@@ -180,10 +207,46 @@ position: 1
         <a href="{% slug api_conversational-ui_promptboxuploadbuttonprops %}">PromptBoxUploadButtonProps</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_conversational-ui_reasoningcontenttemplateprops %}">ReasoningContentTemplateProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_conversational-ui_reasoningexpandedchangeevent %}">ReasoningExpandedChangeEvent</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_conversational-ui_reasoningprops %}">ReasoningProps</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_conversational-ui_statustemplateprops %}">StatusTemplateProps</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_conversational-ui_suggestiontemplateprops %}">SuggestionTemplateProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_conversational-ui_thought %}">Thought</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_conversational-ui_thoughttemplateprops %}">ThoughtTemplateProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_conversational-ui_toolcallactionevent %}">ToolCallActionEvent</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_conversational-ui_toolcallapprovaltemplateprops %}">ToolCallApprovalTemplateProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_conversational-ui_toolcallerrortemplateprops %}">ToolCallErrorTemplateProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_conversational-ui_toolcallexpandedchangeevent %}">ToolCallExpandedChangeEvent</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_conversational-ui_toolcallparamstemplateprops %}">ToolCallParamsTemplateProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_conversational-ui_toolcallprops %}">ToolCallProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_conversational-ui_toolcallresulttemplateprops %}">ToolCallResultTemplateProps</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_conversational-ui_uploadbuttonprops %}">UploadButtonProps</a>
@@ -216,6 +279,12 @@ position: 1
         <a href="{% slug api_conversational-ui_attachmentlayout %}">AttachmentLayout</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_conversational-ui_checkpointstate %}">CheckpointState</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_conversational-ui_citationshowon %}">CitationShowOn</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_conversational-ui_fileslayoutmode %}">FilesLayoutMode</a>
     </li>
     <li class="api-item">
@@ -235,6 +304,12 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_conversational-ui_timestampvisibilitymode %}">TimestampVisibilityMode</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_conversational-ui_toolcallactiontype %}">ToolCallActionType</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_conversational-ui_toolcallstate %}">ToolCallState</a>
     </li>
   </ul>
 </div>
@@ -276,10 +351,19 @@ position: 1
         <a href="{% slug api_conversational-ui_aipromptviewrender %}">AIPromptViewRender</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_conversational-ui_chainofthought %}">ChainOfThought</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_conversational-ui_chat %}">Chat</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_conversational-ui_chatmessage %}">ChatMessage</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_conversational-ui_checkpoint %}">Checkpoint</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_conversational-ui_citation %}">Citation</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_conversational-ui_herocard %}">HeroCard</a>
@@ -306,10 +390,16 @@ position: 1
         <a href="{% slug api_conversational-ui_promptboxuploadbutton %}">PromptBoxUploadButton</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_conversational-ui_reasoning %}">Reasoning</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_conversational-ui_suggestiongroup %}">SuggestionGroup</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_conversational-ui_suggestionsview %}">SuggestionsView</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_conversational-ui_toolcall %}">ToolCall</a>
     </li>
   </ul>
 </div>

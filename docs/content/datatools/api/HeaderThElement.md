@@ -7,6 +7,13 @@ slug: api_data-tools_headerthelement
 ---
 
 # HeaderThElement
+A low-level header cell building block used by data components such as Grid and TreeList.
+
+The component is typically used in custom header cell implementations where the default `th`
+attributes are forwarded to preserve accessibility and keyboard navigation behavior.
+
+For a usage example, see [Custom Header, Footer, and Filter Cells](https://www.telerik.com/kendo-react-ui/components/grid/cells/header-footer-filter-cells) article.
+
 A [Functional Component](https://react.dev/reference/react/Component).
 
 

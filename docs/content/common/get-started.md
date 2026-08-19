@@ -18,18 +18,20 @@ This guide provides essential information about using the KendoReact Common Util
 
 ## Install the Components
 
+To install the Common Utilities package, run the following command in the root folder of your React project:
+
 ```sh
 npm i @progress/kendo-react-common
 ```
 
 ## Import the Components
 
+Place the `import` statements in the App component file (for example: `src/App.tsx`) for your project. Note that the steps for installing and importing all Common Utilities components are identical.
+
 ```tsx
 import { SvgIcon } from '@progress/kendo-react-common';
 import { paletteIcon } from '@progress/kendo-svg-icons';
 ```
-
-Place the `import` statements in the App component file (for example: `src/App.tsx`) for your project. Note that the steps for installing and importing all Common Utilities components are identical.
 
 ## Use the Components
 

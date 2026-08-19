@@ -67,7 +67,7 @@ In addition to these basic geometric Shapes, the Diagram provides specialized Sh
 
 The following example demonstrates the available shape types.
 
-<demo metaUrl="diagram/shapes/types/" height="770"></demo>
+<demo metaUrl="diagram/shapes/types/" height="880"></demo>
 
 ## Shape Styling
 

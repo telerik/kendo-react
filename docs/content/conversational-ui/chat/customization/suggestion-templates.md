@@ -26,7 +26,7 @@ Each template automatically uses appropriate suggestion data structures to showc
 
 The flexibility of the `suggestionTemplate` property allows you to create any visual design and interaction pattern that fits your application's requirements.
 
-{% meta height:830 %}
+{% meta height:940 %}
 {% embed_file chat/customization/suggestion-templates/app.tsx preview %}
 {% embed_file chat/customization/suggestion-templates/main.tsx %}
 {% embed_file chat/customization/suggestion-templates/templates.tsx %}

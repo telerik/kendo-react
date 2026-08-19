@@ -12,7 +12,7 @@ To export the PivotGrid data to Excel, use the `saveAsExcel` function from the e
 
 The following example demonstrates how to export the PivotGrid data to Excel.
 
-{% meta height:610 %}
+{% meta height:660 %}
 {% embed_file excel/func/app.tsx preview %}
 {% embed_file excel/func/main.tsx %}
 {% embed_file excel/func/export-to-excel.ts %}

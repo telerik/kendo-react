@@ -11,7 +11,7 @@ subject: Finance Portfolio
 
 # Finance Portfolio Application
 
-KendoReact enables you to create rich, beautiful and very fast dashboard applications which are ideal for the financial sector. The Finance Portfolio Application uses one of the most powerful KendoReact components such as the [KendoReact Chart]({% slug overview_charts %}), [React Data Grid]({% slug overview_grid %}), [DropDowns]({% slug overview_dropdowns %}) and more.
+KendoReact enables you to create rich, beautiful and very fast dashboard applications which are ideal for the financial sector. The Finance Portfolio Application uses one of the most powerful KendoReact components such as the [KendoReact Chart]({% slug overview_charts %}), [React Grid]({% slug overview_grid %}), [DropDowns]({% slug overview_dropdowns %}) and more.
 
 <CtaPanelOverview message="The @Subject Sample App was created with KendoReact, an enterprise-grade React UI library with 120+ @FreemiumShortLink and premium components for building polished, performant apps. Test-drive the components used in this app with a free trial."></CtaPanelOverview>
 
@@ -29,7 +29,7 @@ To play with the demo and see how it’s built, you may want to run it locally:
 
 ## About the App
 
-This application shows how to create fast, beautiful and dynamic financial dashboards. It takes full advantage of React's fast rendering and shows dynamic data updates in real time which allows monitoring data with no visible delay. You can see how all KendoReact components can be easily connected with one another and react to all changes in the state flawlessly. In this application, we use the KendoReact Data Grid and Charts to visualize the data and to show both the data trends in the Chart and the details in the Grid. The application also uses the KendoReact DropDowns and DatePicker to easily transition between different time periods or Chart types.
+This application shows how to create fast, beautiful and dynamic financial dashboards. It takes full advantage of React's fast rendering and shows dynamic data updates in real time which allows monitoring data with no visible delay. You can see how all KendoReact components can be easily connected with one another and react to all changes in the state flawlessly. In this application, we use the KendoReact Grid and Charts to visualize the data and to show both the data trends in the Chart and the details in the Grid. The application also uses the KendoReact DropDowns and DatePicker to easily transition between different time periods or Chart types.
 
 ## Full List of the Used KendoReact Components
 
@@ -38,7 +38,7 @@ You can see the following ten KendoReact components implemented in this sample a
 -   [KendoReact Charts]({% slug overview_charts %})
 -   [KendoReact Line Charts]({% slug line_seriestypes_charts %})
 -   [KendoReact Area Chart]({% slug area_seriestypes_charts %})
--   [KendoReact Data Grid]({% slug overview_grid %})
+-   [KendoReact Grid]({% slug overview_grid %})
 -   [KendoReact DropDownList]({% slug overview_dropdownlist %})
 -   [KendoReact DateRangePicker]({% slug overview_daterangepicker %})
 -   [KendoReact Splitter]({% slug overview_splitter %})

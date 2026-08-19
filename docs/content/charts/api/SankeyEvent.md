@@ -257,6 +257,9 @@ The event type.
 Indicates whether the default action has been prevented.
 
 
+
+
+
 </td>
 </tr>
 
@@ -287,7 +290,7 @@ boolean
 <td>
 
 
-
+`true` if the default action has been prevented; otherwise, `false`.
 
 
 </td>

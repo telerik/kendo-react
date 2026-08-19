@@ -18,7 +18,7 @@ To add or remove any of the available tools, use the [`tools`]({% slug api_edito
 
 The following example demonstrates all available tools of the React Editor, part of KendoReact.
 
-{% meta height:510 %}
+{% meta height:680 %}
 {% embed_file all-tools/func/app.tsx preview %}
 {% embed_file all-tools/func/main.tsx %}
 {% endmeta %}

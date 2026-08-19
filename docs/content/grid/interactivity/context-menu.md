@@ -1,7 +1,7 @@
 ---
 title: Context Мenu
-description: 'Get started with the KendoKendoReact Data Grid which supports Context menu'
-components: ["datagrid"]
+description: 'Get started with the KendoReact Grid which supports Context menu'
+components: ['grid']
 slug: context_menu_grid
 position: 30
 tier: premium
@@ -10,7 +10,7 @@ subject: Grid Context Menu feature
 
 # Context Menu
 
-The KendoReact Data Grid enables you to display a context menu by using the Context Menu component out-of-the-box. The **onContextMenu** event is fired when grid cells are rendered and the context menu is triggered on a right click.
+The KendoReact Grid enables you to display a context menu by using the Context Menu component out-of-the-box. The **onContextMenu** event is fired when grid cells are rendered and the context menu is triggered on a right click.
 
 <CtaPanelOverview></CtaPanelOverview>
 
@@ -35,7 +35,7 @@ The built-in context menu of the Grid allows you to control the rows selection a
 
 You can see the default Context menu of the Grid in action in the demo below.
 
-{% meta height:570 %}
+{% meta height:680 %}
 {% embed_file context-menu-basic/func/app.tsx preview %}
 {% embed_file context-menu-basic/func/main.tsx %}
 {% endmeta %}
@@ -46,7 +46,7 @@ The following example demonstrates how to copy cell's content to clipboard.
 
 <!-- Needs to be updated -->
 
-{% meta height:630 %}
+{% meta height:960 %}
 {% embed_file context-menu-copy-cell/func/app.tsx preview %}
 {% embed_file context-menu-copy-cell/func/main.tsx %}
 {% endmeta %}
@@ -54,6 +54,8 @@ The following example demonstrates how to copy cell's content to clipboard.
 ## Row Operations
 
 As the elements inside the Context menu are custom, they execute different actions depending on the desired functionality.
+
+The following example demonstrates context menu row operations, including custom actions triggered from a right-click menu on Grid rows.
 
 <!-- Needs to be updated -->
 
@@ -64,7 +66,9 @@ As the elements inside the Context menu are custom, they execute different actio
 
 ## Multi Row Selection
 
-The KendoReact Data Grid Context menu can be used for multi row selection.
+The KendoReact Grid Context menu can be used for multi row selection.
+
+The following example demonstrates how to use the context menu to select multiple rows, including select all and deselect all operations.
 
 <!-- Needs to be updated -->
 
@@ -75,7 +79,7 @@ The KendoReact Data Grid Context menu can be used for multi row selection.
 
 ## Excel Export
 
-The KendoReact Data Grid Context menu provides options for exporting its data to Excel.
+The KendoReact Grid Context menu provides options for exporting its data to Excel.
 
 To enable the Excel export:
 
@@ -103,8 +107,9 @@ The following example demonstrates the basic implementation of the Excel export 
 {% endmeta %}
 
 ## Suggested Links
--   [React Data Grid Excel Export](https://www.telerik.com/kendo-react-ui/components/grid/excel-export)
--   [React Data Grid PDF Export](https://www.telerik.com/kendo-react-ui/components/grid/pdf-export)
+
+-   [React Grid Excel Export](https://www.telerik.com/kendo-react-ui/components/grid/excel-export)
+-   [React Grid PDF Export](https://www.telerik.com/kendo-react-ui/components/grid/pdf-export)
 -   [API Reference of the Grid]({% slug api_grid_gridprops %})
 
 <div data-component="StartKendoReactFreeSection"></div>

@@ -9,4 +9,4 @@ slug: api_barcodes_barcodes
 # Barcodes
 
 
-`type` Barcodes = [Barcode]({% slug api_barcodes_barcode %}) | [QRCode]({% slug api_barcodes_qrcode %});
+`type` Barcodes = [BarcodeHandle]({% slug api_barcodes_barcodehandle %}) | [QRCodeHandle]({% slug api_barcodes_qrcodehandle %});

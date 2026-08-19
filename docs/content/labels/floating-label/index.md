@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: 'Get an overview of the features the KendoReact FloatingLabel delivers and use the component in React projects.'
-components: ["floatinglabel"]
+components: ['floatinglabel']
 slug: floating_label_labels
 position: 0
 ---
@@ -12,14 +12,12 @@ The FloatingLabel component enables you to provide a floating label functionalit
 
 <CtaPanelOverview></CtaPanelOverview>
 
-The following example shows how to set up the FloatingLabel component:
+The following example demonstrates the FloatingLabel component in action.
 
-1. Wrap the component within a FloatingLabel component.
-1. Set the [`label`]({% slug api_labels_floatinglabelprops %}#toc-label), [`editorValue`]({% slug api_labels_floatinglabelprops %}#toc-editorvalue) and [`editorId`]({% slug api_labels_floatinglabelprops %}#toc-editorid) properties of the FloatingLabel.
-
-{% meta height:140 %}
+{% meta height:810 %}
 {% embed_file floatinglabel/basic/func/app.tsx preview %}
 {% embed_file floatinglabel/basic/func/main.tsx %}
+{% embed_file floatinglabel/basic/func/styles.css %}
 {% endmeta %}
 
 > The FloatingLabel is part of the [KendoReact Labels]({% slug overview_labels %}) component library. All KendoReact Labels are freely available for use without a commercial license. The procedures for installing, importing, and using the Labels are identical for all components in the package. To learn how to use the FloatingLabel and the rest of the Labels, see the [Getting Started with the KendoReact Labels]({% slug get_started_labels %}) guide.

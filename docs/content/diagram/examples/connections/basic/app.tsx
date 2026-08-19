@@ -4,14 +4,10 @@ import {
     ShapeOptions,
     ConnectionOptions,
     ShapeDefaults,
-    ConnectionDefaults,
-    DiagramEditable
+    ConnectionDefaults
 } from '@progress/kendo-react-diagram';
 import { Diagram as DiagramWidget } from '@progress/kendo-diagram-common';
-import { NumericTextBox, NumericTextBoxChangeEvent } from '@progress/kendo-react-inputs';
-import { Button } from '@progress/kendo-react-buttons';
-import { SvgIcon } from '@progress/kendo-react-common';
-import { exclamationCircleIcon } from '@progress/kendo-svg-icons';
+import { useConfigurator } from '@docs-shared/configurator';
 import { BORDER_COLORS, COLORS, TEXT_COLOR, type ColorKey, arrowCap, labelContent } from './diagram-data';
 import './demo-styles.css';
 
@@ -53,30 +49,69 @@ const buildShapes = (): ShapeOptions[] => {
 const App = () => {
     const diagramRef = React.useRef<DiagramWidget>(null);
 
-    const [cornerRadius, setCornerRadius] = React.useState(10);
-    const [connectorOffset, setConnectorOffset] = React.useState(16);
-    const [snapDistance, setSnapDistance] = React.useState(6);
+    const config = useConfigurator({
+        sections: [
+            {
+                label: 'Connection Corner Radius',
+                controls: [
+                    {
+                        type: 'numericTextBox',
+                        name: 'cornerRadius',
+                        min: 0,
+                        max: 50,
+                        defaultValue: 10
+                    }
+                ]
+            },
+            {
+                label: 'Connector Label Offset',
+                controls: [
+                    {
+                        type: 'numericTextBox',
+                        name: 'connectorOffset',
+                        min: 0,
+                        max: 50,
+                        defaultValue: 16
+                    }
+                ]
+            },
+            {
+                label: 'Snap Distance',
+                controls: [
+                    {
+                        type: 'numericTextBox',
+                        name: 'snapDistance',
+                        min: 1,
+                        max: 50,
+                        defaultValue: 6
+                    }
+                ]
+            }
+        ]
+    }) as {
+        cornerRadius: number;
+        connectorOffset: number;
+        snapDistance: number;
+    };
 
-    const [draftCornerRadius, setDraftCornerRadius] = React.useState(10);
-    const [draftConnectorOffset, setDraftConnectorOffset] = React.useState(16);
-    const [draftSnapDistance, setDraftSnapDistance] = React.useState(6);
+    const { cornerRadius, connectorOffset, snapDistance } = config;
+
+    const resolvedCornerRadius = cornerRadius ?? 10;
+    const resolvedConnectorOffset = connectorOffset ?? 16;
+    const resolvedSnapDistance = snapDistance ?? 6;
 
     const shapes = React.useMemo(() => buildShapes(), []);
 
     const connectionDefaults: ConnectionDefaults = React.useMemo(
         () => ({
-            selectable: true
-        }),
-        []
-    );
-
-    const editable = React.useMemo(
-        (): DiagramEditable => ({
-            drag: {
-                snap: { size: snapDistance }
+            selectable: true,
+            editable: {
+                points: {
+                    snap: resolvedSnapDistance
+                }
             }
         }),
-        [snapDistance]
+        [resolvedSnapDistance]
     );
 
     const connections = React.useMemo((): ConnectionOptions[] => {
@@ -108,7 +143,7 @@ const App = () => {
                 endCap: arrowCap(colorMap.deployment),
                 content: labelContent('Live', {
                     position: { vertical: 'bottom', horizontal: 'right' },
-                    offset: connectorOffset
+                    offset: resolvedConnectorOffset
                 })
             },
             {
@@ -149,12 +184,12 @@ const App = () => {
                     { x: 410, y: 25 },
                     { x: 200, y: 25 }
                 ],
-                cornerRadius,
+                cornerRadius: resolvedCornerRadius,
                 stroke: { color: colorMap.development, width: 3, dashType: 'dash' },
                 endCap: arrowCap(colorMap.development),
                 content: labelContent('Submit for Testing', {
                     position: { vertical: 'top', horizontal: 'right' },
-                    offset: connectorOffset,
+                    offset: resolvedConnectorOffset,
                     background: colorMap.development,
                     padding: 4
                 })
@@ -165,7 +200,7 @@ const App = () => {
                 type: 'cascading',
                 fromConnector: 'bottom',
                 toConnector: 'top',
-                cornerRadius,
+                cornerRadius: resolvedCornerRadius,
                 stroke: { color: colorMap.testing, width: 3 },
                 startCap: {
                     type: 'FilledCircle',
@@ -186,7 +221,7 @@ const App = () => {
                 type: 'cascading',
                 fromConnector: 'right',
                 toConnector: 'bottom',
-                cornerRadius,
+                cornerRadius: resolvedCornerRadius,
                 stroke: { color: colorMap.review, width: 3, dashType: 'dot' },
                 endCap: arrowCap(colorMap.review),
                 content: labelContent('Passed', {
@@ -197,83 +232,24 @@ const App = () => {
                 })
             }
         ];
-    }, [connectorOffset, cornerRadius]);
-
-    const updateDiagram = React.useCallback(() => {
-        setCornerRadius(draftCornerRadius);
-        setConnectorOffset(draftConnectorOffset);
-        setSnapDistance(draftSnapDistance);
-    }, [draftConnectorOffset, draftCornerRadius, draftSnapDistance]);
+    }, [resolvedConnectorOffset, resolvedCornerRadius]);
 
     React.useEffect(() => {
         if (diagramRef.current) {
             diagramRef.current.bringIntoView(diagramRef.current.shapes);
         }
-    }, [connections]);
+    }, []);
 
     return (
         <div className="example-wrapper">
-            <div className="configurator-panel">
-                <div className="config-group">
-                    <div className="config-control">
-                        <span>Connection Corner Radius</span>
-                        <div className="input-button-group">
-                            <NumericTextBox
-                                value={draftCornerRadius}
-                                min={0}
-                                max={50}
-                                onChange={(event: NumericTextBoxChangeEvent) => setDraftCornerRadius(event.value ?? 0)}
-                            />
-                            <Button onClick={updateDiagram}>Set</Button>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="config-group">
-                    <div className="config-control">
-                        <span>Connector Label Offset</span>
-                        <div className="input-button-group">
-                            <NumericTextBox
-                                value={draftConnectorOffset}
-                                min={0}
-                                max={50}
-                                onChange={(event: NumericTextBoxChangeEvent) => setDraftConnectorOffset(event.value ?? 0)}
-                            />
-                            <Button onClick={updateDiagram}>Set</Button>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="config-group">
-                    <div className="config-control">
-                        <span className="label-with-icon">
-                            Snap Distance
-                            {' '}
-                            <span title="Sets how close a connection point must be to snap into place while dragging. Higher values make snapping easier.">
-                                <SvgIcon icon={exclamationCircleIcon} size="small" />
-                            </span>
-                        </span>
-                        <div className="input-button-group">
-                            <NumericTextBox
-                                value={draftSnapDistance}
-                                min={1}
-                                max={50}
-                                onChange={(event: NumericTextBoxChangeEvent) => setDraftSnapDistance(event.value ?? 1)}
-                            />
-                            <Button onClick={updateDiagram}>Set</Button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <div className="diagram-panel">
                 <Diagram
+                    key={`${resolvedCornerRadius}-${resolvedConnectorOffset}-${resolvedSnapDistance}`}
                     ref={diagramRef}
                     shapes={shapes}
                     connections={connections}
                     shapeDefaults={shapeDefaults}
                     connectionDefaults={connectionDefaults}
-                    editable={editable}
                     style={{ height: 500 }}
                 />
             </div>

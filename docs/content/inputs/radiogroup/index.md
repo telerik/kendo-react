@@ -23,12 +23,20 @@ The following example demonstrates the RadioGroup component in action.
 
 ## Layout
 
+The RadioGroup supports `horizontal` and `vertical` layouts, controlled via the [`layout`]({% slug api_inputs_radiogroupprops %}#toc-layout) property. The default layout is `vertical`.
+
+The following example demonstrates how to toggle between horizontal and vertical `layout` options for the RadioGroup.
+
 {% meta height:250 %}
 {% embed_file radiogroup/overview/layout/app.tsx preview %}
 {% embed_file radiogroup/overview/layout/main.tsx %}
 {% endmeta %}
 
 ## Label Placement
+
+The RadioGroup allows you to control whether labels appear before or after their radio button via the [`labelPlacement`]({% slug api_inputs_radiogroupprops %}#toc-labelplacement) property. The default placement is `after`.
+
+The following example demonstrates how to toggle the `labelPlacement` between `before` and `after` positions in the RadioGroup.
 
 {% meta height:250 %}
 {% embed_file radiogroup/overview/label-placement/app.tsx preview %}

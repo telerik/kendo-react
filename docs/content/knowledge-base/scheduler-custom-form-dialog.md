@@ -41,7 +41,7 @@ This knowledge base article also answers the following questions:
 
 To customize the action buttons of the SchedulerForm Dialog, you can set the `dialog` prop of the SchedulerForm to control the rendered buttons. The following example displays how you can enable the Submit button based on the validation errors for the description field.
 
-{% meta height:600 %}
+{% meta height:780 %}
 {% embed_file scheduler/custom-form-dialog/app.tsx preview %}
 {% embed_file scheduler/custom-form-dialog/custom-dialog.tsx %}
 {% embed_file scheduler/custom-form-dialog/custom-form.tsx %}

@@ -18,7 +18,7 @@ The KendoReact Tooltip component is part of the KendoReact library of React UI c
 
 The following example demonstrates the Tooltip in action.
 
-{% meta height:550 %}
+{% meta height:660 %}
 {% embed_file tooltip/overview/func/app.tsx preview %}
 {% embed_file tooltip/overview/func/main.tsx %}
 {% embed_file tooltip/overview/func/styles.css %}

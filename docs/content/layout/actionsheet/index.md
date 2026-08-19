@@ -14,7 +14,7 @@ The ActionSheet component allows you to display a predefined set of options in a
 
 The following example demonstrates the ActionSheet in practice.
 
-{% meta height:780 %}
+{% meta height:880 %}
 {% embed_file actionsheet/overview/func/app.tsx preview %}
 {% embed_file actionsheet/overview/func/main.tsx %}
 {% endmeta %}

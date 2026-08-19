@@ -73,7 +73,7 @@ const formPreset: AllClassStructure = {
 
 The following sample demonstrates how to change the appearance of the unstyled components in KendoReact with [Tailwind](https://tailwindcss.com/docs/installation) v3. The [UnstyledContext]({% slug api_common_unstyledcontext %}) provider receives a predefined preset of Tailwind classes that are used for unstyled react component library styling.
 
-{% meta height:660 %}
+{% meta height:760 %}
 {% embed_file unstyled/app.tsx preview %}
 {% embed_file unstyled/main.tsx %}
 {% embed_file unstyled/tailwind-preset.ts %}

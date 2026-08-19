@@ -1,7 +1,7 @@
 ---
 title: Exporting Grouped Data
-description: 'Learn how to export grouped data with aggregates to CSV from the KendoKendoReact Data Grid.'
-components: ['datagrid']
+description: 'Learn how to export grouped data with aggregates to CSV from the KendoReact Grid.'
+components: ['grid']
 slug: groupeddata_csvexport_grid
 position: 25
 subject: CSV Export feature of the Grid
@@ -10,7 +10,7 @@ tier: free
 
 # Exporting Grouped Data
 
-The KendoKendoReact Data Grid CSV export feature supports exporting grouped data with group headers and aggregate footers. When the Grid data is grouped, the export automatically includes group information in a flattened format suitable for CSV.
+The KendoReact Grid CSV export feature supports exporting grouped data with group headers and aggregate footers. When the Grid data is grouped, the export automatically includes group information in a flattened format suitable for CSV.
 
 <CtaPanelOverview></CtaPanelOverview>
 
@@ -18,7 +18,7 @@ The KendoKendoReact Data Grid CSV export feature supports exporting grouped data
 
 The following example demonstrates exporting grouped data to CSV. The Grid uses `autoProcessData` for built-in data processing and groups products by category and discontinued status. When exported, the CSV includes group headers and aggregate values (sum of unit prices per group):
 
-<demo metaUrl="grid/csv-export/grouped-data-export/" height="620"></demo>
+<demo metaUrl="grid/csv-export/grouped-data-export/" height="730"></demo>
 
 ## Export Format
 

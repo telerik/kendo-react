@@ -16,7 +16,7 @@ The KendoReact TaskBoard component is part of the KendoReact library of React UI
 
 The following example demonstrates the KendoReact TaskBoard in action.
 
-{% meta height:760 %}
+{% meta height:880 %}
 {% embed_file overview/func/app.tsx preview %}
 {% embed_file overview/func/main.tsx %}
 {% embed_file overview/func/card.tsx %}

@@ -1,7 +1,7 @@
 ---
 title: Basics
-description: 'Get started with the KendoKendoReact Data Grid CSV export feature using the built-in @progress/kendo-csv library.'
-components: ['datagrid']
+description: 'Get started with the KendoReact Grid CSV export feature using the built-in @progress/kendo-csv library.'
+components: ['grid']
 slug: overview_csvexport_grid
 position: 0
 subject: CSV Export feature of the Grid
@@ -10,7 +10,7 @@ tier: free
 
 # CSV Export Basics
 
-The [`csv`]({% slug api_grid_gridprops %}#toc-csv) property of the Grid component enables you to export the content of the KendoReact Data Grid to CSV format using the built-in `@progress/kendo-csv` library and `@progress/kendo-file-saver` for file saving.
+The [`csv`]({% slug api_grid_gridprops %}#toc-csv) property of the Grid component enables you to export the content of the KendoReact Grid to CSV format using the built-in `@progress/kendo-csv` library and `@progress/kendo-file-saver` for file saving.
 
 <CtaPanelOverview></CtaPanelOverview>
 
@@ -23,7 +23,7 @@ To enable CSV export in the Grid:
 
 The following example demonstrates the basic CSV export functionality. The Grid uses `autoProcessData={true}` to handle pagination internally, and with `csv={true}`, clicking the export button exports all data by default:
 
-<demo metaUrl="grid/csv-export/simple-export/" height="560"></demo>
+<demo metaUrl="grid/csv-export/simple-export/" height="820"></demo>
 
 > **Note**: When using `autoProcessData={true}`, the `allPages` option controls pagination behavior during export. By default `allPages` is `true`, which exports all data. Set `allPages: false` to export only the current page. See the [Basic Configuration Example](#basic-configuration-example) below for more details.
 
@@ -46,7 +46,7 @@ The CSV export functionality provides extensive customization through the [`Grid
 
 The following example demonstrates how to export all data while displaying only a paginated view. The Grid shows 10 items per page, but with `allPages: true` (the default), the CSV export includes all products with a custom file name (`products-export.csv`) and Unix-style line endings:
 
-<demo metaUrl="grid/csv-export/all-data-export/" height="560"></demo>
+<demo metaUrl="grid/csv-export/all-data-export/" height="820"></demo>
 
 ## CSV Export Features
 

@@ -20,6 +20,8 @@ TreeList virtual scrolling requires you to set the following configuration:
 -   Set the TreeList height in pixels through its [`style`]({% slug api_treelist_treelistprops %}#toc-style) prop.
 -   Set the [`rowHeight`]({% slug api_treelist_treelistprops %}#toc-rowheight) prop.
 
+The following example demonstrates how to configure virtual scrolling in the TreeList to efficiently render large data sets by displaying only the visible rows.
+
 {% meta height:500 %}
 {% embed_file virtual-scroll/func/app.tsx preview %}
 {% embed_file virtual-scroll/func/main.tsx %}

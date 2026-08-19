@@ -10,7 +10,7 @@ position: 4
 
 By default, the RadioGroup is enabled.
 
-To disable the component, set its [`disabled`]({% slug api_inputs_radiogroup %}#toc-disabled) property to `true`.
+To disable the component, set its [`disabled`]({% slug api_inputs_radiogroupprops %}) property to `true`.
 
 
 {% meta height:300 %}

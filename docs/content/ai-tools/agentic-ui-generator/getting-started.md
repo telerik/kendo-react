@@ -5,7 +5,7 @@ description: Learn how to use the Agentic UI Generator that integrates with your
 slug: agentic_ui_generator_getting_started
 position: 10
 tag: updated
-release_tag: Q2 2026
+release_tag: Q3 2026
 ---
 
 # Getting Started with the Agentic UI Generator
@@ -16,12 +16,12 @@ The Agentic UI Generator is an intelligent development tool delivered through th
 
 To use the KendoReact MCP server, you need:
 
--   A [compatible MCP client](https://modelcontextprotocol.io/clients), such as VS Code or Cursor, with support for MCP server integrations.
+-   A [compatible MCP client](https://modelcontextprotocol.io/clients) with local [`stdio`](https://modelcontextprotocol.io/specification/2025-06-18/basic/transports#stdio) MCP server support, such as [VS Code](https://code.visualstudio.com/docs/agent-customization/mcp-servers), [Cursor](https://cursor.com/docs/mcp), [Google Antigravity](https://antigravity.google/docs/mcp), and others.
 -   An [active Telerik license](slug:ai_tools_overview#license-requirements), either trial or subscription, that provides access to the KendoReact MCP server.
 
 ## Quick Start
 
-Instead of manually creating configuration files, you can use the [Kendo CLI](https://www.npmjs.com/package/@progress/kendo-cli) and the built-in **Getting Started Assistant** to handle the entire setup automatically - whether you are starting a new project or adding KendoReact to an existing one.
+Instead of manually creating configuration files, you can use the [Kendo CLI](https://www.npmjs.com/package/@progress/kendo-cli) and the built-in **Getting Started Assistant** to handle the entire setup automatically&mdash;whether you are starting a new project or adding KendoReact to an existing one. Alternatively, install the [`kendo-react-plugin`](https://github.com/telerik/ai-plugins), which delivers the Agentic UI Generator functionality as skills.
 
 Follow these steps to set up the Agentic UI Generator and use it in your IDE (VS Code or another supported AI-enabled IDE):
 
@@ -47,7 +47,72 @@ Follow these steps to set up the Agentic UI Generator and use it in your IDE (VS
     ```
 
 </TabStripTab>
+<TabStripTab title="AI Plugin">
+
+The `kendo-react-plugin` provides an alternative to setting up the KendoReact MCP server via the Kendo CLI. The plugin wraps the KendoReact MCP server and starts it automatically&mdash;no manual `mcp.json` configuration required.
+
+<TabStrip>
+<TabStripTab title="VS Code Copilot">
+
+To install the KendoReact AI Plugin from the marketplace:
+
+1. Ensure you have a [supported license](slug:ai_tools_overview#license-requirements) and set up your [Telerik license key](slug:my_license#install-or-update-the-license-key-file-in-your-project) globally on your machine.
+2. Open **VS Code Settings** (`Cmd+,` / `Ctrl+,`) and search for `chat.marketplaces`.
+3. Add the `telerik/ai-plugins` marketplace entry, or add it directly via `settings.json`:
+
+    ```json
+    "chat.plugins.marketplaces": ["telerik/ai-plugins"]
+    ```
+
+4. Press `F1` and select **Chat: Manage Plugin Marketplaces**.
+5. Select `telerik/ai-plugins` -> **Show plugins**.
+6. In the **Agent Plugins** tab, find `kendo-react-plugin` and click **Install**.
+
+</TabStripTab>
+<TabStripTab title="Claude Code">
+
+1. Ensure you have a [supported license](slug:ai_tools_overview#license-requirements) and set up your [Telerik license key](slug:my_license#install-or-update-the-license-key-file-in-your-project) globally on your machine.
+2. Add the `telerik/ai-plugins` marketplace, then install the plugin:
+
+```sh
+/plugin marketplace add telerik/ai-plugins
+/plugin install kendo-react-plugin@telerik-ai-plugins
+```
+
+While a session is running, reload plugins after any local changes with `/reload-plugins`.
+
+> Requires [Claude Code](https://code.claude.com/docs/en/discover-plugins) with plugin support.
+
+</TabStripTab>
+<TabStripTab title="GitHub Copilot CLI">
+
+1. Ensure you have a [supported license](slug:ai_tools_overview#license-requirements) and set up your [Telerik license key](slug:my_license#install-or-update-the-license-key-file-in-your-project) globally on your machine.
+2. Add the marketplace and install the plugin:
+
+```sh
+copilot plugin marketplace add telerik/ai-plugins
+copilot plugin install kendo-react-plugin@telerik-ai-plugins
+```
+
+To refresh after changes, exit and reopen the session or run `/restart`.
+
+> Requires [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli).
+
+</TabStripTab>
+</TabStrip>
+
+Once installed, invoke the UI Generator skill in the IDE chat interface:
+
+```prompt
+/kendo-react-plugin:kendo-react-ui-generator Create a dashboard page with a grid showing sales data and a chart visualizing monthly trends.
+```
+
+> caution If you already have the KendoReact MCP server configured in your IDE, **disable or remove it before installing the plugin**. The plugin wraps the same MCP server and starts it automatically&mdash;[running both simultaneously causes conflicts](slug:ai_tools_troubleshooting#ai-plugin-and-mcp-server-running-simultaneously) and increases token usage.
+
+</TabStripTab>
 <TabStripTab title="Manual Setup">
+
+The manual setup is an alternative to configuring the KendoReact MCP Server through the Kendo CLI or the KendoReact AI Plugin.
 
 1. Ensure you have a [supported license](slug:ai_tools_overview#license-requirements) and set up your Telerik license key globally on your machine or in the `mcp.json` configuration. The server automatically recognizes your license and activates the available MCP tools.
 

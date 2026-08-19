@@ -32,7 +32,7 @@ The possible configuration options are:
 
 
 
-{% meta height:560 %}
+{% meta height:670 %}
 {% embed_file tilelayout/tiles/positions/func/app.tsx preview %}
 {% embed_file tilelayout/tiles/positions/func/main.tsx %}
 {% endmeta %}

@@ -7,7 +7,9 @@ slug: api_treelist_treelistheaderselectioncell
 ---
 
 # TreeListHeaderSelectionCell
+The TreeList header selection cell component.
 
+A [Functional Component](https://react.dev/reference/react/Component).
 
 
 <table class="api-table api-table-properties">
@@ -34,7 +36,7 @@ slug: api_treelist_treelistheaderselectioncell
 <code>
 
 
-Readonly&lt;[TreeListHeaderSelectionCellProps]({% slug api_treelist_treelistheaderselectioncellprops %})&gt;
+[TreeListHeaderSelectionCellProps]({% slug api_treelist_treelistheaderselectioncellprops %}) [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with RefAttributes&lt;[TreeListHeaderSelectionCellHandle]({% slug api_treelist_treelistheaderselectioncellhandle %})&gt;
 
 
 </code>

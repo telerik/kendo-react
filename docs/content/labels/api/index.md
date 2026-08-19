@@ -28,33 +28,6 @@ position: 1
 <span class="section-key">
 
 
-## Class
-
-
-</span>
-
-
-  <ul class="api-item-list">
-    <li class="api-item">
-        <a href="{% slug api_labels_error %}">Error</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_labels_floatinglabel %}">FloatingLabel</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_labels_hint %}">Hint</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_labels_label %}">Label</a>
-    </li>
-  </ul>
-</div>
-<div class="api-index-section">
-
-
-<span class="section-key">
-
-
 ## Component
 
 

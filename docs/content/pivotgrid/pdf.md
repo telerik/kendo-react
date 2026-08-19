@@ -12,7 +12,7 @@ To export the PivotGrid component to PDF, use the `saveAsPDF` function from the 
 
 The following example demonstrates how to export the PivotGrid component to PDF.
 
-{% meta height:610 %}
+{% meta height:660 %}
 {% embed_file pdf/func/app.tsx preview %}
 {% embed_file pdf/func/main.tsx %}
 {% embed_file pdf/func/export-to-pdf.ts %}

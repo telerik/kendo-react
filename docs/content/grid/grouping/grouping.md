@@ -1,7 +1,7 @@
 ---
 title: Aggregates for Grouped Data
-description: 'Get started with the KendoKendoReact Data Grid enabling you to visualize aggregates for grouped data in the respective column group footer of the component.'
-components: ["datagrid"]
+description: 'Get started with the KendoReact Grid enabling you to visualize aggregates for grouped data in the respective column group footer of the component.'
+components: ['grid']
 slug: groupingaggregates_grid
 position: 20
 subject: Grouping feature of the Grid
@@ -9,7 +9,7 @@ subject: Grouping feature of the Grid
 
 # Aggregates
 
-The KendoReact Data Grid enables you to visualize the aggregates for the grouped data in the respective column group footer of the component.
+The KendoReact Grid enables you to visualize the aggregates for the grouped data in the respective column group footer of the component.
 
 <CtaPanelOverview></CtaPanelOverview>
 
@@ -22,7 +22,9 @@ To integrate the available aggregates in the Grid:
 
 Refer to this article on the [process helpers for bulk data operations](slug:bulkoperations_dataquery#aggregates) for additional information regarding the aggregates.
 
-{% meta height:580 %}
+The following example demonstrates how to display aggregate values (such as sum, average, or count) in group footer cells of a grouped Grid.
+
+{% meta height:700 %}
 {% embed_file grouping-aggregates/func/app.tsx preview %}
 {% embed_file grouping-aggregates/func/main.tsx %}
 {% endmeta %}

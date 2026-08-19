@@ -22,7 +22,7 @@ The demo showcases three status template implementations:
 
 Click on message bubbles in the demo to see the different templates in action.
 
-{% meta height:970 %}
+{% meta height:1090 %}
 {% embed_file chat/customization/status-templates/app.tsx preview %}
 {% embed_file chat/customization/status-templates/main.tsx %}
 {% embed_file chat/customization/status-templates/templates.tsx %}

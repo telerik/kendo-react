@@ -14,7 +14,7 @@ The KendoReact TreeList enables you to create, update, and delete data records i
 
 The edit mode of the TreeList rows is based on the value of the [`editField`]({% slug api_treelist_treelistprops %}#toc-editField) property.
 
-{% meta height:580 %}
+{% meta height:690 %}
 {% embed_file editing-inline/func/app.tsx preview %}
 {% embed_file editing-inline/func/main.tsx %}
 {% embed_file editing-inline/func/my-command-cell.tsx %}

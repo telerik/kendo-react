@@ -20,7 +20,7 @@ The following example demonstrates how to:
 -   Add a new mark to marks object of the schema.
 -   Add a custom attribute to the existing nodes.
 
-{% meta height:550 %}
+{% meta height:660 %}
 {% embed_file schema-edit/func/app.tsx preview %}
 {% embed_file schema-edit/func/main.tsx %}
 {% embed_file schema-edit/func/new-node.ts %}

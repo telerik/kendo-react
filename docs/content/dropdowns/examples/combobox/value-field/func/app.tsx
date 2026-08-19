@@ -1,6 +1,7 @@
-import * as React from 'react';
+import React from 'react';
 import { ComboBox } from '@progress/kendo-react-dropdowns';
 import { useValueField } from './useValueField';
+import { DataBinding } from '@docs-shared/DataBinding';
 
 type Sport = { text: string; id: number };
 
@@ -22,9 +23,8 @@ const App = () => {
   });
 
   return (
-    <div style={{ padding: 16 }}>
-      <div className="example-config">Selected Value: {String(value)}</div>
-      <div style={{ width: 300, marginTop: 8 }}>
+    <DataBinding fields={[{ label: 'Selected Value', value }]}>
+      <div style={{ width: 300 }}>
         <ComboBox
           data={sports}
           textField="text"
@@ -32,7 +32,7 @@ const App = () => {
           onChange={handleChange(setValue)}
         />
       </div>
-    </div>
+    </DataBinding>
   );
 };
 

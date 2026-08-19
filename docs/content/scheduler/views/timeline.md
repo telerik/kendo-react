@@ -13,7 +13,7 @@ The **Timeline** view displays events on a continuous time-scale.
 
 The following example demonstrates how to set common properties of the **Timeline** view of the Scheduler. For the full list of configuration options, refer to the API reference of the [`TimelineView`]({% slug api_scheduler_timelineviewprops %}) properties.
 
-{% meta height:670 %}
+{% meta height:780 %}
 {% embed_file views/timeline/configuration/func/app.tsx preview %}
 {% embed_file views/timeline/configuration/func/main.tsx %}
 {% endmeta %}
@@ -22,7 +22,9 @@ The following example demonstrates how to set common properties of the **Timelin
 
 You can configure the **Timeline** view to display events that are grouped by a resource.
 
-{% meta height:760 %}
+The following example demonstrates how to group events by multiple resources in both horizontal and vertical orientations.
+
+{% meta height:800 %}
 {% embed_file views/timeline/grouping/func/app.tsx preview %}
 {% embed_file views/timeline/grouping/func/main.tsx %}
 {% endmeta %}
@@ -31,7 +33,9 @@ You can configure the **Timeline** view to display events that are grouped by a 
 
 By default, the current time marker is enabled if the current `date` and `time` is visible in the view-range.
 
-{% meta height:760 %}
+The following example demonstrates the current time marker feature when displaying events in the Timeline view.
+
+{% meta height:800 %}
 {% embed_file views/timeline/current-time/func/app.tsx preview %}
 {% embed_file views/timeline/current-time/func/main.tsx %}
 {% endmeta %}

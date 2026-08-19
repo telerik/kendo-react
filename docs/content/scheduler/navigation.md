@@ -27,7 +27,7 @@ As an alternative to what is discussed above, the Scheduler gives you the freedo
 
 The following example uses the [`onDateChange`]({% slug api_scheduler_schedulerprops %}#toc-ondatechange) event to implement a logic that moves the days in the `day` view by two days.
 
-{% meta height:720 %}
+{% meta height:780 %}
 {% embed_file navigation/controlled/func/app.tsx preview %}
 {% embed_file navigation/controlled/func/main.tsx %}
 {% endmeta %}

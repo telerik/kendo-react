@@ -28,5 +28,5 @@ The following demo shows how to export hidden content to PDF using the `PDFExpor
 -   [API Reference of the PDF Processing Component]({% slug api_pdf_pdfexportprops %})
 -   [PDF Export Overview]({% slug overview_pdfgenerator %})
 -   [Styling of Content]({% slug stylingofcontent_pdf %})
--   [PDF Export from Data Grid]({% slug overview_pdfexport_grid %})
+-   [PDF Export from Grid]({% slug overview_pdfexport_grid %})
 -   [Image Resolution]({% slug embeddedimages_pdf %})

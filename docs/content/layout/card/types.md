@@ -10,7 +10,7 @@ position: 3
 
 The Card component provides predefined [types]({% slug api_layout_cardprops %}#toc-type) that you can use to change the Card appearance.
 
-{% meta height:550 %}
+{% meta height:760 %}
 {% embed_file card/types/func/app.tsx preview %}
 {% embed_file card/types/func/main.tsx %}
 {% endmeta %}

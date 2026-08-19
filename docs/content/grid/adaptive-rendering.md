@@ -1,7 +1,7 @@
 ---
 title: Adaptive Rendering
-description: 'Enable adaptive rendering for the KendoKendoReact Data Grid in React projects.'
-components: ["datagrid"]
+description: 'Enable adaptive rendering for the KendoReact Grid in React projects.'
+components: ['grid']
 slug: grid_adaptive_rendering
 position: 160
 ---
@@ -23,7 +23,9 @@ Adaptive rendering is an advanced feature that allows the Grid to adjust its com
 
 > Note: The `alwaysExpanded` property of the [GridColumnMenuFilter](slug://api_grid_gridcolumnmenufilterprops), [GridColumnMenuCheckboxFilter](slug://api_grid_gridcolumnmenucheckboxfilterprops), and [GridColumnMenuColumnsChooser](slug://api_grid_gridcolumnmenucolumnschooser) components is not considered in adaptive mode. The column menu components are initially collapsed.
 
-{% meta height:810 %}
+The following example demonstrates adaptive rendering with inline editing, a custom column menu, and adaptive toolbar tools that adjust their layout for different screen widths.
+
+{% meta height:970 %}
 {% embed_file adaptive-rendering/app.tsx preview %}
 {% embed_file adaptive-rendering/columnMenu.tsx %}
 {% embed_file adaptive-rendering/gd-categories.ts %}

@@ -23,7 +23,7 @@ The forms supports enables you to validate input values and prevent the submissi
 
 The NumericTextBox supports props for setting basic validation requirements&mdash;for example, the minimum and maximum value. The [`min`]({% slug api_inputs_numerictextboxprops %}#toc-min), [`max`]({% slug api_inputs_numerictextboxprops %}#toc-max), and [`required`]({% slug api_inputs_numerictextboxprops %}#toc-required) properties enable the user to pre-define minimum requirements which define the validity state of the component and allow a successful form submission.
 
-{% meta height:650 %}
+{% meta height:710 %}
 {% embed_file numerictextbox/forms/basic/func/app.tsx preview %}
 {% embed_file numerictextbox/forms/basic/func/main.tsx %}
 {% endmeta %}
@@ -32,7 +32,7 @@ The NumericTextBox supports props for setting basic validation requirements&mdas
 
 You can implement custom error messages which will be displayed when the NumericTextBox is in an invalid state and the user tries to submit the form. To render a custom validation message, set the [`validationMessage`]({% slug api_inputs_numerictextboxprops %}#toc-validationMessage) prop.
 
-{% meta height:550 %}
+{% meta height:630 %}
 {% embed_file numerictextbox/forms/custom-message/func/app.tsx preview %}
 {% embed_file numerictextbox/forms/custom-message/func/main.tsx %}
 {% endmeta %}

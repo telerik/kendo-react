@@ -18,7 +18,7 @@ The TileLayout features the following options:
 -   Sets [autoFlow]({% slug api_layout_tilelayoutprops %}#toc-autoFlow) algorithm;
 -   Sets [resizing]({% slug api_layout_tilelayoutitem %}#toc-resizable) and [reordering]({% slug api_layout_tilelayoutitem %}#toc-reorderable) for the tiles.
 
-{% meta height:700 %}
+{% meta height:820 %}
 {% embed_file tilelayout/get-started/config/func/app.tsx preview %}
 {% embed_file tilelayout/get-started/config/func/main.tsx %}
 {% endmeta %}
@@ -29,7 +29,7 @@ The KendoReact TileLayout provides option for setting unique item key. Set the [
 
 The following example demonstrates TileLayout items with unique keys.
 
-{% meta height:700 %}
+{% meta height:820 %}
 {% embed_file tilelayout/get-started/keys/func/app.tsx preview %}
 {% embed_file tilelayout/get-started/keys/func/main.tsx %}
 {% endmeta %}

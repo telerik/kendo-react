@@ -1,32 +1,47 @@
 ---
-title: Adding the License Key to CI Services
-page_title: Learn how to configure your license key as an environment variable or a secret and activate it within your CI service pipeline.
-description: 'Securely set and activate your license key in your CI pipeline.'
+title: Adding Deployment Keys to CI/CD Services
+page_title: Learn how to use deployment keys and environment variables to activate your KendoReact license in CI/CD services.
+description: 'Use deployment keys to securely activate your license in a CI pipeline.'
 components: ['general']
 slug: ci_services_license
 position: 20
+tag: updated
 ---
 
-# Adding the License Key to CI Services
+# Adding Deployment Keys to CI/CD Services
 
-This section describes how to set up and activate your KendoReact [license key](slug:my_license#toc-download-your-license-key) across a few popular CI services by using environment variables or secrets. The license key must be present at build time. The recommended approach is to use an environment variable. Note that a license key is only required when using KendoReact premium components or features.
+This article describes how to activate your KendoReact [license](slug:my_license) in popular CI/CD services. Use [Deployment Keys](https://www.telerik.com/account/downloads/deployment-keys) for build pipelines and provide the key through an environment variable or a secure file.
+
+Deployment keys are dedicated license keys for build pipelines. Each deployment key is tied to one application and its selected products. You cannot use deployment keys for application development.
+
+> Developer license keys remain valid for CI/CD deployments, so existing pipelines do not need to be updated. For new pipelines, we recommend using deployment keys. For more information, see [the differences between developer license keys and deployment keys](slug:faq_license#what-is-the-difference-between-developer-license-keys-and-deployment-keys).
+
+To activate your license in a CI/CD environment:
+
+1. Go to the [Deployment Keys](https://www.telerik.com/account/downloads/deployment-keys) page.
+1. Click **Add Application**. In the form that opens:
+    * Add the application name.
+    * Select the type of application—public or private.
+    * Select the set of products used in the application.
+1. Copy the deployment key and store it securely.
+1. [Create an environment variable](#creating-an-environment-variable) named `TELERIK_LICENSE`, and set it to the deployment key value. Alternatively, store the key in a `telerik-license.txt` file, for example, through the [Azure Secure Files approach](#using-secure-files-on-azure-devops).
 
 The following general requirements apply to all CI/CD environments:
 
--   Regardless of the CI/CD tool you use, the step that installs the project dependencies must be executed before the step that activates the license.
--   The license activation step requires the `@progress/kendo-licensing` package to be downloaded and set up in your local environment or CI/CD pipeline.
--   To activate the license, you need a securely stored license key, either in your environment variables or in the CI/CD tool's secret management. Hardcoding license keys into the build script is strictly discouraged.
--   The CI pipeline configurations are not executable. They merely outline the specific sequence of steps.
+* Regardless of the CI/CD tool you use, the step that installs the project dependencies must be executed before the step that activates the license.
+* The license activation step requires the `@progress/kendo-licensing` package to be downloaded and set up in your local environment or CI/CD pipeline.
+* Store the deployment key securely in an environment variable, a secret, or a secure file. Never hardcode a key in the build script.
+* The CI pipeline configurations are not executable. They merely outline the specific sequence of steps.
 
 ## Creating an Environment Variable
 
-Each platform has a different process for setting environment variables. Some popular examples are listed below.
+Set `TELERIK_LICENSE` to your deployment key. Each platform has a different process for setting environment variables. The following examples cover popular CI/CD services.
 
 > Starting with the 2025 Q1 release, the name of the environment variable changes from `KENDO_UI_LICENSE` to `TELERIK_LICENSE` and the downloaded file changes from `kendo-ui-license.txt` to `telerik-license.txt`. This change is required as all Telerik UI and Kendo UI products now use the same licensing mechanism with a common license key. See the [Handling License Key File Name and Environment Variable Name Changes in the 2025 Q1 Release](slug:handling_license_file_name_changes) knowledge base article for more details.
 
 ### GitHub Actions
 
-1. Create a new [Repository Secret](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository) or an [Organization Secret](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-an-organization). Set the name of the secret to `KENDO_UI_LICENSE` and paste the contents of the license file as value.
+1. Create a new [Repository Secret](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository) or an [Organization Secret](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-an-organization). Set the secret name to `TELERIK_LICENSE` and paste the deployment key as its value.
 1. Add a build step to activate the license _after_ running `npm install` or `yarn`:
 
 ```yaml
@@ -50,9 +65,9 @@ steps:
 ### Vercel
 
 1. In [vercel.com](https://vercel.com/), click on your profile button in the top right corner, select dashboard, select your project, and go to settings.
-2. Go to the `Environment Variables` page and add the kendo license key. The variable name should be `TELERIK_LICENSE`.
+2. Go to the `Environment Variables` page and add the deployment key. The variable name should be `TELERIK_LICENSE`.
 
-![Vercel add kendo licnese key](assets/vercel-env-variable.png)
+![Vercel - add deployment key environment variable](assets/vercel-env-variable.png)
 
 3. Override the `Install Command` to include both the installation and license activation.
 
@@ -62,7 +77,7 @@ In the next deployment after completing these steps, the license will be activat
 
 ### Azure Pipelines (YAML)
 
-1. Create a new [User-defined Variable](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch) named `TELERIK_LICENSE`. Paste the content of the [downloaded license file](https://www.telerik.com/account/your-licenses/license-keys) as a value.
+1. Create a new [User-defined Variable](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch) named `TELERIK_LICENSE`. Paste the deployment key as its value.
 1. Add a build step to activate the license _after_ running `npm install` or `yarn`:
 
 Syntax for Windows build agents:
@@ -113,7 +128,7 @@ steps:
 
 ### Azure Pipelines (Classic)
 
-1. Create a new [User-defined Variable](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=classic%2Cbatch) named `TELERIK_LICENSE`. Paste the contents of the license key file as value.
+1. Create a new [User-defined Variable](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=classic%2Cbatch) named `TELERIK_LICENSE`. Paste the deployment key as its value.
 2. Add a new Bash task to the Agent job (before the npm build task)
 
 ![Azure Pipelines Classic - add Bash task](assets/azure-devops-classic-step-2.jpg)

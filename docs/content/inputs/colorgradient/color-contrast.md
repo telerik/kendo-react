@@ -21,7 +21,7 @@ To enable the functionality, set its [`backgroundColor`]({% slug api_inputs_colo
 
 The following example demonstrates how to display the Color Contrast tool in the ColorGradient.
 
-{% meta height:550 %}
+{% meta height:630 %}
 {% embed_file colorgradient/colorcontrast/func/app.tsx preview %}
 {% embed_file colorgradient/colorcontrast/func/main.tsx %}
 {% endmeta %}

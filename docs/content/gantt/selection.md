@@ -26,7 +26,7 @@ As a result, the Gantt allows you to:
 
 The `selectedField` option represents a field inside the data collection which determines the rows that will render as selected.
 
-{% meta height:580 %}
+{% meta height:1040 %}
 {% embed_file selection-basic/func/app.tsx preview %}
 {% embed_file selection-basic/func/main.tsx %}
 {% endmeta %}

@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: 'Discover the KendoReact Avatar and learn how to use the component in React projects.'
-components: ["avatar"]
+components: ['avatar']
 slug: overview_avatar
 position: 1
 ---
@@ -14,9 +14,10 @@ The Avatar component is typically used to display images, icons, or initials rep
 
 The following example demonstrates the Avatar in action.
 
-{% meta height:100 %}
+{% meta height:430 %}
 {% embed_file avatar/overview/func/app.tsx preview %}
 {% embed_file avatar/overview/func/main.tsx %}
+{% embed_file avatar/overview/func/styles.css %}
 {% endmeta %}
 
 > The Avatar is part of the [KendoReact Layout]({% slug overview_layout %}) component library. The procedures for installing, importing, and using all components in the library are identical. To learn how to use the Avatar and the rest of the components in the package, see the [Getting Started with the KendoReact Layout Package]({% slug getstarted_layout %}) guide.

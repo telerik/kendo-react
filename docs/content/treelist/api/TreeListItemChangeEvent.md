@@ -209,7 +209,7 @@ A React Synthetic Event.
 <code>
 
 
-[TreeList]({% slug api_treelist_treelist %})
+[TreeListHandle]({% slug api_treelist_treelisthandle %})
 
 
 </code>

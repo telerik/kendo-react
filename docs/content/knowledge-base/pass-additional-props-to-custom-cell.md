@@ -32,4 +32,4 @@ How can I pass additional props to a custom cell of the KendoReact Grid so that 
 
 ## Solution
 
-Use a function that will return the cell with the default and the custom props. For the full implementation of the suggested approach, refer to the [demo on customizing Grid cells]({% slug cells_grid %}#toc-cell-customization).
+Use a function that will return the cell with the default and the custom props. For the full implementation of the suggested approach, refer to the [demo on customizing Grid cells]({% slug cells_grid %}).

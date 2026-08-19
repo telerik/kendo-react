@@ -32,7 +32,7 @@ How can I dynamically add new columns to the grid?
 
 ## Solution
 
-This can be achieved with logic similar to the one in [`this demo`]({% slug editing_grid %}#toc-getting-started-with-the-kendoreact-data-grid-editing) of our documentation which showcases how to dynamically add new records (rows).
+This can be achieved with logic similar to the one in [`this demo`]({% slug editing_grid %}) of our documentation which showcases how to dynamically add new records (rows).
 
 The idea here is to have a button that opens up a Form, which when submitted updates the database that contains all records and adds a new element to all objects in the data. The columns should be rendered dynamically by mapping through the database, which will allow the Grid to visualize any changes made in the database.
 

@@ -8,7 +8,7 @@ tags: divider, dropdownbutton, items
 ticketid: 1662183
 res_type: kb
 category: knowledge-base
-components: ["dropdownbutton"]
+components: ['dropdownbutton']
 ---
 
 ## Environment
@@ -32,7 +32,7 @@ How can I add a divider between my items in the DropDownButton?
 
 ## Solution
 
-This can be achieved by creating a custom item with an `hr` element and passing it to the [`itemRender`]({% slug api_buttons_dropdownbutton %}#toc-itemRender) prop:
+This can be achieved by creating a custom item with an `hr` element and passing it to the [`itemRender`](slug:api_buttons_dropdownbuttonprops#itemRender) prop:
 
 {% meta height:460 %}
 {% embed_file dropdownbutton/dropdownbutton-divider/app.tsx preview %}

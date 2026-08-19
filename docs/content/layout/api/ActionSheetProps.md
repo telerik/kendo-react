@@ -236,6 +236,41 @@ Specifies the state of the ActionSheet.
 <td class="table-cell-name">
 
 
+#### id?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+string
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Sets the `id` attribute on the ActionSheet element.
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### items?
 
 

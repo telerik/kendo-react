@@ -34,9 +34,9 @@ How can I have paging, sorting and filtering functionality of a Grid with form e
 
 This can be achieved by building upon [`this demo`]({% slug external_editing_grid %}) of our documentation which showcases how to achieve a Grid with form editing features.
 
-By following the steps in the articles in our documentation regarding how to apply [`sorting`]({% slug sorting_grid %}#toc-getting-started-with-the-kendoreact-data-grid-sorting), [`filtering`]({% slug filtering_grid %}#toc-getting-started-with-the-kendoreact-data-grid-filtering) and [`paging`]({% slug paging_grid %}#toc-getting-started-with-the-kendoreact-data-grid-paging), those functionalities are then included to result in the following scenario shown in the demo below.
+By following the steps in the articles in our documentation regarding how to apply [`sorting`]({% slug sorting_grid %}), [`filtering`]({% slug filtering_grid %}) and [`paging`]({% slug paging_grid %}), those functionalities are then included to result in the following scenario shown in the demo below.
 
-{% meta height:650 %}
+{% meta height:700 %}
 {% embed_file grid/multiple-functionalities/app.tsx preview %}
 {% embed_file grid/multiple-functionalities/main.tsx %}
 {% embed_file grid/multiple-functionalities/editForm.tsx %}

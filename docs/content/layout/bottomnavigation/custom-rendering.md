@@ -14,7 +14,7 @@ To customize the appearance of the items, use the [`item`]({% slug api_layout_bo
 
 The following example demonstrates how to add additional components in the BottomNavigation items such as `FloatingActionButton`, `Icon`, and `Badge`:
 
-{% meta height:700 %}
+{% meta height:810 %}
 {% embed_file bottomnavigation/custom-rendering/func/app.tsx preview %}
 {% embed_file bottomnavigation/custom-rendering/func/main.tsx %}
 {% endmeta %}

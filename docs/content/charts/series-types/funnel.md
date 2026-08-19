@@ -27,7 +27,9 @@ The following example demonstrates the Funnel chart in action.
 
 You can influence the form of the funnel by setting the "neck ratio". The neck ratio is the ratio between the width of the base and the width of the funnel top. The default value of the neck ratio is `0.3`. This means that the width of the base is 30% of the width of the top. If you set the neck ratio to values that are larger than `1`, then the funnel will reverse and turn into a pyramid.
 
-{% meta height:600 %}
+The following example demonstrates how to adjust the Funnel chart shape by configuring the neck ratio between the base width and the top width.
+
+{% meta height:640 %}
 {% embed_file chart/funnel-ratio/func/app.tsx preview %}
 {% embed_file chart/funnel-ratio/func/main.tsx %}
 {% endmeta %}
@@ -35,6 +37,8 @@ You can influence the form of the funnel by setting the "neck ratio". The neck r
 ## Dynamic Slope and Height
 
 By default, the slope and height of the funnel segments is linear. You can change the rendering of the slope and height based on the value of the specific segment.
+
+The following example demonstrates how to render the Funnel chart with segment slope and height proportional to each item's value.
 
 {% meta height:600 %}
 {% embed_file chart/funnel-dynamic/func/app.tsx preview %}

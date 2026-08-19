@@ -12,6 +12,13 @@ The DateTimePicker provides a predefined set of appearance options.
 
 Apart from the default vision of the DateTimePicker, these alternative styling options enable you to configure each individual aspect of the appearance of a DateTimePicker.
 
+The following example demonstrates all the available appearance options of the DateTimePicker in a single, configurable demo.
+
+{% meta height:600 %}
+{% embed_file datetimepicker/appearance/overview/app.tsx preview %}
+{% embed_file datetimepicker/appearance/overview/main.tsx %}
+{% endmeta %}
+
 ## Size
 
 You can set the size of the DateTimePicker through the [`size`]({% slug api_dateinputs_datetimepickerprops %}#toc-size) property. The DateTimePicker component comes in three different sizes: `small`, `medium` (default), and `large`.
@@ -42,7 +49,6 @@ You can set the roundness of the DateTimePicker through the [`rounded`]({% slug 
 ## Suggested Links
 
 -   [API Reference of the datetimepicker]({% slug api_dateinputs_datetimepickerprops %})
--   [datetimepicker `shape` options]({% slug api_dateinputs_datetimepickerprops %}#toc-shape)
 -   [datetimepicker `rounded` options]({% slug api_dateinputs_datetimepickerprops %}#toc-rounded)
 -   [Creating Custom Styles]({% slug themebuilder %})
 -   [React Date Inputs](slug:overview_dateinputs)

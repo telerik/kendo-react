@@ -43,7 +43,7 @@ The inner elements implement the shortcuts for their component type. There are *
 
 The following example demonstrates the FlatColorPicker keyboard navigation.
 
-{% meta height:580 %}
+{% meta height:750 %}
 {% embed_file flatcolorpicker/basic/func/app.tsx preview %}
 {% embed_file flatcolorpicker/basic/func/main.tsx %}
 {% embed_file flatcolorpicker/basic/func/styles.css %}

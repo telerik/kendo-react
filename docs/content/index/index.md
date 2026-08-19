@@ -20,12 +20,12 @@ Explore a variety of KendoReact examples and demos, showcasing powerful React co
 ## Popular KendoReact Elements
 
 <TabStrip>
-    <TabStripTab title="Components" href="#explore-all-120-kendo-ui-for-react-components" linktext="See All Components">
+    <TabStripTab title="Components" href="#explore-all-120-kendoreact-components" linktext="See All Components">
         <SmallCardContainer>
-            <SmallCard title="Grid" href="slug:overview_grid" src="./images/popular/grid.svg" tag="updated" release_tag="Q2 2026"></SmallCard>
-            <SmallCard title="Charts" href="slug:overview_charts" src="./images/popular/charts.svg" tag="updated" release_tag="Q2 2026"></SmallCard>
+            <SmallCard title="Grid" href="slug:overview_grid" src="./images/popular/grid.svg" tag="updated" release_tag="Q3 2026"></SmallCard>
+            <SmallCard title="Charts" href="slug:overview_charts" src="./images/popular/charts.svg" tag="updated" release_tag="Q3 2026"></SmallCard>
             <SmallCard title="Form" href="slug:overview_form" src="./images/popular/form.svg"></SmallCard>
-            <SmallCard title="Scheduler" href="slug:overview_scheduler" src="./images/popular/scheduler.svg"></SmallCard>
+            <SmallCard title="Scheduler" href="slug:overview_scheduler" src="./images/popular/scheduler.svg" tag="updated" release_tag="Q3 2026"></SmallCard>
             <SmallCard title="AIPrompt" href="slug:overview_aiprompt" src="./images/popular/aiprompt.svg"></SmallCard>
             <SmallCard title="Editor" href="slug:overview_editor" src="./images/popular/editor.svg"></SmallCard>
             <SmallCard title="Spreadsheet" href="slug:overview_spreadsheet" src="./images/popular/spreadsheet.svg"></SmallCard>
@@ -35,15 +35,15 @@ Explore a variety of KendoReact examples and demos, showcasing powerful React co
     <TabStripTab title="AI Components & Features" href="slug:ai_components" linktext="See All AI Components & Features">
         <SmallCardContainer>
             <SmallCard type="ai" title="AI Chat"
-            href="slug://overview_chat" src="./images/ai/AI-Chat-Light.svg" subtitle="Chat Feature" tag="updated" release_tag="Q2 2026"></SmallCard>
+            href="slug://overview_chat" src="./images/ai/AI-Chat-Light.svg" subtitle="Chat Feature" ></SmallCard>
             <SmallCard type="ai" title="Semantic Search"
-            href="slug://smartbox_semantic_search_mode" src="./images/ai/SemanticSearch-Light.svg" subtitle="Smart Data Grid Feature"></SmallCard>
+            href="slug://smartbox_semantic_search_mode" src="./images/ai/SemanticSearch-Light.svg" subtitle="Smart Grid Feature"></SmallCard>
             <SmallCard type="ai" title="SmartPaste"
             href="slug://overview_smartpaste" src="./images/ai/SmartPaste-Light.svg" subtitle="UI Component"></SmallCard>
              <SmallCard type="ai" title="AI Data Operations"
-            href="slug://smart_grid_toolbar_assistant" src="./images/ai/AI-Data-Operations-Light.svg" subtitle="Smart Data Grid Feature"></SmallCard>
+            href="slug://smart_grid_toolbar_assistant" src="./images/ai/AI-Data-Operations-Light.svg" subtitle="Smart Grid Feature"></SmallCard>
             <SmallCard type="ai" title="AI Column Assistant"
-            href="slug://ai_custom_column" src="./images/ai/AI-Column-Assistant-Light.svg" subtitle="Smart Data Grid Feature"></SmallCard>
+            href="slug://ai_custom_column" src="./images/ai/AI-Column-Assistant-Light.svg" subtitle="Smart Grid Feature"></SmallCard>
             <SmallCard type="ai" title="PromptBox"
             href="slug://overview_promptbox" src="./images/ai/PromptBox-Light.svg" subtitle="UI Component"></SmallCard>
             <SmallCard type="ai" title="AI Chat Integration"
@@ -54,8 +54,8 @@ Explore a variety of KendoReact examples and demos, showcasing powerful React co
     </TabStripTab>
         <TabStripTab title="AI Tools" href="slug:ai_tools_overview" linkText="See All AI Tools">
         <DetailedCardContainer>
-            <DetailedCard title="Agentic UI Generator" href="slug://agentic_ui_generator_getting_started" src="./images/ai-tools/agentic-ui-generator.png" description="The Agentic UI Generator integrates specialized tools working together in an agentic flow to deliver beautiful, on-brand, and enterprise-ready UIs." backgroundcolor="#BFAEF8" release_tag="Q2 2026"></DetailedCard>
-            <DetailedCard title="WebMCP" href="slug://web_mcp_overview" src="./images/ai-tools/webmcp.png" description="The WebMCP Extension performs operations like data sorting, data filtering, navigation, value changes, and more through natural language user prompts." backgroundcolor="#BFAEF8" tag="new" release_tag="Q2 2026"></DetailedCard>
+            <DetailedCard title="Agentic UI Generator" href="slug://agentic_ui_generator_getting_started" src="./images/ai-tools/agentic-ui-generator.png" description="The Agentic UI Generator integrates specialized tools working together in an agentic flow to deliver beautiful, on-brand, and enterprise-ready UIs." backgroundcolor="#BFAEF8"></DetailedCard>
+            <DetailedCard title="WebMCP" href="slug://web_mcp_overview" src="./images/ai-tools/webmcp.png" description="The WebMCP Extension performs operations like data sorting, data filtering, navigation, value changes, and more through natural language user prompts." backgroundcolor="#BFAEF8" ></DetailedCard>
         </DetailedCardContainer>
     </TabStripTab>
     <TabStripTab title="Building Blocks" href="https://www.telerik.com/design-system/docs/ui-templates/overview/#building-blocks" linkText="See All Building Blocks">
@@ -95,7 +95,7 @@ Explore a variety of KendoReact examples and demos, showcasing powerful React co
             href="https://telerik.github.io/kendo-react/react-health-app/#/"
             src="./images/apps/react-health-app.png"
             description="A hospital management application featuring appointment scheduling, patient record management, and monitoring dashboards."
-            backgroundcolor="#E2C0FB" tag="new" release_tag="Q2 2026"></DetailedCard>
+            backgroundcolor="#E2C0FB" ></DetailedCard>
             <DetailedCard title="Ecommerce Jewellery Store"
             href="https://telerik.github.io/kendo-react/ecommerce-jewellery-store/"
             src="./images/apps/ecommerce-jewellery-store.png"
@@ -139,21 +139,21 @@ Explore a variety of KendoReact examples and demos, showcasing powerful React co
             <ComponentsLink tier="premium" href="slug://overview_qrcode_barcodes" title="QR Code"></ComponentsLink>
         </ComponentsLinkGroup>
         <ComponentsLinkGroup>
-            <ComponentsLink tier="mixed" href="slug://overview_buttons" title="Buttons" tag="updated" release_tag="Q2 2026"></ComponentsLink>
+            <ComponentsLink tier="mixed" href="slug://overview_buttons" title="Buttons" ></ComponentsLink>
             <ComponentsLink tier="free" href="slug://overview_button" title="Button"></ComponentsLink>
             <ComponentsLink tier="free" href="slug://overview_buttongroup" title="ButtonGroup"></ComponentsLink>
             <ComponentsLink tier="free" href="slug://overview_chip" title="Chip"></ComponentsLink>
             <ComponentsLink tier="free" href="slug://overview_chiplist" title="ChipList"></ComponentsLink>
             <ComponentsLink tier="premium" href="slug://overview_dropdownbutton" title="DropDownButton"></ComponentsLink>
             <ComponentsLink tier="free" href="slug://overview_floatingactionbutton" title="FloatingActionButton"></ComponentsLink>
-            <ComponentsLink tier="free" href="slug://overview_segmentedcontrol" title="SegmentedControl" tag="new" release_tag="Q2 2026"></ComponentsLink>
+            <ComponentsLink tier="free" href="slug://overview_segmentedcontrol" title="SegmentedControl" ></ComponentsLink>
             <ComponentsLink tier="premium" href="slug://overview_smartpaste" title="SmartPasteButton"></ComponentsLink>
             <ComponentsLink tier="premium" href="slug://overview_speechtotextbutton" title="SpeechToTextButton"></ComponentsLink>
             <ComponentsLink tier="premium" href="slug://overview_splitbutton" title="SplitButton"></ComponentsLink>
             <ComponentsLink tier="free" href="slug://overview_toolbar" title="Toolbar"></ComponentsLink>
         </ComponentsLinkGroup>
         <ComponentsLinkGroup>
-            <ComponentsLink tier="premium" href="slug://overview_charts" title="Charts" tag="updated" release_tag="Q2 2026"></ComponentsLink>
+            <ComponentsLink tier="premium" href="slug://overview_charts" title="Charts" tag="updated" release_tag="Q3 2026"></ComponentsLink>
             <ComponentsLink tier="premium" href="slug://overview_chart_charts" title="Chart"></ComponentsLink>
             <ComponentsLink tier="premium" href="slug://overview_sankey" title="Sankey"></ComponentsLink>
             <ComponentsLink tier="premium" href="slug://overview_sparkline_charts" title="Sparkline"></ComponentsLink>
@@ -163,6 +163,7 @@ Explore a variety of KendoReact examples and demos, showcasing powerful React co
             <ComponentsLink tier="premium" href="slug://boxplot_seriestypes_charts" title="Box Plot"></ComponentsLink>
             <ComponentsLink tier="premium" href="slug://bubble_seriestypes_charts" title="Bubble"></ComponentsLink>
             <ComponentsLink tier="premium" href="slug://bullet_seriestypes_charts" title="Bullet"></ComponentsLink>
+            <ComponentsLink tier="premium" href="slug://combination_seriestypes_charts" title="Combination" tag="new" release_tag="Q3 2026"></ComponentsLink>
             <ComponentsLink tier="premium" href="slug://donut_seriestypes_charts" title="Donut"></ComponentsLink>
             <ComponentsLink tier="premium" href="slug://drilldown_charts" title="Drilldown"></ComponentsLink>
             <ComponentsLink tier="premium" href="slug://funnel_seriestypes_charts" title="Funnel"></ComponentsLink>
@@ -184,14 +185,15 @@ Explore a variety of KendoReact examples and demos, showcasing powerful React co
             <ComponentsLink tier="premium" href="slug://overview_dataquery" title="Data Query"></ComponentsLink>
         </ComponentsLinkGroup>
         <ComponentsLinkGroup>
-            <ComponentsLink tier="premium" href="slug://overview_convui" title="Conversational UI" tag="updated" release_tag="Q2 2026"></ComponentsLink>
+            <ComponentsLink tier="mixed" href="slug://overview_convui" title="Conversational UI" tag="updated" release_tag="Q3 2026"></ComponentsLink>
             <ComponentsLink tier="premium" href="slug://overview_aiprompt" title="AIPrompt"></ComponentsLink>
-            <ComponentsLink tier="premium" href="slug://overview_chat" title="Chat" tag="updated" release_tag="Q2 2026"></ComponentsLink>
+            <ComponentsLink tier="premium" href="slug://overview_chat" title="Chat" ></ComponentsLink>
             <ComponentsLink tier="premium" href="slug://overview_inlineaiprompt" title="InlineAIPrompt"></ComponentsLink>
-            <ComponentsLink tier="premium" href="slug://overview_promptbox" title="PromptBox" tag="new" release_tag="Q2 2026"></ComponentsLink>
+            <ComponentsLink tier="premium" href="slug://overview_promptbox" title="PromptBox" ></ComponentsLink>
+            <ComponentsLink tier="free" href="slug://overview_llmkit" title="LLM Kit" tag="new" release_tag="Q3 2026"></ComponentsLink>
         </ComponentsLinkGroup>
         <ComponentsLinkGroup>
-            <ComponentsLink tier="mixed" href="slug://overview_grid" title="Data Grid" tag="updated" release_tag="Q2 2026"></ComponentsLink>
+            <ComponentsLink tier="mixed" href="slug://overview_grid" title="Data Grid" tag="updated" release_tag="Q3 2026"></ComponentsLink>
         </ComponentsLinkGroup>
         <ComponentsLinkGroup>
             <ComponentsLink tier="mixed" href="slug://overview_datatools" title="Data Tools"></ComponentsLink>
@@ -224,13 +226,13 @@ Explore a variety of KendoReact examples and demos, showcasing powerful React co
             <ComponentsLink tier="premium" href="slug://overview_drawing" title="Drawing"></ComponentsLink>
         </ComponentsLinkGroup>
         <ComponentsLinkGroup>
-            <ComponentsLink tier="mixed" href="slug://overview_dropdowns" title="Dropdowns"></ComponentsLink>
+            <ComponentsLink tier="mixed" href="slug://overview_dropdowns" title="Dropdowns" tag="updated" release_tag="Q3 2026"></ComponentsLink>
             <ComponentsLink tier="mixed" href="slug://overview_autocomplete" title="AutoComplete"></ComponentsLink>
             <ComponentsLink tier="premium" href="slug://overview_combobox" title="ComboBox"></ComponentsLink>
             <ComponentsLink tier="mixed" href="slug://overview_dropdownlist" title="DropDownList"></ComponentsLink>
             <ComponentsLink tier="premium" href="slug://overview_dropdowntree" title="DropDownTree"></ComponentsLink>
             <ComponentsLink tier="premium" href="slug://overview_multicolumncombobox" title="MultiColumnComboBox"></ComponentsLink>
-            <ComponentsLink tier="mixed" href="slug://overview_multiselect" title="MultiSelect"></ComponentsLink>
+            <ComponentsLink tier="mixed" href="slug://overview_multiselect" title="MultiSelect" tag="updated" release_tag="Q3 2026"></ComponentsLink>
             <ComponentsLink tier="premium" href="slug://overview_multiselecttree" title="MultiSelectTree"></ComponentsLink>
         </ComponentsLinkGroup>
         <ComponentsLinkGroup>
@@ -247,8 +249,7 @@ Explore a variety of KendoReact examples and demos, showcasing powerful React co
         </ComponentsLinkGroup>
         <ComponentsLinkGroup>
             <ComponentsLink tier="premium" href="slug://overview_gantt" title="Gantt"></ComponentsLink>
-        </ComponentsLinkGroup>
-        <ComponentsLinkGroup>
+        </ComponentsLinkGroup>        <ComponentsLinkGroup>
             <ComponentsLink tier="premium" href="slug://overview_gauges" title="Gauges"></ComponentsLink>
             <ComponentsLink tier="premium" href="slug://overview_arcgauge_gauges" title="ArcGauge"></ComponentsLink>
             <ComponentsLink tier="premium" href="slug://overview_lineargauge_gauges" title="LinearGauge"></ComponentsLink>
@@ -256,9 +257,9 @@ Explore a variety of KendoReact examples and demos, showcasing powerful React co
             <ComponentsLink tier="premium" href="slug://overview_circulargauge_gauges" title="CircularGauge"></ComponentsLink>
         </ComponentsLinkGroup>
         <ComponentsLinkGroup>
-            <ComponentsLink tier="free" href="slug://overview_icon" title="Icons" tag="updated" release_tag="Q2 2026"></ComponentsLink>
-            <ComponentsLink tier="free" href="slug://overview_icon" title="Icon" tag="updated" release_tag="Q2 2026"></ComponentsLink>
-            <ComponentsLink tier="free" href="slug://overview_svgicon" title="SVGIcon" tag="updated" release_tag="Q2 2026"></ComponentsLink>
+            <ComponentsLink tier="free" href="slug://overview_icon" title="Icons" ></ComponentsLink>
+            <ComponentsLink tier="free" href="slug://overview_icon" title="Icon" ></ComponentsLink>
+            <ComponentsLink tier="free" href="slug://overview_svgicon" title="SVGIcon" ></ComponentsLink>
         </ComponentsLinkGroup>
         <ComponentsLinkGroup>
             <ComponentsLink tier="free" href="slug://overview_indicators" title="Indicators"></ComponentsLink>
@@ -267,7 +268,7 @@ Explore a variety of KendoReact examples and demos, showcasing powerful React co
             <ComponentsLink tier="free" href="slug://overview_skeleton" title="Skeleton"></ComponentsLink>
         </ComponentsLinkGroup>
         <ComponentsLinkGroup>
-            <ComponentsLink tier="mixed" href="slug://overview_inputs" title="Inputs"></ComponentsLink>
+            <ComponentsLink tier="mixed" href="slug://overview_inputs" title="Inputs" tag="updated" release_tag="Q3 2026"></ComponentsLink>
             <ComponentsLink tier="free" href="slug://overview_checkbox" title="Checkbox"></ComponentsLink>
             <ComponentsLink tier="premium" href="slug://overview_colorpicker" title="ColorPicker"></ComponentsLink>
             <ComponentsLink tier="premium" href="slug://overview_colorgradient" title="ColorGradient"></ComponentsLink>
@@ -276,6 +277,7 @@ Explore a variety of KendoReact examples and demos, showcasing powerful React co
             <ComponentsLink tier="free" href="slug://overview_input" title="Input"></ComponentsLink>
             <ComponentsLink tier="free" href="slug://overview_maskedtextbox" title="MaskedTextBox"></ComponentsLink>
             <ComponentsLink tier="free" href="slug://overview_numerictextbox" title="NumericTextBox"></ComponentsLink>
+            <ComponentsLink tier="free" href="slug://overview_otpinput" title="OTPInput" tag="new" release_tag="Q3 2026"></ComponentsLink>
             <ComponentsLink tier="free" href="slug://overview_radiobutton" title="RadioButton"></ComponentsLink>
             <ComponentsLink tier="free" href="slug://overview_radiogroup" title="RadioGroup"></ComponentsLink>
             <ComponentsLink tier="premium" href="slug://overview_rangeslider" title="RangeSlider"></ComponentsLink>
@@ -350,7 +352,7 @@ Explore a variety of KendoReact examples and demos, showcasing powerful React co
             <ComponentsLink tier="premium" href="slug://overview_ripple" title="Ripple"></ComponentsLink>
         </ComponentsLinkGroup>
         <ComponentsLinkGroup>
-            <ComponentsLink tier="premium" href="slug://overview_scheduler" title="Scheduler"></ComponentsLink>
+            <ComponentsLink tier="premium" href="slug://overview_scheduler" title="Scheduler" tag="updated" release_tag="Q3 2026"></ComponentsLink>
         </ComponentsLinkGroup>
         <ComponentsLinkGroup>
             <ComponentsLink tier="premium" href="slug://overview_scrollview" title="ScrollView"></ComponentsLink>
@@ -485,7 +487,7 @@ Explore a variety of KendoReact examples and demos, showcasing powerful React co
     </MoreResourcesWrapper>
     <MoreResourcesWrapper type="links">
        <MoreResourcesSection title="Project Setup" type="links">
-            <MoreResourcesLink href="slug://requirements_installation" iscategory="true" tag="updated" release_tag="Q2 2026" title="System Requirements"></MoreResourcesLink>
+            <MoreResourcesLink href="slug://requirements_installation" iscategory="true" title="System Requirements"></MoreResourcesLink>
             <MoreResourcesLink href="slug://development_builds_installation" iscategory="true" title="Obtaining Development Builds"></MoreResourcesLink>
                 <MoreResourcesLink href="slug://getting_started" iscategory="true" title="Using with Next.js"></MoreResourcesLink>
                 <MoreResourcesLink href="slug://getting_started" iscategory="true" title="Using with Astro"></MoreResourcesLink>
@@ -498,9 +500,9 @@ Explore a variety of KendoReact examples and demos, showcasing powerful React co
             <MoreResourcesLink title="Assisted Migration Tooling" href="slug://assisted_migration" iscategory="true"></MoreResourcesLink>
         </MoreResourcesSection>
          <MoreResourcesSection title="Common Features" type="links">
-            <MoreResourcesLink href="slug://web_mcp_overview" tag="new" release_tag="Q2 2026" iscategory="true" title="WebMCP Browser Extension"></MoreResourcesLink>
-            <MoreResourcesLink href="slug://agentic_ui_generator_getting_started" iscategory="true" title="Agentic UI Generator"></MoreResourcesLink>
-            <MoreResourcesLink tier="premium" href="slug://ai_components" tag="updated" release_tag="Q2 2026" iscategory="true" title="AI Components & Features"></MoreResourcesLink>
+            <MoreResourcesLink href="slug://web_mcp_overview"  iscategory="true" title="WebMCP Browser Extension"></MoreResourcesLink>
+            <MoreResourcesLink href="slug://agentic_ui_generator_getting_started" iscategory="true" title="Agentic UI Generator" tag="updated" release_tag="Q3 2026"></MoreResourcesLink>
+            <MoreResourcesLink tier="premium" href="slug://ai_components" iscategory="true" title="AI Components & Features"></MoreResourcesLink>
             <MoreResourcesLink href="slug://overview_accessibilty" iscategory="true" title="Accessibility"></MoreResourcesLink>
             <MoreResourcesLink href="slug://overview_globalization" iscategory="true" title="Globalization"></MoreResourcesLink>
             <MoreResourcesLink href="slug://overview_intl" title="Internationalization"></MoreResourcesLink>

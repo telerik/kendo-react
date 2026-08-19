@@ -1,7 +1,7 @@
 ---
 title: Programmatic Export
 description: 'Learn how to programmatically export CSV data using the Grid ref methods saveAsCsv and getCsvBlob.'
-components: ['datagrid']
+components: ['grid']
 slug: programmaticexport_csvexport_grid
 position: 30
 subject: CSV Export feature of the Grid
@@ -10,7 +10,7 @@ tier: free
 
 # Programmatic CSV Export
 
-The KendoKendoReact Data Grid provides programmatic methods via the Grid ref to export CSV data without using the built-in `GridCsvExportButton` component. This enables custom export workflows such as uploading to a server or previewing the data before download.
+The KendoReact Grid provides programmatic methods via the Grid ref to export CSV data without using the built-in `GridCsvExportButton` component. This enables custom export workflows such as uploading to a server or previewing the data before download.
 
 <CtaPanelOverview></CtaPanelOverview>
 

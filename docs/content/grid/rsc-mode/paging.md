@@ -1,8 +1,8 @@
 ---
 title: Paging
-page_title: 'Paging in React Data Grid RSC Mode'
-description: 'Implement efficient paging in the RSC mode of KendoReact Data Grid to manage large datasets seamlessly and optimize performance.'
-components: ["datagrid"]
+page_title: 'Paging in React Grid RSC Mode'
+description: 'Implement efficient paging in the RSC mode of KendoReact Grid to manage large datasets seamlessly and optimize performance.'
+components: ['grid']
 subject: RSC Mode of the Grid
 slug: paging_rsc_grid
 position: 70
@@ -37,7 +37,7 @@ Here is an example of handling paging changes on the server to maintain consiste
 
 ## Suggested Links
 
--   [KendoKendoReact Data Grid Paging Documentation](slug:paging_grid)
--   [KendoKendoReact Data Grid RSC Mode Server Actions](slug:server_actions_rsc_grid)
--   [КendoReact Data Grid RSC Mode Overview](slug:overview_rsc_grid)
--   [Getting Started with КendoReact Data Grid RSC Mode](slug:getstarted_rsc_grid)
+-   [KendoReact Grid Paging Documentation](slug:paging_grid)
+-   [KendoReact Grid RSC Mode Server Actions](slug:server_actions_rsc_grid)
+-   [КendoReact Grid RSC Mode Overview](slug:overview_rsc_grid)
+-   [Getting Started with КendoReact Grid RSC Mode](slug:getstarted_rsc_grid)

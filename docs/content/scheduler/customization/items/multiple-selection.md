@@ -24,7 +24,7 @@ The following example demonstrates the `multiple` selection and editing of the K
 | `CTRL` (`COMMAND` on MacOS) + `DRAG`   | Drag all selected items                  |
 | `CTRL` (`COMMAND` on MacOS) + `RESIZE` | Resize all selected items                |
 
-{% meta height:700 %}
+{% meta height:780 %}
 {% embed_file items/multiple-selection/default-behavior/func/app.jsx preview %}
 {% embed_file items/multiple-selection/default-behavior/func/main.jsx %}
 {% endmeta %}
@@ -35,7 +35,7 @@ While the `SchedulerEditItem` aims to provide an intuitive default behavior, the
 
 The following example demonstrates how to change the default `multiple` toggle key from `CTRL` to `SHIFT`.
 
-{% meta height:700 %}
+{% meta height:780 %}
 {% embed_file items/multiple-selection/custom-trigger/func/app.jsx preview %}
 {% embed_file items/multiple-selection/custom-trigger/func/main.jsx %}
 {% embed_file items/multiple-selection/custom-trigger/func/custom-item.jsx %}
@@ -100,7 +100,7 @@ The following example demonstrates a custom behavior of the `multiple-selection`
 | `TAB`           | `focus` the `next` item, without selecting it |
 | `TAB` + `SHIFT` | `focus` the `prev` item, without selecting it |
 
-{% meta height:700 %}
+{% meta height:780 %}
 {% embed_file items/multiple-selection/custom-behavior/func/app.jsx preview %}
 {% embed_file items/multiple-selection/custom-behavior/func/main.jsx %}
 {% embed_file items/multiple-selection/custom-behavior/func/custom-item.jsx %}

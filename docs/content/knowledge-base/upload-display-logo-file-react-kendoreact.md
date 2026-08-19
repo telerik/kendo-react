@@ -34,6 +34,8 @@ To upload a logo file and display it in the UI using React, follow these steps:
 
 ## Solution
 
+The following code snippet demonstrates how to implement the above steps:
+
 ```jsx
 import * as React from 'react';
 import { Upload } from '@progress/kendo-react-upload';

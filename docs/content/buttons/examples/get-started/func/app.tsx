@@ -7,6 +7,10 @@ const ButtonContainer = () => {
         console.log('click');
         alert('KendoReact Button was clicked.');
     };
-    return <Button onClick={handleButtonClick}>My Button</Button>;
+    return (
+        <div className="example-wrapper-center">
+            <Button onClick={handleButtonClick}>My Button</Button>
+        </div>
+    );
 };
 export default ButtonContainer;

@@ -20,7 +20,7 @@ To bind the Calendar to dates which are serialized as strings, handle the parsin
 
 The following example demonstrates how to set the value of the Calendar.
 
-{% meta height:580 %}
+{% meta height:620 %}
 {% embed_file calendar/json/func/app.tsx preview %}
 {% embed_file calendar/json/func/main.tsx %}
 {% endmeta %}

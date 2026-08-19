@@ -10,6 +10,7 @@ position: 0
 
 The following list provides the KendoReact releases which introduce breaking changes in the implementation of the available components:
 
+-   [16.0.0](slug:breaking-changes-in-16-0-0)
 -   [15.0.0](slug:breaking-changes-in-15-0-0)
 -   [14.0.0](slug:breaking-changes-in-14-0-0)
 -   [13.0.0](slug:breaking-changes-in-13-0-0)

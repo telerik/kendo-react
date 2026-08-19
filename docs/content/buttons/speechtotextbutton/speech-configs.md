@@ -45,7 +45,7 @@ The [`continuous`](slug://api_buttons_speechtotextbuttonprops#continuous) proper
 
 With [`interimResults`](slug://api_buttons_speechtotextbuttonprops#interimResults) set to `true`, the component will return partial results as they become available while the user is speaking. This provides real-time feedback to users as they speak.
 
-{% meta height:550 %}
+{% meta height:700 %}
 {% embed_file speechtotextbutton/interim-results/app.tsx preview %}
 {% embed_file speechtotextbutton/interim-results/main.tsx %}
 {% embed_file speechtotextbutton/interim-results/styles.css %}
@@ -55,7 +55,7 @@ With [`interimResults`](slug://api_buttons_speechtotextbuttonprops#interimResult
 
 The SpeechToTextButton component can provide alternative interpretations of the spoken text by configuring the [`maxAlternatives`](slug://api_buttons_speechtotextbuttonprops#maxAlternatives) property. This is useful for ambiguous speech or words with similar pronunciations.
 
-{% meta height:700 %}
+{% meta height:850 %}
 {% embed_file speechtotextbutton/multiple-alternatives/app.tsx preview %}
 {% embed_file speechtotextbutton/multiple-alternatives/main.tsx %}
 {% embed_file speechtotextbutton/multiple-alternatives/styles.css %}

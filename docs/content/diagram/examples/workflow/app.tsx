@@ -15,7 +15,7 @@ const connectionDefaults: ConnectionDefaults = {
         type: MarkerType.ArrowEnd,
         path: 'M 0 0 L 8 7 L 0 14',
         anchor: { x: 8, y: 7 },
-        fill: undefined,
+        fill: null,
         stroke: { color: '#4E4E4E', lineCap: 'round', lineJoin: 'round', width: 2 }
     },
     stroke: { color: '#4E4E4E', width: 2 },

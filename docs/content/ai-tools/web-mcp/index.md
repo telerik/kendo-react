@@ -73,6 +73,8 @@ All KendoReact components that support WebMCP follow the same configuration patt
 
 ### Installation
 
+To install the WebMCP package, run the following command in the root folder of your React project:
+
 ```bash
 npm i @progress/kendo-react-webmcp
 ```

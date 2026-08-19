@@ -8,11 +8,11 @@ position: 3
 
 # Multi-Column Headers
 
-The KendoReact Gantt supports multi-column headers.
+The KendoReact Gantt supports multi-column headers, allowing you to group related columns under a shared parent header for better visual organization.
 
 To implement multi-column headers, define an array of columns as children of the particular column.
 
-{% meta height:580 %}
+{% meta height:680 %}
 {% embed_file multi-column-headers/func/app.tsx preview %}
 {% embed_file multi-column-headers/func/main.tsx %}
 {% endmeta %}

@@ -42,22 +42,13 @@ position: 1
         <a href="{% slug api_grid_gridcolspanprops %}">GridColSpanProps</a>
     </li>
     <li class="api-item">
-        <a href="{% slug api_grid_gridcolumn %}">GridColumn</a>
-    </li>
-    <li class="api-item">
         <a href="{% slug api_grid_gridcolumncellssettings %}">GridColumnCellsSettings</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_grid_gridcolumnmenucolumnschooser %}">GridColumnMenuColumnsChooser</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_grid_gridcolumnmenucolumnslist %}">GridColumnMenuColumnsList</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_grid_grideditdialogprops %}">GridEditDialogProps</a>
     </li>
     <li class="api-item">
-        <a href="{% slug api_grid_gridnorecords %}">GridNoRecords</a>
+        <a href="{% slug api_grid_gridgroupcolumnfn %}">GridGroupColumnFn</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_grid_gridrowreordersettings %}">GridRowReorderSettings</a>
@@ -72,31 +63,7 @@ position: 1
         <a href="{% slug api_grid_gridsortsettings %}">GridSortSettings</a>
     </li>
     <li class="api-item">
-        <a href="{% slug api_grid_gridtoolbar %}">GridToolbar</a>
-    </li>
-    <li class="api-item">
         <a href="{% slug api_grid_gridtoolbaraiassistantrequestdata %}">GridToolbarAIAssistantRequestData</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_grid_gridtoolbarcheckboxfilter %}">GridToolbarCheckboxFilter</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_grid_gridtoolbarcolumnschooser %}">GridToolbarColumnsChooser</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_grid_gridtoolbarfilter %}">GridToolbarFilter</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_grid_gridtoolbargroup %}">GridToolbarGroup</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_grid_gridtoolbarseparator %}">GridToolbarSeparator</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_grid_gridtoolbarsort %}">GridToolbarSort</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_grid_gridtoolbarspacer %}">GridToolbarSpacer</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_grid_gridwebmcptoolscallback %}">GridWebMcpToolsCallback</a>
@@ -106,9 +73,6 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_grid_serverevent %}">ServerEvent</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_grid_statusbar %}">StatusBar</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_grid_statusdataargs %}">StatusDataArgs</a>
@@ -357,6 +321,9 @@ position: 1
         <a href="{% slug api_grid_gridgroupchangeevent %}">GridGroupChangeEvent</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_grid_gridgroupcolumnsettings %}">GridGroupColumnSettings</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_grid_gridgroupexpandablesettings %}">GridGroupExpandableSettings</a>
     </li>
     <li class="api-item">
@@ -418,6 +385,9 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_grid_gridrowssettings %}">GridRowsSettings</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_grid_gridscrollablesettings %}">GridScrollableSettings</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_grid_gridsearchboxchangeevent %}">GridSearchBoxChangeEvent</a>
@@ -721,6 +691,9 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_grid_griddatatype %}">GridDataType</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_grid_gridgroupingmode %}">GridGroupingMode</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_grid_gridpagertype %}">GridPagerType</a>

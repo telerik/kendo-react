@@ -22,7 +22,7 @@ position: 110
 
 ## Resources
 
-[ARIA Authoring Practices: Data Grid](https://www.w3.org/WAI/ARIA/apg/patterns/grid/examples/dataGrids/)
+[ARIA Authoring Practices: Grid](https://www.w3.org/WAI/ARIA/apg/patterns/grid/examples/dataGrids/)
 
 
 

@@ -262,7 +262,7 @@ string
 <td class="table-cell-comment">
 
 
-The unique identifier of the group (batch) with one or more files.
+The unique identifier of the file.
 Has to be set for the initial list of files.
 
 

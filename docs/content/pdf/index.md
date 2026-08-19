@@ -17,7 +17,7 @@ The PDF Generator is built from the ground up and specifically for React so that
 
 The following example demonstrates the KendoReact PDF Generator component in action.
 
-{% meta height:960 %}
+{% meta height:1010 %}
 {% embed_file overview/func/app.tsx preview %}
 {% embed_file overview/func/main.tsx %}
 {% embed_file overview/func/power-distribution-data.json %}

@@ -69,9 +69,6 @@ position: 1
         <a href="{% slug api_dateinputs_calendar %}">Calendar</a>
     </li>
     <li class="api-item">
-        <a href="{% slug api_dateinputs_calendar %}">Calendar</a>
-    </li>
-    <li class="api-item">
         <a href="{% slug api_dateinputs_calendarcell %}">CalendarCell</a>
     </li>
     <li class="api-item">
@@ -115,9 +112,6 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_dateinputs_datetimepickerpropscontext %}">DateTimePickerPropsContext</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_dateinputs_multiviewcalendar %}">MultiViewCalendar</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_dateinputs_multiviewcalendar %}">MultiViewCalendar</a>
@@ -298,27 +292,6 @@ position: 1
   <ul class="api-item-list">
     <li class="api-item">
         <a href="{% slug api_dateinputs_calendarviewenum %}">CalendarViewEnum</a>
-    </li>
-  </ul>
-</div>
-<div class="api-index-section">
-
-
-<span class="section-key">
-
-
-## Class
-
-
-</span>
-
-
-  <ul class="api-item-list">
-    <li class="api-item">
-        <a href="{% slug api_dateinputs_dateinput %}">DateInput</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_dateinputs_datepicker %}">DatePicker</a>
     </li>
   </ul>
 </div>

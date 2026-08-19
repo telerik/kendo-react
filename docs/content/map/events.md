@@ -12,7 +12,7 @@ The Map emits a number of events which enable you to control its behavior upon u
 
 The following example demonstrates [all events]({% slug api_map_mapprops %}#toc-onbeforereset) the Map features.
 
-{% meta height:660 %}
+{% meta height:780 %}
 {% embed_file events/func/app.tsx preview %}
 {% embed_file events/func/main.tsx %}
 {% endmeta %}

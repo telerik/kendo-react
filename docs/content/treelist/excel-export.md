@@ -36,7 +36,7 @@ To enable the Excel export:
 
 The following example demonstrates the basic implementation of the Excel export functionality of the TreeList.
 
-{% meta height:590 %}
+{% meta height:690 %}
 {% embed_file excel/basic/func/app.tsx preview %}
 {% embed_file excel/basic/func/main.tsx %}
 {% endmeta %}
@@ -54,7 +54,7 @@ The ExcelExport enables you to:
 
 To export specific data, pass the data to the [`save`]({% slug api_excel-export_excelexport %}#toc-save) function of the ExcelExport component. For example, if the TreeList has its paging enabled but you need to export only the current page, pass the paged data to the `save` function.
 
-{% meta height:570 %}
+{% meta height:750 %}
 {% embed_file excel/single-page/func/app.tsx preview %}
 {% embed_file excel/single-page/func/main.tsx %}
 {% endmeta %}
@@ -64,7 +64,7 @@ To export specific data, pass the data to the [`save`]({% slug api_excel-export_
 When exporting the excel file we provide an option to customize the generated workbook. This can be used to modify the values, the appearance or the sheets in the document.
 The following example demonstrates how to add a different background color on the alt rows.
 
-{% meta height:590 %}
+{% meta height:690 %}
 {% embed_file excel/customization/func/app.tsx preview %}
 {% embed_file excel/customization/func/main.tsx %}
 {% endmeta %}

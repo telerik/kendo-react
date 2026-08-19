@@ -101,6 +101,44 @@ For example these elements could contain error or hint message.
 <td class="table-cell-name">
 
 
+#### ariaLabel?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+string
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Sets the accessible label text of the component.
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### ariaLabelledBy?
 
 

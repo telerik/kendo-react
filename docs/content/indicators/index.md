@@ -11,9 +11,10 @@ The KendoReact Indicators package delivers components for creating a visual indi
 
 <CtaPanelOverview></CtaPanelOverview>
 
-{% meta height:310 %}
+{% meta height:850 %}
 {% embed_file overview/func/app.tsx preview %}
 {% embed_file overview/func/main.tsx %}
+{% embed_file overview/func/styles.css %}
 {% endmeta %}
 
 ## What are the KendoReact Indicators?

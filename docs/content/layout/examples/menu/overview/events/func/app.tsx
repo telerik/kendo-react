@@ -1,39 +1,24 @@
 import * as React from 'react';
 
 import { Menu, MenuItem, MenuSelectEvent } from '@progress/kendo-react-layout';
+import { EventLog } from '@docs-shared/EventLog';
 
 const App = () => {
-    const [logs, setLogs] = React.useState<Array<any>>([]);
-
-    const renderLogs = () => {
-        return logs.map((log, index) => {
-            return <li key={index}>{log}</li>;
-        });
-    }
+    const [events, setEvents] = React.useState<string[]>([]);
 
     const handleSelect = (e: MenuSelectEvent) => {
-        const newLogs = logs.slice();
-        newLogs.unshift(`id: ${e.itemId} text: ${e.item.text}`);
+        setEvents((prev) => [`id: ${e.itemId} text: ${e.item.text}`, ...prev]);
+    };
 
-        setLogs(newLogs);
-    }
     return (
-    <div className="row">
-      <div className="col-md-6">
-        <Menu onSelect={handleSelect}>
-          <MenuItem text="First item">
-            <MenuItem text="Child item" />
-          </MenuItem>
-          <MenuItem text="Second item" />
-        </Menu>
-      </div>
-      <div className="example-config col-md-6" style={{ height: '180px' }}>
-        <h5>Log: </h5>
-        <ul className="event-log">
-          {renderLogs()}
-        </ul>
-      </div>
-    </div>
+        <EventLog events={events} onClear={() => setEvents([])}>
+            <Menu onSelect={handleSelect}>
+                <MenuItem text="First item">
+                    <MenuItem text="Child item" />
+                </MenuItem>
+                <MenuItem text="Second item" />
+            </Menu>
+        </EventLog>
     );
-}
+};
 export default App;

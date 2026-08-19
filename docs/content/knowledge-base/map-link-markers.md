@@ -39,7 +39,7 @@ How can I draw a straight line between a marker and a location?
 
 The following example demonstrates how to draw a straight line between a marker and a location.
 
-{% meta height:700 %}
+{% meta height:780 %}
 {% embed_file map/link-markers/app.tsx preview %}
 {% embed_file map/link-markers/main.tsx %}
 {% endmeta %}

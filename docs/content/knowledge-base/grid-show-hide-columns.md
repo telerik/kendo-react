@@ -34,7 +34,7 @@ How can I dynamically show or hide the columns in the grid?
 
 In order to achieve this, the Columns of the Grid should be rendered dynamically and the data for the Columns should be kept in the state, so that the changes in the Grid can be visualized. In the example below, each Column has a show property which determines whether that Column is shown. There are checkboxes above the Grid whose onChange event handlers cause the state change and thus cause the re-rendering of the Grid with the corresponding columns missing/added.
 
-{% meta height:650 %}
+{% meta height:770 %}
 {% embed_file grid/show-hide-columns/app.tsx preview %}
 {% embed_file grid/show-hide-columns/main.tsx %}
 {% endmeta %}

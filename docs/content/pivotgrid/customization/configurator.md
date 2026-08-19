@@ -26,7 +26,7 @@ Additionally, the user can replace more-specific elements which are deeply neste
 - The [`AxisEditor`]({% slug api_pivotgrid_pivotgridaxiseditorprops %}) allows further customization of:
     - [`chip`]({% slug api_pivotgrid_pivotgridaxiseditorprops %}#toc-chip)
     - [`dropClue`]({% slug api_pivotgrid_pivotgridaxiseditorprops %}#toc-dropclue)
-    - [`columMenuTextColumn`]({% slug api_pivotgrid_pivotgridaxiseditorprops %}#toc-colummenutextcolumn)
+    - [`columnMenuTextColumn`](slug:api_pivotgrid_pivotgridaxiseditorprops#columnMenuTextColumn)
     - [`filterFieldsEditor`]({% slug api_pivotgrid_pivotgridaxiseditorprops %}#toc-filterfieldseditor)&mdash; The [`AxisFilterFieldsEditor`]({% slug api_pivotgrid_pivotgridaxisfilterfieldseditorprops %}) further allows customization of:
         - [`resetButton`]({% slug api_pivotgrid_pivotgridaxisfilterfieldseditorprops %}#toc-resetbutton)
         - [`applyButton`]({% slug api_pivotgrid_pivotgridaxisfilterfieldseditorprops %}#toc-applybutton)
@@ -59,7 +59,7 @@ const CustomLabel = React.forwardRef((props, ref) => {
       <Label
         ref={ref}
         {...props}
-        style={{ color: '#3f51b5' }} 
+        style={{ color: '#3f51b5' }}
       >
         {props.children}{":"}
       </Label>
@@ -68,7 +68,7 @@ const CustomLabel = React.forwardRef((props, ref) => {
 
 const CustomEditor = React.forwardRef((props, ref) => {
     return (
-        <PivotGridEditor 
+        <PivotGridEditor
             ref={ref}
             {...props}
             fieldsLabel={CustomLabel}

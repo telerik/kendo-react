@@ -1,9 +1,9 @@
 ---
-title: Exporting PDF from KendoReact Data Grid and Opening in a New Tab
-description: Learn how to export a PDF from KendoReact Data Grid and open it in a new tab without downloading.
+title: Exporting PDF from KendoReact Grid and Opening in a New Tab
+description: Learn how to export a PDF from KendoReact Grid and open it in a new tab without downloading.
 type: how-to
-page_title: How to Export PDF from KendoReact Data Grid and Open in a New Tab
-meta_title: Export PDF from KendoReact Data Grid and Open in New Tab
+page_title: How to Export PDF from KendoReact Grid and Open in a New Tab
+meta_title: Export PDF from KendoReact Grid and Open in New Tab
 slug: pdf-export-in-new-tab
 tags: kendoreact, data grid, pdf processing, export, pdf
 res_type: kb
@@ -17,7 +17,7 @@ components: ["grid"]
   <tbody>
     <tr>
       <td>Product</td>
-      <td>KendoReact Data Grid,<br/>KendoReact PDF Processing</td>
+      <td>KendoReact Grid,<br/>KendoReact PDF Processing</td>
     </tr>
     <tr>
       <td>Version</td>
@@ -28,11 +28,11 @@ components: ["grid"]
 
 ## Description
 
-I want to export the results of the [KendoReact Data Grid](https://www.telerik.com/kendo-react-ui/components/grid/) to a PDF and open the PDF in a new tab. I do not want the PDF file to be downloaded. The `save()` method of the PDF Grid is void, so I cannot obtain the blob directly from the return.
+I want to export the results of the [KendoReact Grid](https://www.telerik.com/kendo-react-ui/components/grid/) to a PDF and open the PDF in a new tab. I do not want the PDF file to be downloaded. The `save()` method of the PDF Grid is void, so I cannot obtain the blob directly from the return.
 
 This knowledge base article also answers the following questions:
 
--   How to export KendoReact Data Grid to PDF without downloading?
+-   How to export KendoReact Grid to PDF without downloading?
 -   How to open exported PDF in a new browser tab?
 -   How to use KendoReact PDF Processing for custom PDF export?
 
@@ -80,6 +80,6 @@ Here is an example implementation:
 
 -   [KendoReact PDF Processing Overview](https://www.telerik.com/kendo-react-ui/components/pdfprocessing/)
 -   [Base64 String Creation in PDF Processing](https://www.telerik.com/kendo-react-ui/components/pdfprocessing/base64string/)
--   [KendoReact Data Grid Documentation](https://www.telerik.com/kendo-react-ui/components/grid/)
+-   [KendoReact Grid Documentation](https://www.telerik.com/kendo-react-ui/components/grid/)
 -   [StackOverflow: Opening PDF in iframe](https://stackoverflow.com/a/46510790/5611574)
 -   [Example Implementation on StackBlitz](https://stackblitz.com/edit/react-wsajei?file=app%2Fapp.tsx)

@@ -16,7 +16,7 @@ The KendoReact Form component is distributed through the [kendo-react-form NPM p
 
 The following example demonstrates the Form and Field components in action.
 
-{% meta height:650 %}
+{% meta height:750 %}
 {% embed_file overview/app.tsx preview %}
 {% embed_file overview/main.tsx %}
 {% endmeta %}

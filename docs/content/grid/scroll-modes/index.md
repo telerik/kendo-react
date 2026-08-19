@@ -1,14 +1,14 @@
 ---
 title: Overview
-description: 'Get started with the KendoKendoReact Data Grid and learn how to configure any of its three layout modes - scrollable, non-scrollable and virtual scrolling.'
-components: ["datagrid"]
+description: 'Get started with the KendoReact Grid and learn how to configure any of its three layout modes - scrollable, non-scrollable and virtual scrolling.'
+components: ['grid']
 slug: scrollmodes_grid
 position: 1
 ---
 
 # Scroll Modes Overview
 
-The KendoReact Data Grid provides options for rendering its content in a [scrollable](#scrollable-mode) or [non-scrollable](#non-scrollable-mode) mode by configuring its `scrollable` property.
+The KendoReact Grid provides options for rendering its content in a [scrollable](#scrollable-mode) or [non-scrollable](#non-scrollable-mode) mode by configuring its `scrollable` property.
 
 You can also enable the virtual scroll mode of the Grid by setting [`scrollable`]({% slug api_grid_gridprops %}#toc-scrollable) to `virtual`. For more information, refer to the article on [virtual scrolling]({% slug virtualscrolling_grid %}).
 
@@ -18,7 +18,7 @@ You can also enable the virtual scroll mode of the Grid by setting [`scrollable`
 
 When scrolling is enabled, the content of the Grid is rendered as tables&mdash;one for the header area, another one for the scrollable data area, and a third one for the footer area. This behavior ensures that the header and footer areas of the Grid are always visible while the user scrolls vertically.
 
-> Starting with KendoReact 11.0.0, the default `scrollable` mode of the KendoKendoReact Data Grid is set to `virtual` for developers with an active license.
+> Starting with KendoReact 11.0.0, the default `scrollable` mode of the KendoReact Grid is set to `virtual` for developers with an active license.
 
 ### Getting Started
 
@@ -34,7 +34,7 @@ After the user scrolls to the end of the page, the Grid enables you to load more
 
 The following example demonstrates how to dynamically add data to the Grid while the user is scrolling.
 
-{% meta height:510 %}
+{% meta height:630 %}
 {% embed_file infinite-scrolling/func/app.tsx preview %}
 {% embed_file infinite-scrolling/func/main.tsx %}
 {% endmeta %}

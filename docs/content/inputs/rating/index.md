@@ -23,6 +23,10 @@ The following example demonstrates the Rating in action.
 
 ## Rating Precision
 
+The Rating supports `item` and `half` precision modes, controlled via the [`precision`]({% slug api_inputs_ratingprops %}#toc-precision) property. With `item` precision each click selects a whole icon, while `half` precision allows users to select half-icon values. The default precision is `item`.
+
+The following example demonstrates the `item` and `half` precision modes of the Rating side by side.
+
 {% meta height:300 %}
 {% embed_file rating/overview/precision/app.tsx preview %}
 {% embed_file rating/overview/precision/main.tsx %}

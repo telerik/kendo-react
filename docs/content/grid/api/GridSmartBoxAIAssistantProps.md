@@ -153,6 +153,46 @@ Can be a boolean to enable/disable or an object with detailed settings.
 <td class="table-cell-name">
 
 
+#### ariaLabel?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+string
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Sets the accessible label (`aria-label`) for the SmartBox input element.
+
+```tsx
+<SmartBox ariaLabel="AI-powered search" />
+```
+
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### dir?
 
 
@@ -225,6 +265,51 @@ boolean
 
 
 Specifies whether the mode is enabled.
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
+#### fillMode?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+"flat" | "solid" | "outline"
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+<code>
+
+
+'solid'
+
+
+</code>
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Sets the fill mode of the SmartBox.
+
+
+
 
 
 </td>
@@ -878,6 +963,51 @@ Custom render function for prompt suggestions.
   )}
 />
 ```
+
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
+#### rounded?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+"small" | "none" | "medium" | "large" | "full"
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+<code>
+
+
+'medium'
+
+
+</code>
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Sets the border radius of the SmartBox.
+
+
 
 
 

@@ -17,7 +17,7 @@ The PivotGrid is built from the ground up and specifically for React so that you
 
 The following example demonstrates the KendoReact PivotGrid component in action.
 
-{% meta height:770 %}
+{% meta height:880 %}
 {% embed_file overview/basic/func/app.tsx preview %}
 {% embed_file overview/basic/func/main.tsx %}
 {% embed_file overview/basic/func/wide-column.tsx preview %}

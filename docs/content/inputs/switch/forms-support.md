@@ -16,7 +16,7 @@ The forms supports enables you to validate switch values and prevent the submiss
 
 ## Functionality and Features
 
--   [Support for KendoReact Form and Setting Custom Behavior](#toc-support-for-kendoreact-form)
+-   [Support for KendoReact Form and Setting Custom Behavior](#support-for-kendoreact-form-and-setting-custom-behavior)
 -   [Setting Validation Requirements](#toc-setting-validation-requirements)
 -   [Setting Custom Validation Messages](#toc-setting-custom-validation-messages)
 
@@ -28,7 +28,7 @@ You can display error messages and fully customize the behavior of the rendered 
 
 The following example demonstrates how to render a required custom switch.
 
-{% meta height:570 %}
+{% meta height:720 %}
 {% embed_file switch/forms/kendo-react-form/func/app.tsx preview %}
 {% embed_file switch/forms/kendo-react-form/func/main.tsx %}
 {% endmeta %}
@@ -37,7 +37,7 @@ The following example demonstrates how to render a required custom switch.
 
 The Switch supports props for setting basic validation requirements. For example, the [`required`]({% slug api_inputs_switchprops %}#toc-required) property which enables the successful form submission.
 
-{% meta height:680 %}
+{% meta height:820 %}
 {% embed_file switch/forms/disable-styles/func/app.tsx preview %}
 {% embed_file switch/forms/disable-styles/func/main.tsx %}
 {% endmeta %}
@@ -46,7 +46,7 @@ The Switch supports props for setting basic validation requirements. For example
 
 You can implement custom error messages which will be displayed if the Switch is not turned on and the user tries to submit the form. To render a custom validation message, set the [`validationMessage`]({% slug api_inputs_switchprops %}#toc-validationmessage) prop.
 
-{% meta height:600 %}
+{% meta height:820 %}
 {% embed_file switch/forms/custom-message/func/app.tsx preview %}
 {% embed_file switch/forms/custom-message/func/main.tsx %}
 {% endmeta %}

@@ -18,6 +18,8 @@ In order for the column virtualization to work properly, configure the following
 -   (Required) Set `overflow: auto` and `width` in pixels through [`style`]({% slug api_treelist_treelistprops %}#toc-style) of the TreeList.
 -   (Required) Set `{ style: { tableLayout: 'fixed' } }` through [`tableProps`]({% slug api_treelist_treelistprops %}#toc-tableprops) of the TreeList.
 
+The following example demonstrates how to enable column virtualization in the TreeList to improve rendering performance when displaying a large number of columns.
+
 {% meta height:400 %}
 {% embed_file column-virtualization/func/app.tsx preview %}
 {% embed_file column-virtualization/func/main.tsx %}

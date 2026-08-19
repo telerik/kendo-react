@@ -1351,7 +1351,7 @@ Specifies the value of the ColorPicker. Currently, only the RGBA format is suppo
 <code>
 
 
-['gradient', 'palette']`
+['gradient', 'palette']
 
 
 </code>

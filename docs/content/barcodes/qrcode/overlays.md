@@ -27,7 +27,7 @@ To add an image overlay, prepare a suitable image and set its dimensions and loc
 
 To create a Swiss QR Code, set the [`overlay`]({% slug api_barcodes_qrcodeprops %}#toc-overlay) prop to the special `"swiss"` overlay type:
 
-{% meta height:550 %}
+{% meta height:670 %}
 {% embed_file qrcode/overlays/swiss/func/app.tsx preview %}
 {% embed_file qrcode/overlays/swiss/func/main.tsx %}
 {% endmeta %}

@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: 'Get an overview of the features the KendoReact Slider delivers and use the component in React projects.'
-components: ["slider"]
+components: ['slider']
 slug: overview_slider
 position: 0
 ---
@@ -16,9 +16,10 @@ The KendoReact Slider component is part of the KendoReact library of React UI co
 
 The following example demonstrates the Slider in action.
 
-{% meta height:130 %}
+{% meta height:700 %}
 {% embed_file slider/overview/func/app.tsx preview %}
 {% embed_file slider/overview/func/main.tsx %}
+{% embed_file slider/overview/func/styles.css %}
 {% endmeta %}
 
 > The Slider component is part of the [KendoReact Inputs]({% slug overview_inputs %}) component library. The procedures for installing, importing, and using all components in the library are identical. To learn how to use the Slider and the rest of the components in the package, see the [Getting Started with the KendoReact Inputs]({% slug getstarted_inputs %}) guide.

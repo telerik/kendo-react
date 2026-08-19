@@ -23,9 +23,9 @@ The Gantt provides the following callbacks, components and utility functions to 
 -   components - `GanttForm` and `GanttRemoveDialog`
 -   utility functions for updating the data tree: `addTask`, `removeTask` and `updateTask`
 
-Please check the example below which shows the example editing implementation in action:
+The following example demonstrates how to create, update, and delete Gantt tasks and dependencies using the `GanttForm`, `GanttRemoveDialog`, and the `addTask`, `removeTask`, and `updateTask` utility functions.
 
-{% meta height:800 %}
+{% meta height:880 %}
 {% embed_file editing/func/app.tsx preview %}
 {% embed_file editing/func/main.tsx %}
 {% endmeta %}

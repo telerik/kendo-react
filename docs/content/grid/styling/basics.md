@@ -1,18 +1,18 @@
 ---
 title: Overview
-description: 'Get started with the KendoKendoReact Data Grid which supports the styling of columns, rows, and cells.'
-components: ["datagrid"]
+description: 'Get started with the KendoReact Grid which supports the styling of columns, rows, and cells.'
+components: ['grid']
 slug: styling_grid
 position: 10
 ---
 
-# KendoReact Data Grid Styling Overview
+# KendoReact Grid Styling Overview
 
-The KendoReact Data Grid enables you to style its columns, rows, and cells.
+The KendoReact Grid enables you to style its columns, rows, and cells.
 
 <div data-component="StartKendoReactFreeSection"></div>
 
-## Styling the KendoReact Data Grid Columns
+## Styling the KendoReact Grid Columns
 
 To style the columns of the Grid, either:
 
@@ -34,13 +34,13 @@ product-name {
 }
 ```
 
-## Styling the KendoReact Data Grid Rows
+## Styling the KendoReact Grid Rows
 
 To style the rows of the Grid, use the [`rows`]({% slug api_grid_gridprops %}#toc-rows) function, which allows you to modify the appearance of the rows based on the provided values:
 
--   [Implement custom rows in KendoKendoReact Data Grid](slug:custom-rows_grid)
+-   [Implement custom rows in KendoReact Grid](slug:custom-rows_grid)
 
-## Styling the KendoReact Data Grid Individual Elements
+## Styling the KendoReact Grid Individual Elements
 
 You can individually style Grid elements using CSS.
 
@@ -50,6 +50,8 @@ You can individually style Grid elements using CSS.
 
 You can use the custom `cells.data` functionality of the Grid to change the appearance of the cells on condition and based on the provided value.
 
+The following example demonstrates conditional cell styling using `cells.data`, where cell background colors change dynamically based on the field value.
+
 {% meta height:220 %}
 {% embed_file styling-dynamic/func/app.tsx preview %}
 {% embed_file styling-dynamic/func/main.tsx %}
@@ -58,8 +60,5 @@ You can use the custom `cells.data` functionality of the Grid to change the appe
 ## Suggested Links
 
 -   [API Index of the Grid]({% slug api_grid %})
--   [GridColumn Cell Prop]({% slug api_grid_gridcolumnprops %}#toc-cell)
--   [GridColumn HeaderCell Prop]({% slug api_grid_gridcolumnprops %}#toc-headercell)
--   [Grid RowRender Prop]({% slug api_grid_gridprops %}#toc-rowrender)
 -   [Creating Custom Styles]({% slug themebuilder %})
 -   [Custom Cells](https://www.telerik.com/kendo-react-ui/components/grid/cells/)

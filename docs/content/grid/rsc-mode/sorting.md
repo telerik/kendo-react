@@ -1,8 +1,8 @@
 ---
 title: Sorting
-page_title: 'Sorting in React Data Grid RSC Mode'
-description: 'Implement powerful sorting features in the RSC mode of KendoReact Data Grid to arrange and analyze data efficiently with ease.'
-components: ["datagrid"]
+page_title: 'Sorting in React Grid RSC Mode'
+description: 'Implement powerful sorting features in the RSC mode of KendoReact Grid to arrange and analyze data efficiently with ease.'
+components: ['grid']
 subject: RSC Mode of the Grid
 slug: sorting_rsc_grid
 position: 50
@@ -37,7 +37,7 @@ Here is an example demonstrating how to manage sorting state on the server for c
 
 ## Suggested Links
 
--   [KendoKendoReact Data Grid Sorting Documentation](slug:sorting_grid)
--   [KendoKendoReact Data Grid RSC Mode Server Actions](slug:server_actions_rsc_grid)
--   [КendoReact Data Grid RSC Mode Overview](slug:overview_rsc_grid)
--   [Getting Started with КendoReact Data Grid RSC Mode](slug:getstarted_rsc_grid)
+-   [KendoReact Grid Sorting Documentation](slug:sorting_grid)
+-   [KendoReact Grid RSC Mode Server Actions](slug:server_actions_rsc_grid)
+-   [КendoReact Grid RSC Mode Overview](slug:overview_rsc_grid)
+-   [Getting Started with КendoReact Grid RSC Mode](slug:getstarted_rsc_grid)

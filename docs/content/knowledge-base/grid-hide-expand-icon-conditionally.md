@@ -37,7 +37,7 @@ Within the cellRender of the Grid check if the field for the cell is the expand 
 
 This is an example showcasing this approach:
 
-{% meta height:660 %}
+{% meta height:730 %}
 {% embed_file grid/grid-hide-expand-icon-conditionally/app.jsx preview %}
 {% embed_file grid/grid-hide-expand-icon-conditionally/main.jsx %}
 {% endmeta %}

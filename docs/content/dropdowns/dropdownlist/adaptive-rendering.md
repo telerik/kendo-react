@@ -12,7 +12,7 @@ The DropDownList provides an option for enabling adaptive rendering for the popu
 
 To enable the adaptive rendering, set the [`adaptive`]({% slug api_dropdowns_dropdownlistprops %}#toc-adaptive) property of the DropDownList to `true`.
 
-To set the title of the dialog window rendered when the DropDownList is opened on a smaller screen, set the [`adaptiveTitle`]({% slug api_dropdowns_dropdownlistprops %}#toc-adaptivetitle) property of the component.
+To set the title of the dialog window rendered when the DropDownList is opened on a smaller screen, set the [`adaptiveTitle`](slug:api_dropdowns_dropdownlistprops) property of the component.
 
 The Adaptive Mode changes the rendering of the popup element of the DropDownList as per the screen resolution of the device (the horizontal value in px) with the following default breakpoints:
 
@@ -21,6 +21,8 @@ The Adaptive Mode changes the rendering of the popup element of the DropDownList
 -   `Large screens - larger than 768px`&mdash;Displays a popup as an animation container attached to the main element of the component.
 
 > You can further customize the adaptive breakpoints via [AdaptiveMode React Context]({% slug overview_adaptive_mode %}).
+
+The following example demonstrates how the DropDownList adapts its popup element rendering to the screen size based on the configured breakpoints.
 
 > Switch between the device options below to see how the DropDownList adapts to different resolutions.
 

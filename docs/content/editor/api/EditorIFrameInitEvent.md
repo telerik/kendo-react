@@ -69,7 +69,7 @@ The object that represents the iframe element inside the Editor.
 <code>
 
 
-[Editor]({% slug api_editor_editor %})
+[EditorHandle]({% slug api_editor_editorhandle %})
 
 
 </code>

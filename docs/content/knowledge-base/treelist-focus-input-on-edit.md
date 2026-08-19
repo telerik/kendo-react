@@ -38,7 +38,7 @@ Use React Context for passing the ID value from the state to the cellRender of t
 
 Following is an example demonstrating such implementation
 
-{% meta height:650 %}
+{% meta height:690 %}
 {% embed_file treelist/treelist-focus-input-on-edit/app.jsx preview %}
 {% embed_file treelist/treelist-focus-input-on-edit/main.jsx %}
 {% embed_file treelist/treelist-focus-input-on-edit/data.js %}

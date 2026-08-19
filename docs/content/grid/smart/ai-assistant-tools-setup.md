@@ -40,7 +40,7 @@ Choose an integration approach based on how much control you need over the AI co
 
 The automatic approach is the simplest way to integrate AI functionality with your Grid. The AI Assistant toolbar tool handles all communication with your AI service internally through HTTP requests.
 
-To configure automatic integration, add a [`GridToolbarAIAssistant`](slug:api_grid_gridtoolbaraiassistant) component to the Grid and set its [`requestUrl`](slug:api_grid_gridtoolbaraiassistant#requesturl) property to point to your custom AI service endpoint:
+To configure automatic integration, add a [`GridToolbarAIAssistant`](slug:api_grid_gridtoolbaraiassistant) component to the Grid and set its [`requestUrl`](slug:api_grid_gridtoolbaraiassistantprops#requestUrl) property to point to your custom AI service endpoint:
 
 ```jsx
 <GridToolbarAIAssistant requestUrl="https://your-ai-service.com/api/grid" />
@@ -48,7 +48,9 @@ To configure automatic integration, add a [`GridToolbarAIAssistant`](slug:api_gr
 
 > The `requestUrl` defines the endpoint where your natural language queries will be processed. It should point to your custom AI service that can understand your domain-specific data and business logic.
 
-<demo metaUrl="grid/smart/filter-sort-group/basic/" height="800"></demo>
+The following example demonstrates the automatic integration approach, where the Grid's AI Assistant handles all communication with your AI service using only a `requestUrl` configuration.
+
+<demo metaUrl="grid/smart/filter-sort-group/basic/" height="910"></demo>
 
 > tip For comprehensive information about implementing your AI service including detailed request/response formats and server-side implementation, see [AI Service Setup](slug:ai_service_setup).
 
@@ -66,7 +68,7 @@ In the controlled approach, you maintain full control over the AI assistant's st
 
 The following example demonstrates controlled integration where the AI Assistant still handles the HTTP request automatically, but the prompt outputs are customized through request and response event handlers.
 
-<demo metaUrl="grid/smart/filter-sort-group/controlled/" height="800"></demo>
+<demo metaUrl="grid/smart/filter-sort-group/controlled/" height="920"></demo>
 
 **Request Options**
 
@@ -90,7 +92,7 @@ The `onPromptRequest` event provides the user's prompt, Grid column information,
 
 The following example demonstrates how to manually send requests to an AI service and process the AI responses to apply basic data operations (filtering, sorting, and grouping) to the Grid. Because this demo showcases the manual mode of the component, it also demonstrates how to use the `outputs` prop along with additional logic to display the prompt output history.
 
-<demo metaUrl="grid/smart/filter-sort-group/manual/" height="800"></demo>
+<demo metaUrl="grid/smart/filter-sort-group/manual/" height="900"></demo>
 
 ## Suggested Links
 
@@ -98,7 +100,7 @@ The following example demonstrates how to manually send requests to an AI servic
 -   [Smart Grid Overview](slug:smart_grid)
 -   [AI SmartBox Tool](slug:smart_grid_basic_operations)
 -   [AI Toolbar Assistant](slug:smart_grid_toolbar_assistant)
--   [KendoKendoReact Data Grid Configuring the ToolBar](slug:toolbar_tools_grid)
+-   [KendoReact Grid Configuring the ToolBar](slug:toolbar_tools_grid)
 -   [API Reference of the GridToolbarAIAssistant](slug:api_grid_gridtoolbaraiassistant)
 -   [API Reference of the SmartBox](slug:api_grid_smartbox)
 

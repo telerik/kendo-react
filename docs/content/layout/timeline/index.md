@@ -16,7 +16,7 @@ The KendoReact Timeline component is part of the KendoReact library of React UI 
 
 The following example demonstrates the KendoReact Timeline in action.
 
-{% meta height:1140 %}
+{% meta height:1210 %}
 {% embed_file timeline/overview/func/app.tsx preview %}
 {% embed_file timeline/overview/func/main.tsx %}
 {% embed_file timeline/overview/func/events.ts %}

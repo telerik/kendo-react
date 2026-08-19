@@ -28,6 +28,10 @@ The following example demonstrates the Checkbox component in action.
 
 ## Size
 
+The Checkbox supports `small`, `medium`, and `large` sizes, controlled via the [`size`]({% slug api_inputs_checkboxprops %}#toc-size) property. The default size is `medium`.
+
+The following example demonstrates the available `size` options for the Checkbox.
+
 {% meta height:100 %}
 {% embed_file checkbox/main/size/app.tsx preview %}
 {% embed_file checkbox/main/size/main.tsx %}
@@ -36,6 +40,10 @@ The following example demonstrates the Checkbox component in action.
 
 ## Border Radius
 
+The Checkbox supports `small`, `medium`, `large`, and `none` border radius values, controlled via the [`rounded`]({% slug api_inputs_checkboxprops %}#toc-rounded) property. The default value is `medium`.
+
+The following example demonstrates the available `rounded` options for the Checkbox.
+
 {% meta height:100 %}
 {% embed_file checkbox/main/border-radius/app.tsx preview %}
 {% embed_file checkbox/main/border-radius/main.tsx %}
@@ -43,6 +51,10 @@ The following example demonstrates the Checkbox component in action.
 {% endmeta %}
 
 ## Indeterminate State
+
+The Checkbox supports an indeterminate state in addition to the standard checked and unchecked states. Set `value` to `null` to render the Checkbox in an indeterminate state.
+
+The following example demonstrates the Checkbox in its indeterminate and checked states.
 
 {% meta height:100 %}
 {% embed_file checkbox/main/indeterminate/app.tsx preview %}

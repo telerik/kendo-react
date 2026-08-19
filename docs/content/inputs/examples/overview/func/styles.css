@@ -1,0 +1,333 @@
+.demo-container {
+    padding: var(--kendo-spacing-12);
+    display: flex;
+    flex-direction: column;
+    gap: var(--kendo-spacing-6);
+}
+
+.form-title {
+    font-size: var(--kendo-font-size-xl);
+    font-weight: 600;
+    color: var(--kendo-color-on-app-surface);
+    margin: 0;
+}
+
+.form-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--kendo-spacing-6);
+}
+
+.card-section,
+.options-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--kendo-spacing-6);
+    padding: var(--kendo-spacing-6);
+    background: var(--kendo-color-surface-alt);
+    border: 1px solid var(--kendo-color-border);
+    border-radius: var(--kendo-border-radius-lg);
+}
+
+.section-title {
+    font-size: var(--kendo-font-size-lg);
+    font-weight: 600;
+    color: var(--kendo-color-on-app-surface);
+    margin: 0 0 var(--kendo-spacing-2) 0;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--kendo-spacing-1);
+}
+
+.expiry-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--kendo-spacing-2);
+}
+
+.expiry-cvv-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--kendo-spacing-4);
+}
+
+/* Credit card visual preview */
+.card-preview {
+    position: relative;
+    padding: var(--kendo-spacing-6);
+    border-radius: var(--kendo-border-radius-lg);
+    background: linear-gradient(
+        135deg,
+        var(--kendo-color-primary) 0%,
+        color-mix(in srgb, var(--kendo-color-primary) 60%, var(--kendo-color-info)) 100%
+    );
+    color: var(--kendo-color-on-primary);
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.card-preview::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: -10%;
+    width: 60%;
+    height: 120%;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--kendo-color-on-primary) 8%, transparent);
+    pointer-events: none;
+}
+
+.card-preview-chip {
+    width: 40px;
+    height: 30px;
+    border-radius: var(--kendo-border-radius-sm);
+    background: color-mix(in srgb, var(--kendo-color-on-primary) 70%, transparent);
+}
+
+.card-preview-number {
+    font-size: var(--kendo-font-size-lg);
+    font-family: monospace;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.card-preview-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: var(--kendo-font-size-md);
+    position: relative;
+}
+
+.card-preview-name {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-preview-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--kendo-spacing-1);
+}
+
+.card-preview-expiry,
+.card-preview-cvv {
+    font-family: monospace;
+}
+
+/* Order summary */
+.order-summary {
+    display: flex;
+    flex-direction: column;
+    gap: var(--kendo-spacing-2);
+    padding: var(--kendo-spacing-4);
+    background: color-mix(in srgb, var(--kendo-color-base-subtle) 50%, transparent);
+    border-radius: var(--kendo-border-radius-md);
+    border: 1px solid var(--kendo-color-border);
+}
+
+.summary-title {
+    font-size: var(--kendo-font-size-md);
+    font-weight: 600;
+    color: var(--kendo-color-on-app-surface);
+    margin: 0 0 var(--kendo-spacing-1) 0;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--kendo-font-size-md);
+    color: var(--kendo-color-subtle);
+}
+
+.summary-total {
+    font-weight: 600;
+    color: var(--kendo-color-on-app-surface);
+    border-top: 1px solid var(--kendo-color-border);
+    padding-top: var(--kendo-spacing-2);
+    margin-top: var(--kendo-spacing-1);
+}
+
+/* Form separator */
+.form-separator {
+    border: none;
+    border-top: 1px solid var(--kendo-color-border);
+    margin: 0;
+}
+
+/* Toggle row */
+.toggle-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--kendo-spacing-6);
+}
+
+.toggle-item {
+    display: flex;
+    align-items: center;
+    gap: var(--kendo-spacing-2);
+}
+
+/* Actions */
+.action-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--kendo-spacing-3);
+}
+
+.action-button {
+    min-height: 44px;
+    padding: var(--kendo-spacing-2) var(--kendo-spacing-4);
+    border-radius: var(--kendo-border-radius-md);
+    border: 1px solid var(--kendo-color-border);
+    font-size: var(--kendo-font-size-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.action-button-primary {
+    background: var(--kendo-color-primary);
+    border-color: var(--kendo-color-primary);
+    color: var(--kendo-color-on-primary);
+}
+
+.action-button-secondary {
+    background: transparent;
+    color: var(--kendo-color-on-app-surface);
+}
+
+.status-note {
+    padding: var(--kendo-spacing-3) var(--kendo-spacing-4);
+    border: 1px solid var(--kendo-color-border);
+    border-radius: var(--kendo-border-radius-md);
+    background: color-mix(in srgb, var(--kendo-color-success-subtle) 60%, transparent);
+    color: var(--kendo-color-success-on-subtle);
+}
+
+/* Gift card */
+.gift-card-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--kendo-spacing-4);
+    padding: var(--kendo-spacing-4);
+    background: color-mix(in srgb, var(--kendo-color-base-subtle) 50%, transparent);
+    border: 1px solid var(--kendo-color-border);
+    border-radius: var(--kendo-border-radius-md);
+}
+
+.gift-color-picker {
+    display: flex;
+    align-items: center;
+    gap: var(--kendo-spacing-3);
+}
+
+.gift-color-label {
+    font-size: var(--kendo-font-size-md);
+    color: var(--kendo-color-on-app-surface);
+    font-weight: 500;
+}
+
+.color-swatch-trigger {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--kendo-border-radius-md);
+    border: 2px solid var(--kendo-color-border);
+    cursor: pointer;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    flex-shrink: 0;
+}
+
+.color-swatch-trigger:hover {
+    border-color: var(--kendo-color-primary);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--kendo-color-primary) 20%, transparent);
+}
+
+.gift-card-preview {
+    padding: var(--kendo-spacing-4);
+    border-radius: var(--kendo-border-radius-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--kendo-spacing-3);
+    min-height: 120px;
+    transition: background-color 0.25s ease;
+}
+
+.gift-card-preview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gift-card-label {
+    font-size: var(--kendo-font-size-lg);
+    font-weight: 700;
+    color: var(--gift-card-fg, #fff);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.gift-card-amount {
+    font-size: var(--kendo-font-size-xl);
+    font-weight: 700;
+    color: var(--gift-card-fg, #fff);
+}
+
+.gift-card-tagline {
+    font-size: var(--kendo-font-size-md);
+    color: color-mix(in srgb, var(--gift-card-fg, #fff) 85%, transparent);
+    margin: 0;
+    font-style: italic;
+    flex: 1;
+}
+
+.gift-card-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.gift-card-code {
+    font-size: var(--kendo-font-size-md);
+    font-family: monospace;
+    color: color-mix(in srgb, var(--gift-card-fg, #fff) 75%, transparent);
+    letter-spacing: 2px;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .form-layout {
+        grid-template-columns: 3fr 2fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .demo-container {
+        max-width: 1200px;
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .demo-container {
+        padding: var(--kendo-spacing-6);
+    }
+
+    .expiry-cvv-row {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 479px) {
+    .expiry-cvv-row {
+        grid-template-columns: 1fr;
+    }
+}

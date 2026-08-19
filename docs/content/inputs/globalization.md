@@ -1,7 +1,27 @@
 ---
 title: Globalization
 description: 'Globalize the KendoReact Inputs in React projects by adapting to specific cultures, loading translated messages, or using the RTL support.'
-components: ["checkbox", "colorgradient", "colorpalette", "colorpicker", "flatcolorpicker", "input", "maskedtextbox", "numerictextbox", "radiobutton", "radiogroup", "rangeslider", "rating", "signature", "slider", "switch", "textarea", "textbox"]
+components:
+    [
+        'checkbox',
+        'colorgradient',
+        'colorpalette',
+        'colorpicker',
+        'flatcolorpicker',
+        'input',
+        'maskedtextbox',
+        'numerictextbox',
+        'otpinput',
+        'radiobutton',
+        'radiogroup',
+        'rangeslider',
+        'rating',
+        'signature',
+        'slider',
+        'switch',
+        'textarea',
+        'textbox'
+    ]
 slug: globalization_inputs
 position: 60
 ---
@@ -14,10 +34,7 @@ For more information on how globalization practices are implemented in KendoReac
 
 The following example demonstrates how to show the value as a culture-specific currency in the available Inputs components and how to localize their built-in messages.
 
-{% meta height:150 %}
-{% embed_file globalization/func/app.tsx preview %}
-{% embed_file globalization/func/main.tsx %}
-{% endmeta %}
+<demo metaUrl="inputs/globalization/func/" height="150"></demo>
 
 ## Internationalization
 
@@ -65,6 +82,8 @@ The following table lists the built-in message keys and their default values.
 | `switch.validation`                   | `Please turn on if you want to proceed!`        |
 | `colorPicker.dropdownButtonAriaLabel` | `Select`                                        |
 | `rating.ariaLabel`                    | `Rating`                                        |
+| `otpInput.ariaLabel`                  | `One-time password`                             |
+| `otpInput.cellAriaLabel`              | `Digit {index} of {total}`                      |
 | `signature.clear`                     | `Clear`                                         |
 | `signature.maximize`                  | `Maximize`                                      |
 | `signature.minimize`                  | `Minimize`                                      |
@@ -73,10 +92,7 @@ The following table lists the built-in message keys and their default values.
 
 The following example demonstrates how to utilize the RTL support for the Inputs.
 
-{% meta height:670 %}
-{% embed_file rtl/func/app.tsx preview %}
-{% embed_file rtl/func/main.tsx %}
-{% endmeta %}
+<demo metaUrl="inputs/rtl/func/" height="970"></demo>
 
 ## Suggested Links
 

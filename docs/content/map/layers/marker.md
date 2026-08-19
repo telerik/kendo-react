@@ -12,7 +12,7 @@ The marker layer displays markers over specified Points of Interest (POI).
 
 The following example demonstrates how to create a marker layer:
 
-{% meta height:660 %}
+{% meta height:780 %}
 {% embed_file layers/marker/func/app.tsx preview %}
 {% embed_file layers/marker/func/main.tsx %}
 {% endmeta %}
@@ -30,7 +30,7 @@ The available fields in the marker tooltip [renderer context]({% slug api_map_ma
 
 The marker tooltip is demonstrated in the example below:
 
-{% meta height:660 %}
+{% meta height:780 %}
 {% embed_file layers/marker-tooltip/func/app.tsx preview %}
 {% embed_file layers/marker-tooltip/func/main.tsx %}
 {% endmeta %}

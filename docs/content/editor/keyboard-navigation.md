@@ -33,7 +33,7 @@ The editor integrates the **Toolbar** component and inherits all shortcuts from 
 
 
 
-{% meta height:810 %}
+{% meta height:1110 %}
 {% embed_file overview/func/app.tsx preview %}
 {% embed_file overview/func/main.tsx %}
 {% endmeta %}

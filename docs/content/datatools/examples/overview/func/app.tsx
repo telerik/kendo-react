@@ -1,9 +1,11 @@
 import * as React from 'react';
+import './styles.css';
 import {
     Filter,
     Operators,
     TextFilter,
     NumericFilter,
+    DateFilter,
     BooleanFilter,
     Pager,
     FilterChangeEvent,
@@ -11,31 +13,21 @@ import {
 } from '@progress/kendo-react-data-tools';
 import { CompositeFilterDescriptor, filterBy } from '@progress/kendo-data-query';
 import { Grid, GridColumn } from '@progress/kendo-react-grid';
-import products from './shared-dt-products';
+import { orders } from './data';
 
 const initialFilter: CompositeFilterDescriptor = {
     logic: 'and',
-    filters: [
-        { field: 'UnitPrice', operator: 'gt', value: 20 },
-        { field: 'UnitPrice', operator: 'lt', value: 50 },
-        { field: 'Discontinued', operator: 'eq', value: false },
-        {
-            logic: 'or',
-            filters: [
-                { field: 'ProductName', operator: 'contains', value: 'organic' },
-                { field: 'ProductName', operator: 'contains', value: 'cranberry' }
-            ]
-        }
-    ]
+    filters: [{ field: 'Fulfilled', operator: 'eq', value: false }]
 };
 
 const App = () => {
-    const [filter, setFilter] = React.useState(initialFilter);
+    const [filter, setFilter] = React.useState<CompositeFilterDescriptor>(initialFilter);
     const [skip, setSkip] = React.useState(0);
-    const [take, setTake] = React.useState(5);
+    const [take, setTake] = React.useState(6);
 
     const handleFilterChange = (event: FilterChangeEvent) => {
         setFilter(event.filter);
+        setSkip(0);
     };
 
     const handlePageChange = (event: PageChangeEvent) => {
@@ -43,55 +35,53 @@ const App = () => {
         setTake(event.take);
     };
 
-    let filterData = filterBy(products, filter);
+    const filteredData = filterBy(orders, filter);
 
     return (
-        <React.Fragment>
-            <Filter
-                value={filter}
-                onChange={handleFilterChange}
-                fields={[
-                    {
-                        name: 'ProductName',
-                        label: 'Name',
-                        filter: TextFilter,
-                        operators: Operators.text
-                    },
-                    {
-                        name: 'UnitPrice',
-                        label: 'Price',
-                        filter: NumericFilter,
-                        operators: Operators.numeric
-                    },
-                    {
-                        name: 'Discontinued',
-                        label: 'Discontinued',
-                        filter: BooleanFilter,
-                        operators: Operators.boolean
-                    }
-                ]}
-            />
-            <hr />
-            <Grid
-                style={{
-                    maxHeight: '400px'
-                }}
-                data={filterData.slice(skip, skip + take)}
-            >
-                <GridColumn field="ProductName" title="Name" width="300px" />
-                <GridColumn field="UnitPrice" title="Price" />
-                <GridColumn field="Discontinued" title="Discontinued" />
-            </Grid>
-            <hr />
-            <Pager
-                skip={skip}
-                take={take}
-                type="input"
-                previousNext={true}
-                total={filterData.length}
-                onPageChange={handlePageChange}
-            />
-        </React.Fragment>
+        <div className="order-dashboard">
+            <div className="dashboard-header">
+                <h2>Order Management</h2>
+                <p>Filter and browse customer orders across all regions</p>
+            </div>
+            <div className="filter-card">
+                <div className="filter-card-label">Filter Orders</div>
+                <Filter
+                    value={filter}
+                    onChange={handleFilterChange}
+                    fields={[
+                        { name: 'Customer', label: 'Customer', filter: TextFilter, operators: Operators.text },
+                        { name: 'Amount', label: 'Amount ($)', filter: NumericFilter, operators: Operators.numeric },
+                        { name: 'OrderDate', label: 'Order Date', filter: DateFilter, operators: Operators.date },
+                        { name: 'Fulfilled', label: 'Fulfilled', filter: BooleanFilter, operators: Operators.boolean }
+                    ]}
+                />
+            </div>
+            <div className="results-summary">
+                Showing <strong>{Math.min(take, filteredData.length - skip)}</strong> of{' '}
+                <strong>{filteredData.length}</strong> orders
+            </div>
+            <div className="grid-card">
+                <Grid data={filteredData.slice(skip, skip + take)}>
+                    <GridColumn field="OrderID" title="Order #" width="100px" />
+                    <GridColumn field="Customer" title="Customer" width="170px" />
+                    <GridColumn field="Product" title="Product" width="190px" />
+                    <GridColumn field="Category" title="Category" width="130px" />
+                    <GridColumn field="Amount" title="Amount ($)" format="{0:c2}" width="120px" />
+                    <GridColumn field="OrderDate" title="Order Date" format="{0:MMM dd, yyyy}" width="140px" />
+                    <GridColumn field="Status" title="Status" width="120px" />
+                    <GridColumn field="Fulfilled" title="Fulfilled" width="100px" />
+                </Grid>
+            </div>
+                <Pager
+                    skip={skip}
+                    take={take}
+                    total={filteredData.length}
+                    buttonCount={5}
+                    previousNext={true}
+                    pageSizes={[5, 8, 10, 20]}
+                    onPageChange={handlePageChange}
+                />
+        </div>
     );
 };
 

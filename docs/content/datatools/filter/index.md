@@ -20,7 +20,7 @@ You can configure the Filter by using the following properties:
 -   [`value`]({% slug api_data-tools_filterprops %}#toc-value)&mdash;Sets the value of the filter.
 -   [`onChange`]({% slug api_data-tools_filterprops %}#toc-onchange)&mdash;The onChange event which will be triggered when the Filter value is changed.
 
-{% meta height:785 %}
+{% meta height:1110 %}
 {% embed_file filter/overview/app.tsx preview %}
 {% embed_file filter/overview/main.tsx %}
 {% endmeta %}

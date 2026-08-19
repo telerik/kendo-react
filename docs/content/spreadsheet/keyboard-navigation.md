@@ -43,7 +43,7 @@ The Spreadsheet supports the following keyboard shortcuts:
 | `Tab`                             | <ul><li>In cell selection mode, moves one cell to the right in a worksheet.</li><li>In range selection of cells, rows or columns, moves to the next cell within the active range. If the focus is on the last cell (the bottom-right cell) in the range, the focus will return to the first cell on the top-left</li><li>If the currently active cell is the last cell in the Sheet (the cell on the last row in the last column), pressing `Tab` will move the focus outside of the Spreadsheet to the next focusable element on the page.</li></ul>                              |
 | `Shift` + `Tab`                   | <ul><li>In cell selection mode, moves one cell to the right in a worksheet</li><li>In range selection of cells, rows or columns, moves to the previous cell within the active range. If the focus is on the first cell (the top-left cell) in the range, the focus will return to the last cell on the bottom-right</li><li>If the currently active cell is the first cell in the Sheet (the cell on the first row in the first column), pressing `Shift` + `Tab` will move the focus outside of the Sheet to the Named ranges ComboBox on the Spreadsheet Toolbar.</li></li></ul> |
 
-{% meta height:740 %}
+{% meta height:860 %}
 {% embed_file keyboard-navigation/func/app.tsx preview %}
 {% embed_file keyboard-navigation/func/main.tsx %}
 {% endmeta %}

@@ -14,7 +14,7 @@ The KendoReact MultiViewCalendar supports the selection of and navigation betwee
 
 The following example demonstrates the MultiViewCalendar in action.
 
-{% meta height:380 %}
+{% meta height:400 %}
 {% embed_file multiviewcalendar/overview/basic/func/app.tsx preview %}
 {% embed_file multiviewcalendar/overview/basic/func/main.tsx %}
 {% endmeta %}

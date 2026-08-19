@@ -17,6 +17,13 @@ Apart from the default vision of the Button, these alternative styling options e
 -   [Fill Mode](#fill-mode)
 -   [Theme Colors](#theme-colors)
 
+The following example demonstrates all the available appearance options of the Button in a single, configurable demo.
+
+{% meta height:250 %}
+{% embed_file button/appearance/func/app.tsx preview %}
+{% embed_file button/appearance/func/main.tsx %}
+{% endmeta %}
+
 ## Size
 
 The KendoReact Button enables you to configure its [`size`]({% slug api_buttons_buttonprops %}#toc-size).

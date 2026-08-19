@@ -59,6 +59,41 @@ Specifies the `DataItem` currently being deleted.
 <td class="table-cell-name">
 
 
+#### isSeries?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+boolean
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Indicates whether the delete action targets an entire series.
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### onCancel?
 
 

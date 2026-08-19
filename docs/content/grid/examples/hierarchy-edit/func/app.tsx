@@ -31,9 +31,7 @@ const DetailComponent = (props: any) => {
             ...edit,
             [dataItem.ProductID]: true
         });
-        setData(
-            data.map((item: Product) => (item.ProductID === dataItem.ProductID ? { ...item } : item))
-        );
+        setData(data.map((item: Product) => (item.ProductID === dataItem.ProductID ? { ...item } : item)));
     };
 
     const remove = (dataItem: Product) => {
@@ -104,13 +102,13 @@ const App = () => {
             .then(async (json) => {
                 const categoriesWithDetails = await Promise.all(
                     json.value.map(async (category) => {
-                        const details = await fetchCategoryDetails(category.CategoryID);
+                        const details = await fetchCategoryDetails(category.CategoryID).catch(() => []);
                         return { ...category, details };
                     })
                 );
                 setCategories(categoriesWithDetails);
             });
-    }, [detailExpand]);
+    }, []);
 
     const fetchCategoryDetails = async (categoryId) => {
         const response = await fetch(baseUrl + `Products?$filter=CategoryID%20eq%20` + categoryId, init);

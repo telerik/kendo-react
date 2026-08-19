@@ -1,0 +1,60 @@
+.step-header {
+    display: flex;
+    align-items: center;
+    gap: var(--kendo-spacing-2);
+}
+
+/* Color-coded kind pill */
+.step-kind {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 var(--kendo-spacing-2);
+    border-radius: var(--kendo-border-radius-full);
+    font-size: var(--kendo-font-size-xs);
+    font-weight: var(--kendo-font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.step-kind--search {
+    background: color-mix(in srgb, var(--kendo-color-info) 15%, transparent);
+    color: var(--kendo-color-info);
+}
+.step-kind--query {
+    background: color-mix(in srgb, var(--kendo-color-warning) 15%, transparent);
+    color: var(--kendo-color-warning-on-surface);
+}
+.step-kind--compute {
+    background: color-mix(in srgb, var(--kendo-color-primary) 15%, transparent);
+    color: var(--kendo-color-primary);
+}
+.step-kind--export {
+    background: color-mix(in srgb, var(--kendo-color-success) 15%, transparent);
+    color: var(--kendo-color-success-on-surface);
+}
+
+/* Monospace SQL / code content */
+.step-code {
+    font-family: var(--kendo-font-family-monospace, monospace);
+    font-size: var(--kendo-font-size-md);
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+/* Footer row: tool name + duration */
+.step-footer {
+    display: flex;
+    align-items: center;
+    gap: var(--kendo-spacing-3);
+    margin-block-start: var(--kendo-spacing-1);
+    font-size: var(--kendo-font-size-md);
+    color: color-mix(in srgb, var(--kendo-color-on-app-surface) 60%, transparent);
+}
+
+.step-tool {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--kendo-spacing-1);
+}

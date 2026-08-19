@@ -4,8 +4,6 @@ description: 'Enable adaptive rendering for the KendoReact Pager in React projec
 components: ["pager"]
 slug: adaptive_rendering_pager
 position: 19
-tag: updated
-release_tag: Q2 2026
 ---
 
 # Adaptive Rendering

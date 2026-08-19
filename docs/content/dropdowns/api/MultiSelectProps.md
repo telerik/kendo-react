@@ -450,6 +450,57 @@ Determines whether to close the options list of the MultiSelect after the item s
 <td class="table-cell-name">
 
 
+#### checkboxes?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+boolean
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+<code>
+
+
+false
+
+
+</code>
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Controls whether checkboxes are rendered in the select-all header and in each list item.
+The checkbox state reflects the selected state of the items.
+
+
+
+
+```jsx
+<MultiSelect selectAll={true} checkboxes={true} />
+```
+
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### className?
 
 
@@ -1671,6 +1722,51 @@ Fires when both the virtual scrolling of the MultiSelect is enabled and when the
 <td class="table-cell-name">
 
 
+#### onSelectAllChange?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+(event: [MultiSelectSelectAllChangeEvent]({% slug api_dropdowns_multiselectselectallchangeevent %})) => void
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Fires when the select-all item is clicked.
+When provided, the component delegates the select-all logic to the consumer.
+Useful for virtualization scenarios where the consumer manages the full dataset.
+
+```jsx
+<MultiSelect
+    selectAll={true}
+    onSelectAllChange={(event) => { setAllSelected(!allSelected); }}
+/>
+```
+
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### opened?
 
 
@@ -1924,6 +2020,57 @@ The available options are:
 <td class="table-cell-name">
 
 
+#### selectAll?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+boolean
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+<code>
+
+
+false
+
+
+</code>
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Controls whether a built-in `Select all` option appears at the top of the popup list.
+Selecting this option toggles all currently applicable items.
+
+
+
+
+```jsx
+<MultiSelect selectAll={true} />
+```
+
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### size?
 
 
@@ -2089,6 +2236,58 @@ Sets a custom suffix to the MultiSelect component.
 
 ```jsx
 <MultiSelect suffix={<span>Suffix</span>} />
+```
+
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
+#### summarizeAfter?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+number
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+<code>
+
+
+10
+
+
+</code>
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Specifies the maximum number of individual tag chips to display before showing a summary tag.
+When the number of selected items exceeds this value, the first `summarizeAfter` items
+are shown as individual chips and the remaining items are collapsed into a summary chip.
+
+
+
+
+```jsx
+<MultiSelect summarizeAfter={5} />
 ```
 
 

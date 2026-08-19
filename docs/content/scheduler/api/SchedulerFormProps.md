@@ -391,6 +391,41 @@ Fires when you click the `close` button.
 <td class="table-cell-name">
 
 
+#### onDelete?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+(event: [SchedulerFormStateChangeEvent]({% slug api_scheduler_schedulerformstatechangeevent %})&lt;any&gt;) => void
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Fires when you click the `delete` button.
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### onSubmit
 
 

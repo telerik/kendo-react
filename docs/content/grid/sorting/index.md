@@ -1,7 +1,7 @@
 ---
 title: Overview
-description: 'Get started with the sorting functionality of the KendoKendoReact Data Grid and learn how to sort single and multiple data-bound columns.'
-components: ["datagrid"]
+description: 'Get started with the sorting functionality of the KendoReact Grid and learn how to sort single and multiple data-bound columns.'
+components: ['grid']
 slug: sorting_grid
 position: 10
 tier: mixed
@@ -9,11 +9,11 @@ tier: mixed
 
 # Grid Sorting Overview
 
-The KendoReact Data Grid provides powerful sorting capabilities that allow users to organize and analyze data effectively. Sorting can be applied to a single column or multiple columns simultaneously, depending on the application’s requirements.
+The KendoReact Grid provides powerful sorting capabilities that allow users to organize and analyze data effectively. Sorting can be applied to a single column or multiple columns simultaneously, depending on the application’s requirements.
 
 <CtaPanelOverview></CtaPanelOverview>
 
-## Basics of Sorting in the KendoReact Data Grid
+## Basics of Sorting in the KendoReact Grid
 
 Sorting in the Grid is enabled through the sortable property. When sorting is enabled, users can click on column headers to sort data in ascending or descending order. Additional customization options allow for multi-column sorting and custom sorting logic in either one of the following modes:
 
@@ -31,6 +31,8 @@ Sorting in the Grid is enabled through the sortable property. When sorting is en
 
 You can also enable the unsorting of columns by utilizing the `sortable.allowUnsort` option.
 
+The following example demonstrates a Grid with configurable sorting options — toggle between single and multi-column sorting and enable or disable unsorting directly from the example configuration.
+
 {% meta height:500 %}
 {% embed_file sorting/func/app.tsx preview %}
 {% embed_file sorting/func/main.tsx %}
@@ -38,13 +40,13 @@ You can also enable the unsorting of columns by utilizing the `sortable.allowUns
 
 ## Using the Built-in State Management for Sorting
 
-To enable sorting in the KendoKendoReact Data Grid and utilize its built-in state management, follow these steps:
+To enable sorting in the KendoReact Grid and utilize its built-in state management, follow these steps:
 
 1. Enable the [`autoProcessData`](slug:api_grid_gridprops#autoprocessdata) prop to allow the Grid to handle the updated state automatically.
 1. Set the [`sortable`](slug:api_grid_gridprops#sortable) prop of the Grid to enable sorting.
 1. Set the [`defaultSort`](slug:api_grid_gridprops#defaultsort) prop to define the initial sorting.
 
-The following example demonstrates how to use sorting handled by the built-in state management of the KendoKendoReact Data Grid.
+The following example demonstrates how to use sorting handled by the built-in state management of the KendoReact Grid.
 
 {% meta height:370 %}
 {% embed_file sorting-basic/built-in/func/app.tsx preview %}
@@ -53,7 +55,7 @@ The following example demonstrates how to use sorting handled by the built-in st
 
 ## Using the Sorting in Controlled Mode
 
-To enable sorting in the KendoKendoReact Data Grid and use it in controlled mode, follow these steps:
+To enable sorting in the KendoReact Grid and use it in controlled mode, follow these steps:
 
 1. Set the [`sortable`]({% slug api_grid_gridprops %}#toc-sortable) option of the Grid and set its `mode` prop to `single`.
 1. Set the [`field`]({% slug api_grid_gridcellprops %}#toc-field) option of the Grid column.
@@ -110,7 +112,7 @@ sortChange(event: GridSortChangeEvent) {
 }
 ```
 
-## KendoReact Data Grid Sorting APIs
+## KendoReact Grid Sorting APIs
 
 -   [API Reference of the Grid]({% slug api_grid_gridprops %})
 -   [API Index of the Grid]({% slug api_grid %})

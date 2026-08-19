@@ -7,7 +7,7 @@ slug: api_common_webmcpmodelcontext
 ---
 
 # WebMcpModelContext
-The `navigator.modelContext` surface in Chrome 146+.
+The `document.modelContext` surface.
 
 
 <table class="api-table api-table-properties">

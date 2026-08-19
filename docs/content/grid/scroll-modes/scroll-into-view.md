@@ -1,7 +1,7 @@
 ---
 title: Scroll Into View
-description: 'Get started with the KendoKendoReact Data Grid and provide an alternative to paging by using its scroll into view mode.'
-components: ["datagrid"]
+description: 'Get started with the KendoReact Grid and provide an alternative to paging by using its scroll into view mode.'
+components: ['grid']
 slug: scroll_into_view_grid
 position: 3
 ---
@@ -10,7 +10,7 @@ position: 3
 
 Scroll Into View enables the user to scroll to a specific row in the grid.
 
-> Starting with KendoReact 11.0.0, the default `scrollable` mode of the KendoKendoReact Data Grid is set to `virtual` for developers with an active license.
+> Starting with KendoReact 11.0.0, the default `scrollable` mode of the KendoReact Grid is set to `virtual` for developers with an active license.
 
 ## Getting Started
 
@@ -20,7 +20,7 @@ Scroll Into View enables the user to scroll to a specific row in the grid.
 
 The following example demonstrates the basic implementation of the Scroll Into View functionality of the Grid.
 
-{% meta height:530 %}
+{% meta height:640 %}
 {% embed_file scroll-into-view/func/app.tsx preview %}
 {% embed_file scroll-into-view/func/main.tsx %}
 {% endmeta %}

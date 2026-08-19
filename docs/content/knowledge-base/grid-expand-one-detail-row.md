@@ -31,7 +31,7 @@ How can I expand only one detail row at a time?
 
 ## Solution
 
-This can be achieved by setting the `expanded` field to `false` for all other rows when one row is expanded in the [`onExpandChage`]({% slug api_grid_gridprops %}#toc-onexpandchange) event handler:
+This can be achieved by setting the `expanded` field to `false` for all other rows when one row is expanded in the [`onExpandChage`]({% slug api_grid_gridprops %}) event handler:
 
 ```jsx
 const expandChange = (event) => {

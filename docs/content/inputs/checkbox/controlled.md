@@ -20,14 +20,13 @@ To manage the value of the Checkbox:
 1. Handle the [`onChange`]({% slug api_inputs_checkboxprops %}#toc-onchange) event.
 1. Pass the new value through the props.
 
+The following example demonstrates how to control the Checkbox `value` and toggle the task completion state externally via a button.
 
 {% meta height:330 %}
 {% embed_file checkbox/controlled/value/func/app.tsx preview %}
 {% embed_file checkbox/controlled/value/func/main.tsx %}
 {% embed_file checkbox/controlled/value/func/styles.css %}
 {% endmeta %}
-
-
 
 ## Controlling the Checked state
 
@@ -37,12 +36,13 @@ To manage the checked state of the Checkbox:
 1. Handle the [`onChange`]({% slug api_inputs_checkboxprops %}#toc-onchange) event.
 1. Pass the new value through the props.
 
+The following example demonstrates how to control the Checkbox `checked` state to manage a newsletter subscription status.
+
 {% meta height:370 %}
 {% embed_file checkbox/controlled/checked/func/app.tsx preview %}
 {% embed_file checkbox/controlled/checked/func/main.tsx %}
 {% embed_file checkbox/controlled/checked/func/styles.css %}
 {% endmeta %}
-
 
 ## Suggested Links
 

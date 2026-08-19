@@ -21,6 +21,8 @@ After the completion of this guide, you will be able to achieve an end result as
 
 ## Install the Component
 
+To install the Chart Wizard package, run the following command in the root folder of your React project:
+
 ```sh
  npm i @progress/kendo-react-chart-wizard
 ```
@@ -120,7 +122,7 @@ The Chart Wizard package requires you to install the following [peer dependencie
 | @progress/kendo-react-dialogs   | Contains the KendoReact Dialog components.                                                                                                                                  |
 | @progress/kendo-react-form      | Contains the KendoReact Form components.                                                                                                                                    |
 | @progress/kendo-react-dropdowns | Contains the KendoReact Dropdowns, which allows users to choose from a predefined list of options.                                                                          |
-| @progress/kendo-react-grid      | Contains the KendoReact Data Grid component.                                                                                                                                |
+| @progress/kendo-react-grid      | Contains the KendoReact Grid component.                                                                                                                                |
 | @progress/kendo-react-inputs    | Contains the KendoReact Inputs, which the input of data, based on a specific and predefined format.                                                                         |
 | @progress/kendo-react-intl      | Contains the KendoReact Internationalization package that applies the desired cultures by providing services and pipes for the parsing and formatting of dates and numbers. |
 | @progress/kendo-react-labels    | Contains the KendoReact Label components.                                                                                                                                   |

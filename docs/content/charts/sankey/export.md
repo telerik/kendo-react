@@ -24,6 +24,8 @@ Export the Sankey visual as an Image by using the [`exportImage`]({% slug api_ke
 
 By default, the exported image is of the same size as the Sankey DOM element. If required, you can export the file to a different resolution. If you change the image size, the image quality will not be affected because the rendering of the Sankey chart is based on vector graphics.
 
+The following example demonstrates how to export the Sankey chart to a custom resolution using the `exportVisual` size option.
+
 {% meta height:360 %}
 {% embed_file sankey/export/export-image-size/app.tsx preview %}
 {% embed_file sankey/export/export-image-size/main.tsx %}
@@ -72,6 +74,8 @@ You can customize the export in the [`exportVisual`]({% slug api_charts_sankeyha
 -   `width`&mdash;Set the width of the exported visual.
 -   `height`&mdash;Set the height of the exported visual.
 -   `options`&mdash;Set the [`SankeyOptions`]({% slug api_charts_sankeyoptions %}).
+
+The following example demonstrates how to customize the exported Sankey visual by specifying a custom `width`, `height`, and rendering `options` through `SankeyExportVisualOptions`.
 
 {% meta height:360 %}
 {% embed_file sankey/export/export-customization/app.tsx preview %}

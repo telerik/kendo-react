@@ -18,6 +18,13 @@ Apart from the default vision of the Signature, these alternative styling option
 -   [Fill Mode](#fill-mode)
 -   [Border Radius](#border-radius)
 
+The following example demonstrates all the available appearance options of the Signature in a single, configurable demo.
+
+{% meta height:420 %}
+{% embed_file signature/appearance/all-options/func/app.tsx preview %}
+{% embed_file signature/appearance/all-options/func/main.tsx %}
+{% endmeta %}
+
 ## Stroke Width
 
 The Signature allows you to control the line thickness width through the [`strokeWidth`](slug:api_inputs_signatureprops#strokewidth) property.

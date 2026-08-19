@@ -19,7 +19,7 @@ To enable filtering:
 
 The following example demonstrates how to implement the filtering functionality.
 
-{% meta height:760 %}
+{% meta height:880 %}
 {% embed_file basic/func/app.tsx preview %}
 {% embed_file basic/func/main.tsx %}
 {% embed_file basic/func/cards.ts %}

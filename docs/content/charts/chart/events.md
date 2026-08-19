@@ -12,7 +12,7 @@ The KendoReact Chart generates a variety events that you can handle. This allows
 
 The following example demonstrates basic Chart events.
 
-{% meta height:670 %}
+{% meta height:750 %}
 {% embed_file chart/events/func/app.tsx preview %}
 {% embed_file chart/events/func/main.tsx %}
 {% embed_file chart/events/func/chart-container.tsx %}

@@ -38,7 +38,7 @@ This will required the following setup:
 1. Then we need add a onDropEvent to the Scheduler container using the [component ref](https://reactjs.org/docs/refs-and-the-dom.html#creating-refs).
 1. When the user drops an item we add it to the Scheduler data updating the state.
 
-{% meta height:900 %}
+{% meta height:1100 %}
 {% embed_file scheduler/dnd-from-grid/app.jsx preview %}
 {% embed_file scheduler/dnd-from-grid/main.jsx %}
 {% endmeta %}

@@ -1,15 +1,15 @@
 ---
 title: In-Cell Editing
-description: 'Get started with the KendoKendoReact Data Grid supporting in-cell editing mode that allows you to manipulate data cell by cell for additional flexibility.'
-components: ["datagrid"]
+description: 'Get started with the KendoReact Grid supporting in-cell editing mode that allows you to manipulate data cell by cell for additional flexibility.'
+components: ['grid']
 slug: incellediting_grid
 position: 20
 tier: free
 ---
 
-# In-Cell Editing in KendoReact Data Grid
+# In-Cell Editing in KendoReact Grid
 
-To enable in-cell editing in the KendoReact Data Grid you have to:
+To enable in-cell editing in the KendoReact Grid you have to:
 
 1. Set the `editable` prop of the Grid to true and configure its [`edit`]({% slug api_grid_gridprops %}#toc-edit) property to manage the built-in edit state and track which rows are being edited.
 

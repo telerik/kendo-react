@@ -17,7 +17,7 @@ The KendoReact Gantt component support four different dependency types:
 
 The following example demonstrates the different task types in action.
 
-{% meta height:660 %}
+{% meta height:780 %}
 {% embed_file dependency-types/func/app.tsx preview %}
 {% embed_file dependency-types/func/main.tsx %}
 {% endmeta %}

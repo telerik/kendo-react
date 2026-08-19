@@ -72,7 +72,7 @@ The next example builds upon the basic configuration by adding the following:
 
 Use the `up` and `down` arrow keys to navigate.
 
-{% meta height:580 %}
+{% meta height:690 %}
 {% embed_file navigation/list/app.tsx preview %}
 {% embed_file navigation/list/main.tsx %}
 {% embed_file navigation/list/nav-utils.ts %}

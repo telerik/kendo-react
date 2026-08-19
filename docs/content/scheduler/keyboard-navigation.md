@@ -80,7 +80,7 @@ Using the default Window component shortcuts
 
 
 
-{% meta height:700 %}
+{% meta height:780 %}
 {% embed_file keyboard-navigation/basic/func/app.tsx preview %}
 {% embed_file keyboard-navigation/basic/func/main.tsx %}
 {% endmeta %}

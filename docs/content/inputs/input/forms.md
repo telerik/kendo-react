@@ -23,9 +23,9 @@ The forms supports enables you to validate input values and prevent the submissi
 
 ### Setting Validation Requirements
 
-The Input supports props for setting basic validation requirements&mdash;for example, the minimum and maximum length. The [`minLength`]({% slug api_inputs_inputprops %}#toc-minlength), [`maxLength`]({% slug api_inputs_inputprops %}#toc-maxlength), and [`required`]({% slug api_inputs_inputprops %}#toc-required) properties enable the user to pre-define minimum requirements which define the validity state of the component and allow a successful form submission.
+The Input supports props for setting basic validation requirements&mdash;for example, the minimum and maximum length. The [`minLength`]({% slug api_inputs_inputprops %}), [`maxLength`]({% slug api_inputs_inputprops %}), and [`required`]({% slug api_inputs_inputprops %}) properties enable the user to pre-define minimum requirements which define the validity state of the component and allow a successful form submission.
 
-{% meta height:550 %}
+{% meta height:620 %}
 {% embed_file input/forms/basic/func/app.tsx preview %}
 {% embed_file input/forms/basic/func/main.tsx %}
 {% endmeta %}
@@ -43,7 +43,7 @@ You can implement custom error messages which will be displayed when the Input i
 
 The Input enables you to set its validity state by utilizing its props. Setting the validity state allows for the implementation of complex validation scenarios that are based on multiple sources. To override the current validity state and apply the corresponding styles, use the [`valid`]({% slug api_inputs_inputprops %}#toc-valid) prop.
 
-{% meta height:550 %}
+{% meta height:620 %}
 {% embed_file input/forms/override/func/app.tsx preview %}
 {% embed_file input/forms/override/func/main.tsx %}
 {% endmeta %}
@@ -52,7 +52,7 @@ The Input enables you to set its validity state by utilizing its props. Setting 
 
 By default, to achieve a visual representation of its invalid state, the Input applies the `k-invalid` class name to the wrapping component. To disable the utilization of `k-invalid`, set the [`validityStyles`]({% slug api_inputs_inputprops %}#toc-validitystyles) property to `false`.
 
-{% meta height:550 %}
+{% meta height:610 %}
 {% embed_file input/forms/disable-styles/func/app.tsx preview %}
 {% embed_file input/forms/disable-styles/func/main.tsx %}
 {% endmeta %}

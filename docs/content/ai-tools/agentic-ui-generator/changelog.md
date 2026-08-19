@@ -4,11 +4,31 @@ page_title: KendoReact AI Tools Changelog
 description: 'Find out about the latest changes and improvements in the KendoReact AI Tools and the Agentic UI Generator.'
 slug: ai_tools_changelog
 position: 50
+components: ['general']
 ---
 
 # KendoReact AI Tools Changelog
 
 Learn about the latest changes, improvements, and bug fixes in the KendoReact AI Tools. The updates are structured in chronological order with the newest ones appearing first.
+
+## August, 2026 Changelog
+
+### Highlights
+
+-   Added the `kendo-react-licensing` skill to the AI plugin. It describes how the KendoReact license verification works, explains how to set up the license key, and helps troubleshoot potential licensing issues.
+-   Added the `kendo-react-version-upgrade` skill to the AI plugin. It guides KendoReact version upgrades, including breaking changes, rendering changes, framework compatibility, and safe upgrade planning.
+
+## June, 2026 Changelog
+
+### Highlights
+
+-   Launched the [`kendo-react-plugin`](slug:ai_tools_overview#ai-plugin)&mdash;an AI agent plugin for Claude Code, GitHub Copilot CLI, and VS Code Copilot that wraps the KendoReact MCP server.
+
+## May, 2026 Changelog
+
+### Highlights
+
+-   Added the new [Upgrade Assistant](slug:ai_upgrade_assistant) to the KendoReact MCP server. It combines Kendo CLI codemods with AI-powered code analysis to provide end-to-end guidance when upgrading between major KendoReact versions.
 
 ## March, 2026 Changelog
 

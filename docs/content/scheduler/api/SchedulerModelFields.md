@@ -204,6 +204,42 @@ Defaults to `"isAllDay"`.
 <td class="table-cell-name">
 
 
+#### readonly?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+string
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+The name of the readonly model field.
+Defaults to `"readonly"`.
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### recurrenceExceptions?
 
 

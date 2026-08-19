@@ -5,7 +5,11 @@ const saveUrl = 'https://demos.telerik.com/service/v2/odata/upload/save';
 const removeUrl = 'https://demos.telerik.com/service/v2/odata/upload/remove';
 
 const App = () => {
-    return <Upload defaultFiles={[]} withCredentials={false} saveUrl={saveUrl} removeUrl={removeUrl} />;
+    return (
+        <div className="example-wrapper-center">
+            <Upload defaultFiles={[]} withCredentials={false} saveUrl={saveUrl} removeUrl={removeUrl} />
+        </div>
+    );
 };
 
 export default App;

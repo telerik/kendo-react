@@ -14,7 +14,7 @@ While you can [control the child components through the props of the DateRangePi
 
 The user can replace the following DateRangePicker components with custom ones:
 
--   [Start and end Date Inputs](#customizing-the-dateinputs)&mdash;Render the inputs for the `start` and `end` range selection of the DateRangePicker.
+-   [Start and end Date Inputs](#customizing-the-date-inputs)&mdash;Render the inputs for the `start` and `end` range selection of the DateRangePicker.
 -   [`Calendar`](#customizing-the-calendar)&mdash;Renders the MultiViewCalendar inside the popup of the DateRangePicker.
 -   [`Popup`](#customizing-the-popup)&mdash;Renders the popup which contains the MultiViewCalendar.
 

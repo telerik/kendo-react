@@ -1,61 +1,64 @@
 import * as React from 'react';
 import { Window } from '@progress/kendo-react-dialogs';
-import { Form, Field, FormElement, FormFieldSet } from '@progress/kendo-react-form';
 import { Button } from '@progress/kendo-react-buttons';
-import { Label } from '@progress/kendo-react-labels';
 import { Input } from '@progress/kendo-react-inputs';
 
 const App = () => {
-    const [visible, setVisible] = React.useState<boolean>(true);
+    const [opened, setOpened] = React.useState<boolean>(true);
+    const [dataSaved, setDataSaved] = React.useState<boolean>(false);
 
-    const toggleDialog = () => {
-        setVisible(!visible);
+    const open = () => setOpened(true);
+    const close = () => setOpened(false);
+
+    const submit = () => {
+        setDataSaved(true);
+        close();
     };
 
-    const handleSubmit = (dataItem) => {
-        toggleDialog();
-    };
+    const windowTop = typeof window !== 'undefined' ? Math.max(20, (window.innerHeight - 310) / 2) : 20;
 
     return (
-        <div>
-            <Button type="button" onClick={toggleDialog} id="open-window">
-                Open Window
-            </Button>
-            {visible && (
-                <Window title={'Status'} onClose={toggleDialog} initialHeight={350}>
-                    <Form
-                        onSubmit={handleSubmit}
-                        initialValues={{
-                            firstName: '',
-                            lastName: ''
-                        }}
-                        render={(formRenderProps) => (
-                            <FormElement>
-                                <FormFieldSet legend="User details:">
-                                    <Label className="k-form-field">
-                                        <span>First Name</span>
-                                        <Field name="firstName" component={Input} placeholder="Your Name" />
-                                    </Label>
-                                    <Label className="k-form-field">
-                                        <span>Last Name</span>
-                                        <Field name="lastName" component={Input} placeholder="Your Last Name" />
-                                    </Label>
-                                </FormFieldSet>
-
-                                <div className="text-right">
-                                    <Button type="button" onClick={toggleDialog}>
-                                        Cancel
-                                    </Button>
-                                    <Button type="submit" themeColor={'primary'}>
-                                        Submit
-                                    </Button>
-                                </div>
-                            </FormElement>
-                        )}
-                    />
+        <div className="example-wrapper">
+            {!opened && (
+                <Button type="button" onClick={open}>
+                    Open Window
+                </Button>
+            )}
+            {dataSaved && <p>Data has been saved</p>}
+            {opened && (
+                <Window
+                    title="Please provide additional data"
+                    onClose={close}
+                    minWidth={250}
+                    width={450}
+                    height="auto"
+                    initialTop={windowTop}
+                >
+                    <form className="k-form">
+                        <fieldset>
+                            <legend>User Details</legend>
+                            <label className="k-form-field">
+                                <span>First Name</span>
+                                <Input placeholder="Your Name" />
+                            </label>
+                            <label className="k-form-field">
+                                <span>Last Name</span>
+                                <Input placeholder="Your Last Name" />
+                            </label>
+                        </fieldset>
+                        <div className="k-actions k-actions-end">
+                            <Button type="button" onClick={close}>
+                                Cancel
+                            </Button>
+                            <Button themeColor="primary" type="button" onClick={submit}>
+                                Submit
+                            </Button>
+                        </div>
+                    </form>
                 </Window>
             )}
         </div>
     );
 };
+
 export default App;

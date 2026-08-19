@@ -178,7 +178,7 @@ You can define your own custom connectors or use the predefined types.
 <code>
 
 
-[ShapeContent]({% slug api_diagram_shapecontent %})
+[ShapeContent]({% slug api_diagram_shapecontent %}) | [ShapeRichTextContent]({% slug api_diagram_shaperichtextcontent %})
 
 
 </code>
@@ -626,6 +626,51 @@ number
 
 Defines the radius of the shape.
 Applicable for the circle shape.
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
+#### resize?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+"auto" | ShapeResize
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+<code>
+
+
+'auto'
+
+
+</code>
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Defines how the shape behaves while resizing.
+
+
+
 
 
 </td>

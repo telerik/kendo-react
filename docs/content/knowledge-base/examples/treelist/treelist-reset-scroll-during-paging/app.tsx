@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {
     TreeList,
+    TreeListHandle,
     mapTreeItem,
     extendDataItem,
     TreeListExpandChangeEvent,
@@ -48,7 +49,7 @@ const App = () => {
                 : [...state.expanded, event.dataItem.id]
         });
     };
-    const treeListRef = React.useRef<TreeList>(null);
+    const treeListRef = React.useRef<TreeListHandle>(null);
     const onPageChange = (event: TreeListPageChangeEvent) => {
         const skip = event.skip || 0;
         const take = event.take || 20;

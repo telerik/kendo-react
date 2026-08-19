@@ -47,7 +47,7 @@ To implement cell click-to-copy functionality:
 
 The following example demonstrates a complete implementation:
 
-{% meta height:550 %}
+{% meta height:660 %}
 {% embed_file grid/grid-cell-click-copy-to-clipboard/app.tsx preview %}
 {% embed_file grid/grid-cell-click-copy-to-clipboard/main.tsx %}
 {% embed_file grid/grid-cell-click-copy-to-clipboard/products.ts %}

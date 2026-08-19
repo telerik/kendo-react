@@ -42,9 +42,6 @@ position: 1
         <a href="{% slug api_upload_upload %}">Upload</a>
     </li>
     <li class="api-item">
-        <a href="{% slug api_upload_upload %}">Upload</a>
-    </li>
-    <li class="api-item">
         <a href="{% slug api_upload_uploadui %}">UploadUI</a>
     </li>
   </ul>
@@ -82,6 +79,9 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_upload_uploadfilerestrictions %}">UploadFileRestrictions</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_upload_uploadhandle %}">UploadHandle</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_upload_uploadhttpheaders %}">UploadHttpHeaders</a>
@@ -130,24 +130,6 @@ position: 1
 <span class="section-key">
 
 
-## Class
-
-
-</span>
-
-
-  <ul class="api-item-list">
-    <li class="api-item">
-        <a href="{% slug api_upload_upload %}">Upload</a>
-    </li>
-  </ul>
-</div>
-<div class="api-index-section">
-
-
-<span class="section-key">
-
-
 ## Union
 
 
@@ -157,6 +139,24 @@ position: 1
   <ul class="api-item-list">
     <li class="api-item">
         <a href="{% slug api_upload_uploadactionslayout %}">UploadActionsLayout</a>
+    </li>
+  </ul>
+</div>
+<div class="api-index-section">
+
+
+<span class="section-key">
+
+
+## Class
+
+
+</span>
+
+
+  <ul class="api-item-list">
+    <li class="api-item">
+        <a href="{% slug api_upload_uploaddefaultprops %}">uploadDefaultProps</a>
     </li>
   </ul>
 </div>

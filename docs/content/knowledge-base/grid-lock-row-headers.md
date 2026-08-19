@@ -41,7 +41,7 @@ This will required the following:
 
 The following example showcase this in action:
 
-{% meta height:760 %}
+{% meta height:830 %}
 {% embed_file grid/lock-row-headers/app.jsx preview %}
 {% embed_file grid/lock-row-headers/main.jsx %}
 {% endmeta %}

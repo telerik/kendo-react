@@ -16,7 +16,7 @@ The following example demonstrates how to render an item in two different states
 In the example, we keep the state for each item, to only update that item during editing instead of the entire list.
 Updating the entire list is also possible if we have depending values like aggregates.
 
-{% meta height:580 %}
+{% meta height:680 %}
 {% embed_file editing/func/app.tsx preview %}
 {% embed_file editing/func/main.tsx %}
 {% embed_file editing/func/myItemRender.tsx %}

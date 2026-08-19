@@ -32,7 +32,7 @@ How to position the latest response on the bottom of the UI?
 
 ## Solution
 
-To position the latest response on the bottom of the UI, append the responses at the end of the [`outputs`]({% slug api_conversational-ui_aipromptprops %}#toc-outputs) array.
+To position the latest response on the bottom of the UI, append the responses at the end of the [`outputs`]({% slug api_conversational-ui_aipromptprops %}) array.
 
 This example showcases the approach above in action:
 

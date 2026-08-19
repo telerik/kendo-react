@@ -36,7 +36,7 @@ You can render icons next to the titles of the PanelBar items by either:
 -   Setting the [`icon`]({% slug api_layout_panelbaritemprops %}#toc-icon) property (for build-in icons), or
 -   Setting the [`iconClass`]({% slug api_layout_panelbaritemprops %}#toc-iconclass) property (for custom icons).
 
-{% meta height:700 %}
+{% meta height:740 %}
 {% embed_file panelbar/items/titles/icons/func/app.tsx preview %}
 {% embed_file panelbar/items/titles/icons/func/main.tsx %}
 {% embed_file panelbar/items/titles/icons/func/styles.css %}

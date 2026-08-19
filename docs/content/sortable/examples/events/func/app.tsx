@@ -1,5 +1,13 @@
 import * as React from 'react';
-import { Sortable, SortableItemUIProps, SortableOnDragStartEvent, SortableOnDragOverEvent, SortableOnNavigateEvent, SortableOnDragEndEvent } from '@progress/kendo-react-sortable';
+import {
+    Sortable,
+    SortableItemUIProps,
+    SortableOnDragStartEvent,
+    SortableOnDragOverEvent,
+    SortableOnNavigateEvent,
+    SortableOnDragEndEvent
+} from '@progress/kendo-react-sortable';
+import { EventLog } from '@docs-shared/EventLog';
 
 const getBaseItemStyle = (isActive) => ({
     height: 70,
@@ -17,24 +25,24 @@ const getBaseItemStyle = (isActive) => ({
 
 const SortableItemUI = (props: SortableItemUIProps) => {
     const { isDisabled, isActive, style, attributes, dataItem, forwardRef } = props;
-    const classNames = [ 'col-xs-6 col-sm-3' ];
+    const classNames = ['col-xs-6 col-sm-3'];
 
     if (isDisabled) {
         classNames.push('k-disabled');
     }
 
     return (
-      <div
-        ref={forwardRef}
-        {...attributes}
-        style={{
+        <div
+            ref={forwardRef}
+            {...attributes}
+            style={{
                 ...getBaseItemStyle(isActive),
                 ...style
             }}
-        className={classNames.join(' ')}
+            className={classNames.join(' ')}
         >
-        {dataItem.text}
-      </div>
+            {dataItem.text}
+        </div>
     );
 };
 
@@ -51,52 +59,41 @@ const App = () => {
     ]);
     const [events, setEvents] = React.useState<string[]>([]);
 
-    const element = React.useRef<HTMLUListElement | HTMLUListElement>(null);
-
-    React.useEffect(()=>{
-        if(element.current){
-            element.current.scrollTop = element.current.scrollHeight;
-        }
-    })
+    const log = (message: string) => setEvents((prev) => [message, ...prev]);
 
     const onDragStart = (event: SortableOnDragStartEvent) => {
-        setEvents([...events, `Drag start: previous index:${event.prevIndex}`]);
-    }
+        log(`Drag start: previous index:${event.prevIndex}`);
+    };
 
     const onDragOver = (event: SortableOnDragOverEvent) => {
         setData(event.newState);
-        setEvents([...events, `Drag over: previous index:${event.prevIndex}, next index: ${event.nextIndex}` ]);
-    }
+        log(`Drag over: previous index:${event.prevIndex}, next index: ${event.nextIndex}`);
+    };
 
     const onDragEnd = (event: SortableOnDragEndEvent) => {
-        setEvents([...events, `Drag end: previous index:${event.prevIndex}, next index: ${event.nextIndex}`]);
-    }
+        log(`Drag end: previous index:${event.prevIndex}, next index: ${event.nextIndex}`);
+    };
 
     const onNavigate = (event: SortableOnNavigateEvent) => {
         setData(event.newState);
-        setEvents([...events, `Keyboard navigation: previous index:${event.prevIndex}, next index: ${event.nextIndex}`]);
-    }
+        log(`Keyboard navigation: previous index:${event.prevIndex}, next index: ${event.nextIndex}`);
+    };
 
     return (
-      <div className="container-fluid">
-        <Sortable
-          idField={'id'}
-          disabledField={'disabled'}
-          data={data}
-
-          itemUI={SortableItemUI}
-
-          onDragStart={onDragStart}
-          onDragOver={onDragOver}
-          onDragEnd={onDragEnd}
-          onNavigate={onNavigate}
-              />
-        <div className={'example-config'} style={{ marginTop: 20 }}>
-          <ul className={'event-log'} ref={element}>
-            {events.map((event, idx) => <li key={idx}>{event}</li>)}
-          </ul>
+        <div className="container-fluid">
+            <EventLog events={events} onClear={() => setEvents([])}>
+                <Sortable
+                    idField={'id'}
+                    disabledField={'disabled'}
+                    data={data}
+                    itemUI={SortableItemUI}
+                    onDragStart={onDragStart}
+                    onDragOver={onDragOver}
+                    onDragEnd={onDragEnd}
+                    onNavigate={onNavigate}
+                />
+            </EventLog>
         </div>
-      </div>
     );
-}
+};
 export default App;

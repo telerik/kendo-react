@@ -23,7 +23,7 @@ The [`cardWidth`]({% slug api_orgchart_orgchartprops %}#toc-cardWidth) property 
 
 The [`cardHeight`]({% slug api_orgchart_orgchartprops %}#toc-cardHeight) property sets the height of the individual cards in the organizational chart. The default value is `100px`.
 
-{% meta height:680 %}
+{% meta height:780 %}
 {% embed_file appearance/card-height/app.tsx preview %}
 {% embed_file appearance/card-height/main.tsx %}
 {% endmeta %}
@@ -32,7 +32,7 @@ The [`cardHeight`]({% slug api_orgchart_orgchartprops %}#toc-cardHeight) propert
 
 The [`verticalLine`]({% slug api_orgchart_orgchartprops %}#toc-verticalLine) property sets the height of the vertical lines that connect the cards to each other in the hierarchy. The default value is `60px`.
 
-{% meta height:680 %}
+{% meta height:740 %}
 {% embed_file appearance/vertical-line/app.tsx preview %}
 {% embed_file appearance/vertical-line/main.tsx %}
 {% endmeta %}
@@ -41,7 +41,7 @@ The [`verticalLine`]({% slug api_orgchart_orgchartprops %}#toc-verticalLine) pro
 
 The [`groupTitleHeight`]({% slug api_orgchart_orgchartprops %}#toc-groupTitleHeight) property sets the height of the group title when using the `groupField` property to organize cards into groups. The default value is `40px`.
 
-{% meta height:880 %}
+{% meta height:1010 %}
 {% embed_file appearance/group-title-height/app.tsx preview %}
 {% embed_file appearance/group-title-height/main.tsx %}
 {% endmeta %}
@@ -50,7 +50,7 @@ The [`groupTitleHeight`]({% slug api_orgchart_orgchartprops %}#toc-groupTitleHei
 
 The [`groupSubtitleHeight`]({% slug api_orgchart_orgchartprops %}#toc-groupSubtitleHeight) property sets the height of the group subtitle when using the `groupField` property. The default value is `20px`.
 
-{% meta height:800 %}
+{% meta height:930 %}
 {% embed_file appearance/group-subtitle-height/app.tsx preview %}
 {% embed_file appearance/group-subtitle-height/main.tsx %}
 {% endmeta %}
@@ -59,7 +59,7 @@ The [`groupSubtitleHeight`]({% slug api_orgchart_orgchartprops %}#toc-groupSubti
 
 You can customize the card colors using the [`cardsColors`]({% slug api_orgchart_orgchartprops %}#toc-cardsColors) property. It accepts the colors as an array of strings where the color at each index corresponds to the same hierarchical position of the cards.
 
-{% meta height:600 %}
+{% meta height:640 %}
 {% embed_file appearance/colors/app.tsx preview %}
 {% embed_file appearance/colors/main.tsx %}
 {% endmeta %}

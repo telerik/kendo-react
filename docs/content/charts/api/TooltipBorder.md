@@ -69,7 +69,7 @@ The color of the border line. Accepts a valid CSS color string, including HEX an
 <code>
 
 
-string | number
+number
 
 
 </code>

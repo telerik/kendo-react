@@ -14,12 +14,14 @@ This guide provides essential information about using the KendoReact Gantt packa
 
 After completing this guide, you will be able to reproduce the following example.
 
-{% meta height:580 %}
+{% meta height:680 %}
 {% embed_file get-started/func/app.tsx preview %}
 {% embed_file get-started/func/main.tsx %}
 {% endmeta %}
 
 ## Before You Begin
+
+To follow the steps in this guide, you need to have a React project set up. If you don't have one, you can create a new React application using Vite by running the following command in your terminal:
 
 ```sh
 npm create vite@latest my-app -- --template react
@@ -31,6 +33,8 @@ This guide requires that you have **basic knowledge of React and TypeScript**, a
 
 ## Install the Component
 
+To install the Gantt package, run the following command in the root folder of your React project:
+
 ```sh
 npm i @progress/kendo-react-gantt
 ```
@@ -41,7 +45,7 @@ After installing the package, import the Gantt component in the React App. To us
 
 In the App component file of your React project (for example, src/App.js), add the imports.
 
-````jsx-no-run
+```jsx-no-run
     // ES2015 module syntax
     import {
     Gantt,
@@ -53,7 +57,7 @@ In the App component file of your React project (for example, src/App.js), add t
     GanttDependencyModelFields
     } from '@progress/kendo-react-gantt';
     import { simpleDependencies, simpleTasks } from './simpleData';
-    ```
+```
 
 ```jsx-no-run
     // ES2015 module syntax
@@ -67,7 +71,7 @@ In the App component file of your React project (for example, src/App.js), add t
     GanttDependencyModelFields
     } = require('@progress/kendo-react-gantt');
     const { simpleDependencies, simpleTasks } = require('./simpleData');
-````
+```
 
 ## Using the Component
 

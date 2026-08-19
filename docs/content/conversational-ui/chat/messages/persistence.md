@@ -25,7 +25,7 @@ To implement messages persistence, save the messages array to your server's data
 
 > The following example uses localStorage for demonstration purposes only. In production applications, replace localStorage operations with appropriate API calls to your server endpoints for storing and retrieving messages.
 
-{% meta height:970 %}
+{% meta height:1030 %}
 {% embed_file chat/messages/messages-persistence/app.tsx preview %}
 {% embed_file chat/messages/messages-persistence/main.tsx %}
 {% endmeta %}
@@ -38,7 +38,7 @@ The Chat component provides comprehensive control over the message input through
 
 Use the `inputValue` property to set the value of the message box and handle the `onInputValueChange` event whenever the user types in the message input box. This allows you to track changes in real-time and helps implement features like auto-saving drafts, validating input, or pre-filling the message box based on user context.
 
-{% meta height:900 %}
+{% meta height:970 %}
 {% embed_file chat/messages/persistence/app.tsx preview %}
 {% embed_file chat/messages/persistence/main.tsx %}
 {% endmeta %}

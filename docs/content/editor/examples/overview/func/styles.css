@@ -1,0 +1,96 @@
+.demo-container {
+    padding: var(--kendo-spacing-6);
+}
+
+.composer-card {
+    border: 1px solid var(--kendo-color-border);
+    border-radius: var(--kendo-border-radius-lg);
+    overflow: hidden;
+    background: var(--kendo-color-surface-alt);
+    box-shadow: 0 2px 8px color-mix(in srgb, var(--kendo-color-on-app-surface) 8%, transparent);
+}
+
+.composer-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--kendo-spacing-4) var(--kendo-spacing-6);
+    margin-bottom: var(--kendo-spacing-4);
+    background: var(--kendo-color-surface-alt);
+}
+
+.meta-left {
+    display: flex;
+    align-items: center;
+    gap: var(--kendo-spacing-3);
+}
+
+.meta-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--kendo-color-primary);
+    color: var(--kendo-color-on-primary);
+    font-weight: 700;
+    font-size: var(--kendo-font-size-md);
+}
+
+.meta-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--kendo-spacing-0\.5);
+}
+
+.meta-author {
+    font-weight: 600;
+    font-size: var(--kendo-font-size-md);
+    color: var(--kendo-color-on-app-surface);
+}
+
+.meta-details {
+    font-size: var(--kendo-font-size-md);
+    color: var(--kendo-color-subtle);
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--kendo-spacing-1) var(--kendo-spacing-3);
+    font-size: var(--kendo-font-size-md);
+    background: var(--kendo-color-warning-subtle);
+    color: var(--kendo-color-warning-on-subtle);
+    border-radius: var(--kendo-border-radius-full);
+    font-weight: 600;
+}
+
+.blog-editor {
+    border: none;
+    border-radius: 0;
+    height: 680px;
+}
+
+.composer-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--kendo-spacing-3) var(--kendo-spacing-6);
+    border-top: 1px solid var(--kendo-color-border);
+    color: var(--kendo-color-subtle);
+    font-size: var(--kendo-font-size-md);
+}
+
+@media (min-width: 768px) {
+    .demo-container {
+        padding: var(--kendo-spacing-12);
+    }
+}
+
+@media (min-width: 1024px) {
+    .demo-container {
+        max-width: 960px;
+        margin-inline: auto;
+    }
+}

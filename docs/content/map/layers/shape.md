@@ -14,7 +14,7 @@ The Map Shape layer displays vector maps encoded in the industry-standard [GeoJS
 
 The following example demonstrates how to bind a Shape layer to GeoJSON data:
 
-{% meta height:660 %}
+{% meta height:780 %}
 {% embed_file layers/shape/func/app.tsx preview %}
 {% embed_file layers/shape/func/main.tsx %}
 {% endmeta %}
@@ -25,7 +25,7 @@ The layer is rendered using the [Drawing API]({% slug overview_drawing %}) and c
 
 The following example demonstrates how the set the shape color in the [ShapeCreatedEvent]({% slug api_map_shapecreatedevent %})
 
-{% meta height:660 %}
+{% meta height:780 %}
 {% embed_file layers/shape-custom/func/app.tsx preview %}
 {% embed_file layers/shape-custom/func/main.tsx %}
 {% endmeta %}
@@ -42,7 +42,7 @@ The available fields in the shape tooltip [renderer context]({% slug api_map_sha
 
 The shape tooltip is demonstrated in the example below:
 
-{% meta height:660 %}
+{% meta height:780 %}
 {% embed_file layers/shape-tooltip/func/app.tsx preview %}
 {% embed_file layers/shape-tooltip/func/main.tsx %}
 {% endmeta %}

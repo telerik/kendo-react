@@ -1,17 +1,15 @@
 ---
 title: Pinning Rows
-description: 'Pin rows to the top or bottom of the KendoReact Data Grid so they remain visible while scrolling.'
-components: ['datagrid']
+description: 'Pin rows to the top or bottom of the KendoReact Grid so they remain visible while scrolling.'
+components: ['grid']
 slug: pinning_rows_grid
 position: 35
 tier: premium
-tag: new
-release_tag: Q2 2026
 ---
 
 # Pinning Rows
 
-The Data Grid provides built-in row pinning that lets you lock rows at the top or bottom of the scrollable area. Pinned rows stay visible while the user scrolls through the body data and are immune to filtering and pagination.
+The Grid provides built-in row pinning that lets you lock rows at the top or bottom of the scrollable area. Pinned rows stay visible while the user scrolls through the body data and are immune to filtering and pagination.
 
 <CtaPanelOverview></CtaPanelOverview>
 
@@ -62,6 +60,8 @@ The following example demonstrates row pinning in action. Click the pin icon in 
 ## Controlled Mode
 
 When you need full control over which rows are pinned, provide the [`pinnedTopRows`](slug:api_grid_gridprops#pinnedTopRows) and/or [`pinnedBottomRows`](slug:api_grid_gridprops#pinnedBottomRows) arrays and handle the [`onRowPinChange`](slug:api_grid_gridprops#onRowPinChange) event to update them. The [`GridRowPinChangeEvent`](slug:api_grid_gridrowpinchangeevent) provides the updated arrays and the affected data item.
+
+The following example demonstrates controlled row pinning using the context menu to pin rows to the top or bottom, with `pinnedTopRows` and `pinnedBottomRows` managed externally via state.
 
 {% meta height:480 %}
 {% embed_file row-pinning/controlled/func/app.tsx preview %}

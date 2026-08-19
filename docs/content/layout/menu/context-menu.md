@@ -1,7 +1,7 @@
 ---
 title: Context Menu
 description: 'Use the KendoReact Context Menu in a React Project.'
-components: ["menu"]
+components: ['menu']
 slug: overview_menu_contextmenu
 position: 2
 ---
@@ -17,6 +17,7 @@ The following example demonstrates the Context Menu in action.
 {% meta height:300 %}
 {% embed_file menu/context-menu/func/app.tsx preview %}
 {% embed_file menu/context-menu/func/main.tsx %}
+{% embed_file menu/context-menu/func/styles.css %}
 {% endmeta %}
 
 ## Suggested Links

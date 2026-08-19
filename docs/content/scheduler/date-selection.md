@@ -22,7 +22,7 @@ By default, the Scheduler will set its current `date` to `today`. While this is 
 
 The following example demonstrates how to set the initially selected `date` through the `defaultDate` property.
 
-{% meta height:770 %}
+{% meta height:780 %}
 {% embed_file date-selection/uncontrolled/func/app.tsx preview %}
 {% embed_file date-selection/uncontrolled/func/main.tsx %}
 {% endmeta %}
@@ -52,7 +52,7 @@ To be able to fully control the date of the scheduler, provide a pair of the [`d
 
 The following example demonstrates how to change the `date` only when a specific requirement is met.
 
-{% meta height:860 %}
+{% meta height:870 %}
 {% embed_file date-selection/controlled/func/app.tsx preview %}
 {% embed_file date-selection/controlled/func/main.tsx %}
 {% endmeta %}

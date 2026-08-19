@@ -28,24 +28,6 @@ position: 1
 <span class="section-key">
 
 
-## Class
-
-
-</span>
-
-
-  <ul class="api-item-list">
-    <li class="api-item">
-        <a href="{% slug api_orgchart_orgchart %}">OrgChart</a>
-    </li>
-  </ul>
-</div>
-<div class="api-index-section">
-
-
-<span class="section-key">
-
-
 ## Component
 
 

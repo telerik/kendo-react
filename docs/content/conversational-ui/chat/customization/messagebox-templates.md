@@ -23,7 +23,7 @@ The demo showcases two messageBox implementations:
 
 > **Note**: The Enhanced template is a custom implementation that demonstrates how to extend the messageBox functionality. You can implement any custom input controls, validation, action buttons, or styling based on your specific requirements.
 
-{% meta height:830 %}
+{% meta height:940 %}
 {% embed_file chat/customization/messagebox-templates/app.tsx preview %}
 {% embed_file chat/customization/messagebox-templates/main.tsx %}
 {% embed_file chat/customization/messagebox-templates/templates.tsx %}

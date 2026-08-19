@@ -56,7 +56,7 @@ const MyCustomSlot = (props) => {
 
 Replace `MyCustomShowMoreButton` with your custom component. This approach ensures the default date rendering remains intact alongside your custom elements.
 
-{% meta height:600 %}
+{% meta height:680 %}
 {% embed_file scheduler/item-customization/app.tsx preview %}
 {% embed_file scheduler/item-customization/main.tsx %}
 {% embed_file scheduler/item-customization/events-utc.ts %}

@@ -7,7 +7,7 @@ position: 9
 
 # Configuring Child Components
 
-By default, the DateRangePicker sets only the [`value`]({% slug api_dateinputs_daterangepicker %}#toc-value) and [`show`]({% slug api_dateinputs_daterangepicker %}#toc-show) properties for its child components.
+By default, the DateRangePicker sets only the [`value`]({% slug api_dateinputs_daterangepickerprops %}) and [`show`]({% slug api_dateinputs_daterangepickerprops %}) properties for its child components.
 
 To implement additional settings, use the options which the DateRangePicker provides for the following child components:
 

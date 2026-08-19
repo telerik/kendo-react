@@ -1,8 +1,8 @@
 ---
-title: Using Column Chooser with Initially Hidden Columns in KendoReact Data Grid
-description: Learn how to use the GridColumnMenuColumnsChooser component to manage the visibility of columns initially set as hidden in the KendoReact Data Grid.
+title: Using Column Chooser with Initially Hidden Columns in KendoReact Grid
+description: Learn how to use the GridColumnMenuColumnsChooser component to manage the visibility of columns initially set as hidden in the KendoReact Grid.
 type: how-to
-page_title: Resolving Issues with Initially Hidden Columns in KendoReact Data Grid Column Chooser
+page_title: Resolving Issues with Initially Hidden Columns in KendoReact Grid Column Chooser
 slug: grid-column-chooser-hidden-columns
 tags: grid, kendoreact, columns, columnchooser, defaultcolumnsstate
 ticketid: 1701248
@@ -28,7 +28,7 @@ components: ["grid"]
 
 ## Description
 
-I want to use the GridColumnMenuColumnsChooser component to manage the visibility of columns in the KendoReact Data Grid. My grid has columns that are initially hidden by setting the `GridColumn.hidden` prop to `true`. However, the column chooser does not update the visible state of these columns, and the `columnsState` prop incorrectly shows the column as visible.
+I want to use the GridColumnMenuColumnsChooser component to manage the visibility of columns in the KendoReact Grid. My grid has columns that are initially hidden by setting the `GridColumn.hidden` prop to `true`. However, the column chooser does not update the visible state of these columns, and the `columnsState` prop incorrectly shows the column as visible.
 
 This knowledge base article also answers the following questions:
 
@@ -38,7 +38,7 @@ This knowledge base article also answers the following questions:
 
 ## Solution
 
-To manage the visibility of columns that are initially hidden using the GridColumnMenuColumnsChooser component, use the [`defaultColumnsState`](slug:api_grid_gridprops#toc-defaultcolumnsstate) property of the KendoReact Data Grid. This property allows the built-in state management to recognize the initial visibility of columns.
+To manage the visibility of columns that are initially hidden using the GridColumnMenuColumnsChooser component, use the [`defaultColumnsState`](slug:api_grid_gridprops#toc-defaultcolumnsstate) property of the KendoReact Grid. This property allows the built-in state management to recognize the initial visibility of columns.
 
 Follow these steps:
 

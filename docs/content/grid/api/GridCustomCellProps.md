@@ -269,6 +269,53 @@ The total number of rendered columns in the Grid. Optional.
 <td class="table-cell-name">
 
 
+#### contentColumnSpan?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+number
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+<code>
+
+
+undefined
+
+
+</code>
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Pre-calculated column span for the content cell of this group column.
+Applicable only when `groupable.displayMode` is `'multipleColumns'` or `'singleColumn'` and `rowType` is `'groupFooter'` or `'groupHeader'`.
+Use this in the `colSpan` attribute of the cell containing the main group content.
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### dataIndex
 
 
@@ -482,6 +529,51 @@ a standard date format, or a custom date format.
 <td class="table-cell-name">
 
 
+#### getColumnIndexForField?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+(field: string) => undefined | number
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Looks up the rendered column index of a leaf column by its `field`, among the columns
+that come after this group column's own cell (the same columns covered by
+`trailingGroupColumnSpan`). Use this to align filler/aggregate cells rendered by a
+custom `groupColumn.cells.groupHeader` / `groupColumn.cells.groupFooter` template with
+a specific data column, without hardcoding column counts or positions.
+Applicable only when `groupable.displayMode` is `'multipleColumns'` or `'singleColumn'`
+and `rowType` is `'groupFooter'` or `'groupHeader'`. Returns `undefined` if the
+specified `field` is not among the rendered columns.
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### isAlt?
 
 
@@ -579,6 +671,105 @@ boolean
 
 
 Indicates if the cell is sorted.
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
+#### isSpacerCell?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+boolean
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+<code>
+
+
+false
+
+
+</code>
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Indicates that this invocation of the custom `groupColumn.cells.groupHeader` /
+`groupColumn.cells.groupFooter` component is for a "filler" cell position that
+carries no content of its own, rather than the level's real toggle/value content
+cell — ancestor-level spacer columns when `groupable.displayMode` is
+`'multipleColumns'`, or (when `displayMode` is `'default'`) ancestor-level indent
+cells on the group-header row and every cell on the group-footer row. Check this
+flag to render simplified/blank content for such positions instead of the level's
+normal group header/footer content.
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
+#### leadingGroupColumnSpan?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+number
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+<code>
+
+
+undefined
+
+
+</code>
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Pre-calculated column span for ancestor-level group columns (columns before this group level).
+Applicable only when `groupable.displayMode` is `'multipleColumns'` or `'singleColumn'` and `rowType` is `'groupFooter'` or `'groupHeader'`.
+Use this in the `colSpan` attribute of ancestor-level spacer cells.
+
+
+
 
 
 </td>
@@ -826,6 +1017,53 @@ rendered in very rare cases when we have grouping and sticky columns.
 
 
 The props and attributes that are applied to the td element by default.
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
+#### trailingGroupColumnSpan?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+number
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+<code>
+
+
+undefined
+
+
+</code>
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Pre-calculated column span for descendant-level group columns (columns after this group level).
+Applicable only when `groupable.displayMode` is `'multipleColumns'` or `'singleColumn'` and `rowType` is `'groupFooter'` or `'groupHeader'`.
+Use this in the `colSpan` attribute of descendant-level spacer cells.
+
+
+
 
 
 </td>

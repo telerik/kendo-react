@@ -2,7 +2,7 @@
 title: Overview
 page_title: 'React Grid Layout - Overview | KendoReact Docs & Demos'
 description: 'The React Grid Layout component allows you to easily arrange the contents of the component in rows and columns in a grid structure.'
-components: ["gridlayout"]
+components: ['gridlayout']
 slug: overview_gridlayout
 position: 1
 ---
@@ -17,7 +17,7 @@ It offers grid-layout system with rows and columns. It is based on the [CSS Grid
 
 The following example demonstrates the React Grid Layout component in action and also showcases other KendoReact components&mdash;the [Calendar]({% slug overview_calendar %}), [ChipList]({% slug overview_chiplist %}) and [Card]({% slug overview_card %}) components. The components are arranged in a grid structure by defining the columns, rows, and gaps between them.
 
-{% meta height:920 %}
+{% meta height:1120 %}
 {% embed_file gridlayout/overview/func/app.tsx preview %}
 {% embed_file gridlayout/overview/func/main.tsx %}
 {% embed_file gridlayout/overview/func/styles.css %}

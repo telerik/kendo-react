@@ -1,16 +1,29 @@
 import * as React from 'react';
+
 import { RadioButton, RadioButtonChangeEvent } from '@progress/kendo-react-inputs';
-import { Label } from '@progress/kendo-react-labels';
+import { useConfigurator, sizeOptions } from '@docs-shared/configurator';
 
 const App = () => {
     const [selectedCommunication, setSelectedCommunication] = React.useState('email');
+    const config = useConfigurator({
+        sections: [
+            {
+                label: 'Size',
+                controls: [
+                    {
+                        type: 'segmented',
+                        name: 'size',
+                        options: sizeOptions(['default', 'small', 'medium', 'large']),
+                        defaultValue: 'default'
+                    }
+                ]
+            }
+        ]
+    });
 
-    const handleCommunicationChange = React.useCallback(
-        (e: RadioButtonChangeEvent) => {
-            setSelectedCommunication(e.value);
-        },
-        [setSelectedCommunication]
-    );
+    const handleCommunicationChange = React.useCallback((e: RadioButtonChangeEvent) => {
+        setSelectedCommunication(e.value);
+    }, []);
 
     return (
         <div className={'k-d-flex k-flex-col k-align-items-center k-gap-lg'}>
@@ -20,7 +33,7 @@ const App = () => {
                     value={'email'}
                     checked={selectedCommunication === 'email'}
                     onChange={handleCommunicationChange}
-                    size={'small'}
+                    size={config.size}
                 />
 
                 <RadioButton
@@ -28,7 +41,7 @@ const App = () => {
                     value={'phone'}
                     checked={selectedCommunication === 'phone'}
                     onChange={handleCommunicationChange}
-                    size={'medium'}
+                    size={config.size}
                 />
 
                 <RadioButton
@@ -36,7 +49,7 @@ const App = () => {
                     value={'text'}
                     checked={selectedCommunication === 'text'}
                     onChange={handleCommunicationChange}
-                    size={'large'}
+                    size={config.size}
                 />
             </div>
         </div>

@@ -50,7 +50,7 @@ Represent the `ref` of the TreeView component.
 <td class="table-cell-comment">
 
 
-
+The current root DOM element or `null`.
 
 
 </td>
@@ -85,7 +85,7 @@ string
 <td class="table-cell-comment">
 
 
-
+Returns the `guid` which is associated with the TreeView.
 
 
 </td>
@@ -120,7 +120,7 @@ Readonly&lt;[TreeViewProps]({% slug api_treeview_treeviewprops %})&gt;
 <td class="table-cell-comment">
 
 
-The props of the TreeViewHandle component.
+The props of the TreeView component.
 
 
 </td>

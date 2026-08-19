@@ -9,26 +9,10 @@ slug: api_layout_menuitem
 # MenuItem
 Represents the MenuItem component.
 
+A [Functional Component](https://react.dev/reference/react/Component).
 
 
 
-#### Parameters
-##### _props
-<code>
 
 
-[MenuItemProps]({% slug api_layout_menuitemprops %})
-
-
-</code>
-
-
-#### Returns
-<code>
-
-
-"null"
-
-
-</code>
 

@@ -1,7 +1,7 @@
 ---
 title: Customizing Fonts
-description: 'Get started with the PDF export functionality of the KendoKendoReact Data Grid allowing you to embed custom fonts in order to render international characters.'
-components: ["datagrid"]
+description: 'Get started with the PDF export functionality of the KendoReact Grid allowing you to embed custom fonts in order to render international characters.'
+components: ['grid']
 slug: customfonts_pdfexport_grid
 position: 50
 subject: PDF Export feature of the Grid

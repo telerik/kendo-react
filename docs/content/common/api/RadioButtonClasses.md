@@ -34,7 +34,7 @@ slug: api_common_radiobuttonclasses
 <code>
 
 
-{ checked?: string; invalid?: string; radio?: string; size?: { large?: string; medium?: string; prefix?: string; small?: string; }; }
+{ checked?: string; disabled?: string; invalid?: string; radio?: string; size?: { large?: string; medium?: string; prefix?: string; small?: string; }; }
 
 
 </code>

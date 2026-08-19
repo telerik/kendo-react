@@ -12,6 +12,13 @@ The MultiColumnComboBox provides a predefined set of appearance options.
 
 Apart from the default vision of the MultiColumnComboBox, these alternative styling options enable you to configure each individual aspect of the appearance of a MultiColumnComboBox.
 
+The following example demonstrates all the available appearance options of the MultiColumnComboBox in a single, configurable demo.
+
+{% meta height:380 %}
+{% embed_file multicolumncombobox/appearance/func/app.tsx preview %}
+{% embed_file multicolumncombobox/appearance/func/main.tsx %}
+{% endmeta %}
+
 ## Size
 
 You can set the size of the MultiColumnComboBox through the [`size`]({% slug api_dropdowns_multicolumncomboboxprops %}#toc-size) property. The MultiColumnComboBox component comes in three different sizes: `small`, `medium` (default), and `large`.

@@ -16,7 +16,7 @@ The main advantage of the Form Wizard is that it allows customers to complete th
 
 The following example demonstrates a Form Wizard (multi-step form) with a validation of the controls on submit:
 
-{% meta height:660 %}
+{% meta height:700 %}
 {% embed_file wizard/overview/func/app.tsx preview %}
 {% embed_file wizard/overview/func/main.tsx %}
 {% endmeta %}

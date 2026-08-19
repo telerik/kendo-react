@@ -1,15 +1,125 @@
-.content {
-    width: 100px;
-    padding: 10px;
-    color: #787878;
-    background-color: #fcf7f8;
-    font-size: 13px;
-    font-family: Helvetica, Arial, sans-serif;
-    letter-spacing: 1px;
-    text-align: center;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+.demo-wrapper {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    padding: 16px;
 }
+
+.app-panel {
+    flex: 1;
+    min-width: 0;
+    border: 1px solid var(--kendo-color-border);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: var(--kendo-color-surface-alt);
+    border-bottom: 1px solid var(--kendo-color-border);
+}
+
+.app-name {
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+}
+
+.app-panel .k-animation-container {
+    display: block;
+    width: 100%;
+}
+
+.notification-panel {
+    width: 100%;
+}
+
+.notification-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--kendo-color-border);
+    gap: 12px;
+}
+
+.notification-dot {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    margin-top: 1px;
+}
+
+.notification-dot-success {
+    background: var(--kendo-color-success);
+}
+
+.notification-dot-warning {
+    background: var(--kendo-color-warning);
+}
+
+.notification-dot-info {
+    background: var(--kendo-color-info);
+}
+
+.notification-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.notification-title {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+.notification-message {
+    font-size: 12px;
+    color: var(--kendo-color-subtle);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.notification-time {
+    flex-shrink: 0;
+    font-size: 11px;
+    color: var(--kendo-color-subtle);
+    white-space: nowrap;
+    padding-top: 2px;
+}
+
+.notification-footer {
+    padding: 8px 12px;
+    text-align: right;
+    background: var(--kendo-color-surface-alt);
+}
+
+.config-panel {
+    flex-shrink: 0;
+    width: 150px;
+}
+
+.config-label {
+    margin: 0 0 10px 0;
+    font-size: 13px;
+}
+
+.radio-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
 .k-radio-label {
     line-height: 1.2;
-    margin-bottom: 0.5rem;
+    cursor: pointer;
 }

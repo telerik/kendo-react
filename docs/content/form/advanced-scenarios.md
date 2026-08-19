@@ -17,6 +17,8 @@ The Form enables you to implement advanced use-case scenarios by using the [`For
 
 You can read the field state without using the KendoReact Field component by utilizing the [`valueGetter`]({% slug api_form_formrenderprops %}#toc-valuegetter) function in the [`FormRenderProps`]({% slug api_form_formrenderprops %}).
 
+The following example demonstrates how to use the [`valueGetter`]({% slug api_form_formrenderprops %}#toc-valuegetter) function to read two numeric field values and display a calculated total outside of a `Field` component.
+
 {% meta height:280 %}
 {% embed_file advanced/reading/func/app.tsx preview %}
 {% embed_file advanced/reading/func/main.tsx %}
@@ -25,6 +27,8 @@ You can read the field state without using the KendoReact Field component by uti
 ## Changing the Field Value
 
 You can emit the field changes without using the KendoReact Field component by utilizing the [`onChange`]({% slug api_form_formrenderprops %}#toc-onchange) callback in the [`FormRenderProps`]({% slug api_form_formrenderprops %}).
+
+The following example demonstrates how to use the [`onChange`]({% slug api_form_formrenderprops %}#toc-onchange) callback to programmatically reset a numeric field value to `0` when a button is clicked.
 
 {% meta height:260 %}
 {% embed_file advanced/changing/func/app.tsx preview %}

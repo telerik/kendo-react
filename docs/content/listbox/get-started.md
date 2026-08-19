@@ -14,12 +14,14 @@ This guide provides essential information about using the KendoReact ListBox pac
 
 After completing this guide, you will have a free React [ListBox](slug://overview_listbox) up and running.
 
-{% meta height:540 %}
+{% meta height:610 %}
 {% embed_file get-started/func/app.tsx preview %}
 {% embed_file get-started/func/main.tsx %}
 {% endmeta %}
 
 ## Before You Begin
+
+To follow the steps in this guide, you need to have a React project set up. If you don't have one, you can create a new React application using Vite by running the following command in your terminal:
 
 ```sh
 npm create vite@latest my-app -- --template react
@@ -31,6 +33,8 @@ This guide requires that you have **basic knowledge of React and TypeScript**, a
 
 ## Install the Component
 
+To install the ListBox package, run the following command in the root folder of your React project:
+
 ```sh
 npm i @progress/kendo-react-listbox
 ```
@@ -38,6 +42,8 @@ npm i @progress/kendo-react-listbox
 Run these commands in the root of your React project to install the KendoReact ListBox package and its [dependencies](#kendoreact-listbox-dependencies), and the Kendo UI [Default theme](https://www.telerik.com/kendo-react-ui/components/styling/theme-default/).
 
 ## Import the Component
+
+Place the `import` statements in the App component file (for example: `src/App.tsx`) for your project.
 
 ```tsx
 import {
@@ -48,8 +54,6 @@ import {
     ListBoxItemClickEvent
 } from '@progress/kendo-react-listbox';
 ```
-
-Place the `import` statements in the App component file (for example: `src/App.tsx`) for your project.
 
 ## Use the Component
 

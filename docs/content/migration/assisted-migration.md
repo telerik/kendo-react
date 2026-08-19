@@ -115,7 +115,7 @@ The table below lists the components that introduce breaking changes for the spe
 
 | Migration Path  | Affected Components with Breaking Changes                                                                                                                                                                                      |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| From v10 to v11 | <ul><li>[Data Grid](slug://available_codemods#data-grid)</li><li>[DateInputs](slug://available_codemods#date-inputs)</li><li>[Dialogs](slug://available_codemods#dialogs)</li><li>[TreeList](slug://available_codemods#treelist)</li></ul> |
+| From v10 to v11 | <ul><li>[Grid](slug://available_codemods#data-grid)</li><li>[DateInputs](slug://available_codemods#date-inputs)</li><li>[Dialogs](slug://available_codemods#dialogs)</li><li>[TreeList](slug://available_codemods#treelist)</li></ul> |
 | From v11 to v12 | <ul><li>[Chat](slug://available_codemods#chat)</li></ul> |
 
 ## Suggested Links

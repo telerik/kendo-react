@@ -17,7 +17,7 @@ The Chat component supports the following appearance customization options:
 -   [Avatar Visibility](#avatar-visibility)&mdash;Control whether avatars are displayed for message groups
 -   [Username Visibility](#username-visibility)&mdash;Control whether author names are displayed for message groups
 -   [Timestamp Visibility](#timestamp-visibility)&mdash;Control when timestamps are displayed for messages
--   [Role-Specific Configuration](#role-specific-configuration)&mdash;Customize appearance differently for author versus receiver messages
+-   [Role-Specific Configuration](slug:messages_role_specific_configuration_chat)&mdash;Customize appearance differently for author versus receiver messages
 
 ## Expanding and Collapsing Messages
 
@@ -27,7 +27,7 @@ To improve readability, you can enable the expanding and collapsing functionalit
 
 To enable this feature, set the [`allowMessageCollapse`](slug:api_conversational-ui_chatprops#allowmessagecollapse) property of the Chat to `true`.
 
-{% meta height:800 %}
+{% meta height:860 %}
 {% embed_file chat/messages/collapse/app.tsx preview %}
 {% embed_file chat/messages/collapse/main.tsx %}
 {% endmeta %}
@@ -43,7 +43,7 @@ Apart from the standard `width` and `height` properties, the Chat also provides 
 
 These dimension properties work together to provide a flexible layout system that adapts to different screen sizes and design requirements while maintaining optimal readability of the chat messages.
 
-{% meta height:750 %}
+{% meta height:830 %}
 {% embed_file chat/messages/width/app.tsx preview %}
 {% embed_file chat/messages/width/main.tsx %}
 {% endmeta %}
@@ -52,7 +52,7 @@ These dimension properties work together to provide a flexible layout system tha
 
 The [`showAvatar`](slug:api_conversational-ui_chatprops#showavatar) property controls whether avatars are displayed for message groups. By default, avatars are visible.
 
-{% meta height:700 %}
+{% meta height:780 %}
 {% embed_file chat/messages/show-avatar/app.tsx preview %}
 {% embed_file chat/messages/show-avatar/main.tsx %}
 {% endmeta %}
@@ -61,7 +61,7 @@ The [`showAvatar`](slug:api_conversational-ui_chatprops#showavatar) property con
 
 The [`showUsername`](slug:api_conversational-ui_chatprops#showusername) property controls whether author names are displayed for message groups. By default, usernames are visible.
 
-{% meta height:700 %}
+{% meta height:780 %}
 {% embed_file chat/messages/show-username/app.tsx preview %}
 {% embed_file chat/messages/show-username/main.tsx %}
 {% endmeta %}
@@ -70,7 +70,7 @@ The [`showUsername`](slug:api_conversational-ui_chatprops#showusername) property
 
 The [`timestampVisibility`](slug:api_conversational-ui_chatprops#timestampvisibility) property controls when timestamps are displayed for messages. The available modes are `'onFocus'` (default) which shows timestamps only for selected messages, and `'hidden'` which never displays timestamps.
 
-{% meta height:700 %}
+{% meta height:780 %}
 {% embed_file chat/messages/timestamp-visibility/app.tsx preview %}
 {% embed_file chat/messages/timestamp-visibility/main.tsx %}
 {% endmeta %}

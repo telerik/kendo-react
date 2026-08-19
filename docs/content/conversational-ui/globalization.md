@@ -14,7 +14,7 @@ For more information on how globalization practices are implemented in KendoReac
 
 The following example demonstrates how to utilize the globalization aspects of the Chat.
 
-{% meta height:680 %}
+{% meta height:800 %}
 {% embed_file globalization/func/app.tsx preview %}
 {% embed_file globalization/func/main.tsx %}
 {% endmeta %}
@@ -36,7 +36,7 @@ The Chat does not provide built-in translated messages.
 
 The following example demonstrates how to utilize the RTL support for the Chat.
 
-{% meta height:680 %}
+{% meta height:780 %}
 {% embed_file rtl/func/app.tsx preview %}
 {% embed_file rtl/func/main.tsx %}
 {% endmeta %}

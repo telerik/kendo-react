@@ -17,7 +17,6 @@ The following demo lets you configure the views within which the user can naviga
 {% meta height:610 %}
 {% embed_file calendar/view/func/app.tsx preview %}
 {% embed_file calendar/view/func/main.tsx %}
-{% embed_file calendar/view/func/ViewConfigurator.tsx %}
 {% endmeta %}
 
 ## Suggested Links

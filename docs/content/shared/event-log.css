@@ -1,0 +1,281 @@
+.event-log-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.event-log-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.event-log-panel {
+    /* Bridged to docs-builder's site-wide dark mode (see apps/docs/main.tsx's
+   `dark-mode-changed` handler) — the fallbacks below are today's light-mode hexes, so
+   nothing changes when running standalone or in docs-builder's light mode. Dark values
+   confirmed against the "Event Log" dark spec, Figma node 15245:43630. */
+    --color-text-paragraph: var(--text-secondary, #383f55);
+    --color-text-label: var(--text-label, #536071);
+    --color-text-code: var(--text-code, var(--text-primary, #000000));
+    --color-bg: var(--bg-search, #f5f6f7);
+    --color-border: var(--demo-source-file-hover-border, #b3bfc7);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 240px;
+    font-family: Metric, Helvetica, Arial, sans-serif;
+    overflow: hidden;
+    margin-top: 16px;
+    flex-shrink: 0;
+    margin-inline: -54px;
+    margin-bottom: -76px;
+}
+
+.event-log-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+    padding: 8px 8px 8px 20px;
+    flex-shrink: 0;
+    height: 40px;
+    box-sizing: border-box;
+}
+
+.event-log-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-text-label);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    flex: 1;
+    min-width: 0;
+}
+.event-log-title svg {
+    flex-shrink: 0;
+    color: var(--color-text-label);
+}
+
+.event-log-clear {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 99px;
+    color: var(--color-text-paragraph);
+    flex-shrink: 0;
+    outline: none;
+    padding: 0;
+}
+
+.event-log-clear:hover:not(:disabled) {
+    background: var(--demo-icon-button-hover-bg, #e0e5e8);
+}
+
+.event-log-clear:focus {
+    outline: unset;
+}
+
+.event-log-clear:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.event-log-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 8px 16px 16px;
+    box-sizing: border-box;
+    position: relative;
+}
+.event-log-body::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 24px;
+    background: linear-gradient(to bottom, transparent, var(--color-bg));
+    pointer-events: none;
+}
+
+.event-log-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    height: 100%;
+    text-align: center;
+}
+
+.event-log-empty-icon {
+    color: var(--color-text-label);
+    display: flex;
+}
+
+.event-log-empty-texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.event-log-empty-title {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--color-text-paragraph);
+    line-height: 1.2;
+}
+
+.event-log-empty-subtitle {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-text-label);
+    line-height: 1.2;
+}
+
+.event-log-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border) var(--color-bg);
+}
+.event-log-list::-webkit-scrollbar {
+    width: 6px;
+}
+.event-log-list::-webkit-scrollbar-track {
+    background: var(--color-bg);
+}
+.event-log-list::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 3px;
+}
+
+.event-log-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.event-log-num {
+    width: 26px;
+    text-align: right;
+    flex-shrink: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-text-paragraph);
+    font-family: Metric, Helvetica, Arial, sans-serif;
+    line-height: 1;
+}
+
+.event-log-timeline {
+    position: relative;
+    width: 5px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.event-log-line {
+    position: absolute;
+    left: 2px;
+    top: -1px;
+    width: 1px;
+    height: 24px;
+    background: var(--theme-selector-border, #e0e5e8);
+}
+
+.event-log-item:first-child .event-log-line {
+    top: 14px;
+    height: 11px;
+}
+
+.event-log-dot {
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 5px;
+    height: 5px;
+    background: var(--color-border);
+    border-radius: 4px;
+    transform: none;
+}
+
+.event-log-dot--latest {
+    top: 9px;
+    left: 0;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border-radius: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 5px solid var(--border-accent, #3d57d8);
+}
+
+.event-log-item:last-child .event-log-dot {
+    border-radius: 0;
+}
+
+.event-log-item:last-child .event-log-line {
+    height: 50%;
+}
+
+.event-log-row-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-width: 0;
+    flex: 1;
+}
+
+.event-log-name {
+    background: var(--bg-primary, #ffffff);
+    border: 1px solid var(--theme-selector-border, #e0e5e8);
+    border-radius: 4px;
+    padding: 0 4px;
+    font-family: 'Roboto Mono', 'Courier New', monospace;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-text-code);
+    white-space: nowrap;
+    flex-shrink: 0;
+    height: 22px;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    line-height: 12px;
+}
+
+.event-log-desc {
+    font-family: Metric, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-text-paragraph);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1;
+}

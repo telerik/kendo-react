@@ -105,7 +105,7 @@ const GroupMyHeaderCustomCell = (props: GridCustomCellProps) => {
 
 The below demo implements both of the suggested approaches.
 
-<demo metaUrl="knowledge-base/grid/grid-format-dates-in-group-header-and-column-cell/" height="600"></demo>
+<demo metaUrl="knowledge-base/grid/grid-format-dates-in-group-header-and-column-cell/" height="700"></demo>
 
 ### Sorting and Grouping Considerations
 

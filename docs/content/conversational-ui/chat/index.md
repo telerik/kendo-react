@@ -18,7 +18,7 @@ The KendoReact Chat component provides a flexible conversational interface that 
 
 The following example demonstrates the Chat component in action with its key features.
 
-<demo metaUrl="conversational-ui/chat/overview/" height="700"></demo>
+<demo metaUrl="conversational-ui/chat/overview/" height="820"></demo>
 
 
 ## Key Features

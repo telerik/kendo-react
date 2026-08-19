@@ -23,8 +23,8 @@ const App = () => {
             <Column field="ProductID" title="ID" filter={'numeric'} columnMenu={ColumnMenu} width={80} />
             <Column field="ProductName" title="Product Name" columnMenu={ColumnMenuCheckboxFilter} />
             <Column field="Category.CategoryName" title="Category Name" columnMenu={ColumnMenuCheckboxFilter} />
-
             <Column field="UnitPrice" filter={'numeric'} columnMenu={ColumnMenu} />
+            <Column field="FirstOrderedOn" filter="date" format="{0:d}" columnMenu={ColumnMenu} />
             <Column field="Discontinued" filter={'boolean'} columnMenu={ColumnMenuCheckboxFilter} />
         </Grid>
     );

@@ -14,7 +14,7 @@ With KendoReact TaskBoard, you can customize the rendering of the columns and ta
 
 The following example demonstrates how to customize the built-in column and task components.
 
-{% meta height:760 %}
+{% meta height:880 %}
 {% embed_file custom-rendering/func/app.tsx preview %}
 {% embed_file custom-rendering/func/main.tsx %}
 {% embed_file custom-rendering/func/column.tsx %}

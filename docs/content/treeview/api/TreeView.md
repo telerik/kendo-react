@@ -7,7 +7,23 @@ slug: api_treeview_treeview
 ---
 
 # TreeView
+Represents the [KendoReact TreeView component](https://www.telerik.com/kendo-react-ui/components/treeview).
+
 A [Functional Component](https://react.dev/reference/react/Component).
+
+```jsx
+const data = [{
+    text: 'Furniture', expanded: true, items: [
+        { text: 'Tables & Chairs' }, { text: 'Sofas' }, { text: 'Occasional Furniture' }]
+}, {
+    text: 'Decor', expanded: true, items: [
+        { text: 'Bed Linen' }, { text: 'Curtains & Blinds' }, { text: 'Carpets' }]
+}];
+const App = () => {
+    return <TreeView data={data} />;
+}
+```
+
 
 
 <table class="api-table api-table-properties">

@@ -105,7 +105,7 @@ The first root item has a `0` (zero) index. If the first root item has children,
 <code>
 
 
-[TreeView]({% slug api_treeview_treeview %})
+[TreeViewHandle]({% slug api_treeview_treeviewhandle %})
 
 
 </code>

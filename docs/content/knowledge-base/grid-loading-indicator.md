@@ -34,7 +34,7 @@ How to show a loading indication when loading data.
 
 ### Rendering Loading Indicator
 
-When the KendoReact Data Grid contains a huge amount of records and depending on the browser, the component might take longer to load its data.
+When the KendoReact Grid contains a huge amount of records and depending on the browser, the component might take longer to load its data.
 
 In such cases, a loading indicator is suitable to indicate that the Grid is properly functioning and that its data will soon be displayed.
 

@@ -1,0 +1,112 @@
+/* Data Binding — Figma node 14072-24130 (light); dark mode follows the
+   "Demo / SidePanel" family — see "Event Log" dark spec, Figma node 15245:43630 */
+
+/* ── Layout helper — mirrors .event-log-layout ────────────────────────── */
+.data-binding-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 176px);
+}
+
+.data-binding-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ── Container ─────────────────────────────────────────────────────────── */
+.data-binding {
+    /* Bridged to docs-builder's site-wide dark mode (see apps/docs/main.tsx's
+   `dark-mode-changed` handler) — the fallbacks below are today's light-mode hexes, so
+   nothing changes when running standalone or in docs-builder's light mode. */
+    --color-text-paragraph: var(--text-secondary, #383f55);
+    --color-text-label: var(--text-label, #536071);
+    --color-text-code: var(--text-code, var(--text-primary, #000000));
+    --color-bg: var(--bg-search, #f5f6f7);
+    --color-border: var(--demo-source-file-hover-border, #b3bfc7);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    font-family: Metric, Helvetica, Arial, sans-serif;
+    overflow: hidden;
+    margin-top: 16px;
+    flex-shrink: 0;
+    /* Same bleed offsets as EventLog */
+    margin-inline: -54px;
+    margin-bottom: -76px;
+}
+
+/* ── Header ────────────────────────────────────────────────────────────── */
+/* No border-bottom separator — title row only */
+.data-binding-header {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 10px 16px 6px 20px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+/* icon + "Data Binding": Metric Medium 14px #536071, gap 8px */
+.data-binding-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-text-label);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+}
+.data-binding-title svg {
+    flex-shrink: 0;
+    color: var(--color-text-label);
+}
+
+/* ── Body ──────────────────────────────────────────────────────────────── */
+.data-binding-body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 4px 20px 14px;
+    box-sizing: border-box;
+}
+
+/* ── Row ───────────────────────────────────────────────────────────────── */
+.data-binding-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 24px;
+}
+
+/* "Selected Value:" — Metric Regular 16px #536071 */
+.data-binding-label {
+    font-family: Metric, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-text-label);
+    white-space: nowrap;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+/* Code chip — gray bg, monospace, rounded, matches inline code style in design */
+.data-binding-value {
+    background: var(--bg-primary, #ffffff);
+    border: 1px solid var(--theme-selector-border, #e0e5e8);
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-family: 'Roboto Mono', 'Courier New', monospace;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-text-code);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+}

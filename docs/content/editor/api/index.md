@@ -39,46 +39,16 @@ position: 1
         <a href="{% slug api_editor_editor %}">Editor</a>
     </li>
     <li class="api-item">
-        <a href="{% slug api_editor_editor %}">Editor</a>
+        <a href="{% slug api_editor_editordialogs %}">EditorDialogs</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_editor_editortools %}">EditorTools</a>
     </li>
     <li class="api-item">
-        <a href="{% slug api_editor_editorutils %}">EditorUtils</a>
-    </li>
-  </ul>
-</div>
-<div class="api-index-section">
-
-
-<span class="section-key">
-
-
-## Class
-
-
-</span>
-
-
-  <ul class="api-item-list">
-    <li class="api-item">
-        <a href="{% slug api_editor_editor %}">Editor</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_editor_editordialogs %}">EditorDialogs</a>
-    </li>
-    <li class="api-item">
         <a href="{% slug api_editor_editortoolssettings %}">EditorToolsSettings</a>
     </li>
     <li class="api-item">
-        <a href="{% slug api_editor_marks %}">marks</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_editor_nodes %}">nodes</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_editor_prosemirror %}">ProseMirror</a>
+        <a href="{% slug api_editor_editorutils %}">EditorUtils</a>
     </li>
   </ul>
 </div>
@@ -106,6 +76,9 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_editor_editorfocusevent %}">EditorFocusEvent</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_editor_editorhandle %}">EditorHandle</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_editor_editoriframeinitevent %}">EditorIFrameInitEvent</a>
@@ -142,6 +115,30 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_editor_parsecontent %}">parseContent</a>
+    </li>
+  </ul>
+</div>
+<div class="api-index-section">
+
+
+<span class="section-key">
+
+
+## Class
+
+
+</span>
+
+
+  <ul class="api-item-list">
+    <li class="api-item">
+        <a href="{% slug api_editor_marks %}">marks</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_editor_nodes %}">nodes</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_editor_prosemirror %}">ProseMirror</a>
     </li>
   </ul>
 </div>

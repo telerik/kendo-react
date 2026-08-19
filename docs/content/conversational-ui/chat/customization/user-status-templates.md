@@ -14,7 +14,7 @@ To set a custom user status template, create a React component and assign it to 
 
 The following demo shows how to implement custom user status indicators that display online/offline badges with different colors and icons based on a custom `author.status` field.
 
-{% meta height:830 %}
+{% meta height:940 %}
 {% embed_file chat/customization/user-status-templates/app.tsx preview %}
 {% embed_file chat/customization/user-status-templates/main.tsx %}
 {% endmeta %}

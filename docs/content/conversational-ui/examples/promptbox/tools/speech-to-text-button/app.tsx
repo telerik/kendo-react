@@ -4,9 +4,7 @@ import {
     PromptBoxSpeechToTextButtonProps,
     PromptBoxChangeEvent
 } from '@progress/kendo-react-conversational-ui';
-import { Checkbox } from '@progress/kendo-react-inputs';
-import { Label } from '@progress/kendo-react-labels';
-import { DropDownList, DropDownListChangeEvent } from '@progress/kendo-react-dropdowns';
+import { useConfigurator } from '@docs-shared/configurator';
 import './styles.css';
 
 interface LanguageOption {
@@ -23,25 +21,41 @@ const languageOptions: LanguageOption[] = [
 
 const App = () => {
     const [promptValue, setPromptValue] = React.useState<string>('');
-    const [continuous, setContinuous] = React.useState<boolean>(false);
-    const [interimResults, setInterimResults] = React.useState<boolean>(true);
-    const [selectedLanguage, setSelectedLanguage] = React.useState<string>('en-US');
-    const [disabled, setDisabled] = React.useState<boolean>(false);
+    const config = useConfigurator({
+        sections: [
+            {
+                label: 'Language',
+                controls: [
+                    {
+                        type: 'dropdown',
+                        name: 'language',
+                        options: languageOptions.map((option) => option.text),
+                        defaultValue: languageOptions[0].text
+                    }
+                ]
+            },
+            {
+                label: 'Speech to Text',
+                controls: [
+                    { type: 'switch', name: 'continuous', label: 'Continuous Mode', defaultValue: false },
+                    { type: 'switch', name: 'interimResults', label: 'Interim Results', defaultValue: true },
+                    { type: 'switch', name: 'disabled', label: 'Disabled', defaultValue: false }
+                ]
+            }
+        ]
+    });
+    const selectedLanguage = languageOptions.find((option) => option.text === config.language)?.value ?? 'en-US';
 
     const speechToTextButtonSettings: PromptBoxSpeechToTextButtonProps = {
-        continuous: continuous,
-        interimResults: interimResults,
+        continuous: config.continuous ?? false,
+        interimResults: config.interimResults ?? true,
         lang: selectedLanguage,
         themeColor: 'base',
-        disabled: disabled
+        disabled: config.disabled ?? false
     };
 
     const handleValueChange = (event: PromptBoxChangeEvent) => {
         setPromptValue(event.value);
-    };
-
-    const handleLanguageChange = (event: DropDownListChangeEvent) => {
-        setSelectedLanguage(event.value.value);
     };
 
     const handleSend = () => {
@@ -49,47 +63,8 @@ const App = () => {
         setPromptValue('');
     };
 
-    const selectedLanguageOption = languageOptions.find((opt) => opt.value === selectedLanguage) || languageOptions[0];
-
     return (
         <div className="demo-container">
-            <div className="configuration-panel">
-                <div className="config-grid">
-                    <div className="config-row">
-                        <Label className="label-inline">
-                            Continuous Mode
-                            <Checkbox value={continuous} onChange={(e) => setContinuous(e.value ?? false)} />
-                        </Label>
-                    </div>
-
-                    <div className="config-row">
-                        <Label className="label-inline">
-                            Interim Results
-                            <Checkbox value={interimResults} onChange={(e) => setInterimResults(e.value ?? false)} />
-                        </Label>
-                    </div>
-
-                    <div className="config-row">
-                        <Label className="label-compact">Language:</Label>
-                        <DropDownList
-                            data={languageOptions}
-                            value={selectedLanguageOption}
-                            onChange={handleLanguageChange}
-                            textField="text"
-                            dataItemKey="value"
-                            className="dropdown-compact"
-                        />
-                    </div>
-
-                    <div className="config-row">
-                        <Label className="label-inline">
-                            Disabled
-                            <Checkbox value={disabled} onChange={(e) => setDisabled(e.value ?? false)} />
-                        </Label>
-                    </div>
-                </div>
-            </div>
-
             <PromptBox
                 value={promptValue}
                 onChange={handleValueChange}

@@ -23,7 +23,7 @@ The demo showcases four timestamp template implementations:
 
 > **Note**: The Relative, Detailed, and Interactive templates are custom implementations that demonstrate the flexibility of the timestamp template feature. You can implement any custom logic, formatting, or interaction patterns based on your specific requirements.
 
-{% meta height:830 %}
+{% meta height:940 %}
 {% embed_file chat/customization/timestamp-templates/app.tsx preview %}
 {% embed_file chat/customization/timestamp-templates/main.tsx %}
 {% embed_file chat/customization/timestamp-templates/templates.tsx %}

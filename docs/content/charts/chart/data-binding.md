@@ -77,6 +77,8 @@ The simplest form of data binding involves the supplying of an array of labels f
 > -   The number of the categories has to be equal to the number of the data points in the series.
 > -   To preserve the order, the missing values in the series have to be represented by `null`.
 
+The following example demonstrates how to bind the Chart category axis to an array of label strings, where series data points are positioned in sequence.
+
 {% meta height:470 %}
 {% embed_file data-binding/arrays-labels/func/app.tsx preview %}
 {% embed_file data-binding/arrays-labels/func/main.tsx %}
@@ -140,7 +142,7 @@ The Chart enables you to show dynamic data updates by changing the series [`data
 
 The following example demonstrates how to add, remove, and randomize data points in a [`line`](slug:api_charts_chartseriesitemprops#type) series of a Chart. Each button rebinds a new array to the [`data`](slug:api_charts_chartseriesitemprops#data) prop of the [ChartSeriesItem](slug:api_charts_chartseriesitem).
 
-<demo metaUrl="charts/data-binding/data-operations/" height="570"></demo>
+<demo metaUrl="charts/data-binding/data-operations/" height="620"></demo>
 
 The [StockChart](slug:api_charts_stockchartprops) supports the same dynamic updates. The following example simulates a live feed by appending a new [`candlestick`](slug:api_charts_chartseriesitemprops#toc-type) point every second while the **Play** control is active. Use the **Pause** control to stop the stream, inspect the current range through the [`ChartNavigator`](slug:api_charts_chartnavigatorprops), and resume whenever you need to continue receiving updates. The visible range stays fixed through the [ChartNavigatorSelect](slug:api_charts_chartnavigatorselectprops) [`from`](slug:api_charts_chartnavigatorselectprops#toc-from) and [`to`](slug:api_charts_chartnavigatorselectprops#toc-to) props.
 

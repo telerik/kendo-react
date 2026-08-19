@@ -1,15 +1,15 @@
 ---
 title: AI Smart Box
 description: 'Get started with the Smart functionality of the KendoReact Smart Grid and learn how to perform basic operations.'
-components: ['datagrid']
+components: ['grid']
 slug: smart_grid_basic_operations
 position: 30
 tier: premium
 ---
 
-# KendoReact Data Grid AI Smart Box
+# KendoReact Grid AI Smart Box
 
-The KendoReact Data Grid AI Smart Box is a versatile toolbar tool that unifies search and AI capabilities in a single interface. It offers three distinct modes that you can enable independently or in combination to provide flexible data exploration for your users.
+The KendoReact Grid AI Smart Box is a versatile toolbar tool that unifies search and AI capabilities in a single interface. It offers three distinct modes that you can enable independently or in combination to provide flexible data exploration for your users.
 
 The AI Smart Box allows users to explore Grid data through traditional keyword search, semantic search that understands meaning and context, or AI-powered natural language commands.
 
@@ -17,7 +17,7 @@ The AI Smart Box allows users to explore Grid data through traditional keyword s
 
 The following example demonstrates a Smart Grid that processes natural language requests for performing data operations, column management, selection, and export operations.
 
-<demo metaUrl="grid/smart/smartbox-full/" height="910"></demo>
+<demo metaUrl="grid/smart/smartbox-full/" height="690"></demo>
 
 ## Implementation Steps
 
@@ -39,7 +39,7 @@ To configure the Grid's AI Smart Box:
     };
     ```
 
-2. Enable the modes you want to show in the AI Smart Box using the [`searchConfig`](slug:api_grid_smartbox#searchconfig), [`semanticSearchConfig`](slug:api_grid_smartbox#semanticsearchconfig), and [`aiAssistantConfig`](slug:api_grid_smartbox#aiassistantconfig) props:
+2. Enable the modes you want to show in the AI Smart Box using the [`searchConfig`](slug:api_grid_gridsmartboxaiassistantprops#searchConfig), [`semanticSearchConfig`](slug:api_grid_gridsmartboxaiassistantprops#semanticSearchConfig), and [`aiAssistantConfig`](slug:api_grid_gridsmartboxaiassistantprops#aiAssistantConfig) props:
 
     ```tsx
     const aiAssistantConfig = {
@@ -62,9 +62,9 @@ To configure the Grid's AI Smart Box:
     };
     ```
 
-    > Search mode applies filters automatically when the [`autoProcessData`](slug:api_grid_gridprops#autoprocessdata) prop is enabled. You can optionally handle the [`onSearch`](slug:api_grid_smartbox#onsearch) event to customize the default search behavior.
+    > Search mode applies filters automatically when the [`autoProcessData`](slug:api_grid_gridprops#autoprocessdata) prop is enabled. You can optionally handle the [`onSearch`](slug:api_grid_gridsmartboxaiassistantprops#onSearch) event to customize the default search behavior.
 
-3. Configure the [`requestUrl`](slug:api_grid_smartbox#aiassistantconfig) property for AI Assistant mode to point to your AI service endpoint:
+3. Configure the [`requestUrl`](slug:api_grid_gridsmartboxaiassistantprops#aiAssistantConfig) property for AI Assistant mode to point to your AI service endpoint:
 
     ```tsx
     const aiAssistantConfig = {
@@ -76,7 +76,7 @@ To configure the Grid's AI Smart Box:
 
     > The `requestUrl` defines the endpoint where your natural language queries will be processed. It should point to [your custom AI service](slug:ai_service_setup) that can understand your domain-specific data and business logic. To explore the available integration scenarios, see [AI Assistant Tools Setup](slug:ai_assistant_tools_setup).
 
-4. Handle the [`onSemanticSearch`](slug:api_grid_smartbox#onsemanticsearch) event to implement your semantic search logic:
+4. Handle the [`onSemanticSearch`](slug:api_grid_gridsmartboxaiassistantprops#onSemanticSearch) event to implement your semantic search logic:
 
     ```tsx
     import { GridSmartBoxSearchEvent } from '@progress/kendo-react-grid';
@@ -128,9 +128,9 @@ The AI Smart Box provides three modes that you can enable independently or in co
 <TabStrip>
 <TabStripTab title="Search Mode">
 
-The Search mode is enabled by default in the AI Smart Box and provides traditional keyword-based filtering across Grid columns. As users type, the AI Smart Box generates filter expressions that match the search value against the Grid columns. Use the [`searchConfig`](slug:api_grid_smartbox#searchconfig) prop to further tailor the Search mode to your specific needs.
+The Search mode is enabled by default in the AI Smart Box and provides traditional keyword-based filtering across Grid columns. As users type, the AI Smart Box generates filter expressions that match the search value against the Grid columns. Use the [`searchConfig`](slug:api_grid_gridsmartboxaiassistantprops#searchConfig) prop to further tailor the Search mode to your specific needs.
 
-By default, the Grid automatically applies the search filter when the [`autoProcessData`](slug:api_grid_gridprops#autoprocessdata) prop is enabled. You can optionally handle the [`onSearch`](slug:api_grid_smartbox#onsearch) event to customize the search behavior.
+By default, the Grid automatically applies the search filter when the [`autoProcessData`](slug:api_grid_gridprops#autoprocessdata) prop is enabled. You can optionally handle the [`onSearch`](slug:api_grid_gridsmartboxaiassistantprops#onSearch) event to customize the search behavior.
 
 ```tsx
 const searchConfig = {
@@ -142,14 +142,14 @@ const searchConfig = {
 <SmartBox searchConfig={searchConfig} />;
 ```
 
-> For more details about Search mode configuration, see the [KendoReact Data Grid Searching](slug:smart_grid_basic_operations#available_modes) article.
+> For more details about Search mode configuration, see the [KendoReact Grid Searching](slug:smart_grid_basic_operations#available-modes) article.
 
 </TabStripTab>
 <TabStripTab title="Semantic Search Mode">
 
-Configure the [`semanticSearchConfig`](slug:api_grid_smartbox#semanticsearchconfig) prop of the AI Smart Box to enable semantic search functionality that interprets user intent and matches related terms, synonyms, and contextual meanings. This intelligent matching is particularly valuable when users might not know the exact terminology used in your Grid data.
+Configure the [`semanticSearchConfig`](slug:api_grid_gridsmartboxaiassistantprops#semanticSearchConfig) prop of the AI Smart Box to enable semantic search functionality that interprets user intent and matches related terms, synonyms, and contextual meanings. This intelligent matching is particularly valuable when users might not know the exact terminology used in your Grid data.
 
-When users enter a search term, handle the [`onSemanticSearch`](slug:api_grid_smartbox#onsemanticsearch) event to implement your semantic matching logic using vector embeddings or other techniques to find conceptually related content.
+When users enter a search term, handle the [`onSemanticSearch`](slug:api_grid_gridsmartboxaiassistantprops#onsemanticsearch) event to implement your semantic matching logic using vector embeddings or other techniques to find conceptually related content.
 
 ```tsx
 const semanticSearchConfig = {
@@ -171,7 +171,7 @@ const handleSemanticSearch = async (event: GridSmartBoxSearchEvent) => {
 </TabStripTab>
 <TabStripTab title="AI Assistant Mode">
 
-Use the [`aiAssistantConfig`](slug:api_grid_smartbox#aiassistantconfig) prop to enable AI Assistant mode, which allows users to interact with the Grid data through natural language commands. Users can apply any [supported Grid operation](slug:smart_grid#supported-operations)&mdash;including filtering, sorting, column management, data export, and row highlighting.
+Use the [`aiAssistantConfig`](slug:api_grid_gridsmartboxaiassistantprops#aiAssistantConfig) prop to enable AI Assistant mode, which allows users to interact with the Grid data through natural language commands. Users can apply any [supported Grid operation](slug:smart_grid#supported-operations)&mdash;including filtering, sorting, column management, data export, and row highlighting.
 
 Configure the AI Assistant mode behavior through the `aiAssistantConfig` object. You can guide users with predefined prompts using the `promptSuggestions` property and enable automatic communication with your custom AI service by setting the `requestUrl` property.
 
@@ -194,7 +194,7 @@ const aiAssistantConfig = {
 
 When you enable multiple modes in the AI Smart Box, users can choose their preferred interaction method by using the seamless mode-switching interface of the tool.
 
-By default, the Search mode is initially selected when users open the AI Smart Box tool. You can customize this behavior and manually specify the mode that should be initially selected by using the [`activeMode`](slug:api_grid_smartbox#activemode) prop:
+By default, the Search mode is initially selected when users open the AI Smart Box tool. You can customize this behavior and manually specify the mode that should be initially selected by using the [`activeMode`](slug:api_grid_gridsmartboxaiassistantprops#activeMode) prop:
 
 ```tsx
 <SmartBox
@@ -213,7 +213,7 @@ The AI Smart Box provides several customization options to tailor the appearance
 
 The AI Smart Box allows you to customize the placeholder text that appears in the input field for each mode.
 
-You can define a global placeholder for all modes through the [`placeholder`](slug:api_grid_smartbox#placeholder) prop of the AI Smart Box tool:
+You can define a global placeholder for all modes through the [`placeholder`](slug:api_grid_gridsmartboxaiassistantprops#placeholder) prop of the AI Smart Box tool:
 
 ```tsx
 <SmartBox searchConfig={searchConfig} semanticSearchConfig={semanticSearchConfig} placeholder="Search or ask..." />
@@ -225,7 +225,7 @@ You can define a global placeholder for all modes through the [`placeholder`](sl
 
 The AI Smart Box maintains a history of recent queries for each enabled mode, allowing users to quickly reuse previous searches or commands.
 
-You can configure global history behavior through the [`history`](slug:api_grid_smartbox#history) prop of the AI Smart Box tool, which applies to all modes unless a mode provides its own history settings. The default global history size is `5` queries, and the default timestamp format is `'HH:mm:ss'`.
+You can configure global history behavior through the [`history`](slug:api_grid_gridsmartboxaiassistantprops#history) prop of the AI Smart Box tool, which applies to all modes unless a mode provides its own history settings. The default global history size is `5` queries, and the default timestamp format is `'HH:mm:ss'`.
 
 ```tsx
 const historySettings = {
@@ -240,7 +240,7 @@ const historySettings = {
 
 ### Suggestion Template
 
-The AI Smart Box provides a [`promptSuggestionRender`](slug:api_grid_smartbox#promptsuggestionrender) prop to customize the appearance of prompt suggestions in AI Assistant mode. The render function receives the suggestion text and an `onClick` callback, allowing you to add icons, styling, or additional markup.
+The AI Smart Box provides a [`promptSuggestionRender`](slug:api_grid_gridsmartboxaiassistantprops#promptsuggestionrender) prop to customize the appearance of prompt suggestions in AI Assistant mode. The render function receives the suggestion text and an `onClick` callback, allowing you to add icons, styling, or additional markup.
 
 ```tsx
 import { sparklesIcon } from '@progress/kendo-svg-icons';
@@ -258,7 +258,7 @@ const promptSuggestionRender = (suggestion: string, onClick: () => void) => (
 
 ### History Item Template
 
-You can use the [`historyItemRender`](slug:api_grid_smartbox#historyitemrender) prop to customize the content of history items and format how previous queries are displayed. This render function applies to all modes that have history enabled. The function receives a history item object with `text`, `timestamp`, and `format` properties, and an `onClick` callback.
+You can use the [`historyItemRender`](slug:api_grid_gridsmartboxaiassistantprops#historyitemrender) prop to customize the content of history items and format how previous queries are displayed. This render function applies to all modes that have history enabled. The function receives a history item object with `text`, `timestamp`, and `format` properties, and an `onClick` callback.
 
 ```tsx
 import { formatDate } from '@progress/kendo-intl';

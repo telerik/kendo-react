@@ -20,7 +20,7 @@ If the count of the rows or columns is programmatically set through the `resize`
 
 The example below demonstrates how to set the count of the rows and columns in the active sheet by using its `resize` method.
 
-{% meta height:690 %}
+{% meta height:770 %}
 {% embed_file resizing/func/app.tsx preview %}
 {% embed_file resizing/func/main.tsx %}
 {% embed_file resizing/func/sheets.ts %}

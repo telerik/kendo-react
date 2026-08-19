@@ -2,7 +2,7 @@
 title: Overview
 page_title: 'React ExpansionPanel Component & Overview | KendoReact UI'
 description: 'Get a free trial of the React ExpansionPanel UI Component by KendoReact that provides a details-summary view that enables the user to expand or collapse the content.'
-components: ["expansionpanel"]
+components: ['expansionpanel']
 slug: overview_expansionpanel
 position: 1
 ---
@@ -15,7 +15,7 @@ The KendoReact ExpansionPanel component allows the user to switch between detail
 
 The following example demonstrates the ExpansionPanel in action.
 
-{% meta height:630 %}
+{% meta height:890 %}
 {% embed_file expansionpanel/overview/func/app.tsx preview %}
 {% embed_file expansionpanel/overview/func/main.tsx %}
 {% embed_file expansionpanel/overview/func/styles.css %}

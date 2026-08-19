@@ -21,7 +21,7 @@ To render a floating label, set the [`label`]({% slug api_inputs_inputprops %}#t
 
 In addition you can also set a `className` for the floating label by using the [`labelClassName`]({% slug api_inputs_inputprops %}#toc-labelClassName) property.
 
-{% meta height:650 %}
+{% meta height:700 %}
 {% embed_file input/labels/custom-floating-label/app.tsx preview %}
 {% embed_file input/labels/custom-floating-label/main.tsx %}
 {% embed_file input/labels/custom-floating-label/styles.css %}

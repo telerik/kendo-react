@@ -18,6 +18,8 @@ The [`inputAttributes`]({% slug api_inputs_numerictextboxprops %}#toc-inputAttri
 
 > Check out the different type of virtual keyboard on a mobile device.
 
+The following example demonstrates how to use the `inputAttributes` property to set the `inputMode` and display the appropriate on-screen keyboard.
+
 {% meta height:300 %}
 {% embed_file numerictextbox/adaptive-rendering/app.tsx preview %}
 {% embed_file numerictextbox/adaptive-rendering/main.tsx %}

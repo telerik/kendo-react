@@ -67,7 +67,7 @@ Implement a state variable to keep track of the expansion state. Use this variab
 
 Below is a demonstration of implementing the expand header cell in a master-detail grid setup:
 
-{% meta height:600 %}
+{% meta height:730 %}
 {% embed_file grid/grid-expand-all-headers/app.jsx preview %}
 {% embed_file grid/grid-expand-all-headers/main.jsx %}
 {% endmeta %}

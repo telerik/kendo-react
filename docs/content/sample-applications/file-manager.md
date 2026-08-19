@@ -51,7 +51,7 @@ If you're interested in further customizing the theme, check the [Customization]
 -   [Get Started with KendoReact Free](https://www.telerik.com/kendo-react-ui/components/getting-started)
 
 -   [Get Started with KendoReact Free](slug://getting_started_free_vs_premium)
--   [KendoReact Data Grid]({% slug overview_grid %})
+-   [KendoReact Grid]({% slug overview_grid %})
 -   [KendoReact TreeView]({% slug overview_treeview %})
 -   [KendoReact Toolbar]({% slug overview_toolbar %})
 -   [KendoReact Breadcrumb]({% slug overview_breadcrumb %})

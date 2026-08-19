@@ -74,6 +74,8 @@ In [Div Edit Mode]({% slug api_editor_editorprops %}#toc-defaulteditmode) we can
 }
 ```
 
+The following example demonstrates how to apply custom CSS styles to the Editor content when using the `div` rendering mode.
+
 {% meta height:425 %}
 {% embed_file styling-div/app.tsx preview %}
 {% embed_file styling-div/styles.css %}

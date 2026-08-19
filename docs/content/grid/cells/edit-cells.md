@@ -1,7 +1,7 @@
 ---
 title: Custom Edit Cells
-description: 'Get started with the KendoKendoReact Data Grid and learn how to describe and customize the Edit cells of the Grid in React projects.'
-components: ["datagrid"]
+description: 'Get started with the KendoReact Grid and learn how to describe and customize the Edit cells of the Grid in React projects.'
+components: ['grid']
 slug: edit_cells_grid
 position: 30
 subject: Cells customization feature of the Grid
@@ -20,7 +20,7 @@ In the following example, custom edit cells are rendered for different data type
 {% embed_file grid-custom-cell/editing/func/main.tsx %}
 {% endmeta %}
 
-## KendoReact Data Grid Custom Cells APIs
+## KendoReact Grid Custom Cells APIs
 
 -   [Grid Cells Prop]({% slug api_grid_gridprops %}#toc-cells)
 -   [GridColumn Cells Prop]({% slug api_grid_gridcolumnprops %}#toc-cells)

@@ -34,7 +34,7 @@ The value of the `AxisFormat` should be `TupleFormat`.
 
 ## How can I connect to a secured OLAP instance?
 
-For more information, refer to the [Accessing the Cube Securely]({% slug data-binding_olap-fundamentals_pivotgrid %}#accessing-the-cube-securely) section.
+For more information, refer to the [Accessing the Cube Securely]({% slug data-binding_olap-fundamentals_pivotgrid %}) section.
 
 ## If I do not have an OLAP cube, can I still use the PivotGrid?
 

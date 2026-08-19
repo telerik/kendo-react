@@ -261,6 +261,9 @@ position: 1
         <a href="{% slug api_dropdowns_multiselectprops %}">MultiSelectProps</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_dropdowns_multiselectselectallchangeevent %}">MultiSelectSelectAllChangeEvent</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_dropdowns_multiselecttreeblurevent %}">MultiSelectTreeBlurEvent</a>
     </li>
     <li class="api-item">

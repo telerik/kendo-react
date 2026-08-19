@@ -1,7 +1,7 @@
 ---
 title: Locking Rows
-description: 'Get started with the KendoKendoReact Data Grid enabling you to pin (lock) rows.'
-components: ["datagrid"]
+description: 'Get started with the KendoReact Grid enabling you to pin (lock) rows.'
+components: ['grid']
 slug: locked_rows_grid
 position: 40
 tier: premium

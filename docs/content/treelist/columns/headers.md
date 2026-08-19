@@ -12,7 +12,7 @@ The KendoReact TreeList supports multi-column headers.
 
 To implement multi-column headers, define an array of columns as children of the particular column.
 
-{% meta height:580 %}
+{% meta height:690 %}
 {% embed_file multi-column-headers/func/app.tsx preview %}
 {% embed_file multi-column-headers/func/main.tsx %}
 {% endmeta %}

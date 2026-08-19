@@ -108,7 +108,7 @@ const App = () => {
         <div className="grid-layout-container">
             <GridLayout
                 gap={{ rows: 6, cols: 10 }}
-                rows={[{ height: 20 }, { height: 100 }, { height: 100 }, { height: 20 }, { height: 590 }]}
+                rows={[{ height: 20 }, { height: 100 }, { height: 100 }, { height: 20 }, { height: 660 }]}
                 cols={[{ width: 270 }, { width: 270 }, { width: 310 }]}
             >
                 <GridLayoutItem row={1} col={1} colSpan={3}>

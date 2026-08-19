@@ -20,7 +20,7 @@ To use custom properties and set the route path:
 
 
 
-{% meta height:600 %}
+{% meta height:890 %}
 {% embed_file routing/func/app.tsx preview %}
 {% embed_file routing/func/main.tsx %}
 {% embed_file routing/func/PanelBarNavContainer.tsx %}

@@ -10,13 +10,22 @@ import {
     ChartNavigatorSeries,
     ChartNavigatorSeriesItem
 } from '@progress/kendo-react-charts';
-import { StockDemoConfigurator } from './configurator';
+import { useConfigurator } from '@docs-shared/configurator';
+
 import { initialStockData, generateNextCandlestick, StockDataItem } from './data';
 import './styles.css';
 
 const App = () => {
+    const config = useConfigurator({
+        sections: [
+            {
+                label: 'Live Data',
+                controls: [{ type: 'switch', name: 'isPlaying', label: 'Stream New Candlesticks', defaultValue: true }]
+            }
+        ]
+    });
     const [stockData, setStockData] = React.useState<StockDataItem[]>(initialStockData);
-    const [isPlaying, setIsPlaying] = React.useState<boolean>(true);
+    const isPlaying = (config.isPlaying as boolean | undefined) ?? true;
 
     React.useEffect(() => {
         if (!isPlaying) {
@@ -36,12 +45,8 @@ const App = () => {
         return () => clearInterval(id);
     }, [isPlaying]);
 
-    const handlePlay = () => setIsPlaying(true);
-    const handlePause = () => setIsPlaying(false);
-
     return (
         <div>
-            <StockDemoConfigurator isPlaying={isPlaying} onPlay={handlePlay} onPause={handlePause} />
             <StockChart className="chart-demo-chart" transitions={false}>
                 <ChartTitle text={'The Boeing Company\nNYSE:BA'} />
                 <ChartLegend visible={false} />

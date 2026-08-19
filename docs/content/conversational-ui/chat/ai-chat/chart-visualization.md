@@ -26,6 +26,8 @@ npm install @progress/kendo-react-charts
 
 ### 2. Import the necessary components
 
+In the App component file of your React project (for example, `src/App.tsx`), add the following code to import the required components from both the Conversational UI and Charts packages:
+
 ```tsx
 import { Chat, Message, User, ChatSendMessageEvent } from '@progress/kendo-react-conversational-ui';
 import {
@@ -64,6 +66,8 @@ const TrendsChart = () => {
 ```
 
 ### 4. Use messageTemplate to conditionally render charts
+
+Define a `MessageTemplate` function to conditionally render charts based on the message content. This function checks if a message has a `chartType` property and renders the corresponding chart:
 
 ```tsx
 type AppMessage = Message & {

@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: 'Get an overview of the features the KendoReact ColorGradient delivers and use the component in React projects.'
-components: ["colorgradient"]
+components: ['colorgradient']
 slug: overview_colorgradient
 position: 1
 ---
@@ -16,7 +16,7 @@ The KendoReact ColorGradient component is part of the KendoReact library of Reac
 
 The following example demonstrates the ColorGradient in action.
 
-{% meta height:500 %}
+{% meta height:750 %}
 {% embed_file colorgradient/overview/func/app.tsx preview %}
 {% embed_file colorgradient/overview/func/main.tsx %}
 {% embed_file colorgradient/overview/func/styles.css %}

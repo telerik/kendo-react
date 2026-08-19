@@ -38,7 +38,7 @@ const AutoHeightViewItem = (props) => {
 
 The following example demonstrates the `auto` item height feature in action:
 
-{% meta height:1000 %}
+{% meta height:1080 %}
 {% embed_file auto-item-height/overview/func/custom-view-item.tsx %}
 {% embed_file auto-item-height/overview/func/app.tsx preview %}
 {% embed_file auto-item-height/overview/func/main.tsx %}
@@ -64,7 +64,7 @@ const AutoHeightViewItem = (props) => {
 
 The following example demonstrates `constant` item height in action:
 
-{% meta height:1000 %}
+{% meta height:1080 %}
 {% embed_file auto-item-height/constant/func/custom-view-item.tsx %}
 {% embed_file auto-item-height/constant/func/app.tsx preview %}
 {% embed_file auto-item-height/constant/func/main.tsx %}

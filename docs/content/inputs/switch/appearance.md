@@ -16,6 +16,13 @@ Apart from the default vision of the Switch, these alternative styling options e
 -   [Track Border Radius](#track-border-radius)
 -   [Thumb Border Radius](#thumb-border-radius)
 
+The following example demonstrates all the available appearance options of the Switch in a single, configurable demo.
+
+{% meta height:150 %}
+{% embed_file switch/appearance/func/app.tsx preview %}
+{% embed_file switch/appearance/func/main.tsx %}
+{% endmeta %}
+
 ## Size
 
 The KendoReact Switch enables you to configure its [`size`](slug:api_inputs_switchprops#size).

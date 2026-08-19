@@ -14,7 +14,7 @@ For more information on how globalization practices are implemented in KendoReac
 
 The following example demonstrates how to use the Spanish date format and month names in the available Date Inputs and how to localize their built-in messages.
 
-{% meta height:750 %}
+{% meta height:840 %}
 {% embed_file globalization/func/app.tsx preview %}
 {% embed_file globalization/func/main.tsx %}
 {% endmeta %}

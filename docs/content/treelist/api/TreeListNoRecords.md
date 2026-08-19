@@ -10,6 +10,8 @@ slug: api_treelist_treelistnorecords
 Represents the TreeListNoRecords component.
 The component is rendered when the `data` property of the TreeList is an empty array or undefined.
 
+A [Functional Component](https://react.dev/reference/react/Component).
+
 
 <table class="api-table api-table-properties">
 <thead>
@@ -35,7 +37,7 @@ The component is rendered when the `data` property of the TreeList is an empty a
 <code>
 
 
-Readonly&lt;[TreeListNoRecordsProps]({% slug api_treelist_treelistnorecordsprops %})&gt;
+[TreeListNoRecordsProps]({% slug api_treelist_treelistnorecordsprops %}) [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with RefAttributes&lt;[TreeListNoRecordsHandle]({% slug api_treelist_treelistnorecordshandle %})&gt;
 
 
 </code>

@@ -1,7 +1,7 @@
 ---
 title: Globalization
-description: 'Get started with the globalization functionality of the KendoKendoReact Data Grid and learn how to localize built-in messages.'
-components: ["datagrid"]
+description: 'Get started with the globalization functionality of the KendoReact Grid and learn how to localize built-in messages.'
+components: ['grid']
 slug: globalization_grid
 position: 180
 ---
@@ -18,7 +18,7 @@ The following example demonstrates how to:
 -   Localize the built-in Grid messages.
 -   Localize the column header messages.
 
-{% meta height:690 %}
+{% meta height:760 %}
 {% embed_file globalization/func/app.tsx preview %}
 {% embed_file globalization/func/main.tsx %}
 {% endmeta %}

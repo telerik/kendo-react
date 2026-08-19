@@ -10,6 +10,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 10,
         Discontinued: false,
+        FirstOrderedOn: new Date(1996, 8, 26),
         Category: {
             CategoryID: 1,
             CategoryName: 'Beverages',
@@ -27,6 +28,7 @@ const products = [
         UnitsOnOrder: 40,
         ReorderLevel: 25,
         Discontinued: false,
+        FirstOrderedOn: new Date(1996, 8, 26),
         Category: {
             CategoryID: 1,
             CategoryName: 'Beverages',
@@ -44,6 +46,7 @@ const products = [
         UnitsOnOrder: 70,
         ReorderLevel: 25,
         Discontinued: false,
+        FirstOrderedOn: new Date(1996, 9, 3),
         Category: {
             CategoryID: 2,
             CategoryName: 'Condiments',
@@ -61,6 +64,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 0,
         Discontinued: false,
+        FirstOrderedOn: new Date(1996, 9, 3),
         Category: {
             CategoryID: 2,
             CategoryName: 'Condiments',
@@ -78,6 +82,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 0,
         Discontinued: true,
+        FirstOrderedOn: new Date(1996, 9, 10),
         Category: {
             CategoryID: 2,
             CategoryName: 'Condiments',
@@ -95,6 +100,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 25,
         Discontinued: false,
+        FirstOrderedOn: new Date(1996, 9, 17),
         Category: {
             CategoryID: 2,
             CategoryName: 'Condiments',
@@ -112,6 +118,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 10,
         Discontinued: false,
+        FirstOrderedOn: new Date(1996, 10, 5),
         Category: {
             CategoryID: 7,
             CategoryName: 'Produce',
@@ -129,6 +136,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 0,
         Discontinued: false,
+        FirstOrderedOn: new Date(1996, 10, 12),
         Category: {
             CategoryID: 2,
             CategoryName: 'Condiments',
@@ -146,6 +154,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 0,
         Discontinued: true,
+        FirstOrderedOn: new Date(1996, 10, 19),
         Category: {
             CategoryID: 6,
             CategoryName: 'Meat/Poultry',
@@ -163,6 +172,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 0,
         Discontinued: false,
+        FirstOrderedOn: new Date(1996, 11, 3),
         Category: {
             CategoryID: 8,
             CategoryName: 'Seafood',
@@ -180,6 +190,7 @@ const products = [
         UnitsOnOrder: 30,
         ReorderLevel: 30,
         Discontinued: false,
+        FirstOrderedOn: new Date(1996, 11, 10),
         Category: {
             CategoryID: 4,
             CategoryName: 'Dairy Products',
@@ -197,6 +208,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 0,
         Discontinued: false,
+        FirstOrderedOn: new Date(1996, 11, 17),
         Category: {
             CategoryID: 4,
             CategoryName: 'Dairy Products',
@@ -214,6 +226,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 5,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 0, 7),
         Category: {
             CategoryID: 8,
             CategoryName: 'Seafood',
@@ -231,6 +244,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 0,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 0, 14),
         Category: {
             CategoryID: 7,
             CategoryName: 'Produce',
@@ -248,6 +262,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 5,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 1, 4),
         Category: {
             CategoryID: 2,
             CategoryName: 'Condiments',
@@ -265,6 +280,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 10,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 1, 11),
         Category: {
             CategoryID: 3,
             CategoryName: 'Confections',
@@ -282,6 +298,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 0,
         Discontinued: true,
+        FirstOrderedOn: new Date(1997, 2, 4),
         Category: {
             CategoryID: 6,
             CategoryName: 'Meat/Poultry',
@@ -299,6 +316,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 0,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 2, 11),
         Category: {
             CategoryID: 8,
             CategoryName: 'Seafood',
@@ -316,6 +334,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 5,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 2, 18),
         Category: {
             CategoryID: 3,
             CategoryName: 'Confections',
@@ -333,6 +352,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 0,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 3, 1),
         Category: {
             CategoryID: 3,
             CategoryName: 'Confections',
@@ -350,6 +370,7 @@ const products = [
         UnitsOnOrder: 40,
         ReorderLevel: 5,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 3, 8),
         Category: {
             CategoryID: 3,
             CategoryName: 'Confections',
@@ -367,6 +388,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 25,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 3, 15),
         Category: {
             CategoryID: 5,
             CategoryName: 'Grains/Cereals',
@@ -384,6 +406,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 25,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 4, 6),
         Category: {
             CategoryID: 5,
             CategoryName: 'Grains/Cereals',
@@ -401,6 +424,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 0,
         Discontinued: true,
+        FirstOrderedOn: new Date(1997, 4, 13),
         Category: {
             CategoryID: 1,
             CategoryName: 'Beverages',
@@ -418,6 +442,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 30,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 4, 20),
         Category: {
             CategoryID: 3,
             CategoryName: 'Confections',
@@ -435,6 +460,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 0,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 5, 3),
         Category: {
             CategoryID: 3,
             CategoryName: 'Confections',
@@ -452,6 +478,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 30,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 5, 10),
         Category: {
             CategoryID: 3,
             CategoryName: 'Confections',
@@ -469,6 +496,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 0,
         Discontinued: true,
+        FirstOrderedOn: new Date(1997, 5, 17),
         Category: {
             CategoryID: 7,
             CategoryName: 'Produce',
@@ -486,6 +514,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 0,
         Discontinued: true,
+        FirstOrderedOn: new Date(1997, 6, 1),
         Category: {
             CategoryID: 6,
             CategoryName: 'Meat/Poultry',
@@ -503,6 +532,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 15,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 6, 8),
         Category: {
             CategoryID: 8,
             CategoryName: 'Seafood',
@@ -520,6 +550,7 @@ const products = [
         UnitsOnOrder: 70,
         ReorderLevel: 20,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 6, 15),
         Category: {
             CategoryID: 4,
             CategoryName: 'Dairy Products',
@@ -537,6 +568,7 @@ const products = [
         UnitsOnOrder: 40,
         ReorderLevel: 25,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 6, 22),
         Category: {
             CategoryID: 4,
             CategoryName: 'Dairy Products',
@@ -554,6 +586,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 20,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 7, 5),
         Category: {
             CategoryID: 4,
             CategoryName: 'Dairy Products',
@@ -571,6 +604,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 15,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 7, 12),
         Category: {
             CategoryID: 1,
             CategoryName: 'Beverages',
@@ -588,6 +622,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 15,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 7, 19),
         Category: {
             CategoryID: 1,
             CategoryName: 'Beverages',
@@ -605,6 +640,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 20,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 7, 26),
         Category: {
             CategoryID: 8,
             CategoryName: 'Seafood',
@@ -622,6 +658,7 @@ const products = [
         UnitsOnOrder: 50,
         ReorderLevel: 25,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 8, 2),
         Category: {
             CategoryID: 8,
             CategoryName: 'Seafood',
@@ -639,6 +676,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 15,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 8, 9),
         Category: {
             CategoryID: 1,
             CategoryName: 'Beverages',
@@ -656,6 +694,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 5,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 8, 16),
         Category: {
             CategoryID: 1,
             CategoryName: 'Beverages',
@@ -673,6 +712,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 30,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 8, 23),
         Category: {
             CategoryID: 8,
             CategoryName: 'Seafood',
@@ -690,6 +730,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 10,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 9, 7),
         Category: {
             CategoryID: 8,
             CategoryName: 'Seafood',
@@ -707,6 +748,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 0,
         Discontinued: true,
+        FirstOrderedOn: new Date(1997, 9, 14),
         Category: {
             CategoryID: 5,
             CategoryName: 'Grains/Cereals',
@@ -724,6 +766,7 @@ const products = [
         UnitsOnOrder: 10,
         ReorderLevel: 25,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 9, 21),
         Category: {
             CategoryID: 1,
             CategoryName: 'Beverages',
@@ -741,6 +784,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 15,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 9, 28),
         Category: {
             CategoryID: 2,
             CategoryName: 'Condiments',
@@ -758,6 +802,7 @@ const products = [
         UnitsOnOrder: 70,
         ReorderLevel: 15,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 10, 4),
         Category: {
             CategoryID: 8,
             CategoryName: 'Seafood',
@@ -775,6 +820,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 0,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 10, 11),
         Category: {
             CategoryID: 8,
             CategoryName: 'Seafood',
@@ -792,6 +838,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 0,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 10, 18),
         Category: {
             CategoryID: 3,
             CategoryName: 'Confections',
@@ -809,6 +856,7 @@ const products = [
         UnitsOnOrder: 70,
         ReorderLevel: 25,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 10, 25),
         Category: {
             CategoryID: 3,
             CategoryName: 'Confections',
@@ -826,6 +874,7 @@ const products = [
         UnitsOnOrder: 60,
         ReorderLevel: 15,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 11, 2),
         Category: {
             CategoryID: 3,
             CategoryName: 'Confections',
@@ -843,6 +892,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 30,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 11, 9),
         Category: {
             CategoryID: 3,
             CategoryName: 'Confections',
@@ -860,6 +910,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 10,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 11, 16),
         Category: {
             CategoryID: 7,
             CategoryName: 'Produce',
@@ -877,6 +928,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 25,
         Discontinued: false,
+        FirstOrderedOn: new Date(1997, 11, 23),
         Category: {
             CategoryID: 5,
             CategoryName: 'Grains/Cereals',
@@ -894,6 +946,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 0,
         Discontinued: true,
+        FirstOrderedOn: new Date(1998, 0, 6),
         Category: {
             CategoryID: 6,
             CategoryName: 'Meat/Poultry',
@@ -911,6 +964,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 10,
         Discontinued: false,
+        FirstOrderedOn: new Date(1998, 0, 13),
         Category: {
             CategoryID: 6,
             CategoryName: 'Meat/Poultry',
@@ -928,6 +982,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 20,
         Discontinued: false,
+        FirstOrderedOn: new Date(1998, 0, 20),
         Category: {
             CategoryID: 6,
             CategoryName: 'Meat/Poultry',
@@ -945,6 +1000,7 @@ const products = [
         UnitsOnOrder: 10,
         ReorderLevel: 30,
         Discontinued: false,
+        FirstOrderedOn: new Date(1998, 1, 3),
         Category: {
             CategoryID: 5,
             CategoryName: 'Grains/Cereals',
@@ -962,6 +1018,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 20,
         Discontinued: false,
+        FirstOrderedOn: new Date(1998, 1, 10),
         Category: {
             CategoryID: 5,
             CategoryName: 'Grains/Cereals',
@@ -979,6 +1036,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 20,
         Discontinued: false,
+        FirstOrderedOn: new Date(1998, 1, 17),
         Category: {
             CategoryID: 8,
             CategoryName: 'Seafood',
@@ -996,6 +1054,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 0,
         Discontinued: false,
+        FirstOrderedOn: new Date(1998, 1, 24),
         Category: {
             CategoryID: 4,
             CategoryName: 'Dairy Products',
@@ -1013,6 +1072,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 0,
         Discontinued: false,
+        FirstOrderedOn: new Date(1998, 2, 3),
         Category: {
             CategoryID: 4,
             CategoryName: 'Dairy Products',
@@ -1030,6 +1090,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 25,
         Discontinued: false,
+        FirstOrderedOn: new Date(1998, 2, 10),
         Category: {
             CategoryID: 2,
             CategoryName: 'Condiments',
@@ -1047,6 +1108,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 0,
         Discontinued: false,
+        FirstOrderedOn: new Date(1998, 2, 17),
         Category: {
             CategoryID: 3,
             CategoryName: 'Confections',
@@ -1064,6 +1126,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 5,
         Discontinued: false,
+        FirstOrderedOn: new Date(1998, 2, 24),
         Category: {
             CategoryID: 2,
             CategoryName: 'Condiments',
@@ -1081,6 +1144,7 @@ const products = [
         UnitsOnOrder: 80,
         ReorderLevel: 30,
         Discontinued: false,
+        FirstOrderedOn: new Date(1998, 3, 7),
         Category: {
             CategoryID: 5,
             CategoryName: 'Grains/Cereals',
@@ -1098,6 +1162,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 0,
         Discontinued: false,
+        FirstOrderedOn: new Date(1998, 3, 14),
         Category: {
             CategoryID: 2,
             CategoryName: 'Condiments',
@@ -1115,6 +1180,7 @@ const products = [
         UnitsOnOrder: 100,
         ReorderLevel: 20,
         Discontinued: false,
+        FirstOrderedOn: new Date(1998, 3, 21),
         Category: {
             CategoryID: 2,
             CategoryName: 'Condiments',
@@ -1132,6 +1198,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 10,
         Discontinued: false,
+        FirstOrderedOn: new Date(1998, 3, 28),
         Category: {
             CategoryID: 1,
             CategoryName: 'Beverages',
@@ -1149,6 +1216,7 @@ const products = [
         UnitsOnOrder: 10,
         ReorderLevel: 15,
         Discontinued: false,
+        FirstOrderedOn: new Date(1998, 4, 5),
         Category: {
             CategoryID: 3,
             CategoryName: 'Confections',
@@ -1166,6 +1234,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 15,
         Discontinued: false,
+        FirstOrderedOn: new Date(1998, 4, 12),
         Category: {
             CategoryID: 4,
             CategoryName: 'Dairy Products',
@@ -1183,6 +1252,7 @@ const products = [
         UnitsOnOrder: 10,
         ReorderLevel: 30,
         Discontinued: false,
+        FirstOrderedOn: new Date(1998, 4, 19),
         Category: {
             CategoryID: 1,
             CategoryName: 'Beverages',
@@ -1200,6 +1270,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 0,
         Discontinued: false,
+        FirstOrderedOn: new Date(1998, 4, 26),
         Category: {
             CategoryID: 4,
             CategoryName: 'Dairy Products',
@@ -1217,6 +1288,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 0,
         Discontinued: false,
+        FirstOrderedOn: new Date(1998, 5, 2),
         Category: {
             CategoryID: 4,
             CategoryName: 'Dairy Products',
@@ -1234,6 +1306,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 5,
         Discontinued: false,
+        FirstOrderedOn: new Date(1998, 5, 9),
         Category: {
             CategoryID: 8,
             CategoryName: 'Seafood',
@@ -1251,6 +1324,7 @@ const products = [
         UnitsOnOrder: 20,
         ReorderLevel: 5,
         Discontinued: false,
+        FirstOrderedOn: new Date(1998, 5, 16),
         Category: {
             CategoryID: 7,
             CategoryName: 'Produce',
@@ -1268,6 +1342,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 25,
         Discontinued: false,
+        FirstOrderedOn: new Date(1998, 5, 23),
         Category: {
             CategoryID: 1,
             CategoryName: 'Beverages',
@@ -1285,6 +1360,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 20,
         Discontinued: false,
+        FirstOrderedOn: new Date(1998, 6, 7),
         Category: {
             CategoryID: 1,
             CategoryName: 'Beverages',
@@ -1302,6 +1378,7 @@ const products = [
         UnitsOnOrder: 0,
         ReorderLevel: 15,
         Discontinued: false,
+        FirstOrderedOn: new Date(1998, 6, 14),
         Category: {
             CategoryID: 2,
             CategoryName: 'Condiments',

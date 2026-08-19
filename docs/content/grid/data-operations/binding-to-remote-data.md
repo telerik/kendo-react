@@ -1,12 +1,12 @@
 ---
 title: Binding to Remote Data
-description: 'Learn how to bind the KendoKendoReact Data Grid to remote data.'
-components: ["datagrid"]
+description: 'Learn how to bind the KendoReact Grid to remote data.'
+components: ['grid']
 slug: bindingtoremotedata_grid
 position: 30
 ---
 
-# Binding the KendoKendoReact Data Grid to Remote Data
+# Binding the KendoReact Grid to Remote Data
 
 You can bind the Grid to remote data and display the data in tabular form.
 
@@ -29,7 +29,7 @@ You can show a loading indicator by:
 
 The following example demonstrates how to integrate a custom Loader component with the Grid.
 
-{% meta height:520 %}
+{% meta height:640 %}
 {% embed_file binding-to-remote-data-loader/func/app.tsx preview %}
 {% embed_file binding-to-remote-data-loader/func/main.tsx %}
 {% endmeta %}

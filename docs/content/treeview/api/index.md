@@ -75,10 +75,16 @@ position: 1
         <a href="{% slug api_treeview_treeviewcontextmenuevent %}">TreeViewContextMenuEvent</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_treeview_treeviewdragcluehandle %}">TreeViewDragClueHandle</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_treeview_treeviewdragclueprops %}">TreeViewDragClueProps</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_treeview_treeviewexpandchangeevent %}">TreeViewExpandChangeEvent</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_treeview_treeviewhandle %}">TreeViewHandle</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_treeview_treeviewitemclickevent %}">TreeViewItemClickEvent</a>
@@ -120,13 +126,7 @@ position: 1
         <a href="{% slug api_treeview_treeview %}">TreeView</a>
     </li>
     <li class="api-item">
-        <a href="{% slug api_treeview_treeview %}">TreeView</a>
-    </li>
-    <li class="api-item">
         <a href="{% slug api_treeview_treeviewdragclue %}">TreeViewDragClue</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_treeview_treeviewhandle %}">TreeViewHandle</a>
     </li>
   </ul>
 </div>
@@ -144,10 +144,13 @@ position: 1
 
   <ul class="api-item-list">
     <li class="api-item">
-        <a href="{% slug api_treeview_treeview %}">TreeView</a>
+        <a href="{% slug api_treeview_treeviewdefaultprops %}">treeViewDefaultProps</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_treeview_treeviewdraganalyzer %}">TreeViewDragAnalyzer</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_treeview_treeviewdragcluedefaultprops %}">treeViewDragClueDefaultProps</a>
     </li>
   </ul>
 </div>

@@ -14,7 +14,7 @@ The KendoReact BottomNavigation allows movement among primary destinations in an
 
 The following example demonstrates the BottomNavigation in action.
 
-{% meta height:700 %}
+{% meta height:810 %}
 {% embed_file bottomnavigation/basic-usage/func/NavigationContainer.tsx %}
 {% embed_file bottomnavigation/basic-usage/func/app.tsx preview %}
 {% embed_file bottomnavigation/basic-usage/func/main.tsx %}

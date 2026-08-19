@@ -17,7 +17,7 @@ The KendoReact Spreadsheet component is part of the KendoReact library of React 
 
 The following example demonstrates the KendoReact Spreadsheet component in action.
 
-{% meta height:740 %}
+{% meta height:860 %}
 {% embed_file overview/func/app.tsx preview %}
 {% embed_file overview/func/main.tsx %}
 {% endmeta %}

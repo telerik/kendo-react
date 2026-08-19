@@ -8,7 +8,7 @@ position: 7
 
 # Formats
 
-You can control the format of the TimePicker by using [`format`]({% slug api_dateinputs_timepicker %}#toc-format).
+You can control the format of the TimePicker by using [`format`](slug:api_dateinputs_timepickerprops#format).
 
 The `format` property accepts string parameters. By default, `format` is set to `'t'` and the value is formatted accordingly. For more information on the date and number formats KendoReact supports, refer to the [kendo-intl](https://github.com/telerik/kendo-intl#date-formatting) GitHub repository.
 

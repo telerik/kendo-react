@@ -12,7 +12,7 @@ The Form Wizard uses the KendoReact Form component to check user input. You can 
 
 This example shows a multi-step form that checks inputs at each step:
 
-{% meta height:660 %}
+{% meta height:700 %}
 {% embed_file wizard/validation/func/app.tsx preview %}
 {% embed_file wizard/validation/func/main.tsx %}
 {% endmeta %}

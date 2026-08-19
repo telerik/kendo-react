@@ -71,7 +71,7 @@ Applies when the type is "ArrowEnd" or "ArrowStart".
 <code>
 
 
-string | [Fill]({% slug api_diagram_fill %})
+"null" | string | [Fill]({% slug api_diagram_fill %})
 
 
 </code>

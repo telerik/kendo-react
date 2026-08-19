@@ -18,7 +18,7 @@ The Kendo React Gantt component is distributed through the [kendo-react-gantt NP
 
 The following example demonstrates the Gantt Component in action.
 
-{% meta height:560 %}
+{% meta height:680 %}
 {% embed_file overview/func/app.tsx preview %}
 {% embed_file overview/func/main.tsx %}
 {% endmeta %}

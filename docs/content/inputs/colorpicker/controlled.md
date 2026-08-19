@@ -23,6 +23,8 @@ To manage the value of the ColorPicker:
 1. Handle the [`onChange`]({% slug api_inputs_colorpickerprops %}#toc-onchange) event.
 1. Pass the new value through the props.
 
+The following example demonstrates how to control the ColorPicker value and display the selected color outside the component.
+
 {% meta height:550 %}
 {% embed_file colorpicker/controlled/value/func/app.tsx preview %}
 {% embed_file colorpicker/controlled/value/func/main.tsx %}

@@ -28,177 +28,6 @@ position: 1
 <span class="section-key">
 
 
-## Class
-
-
-</span>
-
-
-  <ul class="api-item-list">
-    <li class="api-item">
-        <a href="{% slug api_scheduler_agendaview %}">AgendaView</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_dataitem %}">DataItem</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_dateheadercelldefaultprops %}">dateHeaderCellDefaultProps</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_dayview %}">DayView</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_monthview %}">MonthView</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_scheduleractiveviewcontexttype %}">SchedulerActiveViewContextType</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_schedulerdatacontexttype %}">SchedulerDataContextType</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_schedulerdatecontexttype %}">SchedulerDateContextType</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_schedulerdateformatcontexttype %}">SchedulerDateFormatContextType</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_schedulerdaterangecontexttype %}">SchedulerDateRangeContextType</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_schedulerdefaultprops %}">schedulerDefaultProps</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_schedulerdrag %}">SchedulerDrag</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_schedulerdragdefaultprops %}">schedulerDragDefaultProps</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_scheduleredititemdefaultprops %}">schedulerEditItemDefaultProps</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_scheduleredititemdragitemcontexttype %}">SchedulerEditItemDragItemContextType</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_scheduleredititemformitemcontexttype %}">SchedulerEditItemFormItemContextType</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_scheduleredititempropscontexttype %}">SchedulerEditItemPropsContextType</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_scheduleredititemremoveitemcontexttype %}">SchedulerEditItemRemoveItemContextType</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_scheduleredititemresizeitemcontexttype %}">SchedulerEditItemResizeItemContextType</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_scheduleredititemshowoccurrencedialogcontexttype %}">SchedulerEditItemShowOccurrenceDialogContextType</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_scheduleredititemshowremovedialogcontexttype %}">SchedulerEditItemShowRemoveDialogContextType</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_schedulereditslotdefaultprops %}">schedulerEditSlotDefaultProps</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_schedulereditslotformitemcontexttype %}">SchedulerEditSlotFormItemContextType</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_schedulereditslotpropscontexttype %}">SchedulerEditSlotPropsContextType</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_scheduleredittaskdefaultprops %}">schedulerEditTaskDefaultProps</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_schedulerfieldscontexttype %}">SchedulerFieldsContextType</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_schedulerformdefaultprops %}">schedulerFormDefaultProps</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_schedulerformeditordefaultprops %}">schedulerFormEditorDefaultProps</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_schedulergroupscontexttype %}">SchedulerGroupsContextType</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_scheduleritemremoveitemaction %}">SchedulerItemRemoveItemAction</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_scheduleritemseriesaction %}">SchedulerItemSeriesAction</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_scheduleritemshowoccurrencedialogaction %}">SchedulerItemShowOccurrenceDialogAction</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_scheduleritemshowremovedialogaction %}">SchedulerItemShowRemoveDialogAction</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_scheduleroccurrencedialoghandle %}">SchedulerOccurrenceDialogHandle</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_schedulerorientationcontexttype %}">SchedulerOrientationContextType</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_schedulerproportionalviewitemdefaultprops %}">schedulerProportionalViewItemDefaultProps</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_schedulerpropscontexttype %}">SchedulerPropsContextType</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_schedulerremovedialoghandle %}">SchedulerRemoveDialogHandle</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_schedulerresize %}">SchedulerResize</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_schedulerresizedefaultprops %}">schedulerResizeDefaultProps</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_schedulerslotdefaultprops %}">schedulerSlotDefaultProps</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_schedulerslotexpandableconfig %}">SchedulerSlotExpandableConfig</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_schedulerview %}">SchedulerView</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_schedulerviewdaterangefunction %}">SchedulerViewDateRangeFunction</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_schedulerviewitemdefaultprops %}">schedulerViewItemDefaultProps</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_schedulerviewscontexttype %}">SchedulerViewsContextType</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_schedulerviewslotdefaultprops %}">schedulerViewSlotDefaultProps</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_schedulerviewtaskdefaultprops %}">schedulerViewTaskDefaultProps</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_timeheadercelldefaultprops %}">timeHeaderCellDefaultProps</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_timelineview %}">TimelineView</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_weekview %}">WeekView</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_scheduler_workweekview %}">WorkWeekView</a>
-    </li>
-  </ul>
-</div>
-<div class="api-index-section">
-
-
-<span class="section-key">
-
-
 ## Component
 
 
@@ -388,6 +217,15 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_scheduler_monthviewprops %}">MonthViewProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_recurrencebuttontexttemplateprops %}">RecurrenceButtonTextTemplateProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_recurrencerule %}">RecurrenceRule</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_recurrencesummarytemplateprops %}">RecurrenceSummaryTemplateProps</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_scheduler_schedulerdatachangeevent %}">SchedulerDataChangeEvent</a>
@@ -613,6 +451,174 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_scheduler_slots_select_action %}">SLOTS_SELECT_ACTION</a>
+    </li>
+  </ul>
+</div>
+<div class="api-index-section">
+
+
+<span class="section-key">
+
+
+## Class
+
+
+</span>
+
+
+  <ul class="api-item-list">
+    <li class="api-item">
+        <a href="{% slug api_scheduler_dataitem %}">DataItem</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_dateheadercelldefaultprops %}">dateHeaderCellDefaultProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_scheduleractiveviewcontexttype %}">SchedulerActiveViewContextType</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_schedulerdatacontexttype %}">SchedulerDataContextType</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_schedulerdatecontexttype %}">SchedulerDateContextType</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_schedulerdateformatcontexttype %}">SchedulerDateFormatContextType</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_schedulerdaterangecontexttype %}">SchedulerDateRangeContextType</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_schedulerdefaultprops %}">schedulerDefaultProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_schedulerdragdefaultprops %}">schedulerDragDefaultProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_scheduleredititemdefaultprops %}">schedulerEditItemDefaultProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_scheduleredititemdragitemcontexttype %}">SchedulerEditItemDragItemContextType</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_scheduleredititemformitemcontexttype %}">SchedulerEditItemFormItemContextType</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_scheduleredititempropscontexttype %}">SchedulerEditItemPropsContextType</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_scheduleredititemremoveitemcontexttype %}">SchedulerEditItemRemoveItemContextType</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_scheduleredititemresizeitemcontexttype %}">SchedulerEditItemResizeItemContextType</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_scheduleredititemshowoccurrencedialogcontexttype %}">SchedulerEditItemShowOccurrenceDialogContextType</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_scheduleredititemshowremovedialogcontexttype %}">SchedulerEditItemShowRemoveDialogContextType</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_schedulereditslotdefaultprops %}">schedulerEditSlotDefaultProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_schedulereditslotformitemcontexttype %}">SchedulerEditSlotFormItemContextType</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_schedulereditslotpropscontexttype %}">SchedulerEditSlotPropsContextType</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_scheduleredittaskdefaultprops %}">schedulerEditTaskDefaultProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_schedulerfieldscontexttype %}">SchedulerFieldsContextType</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_schedulerformdefaultprops %}">schedulerFormDefaultProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_schedulerformeditordefaultprops %}">schedulerFormEditorDefaultProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_schedulergroupscontexttype %}">SchedulerGroupsContextType</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_scheduleritemremoveitemaction %}">SchedulerItemRemoveItemAction</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_scheduleritemseriesaction %}">SchedulerItemSeriesAction</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_scheduleritemshowoccurrencedialogaction %}">SchedulerItemShowOccurrenceDialogAction</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_scheduleritemshowremovedialogaction %}">SchedulerItemShowRemoveDialogAction</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_scheduleroccurrencedialoghandle %}">SchedulerOccurrenceDialogHandle</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_schedulerorientationcontexttype %}">SchedulerOrientationContextType</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_schedulerproportionalviewitemdefaultprops %}">schedulerProportionalViewItemDefaultProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_schedulerpropscontexttype %}">SchedulerPropsContextType</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_schedulerremovedialoghandle %}">SchedulerRemoveDialogHandle</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_schedulerresizedefaultprops %}">schedulerResizeDefaultProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_schedulerslotdefaultprops %}">schedulerSlotDefaultProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_schedulerslotexpandableconfig %}">SchedulerSlotExpandableConfig</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_schedulerview %}">SchedulerView</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_schedulerviewdaterangefunction %}">SchedulerViewDateRangeFunction</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_schedulerviewitemdefaultprops %}">schedulerViewItemDefaultProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_schedulerviewscontexttype %}">SchedulerViewsContextType</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_schedulerviewslotdefaultprops %}">schedulerViewSlotDefaultProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_schedulerviewtaskdefaultprops %}">schedulerViewTaskDefaultProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_timeheadercelldefaultprops %}">timeHeaderCellDefaultProps</a>
+    </li>
+  </ul>
+</div>
+<div class="api-index-section">
+
+
+<span class="section-key">
+
+
+## Function
+
+
+</span>
+
+
+  <ul class="api-item-list">
+    <li class="api-item">
+        <a href="{% slug api_scheduler_readdateaslocal %}">readDateAsLocal</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_scheduler_readdatewithtimezone %}">readDateWithTimezone</a>
     </li>
   </ul>
 </div>

@@ -15,6 +15,13 @@ Apart from the default vision of the Checkbox, these alternative styling options
 -   [Size](#size)
 -   [Border Radius](#border-radius)
 
+The following example demonstrates all the available appearance options of the Checkbox in a single, configurable demo.
+
+{% meta height:150 %}
+{% embed_file checkbox/appearance/func/app.tsx preview %}
+{% embed_file checkbox/appearance/func/main.tsx %}
+{% endmeta %}
+
 ## Size
 
 The CheckBox allows you to customize its width and height.

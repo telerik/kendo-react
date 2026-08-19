@@ -63,7 +63,7 @@ To apply the customization, provide the corresponding `row`, `column`, `cell`, o
 
 The following example demonstrates the `PivotGrid` cell customization in action:
 
-{% meta height:770 %}
+{% meta height:880 %}
 {% embed_file customization/cell/basic/func/app.tsx preview %}
 {% embed_file customization/cell/basic/func/main.tsx %}
 {% embed_file customization/cell/basic/func/custom-cell.tsx %}
@@ -75,7 +75,7 @@ A common scenario in the `PivotGrid` is the customization of the `row` and `colu
 
 The following example demonstrates applying custom `width` and `height` to specific rows and columns of the `PivotGrid`.
 
-{% meta height:770 %}
+{% meta height:880 %}
 {% embed_file customization/dimensions/func/app.tsx preview %}
 {% embed_file customization/dimensions/func/main.tsx %}
 {% embed_file customization/dimensions/func/custom-row.tsx %}

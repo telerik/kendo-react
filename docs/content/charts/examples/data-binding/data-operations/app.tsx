@@ -1,6 +1,6 @@
 import * as React from 'react';
+import { Button } from '@progress/kendo-react-buttons';
 import { Chart, ChartSeries, ChartSeriesItem, ChartLegend, ChartTitle } from '@progress/kendo-react-charts';
-import { DemoConfigurator } from './configurator';
 import './styles.css';
 
 const initialLineData: [number, number][] = [
@@ -20,6 +20,7 @@ const initialLineData: [number, number][] = [
 ];
 
 const randomValue = (max: number): number => Number.parseFloat((Math.random() * max).toFixed(2));
+const buttonStyle = { marginLeft: 5, marginRight: 5 };
 
 const App = () => {
     const [lineData, setLineData] = React.useState<[number, number][]>(initialLineData);
@@ -47,12 +48,20 @@ const App = () => {
 
     return (
         <div>
-            <DemoConfigurator
-                onAddData={handleAddData}
-                onAddDataset={handleAddDataset}
-                onRemoveData={handleRemoveData}
-                onRandomize={handleRandomize}
-            />
+            <div className="example-config">
+                <Button style={buttonStyle} onClick={handleAddData}>
+                    Add Data
+                </Button>
+                <Button style={buttonStyle} onClick={handleAddDataset}>
+                    Add Dataset
+                </Button>
+                <Button style={buttonStyle} onClick={handleRemoveData}>
+                    Remove Data
+                </Button>
+                <Button style={buttonStyle} onClick={handleRandomize}>
+                    Randomize
+                </Button>
+            </div>
             <Chart className="chart-demo-chart" transitions={false}>
                 <ChartTitle text="East Asia & Pacific" />
                 <ChartLegend visible={false} />

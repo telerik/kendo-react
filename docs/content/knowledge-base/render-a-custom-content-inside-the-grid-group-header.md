@@ -41,7 +41,7 @@ In order to achieve this, it is currently recommended to use the ['groupHeader`]
 
 This can also be achieved using the Grid `cellRender` property
 
-1. Use the [`cellRender`]({% slug api_grid_gridprops %}#toc-cellrender) prop.
+1. Use the [`cellRender`]({% slug api_grid_gridprops %}) prop.
 1. Return a modified `td` element with the desired icon or other custom elements for the specific header.
 
 The following example demonstrates how to modify the `groupHeader` of the Grid.

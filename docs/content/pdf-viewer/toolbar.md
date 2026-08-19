@@ -29,7 +29,7 @@ The toolbar collection includes the following built-in tools:
 
 The following example demonstrates the basic configuration options for the PDF Viewer toolbar tools, which will be used by default if no `tools` are set. You can also add `spacer` elements, in order to visually split the tools.
 
-{% meta height:650 %}
+{% meta height:680 %}
 {% embed_file toolbar/func/app.tsx preview %}
 {% embed_file toolbar/func/main.tsx %}
 {% endmeta %}

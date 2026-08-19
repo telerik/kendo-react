@@ -12,7 +12,7 @@ The Chart supports three types of tooltips.
 The Chart tooltip types are:
 
 -   [Series tooltip]({% slug tooltips_chart_charts %}#series-tooltip)&mdash;A tooltip displayed for the hovered chart point.
--   [Shared tooltip]({% slug tooltips_chart_charts %}#tooltip)&mdash;A tooltip displayed for the hovered chart category.
+-   [Shared tooltip]({% slug tooltips_chart_charts %}#shared-tooltip)&mdash;A tooltip displayed for the hovered chart category.
 -   [Crosshair tooltip]({% slug tooltips_chart_charts %}#crosshair-tooltip)&mdash;A tooltip displayed for the axes crosshairs.
 
 ## Series Tooltip
@@ -50,7 +50,7 @@ The following example demonstrates how to customize the content of the tooltip t
 
 To specify a template, use the `render` prop of the [`ChartTooltip`]({% slug api_charts_charttooltip %}) or [`ChartSeriesItemTooltip`]({% slug api_charts_chartseriesitemtooltip %}) components.
 
-The callback passed to the `render` props receives a single parameter - the context of the tooltip. When the `render` prop is defined on the `ChartTooltip` component, the context could be either of type [`SharedTooltipContext`]({% slug api_charts_sharedtooltipcontext %}) or [`TooltipContext`]({% slug api_charts_tooltipcontext %}) depending on whether the tooltip is [`shared`]({% slug tooltips_chart_charts %}#toc-sharedtooltip) or not. The type of of context when defined on the `ChartSeriesItemTooltip` is always of type `TooltipContext`.
+The callback passed to the `render` props receives a single parameter - the context of the tooltip. When the `render` prop is defined on the `ChartTooltip` component, the context could be either of type [`SharedTooltipContext`]({% slug api_charts_sharedtooltipcontext %}) or [`TooltipContext`]({% slug api_charts_tooltipcontext %}) depending on whether the tooltip is `shared` or not. The type of of context when defined on the `ChartSeriesItemTooltip` is always of type `TooltipContext`.
 
 The following example demonstrates how to customize the content by using a `render` prop.
 

@@ -1,37 +1,21 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import { ColorPalette } from '@progress/kendo-react-inputs';
+import { ColorPalette, ColorPaletteChangeEvent } from '@progress/kendo-react-inputs';
+import { EventLog } from '@docs-shared/EventLog';
 
 const App = () => {
-    const [logs, setLogs] = React.useState<Array<any>>([]);
+    const [events, setEvents] = React.useState<string[]>([]);
 
-    const renderLogs = () => {
-        return logs.map((log, index) => {
-            return <li key={index}>{log}</li>;
-        });
-    }
-
-    const handleOnChange = (e) => {
-        const localLogs: Array<any> = logs.slice();
-        localLogs.unshift(`hex: ${e.value}, rgba: ${e.rgbaValue}`);
-
-        setLogs(localLogs);
-    }
+    const handleOnChange = (e: ColorPaletteChangeEvent) => {
+        setEvents((prev) => [`hex: ${e.value}, rgba: ${e.rgbaValue}`, ...prev]);
+    };
 
     return (
-      <div className="row">
-        <div className="col-md-6">
-          <p>Select color:</p>
-          <ColorPalette onChange={handleOnChange} palette='basic' />
-        </div>
-        <div className="example-config col-md-6" style={{ height: '180px' }}>
-          <h5>Log: </h5>
-          <ul className="event-log">
-            {renderLogs()}
-          </ul>
-        </div>
-      </div>
+        <EventLog events={events} onClear={() => setEvents([])}>
+            <p>Select color:</p>
+            <ColorPalette onChange={handleOnChange} palette="basic" />
+        </EventLog>
     );
-}
+};
 
 export default App;

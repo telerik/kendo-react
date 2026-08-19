@@ -14,7 +14,7 @@ For more information on how globalization practices are implemented in KendoReac
 
 The following example demonstrates how to use the Spanish date format and month names and how to localize the built-in messages of the KendoReact Gantt component.
 
-{% meta height:580 %}
+{% meta height:680 %}
 {% embed_file globalization/func/es.json %}
 {% embed_file globalization/func/app.tsx preview %}
 {% embed_file globalization/func/main.tsx %}

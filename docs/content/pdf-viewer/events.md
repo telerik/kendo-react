@@ -21,7 +21,7 @@ The KendoReact PDF Viewer component exposes several events to let you easily han
 
 The following example demonstrates basic PDF Viewer events.
 
-{% meta height:810 %}
+{% meta height:850 %}
 {% embed_file events/func/app.tsx preview %}
 {% embed_file events/func/main.tsx %}
 {% endmeta %}

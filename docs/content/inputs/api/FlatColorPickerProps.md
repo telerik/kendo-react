@@ -47,7 +47,7 @@ Represents the properties of [FlatColorPicker](https://www.telerik.com/kendo-rea
 <code>
 
 
-'gradient''
+'gradient'
 
 
 </code>
@@ -296,6 +296,41 @@ Sets the default input format in the gradient input editor.
 <td class="table-cell-name">
 
 
+#### gradientSettings?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+[ColorPickerGradientSettings]({% slug api_inputs_colorpickergradientsettings %})
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Specifies the settings of the ColorGradient when rendered inside the FlatColorPicker.
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### header?
 
 
@@ -473,6 +508,41 @@ Specifies whether we should display the opacity slider to allow selection of tra
 
 
 
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
+#### paletteSettings?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+[ColorPickerPaletteSettings]({% slug api_inputs_colorpickerpalettesettings %})
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Specifies the settings of the ColorPalette when rendered inside the FlatColorPicker.
 
 
 </td>
@@ -803,7 +873,7 @@ Sets the color value.
 <code>
 
 
-['gradient', 'palette']`
+['gradient', 'palette']
 
 
 </code>

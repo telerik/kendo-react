@@ -1,0 +1,10 @@
+.input-wrapper {
+    min-width: 200px;
+    margin-bottom: 30px;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

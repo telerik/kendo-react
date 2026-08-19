@@ -18,7 +18,7 @@ The column menu provides flexible options for high-level customization. For exam
 
 To configure the column menu, use the [`columnMenu`]({% slug api_gantt_ganttcolumnprops %}#toc-columnmenu) option of the columns and pass the corresponding ColumnMenu component base on the column data type.
 
-{% meta height:760 %}
+{% meta height:880 %}
 {% embed_file column-menu/func/app.tsx preview %}
 {% embed_file column-menu/func/main.tsx %}
 {% endmeta %}
@@ -41,7 +41,7 @@ The following example demonstrates how to customize the column menus:
 -   Boolean ColumnMenu
     -   implement a custom filter editor
 
-{% meta height:760 %}
+{% meta height:880 %}
 {% embed_file column-menu-custom/func/app.tsx preview %}
 {% embed_file column-menu-custom/func/main.tsx %}
 {% embed_file column-menu-custom/func/textColumnMenu.tsx %}
@@ -53,7 +53,7 @@ The following example demonstrates how to customize the column menus:
 
 The Column Menu items can be changed using the ColumnMenu [itemsRender]({% slug api_data-tools_columnmenuprops %}#toc-itemsrender) prop. The following example demonstrates how to remove the filtering item and Toggle Columns items:
 
-{% meta height:580 %}
+{% meta height:680 %}
 {% embed_file column-menu-custom-items/func/app.tsx preview %}
 {% embed_file column-menu-custom-items/func/main.tsx %}
 {% embed_file column-menu-custom-items/func/ColumnChooser.tsx %}

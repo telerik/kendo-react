@@ -12,7 +12,7 @@ The KendoReact TreeList provides a built-in function to convert flat data to a t
 
 To covert the flat data to a tree, utilize the [`createDataTree`]({% slug api_treelist_createdatatree %}) function of the TreeList.
 
-{% meta height:580 %}
+{% meta height:690 %}
 {% embed_file flat-data/func/app.tsx preview %}
 {% embed_file flat-data/func/main.tsx %}
 {% endmeta %}

@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: 'Discover the features of the KendoReact Menu and learn how to use the component in React projects.'
-components: ["menu"]
+components: ['menu']
 slug: overview_menu
 position: 1
 ---
@@ -19,10 +19,10 @@ You can describe the Menu items either by:
 
 The following example demonstrates the Menu in action.
 
-{% meta height:200 %}
-{% embed_file menu/overview/basic/func/items.json %}
+{% meta height:750 %}
 {% embed_file menu/overview/basic/func/app.tsx preview %}
 {% embed_file menu/overview/basic/func/main.tsx %}
+{% embed_file menu/overview/basic/func/styles.css %}
 {% endmeta %}
 
 > The Menu is part of the [KendoReact Layout]({% slug overview_layout %}) component library. The procedures for installing, importing, and using all components in the library are identical. To learn how to use the Menu and the rest of the components in the package, see the [Getting Started with the KendoReact Layout Package]({% slug getstarted_layout %}) guide.

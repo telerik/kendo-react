@@ -16,6 +16,13 @@ Apart from the default vision of the NumericTextBox, these alternative styling o
 -   [Fill Mode](#fill-mode)
 -   [Border Radius](#border-radius)
 
+The following example demonstrates all the available appearance options of the NumericTextBox in a single, configurable demo.
+
+{% meta height:220 %}
+{% embed_file numerictextbox/appearance/func/app.tsx preview %}
+{% embed_file numerictextbox/appearance/func/main.tsx %}
+{% endmeta %}
+
 ## Size
 
 The NumericTextBox allows you to set different `size` options. To achieve this, use the [`size`]({% slug api_inputs_numerictextboxprops %}#toc-size) property.

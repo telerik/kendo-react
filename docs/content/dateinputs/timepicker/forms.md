@@ -41,7 +41,7 @@ You can implement custom error messages which will be displayed when the TimePic
 
 The TimePicker enables you to set its validity state by utilizing its props. Setting the validity state allows for the implementation of complex validation scenarios that are based on multiple sources. To override the current validity state and apply the corresponding styles, use the [`valid`]({% slug api_dateinputs_timepickerprops %}#toc-valid) prop.
 
-{% meta height:550 %}
+{% meta height:650 %}
 {% embed_file timepicker/forms/override/func/app.tsx preview %}
 {% embed_file timepicker/forms/override/func/main.tsx %}
 {% endmeta %}
@@ -50,7 +50,7 @@ The TimePicker enables you to set its validity state by utilizing its props. Set
 
 By default, to achieve a visual representation of its invalid state, the TimePicker applies the `k-invalid` class name to the wrapping component. To disable the utilization of `k-invalid`, set the [`validityStyles`]({% slug api_dateinputs_timepickerprops %}#toc-validitystyles) property to `false`.
 
-{% meta height:550 %}
+{% meta height:630 %}
 {% embed_file timepicker/forms/disable-styles/func/app.tsx preview %}
 {% embed_file timepicker/forms/disable-styles/func/main.tsx %}
 {% endmeta %}

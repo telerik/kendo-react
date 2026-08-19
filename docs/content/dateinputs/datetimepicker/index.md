@@ -14,7 +14,7 @@ The DateTimePicker combines KendoReact DateInput, Calendar, and TimePicker compo
 
 The following example demonstrates the DateTimePicker in action.
 
-{% meta height:660 %}
+{% meta height:680 %}
 {% embed_file datetimepicker/overview/basic/func/app.tsx preview %}
 {% embed_file datetimepicker/overview/basic/func/main.tsx %}
 {% embed_file datetimepicker/overview/basic/func/styles.css %}

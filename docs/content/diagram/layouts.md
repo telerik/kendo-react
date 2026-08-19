@@ -17,7 +17,7 @@ When using layouts, you typically do not need to specify `x` and `y` coordinates
 
 The following example demonstrates all available layout algorithms in action.
 
-<demo metaUrl="diagram/layouts/basic/" height="580"></demo>
+<demo metaUrl="diagram/layouts/basic/" height="500"></demo>
 
 ## Available Layout Types
 
@@ -72,7 +72,7 @@ Layered layout configuration options include:
 
 The following example demonstrates a process flow layered layout.
 
-<demo metaUrl="diagram/layouts/layered/" height="760"></demo>
+<demo metaUrl="diagram/layouts/layered/" height="880"></demo>
 
 ### Force-Directed Layout
 

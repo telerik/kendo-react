@@ -1,7 +1,7 @@
 ---
 title: Multi-Column Headers
-description: 'Get started with the KendoKendoReact Data Grid and learn how to implement multi-column headers.'
-components: ["datagrid"]
+description: 'Get started with the KendoReact Grid and learn how to implement multi-column headers.'
+components: ['grid']
 slug: multicolumnheaders_columns_grid
 position: 70
 subject: Grid Multi-Column Headers feature
@@ -10,7 +10,7 @@ tier: premium
 
 # Multi-Column Headers
 
-The KendoReact Data Grid supports multi-column headers.
+The KendoReact Grid supports multi-column headers.
 
 <CtaPanelOverview></CtaPanelOverview>
 
@@ -18,6 +18,8 @@ To implement multi-column headers, either:
 
 -   Nest columns in the columns definition, or
 -   Define an array of column props as children of the particular column.
+
+The following example demonstrates multi-column headers using nested `GridColumn` definitions to group related columns under shared parent headers.
 
 {% meta height:480 %}
 {% embed_file multi-column-headers/func/app.tsx preview %}

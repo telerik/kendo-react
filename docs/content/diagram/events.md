@@ -30,7 +30,7 @@ The KendoReact Diagram provides a comprehensive set of events that enable you to
 
 The following example demonstrates all available events in action.
 
-<demo metaUrl="diagram/events/basic/" height="820"></demo>
+<demo metaUrl="diagram/events/basic/" height="890"></demo>
 
 ## See Also
 

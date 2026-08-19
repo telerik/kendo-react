@@ -16,7 +16,7 @@ The KendoReact AIPrompt component is distributed through the [kendo-react-conver
 
 The following example demonstrates the AIPrompt Component in action.
 
-{% meta height:640 %}
+{% meta height:750 %}
 {% embed_file ai-prompt/overview/func/app.tsx preview %}
 {% embed_file ai-prompt/overview/func/main.tsx %}
 {% embed_file ai-prompt/overview/func/service-ai-data %}

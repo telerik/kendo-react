@@ -5,8 +5,6 @@ description: "Learn how to use KendoReact components and see how to take your Re
 slug: getting_started
 position: 10
 category: getting-started
-tag: updated
-release_tag: Q2 2026
 ---
 
 # Getting Started with KendoReact
@@ -126,7 +124,7 @@ Happy coding!
         href="slug://overview_grid"
         src="./images/grid.svg"
         darkSrc="./images/grid.svg"
-        title="Data Grid"
+        title="Grid"
         subTitle="UI Component"
         description="Transform data into interactive experiences with powerful sorting, filtering, paging, and editing built right in.">
     </article-card>

@@ -27,7 +27,7 @@ The Grid is a composite component that consists of 4 logically separated structu
 
  - Toolbar (`role=toolbar`);
  - Group header (`role=toolbar`);
- - Data Grid (`role=grid`);
+ - Grid (`role=grid`);
  - Pager (`role=application`);
 
 ### Grid Toolbar
@@ -59,7 +59,7 @@ Grid Grouping Header follows the specification of the ToolBar component.
 | `.k-grouping-header .k-chip-list` | `role=none/` | The ChipList default listbox role is removed to keep the toolbar --> button roles hierarchy. |
 |  | `title` | Present on the element or its child if sorting is enabled for that field. |
 
-### Data Grid (excluding Toolbars and Pager)
+### Grid (excluding Toolbars and Pager)
 
 
 The element with `role=grid` must not include the ToolBar and the Pager elements as those do not belong to the `role=grid` element itself.
@@ -68,7 +68,7 @@ The element with `role=grid` must not include the ToolBar and the Pager elements
 
 | Selector | Attribute | Usage |
 | -------- | --------- | ----- |
-| `.k-grid:not(.k-treelist) .k-grid-aria-root` | `role=grid` | The role specifies the element is a Data Grid. |
+| `.k-grid:not(.k-treelist) .k-grid-aria-root` | `role=grid` | The role specifies the element is a Grid. |
 | `.k-grid-aria-root` | `aria-colcount` | The total number of columns in the Grid. Needed only for Virtual columns and Hidden columns scenarios, when not all columns are rendered in the DOM. If the total number of columns is unknown, the value of `aria-colcount` must be set to -1. |
 |  | `aria-rowcount` | The total number of rows in the table (header rows + master rows + detail rows + data rows + footer rows + aggregates rows). Needed only when Paging (and more that 1 page is present in the component), Virtual rows, or Master/Detail rows (Hierarchical Grid, Detail Template Grid) are enabled. If data is also Grouped, the proper number of all rows could not be calculated. In that case the value must be set to -1. |
 
@@ -190,6 +190,6 @@ For more details about the Grid component's keyboard navigation, refer to the ar
 
 ## See Also
 
-* [React Data Grid](slug://overview_grid)
+* [React Grid](slug://overview_grid)
 * [Accessibility in KendoReact]({% slug overview_accessibilty %})
 * [Accessibility Compliance and Keyboard Support in KendoReact]({% slug compliance_accessibilty %})

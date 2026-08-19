@@ -16,7 +16,7 @@ The KendoReact Loader is distributed through the [kendo-react-indicators NPM pac
 
 The following example demonstrates the Loader in action.
 
-{% meta height:250 %}
+{% meta height:200 %}
 {% embed_file loader/overview/func/app.tsx preview %}
 {% embed_file loader/overview/func/main.tsx %}
 {% endmeta %}

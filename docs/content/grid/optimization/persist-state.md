@@ -1,18 +1,18 @@
 ---
 title: Persisting State
-description: 'Get started with the KendoKendoReact Data Grid which supports the option to persist the current Grid state'
-components: ["datagrid"]
+description: 'Get started with the KendoReact Grid which supports the option to persist the current Grid state'
+components: ['grid']
 slug: persist-state_grid
 position: 20
 ---
 
 # Persisting State
 
-A common requirement for web apps is to save the user customization and settings when interacting with your app, and then restore them once the user comes back at some point in the future. The KendoKendoReact Data Grid exposes the capability to save and restore settings that were previously applied.
+A common requirement for web apps is to save the user customization and settings when interacting with your app, and then restore them once the user comes back at some point in the future. The KendoReact Grid exposes the capability to save and restore settings that were previously applied.
 
 The following example demonstrates how to persist the Grid state.
 
-{% meta height:780 %}
+{% meta height:880 %}
 {% embed_file persist-state/func/app.tsx preview %}
 {% embed_file persist-state/func/main.tsx %}
 {% endmeta %}

@@ -28,6 +28,8 @@ npm install marked
 
 ### 2. Create a function to parse markdown content
 
+To render markdown content in Chat messages, you need to parse the markdown text into HTML. Create a function that uses the marked library to convert markdown strings into HTML:
+
 ```tsx
 import { setOptions } from 'marked';
 
@@ -38,6 +40,8 @@ const parseMarkdown = (text: string): string => {
 ```
 
 ### 3. Use the messageTemplate to render markdown content
+
+Define a `MessageTemplate` function to render markdown content in messages. This function checks if the message is from the user or the bot and renders the content accordingly:
 
 ```tsx
 const MessageTemplate = (props: ChatMessageTemplateProps) => {

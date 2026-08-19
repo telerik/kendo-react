@@ -1,15 +1,17 @@
 ---
 title: Data Operations
-page_title: 'Hybrid Data Operations in React Data Grid RSC Mode'
-description: 'Explore the versatility of data operations with the RSC mode of KendoReact Data Grid to craft dynamic and responsive data-driven applications.'
-components: ["datagrid"]
+page_title: 'Hybrid Data Operations in React Grid RSC Mode'
+description: 'Explore the versatility of data operations with the RSC mode of KendoReact Grid to craft dynamic and responsive data-driven applications.'
+components: ['grid']
 slug: data_operations_rsc_grid
 position: 10
 ---
 
 # RSC Mode Hybrid Data Operations Overview
 
-One of the standout features of the RSC mode of the KendoKendoReact Data Grid is its built state management functionality. It can be used both on client and server mode of the Grid in order to keep track on the changes applied via actions like filtering, sorting, grouping, paging, etc.
+One of the standout features of the RSC mode of the KendoReact Grid is its built-in state management functionality. It can be used both on client and server mode of the Grid in order to keep track of the changes applied via actions like filtering, sorting, grouping, paging, etc.
+
+The following example demonstrates an RSC mode Grid with sorting, filtering, grouping, and paging managed automatically by the built-in server-side state management.
 
 {% meta height:630 %}
 {% embed_file server-components/data-operations/app.tsx preview %}
@@ -71,5 +73,5 @@ import { Grid, GridColumn } from '@progress/kendo-react-grid';
 
 ## Suggested Links
 
--   [КendoReact Data Grid RSC Mode Overview](slug:overview_rsc_grid)
--   [Getting Started with КendoReact Data Grid RSC Mode](slug:getstarted_rsc_grid)
+-   [КendoReact Grid RSC Mode Overview](slug:overview_rsc_grid)
+-   [Getting Started with КendoReact Grid RSC Mode](slug:getstarted_rsc_grid)

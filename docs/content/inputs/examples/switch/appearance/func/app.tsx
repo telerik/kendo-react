@@ -1,24 +1,50 @@
 import * as React from 'react';
 
 import { Switch } from '@progress/kendo-react-inputs';
-import { SwitchStyleConfigurator } from './shared-in-switch-style-configurator';
+import { useConfigurator, sizeOptions, roundedOptions } from '@docs-shared/configurator';
 
 const App = () => {
-    const [size, setSize] = React.useState<'small' | 'medium' | 'large'>('medium');
-    const [trackRounded, setTrackRounded] = React.useState<'small' | 'medium' | 'large' | 'full'>('full');
-    const [thumbRounded, setThumbRounded] = React.useState<'small' | 'medium' | 'large' | 'full'>('full');
+    const config = useConfigurator({
+        sections: [
+            {
+                label: 'Size',
+                controls: [
+                    {
+                        type: 'segmented',
+                        name: 'size',
+                        options: sizeOptions(['default', 'small', 'medium', 'large']),
+                        defaultValue: 'default'
+                    }
+                ]
+            },
+            {
+                label: 'Track Border Radius',
+                controls: [
+                    {
+                        type: 'segmented',
+                        name: 'trackRounded',
+                        options: roundedOptions(['default', 'none', 'small', 'medium', 'large', 'full']),
+                        defaultValue: 'default'
+                    }
+                ]
+            },
+            {
+                label: 'Thumb Border Radius',
+                controls: [
+                    {
+                        type: 'segmented',
+                        name: 'thumbRounded',
+                        options: roundedOptions(['default', 'none', 'small', 'medium', 'large', 'full']),
+                        defaultValue: 'default'
+                    }
+                ]
+            }
+        ]
+    });
 
     return (
-        <div>
-            <SwitchStyleConfigurator
-                size={size}
-                onSizeChange={setSize}
-                trackRounded={trackRounded}
-                onTrackRoundedChange={setTrackRounded}
-                thumbRounded={thumbRounded}
-                onThumbRoundedChange={setThumbRounded}
-            />
-            <Switch size={size} trackRounded={trackRounded} thumbRounded={thumbRounded} />
+        <div className="example-wrapper-center">
+            <Switch size={config.size} trackRounded={config.trackRounded} thumbRounded={config.thumbRounded} />
         </div>
     );
 };

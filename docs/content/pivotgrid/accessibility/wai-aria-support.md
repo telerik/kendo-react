@@ -25,10 +25,10 @@ This section lists the selectors, attributes, and behavior patterns supported by
 The PivotGrid is a composite component that consists of two logically separated structural elements:
 
 
- - Data Grid (`role="grid"`);
+ - Grid (`role="grid"`);
  - Configurator (`role="dialog"`);
 
-### Data Grid
+### Grid
 
 
 The element with `role="grid"` - includes the row headers, column headers, and data tables.
@@ -37,7 +37,7 @@ The element with `role="grid"` - includes the row headers, column headers, and d
 
 | Selector | Attribute | Usage |
 | -------- | --------- | ----- |
-| `.k-pivotgrid` | `role=grid` | The role specifies the element is a Data Grid. |
+| `.k-pivotgrid` | `role=grid` | The role specifies the element is a Grid. |
 
 #### Column Headers
 

@@ -12,7 +12,7 @@ subject: Project Tracker
 
 # Project Tracker Application
 
-The Project Tracker Application showcases the free KendoReact UI components and features, including a Data Grid, AppBar, Buttons, Inputs, Dropdowns and Icons. It demonstrates the integration of KendoReact components with Vite and uses [Tailwind](https://tailwindcss.com/docs/installation/using-vite) CSS utility classes.
+The Project Tracker Application showcases the free KendoReact UI components and features, including a Grid, AppBar, Buttons, Inputs, Dropdowns and Icons. It demonstrates the integration of KendoReact components with Vite and uses [Tailwind](https://tailwindcss.com/docs/installation/using-vite) CSS utility classes.
 
 <CtaPanelOverview message="The @Subject Sample App was created with KendoReact, an enterprise-grade React UI library with 120+ @FreemiumShortLink and premium components for building polished, performant apps. Test-drive the components used in this app with a free trial."></CtaPanelOverview>
 
@@ -48,7 +48,7 @@ To enable smooth collaboration between designers and developers, the Progress De
 -   [KendoReact Free](slug://getting_started_free_vs_premium)
 -   [Free vs Premium React Components](slug://getting_started_free_vs_premium)
 -   [Free Project Tracker app page template (built with free components)](https://www.telerik.com/design-system/docs/ui-templates/templates/project-tracker/)
--   [KendoReact Data Grid](slug://overview_grid)
+-   [KendoReact Grid](slug://overview_grid)
 -   [KendoReact AppBar](slug://overview_appbar)
 -   [KendoReact Buttons](slug://overview_button)
 -   [KendoReact Dropdowns](slug://overview_dropdowns)

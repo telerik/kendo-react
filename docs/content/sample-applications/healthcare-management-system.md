@@ -8,8 +8,6 @@ position: 0
 category: sample-applications
 level: 0
 subject: Healthcare Management System
-tag: new
-release_tag: Q2 2026
 ---
 
 # Healthcare Management System
@@ -49,7 +47,7 @@ To enable a smooth and trouble-free collaboration between designers and develope
 ## Suggested Links
 
 -   [Get Started with KendoReact Free](slug:getting_started_free_vs_premium)
--   [KendoReact Data Grid](slug:overview_grid)
+-   [KendoReact Grid](slug:overview_grid)
 -   [KendoReact Scheduler](slug:overview_scheduler)
 -   [KendoReact Charts](slug:overview_chart_charts)
 -   [KendoReact Forms](slug:overview_form)

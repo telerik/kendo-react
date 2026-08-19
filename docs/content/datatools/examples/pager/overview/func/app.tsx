@@ -1,66 +1,46 @@
 import * as React from 'react';
+import './styles.css';
 import { Pager, PageChangeEvent } from '@progress/kendo-react-data-tools';
-import { DemoConfigurator } from './configurator';
-import products from './shared-dt-products';
+import { destinations, Destination } from './destinations';
 
-const total: number = products.length;
-const pageSizes: number[] = [5, 10, 20];
-const initialType: 'numeric' | 'input' = 'numeric';
-
-interface PageInterface {
-    skip: number;
-    take: number;
-    buttonCount: number;
-    type: 'numeric' | 'input';
-    info: boolean;
-    pageSizes: boolean;
-    previousNext: boolean;
-    responsive: boolean;
-    adaptive: boolean;
-}
-
-const initialPageState: PageInterface = {
-    skip: 0,
-    take: 5,
-    buttonCount: 5,
-    type: initialType,
-    info: true,
-    pageSizes: true,
-    previousNext: true,
-    responsive: true,
-    adaptive: true
-};
+const PAGE_SIZE = 8;
+const CONTENT_ID = 'content-1';
 
 const App = () => {
-    const [pageState, setPageState] = React.useState<PageInterface>(initialPageState);
+    const [skip, setSkip] = React.useState(0);
 
-    let { skip, take, ...rest } = pageState;
+    const pagedDestinations: Destination[] = destinations.slice(skip, skip + PAGE_SIZE);
 
     const handlePageChange = (event: PageChangeEvent) => {
-        const { skip, take } = event;
-        setPageState({ ...pageState, skip: skip, take: take });
-
-        console.log(`Page Change: skip ${skip}, take ${take}`);
+        setSkip(event.skip);
     };
 
-    console.log(products.slice(skip, skip + take));
     return (
-        <React.Fragment>
-            <DemoConfigurator onChange={(data: any) => setPageState({ ...pageState, ...data })} values={rest} />
+        <div className="wrapper">
+            <span className="title">Top European Destinations</span>
+            <div className="content-container" id={CONTENT_ID}>
+                {pagedDestinations.map((destination) => (
+                    <div key={destination.destinationId} className="destination">
+                        <img
+                            src={`https://demos.telerik.com/kendo-react-ui/assets/pager/destinations/${destination.destinationId}.png`}
+                            alt={destination.destinationName}
+                            width={160}
+                            height={133}
+                        />
+                        <h3>{destination.destinationName}</h3>
+                        <p>{destination.destinationText}</p>
+                    </div>
+                ))}
+            </div>
             <Pager
+                aria-controls={CONTENT_ID}
+                style={{ width: '100%' }}
                 skip={skip}
-                take={take}
-                total={total}
-                buttonCount={pageState.buttonCount}
-                info={pageState.info}
-                type={pageState.type}
-                pageSizes={pageState.pageSizes ? pageSizes : undefined}
-                previousNext={pageState.previousNext}
-                responsive={pageState.responsive}
-                adaptive={pageState.adaptive}
+                take={PAGE_SIZE}
+                total={destinations.length}
                 onPageChange={handlePageChange}
             />
-        </React.Fragment>
+        </div>
     );
 };
 

@@ -12,7 +12,7 @@ The MultiColumnComboBox provides an option for enabling adaptive rendering for t
 
 To enable the adaptive rendering, set the [`adaptive`]({% slug api_dropdowns_multicolumncomboboxprops %}#toc-adaptive) property of the MultiColumnComboBox to `true`.
 
-To set the title of the dialog window rendered when the MultiColumnComboBox is opened on a smaller screen, set the [`adaptiveTitle`]({% slug api_dropdowns_multicolumncomboboxprops %}#toc-adaptivetitle) property of the component.
+To set the title of the dialog window rendered when the MultiColumnComboBox is opened on a smaller screen, set the [`adaptiveTitle`](slug:api_dropdowns_multicolumncomboboxprops) property of the component.
 
 To set the value of the adaptive filtering input in the dialog of the MultiColumnComboBox on smaller screens, set the [`adaptiveFilter`]({% slug api_dropdowns_multicolumncomboboxprops %}#toc-adaptivefilter) property.
 
@@ -23,6 +23,8 @@ The Adaptive Mode changes the rendering of the popup element of the MultiColumnC
 -   `Large screens - larger than 768px`&mdash;Displays a popup as an animation container attached to the main element of the component.
 
 > You can further customize the adaptive breakpoints via [AdaptiveMode React Context]({% slug overview_adaptive_mode %}).
+
+The following example demonstrates how the MultiColumnComboBox adapts its popup element rendering to the screen size based on the configured breakpoints.
 
 > Switch between the device options below to see how the MultiColumnComboBox adapts to different resolutions.
 

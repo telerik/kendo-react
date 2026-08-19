@@ -18,7 +18,7 @@ The Diagram component binds data to shapes and connections by mapping data prope
 
 The following example demonstrates basic data binding with shapes and connections representing a manufacturing process workflow.
 
-<demo metaUrl="diagram/data-binding/direct-property-mapping/" height="610"></demo>
+<demo metaUrl="diagram/data-binding/direct-property-mapping/" height="720"></demo>
 
 When your data uses different property names, use field mapping to connect your data structure to the Diagram format. For more complex scenarios with nested structures, use the [`convertToDiagramModel`](slug:api_diagram_converttodiagrammodel) utility function.
 
@@ -28,7 +28,7 @@ Use the [`ShapeModelFields`](slug:api_diagram_shapemodelfields) and [`Connection
 
 The following example demonstrates a supply chain logistics workflow using field mappings to bind data with custom property names to the Diagram.
 
-<demo metaUrl="diagram/data-binding/custom-field-mapping/" height="610"></demo>
+<demo metaUrl="diagram/data-binding/custom-field-mapping/" height="740"></demo>
 
 To implement field mapping in your application, define [`ShapeModelFields`](slug:api_diagram_shapemodelfields) and [`ConnectionModelFields`](slug:api_diagram_connectionmodelfields) objects that map your property names to the Diagram's expected properties.
 
@@ -71,7 +71,7 @@ When working with complex nested data structures or APIs that return data in for
 
 The following example demonstrates converting a complex API response structure representing an organizational hierarchy into diagram format using [`convertToDiagramModel`](slug:api_diagram_converttodiagrammodel).
 
-<demo metaUrl="diagram/data-binding/convert-to-diagram-model/" height="540"></demo>
+<demo metaUrl="diagram/data-binding/convert-to-diagram-model/" height="660"></demo>
 
 The [`convertToDiagramModel`](slug:api_diagram_converttodiagrammodel) function accepts two parameters:
 
@@ -126,7 +126,7 @@ The Diagram automatically reflects changes when you modify the bound data arrays
 
 The following example demonstrates dynamic data updates where you can add and remove process steps interactively.
 
-<demo metaUrl="diagram/data-binding/dynamic-updates/" height="520"></demo>
+<demo metaUrl="diagram/data-binding/dynamic-updates/" height="680"></demo>
 
 ## Remote Data Binding
 

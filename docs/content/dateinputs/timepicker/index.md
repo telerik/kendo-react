@@ -14,7 +14,7 @@ The KendoReact TimePicker represents a time-list where the user can enter or pic
 
 The following example demonstrates the TimePicker in action.
 
-{% meta height:570 %}
+{% meta height:680 %}
 {% embed_file timepicker/overview/basic/func/app.tsx preview %}
 {% embed_file timepicker/overview/basic/func/main.tsx %}
 {% embed_file timepicker/overview/basic/func/styles.css %}

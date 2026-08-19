@@ -13,7 +13,7 @@ Trendlines (or trend lines) are automatically generated indicators that show the
 
 Trendlines are defined as a special type of series that are linked to the main series by **name**.
 
-To define a trendline, define a [series item](slug:api_charts_chartseriesitem#toc-for) and set its [`for`](slug:api_charts_chartseriesitemprops#toc-for) prop to the parent series name:
+To define a trendline, define a [series item](slug:api_charts_chartseriesitemprops) and set its [`for`](slug:api_charts_chartseriesitemprops#toc-for) prop to the parent series name:
 
 {% meta height:460 %}
 {% embed_file chart/trendlines/basic/func/app.tsx preview %}

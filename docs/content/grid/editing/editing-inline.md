@@ -1,16 +1,16 @@
 ---
 title: Inline Editing
-description: 'Get started with the KendoKendoReact Data Grid enabling you to create, edit, and delete data records inline.'
-components: ["datagrid"]
+description: 'Get started with the KendoReact Grid enabling you to create, edit, and delete data records inline.'
+components: ['grid']
 slug: editing_inline_grid
 position: 40
 tier: premium
 subject: Inline Editing feature of the Grid
 ---
 
-# Inline Editing in KendoReact Data Grid
+# Inline Editing in KendoReact Grid
 
-The KendoReact Data Grid enables you to create, update, and delete data records inline.
+The KendoReact Grid enables you to create, update, and delete data records inline.
 
 <CtaPanelOverview></CtaPanelOverview>
 

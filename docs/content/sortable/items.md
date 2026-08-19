@@ -12,7 +12,7 @@ You can [disable](#disabling-items) and provide an [item](#using-the-item-compon
 
 ## Disabling Items
 
-To disable the items of the Sortable, define its [`disabledField`]({% slug api_sortable %}#toc-disabledindexes) property.
+To disable the items of the Sortable, define its [`disabledField`]({% slug api_sortable_sortableprops %}) property.
 
 {% meta height:330 %}
 {% embed_file disabled/func/app.tsx preview %}

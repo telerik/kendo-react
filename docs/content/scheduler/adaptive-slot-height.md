@@ -14,7 +14,7 @@ You can further set the minimum height of a slot through the `minHeight` of the 
 
 The following example demonstrates the above properties in action:
 
-{% meta height:1000 %}
+{% meta height:1080 %}
 {% embed_file adaptive-slot-height/overview/func/custom-view-slot.tsx %}
 {% embed_file adaptive-slot-height/overview/func/custom-view-item.tsx %}
 {% embed_file adaptive-slot-height/overview/func/app.tsx preview %}
@@ -32,7 +32,7 @@ In order to disable the `adaptive` slot height and provide a `constant` height f
 
 The following example demonstrates disabling the `adaptive` slot height:
 
-{% meta height:850 %}
+{% meta height:930 %}
 {% embed_file adaptive-slot-height/disabled/func/custom-view-slot.tsx %}
 {% embed_file adaptive-slot-height/disabled/func/app.tsx preview %}
 {% embed_file adaptive-slot-height/disabled/func/main.tsx %}

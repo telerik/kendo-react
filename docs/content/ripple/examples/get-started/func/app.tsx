@@ -4,7 +4,7 @@ import { Button } from '@progress/kendo-react-buttons';
 
 const App = () => {
     return (
-    <div>
+    <div className="example-wrapper-center">
       <Ripple>
         <Button type="button" className="mt-3 mb-1">Click Me</Button>
       </Ripple>

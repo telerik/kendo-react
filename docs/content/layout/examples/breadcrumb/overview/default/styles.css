@@ -1,0 +1,32 @@
+.bc-shell {
+    max-width: 540px;
+    margin: auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.bc-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 12px;
+    background: rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.bc-page {
+    padding: 24px 20px;
+}
+
+.bc-page-title {
+    margin: 0 0 6px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.bc-page-hint {
+    margin: 0;
+    font-size: 0.85em;
+    color: #777;
+}

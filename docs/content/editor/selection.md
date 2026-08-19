@@ -43,7 +43,7 @@ The following example demonstrates how to create and apply a custom `TextSelecti
 
 Drag the Slider handles to modify the selection.
 
-{% meta height:520 %}
+{% meta height:620 %}
 {% embed_file selection/text/func/app.tsx preview %}
 {% embed_file selection/text/func/main.tsx %}
 {% embed_file selection/text/func/content.ts %}
@@ -91,7 +91,7 @@ To select the whole document:
 1. Create a new `AllSelection` instance, passing the current state's `Document` object to the constructor.
 1. Initialize a transaction using `state.tr` getter.
 1. Call the transaction's setSelection method, passing the created selection.
-1. Dispatch the transaction using Editor's [view]({% slug api_editor_editor %}#toc-view) dispatch method.
+1. Dispatch the transaction using Editor's [view]({% slug api_editor_editor %}) dispatch method.
 
 ```ts-no-run
 const editorView = editorRef.view;
@@ -109,7 +109,7 @@ To get the HTML corresponding to the current Editor selection, use the [`cut`](h
 
 The following example demonstrates how to obtain the selected HTML and text from the Editor. Make a selection in the Editor and see the selected content below.
 
-{% meta height:820 %}
+{% meta height:910 %}
 {% embed_file selection/get-html/func/app.tsx preview %}
 {% embed_file selection/get-html/func/main.tsx %}
 {% embed_file selection/get-html/func/content.ts %}

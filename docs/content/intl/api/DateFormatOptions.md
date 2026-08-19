@@ -8,10 +8,6 @@ slug: api_intl_dateformatoptions
 
 # DateFormatOptions
 Settings for the `formatDate` and `parseDate` functions.
-{% platform_content angular %}
-For a runnable example, refer to the article on
-[date and number formatting and parsing]({% slug parsingandformatting_intl %}#toc-date-formatting).
-{% endplatform_content %}
 
 
 <table class="api-table api-table-properties">

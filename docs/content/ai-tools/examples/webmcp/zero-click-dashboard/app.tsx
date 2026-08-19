@@ -37,7 +37,7 @@ function formatCurrency(n: number): string {
 }
 
 // ---------------------------------------------------------------------------
-// Custom chart tool hook — registers chart-set-metric via navigator.modelContext
+// Custom chart tool hook — registers chart-set-metric via document.modelContext
 // ---------------------------------------------------------------------------
 function useChartTool(
     allReps: SalesRep[],

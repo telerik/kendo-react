@@ -12,6 +12,13 @@ The MultiSelectTree provides a predefined set of appearance options.
 
 Apart from the default vision of the MultiSelectTree, these alternative styling options enable you to configure each individual aspect of the appearance of a MultiSelectTree.
 
+The following example demonstrates all the available appearance options of the MultiSelectTree in a single, configurable demo.
+
+{% meta height:350 %}
+{% embed_file multiselecttree/appearance/func/app.tsx preview %}
+{% embed_file multiselecttree/appearance/func/main.tsx %}
+{% endmeta %}
+
 ## Size
 
 You can set the size of the MultiSelectTree through the [`size`]({% slug api_dropdowns_multiselecttreeprops %}#toc-size) property. The MultiSelectTree component comes in three different sizes: `small`, `medium` (default), and `large`.

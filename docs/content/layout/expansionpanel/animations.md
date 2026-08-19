@@ -12,7 +12,7 @@ The ExpansionPanel allows you to add expand and collapse animations to it by usi
 
 To animate the ExpansionPanel, wrap its content in the desired KendoReact Animation component.
 
-{% meta height:810 %}
+{% meta height:850 %}
 {% embed_file expansionpanel/animations/func/app.tsx preview %}
 {% embed_file expansionpanel/animations/func/main.tsx %}
 {% embed_file expansionpanel/animations/func/styles.css %}

@@ -14,6 +14,7 @@ import {
     SpeechToTextErrorEvent
 } from '@progress/kendo-react-buttons';
 import { paperPlaneIcon, paperclipIcon } from '@progress/kendo-svg-icons';
+import { EventLog } from '@docs-shared/EventLog';
 
 const App = () => {
     const [events, setEvents] = React.useState<string[]>([]);
@@ -89,47 +90,28 @@ const App = () => {
     };
 
     return (
-        <div className="profile-demo card-container">
-            <div className="main-layout">
-                <div style={{ marginBottom: '30px' }}>
-                    <PromptBox
-                        value={value}
-                        onChange={handleValueChange}
-                        onFocus={handleFocus}
-                        onBlur={handleBlur}
-                        onPromptAction={handlePromptAction}
-                        mode="single"
-                        placeholder="Type your message..."
-                        maxTextAreaHeight="150"
-                        style={{ width: '500px' }}
-                        actionButtonConfig={{
-                            svgIcon: paperPlaneIcon,
-                            fillMode: 'flat',
-                            themeColor: 'primary'
-                        }}
-                        uploadButtonConfig={uploadButtonConfig}
-                        speechToTextButtonConfig={speechToTextButtonConfig}
-                    />
-                </div>
-
-                <div className="example-config" style={{ flex: 1, minWidth: 0 }}>
-                    <h5>Event Log</h5>
-                    <ul className="event-log">
-                        {events.slice(0, 20).map((event, index) => (
-                            <li
-                                key={index}
-                                style={{
-                                    backgroundColor: index === 0 ? '#e8f5e8' : 'transparent',
-                                    borderBottom: '1px solid #ddd'
-                                }}
-                            >
-                                {event}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+        <EventLog events={events} onClear={() => setEvents([])}>
+            <div style={{ marginBottom: '30px' }}>
+                <PromptBox
+                    value={value}
+                    onChange={handleValueChange}
+                    onFocus={handleFocus}
+                    onBlur={handleBlur}
+                    onPromptAction={handlePromptAction}
+                    mode="single"
+                    placeholder="Type your message..."
+                    maxTextAreaHeight="150"
+                    style={{ width: '500px' }}
+                    actionButtonConfig={{
+                        svgIcon: paperPlaneIcon,
+                        fillMode: 'flat',
+                        themeColor: 'primary'
+                    }}
+                    uploadButtonConfig={uploadButtonConfig}
+                    speechToTextButtonConfig={speechToTextButtonConfig}
+                />
             </div>
-        </div>
+        </EventLog>
     );
 };
 

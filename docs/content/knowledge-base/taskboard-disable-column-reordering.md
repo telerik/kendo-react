@@ -51,7 +51,7 @@ This will prevent mouse events on the column headers, effectively disabling the 
 
 Bellow is a demo that displays KendoReact TaskBoard with fixed columns:
 
-{% meta height:600 %}
+{% meta height:880 %}
 {% embed_file taskboard/taskboard-disable-column-reordering/app.jsx preview %}
 {% embed_file taskboard/taskboard-disable-column-reordering/main.jsx %}
 {% embed_file taskboard/taskboard-disable-column-reordering/style.css %}

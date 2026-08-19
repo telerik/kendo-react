@@ -1,65 +1,55 @@
 import * as React from 'react';
-import { TextBox, TextBoxChangeEvent } from '@progress/kendo-react-inputs';
+import { TextBox } from '@progress/kendo-react-inputs';
 import { Label } from '@progress/kendo-react-labels';
-import { Switch } from '@progress/kendo-react-inputs';
+import './overview-styles.css';
 
 const App = () => {
-    const [disabled, setDisabled] = React.useState(false);
-
-    const [flatValue, setFlatValue] = React.useState<string>('');
-    const [solidValue, setSolidValue] = React.useState<string>('');
-    const [outlineValue, setOutlineValue] = React.useState<string>('');
-
-    const handleFlatChange = (event: TextBoxChangeEvent) => {
-        setFlatValue(event.target.value as string);
-    };
-
-    const handleSolidChange = (event: TextBoxChangeEvent) => {
-        setSolidValue(event.target.value as string);
-    };
-
-    const handleOutlineChange = (event: TextBoxChangeEvent) => {
-        setOutlineValue(event.target.value as string);
-    };
-
-    const handleSwitchChange = (event: any) => {
-        setDisabled(event.value);
-    };
+    const [name, setName] = React.useState('');
 
     return (
-        <div style={{ padding: '20px' }}>
-            <div style={{ marginBottom: '10px' }}>
-                <Label>
-                    Disabled&nbsp;&nbsp;
-                    <Switch onChange={handleSwitchChange} />
-                </Label>
-            </div>
-            <br />
-            <div style={{ display: 'flex', gap: '10px' }}>
-                <TextBox
-                    fillMode="flat"
-                    disabled={disabled}
-                    style={{ width: 300 }}
-                    placeholder="Flat"
-                    value={flatValue}
-                    onChange={handleFlatChange}
-                />
-                <TextBox
-                    fillMode="solid"
-                    disabled={disabled}
-                    style={{ width: 300 }}
-                    placeholder="Solid"
-                    value={solidValue}
-                    onChange={handleSolidChange}
-                />
-                <TextBox
-                    fillMode="outline"
-                    disabled={disabled}
-                    style={{ width: 300 }}
-                    placeholder="Outline"
-                    value={outlineValue}
-                    onChange={handleOutlineChange}
-                />
+        <div className="profile-demo card-container">
+            <div className="k-card custom-card">
+                <div className="card-row">
+                    <div className="card-column no-flex">
+                        <div className="sidebar-container k-skeleton">
+                            <div className="avatar-name-container">
+                                <div className="k-skeleton skeleton-avatar"></div>
+                                <div className="name-container">
+                                    <div className="k-skeleton skeleton-text"></div>
+                                    <div className="k-skeleton skeleton-small-text-short"></div>
+                                </div>
+                            </div>
+                            <div className="description-container">
+                                <div className="k-skeleton skeleton-small-text"></div>
+                                <div className="k-skeleton skeleton-small-text"></div>
+                                <div className="k-skeleton skeleton-small-text"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="card-column">
+                        <div className="avatar-title-container">
+                            <div className="k-skeleton skeleton-avatar"></div>
+                            <h4 className="k-h4">My Profile</h4>
+                        </div>
+                        <div className="component-container">
+                            <Label editorId="profile-name">Name</Label>
+                            <TextBox
+                                id="profile-name"
+                                placeholder="John Smith"
+                                value={name}
+                                onChange={(e) => setName(e.target.value as string)}
+                            />
+                        </div>
+                        <div className="skeleton-container top">
+                            <div className="k-skeleton skeleton-box-small"></div>
+                            <div className="k-skeleton skeleton-box-large"></div>
+                        </div>
+                        <div className="skeleton-container bottom">
+                            <div className="k-skeleton skeleton-box-small"></div>
+                            <div className="k-skeleton skeleton-box-large-double"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );

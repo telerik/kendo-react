@@ -2,7 +2,7 @@
 title: Overview
 page_title: 'React Rich Text Editor Overview - KendoReact'
 description: 'A React Text Editor lets users create and format content with a Word-like interface, supporting bold, italics, links, and more.'
-components: ["editor"]
+components: ['editor']
 slug: overview_editor
 position: 0
 ---
@@ -17,9 +17,10 @@ The React react rich text Editor, part of KendoReact, is built from the ground u
 
 The following example demonstrates the KendoReact Editor component in action.
 
-{% meta height:800 %}
+{% meta height:1110 %}
 {% embed_file overview/func/app.tsx preview %}
 {% embed_file overview/func/main.tsx %}
+{% embed_file overview/func/styles.css %}
 {% endmeta %}
 
 ## Key Features of the React Text Editor

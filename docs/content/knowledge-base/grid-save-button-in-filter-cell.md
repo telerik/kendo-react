@@ -34,7 +34,7 @@ I have a KendoReact Grid that supports row reordering through drag and drop and 
 
 Pass both a custom `data` cell and a custom `filterCell` to the [`cells`](slug:api_grid_gridcolumnprops#toc-cells) prop of the `GridColumn`. The [`filterCell`](slug:api_grid_gridcellssettings#toc-filtercell) component completely replaces the default filter UI, so you can render a Kendo `Button` that triggers your save logic. The [`data`](slug:api_grid_gridcellssettings#toc-data) cell renders the current row position as a plain number.
 
-<demo metaUrl="knowledge-base/grid/grid-save-button-in-filter-cell/" height="600"></demo>
+<demo metaUrl="knowledge-base/grid/grid-save-button-in-filter-cell/" height="660"></demo>
 
 ## See Also
 

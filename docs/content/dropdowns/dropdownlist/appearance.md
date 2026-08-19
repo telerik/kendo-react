@@ -12,6 +12,13 @@ The DropDownList provides a predefined set of appearance options.
 
 Apart from the default vision of the DropDownList, these alternative styling options enable you to configure each individual aspect of the appearance of a DropDownList.
 
+The following example demonstrates all the available appearance options of the DropDownList in a single, configurable demo.
+
+{% meta height:410 %}
+{% embed_file dropdownlist/appearance/overview/app.tsx preview %}
+{% embed_file dropdownlist/appearance/overview/main.tsx %}
+{% endmeta %}
+
 ## Size
 
 You can set the size of the DropDownList through the [`size`]({% slug api_dropdowns_dropdownlistprops %}#toc-size) property. The DropDownList component comes in three different sizes: `small`, `medium` (default), and `large`.

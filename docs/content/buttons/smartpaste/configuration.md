@@ -16,7 +16,7 @@ The component is compatible with both KendoReact Form and native HTML forms, and
 
 The following example demonstrates the SmartPasteButton with AI service configuration and automatic form field detection.
 
-<demo metaUrl="buttons/smartpaste/configuration/" height="510"></demo>
+<demo metaUrl="buttons/smartpaste/configuration/" height="760"></demo>
 
 ## AI Service Integration
 
@@ -98,7 +98,7 @@ The [`SmartPasteFormField`](slug:api_buttons_smartpastebuttonprops#formfields) i
 
 The following example demonstrates basic field type specification with string, number, and date fields.
 
-<demo metaUrl="buttons/smartpaste/field-type-specification/" height="510"></demo>
+<demo metaUrl="buttons/smartpaste/field-type-specification/" height="770"></demo>
 
 ### Field Descriptions
 
@@ -116,7 +116,7 @@ Custom field descriptions provide additional context to help the AI match clipbo
 
 The following example demonstrates providing detailed field descriptions to guide AI data extraction and formatting.
 
-<demo metaUrl="buttons/smartpaste/field-descriptions/" height="540"></demo>
+<demo metaUrl="buttons/smartpaste/field-descriptions/" height="780"></demo>
 
 ### Fixed Choice Fields
 
@@ -124,7 +124,7 @@ For fields with predefined options such as dropdowns or radio buttons, use the `
 
 The following example demonstrates using fixed-choices type with allowedValues for dropdown fields. Both fields specify allowed values, enabling the AI to map natural language input to the closest matching predefined option.
 
-<demo metaUrl="buttons/smartpaste/fixed-choice-fields/" height="560"></demo>
+<demo metaUrl="buttons/smartpaste/fixed-choice-fields/" height="760"></demo>
 
 ### Selective Field Processing
 
@@ -132,13 +132,13 @@ When working with large forms, you can specify only the fields you want the Smar
 
 The following example demonstrates selective field processing where only specific fields are included in the Smart Paste operation.
 
-<demo metaUrl="buttons/smartpaste/selective-fields/" height="650"></demo>
+<demo metaUrl="buttons/smartpaste/selective-fields/" height="960"></demo>
 
 ## Trigger Smart Paste Programmatically
 
 You can trigger the SmartPasteButton action programmatically using a ref to the button element. This is useful when you want to integrate the SmartPasteButton with custom UI elements or workflows.
 
-<demo metaUrl="buttons/smartpaste/programmatic-trigger/" height="550"></demo>
+<demo metaUrl="buttons/smartpaste/programmatic-trigger/" height="640"></demo>
 
 ## Suggested Links
 

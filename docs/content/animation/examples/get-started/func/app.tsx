@@ -14,11 +14,13 @@ const App = () => {
     }, []);
 
     return (
-        <Reveal>
-            <div className="content" key={index}>
-                {index}
-            </div>
-        </Reveal>
+        <div className="example-wrapper-center">
+            <Reveal>
+                <div className="content" key={index}>
+                    {index}
+                </div>
+            </Reveal>
+        </div>
     );
 };
 

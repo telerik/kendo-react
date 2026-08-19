@@ -164,6 +164,51 @@ Defines the line join style of the stroke.
 <td class="table-cell-name">
 
 
+#### opacity?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+number
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+<code>
+
+
+1
+
+
+</code>
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Defines the opacity of the stroke. Ranges from `0` (completely transparent) to `1` (opaque).
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### width?
 
 

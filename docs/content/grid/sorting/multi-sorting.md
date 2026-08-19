@@ -1,16 +1,16 @@
 ---
 title: Multi-column Sorting
-description: 'Get started with the sorting functionality of the KendoReact Data Grid and learn how to sort multiple data-bound columns.'
-components: ["datagrid"]
+description: 'Get started with the sorting functionality of the KendoReact Grid and learn how to sort multiple data-bound columns.'
+components: ['grid']
 slug: multi_column_sorting_grid
 position: 30
 tier: premium
 subject: Multi-column Sorting feature of the Grid
 ---
 
-# KendoReact Data Grid Multi-column Sorting
+# KendoReact Grid Multi-column Sorting
 
-The KendoReact Data Grid supports sorting by multiple data-bound columns.
+The KendoReact Grid supports sorting by multiple data-bound columns.
 
 <CtaPanelOverview></CtaPanelOverview>
 
@@ -29,7 +29,7 @@ The following example demonstrates the minimum required configuration for sortin
 {% embed_file sorting-multiple/main.tsx %}
 {% endmeta %}
 
-## KendoReact Data Grid Sorting APIs
+## KendoReact Grid Sorting APIs
 
 -   [API Reference of the Grid]({% slug api_grid_gridprops %})
 -   [API Index of the Grid]({% slug api_grid %})

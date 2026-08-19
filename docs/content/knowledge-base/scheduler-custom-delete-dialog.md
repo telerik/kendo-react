@@ -61,7 +61,7 @@ const CustomEditItem = props => {
 
 For a practical example demonstrating these steps, refer to the following demo:
 
-{% meta height:600 %}
+{% meta height:780 %}
 {% embed_file scheduler/custom-delete-dialog/app.jsx preview %}
 {% embed_file scheduler/custom-delete-dialog/main.jsx %}
 {% endmeta %}

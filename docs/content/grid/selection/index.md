@@ -1,7 +1,7 @@
 ---
 title: Overview
-description: 'Get started with the KendoReact Data Grid by KendoReact supporting selection of a single row or multiple rows.'
-components: ["datagrid"]
+description: 'Get started with the KendoReact Grid by KendoReact supporting selection of a single row or multiple rows.'
+components: ['grid']
 slug: selection_grid
 position: 0
 tier: mixed
@@ -17,7 +17,7 @@ As a result, the Grid allows you to:
 -   Select [multiple cells](slug:cell_range_selection_grid) or [multiple rows](slug:multi_row_selection_grid)
 -   Select [range of cells](slug:cell_range_selection_grid) or [range of rows](slug:multi_row_selection_grid) by dragging
 
-{% meta height:700 %}
+{% meta height:820 %}
 {% embed_file selection/all-options/func/app.tsx preview %}
 {% embed_file selection/all-options/func/main.tsx %}
 {% endmeta %}
@@ -30,7 +30,7 @@ To enable selection in the Grid using the built-in state management mechanism, f
 1. Set the [`selectable`](slug:api_grid_gridprops#selectable) option.
 1. Optionally configure the [`defaultSelect`](slug:api_grid_gridprops#defaultSelect) value of the Grid to apply initial selection.
 
-The following example demonstrates how to enable selection using the built-in state management of the KendoKendoReact Data Grid.
+The following example demonstrates how to enable selection using the built-in state management of the KendoReact Grid.
 
 {% meta height:470 %}
 {% embed_file selection/row-selection/func/app.tsx preview %}
@@ -39,14 +39,14 @@ The following example demonstrates how to enable selection using the built-in st
 
 ## Using Selection in Controlled Mode
 
-To enable the selection in KendoKendoReact Data Grid and use it in controlled mode, follow these steps:
+To enable the selection in KendoReact Grid and use it in controlled mode, follow these steps:
 
 1. Set the [`selectable`](slug:api_grid_gridprops#selectable) option.
 1. Optionally configure the [`select`](slug:api_grid_gridprops#select) value of the Grid to have control over the select state.
 
 The following example demonstrates how to use selection in controlled mode.
 
-{% meta height:520 %}
+{% meta height:640 %}
 {% embed_file selection/multi-row-selection/controlled/func/app.tsx preview %}
 {% embed_file selection/multi-row-selection/controlled/func/main.tsx %}
 {% endmeta %}

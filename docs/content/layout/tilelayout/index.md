@@ -16,7 +16,7 @@ The component features draggable and resizable items (tiles), static ones, vario
 
 The following example demonstrates the TileLayout in action.
 
-{% meta height:1140 %}
+{% meta height:1250 %}
 {% embed_file tilelayout/overview/func/conversion-rate.tsx %}
 {% embed_file tilelayout/overview/func/conversions-chart.tsx %}
 {% embed_file tilelayout/overview/func/app.tsx preview %}

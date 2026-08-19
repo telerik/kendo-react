@@ -8,11 +8,13 @@ import {
     ChartCategoryAxis,
     ChartCategoryAxisItem
 } from '@progress/kendo-react-charts';
-
-import { AnimationConfigurator, MotionPreset } from './animation-configurator';
+import { useConfigurator } from '@docs-shared/configurator';
 
 const categories = ['Q1', 'Q2', 'Q3', 'Q4'];
 const data = [100, 180, 150, 220];
+const presets = ['default', 'standard', 'rapid', 'stretchy', 'linear'] as const;
+
+type MotionPreset = (typeof presets)[number];
 
 const presetStyles: Record<MotionPreset, React.CSSProperties> = {
     default: {},
@@ -37,21 +39,30 @@ const presetStyles: Record<MotionPreset, React.CSSProperties> = {
     }
 };
 
-const presets: MotionPreset[] = ['default', 'standard', 'rapid', 'stretchy', 'linear'];
-
 const App = () => {
-    const [preset, setPreset] = React.useState<MotionPreset>('default');
-    const [nonce, setNonce] = React.useState(0);
-
-    const applyPreset = (next: MotionPreset) => {
-        setPreset(next);
-        setNonce((n) => n + 1);
-    };
+    const config = useConfigurator({
+        sections: [
+            {
+                label: 'Motion Preset',
+                controls: [
+                    {
+                        type: 'dropdown',
+                        name: 'preset',
+                        options: presets.map((value) => ({
+                            value,
+                            label: value.charAt(0).toUpperCase() + value.slice(1)
+                        })),
+                        defaultValue: 'default'
+                    }
+                ]
+            }
+        ]
+    });
+    const preset = (config.preset as MotionPreset | undefined) ?? 'default';
 
     return (
         <div style={presetStyles[preset]}>
-            <AnimationConfigurator preset={preset} presets={presets} onPresetChange={applyPreset} />
-            <Chart key={nonce}>
+            <Chart key={preset}>
                 <ChartCategoryAxis>
                     <ChartCategoryAxisItem categories={categories} />
                 </ChartCategoryAxis>

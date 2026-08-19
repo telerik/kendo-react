@@ -1,3 +1,23 @@
 .k-chip {
-    margin: 5px;
-  }
+    margin-right: 10px;
+}
+
+.k-block {
+    min-height: 300px;
+    padding: 20px;
+}
+
+.contacts-input {
+    border-width: 0 0 1px 0;
+    width: 100%;
+    margin: 30px 0;
+}
+
+.contacts-input.k-focus {
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.03);
+}
+
+.k-textarea {
+    width: 100%;
+    min-height: 145px;
+}

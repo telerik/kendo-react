@@ -21,7 +21,7 @@ When the value of the DateInput is `null`, or there is no partial selection, you
 
 ## Floating Labels
 
-You can specify a floating label for the input field by setting the [`label`]({% slug api_dateinputs_dateinputprops %}#toc-label) property of the `DateInput`. Also, to disable the default date mask of the DateInput when no value is present, set its [`placeholder`]({% slug api_dateinputs_dateinput %}#toc-placeholder) value to an empty string.
+You can specify a floating label for the input field by setting the [`label`]({% slug api_dateinputs_dateinputprops %}#toc-label) property of the `DateInput`. Also, to disable the default date mask of the DateInput when no value is present, set its [`placeholder`]({% slug api_dateinputs_dateinputprops %}) value to an empty string.
 
 {% meta height:150 %}
 {% embed_file dateinput/placeholder/floating-label/func/app.tsx preview %}

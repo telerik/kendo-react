@@ -214,7 +214,7 @@ WebMcpModelContext
 <td>
 
 
-The browser's `navigator.modelContext` surface.
+The browser's `document.modelContext` surface.
 
 
 </td>

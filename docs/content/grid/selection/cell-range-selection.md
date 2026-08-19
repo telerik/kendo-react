@@ -1,7 +1,7 @@
 ---
 title: Cell Range Selection
-description: 'Get started with the KendoReact Data Grid by KendoReact supporting selection of a single row or multiple rows.'
-components: ["datagrid"]
+description: 'Get started with the KendoReact Grid by KendoReact supporting selection of a single row or multiple rows.'
+components: ['grid']
 slug: cell_range_selection_grid
 position: 30
 tier: premium
@@ -16,12 +16,17 @@ Cell selection is enabled by setting an object to the [`selectable`]({% slug api
 
 The following example demonstrates multiple-cell selection with enabled drag selection where the `select` state is handled internally by the Grid.
 
-{% meta height:520 %}
+{% meta height:640 %}
 {% embed_file selection/multi-cell-selection/func/app.tsx preview %}
 {% embed_file selection/multi-cell-selection/func/main.tsx %}
 {% endmeta %}
 
 ## Suggested Links
 
+-   [Selection Overview](slug:selection_grid)
+-   [Cell Selection](slug:cell_selection_grid)
+-   [Row Selection](slug:row_selection_grid)
+-   [Multi-row Selection](slug:multi_row_selection_grid)
+-   [Selection Aggregates](slug:aggregates_selection_grid)
 -   [API Reference of the Grid]({% slug api_grid_grid %})
 -   [API Index of the Grid]({% slug api_grid %})

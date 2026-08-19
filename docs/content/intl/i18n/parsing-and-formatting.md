@@ -16,7 +16,7 @@ For more information on parsing and formatting date and number options, refer to
 
 The available internationalization methods are based on the [Unicode Common Locale Data Repository (CLDR)](http://cldr.unicode.org/) data and are split into the following modules:
 
--   [Load Locales](#toc-loading-locales)
+-   [Load Locales](#using-cldr-json-data)
 -   [Date parsing](#toc-date-parsing)
 -   [Date formatting](#toc-date-formatting)
 -   [Number parsing](#toc-number-parsing)
@@ -25,7 +25,7 @@ The available internationalization methods are based on the [Unicode Common Loca
 
 ### Using CLDR-JSON Data
 
-When you parse and format dates and numbers for a locale that is different from the default `en-US` one, you have to [load CLDR data](#toc-loading-cldr-data).
+When you parse and format dates and numbers for a locale that is different from the default `en-US` one, you have to [load CLDR data](#using-cldr-json-data).
 
 As a data reference for all locales, the following examples use the [cldr-core](https://www.npmjs.com/package/cldr-core), [cldr-numbers-full](https://www.npmjs.com/package/cldr-numbers-full), and [cldr-dates-full](https://www.npmjs.com/package/cldr-dates-full) packages.
 

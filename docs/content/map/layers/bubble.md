@@ -16,12 +16,12 @@ At each location, the layer will render a circle with an area proportional to th
 
 The Bubble map layer expects the data to contain two fields:
 
--   Location, specified by [locationField]({% slug api_map_mapbubblelayerprops %}#toc-location-field)
--   Value, specified by [valueField]({% slug api_map_mapbubblelayerprops %}#toc-location-field)
+-   Location, specified by [locationField](slug:api_map_mapbubblelayerprops#locationField)
+-   Value, specified by [valueField](slug:api_map_mapbubblelayerprops#valueField)
 
 The following example demonstrates how to create a bubble layer:
 
-{% meta height:660 %}
+{% meta height:780 %}
 {% embed_file layers/bubble/func/app.tsx preview %}
 {% embed_file layers/bubble/func/main.tsx %}
 {% endmeta %}
@@ -39,7 +39,7 @@ The available fields in the bubble tooltip [renderer context]({% slug api_map_bu
 
 The bubble tooltip is demonstrated in the example below:
 
-{% meta height:660 %}
+{% meta height:780 %}
 {% embed_file layers/bubble-tooltip/func/app.tsx preview %}
 {% embed_file layers/bubble-tooltip/func/main.tsx %}
 {% endmeta %}

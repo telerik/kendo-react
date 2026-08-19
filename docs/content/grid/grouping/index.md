@@ -1,7 +1,7 @@
 ---
 title: Basics
-description: 'Get started with the grouping functionality of the KendoKendoReact Data Grid and learn how to display grouped table data.'
-components: ["datagrid"]
+description: 'Get started with the grouping functionality of the KendoReact Grid and learn how to display grouped table data.'
+components: ['grid']
 slug: groupingbasics_grid
 subject: Grouping feature of the Grid
 position: 10
@@ -9,13 +9,13 @@ position: 10
 
 # Grouping Basics
 
-The KendoReact Data Grid lets you display grouped table data.
+The KendoReact Grid lets you display grouped table data.
 
 <CtaPanelOverview></CtaPanelOverview>
 
 ## Enabling Grouping
 
-The KendoKendoReact Data Grid supports grouping in two modes:
+The KendoReact Grid supports grouping in two modes:
 
 -   [Built-in State Management](#using-the-built-in-state-management-for-grouping): The Grid manages its own grouping state internally.
 
@@ -33,16 +33,16 @@ To use grouping with the built-in state management, follow these steps:
 
 1. (Optional) Set the [`defaultGroup`](slug:api_grid_gridprops#defaultGroup) prop to add initial grouping for the Grid.
 
-The following example shows how to use grouping with the built-in state management of the KendoKendoReact Data Grid.
+The following example shows how to use grouping with the built-in state management of the KendoReact Grid.
 
-{% meta height:580 %}
+{% meta height:700 %}
 {% embed_file grouping/built-in/func/app.tsx preview %}
 {% embed_file grouping/built-in/func/main.tsx %}
 {% endmeta %}
 
 ### Using the Grouping in Controlled Mode
 
-To use grouping in the KendoKendoReact Data Grid with controlled mode, follow these steps:
+To use grouping in the KendoReact Grid with controlled mode, follow these steps:
 
 1. Set the [`groupable`]({% slug api_grid_gridprops %}#toc-groupable) and [`group`]({% slug api_grid_gridprops %}#toc-group) options of the Grid.
 1. Handle the [`onGroupChange`]({% slug api_grid_gridprops %}#toc-ongroupchange) or the [`onDataStateChange`]({% slug api_grid_gridprops %}#toc-ondatastatechange) event. The `onDataStateChange` event works best when the Grid has other data operations because it provides the complete [`dataState`]({% slug api_kendo-data-query_state %}) in a single event.
@@ -50,9 +50,11 @@ To use grouping in the KendoKendoReact Data Grid with controlled mode, follow th
 
 > Use the [`groupBy`]({% slug api_kendo-data-query_groupby %}) method with the `onGroupChange` event, and the [`process`]({% slug api_kendo-data-query_process %}) method with the `onDataStateChange` event.
 
-For more information, see the article on the [process helpers for bulk data operations]({% slug overview_dataquery %}#toc-grouping).
+For more information, see the article on the [process helpers for bulk data operations]({% slug overview_dataquery %}).
 
-{% meta height:580 %}
+The following example demonstrates grouping in controlled mode, where the `group` state is managed externally and passed to the Grid alongside an `onGroupChange` handler.
+
+{% meta height:700 %}
 {% embed_file grouping/controlled/func/app.tsx preview %}
 {% embed_file grouping/controlled/func/main.tsx %}
 {% endmeta %}
@@ -77,7 +79,9 @@ const isGroupable = (field) => {
 
 The `data-tools` package gives you utility methods to create unique group item IDs. You can use these IDs to save the group collapsed state.
 
-{% meta height:580 %}
+The following example demonstrates how to persist the collapsed state of group headers across data reloads using unique group item IDs from the `data-tools` package.
+
+{% meta height:700 %}
 {% embed_file grouping-persist/func/app.tsx preview %}
 {% embed_file grouping-persist/func/main.tsx %}
 {% endmeta %}
@@ -86,7 +90,7 @@ The `data-tools` package gives you utility methods to create unique group item I
 
 The example below shows how to add a button that expands or collapses all groups in the Grid.
 
-{% meta height:580 %}
+{% meta height:700 %}
 {% embed_file grouping-expand-collapse/func/app.tsx preview %}
 {% embed_file grouping-expand-collapse/func/main.tsx %}
 {% endmeta %}

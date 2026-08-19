@@ -10,7 +10,7 @@ position: 2
 
 By default, the TextBox component is enabled.
 
-To disable the underlying `input` element, set the [`disabled`]({% slug api_inputs_textboxprops %}#toc-disabled) property to `true`.
+To disable the underlying `input` element, set the [`disabled`]({% slug api_inputs_textboxprops %}) property to `true`.
 
 {% meta height:220 %}
 {% embed_file textbox/disabled/func/app.tsx preview %}

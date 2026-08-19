@@ -1,7 +1,7 @@
 ---
 title: Keyboard Navigation
-description: 'Use the KendoKendoReact Data Grid keyboard navigation in React projects.'
-components: ["datagrid"]
+description: 'Use the KendoReact Grid keyboard navigation in React projects.'
+components: ['grid']
 slug: keyboard_navigation_grid
 position: 20
 ---
@@ -20,7 +20,9 @@ To activate the Grid's keyboard navigation, based on your scenario, pass one of 
 
 In order to enable the keyboard navigation over the toolbar of the Grid, you need to use the [KendoReact Toolbar]({% slug overview_toolbar %}) that comes with a built-in keyboard support.
 
-{% meta height:670 %}
+The following example demonstrates keyboard navigation without editing, including PDF/Excel export via toolbar buttons and row selection using keyboard shortcuts.
+
+{% meta height:780 %}
 {% embed_file keyboard-navigation-overview/app.tsx preview %}
 {% embed_file keyboard-navigation-overview/main.tsx %}
 {% embed_file keyboard-navigation-overview/toolbar.tsx %}
@@ -143,7 +145,9 @@ To properly set the keyboard navigation in this editing mode, you need to define
         .............
 ```
 
-{% meta height:600 %}
+The following example demonstrates inline editing with keyboard navigation, where `Tab` moves between cell editors in the row and `Escape` cancels the current row edit.
+
+{% meta height:710 %}
 {% embed_file keyboard-navigation-inline/app.tsx preview %}
 {% embed_file keyboard-navigation-inline/main.tsx %}
 {% embed_file keyboard-navigation-inline/myDropDownCell.tsx %}
@@ -165,6 +169,8 @@ To properly set the keyboard navigation in this editing mode, you need to define
         navigatable={{mode: 'incell' as NavigatableMode }}
         .............
 ```
+
+The following example demonstrates in-cell editing with keyboard navigation, where `Tab` and `Shift+Tab` move between cell editors and `Enter` commits the change and moves focus to the same cell in the row below.
 
 {% meta height:490 %}
 {% embed_file keyboard-navigation-incell/app.tsx preview %}
@@ -191,6 +197,8 @@ To properly set the keyboard navigation in this editing mode, you need to define
         navigatable={true}
         .............
 ```
+
+The following example demonstrates popup editing with keyboard navigation, where focus is automatically placed on the first editor in the form when it opens and `Escape` returns focus to the command cell.
 
 {% meta height:480 %}
 {% embed_file keyboard-navigation-popup/app.tsx preview %}

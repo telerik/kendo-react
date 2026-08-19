@@ -1,14 +1,14 @@
 ---
 title: GridHelper
-description: 'Get automatic data operations and features for the KendoReact Data Grid with the GridHelper component'
-components: ['datagrid']
+description: 'Get automatic data operations and features for the KendoReact Grid with the GridHelper component'
+components: ['grid']
 slug: gridhelper_grid
 position: 20
 ---
 
 # GridHelper
 
-The GridHelper is a component that wraps the KendoReact Grid, enhancing its functionality by providing built-in features for data operations, commonly requested functions, and a user-friendly interface that gives end users different ways to customize the Data Grid (such as hiding columns, exporting to PDF, and more).
+The GridHelper is a component that wraps the KendoReact Grid, enhancing its functionality by providing built-in features for data operations, commonly requested functions, and a user-friendly interface that gives end users different ways to customize the Grid (such as hiding columns, exporting to PDF, and more).
 
 > Some of the features showcased in the GridHelper are part of the [Premium offering](slug:getting_started_free_vs_premium) of the Grid.
 
@@ -16,8 +16,8 @@ The GridHelper is a component that wraps the KendoReact Grid, enhancing its func
 
 To use the GridHelper:
 
-1. Copy the GridHelper file content from the example below and import it where the KendoReact Data Grid will be used
-1. Wrap the KendoReact Data Grid within the GridHelper
+1. Copy the GridHelper file content from the example below and import it where the KendoReact Grid will be used
+1. Wrap the KendoReact Grid within the GridHelper
 
 The following example demonstrates all the features that are currently available for the GridHelper:
 
@@ -29,7 +29,7 @@ The following example demonstrates all the features that are currently available
 
 ## Features
 
-The GridHelper provides the following enhancements to the KendoReact Data Grid:
+The GridHelper provides the following enhancements to the KendoReact Grid:
 
 -   Built-in data operations for paging, sorting, filtering, grouping.
 -   Configuration button for enabling Grid's feature (paging, sorting, grouping, selection, filtering).
@@ -126,7 +126,7 @@ For the `showColumnsConfiguration` it is mandatory to have unique titles for the
 
 ## Suggested Links
 
--   [React Data Grid](slug://overview_grid)
+-   [React Grid](slug://overview_grid)
 -   [Data Query Overview]({% slug overview_dataquery %})
 -   [API Reference of the Grid]({% slug api_grid_gridprops %})
 -   [API Index of the Grid]({% slug api_grid %})

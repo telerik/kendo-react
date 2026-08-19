@@ -16,7 +16,7 @@ The KendoReact TreeList component is part of the KendoReact library of React UI 
 
 The following example demonstrates the TreeList in action.
 
-{% meta height:580 %}
+{% meta height:690 %}
 {% embed_file overview/func/app.tsx preview %}
 {% embed_file overview/func/main.tsx %}
 {% endmeta %}

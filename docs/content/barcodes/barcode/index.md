@@ -16,7 +16,7 @@ The KendoReact Barcode is distributed through the [kendo-react-barcodes NPM pack
 
 The following example demonstrates the Barcode in action.
 
-{% meta height:500 %}
+{% meta height:450 %}
 {% embed_file barcode/overview/func/app.tsx preview %}
 {% embed_file barcode/overview/func/main.tsx %}
 {% endmeta %}

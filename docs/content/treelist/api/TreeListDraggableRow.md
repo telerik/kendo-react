@@ -9,6 +9,8 @@ slug: api_treelist_treelistdraggablerow
 # TreeListDraggableRow
 The TreeList draggable row component.
 
+A [Functional Component](https://react.dev/reference/react/Component).
+
 
 <table class="api-table api-table-properties">
 <thead>
@@ -34,7 +36,7 @@ The TreeList draggable row component.
 <code>
 
 
-Readonly&lt;[TreeListRowProps]({% slug api_treelist_treelistrowprops %})&gt;
+[TreeListRowProps]({% slug api_treelist_treelistrowprops %}) [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with RefAttributes&lt;[TreeListDraggableRowHandle]({% slug api_treelist_treelistdraggablerowhandle %})&gt;
 
 
 </code>

@@ -1,7 +1,7 @@
 ---
 title: Master-Detail Grid
-description: 'Get started with the KendoKendoReact Data Grid enabling you to apply hierarchical order to desired records using the detail property of the master Grid.'
-components: ["datagrid"]
+description: 'Get started with the KendoReact Grid enabling you to apply hierarchical order to desired records using the detail property of the master Grid.'
+components: ['grid']
 slug: hierarchy_grid
 subject: Hierarchy Grid
 position: 230
@@ -10,7 +10,7 @@ tier: premium
 
 # Master-Detail Grids
 
-The KendoReact Data Grid provides options for visualizing the relations between its parent and child records by displaying the table data in a hierarchical order.
+The KendoReact Grid provides options for visualizing the relations between its parent and child records by displaying the table data in a hierarchical order.
 
 <CtaPanelOverview></CtaPanelOverview>
 
@@ -18,18 +18,20 @@ The KendoReact Data Grid provides options for visualizing the relations between 
 
 To apply a hierarchical order to the desired records, use the [`detail`]({% slug api_grid_gridprops %}#toc-detail) property of the master Grid. The feature allows you to load the detail component which contains the corresponding child Grid records that are filtered by the parent key field value.
 
-{% meta height:615 %}
+The following example demonstrates a master-detail Grid where expanding a row reveals a child Grid filtered to show only the records related to that parent item.
+
+{% meta height:730 %}
 {% embed_file hierarchy/func/app.tsx preview %}
 {% embed_file hierarchy/func/main.tsx %}
 {% endmeta %}
 
 ## Editable Master-Detail Grid
 
-The KendoReact Data Grid enables you to update and delete data records inline for the detail Grid. The following example demonstrates how to implement [inline editing]({% slug editing_inline_grid %}) for the detail component:
+The KendoReact Grid enables you to update and delete data records inline for the detail Grid. The following example demonstrates how to implement [inline editing]({% slug editing_inline_grid %}) for the detail component:
 
 <!-- Needs to be updated -->
 
-{% meta height:615 %}
+{% meta height:730 %}
 {% embed_file hierarchy-edit/func/app.tsx preview %}
 {% embed_file hierarchy-edit/func/main.tsx %}
 {% endmeta %}

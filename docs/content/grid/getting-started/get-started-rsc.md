@@ -1,16 +1,16 @@
 ---
 title: Getting Started with RSC Mode
-description: 'Get Started with React Data Grid Server Component'
-components: ["datagrid"]
+description: 'Get Started with React Grid Server Component'
+components: ['grid']
 slug: getstarted_rsc_grid
 position: 40
 tier: premium
 subject: RSC Mode of the Grid
 ---
 
-# Get Started with KendoKendoReact Data Grid RSC Mode
+# Get Started with KendoReact Grid RSC Mode
 
-The Server Mode of the KendoKendoReact Data Grid is distributed as part of the regular KendoKendoReact Data Grid package.
+The Server Mode of the KendoReact Grid is distributed as part of the regular KendoReact Grid package.
 
 <CtaPanelOverview></CtaPanelOverview>
 
@@ -36,7 +36,7 @@ npx create-next-app my-test-rsc-grid-app --ts --app --no-src-dir
 
 ## Installation
 
-Next, navigate to the root of your app and install the KendoKendoReact Data Grid package, along with its dependencies and the default Kendo theme packages:
+Next, navigate to the root of your app and install the KendoReact Grid package, along with its dependencies and the default Kendo theme packages:
 
 ```shell
 npm i @progress/kendo-react-grid @progress/kendo-theme-default
@@ -44,7 +44,7 @@ npm i @progress/kendo-react-grid @progress/kendo-theme-default
 
 ## Import the Server Grid
 
-To start using the KendoKendoReact Data Grid RSC mode, simply import the `Grid` component from the `@progress/kendo-react-grid` package in your Next.js application. Add the `import` in the existing `page.tsx` file:
+To start using the KendoReact Grid RSC mode, simply import the `Grid` component from the `@progress/kendo-react-grid` package in your Next.js application. Add the `import` in the existing `page.tsx` file:
 
 ```tsx
 // page.tsx
@@ -66,7 +66,9 @@ The Default theme is just one option in the [collection of four stunning Telerik
 
 ### Load and Show Data
 
-```tsx
+To load and display data in the Grid, you can use the sample dataset provided in the demo source files. Create a `gd-products.json` file in your project and populate it with the following data:
+
+```tsx Loading Data into the Grid
 import products from './gd-products';
 
 const App = () => {
@@ -75,11 +77,32 @@ const App = () => {
 
 export default App;
 ```
+```json Sample Data for the Grid
+[
+    {
+        "ProductID": 1,
+        "ProductName": "Chai",
+        "Category": { "CategoryID": 1, "CategoryName": "Beverages" },
+        "UnitPrice": 18.0000,
+        "UnitsInStock": 39,
+        "Discontinued": false
+    },
+    {
+        "ProductID": 2,
+        "ProductName": "Chang",
+        "Category": { "CategoryID": 1, "CategoryName": "Beverages" },
+        "UnitPrice": 19.0000,
+        "UnitsInStock": 17,
+        "Discontinued": false
+    },
+    ...
+]
+```
 
 1. Use the dataset from the demo source files at the top of the guide to create a `gd-products.json` file locally in your project.
 2. Use an `import` statement to reference the data file.
 3. Add a `<Grid>` definition.
-4. Use the `data` prop to load the data in your Data Grid.
+4. Use the `data` prop to load the data in your Grid.
 
 You now have a simple grid that shows all the data from `gd-products.json`.
 
@@ -157,13 +180,13 @@ import { Grid } from '@progress/kendo-react-grid';
 
 ## Additional Resources
 
--   [КendoKendoReact Data Grid RSC Mode Overview](slug:overview_rsc_grid)
--   [КendoKendoReact Data Grid Overview](slug:overview_grid)
+-   [КendoKendoReact Grid RSC Mode Overview](slug:overview_rsc_grid)
+-   [КendoKendoReact Grid Overview](slug:overview_grid)
 -   [КendoReact Components Styling](slug:themesandstyles)
 
 ## Suggested Links
 
--   [React Data Grid](slug://overview_grid)
+-   [React Grid](slug://overview_grid)
 -   [Getting Started with KendoReact](slug:getting_started)
 -   [Data Operations in the RSC Mode of the Grid](slug:data_operations_rsc_grid)
 -   [API Reference of the Grid]({% slug api_grid %})

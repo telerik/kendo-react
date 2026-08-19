@@ -12,7 +12,7 @@ The KendoReact OrgChart allows grouping the Card items by a grouping field that 
 
 This is demonstrated in the below example where the [`groupField`]({% slug api_orgchart_orgchartprops %}#toc-groupField) is set to `department` and each item in `flatdata` has its `department` property set.
 
-{% meta height:680 %}
+{% meta height:770 %}
 {% embed_file grouping/app.tsx preview %}
 {% embed_file grouping/main.tsx %}
 {% endmeta %}

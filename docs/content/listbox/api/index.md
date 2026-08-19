@@ -39,9 +39,6 @@ position: 1
         <a href="{% slug api_listbox_listbox %}">ListBox</a>
     </li>
     <li class="api-item">
-        <a href="{% slug api_listbox_listbox %}">ListBox</a>
-    </li>
-    <li class="api-item">
         <a href="{% slug api_listbox_listboxtoolbar %}">ListBoxToolbar</a>
     </li>
   </ul>

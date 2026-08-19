@@ -31,7 +31,7 @@ How to show the number of characters as the user types and set a maxLength for t
 
 ## Solution
 
-To set a `maxLength` render a custom [`TextBox`]({% slug overview_textbox %}) component and set the value for the [`maxLength`]({% slug api_inputs_input %}#toc-maxLength) prop to the preferred value. To see the character count as the user types, display the [`value`]({% slug api_inputs_input %}#toc-value) variable in the custom component markup. For more information on how to customize the Chat component refer to the [`customization`]({% slug customization_message_templates_chat %})
+To set a `maxLength` render a custom [`TextBox`]({% slug overview_textbox %}) component and set the value for the [`maxLength`]({% slug api_inputs_input %}) prop to the preferred value. To see the character count as the user types, display the [`value`](slug:api_inputs_inputprops#value) variable in the custom component markup. For more information on how to customize the Chat component refer to the [`customization`]({% slug customization_message_templates_chat %})
 
 {% meta height:900 %}
 {% embed_file conversational-ui/chat-maxlength-char-count/app.tsx preview %}

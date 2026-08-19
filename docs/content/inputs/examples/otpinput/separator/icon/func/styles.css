@@ -1,0 +1,9 @@
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.k-otp {
+    margin-top: 5px;
+}

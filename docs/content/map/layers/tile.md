@@ -12,7 +12,7 @@ The Tile layer in the Map is suitable for displaying raster tile maps from popul
 
 The following example demonstrates how to display an OpenStreetMap tile layer.
 
-{% meta height:660 %}
+{% meta height:780 %}
 {% embed_file layers/tile/func/app.tsx preview %}
 {% embed_file layers/tile/func/main.tsx %}
 {% endmeta %}

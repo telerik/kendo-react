@@ -1,9 +1,9 @@
 ---
-title: Hide Columns Initially and Reflect Changes from Column Menu in KendoReact Data Grid
-description: Resolve issue where hidden columns in the KendoReact Data Grid don't reflect changes made via the column menu.
+title: Hide Columns Initially and Reflect Changes from Column Menu in KendoReact Grid
+description: Resolve issue where hidden columns in the KendoReact Grid don't reflect changes made via the column menu.
 type: troubleshooting
-page_title: KendoReact Data Grid Columns Not Updating with Column Menu Settings
-meta_title: KendoReact Data Grid Columns Not Reflecting Column Menu Changes
+page_title: KendoReact Grid Columns Not Updating with Column Menu Settings
+meta_title: KendoReact Grid Columns Not Reflecting Column Menu Changes
 slug: grid-hide-columns-initially
 tags: kendo-react, data-grid, gridcolumns, column-menu, hide-columns
 res_type: kb
@@ -18,7 +18,7 @@ components: ["grid"]
 <tr>
 <td> Product </td>
 <td>
-KendoReact Data Grid
+KendoReact Grid
 </td>
 </tr>
 <tr>
@@ -32,7 +32,7 @@ Current
 
 ## Description
 
-When using the [KendoReact Data Grid](https://www.telerik.com/kendo-react-ui/components/grid/) with hidden columns on initial render, the column menu settings fail to update the visibility of the columns in the grid. Updating the column visibility using the column menu does not affect the grid display.
+When using the [KendoReact Grid](https://www.telerik.com/kendo-react-ui/components/grid/) with hidden columns on initial render, the column menu settings fail to update the visibility of the columns in the grid. Updating the column visibility using the column menu does not affect the grid display.
 
 ## Cause
 
@@ -58,6 +58,6 @@ Here, the `id` property is added to each `GridColumn`, ensuring proper synchroni
 
 ## See Also
 
--   [KendoReact Data Grid Documentation](https://www.telerik.com/kendo-react-ui/components/grid/)
+-   [KendoReact Grid Documentation](https://www.telerik.com/kendo-react-ui/components/grid/)
 -   [Column Menu Documentation](https://www.telerik.com/kendo-react-ui/components/grid/columns/column-menu/)
 -   [API Reference for GridColumn](https://www.telerik.com/kendo-react-ui/components/grid/api/GridColumn/)

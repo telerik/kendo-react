@@ -16,7 +16,7 @@ The KendoReact Localization feature is part of the KendoReact library which prov
 
 The following example demonstrates the KendoReact Localization package in action.
 
-{% meta height:590 %}
+{% meta height:640 %}
 {% embed_file localization/overview/func/app.tsx preview %}
 {% embed_file localization/overview/func/main.tsx %}
 {% embed_file localization/overview/func/messages-es.ts %}

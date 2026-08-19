@@ -264,12 +264,6 @@ position: 1
         <a href="{% slug api_data-tools_groupexpanddescriptor %}">GroupExpandDescriptor</a>
     </li>
     <li class="api-item">
-        <a href="{% slug api_data-tools_headertdelement %}">HeaderTdElement</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_data-tools_headerthelement %}">HeaderThElement</a>
-    </li>
-    <li class="api-item">
         <a href="{% slug api_data-tools_operators %}">Operators</a>
     </li>
     <li class="api-item">

@@ -1,18 +1,17 @@
 ---
 title: Dialog Editing
-description: 'Get started with the KendoKendoReact Data Grid supporting built-in dialog editing mode that allows you to edit in an external dialog.'
-components: ["datagrid"]
+description: 'Get started with the KendoReact Grid supporting built-in dialog editing mode that allows you to edit in an external dialog.'
+components: ['grid']
 slug: dialog_edit_grid
 position: 55
 tier: premium
 ---
 
-# Dialog Editing in KendoReact Data Grid
+# Dialog Editing in KendoReact Grid
 
 ## Setup the Built-In Dialog Editing
 
-The KendoReact Data Grid supports external dialog editing, enabling you to edit and manipulate data in outside of the Data Grid component. Its features are as follows:
-
+The KendoReact Grid supports external dialog editing, enabling you to edit and manipulate data in outside of the Grid component. Its features are as follows:
 
 1. Set the [`editable`](slug:api_grid_gridprops#editable) prop of the grid to `editable={{ mode: 'dialog', enabled: true }}`.
 
@@ -72,7 +71,7 @@ const handleItemChange = (event: GridItemChangeEvent) => {
 />
 ```
 
-Here is an example that showcases how to utilize the external Dialog edit in the KendoKendoReact Data Grid.
+Here is an example that showcases how to utilize the external Dialog edit in the KendoReact Grid.
 
 {% meta height:480 %}
 {% embed_file editing-dialog/app.tsx preview %}
@@ -80,7 +79,6 @@ Here is an example that showcases how to utilize the external Dialog edit in the
 {% embed_file editing-dialog/gd-interfaces.ts %}
 {% embed_file editing-dialog/gd-sample-products.ts %}
 {% endmeta %}
-
 
 ## Editing Input Validation
 
@@ -121,7 +119,6 @@ The following example showcases how to pass a custom form dialog component.
 {% embed_file editing-dialog-custom/gd-interfaces.ts %}
 {% embed_file editing-dialog-custom/gd-sample-products.ts.ts %}
 {% endmeta %}
-
 
 ## Suggested Links
 

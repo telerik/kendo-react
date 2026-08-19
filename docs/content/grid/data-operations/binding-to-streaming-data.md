@@ -1,7 +1,7 @@
 ---
 title: Binding to Streaming Data
-description: 'Get started with the live updates functionality of the KendoKendoReact Data Grid and learn how to show dynamic data.'
-components: ["datagrid"]
+description: 'Get started with the live updates functionality of the KendoReact Grid and learn how to show dynamic data.'
+components: ['grid']
 slug: bindingtostreamingdata_grid
 position: 20
 tier: mixed
@@ -9,13 +9,15 @@ tier: mixed
 
 # Real-Time Data Updates (Live Streaming Updates)
 
-The KendoReact Data Grid can render multiple live updates in a short time. This functionality allows you to do real-time updates in the Grid (also referred to as streaming updates).
+The KendoReact Grid can render multiple live updates in a short time. This functionality allows you to do real-time updates in the Grid (also referred to as streaming updates).
 
-The Data Grid will only re-renderer (not re-mount) the updated rows when it receives the new data real-time. That makes each streaming update very efficient.
+The Grid will only re-renderer (not re-mount) the updated rows when it receives the new data real-time. That makes each streaming update very efficient.
 
-> This example uses a local data service to simulate real-time updates. In the live application, bind your KendoReact Data Grid to a state variable and update it with steaming (live) data.
+> This example uses a local data service to simulate real-time updates. In the live application, bind your KendoReact Grid to a state variable and update it with steaming (live) data.
 
-{% meta height:710 %}
+The following example demonstrates real-time streaming updates in the Grid, where rows are re-rendered efficiently as live data changes at a configurable refresh rate.
+
+{% meta height:790 %}
 {% embed_file live-data/func/app.tsx preview %}
 {% embed_file live-data/func/main.tsx %}
 {% embed_file live-data/func/custom-cells.tsx %}

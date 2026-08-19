@@ -50,7 +50,7 @@ number
 <td class="table-cell-comment">
 
 
-The left margin in pixels.
+Specifies the left margin in pixels.
 
 
 </td>
@@ -85,7 +85,7 @@ number
 <td class="table-cell-comment">
 
 
-The right margin in pixels.
+Specifies the right margin in pixels.
 
 
 </td>

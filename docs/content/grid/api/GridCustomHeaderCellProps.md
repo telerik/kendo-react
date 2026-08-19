@@ -295,7 +295,13 @@ The `selectionValue` event handler of the column in which the cell is located.
 <td class="table-cell-comment">
 
 
-The props and attributes that are applied to the `th` element by default. The property should be used with the [HeaderThElement](https://www.telerik.com/kendo-react-ui/components/datatools/api/headerthelement) component as demonstrated in [this example](https://www.telerik.com/kendo-react-ui/components/grid/cells#toc-group-header-group-footer-header-cell-footer-cell-filter-cell-and-data-cell).
+The props and attributes that are applied to the `th` element by default.
+
+Use this property with the [HeaderThElement](https://www.telerik.com/kendo-react-ui/components/datatools/api/headerthelement)
+component to preserve the built-in header cell behavior such as accessibility attributes,
+keyboard navigation, and column metadata.
+
+For a usage example, see [Custom Header, Footer, and Filter Cells](https://www.telerik.com/kendo-react-ui/components/grid/cells/header-footer-filter-cells) article.
 
 
 </td>

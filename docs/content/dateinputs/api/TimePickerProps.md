@@ -187,6 +187,52 @@ Determines if the users should see a blinking caret inside the Date Input when p
 <td class="table-cell-name">
 
 
+#### animation?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+boolean
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+<code>
+
+
+true
+
+
+</code>
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Controls the Popup animation.
+Set to `false` to disable animation.
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### ariaDescribedBy?
 
 
@@ -215,6 +261,44 @@ string
 
 Identifies the element(s) which will describe the component, similar to [HTML aria-describedby attribute](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute).
 For example these elements could contain error or hint message.
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
+#### ariaLabel?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+string
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+The accessible label of the component.
 
 
 

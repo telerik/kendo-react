@@ -52,7 +52,7 @@ The key is to create a custom filter cell component that:
 -   Handles the filter change by creating a custom operator function that checks if the cell value is included in the selected values array
 -   Provides a clear button to reset the filter
 
-<demo metaUrl="knowledge-base/treelist/treelist-multiselect-filter/" height="580"></demo>
+<demo metaUrl="knowledge-base/treelist/treelist-multiselect-filter/" height="690"></demo>
 
 ## See Also
 

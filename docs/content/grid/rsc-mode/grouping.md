@@ -1,8 +1,8 @@
 ---
 title: Grouping
-page_title: 'React Data Grid RSC Mode & Grouping'
-description: 'Learn how to enable the grouping in the RSC mode of the React Data Grid'
-components: ["datagrid"]
+page_title: 'React Grid RSC Mode & Grouping'
+description: 'Learn how to enable the grouping in the RSC mode of the React Grid'
+components: ['grid']
 slug: grouping_rsc_grid
 subject: RSC Mode of the Grid
 position: 60
@@ -39,7 +39,7 @@ Below you can see an example of handling grouping changes on the server to maint
 
 ## Suggested Links
 
--   [KendoKendoReact Data Grid Grouping Documentation](slug:groupingbasics_grid)
--   [KendoKendoReact Data Grid RSC Mode Server Actions](slug:server_actions_rsc_grid)
--   [КendoReact Data Grid RSC Mode Overview](slug:overview_rsc_grid)
--   [Getting Started with КendoReact Data Grid RSC Mode](slug:getstarted_rsc_grid)
+-   [KendoReact Grid Grouping Documentation](slug:groupingbasics_grid)
+-   [KendoReact Grid RSC Mode Server Actions](slug:server_actions_rsc_grid)
+-   [КendoReact Grid RSC Mode Overview](slug:overview_rsc_grid)
+-   [Getting Started with КendoReact Grid RSC Mode](slug:getstarted_rsc_grid)

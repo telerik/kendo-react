@@ -23,7 +23,7 @@ This is the default behavior where suggestions are immediately sent as messages 
 
 Suggestions appear as clickable items above the message input, allowing users to instantly send preset responses. Upon clicking a suggestion, the [`onSuggestionClick`](slug:api_conversational-ui_chatprops#toc-onsuggestionclick) event is triggered, returning the ChatSuggestion as an argument. This allows you to handle each suggestion accordingly.
 
-{% meta height:900 %}
+{% meta height:1040 %}
 {% embed_file chat/quick-actions/suggestions/app.tsx preview %}
 {% embed_file chat/quick-actions/suggestions/main.tsx %}
 {% endmeta %}
@@ -39,7 +39,7 @@ This pattern is particularly useful for:
 -   Scenarios where users want to review before sending
 -   Multi-part messages where suggestions provide starting points
 
-{% meta height:900 %}
+{% meta height:1040 %}
 {% embed_file chat/quick-actions/suggestions-input/app.tsx preview %}
 {% embed_file chat/quick-actions/suggestions-input/main.tsx %}
 {% endmeta %}
@@ -55,7 +55,7 @@ Dismissible suggestions provide a dynamic experience where suggestions are autom
 
 Implement this pattern by removing clicked suggestions from the suggestions array in the [`onSuggestionClick`](slug:api_conversational-ui_chatprops#toc-onsuggestionclick) handler. You can also provide a reset mechanism to restore all suggestions when needed.
 
-{% meta height:900 %}
+{% meta height:1040 %}
 {% embed_file chat/quick-actions/suggestions-dismissible/app.tsx preview %}
 {% embed_file chat/quick-actions/suggestions-dismissible/main.tsx %}
 {% endmeta %}

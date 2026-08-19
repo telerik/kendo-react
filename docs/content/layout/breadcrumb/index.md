@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: 'Get started with the KendoReact Breadcrumb and use the component in React projects.'
-components: ["breadcrumb"]
+components: ['breadcrumb']
 slug: overview_breadcrumb
 position: 1
 ---
@@ -14,9 +14,10 @@ The Breadcrumb component allows you to navigate within a folder structure or web
 
 The following example demonstrates the Breadcrumb in action.
 
-{% meta height:100 %}
+{% meta height:260 %}
 {% embed_file breadcrumb/overview/default/app.tsx preview %}
 {% embed_file breadcrumb/overview/default/main.tsx %}
+{% embed_file breadcrumb/overview/default/styles.css %}
 {% endmeta %}
 
 ## Custom Delimiter

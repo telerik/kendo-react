@@ -22,4 +22,4 @@ For more information on how to disable hyperlinks with the Drawing library, refe
 ## Suggested Links
 
 -   [API Reference of the PDF Processing Component]({% slug api_pdf_pdfexportprops %})
--   [PDF Options by the Drawing Library]({% slug api_kendo-drawing %}#toc-progresskendo-drawingpdf)
+-   [PDF Options by the Drawing Library]({% slug api_kendo-drawing %})

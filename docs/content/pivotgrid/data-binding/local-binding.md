@@ -1,6 +1,6 @@
 ---
 title: Local Data Binding
-page_title: 'React PivotData Grid Component & Local Data Binding | KendoReact UI'
+page_title: 'React PivotGrid Component & Local Data Binding | KendoReact UI'
 description: 'Get a free trial of the React PivotGrid UI Component by KendoReact and learn how to bind the widget with local data.'
 components: ["pivotgrid"]
 slug: localbinding_pivotgrid
@@ -34,7 +34,7 @@ The following demo shows how to configure the PivotGrid component. Each field in
 
 In the following example, the dimensions do not follow the local data strictly. From the `Date` field in the local data are created `Years`, `Quarters`, `Months`, and `Days` dimensions. Rendering and sorting by these fields is adjusted using `displayValue` and `sortValue` dimension configuration callbacks.
 
-{% meta height:570 %}
+{% meta height:760 %}
 {% embed_file localdata/custom-dimensions/func/app.tsx preview %}
 {% embed_file localdata/custom-dimensions/func/main.tsx %}
 {% embed_file localdata/custom-dimensions/func/data.ts %}

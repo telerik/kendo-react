@@ -13,7 +13,7 @@ The connections in the KendoReact Diagram represent relationships between two Sh
 
 The following example demonstrates the key connection features, including connection types, caps, labels, styling, and connector targeting.
 
-<demo metaUrl="diagram/connections/basic/" height="720"></demo>
+<demo metaUrl="diagram/connections/basic/" height="680"></demo>
 
 ## Basics
 
@@ -122,7 +122,7 @@ const connections: ConnectionOptions[] = [
 
 The following example demonstrates how to define connection points.
 
-<demo metaUrl="diagram/connections/points/" height="600"></demo>
+<demo metaUrl="diagram/connections/points/" height="680"></demo>
 
 ## Connection Styling
 
@@ -272,7 +272,7 @@ By default, each shape exposes four connectors named `top`, `right`, `bottom`, a
 
 The following example demonstrates custom connectors on Diagram shapes. The UI Layer shape uses offset `RightTop` and `RightBottom` connectors at 30% and 70% down the right edge to prevent overlapping connections. The remaining shapes use bounds-based edge centers.
 
-<demo metaUrl="diagram/connections/connectors/" height="600"></demo>
+<demo metaUrl="diagram/connections/connectors/" height="630"></demo>
 
 Each connector requires:
 

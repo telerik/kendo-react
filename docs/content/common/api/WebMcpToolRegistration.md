@@ -7,7 +7,7 @@ slug: api_common_webmcptoolregistration
 ---
 
 # WebMcpToolRegistration
-Handle returned by `navigator.modelContext.registerTool()`.
+Handle returned by `document.modelContext.registerTool()`.
 
 
 <table class="api-table api-table-properties">

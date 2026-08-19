@@ -1,14 +1,14 @@
 ---
 title: Known Limitations
-description: 'Get started with the PDF export functionality of the KendoKendoReact Data Grid and learn about its use cases as well as limitations.'
-components: ["datagrid"]
+description: 'Get started with the PDF export functionality of the KendoReact Grid and learn about its use cases as well as limitations.'
+components: ['grid']
 slug: limitations_pdfexport_grid
 position: 80
 ---
 
 # Known Limitations
 
-Due to its implementation specifics, the PDF export of the KendoReact Data Grid has certain limitations.
+Due to its implementation specifics, the PDF export of the KendoReact Grid has certain limitations.
 
 -   The rendition of right-to-left content is not supported.
 -   The PDF export of hierarchical Grid is not supported.

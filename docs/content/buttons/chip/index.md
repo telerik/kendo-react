@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: 'Use the KendoReact Chip component in a React project.'
-components: ["chip"]
+components: ['chip']
 slug: overview_chip
 position: 1
 ---
@@ -16,7 +16,7 @@ The KendoReact Chip is distributed through the [kendo-react-buttons NPM package]
 
 The following example demonstrates the Chip in action.
 
-{% meta height:180 %}
+{% meta height:380 %}
 {% embed_file chip/overview/func/app.tsx preview %}
 {% embed_file chip/overview/func/main.tsx %}
 {% endmeta %}

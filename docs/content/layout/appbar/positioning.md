@@ -36,7 +36,7 @@ The AppBar provides the following options for setting the position mode:
 
 > When you render the AppBar with `positionMode={'fixed'}`, the dimension of the element doesn't impact the rest of the page. This can cause parts of the content to be invisible, behind the AppBar. In this case either set padding of the page content or set `sticky` position mode.
 
-{% meta height:550 %}
+{% meta height:760 %}
 {% embed_file appbar/position-mode/func/app.tsx preview %}
 {% embed_file appbar/position-mode/func/main.tsx %}
 {% endmeta %}

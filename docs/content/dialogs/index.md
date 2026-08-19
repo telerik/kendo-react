@@ -13,9 +13,10 @@ The KendoReact Dialogs is a collection of free, customizable, responsive, and in
 
 The following demo shows the components included in the KendoReact Dialogs package:
 
-{% meta height:450 %}
+{% meta height:480 %}
 {% embed_file overview/overview-combined/func/app.tsx preview %}
 {% embed_file overview/overview-combined/func/main.tsx %}
+{% embed_file overview/overview-combined/func/styles.css %}
 {% endmeta %}
 
 ## What are the KendoReact Dialogs?

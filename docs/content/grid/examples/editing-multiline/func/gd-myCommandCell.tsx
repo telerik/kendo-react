@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Dialog, DialogActionsBar } from '@progress/kendo-react-dialogs';
 import { Button } from '@progress/kendo-react-buttons';
+import { classNames } from '@progress/kendo-react-common';
 
 export const MyCommandCell = (props) => {
     const { dataItem, edit, remove, add, update, enterEdit, discard, cancel } = props;
@@ -31,7 +32,7 @@ export const MyCommandCell = (props) => {
     }
 
     return (
-        <td className={`${props.className} k-command-cell`}>
+        <td {...props.tdProps} className={classNames('k-command-cell', props.className)}>
             <Button
                 themeColor={'primary'}
                 onClick={() => {

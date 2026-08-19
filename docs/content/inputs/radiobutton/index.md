@@ -27,6 +27,10 @@ The following example demonstrates the RadioButton component in action.
 
 ## Size
 
+The RadioButton supports `small`, `medium`, and `large` sizes, controlled via the [`size`]({% slug api_inputs_radiobuttonprops %}#toc-size) property. The default size is `medium`.
+
+The following example demonstrates the available `size` options for the RadioButton.
+
 {% meta height:130 %}
 {% embed_file radiobutton/overview/size/app.tsx preview %}
 {% embed_file radiobutton/overview/size/main.tsx %}

@@ -14,7 +14,7 @@ The KendoReact Form and Stepper components come with a built-in right-to-left (R
 
 The following example demonstrates how to set the `direction` of a wrapping element to `rtl` for right-to-left rendering:
 
-{% meta height:660 %}
+{% meta height:700 %}
 {% embed_file wizard/rtl/func/app.tsx preview %}
 {% embed_file wizard/rtl/func/main.tsx %}
 {% endmeta %}

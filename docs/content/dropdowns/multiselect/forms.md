@@ -43,7 +43,7 @@ You can implement custom error messages which will be displayed when the MultiSe
 
 The MultiSelect enables you to set its validity state by utilizing its exposed props. Setting the validity state allows for the implementation of complex validation scenarios that are based on multiple sources. To override the current validity state and apply the corresponding styles, use the [`valid`]({% slug api_dropdowns_multiselectprops %}#toc-valid) prop.
 
-{% meta height:580 %}
+{% meta height:640 %}
 {% embed_file multiselect/forms/override/func/app.tsx preview %}
 {% embed_file multiselect/forms/override/func/main.tsx %}
 {% embed_file multiselect/forms/override/func/shop.ts %}
@@ -53,7 +53,7 @@ The MultiSelect enables you to set its validity state by utilizing its exposed p
 
 By default, to achieve a visual representation of its invalid state, the MultiSelect applies the `k-invalid` class name to the wrapping component. To disable the utilization of `k-invalid`, set the [`validityStyles`]({% slug api_dropdowns_multiselectprops %}#toc-validityStyles) property to `false`.
 
-{% meta height:580 %}
+{% meta height:620 %}
 {% embed_file multiselect/forms/disable-styles/func/app.tsx preview %}
 {% embed_file multiselect/forms/disable-styles/func/main.tsx %}
 {% embed_file multiselect/forms/disable-styles/func/shop.ts %}

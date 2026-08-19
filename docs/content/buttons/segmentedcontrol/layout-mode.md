@@ -17,7 +17,7 @@ The available layout modes are:
 
 The following demo shows the difference between the `compact` and `stretch` layout modes when rendering the same set of items:
 
-<demo metaUrl="buttons/segmentedcontrol/layout-modes/" height="900"></demo>
+<demo metaUrl="buttons/segmentedcontrol/layout-modes/" height="1050"></demo>
 
 ## Suggested Links
 

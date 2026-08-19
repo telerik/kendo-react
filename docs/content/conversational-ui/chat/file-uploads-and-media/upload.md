@@ -14,7 +14,7 @@ To enable file upload, configure the [`uploadConfig`](slug:api_conversational-ui
 
 The file upload feature displays an attachment button next to the message input. Users can click to select files, which are automatically uploaded and attached to messages. You can control how attached files are displayed using the [`messageFilesLayout`](slug:api_conversational-ui_chatprops#toc-messagefileslayout) property, which supports three layout modes: `vertical` (stacked vertically), `wrap` (wraps to new rows), and `horizontal` (single row with overflow).
 
-{% meta height:830 %}
+{% meta height:940 %}
 {% embed_file chat/file-uploads-and-media/upload/app.tsx preview %}
 {% embed_file chat/file-uploads-and-media/upload/main.tsx %}
 {% endmeta %}

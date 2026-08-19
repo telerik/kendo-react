@@ -45,22 +45,7 @@ position: 1
         <a href="{% slug api_map_location %}">Location</a>
     </li>
     <li class="api-item">
-        <a href="{% slug api_map_mapbubblelayer %}">MapBubbleLayer</a>
-    </li>
-    <li class="api-item">
         <a href="{% slug api_map_mapclickevent %}">MapClickEvent</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_map_maplayers %}">MapLayers</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_map_mapmarkerlayer %}">MapMarkerLayer</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_map_mapshapelayer %}">MapShapeLayer</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_map_maptilelayer %}">MapTileLayer</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_map_markeractivateevent %}">MarkerActivateEvent</a>

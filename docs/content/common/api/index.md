@@ -525,15 +525,6 @@ position: 1
 
   <ul class="api-item-list">
     <li class="api-item">
-        <a href="{% slug api_common_draganddrop %}">DragAndDrop</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_common_draggable %}">Draggable</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_common_droppable %}">Droppable</a>
-    </li>
-    <li class="api-item">
         <a href="{% slug api_common_kendopopulateevent %}">KendoPopulateEvent</a>
     </li>
     <li class="api-item">

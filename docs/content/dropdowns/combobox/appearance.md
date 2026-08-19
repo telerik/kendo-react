@@ -12,6 +12,13 @@ The ComboBox provides a predefined set of appearance options.
 
 Apart from the default vision of the ComboBox, these alternative styling options enable you to configure each individual aspect of the appearance of a ComboBox.
 
+The following example demonstrates all the available appearance options of the ComboBox in a single, configurable demo.
+
+{% meta height:320 %}
+{% embed_file combobox/appearance/func/app.tsx preview %}
+{% embed_file combobox/appearance/func/main.tsx %}
+{% endmeta %}
+
 ## Size
 
 You can set the size of the ComboBox through the [`size`]({% slug api_dropdowns_comboboxprops %}#toc-size) property. The ComboBox component comes in three different sizes: `small`, `medium` (default), and `large`.

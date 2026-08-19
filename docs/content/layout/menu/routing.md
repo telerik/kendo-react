@@ -16,7 +16,7 @@ You can use the Menu as a navigational component by wiring it with any router li
 
 
 
-{% meta height:600 %}
+{% meta height:850 %}
 {% embed_file menu/routing/func/About.tsx %}
 {% embed_file menu/routing/func/Home.tsx %}
 {% embed_file menu/routing/func/MenuNavContainer.tsx %}

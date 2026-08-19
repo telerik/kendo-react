@@ -8,7 +8,7 @@ position: 3
 
 # Custom SVG Icons
 
-The SvgIcon component allows you to display custom SVG icons (not available in the KendoReact default icons set). You can provide the inner SVG elements as [`children`]({% slug api_common_svgiconprops %}#toc-children) to the SvgIcon. SVG element has default viewBox set to `0 0 24 24`. This can be customized with the [`viewBox`]({% slug api_common_svgiconprops %}#viewBox) property.
+The SvgIcon component allows you to display custom SVG icons (not available in the KendoReact default icons set). You can provide the inner SVG elements as [`children`]({% slug api_common_svgiconprops %}) to the SvgIcon. SVG element has default viewBox set to `0 0 24 24`. This can be customized with the [`viewBox`]({% slug api_common_svgiconprops %}#viewBox) property.
 
 > Custom SVG icons also allow setting all predefined appearance options such as different sizes, theme colors and flipping.
 

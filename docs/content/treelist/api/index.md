@@ -111,9 +111,6 @@ position: 1
         <a href="{% slug api_treelist_treelist %}">TreeList</a>
     </li>
     <li class="api-item">
-        <a href="{% slug api_treelist_treelist %}">TreeList</a>
-    </li>
-    <li class="api-item">
         <a href="{% slug api_treelist_treelistbooleaneditor %}">TreeListBooleanEditor</a>
     </li>
     <li class="api-item">
@@ -157,54 +154,6 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_treelist_treelisttextfilter %}">TreeListTextFilter</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_treelist_treelisttoolbar %}">TreeListToolbar</a>
-    </li>
-  </ul>
-</div>
-<div class="api-index-section">
-
-
-<span class="section-key">
-
-
-## Class
-
-
-</span>
-
-
-  <ul class="api-item-list">
-    <li class="api-item">
-        <a href="{% slug api_treelist_treelist %}">TreeList</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_treelist_treelistbooleaneditor %}">TreeListBooleanEditor</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_treelist_treelistcell %}">TreeListCell</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_treelist_treelistcolumnsortsettings %}">TreeListColumnSortSettings</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_treelist_treelistdateeditor %}">TreeListDateEditor</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_treelist_treelistnumericeditor %}">TreeListNumericEditor</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_treelist_treelistselectablemode %}">TreeListSelectableMode</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_treelist_treelistselectioncell %}">TreeListSelectionCell</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_treelist_treelistsortsettings %}">TreeListSortSettings</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_treelist_treelisttexteditor %}">TreeListTextEditor</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_treelist_treelisttoolbar %}">TreeListToolbar</a>
@@ -279,6 +228,9 @@ position: 1
         <a href="{% slug api_treelist_treelistdatefilterprops %}">TreeListDateFilterProps</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_treelist_treelistdraggablerowhandle %}">TreeListDraggableRowHandle</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_treelist_treelistevent %}">TreeListEvent</a>
     </li>
     <li class="api-item">
@@ -291,7 +243,13 @@ position: 1
         <a href="{% slug api_treelist_treelistfilteroperator %}">TreeListFilterOperator</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_treelist_treelisthandle %}">TreeListHandle</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_treelist_treelistheadercellprops %}">TreeListHeaderCellProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_treelist_treelistheaderselectioncellhandle %}">TreeListHeaderSelectionCellHandle</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_treelist_treelistheaderselectioncellprops %}">TreeListHeaderSelectionCellProps</a>
@@ -304,6 +262,9 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_treelist_treelistkeydownevent %}">TreeListKeyDownEvent</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_treelist_treelistnorecordshandle %}">TreeListNoRecordsHandle</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_treelist_treelistnorecordsprops %}">TreeListNoRecordsProps</a>
@@ -358,6 +319,30 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_treelist_treelisttoolbarprops %}">TreeListToolbarProps</a>
+    </li>
+  </ul>
+</div>
+<div class="api-index-section">
+
+
+<span class="section-key">
+
+
+## Class
+
+
+</span>
+
+
+  <ul class="api-item-list">
+    <li class="api-item">
+        <a href="{% slug api_treelist_treelistcolumnsortsettings %}">TreeListColumnSortSettings</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_treelist_treelistselectablemode %}">TreeListSelectableMode</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_treelist_treelistsortsettings %}">TreeListSortSettings</a>
     </li>
   </ul>
 </div>

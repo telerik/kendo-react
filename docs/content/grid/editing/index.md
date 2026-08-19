@@ -1,19 +1,19 @@
 ---
 title: Overview
-description: 'Get started with the KendoKendoReact Data Grid and see how easy creating, editing, and deleting data records can be.'
-components: ["datagrid"]
+description: 'Get started with the KendoReact Grid and see how easy creating, editing, and deleting data records can be.'
+components: ['grid']
 slug: editing_grid
 position: 10
 tier: free
 ---
 
-# KendoReact Data Grid Editing Overview
+# KendoReact Grid Editing Overview
 
-The KendoReact Data Grid enables you to create, update, and delete data records by providing built-in `edit` state functionality.
+The KendoReact Grid enables you to create, update, and delete data records by providing built-in `edit` state functionality.
 
 ## Enabling Editing
 
-The KendoKendoReact Data Grid supports editing in two modes:
+The KendoReact Grid supports editing in two modes:
 
 -   [Built-in State Management](#using-the-built-in-state-management-for-editing): The Grid manages its own editing state internally.
 
@@ -35,7 +35,7 @@ To enable filtering using the built-in state management mechanism, follow these 
 
 1. (Optional) Set the type of the editor per column using the [`editor`]({% slug api_grid_gridcolumnprops %}#toc-editor) property of the GridColumn component. The built-in editor types are `text`, `date`, `number` and `boolean`. The usage of each editor for each column depends on the type of the edited data.
 
-The following example demonstrates how to implement editing using the built-in state management of the KendoKendoReact Data Grid.
+The following example demonstrates how to implement editing using the built-in state management of the KendoReact Grid.
 
 {% meta height:490 %}
 {% embed_file editing-row-click/built-in/func/app.tsx preview %}
@@ -129,7 +129,7 @@ The following example demonstrates how to implement the editing of the Grid data
 
 When working with large datasets in editable Grids, the traditional approach of searching through arrays to update edited items can cause performance bottlenecks. Each cell edit operation requires iterating through the entire array to find the matching item for updates, which becomes noticeable with datasets containing thousands of items.
 
-The KendoKendoReact Data Grid provides a [`dataIndex`](slug:api_grid_griditemchangeevent#dataindex) property in the [`GridItemChangeEvent`](slug:api_grid_griditemchangeevent) that eliminates this issue by providing direct access to the edited item's position in the data array.
+The KendoReact Grid provides a [`dataIndex`](slug:api_grid_griditemchangeevent#dataindex) property in the [`GridItemChangeEvent`](slug:api_grid_griditemchangeevent) that eliminates this issue by providing direct access to the edited item's position in the data array.
 
 > caption Optimized editing approach using dataIndex
 
@@ -145,14 +145,14 @@ const itemChange = (event: GridItemChangeEvent) => {
 
 The following example demonstrates the editing performance difference between both approaches using 50,000 items.
 
-{% meta height:730 %}
+{% meta height:920 %}
 {% embed_file editing-performance-dataindex/func/app.tsx preview %}
 {% embed_file editing-performance-dataindex/func/main.tsx %}
 {% endmeta %}
 
 > For older browser support, you can implement a polyfill for the `Array.with()` method.
 
-## KendoReact Data Grid Editing APIs
+## KendoReact Grid Editing APIs
 
 -   [Inline editing]({% slug editing_inline_grid %})
 -   [Inline editing with custom editors]({% slug customediting_grid %})

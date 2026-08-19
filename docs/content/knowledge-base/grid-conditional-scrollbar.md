@@ -37,7 +37,7 @@ This can be achieved by setting the scrollable property of the Grid from a state
 
 This is an example showcasing this approach:
 
-{% meta height:540 %}
+{% meta height:690 %}
 {% embed_file grid/grid-conditional-scrollbar/app.jsx preview %}
 {% embed_file grid/grid-conditional-scrollbar/main.jsx %}
 {% embed_file grid/grid-conditional-scrollbar/products.json %}

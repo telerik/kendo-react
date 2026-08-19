@@ -15,7 +15,7 @@ To configure the Chart's data:
 
 The following example demonstrates how to visualize the PivotGrid data with the KendoReact Chart component.
 
-{% meta height:980 %}
+{% meta height:1060 %}
 {% embed_file chart/func/app.tsx preview %}
 {% embed_file chart/func/main.tsx %}
 {% embed_file chart/func/chart-data.ts %}

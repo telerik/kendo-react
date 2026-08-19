@@ -16,9 +16,10 @@ The KendoReact ContextMenu component is part of the KendoReact library of React 
 
 The following example demonstrates the KendoReact ContextMenu in action.
 
-{% meta height:300 %}
+{% meta height:480 %}
 {% embed_file menu/context-menu/overview/func/app.tsx preview %}
 {% embed_file menu/context-menu/overview/func/main.tsx %}
+{% embed_file menu/context-menu/overview/func/styles.css %}
 {% endmeta %}
 
 ## Key Features

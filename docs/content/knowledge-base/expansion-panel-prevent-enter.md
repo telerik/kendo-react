@@ -36,7 +36,7 @@ The ExpansionPanel triggers the [onAction]({% slug api_layout_expansionpanelprop
 
 This is an example showcasing this in action:
 
-{% meta height:600 %}
+{% meta height:850 %}
 {% embed_file layout/expansion-panel-prevent-enter/app.tsx preview %}
 {% embed_file layout/expansion-panel-prevent-enter/main.tsx %}
 {% embed_file layout/expansion-panel-prevent-enter/data.ts %}

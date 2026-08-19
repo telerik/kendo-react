@@ -18,8 +18,6 @@ In this way, each subsequent click toggles the newly-selected state.
 {% embed_file checkbox/default/func/styles.css %}
 {% endmeta %}
 
-
-
 ## Suggested Links
 
 * [API Reference of the Checkbox]({% slug api_inputs_checkbox %})

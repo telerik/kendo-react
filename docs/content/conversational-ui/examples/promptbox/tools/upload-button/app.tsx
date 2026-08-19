@@ -1,8 +1,6 @@
 import * as React from 'react';
 import { PromptBox, PromptBoxUploadButtonProps, PromptBoxChangeEvent } from '@progress/kendo-react-conversational-ui';
-import { Checkbox } from '@progress/kendo-react-inputs';
-import { Label } from '@progress/kendo-react-labels';
-import { DropDownList, DropDownListChangeEvent } from '@progress/kendo-react-dropdowns';
+import { useConfigurator } from '@docs-shared/configurator';
 import './styles.css';
 
 interface FileTypeOption {
@@ -19,16 +17,39 @@ const fileTypeOptions: FileTypeOption[] = [
 
 const App = () => {
     const [promptValue, setPromptValue] = React.useState<string>('');
-    const [multipleFiles, setMultipleFiles] = React.useState<boolean>(false);
-    const [restrictFileSize, setRestrictFileSize] = React.useState<boolean>(true);
-    const [disabled, setDisabled] = React.useState<boolean>(false);
-    const [selectedFileType, setSelectedFileType] = React.useState<string>('all');
+    const config = useConfigurator({
+        sections: [
+            {
+                label: 'Accepted File Types',
+                controls: [
+                    {
+                        type: 'dropdown',
+                        name: 'fileTypes',
+                        options: fileTypeOptions.map((option) => option.text),
+                        defaultValue: fileTypeOptions[0].text
+                    }
+                ]
+            },
+            {
+                label: 'Upload Button',
+                controls: [
+                    { type: 'switch', name: 'allowMultiple', label: 'Allow Multiple', defaultValue: false },
+                    { type: 'switch', name: 'restrictSize', label: 'Restrict Size (5 MB)', defaultValue: true },
+                    { type: 'switch', name: 'disabled', label: 'Disabled', defaultValue: false }
+                ]
+            }
+        ]
+    });
 
     const handleValueChange = (event: PromptBoxChangeEvent) => {
         setPromptValue(event.value);
     };
 
     const getUploadButtonSettings = (): PromptBoxUploadButtonProps => {
+        const multipleFiles = config.allowMultiple ?? false;
+        const restrictFileSize = config.restrictSize ?? true;
+        const disabled = config.disabled ?? false;
+        const selectedFileType = fileTypeOptions.find((option) => option.text === config.fileTypes)?.value ?? 'all';
         const settings: PromptBoxUploadButtonProps = {
             multiple: multipleFiles,
             disabled: disabled
@@ -69,58 +90,12 @@ const App = () => {
         return settings;
     };
 
-    const handleFileTypeChange = (event: DropDownListChangeEvent) => {
-        setSelectedFileType(event.value.value);
-    };
-
     const handleSend = () => {
         setPromptValue('');
     };
 
-    const selectedFileTypeOption = fileTypeOptions.find((opt) => opt.value === selectedFileType) || fileTypeOptions[0];
-
     return (
         <div className="demo-container">
-            <div className="configuration-panel">
-                <div className="config-grid">
-                    <div className="config-row">
-                        <Label className="label-inline">
-                            Allow Multiple
-                            <Checkbox value={multipleFiles} onChange={(e) => setMultipleFiles(e.value ?? false)} />
-                        </Label>
-                    </div>
-
-                    <div className="config-row">
-                        <Label className="label-inline">
-                            Restrict Size (5MB)
-                            <Checkbox
-                                value={restrictFileSize}
-                                onChange={(e) => setRestrictFileSize(e.value ?? false)}
-                            />
-                        </Label>
-                    </div>
-
-                    <div className="config-row">
-                        <Label className="label-inline">
-                            Disabled
-                            <Checkbox value={disabled} onChange={(e) => setDisabled(e.value ?? false)} />
-                        </Label>
-                    </div>
-
-                    <div className="config-row">
-                        <Label className="label-compact">File Types:</Label>
-                        <DropDownList
-                            data={fileTypeOptions}
-                            value={selectedFileTypeOption}
-                            onChange={handleFileTypeChange}
-                            textField="text"
-                            dataItemKey="value"
-                            className="dropdown-compact"
-                        />
-                    </div>
-                </div>
-            </div>
-
             <PromptBox
                 value={promptValue}
                 onChange={handleValueChange}

@@ -21,7 +21,7 @@ To customize the layout of the GridLayout, use any of the following configuratio
 
 To configure the GridLayout, use the [`rows`]({% slug api_layout_gridlayoutprops %}#toc-rows) and [`cols`]({% slug api_layout_gridlayoutprops %}#toc-cols) properties.
 
-{% meta height:650 %}
+{% meta height:770 %}
 {% embed_file gridlayout/layout/rows-cols/func/app.tsx preview %}
 {% embed_file gridlayout/layout/rows-cols/func/main.tsx %}
 {% embed_file gridlayout/layout/rows-cols/func/styles.css %}
@@ -33,7 +33,7 @@ To set the GridLayout gaps, use the [`gap`]({% slug api_layout_gridlayoutprops %
 
 By default, the GridLayout does not apply a gap.
 
-{% meta height:650 %}
+{% meta height:770 %}
 {% embed_file gridlayout/layout/gaps/func/app.tsx preview %}
 {% embed_file gridlayout/layout/gaps/func/main.tsx %}
 {% embed_file gridlayout/layout/gaps/func/styles.css %}
@@ -49,7 +49,7 @@ The available values are:
 - `end`&mdash;Uses the end point of the container.
 - (Default)`stretch`&mdash;Stretches the items to fill the width of the container.
 
-{% meta height:620 %}
+{% meta height:740 %}
 {% embed_file gridlayout/layout/horizontalalign/func/app.tsx preview %}
 {% embed_file gridlayout/layout/horizontalalign/func/main.tsx %}
 {% embed_file gridlayout/layout/horizontalalign/func/styles.css %}
@@ -65,7 +65,7 @@ The available values are:
 - `bottom`&mdash;Uses the bottom point of the container.
 - (Default)`stretch`&mdash;Stretches the items to fill the height of the container.
 
-{% meta height:620 %}
+{% meta height:740 %}
 {% embed_file gridlayout/layout/verticalalign/func/app.tsx preview %}
 {% embed_file gridlayout/layout/verticalalign/func/main.tsx %}
 {% embed_file gridlayout/layout/verticalalign/func/styles.css %}

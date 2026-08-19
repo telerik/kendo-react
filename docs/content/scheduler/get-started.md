@@ -15,12 +15,14 @@ This guide provides essential information about using the KendoReact Scheduler. 
 
 After completing this guide, you will be able to reproduce the following example.
 
-{% meta height:770 %}
+{% meta height:780 %}
 {% embed_file overview/basic/func/app.tsx preview %}
 {% embed_file overview/basic/func/main.tsx %}
 {% endmeta %}
 
 ## Before You Begin
+
+To follow the steps in this guide, you need to have a React project set up. If you don't have one, you can create a new React application using Vite by running the following command in your terminal:
 
 ```sh
 npm create vite@latest my-app -- --template react
@@ -31,6 +33,8 @@ This guide requires that you have **basic knowledge of React and TypeScript**, a
 > tip You can speed up the development of your KendoReact application with the [Kendo UI Template Wizard for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=KendoUI.kendotemplatewizard).
 
 ## Install the Component
+
+To install the Scheduler package, run the following command in the root folder of your React project:
 
 ```sh
 npm i @progress/kendo-react-scheduler

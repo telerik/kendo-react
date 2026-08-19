@@ -17,7 +17,7 @@ For more information on embedding images, refer to:
 -   [Known limitations of the Drawing library and the PDF Export component]({% slug limitationsbrowsersupport_drawing %}#toc-images)
 -   [Exporting drawings to PDF with the Drawing library]({% slug exportingtoimages_drawing %})
 
-{% meta height:700 %}
+{% meta height:730 %}
 {% embed_file embedded-images/func/app.tsx preview %}
 {% embed_file embedded-images/func/main.tsx %}
 {% endmeta %}
@@ -25,4 +25,4 @@ For more information on embedding images, refer to:
 ## Suggested Links
 
 -   [API Reference of the PDF Processing Component]({% slug api_pdf_pdfexportprops %})
--   [PDF Options by the Drawing Library]({% slug api_kendo-drawing %}#toc-progresskendo-drawingpdf)
+-   [PDF Options by the Drawing Library]({% slug api_kendo-drawing %})

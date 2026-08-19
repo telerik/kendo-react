@@ -363,25 +363,13 @@ position: 1
         <a href="{% slug api_gantt_editordependencytypesff %}">editorDependencyTypesFF</a>
     </li>
     <li class="api-item">
-        <a href="{% slug api_gantt_ganttbooleanfilter %}">GanttBooleanFilter</a>
-    </li>
-    <li class="api-item">
         <a href="{% slug api_gantt_ganttcolumnsortsettings %}">GanttColumnSortSettings</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_gantt_ganttdatefilter %}">GanttDateFilter</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_gantt_ganttnumericfilter %}">GanttNumericFilter</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_gantt_ganttselectablemode %}">GanttSelectableMode</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_gantt_ganttsortsettings %}">GanttSortSettings</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_gantt_gantttextfilter %}">GanttTextFilter</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_gantt_ganttview %}">GanttView</a>

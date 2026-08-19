@@ -4,8 +4,6 @@ description: 'Get started with the KendoReact Pager and customize its appearance
 components: ['pager']
 slug: appearance_pager
 position: 2
-tag: updated
-release_tag: Q2 2026
 ---
 
 # Appearance

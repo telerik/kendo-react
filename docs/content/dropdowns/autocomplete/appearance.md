@@ -12,6 +12,13 @@ The AutoComplete provides a predefined set of appearance options.
 
 Apart from the default vision of the AutoComplete, these alternative styling options enable you to configure each individual aspect of the appearance of a AutoComplete.
 
+The following example demonstrates all the available appearance options of the AutoComplete in a single, configurable demo.
+
+{% meta height:310 %}
+{% embed_file autocomplete/appearance/overview/app.tsx preview %}
+{% embed_file autocomplete/appearance/overview/main.tsx %}
+{% endmeta %}
+
 ## Size
 
 You can set the size of the AutoComplete through the [`size`]({% slug api_dropdowns_autocompleteprops %}#toc-size) property. The AutoComplete component comes in three different sizes: `small`, `medium` (default), and `large`.

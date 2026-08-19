@@ -65,7 +65,7 @@ The FloatingActionButton provides the following options for setting the position
 -   `fixed`(Default)&mdash;Positions the FloatingActionButton relative to the viewport. It always stays in the same place even if the page is scrolled.
 -   `absolute`&mdash;Positions the FloatingActionButton relative to the nearest positioned ancestor. If an absolutely positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
 
-{% meta height:550 %}
+{% meta height:770 %}
 {% embed_file floatingactionbutton/position/position-mode/func/app.tsx preview %}
 {% embed_file floatingactionbutton/position/position-mode/func/main.tsx %}
 {% endmeta %}

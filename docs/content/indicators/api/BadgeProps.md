@@ -277,7 +277,7 @@ The possible values are:
 <code>
 
 
-"edge" | "outside" | "inside"
+"null" | "edge" | "outside" | "inside"
 
 
 </code>
@@ -299,6 +299,7 @@ The possible values are:
 * `'edge'`&mdash;The center of the Badge is positioned on the edge of the container element.
 * `'outside'`&mdash;The Badge is entirely positioned outside the edge of the container element.
 * `'inside'`&mdash;The Badge is entirely positioned inside the edge of the the container element.
+* `null`&mdash;The Badge is positioned inline with the content of the container element.
 
 
 </td>

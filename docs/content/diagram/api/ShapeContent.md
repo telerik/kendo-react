@@ -115,6 +115,13 @@ string
 <td class="table-cell-default">
 
 
+<code>
+
+
+"sans-serif"
+
+
+</code>
 
 
 </td>
@@ -122,6 +129,9 @@ string
 
 
 The font family of the shape content text.
+
+
+
 
 
 </td>
@@ -150,13 +160,23 @@ number
 <td class="table-cell-default">
 
 
+<code>
+
+
+15
+
+
+</code>
 
 
 </td>
 <td class="table-cell-comment">
 
 
-The font size of the shape content text.
+The font size in pixels of the shape content text.
+
+
+
 
 
 </td>
@@ -255,13 +275,23 @@ number
 <td class="table-cell-default">
 
 
+<code>
+
+
+0
+
+
+</code>
 
 
 </td>
 <td class="table-cell-comment">
 
 
-The spacing between lines of text in the shape.
+The spacing between lines of text in the shape in pixels.
+
+
+
 
 
 </td>
@@ -290,13 +320,23 @@ number | Padding
 <td class="table-cell-default">
 
 
+<code>
+
+
+0
+
+
+</code>
 
 
 </td>
 <td class="table-cell-comment">
 
 
-The padding of the shape content.
+The padding of the shape content in pixels.
+
+
+
 
 
 </td>
@@ -325,6 +365,13 @@ number | Padding
 <td class="table-cell-default">
 
 
+<code>
+
+
+0
+
+
+</code>
 
 
 </td>
@@ -332,6 +379,9 @@ number | Padding
 
 
 The relative padding of the shape content e.g. `0.03` means 3% of the shape width/height.
+
+
+
 
 
 </td>

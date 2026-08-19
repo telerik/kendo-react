@@ -1,11 +1,9 @@
 ---
 title: Adaptive Rendering
 description: 'Enable adaptive rendering for the KendoReact TimePicker in React projects.'
-components: ["timepicker"]
+components: ['timepicker']
 slug: adaptive_rendering_timepicker
 position: 6
-tag: updated
-release_tag: Q2 2026
 ---
 
 # Adaptive Rendering
@@ -33,9 +31,9 @@ The Adaptive Mode changes the rendering of the popup element of the TimePicker a
 
 ## On-Screen Keyboard
 
-To enhance the mobile user experience of your React apps, you can configure the type of the on-screen keyboard for the KendoReact TimePicker. Use the [`inputAttributes`]({% slug api_dateinputs_timepicker %}#toc-inputAttributes) property to set the `inputMode`. Based on the `inputMode` setting, the browser will display the most appropriate virtual keyboard.
+To enhance the mobile user experience of your React apps, you can configure the type of the on-screen keyboard for the KendoReact TimePicker. Use the [`inputAttributes`](slug:api_dateinputs_timepickerprops#inputAttributes) property to set the `inputMode`. Based on the `inputMode` setting, the browser will display the most appropriate virtual keyboard.
 
-The [`inputAttributes`]({% slug api_dateinputs_timepicker %}#toc-inputAttributes) property lets you set custom HTML attributes to the inner focusable input.
+The [`inputAttributes`](slug:api_dateinputs_timepickerprops#inputAttributes) property lets you set custom HTML attributes to the inner focusable input.
 
 > Check out the different type of virtual keyboard on a mobile device.
 

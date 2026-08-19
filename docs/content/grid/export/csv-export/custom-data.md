@@ -1,7 +1,7 @@
 ---
 title: Exporting Custom Data
-description: 'Learn how to export different data than what is displayed in the KendoKendoReact Data Grid.'
-components: ['datagrid']
+description: 'Learn how to export different data than what is displayed in the KendoReact Grid.'
+components: ['grid']
 slug: customdata_csvexport_grid
 position: 20
 subject: CSV Export feature of the Grid
@@ -20,7 +20,7 @@ The [`csv`]({% slug api_grid_gridprops %}#toc-csv) property's `data` option allo
 
 You can specify custom data to export using the `data` property in the CSV configuration object:
 
-<demo metaUrl="grid/csv-export/custom-data-export/" height="720"></demo>
+<demo metaUrl="grid/csv-export/custom-data-export/" height="1040"></demo>
 
 In this example, the Grid displays the full product list, but the CSV export only includes the first 5 products.
 
@@ -94,5 +94,5 @@ const csvOptions = {
 -   [CSV Export Basics]({% slug overview_csvexport_grid %})
 -   [Customizing Exported Columns]({% slug customcolumns_csvexport_grid %})
 -   [Data Transformation]({% slug datatransformation_csvexport_grid %})
--   [React Data Grid](slug://overview_grid)
+-   [React Grid](slug://overview_grid)
 -   [API Reference of the Grid]({% slug api_grid_gridprops %})

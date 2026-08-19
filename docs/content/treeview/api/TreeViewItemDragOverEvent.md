@@ -249,7 +249,7 @@ The Y (vertical) coordinate (in pixels) at which the event occurred that is rela
 <code>
 
 
-[TreeView]({% slug api_treeview_treeview %})
+[TreeViewHandle]({% slug api_treeview_treeviewhandle %})
 
 
 </code>

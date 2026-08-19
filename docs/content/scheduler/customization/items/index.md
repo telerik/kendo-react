@@ -96,7 +96,7 @@ Now lets tell the `Scheduler` to use our component instead of the default one.
 
 Pass some dummy data and see our custom items in action. The following example changes the color of every item inside the `Scheduler`.
 
-{% meta height:770 %}
+{% meta height:780 %}
 {% embed_file items/overview/func/app.tsx preview %}
 {% embed_file items/overview/func/main.tsx %}
 {% endmeta %}

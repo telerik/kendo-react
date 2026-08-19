@@ -20,7 +20,7 @@ Our mission is to provide a flexible API that allows all functionalities to be t
 
 In the following example, we demonstrate how to achieve accessibility compliance with [WCAG 2.2 AA](https://www.w3.org/TR/WCAG22/) by enabling tile resizing via a Context Menu.
 
-{% meta height:740 %}
+{% meta height:850 %}
 {% embed_file tilelayout/accessibility/func/app.tsx preview %}
 {% embed_file tilelayout/accessibility/func/main.tsx %}
 {% endmeta %}

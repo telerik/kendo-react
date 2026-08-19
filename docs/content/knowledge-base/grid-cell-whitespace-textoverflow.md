@@ -2,7 +2,7 @@
 title: Set the white-space and text-overflow CSS properties of the KendoReact Grid cells
 description: An example on how to set the white-space and text-overflow CSS properties of the Grid cells
 type: how-to
-page_title: Grid cell white-space and text-overflow - KendoReact Data Grid
+page_title: Grid cell white-space and text-overflow - KendoReact Grid
 slug: grid-cell-white-space-text-overflow
 tags: grid, data grid, white-space, text-overflow, nowrap, break line, ellipsis
 res_type: kb

@@ -1,7 +1,7 @@
 ---
 title: Fitting Content to Paper Size
-description: 'Get started with the KendoKendoReact Data Grid enabling you to fit the content to paper size when exporting to PDF.'
-components: ["datagrid"]
+description: 'Get started with the KendoReact Grid enabling you to fit the content to paper size when exporting to PDF.'
+components: ['grid']
 slug: fitcontent_pdfexport_grid
 position: 20
 subject: PDF Export feature of the Grid
@@ -9,7 +9,7 @@ subject: PDF Export feature of the Grid
 
 # Fitting Content to Paper Size
 
-The [`saveGridPDF`]({% slug api_pdf_savegridpdf %}) method from the `@progress/kendo-react-pdf` package lets you scale the KendoReact Data Grid content when you export it to PDF.
+The [`saveGridPDF`]({% slug api_pdf_savegridpdf %}) method from the `@progress/kendo-react-pdf` package lets you scale the KendoReact Grid content when you export it to PDF.
 
 By default, the Grid size on screen sets the paper size of your PDF. You can pick a specific paper size for the whole document instead. This makes the content scale to fit your chosen paper size. You can also change the scale factor yourself—for example, to add space for other items on the page.
 
@@ -21,7 +21,7 @@ By default, the Grid size on screen sets the paper size of your PDF. You can pic
 
 This example shows how the Grid can fit its content to a predefined `A4` paper size:
 
-{% meta height:510 %}
+{% meta height:630 %}
 {% embed_file pdf-export-fit-content/func/app.tsx preview %}
 {% embed_file pdf-export-fit-content/func/main.tsx %}
 {% endmeta %}

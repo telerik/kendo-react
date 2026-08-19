@@ -986,7 +986,7 @@ content?
 <code>
 
 
-any
+[ConnectionContent]({% slug api_diagram_connectioncontent %}) | [ConnectionRichTextContent]({% slug api_diagram_connectionrichtextcontent %})
 
 
 </code>
@@ -1023,7 +1023,7 @@ The content to set. If not provided, returns the current content.
 <code>
 
 
-any
+[ConnectionContent]({% slug api_diagram_connectioncontent %}) | [ConnectionRichTextContent]({% slug api_diagram_connectionrichtextcontent %})
 
 
 </code>
@@ -2749,7 +2749,7 @@ value?
 <code>
 
 
-any
+[ConnectionType]({% slug api_diagram_connectiontype %})
 
 
 </code>

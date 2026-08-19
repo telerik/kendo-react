@@ -17,7 +17,7 @@ To utilize the Scaffolders functionality, follow the steps below:
 
     ![Scaffolders context menu with the New KendoReact Project Item option](https://raw.githubusercontent.com/telerik/vscode-extensions-public-resources/main/images/KendoReact/react-scaffold-menu.png)
 
-1. Select a component from the list. Currently, the Data Grid, Chart, Form, and Scheduler KendoReact components support scaffolding.
+1. Select a component from the list. Currently, the Grid, Chart, Form, and Scheduler KendoReact components support scaffolding.
 
     ![Scaffolders Wizard with the KendoReact Project Item Generator dialog with the Scheduler selected as a project item type](../vscode-extensions/images/KendoReact-Scaffolders.png)
 

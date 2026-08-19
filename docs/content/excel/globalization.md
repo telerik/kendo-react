@@ -29,7 +29,7 @@ The Excel Export component does not provide built-in translated messages.
 
 The Excel Export component supports right-to-left direction by switching the direction of the Excel sheet.
 
-To enable the RTL mode for the Excel Export component and all KendoReact components in your React application, set the [`RTL`]({% slug api_excel-export_excelexportprops %}#toc-rtl) property of the `ExcelExport` component to `true`.
+To enable the RTL mode for the Excel Export component and all KendoReact components in your React application, set the [`RTL`]({% slug api_excel-export_excelexportprops %}) property of the `ExcelExport` component to `true`.
 
 {% meta height:150 %}
 {% embed_file rtl/func/app.tsx preview %}

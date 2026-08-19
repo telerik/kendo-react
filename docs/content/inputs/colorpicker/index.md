@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: 'Get an overview of the features the KendoReact ColorPicker delivers and use the component in React projects.'
-components: ["colorpicker"]
+components: ['colorpicker']
 slug: overview_colorpicker
 position: 1
 ---
@@ -14,7 +14,7 @@ The ColorPicker is designed to replace the `<input type="color">` HTML5 tag whic
 
 <CtaPanelOverview></CtaPanelOverview>
 
-{% meta height:450 %}
+{% meta height:750 %}
 {% embed_file colorpicker/overview/func/app.tsx preview %}
 {% embed_file colorpicker/overview/func/main.tsx %}
 {% embed_file colorpicker/overview/func/styles.css %}

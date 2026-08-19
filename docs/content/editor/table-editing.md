@@ -71,7 +71,7 @@ The **Cell properties** dialog lists the options available for the selected cell
 
 The following example demonstrates the table and cell properties tools in action:
 
-{% meta height:680 %}
+{% meta height:740 %}
 {% embed_file table-wizard/func/app.tsx preview %}
 {% embed_file table-wizard/func/main.tsx %}
 {% embed_file table-wizard/func/content.ts %}

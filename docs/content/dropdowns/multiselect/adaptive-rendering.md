@@ -22,6 +22,8 @@ The Adaptive Mode changes the rendering of the popup element of the MultiSelect 
 
 > You can further customize the adaptive breakpoints via [AdaptiveMode React Context]({% slug overview_adaptive_mode %}).
 
+The following example demonstrates how the MultiSelect adapts its popup element rendering to the screen size based on the configured breakpoints.
+
 > Switch between the device options below to see how the MultiSelect adapts to different resolutions.
 
 {% meta height:620 %}

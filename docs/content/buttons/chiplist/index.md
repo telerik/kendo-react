@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: 'Use the KendoReact ChipList component in a React project.'
-components: ["chiplist"]
+components: ['chiplist']
 slug: overview_chiplist
 position: 1
 ---
@@ -16,9 +16,10 @@ The KendoReact ChipList is distributed through the [kendo-react-buttons NPM pack
 
 The following example demonstrates the ChipList in action.
 
-{% meta height:100 %}
+{% meta height:140 %}
 {% embed_file chiplist/overview/func/app.tsx preview %}
 {% embed_file chiplist/overview/func/main.tsx %}
+{% embed_file chiplist/overview/func/styles.css %}
 {% endmeta %}
 
 ## Key Features

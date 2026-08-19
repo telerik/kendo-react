@@ -12,7 +12,7 @@ The KendoReact Chart will refresh each time the React state is updated. We can c
 
 The following example demonstrates how to refresh the Chart only when its data has changed.
 
-{% meta height:600 %}
+{% meta height:710 %}
 {% embed_file chart/refresh/func/app.tsx preview %}
 {% embed_file chart/refresh/func/main.tsx %}
 {% endmeta %}

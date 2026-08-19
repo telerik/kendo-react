@@ -19,7 +19,7 @@ The Dropdowns components are part of the KendoReact library which provides nativ
 
 The following example demonstrates the AutoComplete, ComboBox, MultiColumnComboBox, DropDownList, and MultiSelect components in action.
 
-{% meta height:650 %}
+{% meta height:770 %}
 {% embed_file overview/func/app.tsx preview %}
 {% embed_file overview/func/main.tsx %}
 {% embed_file shared/shared-dd-data.ts preview %}

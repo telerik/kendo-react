@@ -1,18 +1,20 @@
 ---
 title: External Form
-description: 'Get started with the KendoKendoReact Data Grid and implement external popup-editing forms.'
-components: ["datagrid"]
+description: 'Get started with the KendoReact Grid and implement external popup-editing forms.'
+components: ['grid']
 slug: external_editing_grid
 position: 70
 tier: premium
 subject: External Form Editing feature of the Grid
 ---
 
-# External Form Editing in KendoReact Data Grid
+# External Form Editing in KendoReact Grid
 
-The data of the KendoKendoReact Data Grid can be edited by using the [KendoReact Form component]({% slug overview_form %}).
+The data of the KendoReact Grid can be edited by using the [KendoReact Form component]({% slug overview_form %}).
 
 <CtaPanelOverview></CtaPanelOverview>
+
+The following example demonstrates how to edit Grid rows using an external KendoReact Form rendered inside a Dialog, where clicking an **Edit** button opens a modal form pre-populated with the selected row's data.
 
 {% meta height:480 %}
 {% embed_file editing-kr-form/func/app.tsx preview %}

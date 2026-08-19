@@ -13,7 +13,7 @@ The KendoReact Tooltips provides popups with information that is related to a UI
 
 The following demo shows the components included in the KendoReact Tooltips package:
 
-{% meta height:550 %}
+{% meta height:660 %}
 {% embed_file overview/func/app.tsx preview %}
 {% embed_file overview/func/main.tsx %}
 {% embed_file overview/func/styles.css %}

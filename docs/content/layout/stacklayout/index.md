@@ -17,7 +17,7 @@ It delivers different orientations, alignments, spacings and other handy options
 
 The following example demonstrates the StackLayout component in action and also showcases other KendoReact components&mdash;the [ButtonGroup]({% slug overview_buttongroup %}), [Avatars]({% slug overview_avatar %}) and [Cards]({% slug overview_card %}) components. The components are arranged in a stack and can be switched from horizontal to vertical orientation.
 
-{% meta height:720 %}
+{% meta height:780 %}
 {% embed_file stacklayout/overview/func/app.tsx preview %}
 {% embed_file stacklayout/overview/func/main.tsx %}
 {% embed_file stacklayout/overview/func/styles.css %}

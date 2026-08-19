@@ -29,7 +29,7 @@ One of the most useful use cases for the `resources` property is to visually sep
 
 The following example demonstrates how to color the events based on their `roomId` field.
 
-{% meta height:770 %}
+{% meta height:780 %}
 {% embed_file data-operations/resources/visual/func/app.tsx preview %}
 {% embed_file data-operations/resources/visual/func/main.tsx %}
 {% endmeta %}
@@ -40,7 +40,7 @@ The `resources` property accepts a collection of resources which means that you 
 
 The following example is based on the previous example and provides two resources.
 
-{% meta height:770 %}
+{% meta height:780 %}
 {% embed_file data-operations/resources/multiple/func/app.tsx preview %}
 {% embed_file data-operations/resources/multiple/func/main.tsx %}
 {% endmeta %}

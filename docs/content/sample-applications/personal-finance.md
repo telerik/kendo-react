@@ -11,7 +11,7 @@ level: 0
 
 # Personal Portfolio Sample Application
 
-The Personal Portfolio sample app showcases KendoReact UI components, including a Data Grid, Drawer, Inputs, Gauge, Dropdowns, Icons, Chart, ExpansionPanel, Form, Buttons, Card, and CSS utility classes from the [Progress Design System](https://www.telerik.com/design-system/docs/utils/get-started/introduction/).
+The Personal Portfolio sample app showcases KendoReact UI components, including a Grid, Drawer, Inputs, Gauge, Dropdowns, Icons, Chart, ExpansionPanel, Form, Buttons, Card, and CSS utility classes from the [Progress Design System](https://www.telerik.com/design-system/docs/utils/get-started/introduction/).
 
 <CtaPanelOverview message="The Personal Portfolio Sample App was created with KendoReact, an enterprise-grade UI library with 120+ free and premium components. To try out the premium components used in this app, you need to sign up for a 30-day trial, which gives you access to the full KendoReact library."></CtaPanelOverview>
 
@@ -29,7 +29,7 @@ To play with the demo and see how it’s built, you may want to run it locally:
 
 ## About the App
 
-This application was built following best practices for using KendoReact components, maintaining a clean structure that makes it an excellent learning resource. You can explore how to set up complex components such as the Data Grid (Table), Charts, Inputs, Dropdowns, and Forms.
+This application was built following best practices for using KendoReact components, maintaining a clean structure that makes it an excellent learning resource. You can explore how to set up complex components such as the Grid (Table), Charts, Inputs, Dropdowns, and Forms.
 
 ## Styling KendoReact Components with Ease
 
@@ -46,7 +46,7 @@ To enable a smooth and trouble-free collaboration between designers and develope
 ## Suggested Links
 
 -   [Get Started with KendoReact Free](slug://getting_started_free_vs_premium)
--   [KendoReact Data Grid]({% slug overview_grid %})
+-   [KendoReact Grid]({% slug overview_grid %})
 -   [KendoReact Charts]({% slug overview_chart_charts %})
 -   [KendoReact Gauges]({% slug overview_gauges %})
 -   [KendoReact ExpansionPanel]({% slug overview_expansionpanel %})

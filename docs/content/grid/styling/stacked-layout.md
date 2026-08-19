@@ -1,6 +1,6 @@
 ---
 title: Stacked Layout
-description: 'Learn how to use the stacked layout mode of the KendoKendoReact Data Grid to display data in a card-based format ideal for mobile and responsive designs.'
+description: 'Learn how to use the stacked layout mode of the KendoReact Grid to display data in a card-based format ideal for mobile and responsive designs.'
 slug: stacked_layout_grid
 position: 40
 tier: premium
@@ -12,7 +12,9 @@ The stacked layout mode of the Grid enables you to display data in a card-based 
 
 <CtaPanelOverview></CtaPanelOverview>
 
-{% meta height:720 %}
+The following example demonstrates the stacked layout with rich custom cell templates, including product images, progress bars, currency formatting, and toolbar tools for sorting, filtering, and column management.
+
+{% meta height:800 %}
 {% embed_file stacked-layout/overview/app.tsx preview %}
 {% embed_file stacked-layout/overview/main.tsx %}
 {% embed_file stacked-layout/overview/products.ts %}
@@ -24,7 +26,9 @@ The stacked layout mode of the Grid enables you to display data in a card-based 
 
 To enable the stacked layout mode, set the [`dataLayoutMode`](slug:api_grid_gridprops#toc-datalayoutmode) property of the Grid to `"stacked"`. This default configuration renders each field in a single column, stacking them vertically within each card.
 
-{% meta height:580 %}
+The following example demonstrates the minimum configuration for enabling stacked layout, where each row is rendered as a vertical card with field labels and values.
+
+{% meta height:630 %}
 {% embed_file stacked-layout/basic/app.tsx preview %}
 {% embed_file stacked-layout/basic/main.tsx %}
 {% embed_file stacked-layout/basic/data.ts %}
@@ -50,7 +54,9 @@ The example below uses fraction units (`fr`) to create a three-column layout whe
 
 You can dynamically switch between column and stacked layouts based on screen size for a responsive design. This allows you to show the traditional table layout on larger screens and the stacked layout on smaller devices. The layout switches automatically when the viewport size changes.
 
-{% meta height:520 %}
+The following example demonstrates how to toggle between stacked and column layouts dynamically based on the current viewport width.
+
+{% meta height:630 %}
 {% embed_file stacked-layout/responsive/app.tsx preview %}
 {% embed_file stacked-layout/responsive/main.tsx %}
 {% embed_file stacked-layout/responsive/data.ts %}
@@ -65,7 +71,9 @@ The stacked layout supports all editing modes of the Grid. The editing UI adapts
 
 In `Inline` editing mode, clicking **Edit** enters the entire row into edit mode, displaying all editable fields with their respective editors.
 
-{% meta height:720 %}
+The following example demonstrates inline editing in the stacked layout, where clicking **Edit** on a card places the full row into edit mode.
+
+{% meta height:1040 %}
 {% embed_file stacked-layout/editing-inline/app.tsx preview %}
 {% embed_file stacked-layout/editing-inline/main.tsx %}
 {% embed_file stacked-layout/editing-inline/data.ts %}
@@ -75,6 +83,8 @@ In `Inline` editing mode, clicking **Edit** enters the entire row into edit mode
 ### In-Cell Editing
 
 In `In-cell` editing mode, individual cells become editable when clicked, allowing users to edit one field at a time.
+
+The following example demonstrates in-cell editing in the stacked layout, where clicking a field value makes it editable in place.
 
 {% meta height:500 %}
 {% embed_file stacked-layout/editing-incell/app.tsx preview %}
@@ -87,6 +97,8 @@ In `In-cell` editing mode, individual cells become editable when clicked, allowi
 
 In `Dialog` editing mode, clicking a row opens a popup dialog containing the edit form.
 
+The following example demonstrates dialog editing in the stacked layout, where clicking a card opens a modal form with all editable fields.
+
 {% meta height:500 %}
 {% embed_file stacked-layout/editing-dialog/app.tsx preview %}
 {% embed_file stacked-layout/editing-dialog/main.tsx %}
@@ -98,7 +110,9 @@ In `Dialog` editing mode, clicking a row opens a popup dialog containing the edi
 
 The stacked layout is fully compatible with all Grid toolbar components. Sorting, filtering, and column management tools work seamlessly with the stacked layout.
 
-{% meta height:620 %}
+The following example demonstrates a stacked layout Grid with toolbar sorting, filtering, and column chooser tools applied to the card-based view.
+
+{% meta height:710 %}
 {% embed_file stacked-layout/toolbar-tools/app.tsx preview %}
 {% embed_file stacked-layout/toolbar-tools/main.tsx %}
 {% embed_file stacked-layout/toolbar-tools/products.ts %}
@@ -108,7 +122,9 @@ The stacked layout is fully compatible with all Grid toolbar components. Sorting
 
 The stacked layout supports data grouping, allowing you to organize items into collapsible categories. Group headers and footers adapt to the stacked format, with aggregate values displayed clearly within the card-based layout.
 
-{% meta height:610 %}
+The following example demonstrates grouping with detail rows in the stacked layout, where items are organized into collapsible group cards.
+
+{% meta height:700 %}
 {% embed_file stacked-layout/grouping-detail-row/app.tsx preview %}
 {% embed_file stacked-layout/grouping-detail-row/main.tsx %}
 {% embed_file stacked-layout/grouping-detail-row/data.ts %}

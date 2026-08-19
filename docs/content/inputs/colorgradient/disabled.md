@@ -12,8 +12,6 @@ By default, the ColorGradient is enabled.
 
 To disable user interaction with the component, set the [`disabled`]({% slug api_inputs_colorgradientprops %}#toc-disabled) property to `true`.
 
-
-
 {% meta height:450 %}
 {% embed_file colorgradient/disabled/func/app.tsx preview %}
 {% embed_file colorgradient/disabled/func/main.tsx %}

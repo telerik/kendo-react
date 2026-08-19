@@ -1,7 +1,7 @@
 ---
 title: Local Data Operations
-description: 'Get started with the KendoKendoReact Data Grid allowing you to sort, filter, or page local data by using the KendoReact Data Query component.'
-components: ["datagrid"]
+description: 'Get started with the KendoReact Grid allowing you to sort, filter, or page local data by using the KendoReact Data Query component.'
+components: ['grid']
 slug: localoperations_grid
 position: 10
 tier: free
@@ -9,7 +9,7 @@ tier: free
 
 # Local Data Operations
 
-The KendoKendoReact Data Grid enables you to page, filter, sort and group the data locally, or utilize its built-in data-processing mechanism:
+The KendoReact Grid enables you to page, filter, sort and group the data locally, or utilize its built-in data-processing mechanism:
 
 -   [Manual Data Operations](#manual-data-operations)
 -   [Auto-Processing the Data](#auto-processing-the-data)
@@ -69,11 +69,13 @@ When the data state from the `onDataStateChange` event or the initial state is s
 
 ## Auto-Processing the Data
 
-The KendoReact Data Grid provides a mechanism to enable built-in data-processing which takes care of the `filter`, `sort`, `page` and `group` operations internally. To enable this feature, set the [`autoProcessData`](slug:api_grid_gridprops#toc-autoprocessdata) property to `true`.
+The KendoReact Grid provides a mechanism to enable built-in data-processing which takes care of the `filter`, `sort`, `page` and `group` operations internally. To enable this feature, set the [`autoProcessData`](slug:api_grid_gridprops#toc-autoprocessdata) property to `true`.
 
 ```jsx
 <Grid data={products} autoProcessData={true} />
 ```
+
+The following example demonstrates how to enable `autoProcessData` for the Grid to automatically handle sorting, filtering, grouping, and paging without manual state management.
 
 {% meta height:480 %}
 {% embed_file data-operations-auto/app.tsx preview %}

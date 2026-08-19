@@ -12,7 +12,7 @@ The MultiViewCalendar allows the user to pre-define its initially rendered view 
 
 ## Active Views
 
-To define the first view that the MultiViewCalendar initially renders, use the [`defaultActiveView`]({% slug api_dateinputs_multiviewcalendarprops %}#toc-defaultactiveview) property. The [`ActiveView`]({% slug api_dateinputs_multiviewcalendarprops %}#toc-activeview) type defines the following possible view options:
+To define the first view that the MultiViewCalendar initially renders, use the [`defaultActiveView`]({% slug api_dateinputs_multiviewcalendarprops %}#toc-defaultactiveview) property. The [`ActiveView`]({% slug api_dateinputs_multiviewcalendarprops %}) type defines the following possible view options:
 
 -   `month`&mdash;Shows the days of the month.
 -   `year`&mdash;Shows the months of the year.

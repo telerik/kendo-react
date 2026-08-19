@@ -12,7 +12,24 @@ You can render a built-in Toolbar for the KendoReact TreeList component to let y
 
 ## Getting Started
 
-The following example demonstrates how to add a Toolbar to the TreeList, with controls for expanding and collapsing all Treelist items at once.
+To add a Toolbar to the TreeList, use the [`toolbar`](slug:api_treelist_treelistprops#toolbar) prop and pass a [`TreeListToolbar`](slug:api_treelist_treelisttoolbar) component as its value. Inside `TreeListToolbar`, you can render any content — buttons, inputs, or other controls.
+
+```tsx
+import { TreeList, TreeListToolbar } from '@progress/kendo-react-treelist';
+import { Button } from '@progress/kendo-react-buttons';
+
+<TreeList
+    toolbar={
+        <TreeListToolbar>
+            <Button onClick={expandAll}>Expand All</Button>
+            <Button onClick={collapseAll}>Collapse All</Button>
+        </TreeListToolbar>
+    }
+    ...
+/>
+```
+
+The following example demonstrates how to add a Toolbar to the TreeList, with **Expand All** and **Collapse All** buttons that toggle the expanded state of all rows at once.
 
 {% meta height:580 %}
 {% embed_file toolbar/app.tsx preview %}

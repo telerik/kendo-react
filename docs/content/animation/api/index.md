@@ -28,42 +28,6 @@ position: 1
 <span class="section-key">
 
 
-## Class
-
-
-</span>
-
-
-  <ul class="api-item-list">
-    <li class="api-item">
-        <a href="{% slug api_animation_animation %}">Animation</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_animation_expand %}">Expand</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_animation_fade %}">Fade</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_animation_push %}">Push</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_animation_reveal %}">Reveal</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_animation_slide %}">Slide</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_animation_zoom %}">Zoom</a>
-    </li>
-  </ul>
-</div>
-<div class="api-index-section">
-
-
-<span class="section-key">
-
-
 ## Component
 
 

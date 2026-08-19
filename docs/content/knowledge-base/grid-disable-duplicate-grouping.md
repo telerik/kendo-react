@@ -28,7 +28,7 @@ components: ["grid"]
 
 ## Description
 
-How can I disable duplicate grouping for the Data Grid?
+How can I disable duplicate grouping for the Grid?
 
 ## Solution
 
@@ -36,7 +36,7 @@ In the `onGroupChange` event handler, you can check if the newly added group exi
 
 This is an example demonstrating the implementation:
 
-{% meta height:680 %}
+{% meta height:700 %}
 {% embed_file grid/unique-groups/app.jsx preview %}
 {% embed_file grid/unique-groups/main.jsx %}
 {% endmeta %}

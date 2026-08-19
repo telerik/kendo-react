@@ -58,9 +58,10 @@ The Gauges components are part of the KendoReact library which provides native K
 
 The following example demonstrates the Arc, Linear, and Radial Gauges in action.
 
-{% meta height:470 %}
+{% meta height:740 %}
 {% embed_file overview/func/app.tsx preview %}
 {% embed_file overview/func/main.tsx %}
+{% embed_file overview/func/styles.css %}
 {% endmeta %}
 
 ## React Gauge Key Features

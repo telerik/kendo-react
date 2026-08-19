@@ -24,7 +24,7 @@ Additionally, you can modify or transform the data before passing it to [`setRes
 
 The following example demonstrates validating the AI response and displaying custom error messages for fields that could not be extracted from the clipboard content.
 
-<demo metaUrl="buttons/smartpaste/manual-validation/" height="520"></demo>
+<demo metaUrl="buttons/smartpaste/manual-validation/" height="760"></demo>
 
 After receiving the AI response, validate and optionally transform the data before populating the form:
 
@@ -64,7 +64,7 @@ Pre-validation improves user experience by providing immediate feedback and redu
 
 The following example validates that the clipboard contains sufficient content before calling the AI service. Use the "Clear Clipboard" button to test the empty clipboard scenario.
 
-<demo metaUrl="buttons/smartpaste/content-validation/" height="560"></demo>
+<demo metaUrl="buttons/smartpaste/content-validation/" height="800"></demo>
 
 Access the clipboard content through `e.requestData.content` and validate before proceeding:
 

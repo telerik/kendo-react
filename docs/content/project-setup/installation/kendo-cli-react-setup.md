@@ -8,8 +8,6 @@ position: 2
 category: setup
 level: 0
 tier: mixed
-tag: new
-release_tag: Q2 2026
 ---
 
 # Kendo CLI Options for React
@@ -63,6 +61,8 @@ Each command in the wizard prompts you through its options interactively:
 
 ### Example Session
 
+The following is an example of a session where a user creates a new KendoReact app, configures their license, and sets up MCP servers for Cursor:
+
 ```
 $ kendo
 
@@ -101,8 +101,6 @@ $ kendo
   ❯ Back to main menu
     Exit
 ```
-
-
 
 > All wizard operations are also available as direct CLI commands for scripting and CI. See the sections below for the full syntax reference.
 
@@ -169,6 +167,8 @@ Supported IDEs: `cursor`, `vscode`, `visualstudio`, `all`
 
 ### Configure All Products for All IDEs
 
+To configure MCP servers for all Kendo products across all supported IDEs in one command, run:
+
 ```sh
 kendo mcp all
 ```
@@ -214,6 +214,8 @@ MCP config files written per IDE:
 | Visual Studio      | `~/.mcp.json`                                              |
 
 ### MCP Command Synopsis
+
+To configure MCP servers for KendoReact, run:
 
 ```sh
 kendo mcp config react
@@ -363,6 +365,8 @@ After migration, review added code comments and run your app/tests.
 -   Validate behavior with a full test run after migration.
 
 ### Quick Migration Commands
+
+The following commands can be used for quick migrations without prompts:
 
 ```sh Guided migration
 kendo migrate

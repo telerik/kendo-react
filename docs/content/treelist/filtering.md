@@ -24,7 +24,7 @@ Each consecutive filter is added to the previous ones and reduces the subset of 
 
 By default, when filtering is enabled, the TreeList renders a filter row in its header. Based on the type of the filter component which is set in the `filter` prop of the columns, the filter row displays components in each column header where the user can filter string, numeric, boolean, or date inputs.
 
-{% meta height:580 %}
+{% meta height:690 %}
 {% embed_file filtering-basic/func/app.tsx preview %}
 {% embed_file filtering-basic/func/main.tsx %}
 {% endmeta %}
@@ -35,7 +35,7 @@ The [`filterCell`]({% slug api_treelist_treelistcolumnprops %}#toc-filtercell) p
 
 The following example demonstrates how to implement a filter by using the KendoReact DropDownList component.
 
-{% meta height:580 %}
+{% meta height:690 %}
 {% embed_file filtering-custom/func/app.tsx preview %}
 {% embed_file filtering-custom/func/main.tsx %}
 {% embed_file filtering-custom/func/dropDownFilter.tsx %}

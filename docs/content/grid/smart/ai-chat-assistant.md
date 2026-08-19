@@ -1,23 +1,23 @@
 ---
 title: AI Chat Assistant
-description: 'Learn how to implement an AI Chat Assistant for the KendoKendoReact Data Grid that enables natural language interactions to perform data operations through conversational commands.'
-components: ['datagrid']
+description: 'Learn how to implement an AI Chat Assistant for the KendoReact Grid that enables natural language interactions to perform data operations through conversational commands.'
+components: ['grid']
 slug: ai_chat_assistant
 position: 50
 tier: premium
 ---
 
-# KendoReact Data Grid AI Chat Assistant
+# KendoReact Grid AI Chat Assistant
 
-The KendoReact Data Grid can be enhanced with an AI-powered chat assistant that allows users to interact with Grid data using natural language commands.
+The KendoReact Grid can be enhanced with an AI-powered chat assistant that allows users to interact with Grid data using natural language commands.
 
-By integrating the [Chat](slug:overview_chat) component with the Grid's built-in AI features, you can create an intuitive conversational interface where users can perform all [supported Smart Grid operations](slug:smart_grid_toolbar_assistant#supported-operations) through simple text commands instead of navigating through multiple UI controls.
+By integrating the [Chat](slug:overview_chat) component with the Grid's built-in AI features, you can create an intuitive conversational interface where users can perform all [supported Smart Grid operations](slug:smart_grid#supported-operations) through simple text commands instead of navigating through multiple UI controls.
 
 > The demo in this article uses a Telerik-hosted AI service for demonstration purposes only. For production applications, you should implement your own AI service that understands your specific domain, data, and business requirements.
 
 The following example demonstrates how to implement an AI Chat Assistant that enables users to manage Grid data through natural language commands. Click the **AI Grid** button in the Grid toolbar to open the Chat panel and try inserting a prompt to interact with the data.
 
-<demo metaUrl="grid/smart/ai-chat-assistant/" height="670"></demo>
+<demo metaUrl="grid/smart/ai-chat-assistant/" height="780"></demo>
 
 ## Implementation Steps
 
@@ -152,8 +152,8 @@ To implement an AI Chat Assistant for your Grid, follow the steps below:
 
 ## Suggested Links
 
--   [React Data Grid AI Toolbar Assistant](slug:smart_grid_toolbar_assistant)
--   [AI Service Manual Integration](slug:smart_grid_toolbar_assistant#manual-integration)
+-   [React Grid AI Toolbar Assistant](slug:smart_grid_toolbar_assistant)
+-   [AI Service Manual Integration](slug:ai_assistant_tools_setup#manual-integration)
 -   [Smart Extensions](slug:smart_grid)
 -   [Chat Overview](slug:overview_chat)
 -   [API Index of the Grid](slug:api_grid)

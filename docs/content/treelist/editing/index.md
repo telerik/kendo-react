@@ -71,7 +71,7 @@ You can create, update, and delete the data records of the TreeList.
 
 The following example demonstrates how to set the TreeList in edit mode.
 
-{% meta height:580 %}
+{% meta height:690 %}
 {% embed_file editing-row-click/func/app.tsx preview %}
 {% embed_file editing-row-click/func/main.tsx %}
 {% endmeta %}

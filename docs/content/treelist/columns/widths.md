@@ -22,7 +22,7 @@ By default, the TreeList will equally divide its width between its columns and i
 
 To set the TreeList column widths in percentage, set the width values through the [`width`]({% slug api_treelist_treelistcolumnprops %}#toc-width) property of the `TreeListColumnProps`. The width of the `wrapper` and `table` HTML block elements of the TreeList defaults to `auto` and the browser will expand them according to the available space. If your project requires you to limit the TreeList width, set the wrapper width through the TreeList [`style`]({% slug api_treelist_treelistprops %}#toc-style) property.
 
-{% meta height:580 %}
+{% meta height:690 %}
 {% embed_file column-width-percentage/func/app.tsx preview %}
 {% embed_file column-width-percentage/func/main.tsx %}
 {% endmeta %}
@@ -31,7 +31,7 @@ To set the TreeList column widths in percentage, set the width values through th
 
 To set the TreeList column widths in pixels, set the width values through the [`width`]({% slug api_treelist_treelistcolumnprops %}#toc-width) property of the `TreeListColumnProps`, and the `wrapper` and `table` HTML widths which will be the sum of the widths of all columns.
 
-{% meta height:580 %}
+{% meta height:710 %}
 {% embed_file column-width-fixed/func/app.tsx preview %}
 {% embed_file column-width-fixed/func/main.tsx %}
 {% endmeta %}

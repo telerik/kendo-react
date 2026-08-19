@@ -53,7 +53,7 @@ The possible values are:
 -   `center`&mdash;Applies text-align: center
 -   `justify`&mdash;Applies text-align: justify
 
-{% meta height:550 %}
+{% meta height:680 %}
 {% embed_file typography/appearance/text-align/func/app.tsx preview %}
 {% embed_file typography/appearance/text-align/func/main.tsx %}
 {% endmeta %}

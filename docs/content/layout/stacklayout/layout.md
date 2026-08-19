@@ -24,7 +24,7 @@ To set the StackLayout orientation, use the [`orientation`]({% slug api_layout_s
 
 By default, `orientation` is set to `horizontal`.
 
-{% meta height:620 %}
+{% meta height:710 %}
 {% embed_file stacklayout/orientation/func/app.tsx preview %}
 {% embed_file stacklayout/orientation/func/main.tsx %}
 {% embed_file stacklayout/orientation/func/styles.css %}
@@ -36,7 +36,7 @@ To set the StackLayout gaps, use the [`gap`]({% slug api_layout_stacklayoutprops
 
 By default, the StackLayout does not apply a gap.
 
-{% meta height:620 %}
+{% meta height:710 %}
 {% embed_file stacklayout/gaps/func/app.tsx preview %}
 {% embed_file stacklayout/gaps/func/main.tsx %}
 {% embed_file stacklayout/gaps/func/styles.css %}
@@ -53,7 +53,7 @@ The available values are:
 -   `end`&mdash;Uses the end point of the container.
 -   (Default)`stretch`&mdash;Stretches the items to fill the width of the container.
 
-{% meta height:620 %}
+{% meta height:750 %}
 {% embed_file stacklayout/horizontalalign/func/app.tsx preview %}
 {% embed_file stacklayout/horizontalalign/func/main.tsx %}
 {% embed_file stacklayout/horizontalalign/func/styles.css %}
@@ -70,7 +70,7 @@ The available values are:
 -   `bottom`&mdash;Uses the bottom point of the container.
 -   (Default)`stretch`&mdash;Stretches the items to fill the height of the container.
 
-{% meta height:620 %}
+{% meta height:750 %}
 {% embed_file stacklayout/verticalalign/func/app.tsx preview %}
 {% embed_file stacklayout/verticalalign/func/main.tsx %}
 {% embed_file stacklayout/verticalalign/func/styles.css %}

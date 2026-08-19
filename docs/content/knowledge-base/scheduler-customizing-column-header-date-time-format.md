@@ -45,7 +45,7 @@ To change the date-time format of the column headers, use the `dateHeaderCell` a
 
 Here is an example:
 
-<demo metaUrl="knowledge-base/scheduler/customizing-column-header-format/" height="600"></demo>
+<demo metaUrl="knowledge-base/scheduler/customizing-column-header-format/" height="780"></demo>
 
 ### Explanation:
 - `CustomDateHeaderCell`: Formats the date using `Intl.DateTimeFormat` for a short weekday, month, and day.

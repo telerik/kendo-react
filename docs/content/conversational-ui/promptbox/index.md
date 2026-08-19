@@ -16,7 +16,7 @@ The PromptBox serves as a dedicated input area for composing and sending prompts
 
 The following example demonstrates the PromptBox component in action.
 
-<demo metaUrl="conversational-ui/promptbox/overview/" height="510"></demo>
+<demo metaUrl="conversational-ui/promptbox/overview/" height="620"></demo>
 
 ## Key Features
 

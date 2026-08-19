@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { ExternalDropZone, Upload } from '@progress/kendo-react-upload';
+import { ExternalDropZone, Upload, UploadHandle } from '@progress/kendo-react-upload';
 
-const uploadRef = React.createRef<Upload>();
+const uploadRef = React.createRef<UploadHandle>();
 
 const hint = <span>My custom hint</span>;
 const note = <span>My custom note</span>;

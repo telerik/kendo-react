@@ -1,119 +1,184 @@
 import * as React from 'react';
-import { ContextMenu, MenuItem, MenuSelectEvent } from '@progress/kendo-react-layout';
+import { flushSync } from 'react-dom';
+import { ContextMenu, MenuSelectEvent, MenuItemModel } from '@progress/kendo-react-layout';
+import { SvgIcon } from '@progress/kendo-react-common';
 import { Offset } from '@progress/kendo-react-popup';
 import {
-    alignCenterIcon,
-    alignLeftIcon,
-    alignRightIcon,
-    boldIcon,
-    clipboardIcon,
-    cloudIcon,
-    copyIcon,
-    cutIcon,
-    editToolsIcon,
-    italicIcon,
-    underlineIcon,
+    eyeIcon,
+    starIcon,
+    downloadIcon,
+    shareIcon,
+    rotateLeftIcon,
+    rotateRightIcon,
+    cropIcon,
+    trashIcon
 } from '@progress/kendo-svg-icons';
+import './styles.css';
+
+interface Photo {
+    id: number;
+    title: string;
+    location: string;
+    src: string;
+    rotation: number;
+    starred: boolean;
+}
+
+const initialPhotos: Photo[] = [
+    {
+        id: 1,
+        title: 'Alpine Lake',
+        location: 'Switzerland',
+        src: 'https://picsum.photos/id/29/400/300',
+        rotation: 0,
+        starred: false
+    },
+    {
+        id: 2,
+        title: 'Forest Path',
+        location: 'Norway',
+        src: 'https://picsum.photos/id/15/400/300',
+        rotation: 0,
+        starred: true
+    },
+    {
+        id: 3,
+        title: 'Coastal Cliffs',
+        location: 'Ireland',
+        src: 'https://picsum.photos/id/68/400/300',
+        rotation: 0,
+        starred: false
+    },
+    {
+        id: 4,
+        title: 'Desert Dunes',
+        location: 'Morocco',
+        src: 'https://picsum.photos/id/116/400/300',
+        rotation: 0,
+        starred: false
+    },
+    {
+        id: 5,
+        title: 'Spring Bloom',
+        location: 'Japan',
+        src: 'https://picsum.photos/id/143/400/300',
+        rotation: 0,
+        starred: false
+    },
+    {
+        id: 6,
+        title: 'Golden Hour',
+        location: 'Iceland',
+        src: 'https://picsum.photos/id/57/400/300',
+        rotation: 0,
+        starred: true
+    }
+];
 
 const App = () => {
-    const [show, setShow] = React.useState<boolean>(false);
-    const [content, setContent] = React.useState<string>('flex-start');
-    const offset = React.useRef<Offset>({ left: 0, top: 0 });
-    const [fontStyle, setFontStyle] = React.useState<string>('');
-    const [bold, setBold] = React.useState<string>('');
-    const [textDecoration, setTextDecoration] = React.useState<string>('');
+    const [photos, setPhotos] = React.useState<Photo[]>(initialPhotos);
+    const [show, setShow] = React.useState(false);
+    const [offset, setOffset] = React.useState<Offset>({ left: 0, top: 0 });
+    const [activeId, setActiveId] = React.useState<number | null>(null);
 
-    const handleContextMenu = (e: React.MouseEvent) => {
-        offset.current = { left: e.pageX, top: e.pageY };
+    const activePhoto = photos.find((p) => p.id === activeId) ?? null;
 
-        e.preventDefault();
+    const contextItems: MenuItemModel[] = activePhoto
+        ? [
+              { text: 'View Full Size', svgIcon: eyeIcon, data: { action: 'view' } },
+              { text: activePhoto.starred ? 'Remove Star' : 'Add Star', svgIcon: starIcon, data: { action: 'star' } },
+              { text: 'Download', svgIcon: downloadIcon, data: { action: 'download' } },
+              { text: 'Share', svgIcon: shareIcon, data: { action: 'share' } },
+              { separator: true },
+              { text: 'Rotate Left', svgIcon: rotateLeftIcon, data: { action: 'rotate-left' } },
+              { text: 'Rotate Right', svgIcon: rotateRightIcon, data: { action: 'rotate-right' } },
+              { text: 'Crop', svgIcon: cropIcon, data: { action: 'crop' } },
+              { separator: true },
+              { text: 'Delete Photo', svgIcon: trashIcon, cssClass: 'cm-danger', data: { action: 'delete' } }
+          ]
+        : [];
+
+    const handleContextMenu = (event: React.MouseEvent, id: number) => {
+        event.preventDefault();
+        flushSync(() => setShow(false));
+        setOffset({ left: event.pageX, top: event.pageY });
+        setActiveId(id);
         setShow(true);
-
     };
 
-    const handleOnSelect = (e: MenuSelectEvent) => {
-        if (e.item.data && e.item.data.action) {
-            switch (e.item.data.action) {
-                case "left":
-                    setContent("flex-start");
-                    break;
-                case "right":
-                    setContent("flex-end");
-                    break;
-                case "center":
-                    setContent("center");
-                    break;
-                case "italic":
-                    setFontStyle("italic");
-                    break;
-                case "underline":
-                    setTextDecoration("underline");
-                    break;
-                case "bold":
-                    setBold("bold");
-                    break;
-                default:
-            }
+    const handleSelect = (event: MenuSelectEvent) => {
+        setShow(false);
+        const action = event.item.data?.action as string;
+        if (!activeId) {
+            return;
         }
-        setShow(false);
-    };
 
-    const handleOnClose = () => {
-        setShow(false);
+        setPhotos((prev) =>
+            prev
+                .map((p): Photo | null => {
+                    if (p.id !== activeId) {
+                        return p;
+                    }
+                    if (action === 'star') {
+                        return { ...p, starred: !p.starred };
+                    }
+                    if (action === 'rotate-left') {
+                        return { ...p, rotation: p.rotation - 90 };
+                    }
+                    if (action === 'rotate-right') {
+                        return { ...p, rotation: p.rotation + 90 };
+                    }
+                    if (action === 'delete') {
+                        return null;
+                    }
+                    return p;
+                })
+                .filter((p): p is Photo => p !== null)
+        );
     };
 
     return (
-        <div style={{
-            display: 'flex',
-            justifyContent: `${content}`
-
-        }} onContextMenu={handleContextMenu}>
-            <div className="target"
-                style={{
-                    borderRadius: 5,
-                    height: 100,
-                    width: 400,
-                    backgroundColor: '#f6f6f6',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    boxShadow: '0 1px 5px 0 rgb(0 0 0 / 26%), 0 2px 2px 0 rgb(0 0 0 / 12%), 0 3px 1px -2px rgb(0 0 0 / 8%)'
-                }}
-            >
-                <p className="placeholder"
-                    style={{
-                        fontSize: 20,
-                        color: '#656565',
-                        fontStyle: `${fontStyle}`,
-                        fontWeight: `${bold}`,
-                        textDecoration: `${textDecoration}`
-                    }}
-
-                >Right-click to open Context menu</p>
+        <div className="gallery-shell">
+            <div className="gallery-titlebar">
+                <SvgIcon icon={eyeIcon} />
+                <span className="gallery-title">My Photos</span>
+                <span className="gallery-count">{photos.length} photos</span>
             </div>
+
+            <div className="gallery-grid">
+                {photos.map((photo) => (
+                    <div
+                        key={photo.id}
+                        className={`photo-card${activeId === photo.id ? ' photo-card--active' : ''}`}
+                        onContextMenu={(e) => handleContextMenu(e, photo.id)}
+                    >
+                        <div className="photo-img-wrap" style={{ transform: `rotate(${photo.rotation}deg)` }}>
+                            <img src={photo.src} alt={photo.title} className="photo-img" />
+                        </div>
+                        <div className="photo-overlay">
+                            <span className="photo-title">{photo.title}</span>
+                            <span className="photo-location">{photo.location}</span>
+                        </div>
+                        {photo.starred && (
+                            <span className="photo-star">
+                                <SvgIcon icon={starIcon} />
+                            </span>
+                        )}
+                    </div>
+                ))}
+            </div>
+
+            <p className="gallery-hint">Right-click any photo to open the context menu</p>
+
             <ContextMenu
-                vertical={true}
-                onSelect={handleOnSelect}
-                onClose={handleOnClose}
                 show={show}
-                offset={offset.current}
-            >
-                <MenuItem text="Cut" svgIcon={cutIcon} />
-                <MenuItem text="Copy" svgIcon={copyIcon} />
-                <MenuItem text="Paste" svgIcon={clipboardIcon} />
-                <MenuItem text="Alignment" svgIcon={alignLeftIcon}>
-                    <MenuItem text="Align Left" svgIcon={alignLeftIcon} data={{ action: 'left' }} />
-                    <MenuItem text="Align Center" svgIcon={alignCenterIcon} data={{ action: 'center' }} />
-                    <MenuItem text="Align Right" svgIcon={alignRightIcon} data={{ action: 'right' }} />
-                </MenuItem>
-                <MenuItem text="Style" svgIcon={editToolsIcon}>
-                    <MenuItem text="Bold" svgIcon={boldIcon} data={{ action: 'bold' }} />
-                    <MenuItem text="Italic" svgIcon={italicIcon} data={{ action: 'italic' }} />
-                    <MenuItem text="Underline" svgIcon={underlineIcon} data={{ action: 'underline' }} />
-                </MenuItem>
-                <MenuItem text="Miscellaneous" svgIcon={cloudIcon} disabled={true} />
-            </ContextMenu>
+                offset={offset}
+                items={contextItems}
+                onSelect={handleSelect}
+                onClose={() => setShow(false)}
+            />
         </div>
     );
 };
+
 export default App;

@@ -16,7 +16,7 @@ By default, the Spreadsheet displays all its built-in tools rendered in three di
 
 The following example demonstrates the basic configuration options for the Spreadsheet toolbar tools, which will be used by default if no [`tools`]({% slug api_spreadsheet_spreadsheettab %}) are set. You can also add `ToolbarSeparator` components to visually split the tools.
 
-{% meta height:740 %}
+{% meta height:860 %}
 {% embed_file toolbar/func/app.tsx preview %}
 {% embed_file toolbar/func/main.tsx %}
 {% embed_file toolbar/func/toolbar.ts %}
@@ -26,7 +26,7 @@ The following example demonstrates the basic configuration options for the Sprea
 
 The Spreadsheet allows you to define an entirely custom collection of tabs and tools. In the sample below, you will see how to add a custom `Alert JSON` tool to the Spreadsheet toolbar and pass it to the tools collection in a custom tab. You can also call any of the built-in tools functionality programmatically like demonstrated in the `Bold` button click handler below:
 
-{% meta height:770 %}
+{% meta height:880 %}
 {% embed_file custom-tools/func/app.tsx preview %}
 {% embed_file custom-tools/func/main.tsx %}
 {% endmeta %}

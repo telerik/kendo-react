@@ -2933,7 +2933,7 @@ string
 <td class="table-cell-comment">
 
 
-The data item field which contains the [`series.errorBars`](https://www.telerik.com/kendo-react-ui/components/charts/api/chartseriesitemprops#toc-errorbars) xAxis high value ([see example](https://www.telerik.com/kendo-react-ui/components/charts/chart/elements/error-bars#toc-scatter-charts)). The `xErrorHighField` option is supported when [`series.type`](https://www.telerik.com/kendo-react-ui/components/charts/api/chartseriesitemprops#toc-type) is set to `"scatter"``, `"scatterLine"`, or `"bubble"`.
+The data item field which contains the [`series.errorBars`](https://www.telerik.com/kendo-react-ui/components/charts/api/chartseriesitemprops#toc-errorbars) xAxis high value ([see example](https://www.telerik.com/kendo-react-ui/components/charts/chart/elements/error-bars#toc-scatter-charts)). The `xErrorHighField` option is supported when [`series.type`](https://www.telerik.com/kendo-react-ui/components/charts/api/chartseriesitemprops#toc-type) is set to `"scatter"`, `"scatterLine"`, or `"bubble"`.
 
 
 </td>

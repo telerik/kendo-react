@@ -18,7 +18,7 @@ The KendoReact Spreadsheet generates a variety of events that you can handle. Be
 
 The following example demonstrates basic Spreadsheet events.
 
-{% meta height:690 %}
+{% meta height:800 %}
 {% embed_file events/func/app.tsx preview %}
 {% embed_file events/func/main.tsx %}
 {% endmeta %}

@@ -1,7 +1,7 @@
 ---
 title: Locked Group Headers
-description: 'Get started with the KendoKendoReact Data Grid enabling you to visualize locked columns when the grouping is enabled.'
-components: ["datagrid"]
+description: 'Get started with the KendoReact Grid enabling you to visualize locked columns when the grouping is enabled.'
+components: ['grid']
 slug: groupinglockedcolumns_grid
 position: 30
 subject: Grouping feature of the Grid
@@ -9,7 +9,7 @@ subject: Grouping feature of the Grid
 
 # Locked Group Headers
 
-The KendoReact Data Grid allows you to lock the headers of the grouped data and freeze the component columns at the same time when needed.
+The KendoReact Grid allows you to lock the headers of the grouped data and freeze the component columns at the same time when needed.
 
 <CtaPanelOverview></CtaPanelOverview>
 
@@ -17,7 +17,7 @@ To lock the group headers of the Grid, use its [`lockGroups`]({% slug api_grid_g
 
 The following example shows how to lock the group headers and the first two columns of a Grid component.
 
-{% meta height:580 %}
+{% meta height:700 %}
 {% embed_file locked-group-headers/func/app.tsx preview %}
 {% embed_file locked-group-headers/func/main.tsx %}
 {% endmeta %}

@@ -1,14 +1,14 @@
 ---
 title: Loading Indicator
-description: 'Discover how to display a loading indicator overlay while the Kendo KendoReact Data Grid processes data.'
-components: ["datagrid"]
+description: 'Discover how to display a loading indicator overlay while the Kendo KendoReact Grid processes data.'
+components: ['grid']
 slug: loading_grid
 position: 10
 ---
 
-# KendoReact Data Grid Loading Indicator
+# KendoReact Grid Loading Indicator
 
-The Data Grid has a built in [KendoReact Loader](slug:overview_loader) component that displays a loading indicator over the grid's content while data is being fetched. This feature helps users understand that data is still being processed rather than assuming the grid is empty or unresponsive.
+The Grid has a built in [KendoReact Loader](slug:overview_loader) component that displays a loading indicator over the grid's content while data is being fetched. This feature helps users understand that data is still being processed rather than assuming the grid is empty or unresponsive.
 
 <div data-component="StartKendoReactFreeSection"></div>
 
@@ -25,7 +25,7 @@ The following example demonstrates how the built-in loader functions when data i
 
 ## Custom Loading Indicator
 
-For more flexibility, the KendoReact Data Grid also allows you to replace the default loader with a fully customizable loading indicator. This is particularly useful if you want to match the loading state with your application's design language or provide additional context while data is being retrieved.
+For more flexibility, the KendoReact Grid also allows you to replace the default loader with a fully customizable loading indicator. This is particularly useful if you want to match the loading state with your application's design language or provide additional context while data is being retrieved.
 
 To use a custom loading indicator, pass your custom component to the [`loader`](slug:api_grid_gridprops#loader) prop.
 

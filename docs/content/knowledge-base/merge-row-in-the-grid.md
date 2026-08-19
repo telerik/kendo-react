@@ -28,13 +28,13 @@ components: ["grid"]
 
 ## Description
 
-How can I merge rows in the KendoReact Data Grid?
+How can I merge rows in the KendoReact Grid?
 
 ## Solution
 
 Use a [`cells`]({% slug api_grid_gridprops %}#toc-cells) and add `rowSpan` to the cells that need it.
 
-{% meta height:760 %}
+{% meta height:880 %}
 {% embed_file grid/merge-rows/app.tsx preview %}
 {% embed_file grid/merge-rows/main.tsx %}
 {% endmeta %}

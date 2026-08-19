@@ -18,7 +18,7 @@ To customize the styles of the `SchedulerSlot`, we recommend using either [style
 
 The following example demonstrates customizing the `border` to a red one, based on the slot `isAllDay` property, in order to separate the `all-day` slots from the `time` slots in the `Week` view.
 
-{% meta height:700 %}
+{% meta height:780 %}
 {% embed_file slots/slot/style/func/app.tsx preview %}
 {% embed_file slots/slot/style/func/main.tsx %}
 {% endmeta %}

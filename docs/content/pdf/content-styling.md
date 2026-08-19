@@ -12,8 +12,8 @@ To change the appearance of the content for export, write CSS rules that apply o
 
 The available approaches are:
 
--   [Using the `.k-pdf-export` class](#toc-using-the-pdf-export-class)
--   [Using the `kendo-pdf-document` element](#toc-using-the-pdf-document-element)
+-   [Using the `.k-pdf-export` class](#using-the-pdf-export-class)
+-   [Using the `kendo-pdf-document` element](#using-the-pdf-document-element)
 
 ## Using the PDF Export Class
 
@@ -35,11 +35,11 @@ When you use this approach, you cannot add background images. The style in the f
 }
 ```
 
-For more information on how to add background images, refer to the section about [using the `<kendo-pdf-document>` element](#toc-using-the-pdf-document-element).
+For more information on how to add background images, refer to the section about [using the `<kendo-pdf-document>` element](#using-the-pdf-document-element).
 
 ## Using the PDF Document Element
 
-This approach works only if your project requests multi-page documents&mdash;that is, only when either the [`forcePageBreak`]({% slug api_pdf_pdfexportprops %}#toc-forcepagebreak) or the [`paperSize`]({% slug api_pdf_pdfexportprops %}#toc-pagesize) option is provided. To make it work in the cases when you need a single page, set a dummy value such as `forcePageBreak="-"`.
+This approach works only if your project requests multi-page documents&mdash;that is, only when either the [`forcePageBreak`]({% slug api_pdf_pdfexportprops %}#toc-forcepagebreak) or the [`paperSize`]({% slug api_pdf_pdfexportprops %}) option is provided. To make it work in the cases when you need a single page, set a dummy value such as `forcePageBreak="-"`.
 
 When you use the `<kendo-pdf-document>` element, the DOM renderer creates a clone of the element which does the page-breaking without destroying the original content. The DOM renderer places the cloned element inside a custom `<kendo-pdf-document>` element which is hidden from the view. As a result, you can apply custom styles under `kendo-pdf-document` by restricting the rules to the elements.
 

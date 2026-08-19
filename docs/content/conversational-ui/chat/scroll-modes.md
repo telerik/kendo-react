@@ -3,8 +3,6 @@ title: Scroll Modes
 description: 'Configure scrollable and endless scrolling modes for the KendoReact Chat component.'
 components: ['chat']
 slug: scroll_modes_chat
-tag: new
-release_tag: Q2 2026
 position: 75
 ---
 
@@ -28,7 +26,7 @@ You can also configure the [Auto-Scroll Threshold](#auto-scroll-threshold) to co
 
 The following example demonstrates endless scrolling with a local data source. Scroll up in the message list to load earlier messages in batches of 30.
 
-{% meta height:670 %}
+{% meta height:780 %}
 {% embed_file chat/scroll-modes/local/app.tsx preview %}
 {% embed_file chat/scroll-modes/local/main.tsx %}
 {% endmeta %}
@@ -49,7 +47,7 @@ Handle the [`onReferencedMessageClick`](slug:api_conversational-ui_chatprops#onr
 
 The following example demonstrates how to implement endless scrolling with a remote data source.
 
-{% meta height:670 %}
+{% meta height:780 %}
 {% embed_file chat/scroll-modes/remote/app.tsx preview %}
 {% embed_file chat/scroll-modes/remote/main.tsx %}
 {% embed_file chat/scroll-modes/remote/data-service.ts %}
@@ -63,7 +61,7 @@ If you need to switch back from endless scrolling, set the [`scrollMode`](slug:a
 
 The following example demonstrates the scrollable mode with all messages rendered at once.
 
-{% meta height:670 %}
+{% meta height:780 %}
 {% embed_file chat/scroll-modes/scrollable/app.tsx preview %}
 {% embed_file chat/scroll-modes/scrollable/main.tsx %}
 {% endmeta %}
@@ -78,7 +76,7 @@ By default, the threshold is set to `20%` of the visible message area height, bu
 
 The following example demonstrates the auto-scroll threshold feature. Adjust the threshold value using the input field and click any of the suggestions to see how it affects the scroll behavior when new messages arrive.
 
-{% meta height:740 %}
+{% meta height:850 %}
 {% embed_file chat/scroll-modes/autoscroll-threshold/app.tsx preview %}
 {% embed_file chat/scroll-modes/autoscroll-threshold/main.tsx %}
 {% embed_file chat/scroll-modes/autoscroll-threshold/messages.ts %}

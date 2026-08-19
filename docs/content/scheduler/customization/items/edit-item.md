@@ -27,7 +27,7 @@ To control the state of any of the state fields, provide the corresponding `valu
 
 The following example demonstrates controlling the `dragItem` state to disallow dragging outside of working hours. We will be hard-coding the `timezone` to the `Etc/UTC` standard.
 
-{% meta height:700 %}
+{% meta height:780 %}
 {% embed_file items/edit-item/controlled-state/func/app.tsx preview %}
 {% embed_file items/edit-item/controlled-state/func/main.tsx %}
 {% endmeta %}
@@ -170,7 +170,7 @@ Adding the handler to handle the `close` click and the `edit` click, as well as 
 
 Now lets pass the `CustomEditItem` to the `Scheduler` and see our example in action:
 
-{% meta height:700 %}
+{% meta height:780 %}
 {% embed_file items/edit-item/extending/func/app.tsx preview %}
 {% embed_file items/edit-item/extending/func/main.tsx %}
 {% endmeta %}

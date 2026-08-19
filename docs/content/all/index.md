@@ -17,7 +17,7 @@ The KendoReact All is a single package which provides access to multiple or all 
 
 The following example demonstrates how to use multiple KendoReact components by using the All single package.
 
-{% meta height:700 %}
+{% meta height:900 %}
 {% embed_file overview/func/app.tsx preview %}
 {% embed_file overview/func/main.tsx %}
 {% embed_file overview/func/products.json %}

@@ -25,6 +25,8 @@ To configure the data grouping in the DropDownList component you need to define 
 > 1. DropDownList doesn't internally group the data passed to it. To use the component in a grouping scenario, you need to use the `groupBy` method available in the KendoReact DataQuery package.
 > 2. Data that can't be grouped is not visualized in the component - the DropDownList internally filters the data items that doesn't have the field that is set as a `groupField`.
 
+The following example demonstrates how to enable data grouping in the DropDownList using the [`groupField`]({% slug api_dropdowns_dropdownlistprops %}#toc-groupfield) property.
+
 {% meta height:340 %}
 {% embed_file dropdownlist/grouping/app.tsx preview %}
 {% embed_file dropdownlist/grouping/main.tsx %}

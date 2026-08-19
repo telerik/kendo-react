@@ -13,7 +13,7 @@ The KendoReact Diagram can be exported to PDF, PNG image, or SVG using the `@pro
 
 The following example demonstrates exporting a Diagram to PDF, PNG, and SVG formats using the built-in export API.
 
-<demo metaUrl="diagram/export/basic/" height="550"></demo>
+<demo metaUrl="diagram/export/basic/" height="650"></demo>
 
 To export the KendoReact Diagram component to PDF, image, or SVG, you can use the Diagram's built-in exportVisual method along with the Drawing API. The following steps outline how to achieve this:
 

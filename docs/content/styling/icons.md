@@ -4,8 +4,6 @@ description: 'Check out the full list of the web font icons for the KendoReact c
 components: ['general']
 slug: icons
 position: 30
-tag: updated
-release_tag: Q2 2026
 ---
 
 # Icons

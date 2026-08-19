@@ -163,6 +163,56 @@ Sets the `dir` HTML attribute, which determines the text direction.
 <td class="table-cell-name">
 
 
+#### hideAfter?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+number
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+<code>
+
+
+5000
+
+
+</code>
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Specifies the time in milliseconds after which the Notification automatically closes.
+
+
+
+
+```jsx
+<Notification hideAfter={5000} onClose={(event) => console.log('closed')} />
+```
+
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### onClose?
 
 
@@ -189,7 +239,7 @@ Sets the `dir` HTML attribute, which determines the text direction.
 <td class="table-cell-comment">
 
 
-Fires when you click the **Close** button.
+Fires when you click the **Close** button or when the `hideAfter` timeout expires.
 
 ```jsx
 <Notification onClose={(event) => console.log('Notification closed', event)} />

@@ -12,7 +12,7 @@ The KendoReact Gantt provides a built-in function to convert flat data to a tree
 
 To covert the flat data to a tree, utilize the [`createDataTree`]({% slug api_gantt_createdatatree %}) function of the Gantt.
 
-{% meta height:580 %}
+{% meta height:680 %}
 {% embed_file flat-data/func/app.tsx preview %}
 {% embed_file flat-data/func/main.tsx %}
 {% endmeta %}

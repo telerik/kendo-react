@@ -1,0 +1,66 @@
+.order-dashboard {
+    padding: var(--kendo-spacing-5, 20px);
+    background: var(--kendo-color-app-surface);
+    min-height: 100%;
+    font-family: inherit;
+}
+
+.dashboard-header {
+    margin-bottom: var(--kendo-spacing-4, 16px);
+}
+
+.dashboard-header h2 {
+    font-size: 1.375rem;
+    font-weight: 600;
+    margin: 0 0 var(--kendo-spacing-1, 4px);
+    color: var(--kendo-color-on-app-surface);
+}
+
+.dashboard-header p {
+    color: var(--kendo-color-subtle);
+    margin: 0;
+    font-size: var(--kendo-font-size-sm, 0.875rem);
+}
+
+.filter-card {
+    background: var(--kendo-color-surface-alt);
+    border: 1px solid var(--kendo-color-border);
+    border-radius: var(--kendo-border-radius-lg, 8px);
+    padding: var(--kendo-spacing-4, 16px);
+    margin-bottom: var(--kendo-spacing-4, 16px);
+}
+
+.filter-card-label {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--kendo-color-subtle);
+    margin-bottom: var(--kendo-spacing-2, 8px);
+}
+
+.results-summary {
+    font-size: var(--kendo-font-size-sm, 0.875rem);
+    color: var(--kendo-color-subtle);
+    margin-bottom: var(--kendo-spacing-2, 8px);
+}
+
+.results-summary strong {
+    color: var(--kendo-color-on-app-surface);
+    font-weight: 600;
+}
+
+.grid-card {
+    background: var(--kendo-color-surface-alt);
+    border: 1px solid var(--kendo-color-border);
+    border-radius: var(--kendo-border-radius-lg, 8px);
+    overflow: hidden;
+    margin-bottom: var(--kendo-spacing-3, 12px);
+}
+
+.pager-card {
+    background: var(--kendo-color-surface-alt);
+    border: 1px solid var(--kendo-color-border);
+    border-radius: var(--kendo-border-radius-lg, 8px);
+    padding: var(--kendo-spacing-1, 4px) var(--kendo-spacing-3, 12px);
+}

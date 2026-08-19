@@ -12,7 +12,7 @@ The FlatColorPicker enables you to configure its views through the [`views`]({% 
 
 The following example demonstrates both FlatColorPicker views in action.
 
-{% meta height:820 %}
+{% meta height:1010 %}
 {% embed_file flatcolorpicker/views/app.tsx preview %}
 {% embed_file flatcolorpicker/views/main.tsx %}
 {% endmeta %}

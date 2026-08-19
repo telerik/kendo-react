@@ -14,7 +14,7 @@ The KendoReact DateRangePicker combines the KendoReact DateInput and MultiViewCa
 
 The following example demonstrates the DateRangePicker in action.
 
-{% meta height:560 %}
+{% meta height:680 %}
 {% embed_file daterangepicker/overview/basic/func/app.tsx preview %}
 {% embed_file daterangepicker/overview/basic/func/main.tsx %}
 {% embed_file daterangepicker/overview/basic/func/styles.css %}

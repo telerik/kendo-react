@@ -1,5 +1,5 @@
 ---
-title: Separating GridColumns into a Separate Component in KendoReact Data Grid
+title: Separating GridColumns into a Separate Component in KendoReact Grid
 description: Learn how to store GridColumns separately and use them in KendoReact Grid using arrays instead of separate components.
 type: how-to
 page_title: Using Separate Components for GridColumns in KendoReact Grid
@@ -32,7 +32,7 @@ How can I make the implementation of the KendoReact Grid more generic by moving 
 
 This knowledge base article also answers the following questions:
 
--   How do I reuse GridColumns in KendoReact Data Grid?
+-   How do I reuse GridColumns in KendoReact Grid?
 -   How do I create a separate component for GridColumns in KendoReact Grid?
 -   Why are GridColumns not rendering when moved into a separate component?
 

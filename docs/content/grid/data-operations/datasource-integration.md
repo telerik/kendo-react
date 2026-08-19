@@ -1,17 +1,19 @@
 ---
 title: DataSource Integration
-description: 'Learn how to integrate and manage data changes using KendoReact DataSource with the KendoReact Data Grid.'
-components: ["datagrid"]
+description: 'Learn how to integrate and manage data changes using KendoReact DataSource with the KendoReact Grid.'
+components: ['grid']
 slug: datasource_integration_grid
 position: 35
 tier: premium
 ---
 
-# Integration of KendoReact Data Grid and DataSource
+# Integration of KendoReact Grid and DataSource
 
-The [KendoReact DataSource](slug://overview_datasource) simplifies data management in React applications by providing built-in support for change tracking, CRUD operations, and server synchronization. When integrated with the KendoReact Data Grid, it enables seamless communication between the UI and the backend, making it easier to build robust and scalable data-driven applications.
+The [KendoReact DataSource](slug://overview_datasource) simplifies data management in React applications by providing built-in support for change tracking, CRUD operations, and server synchronization. When integrated with the KendoReact Grid, it enables seamless communication between the UI and the backend, making it easier to build robust and scalable data-driven applications.
 
 <CtaPanelOverview></CtaPanelOverview>
+
+The following example demonstrates how to bind the Grid to a `useDataSource` hook with initial sorting and filtering, enabling automatic data processing through the DataSource.
 
 {% meta height:470 %}
 {% embed_file datasource/basic/app.tsx preview %}
@@ -20,7 +22,7 @@ The [KendoReact DataSource](slug://overview_datasource) simplifies data manageme
 
 ## Setting Up the DataSource
 
-To integrate the DataSource with the KendoKendoReact Data Grid, start by selecting and configuring the appropriate DataSource hook based on your application's requirements. The available hooks include:
+To integrate the DataSource with the KendoReact Grid, start by selecting and configuring the appropriate DataSource hook based on your application's requirements. The available hooks include:
 
 -   [`useDataSource`](slug://api_data-tools_usedatasource)&mdash;A basic hook for managing in-memory data with [built-in support for sorting, filtering, grouping, and paging](slug://state_management_datasource).
 -   [`useRemoteDataSource`](slug://api_data-tools_useremotedatasource)&mdash;An advanced hook designed for [server-side data operations](slug://remote_data_datasource), enabling seamless integration with remote data services.
@@ -48,9 +50,11 @@ const result = useDataSource({
 
 ## Binding the DataSource to the Grid
 
-Once the DataSource is configured, it can be bound to the KendoKendoReact Data Grid. The Grid will use the DataSource to fetch and display data, as well as to handle [user interactions such as sorting, filtering, and paging](slug://data_operations_datasource).
+Once the DataSource is configured, it can be bound to the KendoReact Grid. The Grid will use the DataSource to fetch and display data, as well as to handle [user interactions such as sorting, filtering, and paging](slug://data_operations_datasource).
 
-{% meta height:690 %}
+The following example demonstrates how to bind a Grid to a `useDataSource` hook and enable sorting, filtering, grouping, and paging through the DataSource's built-in data state management.
+
+{% meta height:700 %}
 {% embed_file datasource/data-operations/app.tsx preview %}
 {% embed_file datasource/data-operations/main.tsx %}
 {% endmeta %}
@@ -90,6 +94,8 @@ When integrating the Grid with the DataSource you can perform CRUD operations pr
 
 ### Creating a New Item
 
+To add a new item to the dataset, use the `create` method of the DataSource:
+
 ```jsx
 dataSource.create({
     data: { name: 'New Product', price: 99.99 }
@@ -97,6 +103,8 @@ dataSource.create({
 ```
 
 ### Updating an Item
+
+To update an existing item in the dataset, use the `update` method of the DataSource:
 
 ```jsx
 dataSource.update({
@@ -106,6 +114,8 @@ dataSource.update({
 ```
 
 ### Deleting an Item
+
+To remove an item from the dataset, use the `delete` method of the DataSource:
 
 ```jsx
 dataSource.delete({

@@ -22,7 +22,7 @@ The information that must persist when you pass an array to [`SheetDescriptor`](
 
 In the following sample, you can see a sample JSON data loaded in the Spreadsheet (the `products.ts` file) and examine the exact format expected by the component:
 
-{% meta height:740 %}
+{% meta height:860 %}
 {% embed_file bind-to-json/func/app.tsx preview %}
 {% embed_file bind-to-json/func/main.tsx %}
 {% endmeta %}
@@ -33,7 +33,7 @@ The Spreadsheet also exposes [`fromJSON`]({% slug api_spreadsheet_spreadsheethan
 
 The [`saveJSON`]({% slug api_spreadsheet_spreadsheethandle %}#toc-savejson) method serializes the workbook. This method does not return the JSON, but a `Promise` object which will yield the JSON data when it is available. The method is functionally similar to `toJSON`, but it can also save the embedded images.
 
-{% meta height:800 %}
+{% meta height:880 %}
 {% embed_file from-to-json/func/app.tsx preview %}
 {% embed_file from-to-json/func/main.tsx %}
 {% endmeta %}
@@ -46,7 +46,7 @@ The output files are in the OOXML Spreadsheet format with an `.xlsx` extension. 
 
 The Spreadsheet allows you to export the current document to Excel both through its toolbar and by calling its [`saveAsExcel`]({% slug api_spreadsheet_spreadsheethandle %}#toc-saveasexcel) method for initiating the export programmatically. The exported file uses the name set to the `excel` [`SpreadsheetOption`]({% slug api_spreadsheet_spreadsheetoptions %}).
 
-{% meta height:740 %}
+{% meta height:810 %}
 {% embed_file export-to-excel/func/app.tsx preview %}
 {% embed_file export-to-excel/func/main.tsx %}
 {% endmeta %}

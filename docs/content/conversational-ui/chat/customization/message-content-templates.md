@@ -14,7 +14,7 @@ The Chat component lets you customize the message content area while preserving 
 
 The following demo shows how to customize message content with text highlighting, icon rendering, and markdown processing while maintaining the Chat's native bubble structure and functionality.
 
-{% meta height:830 %}
+{% meta height:940 %}
 {% embed_file chat/customization/message-content-templates/app.tsx preview %}
 {% embed_file chat/customization/message-content-templates/main.tsx %}
 {% embed_file chat/customization/message-content-templates/templates.tsx %}

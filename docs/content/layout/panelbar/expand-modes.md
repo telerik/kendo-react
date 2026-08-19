@@ -19,7 +19,7 @@ To configure the expand modes, use the [`expandMode`]({% slug api_layout_panelba
 
 
 
-{% meta height:880 %}
+{% meta height:920 %}
 {% embed_file panelbar/expand/func/app.tsx preview %}
 {% embed_file panelbar/expand/func/main.tsx %}
 {% embed_file panelbar/expand/func/styles.css %}

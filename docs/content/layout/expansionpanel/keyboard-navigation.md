@@ -28,7 +28,7 @@ The ExpansionPanel is a single-tab-stop component. By default only its header is
 
 
 
-{% meta height:610 %}
+{% meta height:890 %}
 {% embed_file expansionpanel/overview/func/app.tsx preview %}
 {% embed_file expansionpanel/overview/func/main.tsx %}
 {% embed_file expansionpanel/overview/func/styles.css %}

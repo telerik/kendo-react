@@ -127,6 +127,24 @@ The Charts support a wide range of series types.
 <Row>
   <Column count={[24,24,24,6]}>
     <Component>
+      <ComponentTitle>Combination</ComponentTitle>
+      <ComponentDescription>Combination charts let you visualize multiple related metrics in a single chart by mixing series types such as columns, bars, lines, and areas.</ComponentDescription>
+    </Component>
+  </Column>
+  <Column count={[24,6]}>
+    <Component className="card-icon" href="{% slug combination_seriestypes_charts %}">
+       <svg id="combination" viewBox="0 0 70 70">
+                <path d="M12,60H9V29h3ZM24,36H21V60h3ZM36,20H33V60h3ZM48,33H45V60h3ZM60,21H57V60h3ZM6,36H3V60H6Zm12-3H15V60h3Zm12-4H27V60h3Zm12-3H39V60h3Zm12,2H51V60h3ZM66,15H63V60h3Z"/>
+                <path d="M66,10a4,4,0,0,0-4,4,4,4,0,0,0,.62,2.12l-6.71,8.39a3.9,3.9,0,0,0-4.54.5l-6.62-5.67A4,4,0,0,0,45,18a4,4,0,1,0-7,2.67L30.75,33.42a3.88,3.88,0,0,0-3.82.18l-7.14-6.35A4,4,0,0,0,20,26a4,4,0,1,0-7.36,2.16L5.87,37.48A4,4,0,0,0,4,37a4,4,0,1,0,3.35,1.84l6.78-9.32a3.9,3.9,0,0,0,4.55-.57L25.54,35A4,4,0,0,0,25,37a4,4,0,1,0,7.3-2.26l7.41-13A3.85,3.85,0,0,0,43.62,21l6.62,5.67A4,4,0,0,0,50,28a4,4,0,0,0,8,0,4,4,0,0,0-.62-2.12l6.71-8.39A4,4,0,0,0,66,18a4,4,0,0,0,0-8Z"/>
+            </svg>
+      <ComponentTitle>Combination</ComponentTitle>
+    </Component>
+  </Column>
+</Row>
+
+<Row>
+  <Column count={[24,24,24,6]}>
+    <Component>
       <ComponentTitle>Circular</ComponentTitle>
       <ComponentDescription>Circular charts are divided in slices representing statistical data, which proportionally corresponds to the quantity input of each slice. Circular charts are widely used in the business world and the mass media.</ComponentDescription>
     </Component>

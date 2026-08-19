@@ -19,11 +19,11 @@ The `sort` property is a JavaScript array of [SortDescriptor]({% slug api_kendo-
 
 ## Configuration
 
-To set an initial `sort`, pass the [`defaultSort`]({% slug api_pivotgrid_pivotolapserviceargs %}#sort) property to the [`usePivotOLAPService`]({% slug api_pivotgrid_usepivotolapservice %}) hook or the [`PivotOLAPService`]({% slug api_pivotgrid_pivotolapservice %}) higher-order component.
+To set an initial `sort`, pass the [`defaultSort`]({% slug api_pivotgrid_pivotolapserviceargs %}) property to the [`usePivotOLAPService`]({% slug api_pivotgrid_usepivotolapservice %}) hook or the [`PivotOLAPService`]({% slug api_pivotgrid_pivotolapservice %}) higher-order component.
 
 The following example demonstrates the basic configuration of the default sorting.
 
-{% meta height:770 %}
+{% meta height:880 %}
 {% embed_file sort/configuration/func/app.tsx preview %}
 {% embed_file sort/configuration/func/main.tsx %}
 {% embed_file sort/configuration/func/wide-column.tsx %}

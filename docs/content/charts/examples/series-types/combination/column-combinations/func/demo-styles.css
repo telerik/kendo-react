@@ -1,0 +1,10 @@
+.charts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--kendo-spacing-4, 16px);
+}
+
+.charts-grid .k-chart {
+    height: 300px;
+    display: block;
+}

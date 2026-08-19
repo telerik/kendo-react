@@ -12,7 +12,7 @@ The Chat allows you to customize the header area through the [`headerTemplate`](
 
 To set a custom header template, create a React component and assign it to the `headerTemplate` property of the Chat component.
 
-{% meta height:830 %}
+{% meta height:940 %}
 {% embed_file chat/customization/header-templates/app.tsx preview %}
 {% embed_file chat/customization/header-templates/main.tsx %}
 {% embed_file chat/customization/header-templates/templates.tsx %}

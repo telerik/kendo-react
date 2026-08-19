@@ -92,6 +92,9 @@ position: 1
     <li class="api-item">
         <a href="{% slug api_excel-export_excelexportgroupheader %}">ExcelExportGroupHeader</a>
     </li>
+    <li class="api-item">
+        <a href="{% slug api_excel-export_kendoooxml %}">KendoOoxml</a>
+    </li>
   </ul>
 </div>
 <div class="api-index-section">
@@ -108,13 +111,7 @@ position: 1
 
   <ul class="api-item-list">
     <li class="api-item">
-        <a href="{% slug api_excel-export_excelexportcolumngroup %}">ExcelExportColumnGroup</a>
-    </li>
-    <li class="api-item">
         <a href="{% slug api_excel-export_excelexportexportevent %}">ExcelExportExportEvent</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_excel-export_kendoooxml %}">KendoOoxml</a>
     </li>
   </ul>
 </div>

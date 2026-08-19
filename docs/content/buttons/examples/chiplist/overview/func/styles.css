@@ -1,0 +1,10 @@
+.meals {
+    margin-left: 5px;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+}

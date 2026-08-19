@@ -12,7 +12,7 @@ The Chat component allows you to customize the empty state that appears when the
 
 To set a custom template when the Chat is empty, create a React component and assign it to the `noDataTemplate` property of the Chat component. This template is displayed when the messages array is empty, providing an opportunity to guide users, establish brand identity, or offer helpful actions to start the conversation.
 
-{% meta height:870 %}
+{% meta height:990 %}
 {% embed_file chat/customization/empty-chat-templates/app.tsx preview %}
 {% embed_file chat/customization/empty-chat-templates/main.tsx %}
 {% embed_file chat/customization/empty-chat-templates/templates.tsx %}

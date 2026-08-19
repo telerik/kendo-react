@@ -38,7 +38,7 @@ By default the GridColumnMenuCheckboxFilter will use "eq" operator. To change th
 
 Following is an example demonstrating this approach:
 
-{% meta height:520 %}
+{% meta height:760 %}
 {% embed_file grid/grid-columnmenucheckboxfilter-with-contains/app.jsx preview %}
 {% embed_file grid/grid-columnmenucheckboxfilter-with-contains/main.jsx %}
 {% embed_file grid/grid-columnmenucheckboxfilter-with-contains/columnMenu.jsx %}

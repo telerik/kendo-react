@@ -33,7 +33,7 @@ How can I export multiple KendoReact Grids (tables) upon a single click action?
 
 Set the second Grid sheet as the second sheet of the first document and export only the first Grid.
 
-{% meta height:760 %}
+{% meta height:1160 %}
 {% embed_file grid/multiple-grid-export-excel/app.tsx preview %}
 {% embed_file grid/multiple-grid-export-excel/main.tsx %}
 {% endmeta %}

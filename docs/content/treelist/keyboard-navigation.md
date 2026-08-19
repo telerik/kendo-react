@@ -35,7 +35,7 @@ The Tree Grid is a single tab stop component. Upon focusing the Tree Grid, the i
 
 
  - Roving TabIndex components Practice for managing the focus. Meaning that going through the cells will update the tabindex of the cell.
- - Active descendant - keeping the focus always on the Data Grid and using the `aria-activedescendant` on the Tree Grid element which points to the id of the currently focused cell.
+ - Active descendant - keeping the focus always on the Grid and using the `aria-activedescendant` on the Tree Grid element which points to the id of the currently focused cell.
 
 
 If a cell contains only one focusable element that does not itself require arrow keys for its inner navigation - focus goes to that element instead of its parent `<td>`.
@@ -61,7 +61,7 @@ The TreeList implements the same keyboard shortcuts as the Grid component. In ad
 
 
 
-{% meta height:580 %}
+{% meta height:690 %}
 {% embed_file keyboard-navigation/func/app.tsx preview %}
 {% embed_file keyboard-navigation/func/main.tsx %}
 {% endmeta %}

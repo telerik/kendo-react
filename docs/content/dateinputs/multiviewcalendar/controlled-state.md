@@ -12,9 +12,9 @@ By default, the MultiViewCalendar is in an uncontrolled state.
 
 The MultiViewCalendar provides options for:
 
--   [Setting default values for the uncontrolled state](#toc-setting-default-values)
--   [Controlling the state](#toc-controlling-the-state)
--   [Dynamically changing the selected value](#toc-dynamically-chaning-the-value)
+-   [Setting default values for the uncontrolled state](#setting-default-values)
+-   [Controlling the state](#controlling-the-state)
+-   [Dynamically changing the selected value](#dynamically-changing-the-value)
 
 ## Setting Default Values
 

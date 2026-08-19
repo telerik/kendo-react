@@ -14,7 +14,7 @@ This guide provides essential information about using the KendoReact PDF Generat
 
 After completing this guide, you will be able to reproduce the following example.
 
-{% meta height:510 %}
+{% meta height:620 %}
 {% embed_file get-started/func/app.tsx preview %}
 {% embed_file get-started/func/main.tsx %}
 {% embed_file get-started/func/products.json %}
@@ -22,15 +22,7 @@ After completing this guide, you will be able to reproduce the following example
 
 ## Before You Begin
 
-```sh
-npm create vite@latest my-app -- --template react
-```
-
-This guide requires that you have **basic knowledge of React and TypeScript**, and that you have already created [**a blank React project**](slug://getting_started).
-
-> tip You can speed up the development of your KendoReact application with the [Kendo UI Template Wizard for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=KendoUI.kendotemplatewizard).
-
-## Install the Component
+To follow the steps in this guide, you need to have a React project set up. If you don't have one, you can create a new React application using Vite by running the following command in your terminal:
 
 ```sh
 npm create vite@latest my-app -- --template react
@@ -41,6 +33,20 @@ This guide requires that you have **basic knowledge of React and TypeScript**, a
 > tip You can speed up the development of your KendoReact application with the [Kendo UI Template Wizard for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=KendoUI.kendotemplatewizard).
 
 ## Install the Component
+
+To install the PDF Generator package, run the following command in the root folder of your React project:
+
+```sh
+npm i @progress/kendo-react-pdf
+```
+
+This guide requires that you have **basic knowledge of React and TypeScript**, and that you have already created [**a blank React project**](slug://getting_started).
+
+> tip You can speed up the development of your KendoReact application with the [Kendo UI Template Wizard for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=KendoUI.kendotemplatewizard).
+
+## Install the Component
+
+To install the PDF Generator package, run the following command in the root folder of your React project:
 
 ```sh
 npm i @progress/kendo-react-pdf

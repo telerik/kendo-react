@@ -21,7 +21,7 @@ The BottomNavigation provides the following options for setting the position mod
 
 > When the BottomNavigation has `positionMode={'fixed'}`, there is no reserved space for the component with regard to the other page content. This can cause parts of the page to be invisible behind the BottomNavigation. In this case, either apply bottom padding to the page content or set a `sticky` position mode.
 
-{% meta height:600 %}
+{% meta height:670 %}
 {% embed_file bottomnavigation/position-mode/func/app.tsx preview %}
 {% embed_file bottomnavigation/position-mode/func/main.tsx %}
 {% endmeta %}

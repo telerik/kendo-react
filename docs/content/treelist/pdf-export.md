@@ -34,7 +34,7 @@ To enable the PDF export:
 
 The following example demonstrates the basic implementation of the PDF export functionality of the TreeList.
 
-{% meta height:590 %}
+{% meta height:690 %}
 {% embed_file pdf/basic/func/app.tsx preview %}
 {% embed_file pdf/basic/func/main.tsx %}
 {% endmeta %}
@@ -61,7 +61,7 @@ To export specific data, pass the data to the [`save`]({% slug api_pdf_treelistp
 
 The TreeListPDFExport provides the ability to add or hide some of the columns in the exported PDF file. This is done by passing the columns that have to be exported to the [`save`]({% slug api_pdf_treelistpdfexport %}#toc-save) function.
 
-{% meta height:590 %}
+{% meta height:690 %}
 {% embed_file pdf/columns-modification/func/app.tsx preview %}
 {% embed_file pdf/columns-modification/func/main.tsx %}
 {% endmeta %}

@@ -37,7 +37,7 @@ For achieving the desired result we need to ensure that all items grouped by fie
 
 This is an example showcasing this approach:
 
-{% meta height:520 %}
+{% meta height:700 %}
 {% embed_file grid/grid-show-different-field-in-group/app.jsx preview %}
 {% embed_file grid/grid-show-different-field-in-group/main.jsx %}
 {% embed_file grid/grid-show-different-field-in-group/products.json %}

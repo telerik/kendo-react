@@ -25,6 +25,42 @@ The settings of the ColorPalette that is nested inside the popup of the ColorPic
 <td class="table-cell-name">
 
 
+#### ariaLabel?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+string
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Sets the `aria-label` attribute of the color palette grid.
+Use this to provide an accessible name when the palette is embedded inside another component.
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### columns?
 
 

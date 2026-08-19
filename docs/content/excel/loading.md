@@ -16,7 +16,7 @@ To implement Loading for the Excel Export:
 
 > The generate file is large. This could take some time.
 
-{% meta height:600 %}
+{% meta height:720 %}
 {% embed_file loading/func/app.tsx preview %}
 {% embed_file loading/func/main.tsx %}
 {% endmeta %}

@@ -9,6 +9,8 @@ slug: api_treeview_treeviewdragclue
 # TreeViewDragClue
 Represents the KendoReact TreeViewDragClue component which renders a clue when an item is dragged.
 
+A [Functional Component](https://react.dev/reference/react/Component).
+
 ```jsx
 const App = () => {
     const dragClueRef = React.useRef(null);
@@ -115,7 +117,7 @@ const App = () => {
 <code>
 
 
-Readonly&lt;[TreeViewDragClueProps]({% slug api_treeview_treeviewdragclueprops %})&gt;
+[TreeViewDragClueProps]({% slug api_treeview_treeviewdragclueprops %}) [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with RefAttributes&lt;[TreeViewDragClueHandle]({% slug api_treeview_treeviewdragcluehandle %})&gt;
 
 
 </code>
@@ -136,193 +138,6 @@ The props of the TreeViewDragClue component.
 
 </td>
 </tr>
-</tbody>
-</table>
-
-
-
-## Methods
-
-<table class="api-table api-table-methods">
-<thead class="api-table-methods-head">
-<tr>
-<th>
-
-
-#### hide
-
-
-</th>
-</tr>
-</thead>
-<tbody class="api-table-body">
-<tr>
-<td>
-
-
-Hides the TreeViewDragClue component.
-
-
-</td>
-</tr>
-
-</tbody>
-</table>
-
-<table class="api-table api-table-methods">
-<thead class="api-table-methods-head">
-<tr>
-<th>
-
-
-#### show
-
-
-</th>
-</tr>
-</thead>
-<tbody class="api-table-body">
-<tr>
-<td>
-
-
-Displays the TreeViewDragClue component.
-
-
-</td>
-</tr>
-<tr class="nested-table">
-<td>
-<table class="api-table api-table-parameters">
-<thead class="api-table-parameters-head">
-<tr>
-<th class="th-name">Parameters</th>
-<th class="th-type"></th>
-<th class="th-desc"></th>
-</tr>
-</thead>
-<tbody class="api-table-body">
-<tr>
-<td>
-
-
-top
-
-
-</td>
-<td type>
-
-
-<code>
-
-
-number
-
-
-</code>
-
-
-</td>
-<td>
-
-
-The `top` CSS position of the component.
-
-
-</td>
-</tr>
-<tr>
-<td>
-
-
-left
-
-
-</td>
-<td type>
-
-
-<code>
-
-
-number
-
-
-</code>
-
-
-</td>
-<td>
-
-
-The `left` CSS position of the component.
-
-
-</td>
-</tr>
-<tr>
-<td>
-
-
-text
-
-
-</td>
-<td type>
-
-
-<code>
-
-
-string
-
-
-</code>
-
-
-</td>
-<td>
-
-
-The text of the component.
-
-
-</td>
-</tr>
-<tr>
-<td>
-
-
-operationClassName
-
-
-</td>
-<td type>
-
-
-<code>
-
-
-string
-
-
-</code>
-
-
-</td>
-<td>
-
-
-The CSS class name which is related to the specific drop operation.
-
-
-</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-
 </tbody>
 </table>
 

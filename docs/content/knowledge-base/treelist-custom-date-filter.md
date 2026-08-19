@@ -35,7 +35,7 @@ How can I create a custom date range filter as a 'From' and 'To' filter?
 A custom column menu should be created through which we set the [`filterContent`]({% slug api_data-tools_columnmenuprops %}#toc-filtercontent) property to the custom filter we want to create. In the custom filter we render a DatePicker, whose onChange event calls the onColumnMenuFilterChange event, which sets the state of the filter and updates the TreeList accordingly.
 We set the default operators through the [`initialFilter`]({% slug api_data-tools_columnmenuprops %}#toc-initialfilter) property to match those of the filter we want to create, in this case greater than and equal to ("gte") and less than and equal to ("lte").
 
-{% meta height:600 %}
+{% meta height:770 %}
 {% embed_file treelist/custom-columnmenu-date-filter/app.tsx preview %}
 {% embed_file treelist/custom-columnmenu-date-filter/main.tsx %}
 {% embed_file treelist/custom-columnmenu-date-filter/dateColumnMenu.tsx %}

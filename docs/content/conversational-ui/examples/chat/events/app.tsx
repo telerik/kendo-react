@@ -19,6 +19,7 @@ import {
     shareIcon,
     undoIcon
 } from '@progress/kendo-svg-icons';
+import { EventLog } from '@docs-shared/EventLog';
 
 const user: User = {
     id: 1,
@@ -182,7 +183,7 @@ const App = () => {
     };
 
     return (
-        <div style={{ display: 'flex', gap: '20px', height: '600px' }}>
+        <EventLog events={events} onClear={() => setEvents([])}>
             <Chat
                 messages={messages}
                 authorId={user.id}
@@ -208,42 +209,7 @@ const App = () => {
                 height="100%"
                 style={{ maxWidth: '400px' }}
             />
-
-            <div
-                style={{
-                    flex: 1,
-                    padding: '10px',
-                    backgroundColor: '#f8f9fa',
-                    borderRadius: '4px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    height: '100%'
-                }}
-            >
-                <h5 style={{ margin: '0 0 10px 0', flexShrink: 0 }}>Event Log</h5>
-
-                <div style={{ flex: 1, overflow: 'auto' }}>
-                    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                        {events.slice(0, 15).map((event, index) => (
-                            <li
-                                key={index}
-                                style={{
-                                    padding: '4px 8px',
-                                    margin: '2px 0',
-                                    backgroundColor: index === 0 ? '#e8f5e8' : '#fff',
-                                    borderRadius: '3px',
-                                    fontSize: '11px',
-                                    fontFamily: 'monospace',
-                                    border: '1px solid #dee2e6'
-                                }}
-                            >
-                                {event}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </div>
-        </div>
+        </EventLog>
     );
 };
 

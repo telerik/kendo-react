@@ -28,7 +28,7 @@ To define attachments for a message:
 
 By default, message attachments are displayed as a carousel or card deck below the message. You can also display attachments in a list by setting the [`attachmentLayout`](slug:api_conversational-ui_message#toc-attachmentlayout) of the message.
 
-{% meta height:680 %}
+{% meta height:780 %}
 {% embed_file chat/file-uploads-and-media/attachments/app.tsx preview %}
 {% embed_file chat/file-uploads-and-media/attachments/main.tsx %}
 {% endmeta %}

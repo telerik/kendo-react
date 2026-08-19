@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { PromptBox, PromptBoxChangeEvent } from '@progress/kendo-react-conversational-ui';
-import { NumericTextBox } from '@progress/kendo-react-inputs';
-import { Label } from '@progress/kendo-react-labels';
+import { useConfigurator } from '@docs-shared/configurator';
 import './styles.css';
 
 const App = () => {
@@ -23,7 +22,24 @@ const App = () => {
    - Identify emerging market opportunities we should prioritize
 
 Please structure your analysis with clear sections, supporting data points, and actionable recommendations.`);
-    const [maxTextAreaHeight, setMaxTextAreaHeight] = React.useState<number>(140);
+    const config = useConfigurator({
+        sections: [
+            {
+                label: 'Max Text Area Height (px)',
+                controls: [
+                    {
+                        type: 'numericTextBox',
+                        name: 'maxTextAreaHeight',
+                        min: 60,
+                        max: 250,
+                        step: 10,
+                        defaultValue: 140
+                    }
+                ]
+            }
+        ]
+    });
+    const maxTextAreaHeight = config.maxTextAreaHeight ?? 140;
 
     const handleValueChange = (event: PromptBoxChangeEvent) => {
         setPromptValue(event.value);
@@ -35,21 +51,6 @@ Please structure your analysis with clear sections, supporting data points, and 
 
     return (
         <div className="demo-container">
-            <div className="configuration-panel">
-                <Label className="label-inline">
-                    Max Textarea Height (px)
-                    <NumericTextBox
-                        value={maxTextAreaHeight}
-                        onChange={(e) => setMaxTextAreaHeight(e.value ?? 140)}
-                        min={60}
-                        max={250}
-                        step={10}
-                        format="n0"
-                        style={{ width: '170px' }}
-                    />
-                </Label>
-            </div>
-
             <PromptBox
                 value={promptValue}
                 onChange={handleValueChange}

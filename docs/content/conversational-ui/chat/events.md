@@ -22,7 +22,7 @@ The KendoReact Chat emits several events that enable you to control its behavior
 
 The following example demonstrates all the events that the Chat features.
 
-{% meta height:680 %}
+{% meta height:1130 %}
 {% embed_file chat/events/app.tsx preview %}
 {% embed_file chat/events/main.tsx %}
 {% endmeta %}

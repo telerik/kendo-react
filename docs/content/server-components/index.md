@@ -17,7 +17,7 @@ The KendoReact Server Components are distributed through npm packages, and are a
 
 <blockquote type="warning">
 
-The experimental KendoReact server components originally launched in early 2024 have been discontinued. Based on what we learned from this early experiment, we've decided to revise our approach. We're now working on adding server capabilities to our [React Data Grid](https://www.telerik.com/kendo-react-ui/components/grid) and can't wait to share it with you with the first Telerik and Kendo UI release of 2025. Visit the [KendoReact roadmap](https://www.telerik.com/support/whats-new/kendo-react-ui/roadmap) to learn more.
+The experimental KendoReact server components originally launched in early 2024 have been discontinued. Based on what we learned from this early experiment, we've decided to revise our approach. We're now working on adding server capabilities to our [React Grid](https://www.telerik.com/kendo-react-ui/components/grid) and can't wait to share it with you with the first Telerik and Kendo UI release of 2025. Visit the [KendoReact roadmap](https://www.telerik.com/support/whats-new/kendo-react-ui/roadmap) to learn more.
 
 </blockquote>
 

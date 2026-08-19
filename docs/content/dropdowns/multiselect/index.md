@@ -28,6 +28,13 @@ The following example demonstrates the MultiSelect in action.
 {% embed_file multiselect/basic/func/styles.css %}
 {% endmeta %}
 
+The following example demonstrates the built-in Select all option for quickly selecting all visible items and then removing exceptions.
+
+{% meta height:280 %}
+{% embed_file multiselect/select-all/func/app.tsx preview %}
+{% embed_file multiselect/select-all/func/main.tsx %}
+{% endmeta %}
+
 > The MultiSelect is part of the [KendoReact Dropdowns]({% slug overview_dropdowns %}) component library. The procedures for installing, importing, and using the Dropdowns are identical for all components in the package. To learn how to use the MultiSelect and the rest of the Dropdowns, see the [Getting Started with the KendoReact Dropdowns]({% slug get_started_dropdowns %}) guide.
 
 ## Key Features
@@ -37,6 +44,7 @@ The following example demonstrates the MultiSelect in action.
 -   [Filtering (premium)]({% slug filtering_multiselect %})&mdash;You can configure the MultiSelect to filter the results locally or on the server.
 -   [Custom tags]({% slug customtags_multiselect %})&mdash;You can customize how to render each of the value tags.
 -   [Custom rendering]({% slug customrendering_multiselect %})&mdash;You can customize the way the MultiSelect component renders its elements.
+-   [Select all]({% slug select_all_multiselect %})&mdash;You can enable a built-in `selectAll` option to toggle all currently applicable items with a single interaction.
 -   [Virtualization (premium)]({% slug virtualization_multiselect %})&mdash;The virtual scrolling feature is an alternative to paging and helps display large data sets.
 -   [Floating labels]({% slug floatinglabels_dropdowns %})&mdash;You can show floating labels inside the KendoReact MultiSelect component.
 -   [Forms support]({% slug forms_multiselect %})&mdash;You can use the React MultiSelect component with HTML form elements or with [the KendoReact Form component]({% slug overview_form %}).

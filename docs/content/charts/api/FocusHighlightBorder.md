@@ -50,7 +50,7 @@ string
 <td class="table-cell-comment">
 
 
-The color of the border line. Accepts a valid CSS color string, including hex and rgb.
+Specifies the color of the border line. Accepts a valid CSS color string, including hex and rgb.
 
 
 </td>
@@ -85,7 +85,7 @@ DashType
 <td class="table-cell-comment">
 
 
-The dash type of the border line.
+Specifies the dash type of the border line.
 
 
 </td>
@@ -165,7 +165,7 @@ number
 <td class="table-cell-comment">
 
 
-The width of the border line in pixels.
+Specifies the width of the border line in pixels.
 
 
 </td>

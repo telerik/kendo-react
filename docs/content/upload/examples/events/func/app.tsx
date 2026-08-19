@@ -7,6 +7,7 @@ import {
     UploadOnStatusChangeEvent,
     UploadFileInfo
 } from '@progress/kendo-react-upload';
+import { EventLog } from '@docs-shared/EventLog';
 
 const fileStatuses = ['UploadFailed', 'Initial', 'Selected', 'Uploading', 'Uploaded', 'RemoveFailed', 'Removing'];
 
@@ -23,20 +24,22 @@ const App = () => {
                 const reader = new FileReader();
 
                 reader.onloadend = (ev: any) => {
-                    setFilePreviews({
-                        ...filePreviews,
+                    setFilePreviews((prev) => ({
+                        ...prev,
                         [file.uid]: ev.target.result
-                    });
+                    }));
                 };
                 if (file && file.getRawFile) {
                     reader.readAsDataURL(file.getRawFile());
                 }
             });
-    }, [affectedFiles, filePreviews]);
+    }, [affectedFiles]);
+
+    const log = (message: string) => setEvents((prev) => [message, ...prev]);
 
     const onAdd = (event: UploadOnAddEvent) => {
         setFiles(event.newState);
-        setEvents([...events, `File selected: ${event.affectedFiles[0].name}`]);
+        log(`File selected: ${event.affectedFiles[0].name}`);
         setAffectedFiles(event.affectedFiles);
     };
 
@@ -47,23 +50,23 @@ const App = () => {
         });
 
         setFiles(event.newState);
-        setEvents([...events, `File removed: ${event.affectedFiles[0].name}`]);
+        log(`File removed: ${event.affectedFiles[0].name}`);
         setFilePreviews(newFilePreviews);
     };
 
     const onProgress = (event: UploadOnProgressEvent) => {
         setFiles(event.newState);
-        setEvents([...events, `On Progress: ${event.affectedFiles[0].progress} %`]);
+        log(`On Progress: ${event.affectedFiles[0].progress} %`);
     };
 
     const onStatusChange = (event: UploadOnStatusChangeEvent) => {
         const file = event.affectedFiles[0];
         setFiles(event.newState);
-        setEvents([...events, `File '${file.name}' status changed to: ${fileStatuses[file.status]}`]);
+        log(`File '${file.name}' status changed to: ${fileStatuses[file.status]}`);
     };
 
     return (
-        <div>
+        <EventLog events={events} onClear={() => setEvents([])}>
             <Upload
                 batch={false}
                 multiple={true}
@@ -76,15 +79,8 @@ const App = () => {
                 saveUrl={'https://demos.telerik.com/service/v2/odata/upload/save'}
                 removeUrl={'https://demos.telerik.com/service/v2/odata/upload/remove'}
             />
-            <div className={'example-config'} style={{ marginTop: 20 }}>
-                <ul className={'event-log'}>
-                    {events.map((event, index) => (
-                        <li key={index}>{event}</li>
-                    ))}
-                </ul>
-            </div>
             {files.length ? (
-                <div className={'img-preview example-config'}>
+                <div className={'img-preview'} style={{ marginTop: 20 }}>
                     <h3>Preview selected images</h3>
                     {Object.keys(filePreviews).map((fileKey, index) => (
                         <img
@@ -96,7 +92,7 @@ const App = () => {
                     ))}
                 </div>
             ) : undefined}
-        </div>
+        </EventLog>
     );
 };
 

@@ -13,7 +13,7 @@ The KendoReact Diagram ships with a comprehensive set of standard ANSI flowchart
 
 The following example demonstrates a complete workflow process built with flowchart shapes, custom connection markers, and decision branches.
 
-<demo metaUrl="diagram/workflow/" height="750"></demo>
+<demo metaUrl="diagram/workflow/" height="860"></demo>
 
 ## Creating a Workflow Diagram
 

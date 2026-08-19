@@ -603,76 +603,13 @@ position: 1
 
   <ul class="api-item-list">
     <li class="api-item">
-        <a href="{% slug api_layout_actionsheetcontent %}">ActionSheetContent</a>
-    </li>
-    <li class="api-item">
         <a href="{% slug api_layout_actionsheetdefaultprops %}">actionSheetDefaultProps</a>
     </li>
     <li class="api-item">
         <a href="{% slug api_layout_actionsheetdefaultpropstype %}">ActionSheetDefaultPropsType</a>
     </li>
     <li class="api-item">
-        <a href="{% slug api_layout_actionsheetfooter %}">ActionSheetFooter</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_layout_actionsheetheader %}">ActionSheetHeader</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_layout_actionsheetitem %}">ActionSheetItem</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_layout_avatar %}">Avatar</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_layout_cardactions %}">CardActions</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_layout_cardbody %}">CardBody</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_layout_cardfooter %}">CardFooter</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_layout_cardheader %}">CardHeader</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_layout_cardimage %}">CardImage</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_layout_cardsubtitle %}">CardSubtitle</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_layout_cardtitle %}">CardTitle</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_layout_contextmenu %}">ContextMenu</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_layout_panelbar %}">PanelBar</a>
-    </li>
-    <li class="api-item">
         <a href="{% slug api_layout_stepperonnavigateevent %}">StepperOnNavigateEvent</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_layout_tabstripcontent %}">TabStripContent</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_layout_tabstripnavigation %}">TabStripNavigation</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_layout_tabstriptab %}">TabStripTab</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_layout_timeline %}">Timeline</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_layout_timelinecard %}">TimelineCard</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_layout_timelinehorizontal %}">TimelineHorizontal</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_layout_timelinevertical %}">TimelineVertical</a>
     </li>
   </ul>
 </div>
@@ -716,9 +653,6 @@ position: 1
 
 
   <ul class="api-item-list">
-    <li class="api-item">
-        <a href="{% slug api_layout_menuitem %}">MenuItem</a>
-    </li>
     <li class="api-item">
         <a href="{% slug api_layout_sorteventlist %}">sortEventList</a>
     </li>

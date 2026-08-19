@@ -18,7 +18,7 @@ The React Diagram component is part of the KendoReact library of React UI compon
 
 The following example demonstrates the Diagram in action.
 
-<demo metaUrl="diagram/overview/" height="500"></demo>
+<demo metaUrl="diagram/overview/" height="600"></demo>
 
 ## Key Features
 

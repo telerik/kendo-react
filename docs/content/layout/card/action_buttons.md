@@ -16,7 +16,7 @@ To specify action buttons in the Card, you can use the `CardActions` component. 
 
 
 
-{% meta height:1000 %}
+{% meta height:1100 %}
 {% embed_file card/actions/func/app.tsx preview %}
 {% embed_file card/actions/func/main.tsx %}
 {% endmeta %}

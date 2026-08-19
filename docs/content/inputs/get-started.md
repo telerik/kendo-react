@@ -20,6 +20,8 @@ After completing this guide, you will have a free React [Input](slug://overview_
 
 ## Before You Begin
 
+To follow the steps in this guide, you need to have a React project set up. If you don't have one, you can create a new React application using Vite by running the following command in your terminal:
+
 ```sh
 npm create vite@latest my-app -- --template react
 ```
@@ -30,18 +32,20 @@ This guide requires that you have **basic knowledge of React and TypeScript**, a
 
 ## Install the Components
 
+To install the Inputs package, run the following command in the root folder of your React project:
+
 ```sh
 npm i @progress/kendo-react-inputs
 ```
 
 ## Importing the Components
 
+Place the `import` statements in the App component file (for example: `src/App.tsx`) for your project. Note that the steps for installing and importing all Inputs components are identical.
+
 ```tsx
 import { Input } from '@progress/kendo-react-inputs';
 import '@progress/kendo-theme-default/dist/all.css';
 ```
-
-Place the `import` statements in the App component file (for example: `src/App.tsx`) for your project. Note that the steps for installing and importing all Inputs components are identical.
 
 ## Use the Components
 
@@ -75,7 +79,7 @@ With the `import "@progress/kendo-theme-default/dist/all.css";` statement presen
 
 ## Next Steps
 
-Now try to add another component from the Inputs package yourself. The procedures for [installing](#install-the-components), [importing](#import-the-components), and [using](#use-the-components) the Inputs components are identical for all components in the package.
+Now try to add another component from the Inputs package yourself. The procedures for [installing](#install-the-components), [importing](#importing-the-components), and [using](#use-the-components) the Inputs components are identical for all components in the package.
 
 The Inputs package provides the following components:
 

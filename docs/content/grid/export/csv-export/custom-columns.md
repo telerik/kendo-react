@@ -1,7 +1,7 @@
 ---
 title: Customizing Exported Columns
-description: 'Learn how to customize which columns are exported and their header names in CSV exports from the KendoKendoReact Data Grid.'
-components: ['datagrid']
+description: 'Learn how to customize which columns are exported and their header names in CSV exports from the KendoReact Grid.'
+components: ['grid']
 slug: customcolumns_csvexport_grid
 position: 10
 subject: CSV Export feature of the Grid
@@ -84,5 +84,5 @@ const csvOptions = {
 -   [CSV Export Basics]({% slug overview_csvexport_grid %})
 -   [Exporting Custom Data]({% slug customdata_csvexport_grid %})
 -   [Data Transformation]({% slug datatransformation_csvexport_grid %})
--   [React Data Grid](slug://overview_grid)
+-   [React Grid](slug://overview_grid)
 -   [API Reference of the Grid]({% slug api_grid_gridprops %})

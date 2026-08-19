@@ -50,7 +50,7 @@ You can use the [`baseUnit`]({% slug api_charts_chartcategoryaxisitemprops %}#to
 
 Setting the base unit to `"fit"` limits the total number of categories either to the set [`maxDateGroups`]({% slug api_charts_chartcategoryaxisitemprops %}#toc-maxdategroups) value or, otherwise, to the default `maxDateGroups` value of `10`.
 
-{% meta height:580 %}
+{% meta height:640 %}
 {% embed_file chart/axes/date-units/func/app.tsx preview %}
 {% embed_file chart/axes/date-units/func/main.tsx %}
 {% endmeta %}
@@ -72,7 +72,7 @@ When the Category Chart is set to display time series, it processes the data poi
 
 By default, the [`aggregate`]({% slug api_charts_chartseriesitemprops %}#toc-aggregate) function returns the maximum value of the value fields. If the category contains only one point, `aggregate` returns the point without modification. Other aggregates, such as `count` and `sum`, produce their own value even if the category contains only one data point.
 
-{% meta height:600 %}
+{% meta height:640 %}
 {% embed_file chart/axes/date-aggregates/func/app.tsx preview %}
 {% embed_file chart/axes/date-aggregates/func/main.tsx %}
 {% endmeta %}
@@ -86,7 +86,7 @@ Normally, each date interval gets its own label. Labels may overlap and become i
 {% embed_file chart/axes/max-divisions/func/main.tsx %}
 {% endmeta %}
 
-You can save space and rotate the labels at a fixed or at an optimal (`"auto"`) angle by using the [`labels.rotation`]({% slug api_charts_chartcategoryaxislabels %}#toc-rotation) option.
+You can save space and rotate the labels at a fixed or at an optimal (`"auto"`) angle by using the [`labels.rotation`](slug:api_charts_chartcategoryaxislabels) option.
 
 {% meta height:500 %}
 {% embed_file chart/axes/label-rotation/func/app.tsx preview %}
@@ -130,7 +130,7 @@ The Scatter Chart provides option for:
 
 The following example demonstrates how to use the X and Y axes of the Chart to display dates.
 
-{% meta height:600 %}
+{% meta height:640 %}
 {% embed_file chart/axes/date-values/func/app.tsx preview %}
 {% embed_file chart/axes/date-values/func/main.tsx %}
 {% endmeta %}

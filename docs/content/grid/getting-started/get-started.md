@@ -1,16 +1,16 @@
 ---
 title: Getting Started - Overview
-description: 'Get started with the KendoReact Data Grid with 100+ ready-to-use features covering everything from paging, sorting, filtering and data editing to grouping.'
-components: ['datagrid']
+description: 'Get started with the KendoReact Grid with 100+ ready-to-use features covering everything from paging, sorting, filtering and data editing to grouping.'
+components: ['grid']
 slug: getstarted_grid
-subject: Data Grid
+subject: Grid
 position: 10
 tier: free
 ---
 
-# Getting Started with the KendoReact Data Grid
+# Getting Started with the KendoReact Grid
 
-This guide provides essential information about using the KendoReact Data Grid package&mdash;you will learn how to install the package and add a free KendoReact Data Grid component to your project. The steps demonstrated in this guide are applicable to all features of the Grid (free and premium).
+This guide provides essential information about using the KendoReact Grid package&mdash;you will learn how to install the package and add a free KendoReact Grid component to your project. The steps demonstrated in this guide are applicable to all features of the Grid (free and premium).
 
 <CtaPanelOverview title="Use This React @Subject for Free" message="You can use the @TestLink of the @Subject in production—no sign-up or license required. It’s part of KendoReact, an enterprise-grade UI library with 120+ @FreemiumShortLink and premium components. To test-drive premium @Subject functionality, such as inline editing, chart integration and React Server Components mode, @StartTrialLink.">
 <span token="TestLink">
@@ -22,12 +22,12 @@ This guide provides essential information about using the KendoReact Data Grid p
 
 After completing this tutorial, you will have a free React [Grid](slug://overview_grid) up and running.
 
-{% meta height:540 %}
+{% meta height:660 %}
 {% embed_file get-started-upd/func/app.tsx preview %}
 {% embed_file get-started-upd/func/main.tsx %}
 {% endmeta %}
 
-> tip If you prefer video, watch the [React Data Grid Video Tutorial](https://www.telerik.com/videos/how-to-implement-a-react-data-grid-getting-started-with-the-kendoreact-grid).
+> tip If you prefer video, watch the [React Grid Video Tutorial](https://www.telerik.com/videos/how-to-implement-a-react-data-grid-getting-started-with-the-kendoreact-grid).
 
 ## Before You Begin
 
@@ -37,31 +37,35 @@ This guide requires that you have **basic knowledge of React and TypeScript**, a
 
 ## Install the Component
 
+To install the Grid package, run the following command in the root folder of your React project:
+
 ```shell
 npm i @progress/kendo-react-grid
 ```
 
-Run these commands in the root of your React project to install the KendoReact Data Grid and its [dependencies](#toc-kendoreact-data-grid-dependencies).
+Run these commands in the root of your React project to install the KendoReact Grid and its [dependencies](#toc-kendoreact-data-grid-dependencies).
 
 ## Import the Component
+
+Place the `import` statements in the App component file (for example: `src/App.tsx`) for your project.
 
 ```tsx
 import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
 ```
 
-Place the `import` statements in the App component file (for example: `src/App.tsx`) for your project.
-
 Note that you are also importing the `GridColumn` component, but under the `Column` alias.
 
 ## Use the Component
 
-> Using the free features of the KendoReact Data Grid does not require a license, even in production. To work with any of the premium features of the component, you need a [commercial license key or an active trial license key](slug://my_license).
+> Using the free features of the KendoReact Grid does not require a license, even in production. To work with any of the premium features of the component, you need a [commercial license key or an active trial license key](slug://my_license).
 
-The KendoReact Data Grid is a powerful tool for creating responsive, accessible, and customizable applications that require the displaying and management of large datasets. This section will take you through a basic Data Grid setup workflow, starting with the column definition and ending with some basic styling.
+The KendoReact Grid is a powerful tool for creating responsive, accessible, and customizable applications that require the displaying and management of large datasets. This section will take you through a basic Grid setup workflow, starting with the column definition and ending with some basic styling.
 
 ### Load and Show Data
 
-```tsx
+To load and display data in the Grid, you can use the sample dataset provided in the demo source files. Create a `gd-products.json` file in your project and populate it with the following data:
+
+```tsx Loading Data into the Grid
 import products from './gd-products';
 
 const App = () => {
@@ -70,15 +74,38 @@ const App = () => {
 
 export default App;
 ```
+```json Sample Data for the Grid
+[
+    {
+        "ProductID": 1,
+        "ProductName": "Chai",
+        "Category": { "CategoryID": 1, "CategoryName": "Beverages" },
+        "UnitPrice": 18.0000,
+        "UnitsInStock": 39,
+        "Discontinued": false
+    },
+    {
+        "ProductID": 2,
+        "ProductName": "Chang",
+        "Category": { "CategoryID": 1, "CategoryName": "Beverages" },
+        "UnitPrice": 19.0000,
+        "UnitsInStock": 17,
+        "Discontinued": false
+    },
+    ...
+]
+```
 
 1. Use the dataset from the demo source files at the top of the guide to create a `gd-products.json` file locally in your project.
 2. Use an `import` statement to reference the data file.
 3. Add a `<Grid>` definition.
-4. Use the `data` prop to load the data in your Data Grid.
+4. Use the `data` prop to load the data in your Grid.
 
 You now have a simple grid that shows all the data from `gd-products.json`.
 
 ### Define Columns
+
+To show the data in a structured way, you need to define the columns of the Grid:
 
 ```tsx
 <Grid data={products}>
@@ -99,6 +126,8 @@ You now have a grid that shows a sub-set of the data and has custom column names
 
 ### Enable the Built-in State Management of the Grid
 
+The Grid has built-in state management that allows you to enable features such as paging, sorting, filtering, and editing without having to implement the logic for handling the data operations. To use this functionality, you need to set the `autoProcessData` prop of the Grid to `true` and specify a unique field from your data as the `dataItemKey` prop:
+
 ```tsx
 <Grid
     data={data}
@@ -112,6 +141,8 @@ You now have a grid that shows a sub-set of the data and has custom column names
 2. Set the `dataItemKey` prop to an unique value field from the bound to the Grid data.
 
 ### Add Pagination
+
+To enable pagination in the Grid, you need to set the `pageable` prop to `true` and configure the `defaultTake` and `defaultSkip` props to specify the initially loaded page:
 
 ```tsx
 <Grid
@@ -129,6 +160,8 @@ You now have a grid that shows a sub-set of the data and has custom column names
 
 ### Enable Filtering
 
+To enable filtering in the Grid, you need to set the `filterable` prop to `true` and configure the `defaultFilter` prop to specify the initial filter descriptor:
+
 ```tsx
 <Grid
     data={data}
@@ -144,6 +177,8 @@ You now have a grid that shows a sub-set of the data and has custom column names
 
 ### Enable Sorting
 
+To enable sorting in the Grid, you need to set the `sortable` prop to `true` and configure the `defaultSort` prop to specify the initial sort descriptor:
+
 ```tsx
 <Grid
     data={data}
@@ -158,6 +193,8 @@ You now have a grid that shows a sub-set of the data and has custom column names
     - `defaultSort`(optional) is the descriptor by which the data is sorted initially.
 
 ### Enable In-cell Editing
+
+To enable in-cell editing in the Grid, you need to set the `editable` prop to `incell` and add an `editor` prop to the columns that you want to be editable:
 
 ```tsx
 <Grid
@@ -220,13 +257,13 @@ With the `import "@progress/kendo-theme-default/dist/all.css";` statement presen
 
 ## Next Steps
 
-Now try to enable another feature of the Grid package yourself. The procedures for [installing](#install-the-components), [importing](#import-the-component), and [using](#use-the-component) the Grid features are identical for all features in the package.
+Now try to enable another feature of the Grid package yourself. The procedures for [installing](#install-the-component), [importing](#import-the-component), and [using](#use-the-component) the Grid features are identical for all features in the package.
 
-## KendoReact Data Grid APIs
+## KendoReact Grid APIs
 
 [Grid API](slug:api_grid)
 
-## KendoReact Data Grid Dependencies
+## KendoReact Grid Dependencies
 
 The Grid package requires you to install the following [peer dependencies](https://nodejs.org/en/blog/npm/peer-dependencies/) in your application:
 
@@ -250,7 +287,7 @@ The Grid package requires you to install the following [peer dependencies](https
 
 ## Activating Your License Key
 
-**Important**: The KendoKendoReact Data Grid has both free and premium features that require a license key file to be installed in your project. This applies to both trial and commercial usage:
+**Important**: The KendoReact Grid has both free and premium features that require a license key file to be installed in your project. This applies to both trial and commercial usage:
 
 -   **Trial usage**: [Start a free trial](https://www.telerik.com/try/kendo-react-ui) and download a trial license key file
 -   **Commercial usage**: [Purchase a license](https://www.telerik.com/kendo-react-ui/pricing) and download a commercial license key file

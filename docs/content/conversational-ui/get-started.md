@@ -14,12 +14,14 @@ This guide provides essential information about using the KendoReact Conversatio
 
 After completing this guide, you will be able to reproduce the following example.
 
-{% meta height:680 %}
+{% meta height:780 %}
 {% embed_file get-started/app.tsx preview %}
 {% embed_file get-started/main.tsx %}
 {% endmeta %}
 
 ## Install the Component
+
+To install the Conversational UI package, run the following command in the root folder of your React project:
 
 ```sh
 npm i @progress/kendo-react-conversational-ui

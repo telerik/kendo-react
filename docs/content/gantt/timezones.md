@@ -16,7 +16,7 @@ If no timezone is set, the Gantt defaults to the local timezone of the browser. 
 
 For example, an event that is set up to occur at 09:00 AM in London (GMT+0000) will appear as 10:00 AM to a user in Berlin (GMT+0100). The following example demonstrates the resulting time for your local timezone.
 
-{% meta height:560 %}
+{% meta height:680 %}
 {% embed_file timezones/default/func/app.tsx preview %}
 {% embed_file timezones/default/func/main.tsx %}
 {% endmeta %}
@@ -36,7 +36,9 @@ Some scenarios require you to set a timezone to a fixed value. For example, if t
 
 2. Set the [`timezone`]({% slug api_gantt_ganttprops %}#toc-timezone) attribute of the Gantt to the desired timezone ID.
 
-{% meta height:560 %}
+The following example demonstrates how to fix the Gantt to the `America/New_York` timezone regardless of the viewer's local timezone.
+
+{% meta height:680 %}
 {% embed_file timezones/fixed/func/app.tsx preview %}
 {% embed_file timezones/fixed/func/main.tsx %}
 {% endmeta %}

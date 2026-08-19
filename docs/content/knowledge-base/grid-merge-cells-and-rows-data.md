@@ -27,13 +27,13 @@ components: ["grid"]
 
 ## Description
 
-How can I merge or group duplicate cells and rows data in the KendoReact Data Grid?
+How can I merge or group duplicate cells and rows data in the KendoReact Grid?
 
 ## Solution
 
 For simple scenarios where the data needs to be merged for single column, rowSpan can be set to the TD elements within the cellRender of the Grid. However, due to limitations in how HTML table can rowSpan/colSpan, it is not possible to have different colSpan for rows that already have set rowSpan, so using colSpan and rowSpan for merging duplicate rows and cells data will not be possible and different approach must be used.
 
-For this scenario, use a [`cellRender`]({% slug api_grid_gridprops %}#toc-cellrender) and compare the previous cell and previous row data to remove the content of the cell if it duplicate. You can also add different colors of the cell based on the values (suitable for boolean values for example), so they can be distinguished visually.
+For this scenario, use a [`cellRender`]({% slug api_grid_gridprops %}) and compare the previous cell and previous row data to remove the content of the cell if it duplicate. You can also add different colors of the cell based on the values (suitable for boolean values for example), so they can be distinguished visually.
 
 {% meta height:760 %}
 {% embed_file grid/merge-rows-and-cells/app.jsx preview %}

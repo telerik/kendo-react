@@ -102,6 +102,9 @@ position: 1
         <a href="{% slug api_inputs_numerictextboxpropscontext %}">NumericTextBoxPropsContext</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_inputs_otpinput %}">OTPInput</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_inputs_radiobutton %}">RadioButton</a>
     </li>
     <li class="api-item">
@@ -288,6 +291,24 @@ position: 1
         <a href="{% slug api_inputs_numerictextboxprops %}">NumericTextBoxProps</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_inputs_otpinputblurevent %}">OTPInputBlurEvent</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_inputs_otpinputchangeevent %}">OTPInputChangeEvent</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_inputs_otpinputfocusevent %}">OTPInputFocusEvent</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_inputs_otpinputhandle %}">OTPInputHandle</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_inputs_otpinputprops %}">OTPInputProps</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_inputs_otpseparatoricon %}">OTPSeparatorIcon</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_inputs_radiobuttonblurevent %}">RadioButtonBlurEvent</a>
     </li>
     <li class="api-item">
@@ -439,6 +460,9 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_inputs_direction %}">Direction</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_inputs_otpinputtype %}">OTPInputType</a>
     </li>
   </ul>
 </div>

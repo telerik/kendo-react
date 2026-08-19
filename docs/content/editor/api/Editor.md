@@ -7,7 +7,23 @@ slug: api_editor_editor
 ---
 
 # Editor
+Represents the [KendoReact Editor component](https://www.telerik.com/kendo-react-ui/components/editor).
+
 A [Functional Component](https://react.dev/reference/react/Component).
+
+```jsx
+const App = () => {
+   return (
+       <Editor
+           defaultContent="<p>Hello World</p>"
+           tools={[
+              [ EditorTools.Bold, EditorTools.Italic ]
+           ]}
+       />
+   );
+}
+```
+
 
 
 <table class="api-table api-table-properties">
@@ -34,7 +50,7 @@ A [Functional Component](https://react.dev/reference/react/Component).
 <code>
 
 
-[EditorProps]({% slug api_editor_editorprops %}) [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with RefAttributes&lt;[Editor]({% slug api_editor_editor %})&gt;
+[EditorProps]({% slug api_editor_editorprops %}) [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with RefAttributes&lt;[EditorHandle]({% slug api_editor_editorhandle %})&gt;
 
 
 </code>

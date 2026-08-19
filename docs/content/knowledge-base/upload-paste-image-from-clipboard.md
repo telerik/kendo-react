@@ -43,7 +43,7 @@ This will require the following setup:
 
 This is an example showcasing this:
 
-{% meta  height:650 %}
+{% meta  height:750 %}
 {% embed_file upload/paste-image/app.tsx preview %}
 {% embed_file upload/paste-image/main.tsx %}
 {% endmeta %}

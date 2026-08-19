@@ -104,7 +104,7 @@ A native DOM event.
 <code>
 
 
-[TreeList]({% slug api_treelist_treelist %})
+[TreeListHandle]({% slug api_treelist_treelisthandle %})
 
 
 </code>

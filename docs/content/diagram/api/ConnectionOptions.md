@@ -70,7 +70,7 @@ Defines accessibility options for the connection.
 <code>
 
 
-[ConnectionContent]({% slug api_diagram_connectioncontent %})
+[ConnectionContent]({% slug api_diagram_connectioncontent %}) | [ConnectionRichTextContent]({% slug api_diagram_connectionrichtextcontent %})
 
 
 </code>
@@ -675,7 +675,7 @@ Sets the text content displayed in the tooltip.
 <code>
 
 
-"polyline" | "cascading"
+[ConnectionType]({% slug api_diagram_connectiontype %})
 
 
 </code>

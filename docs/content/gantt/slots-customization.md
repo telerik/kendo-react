@@ -10,7 +10,9 @@ position: 7
 
 The KendoReact Gantt component can have customized slot width. To achieve that, set the `slotWidth` to the new slot width value in pixels.
 
-{% meta height:560 %}
+The following example demonstrates how to configure the `slotWidth` property to change the width of the timeline slots.
+
+{% meta height:680 %}
 {% embed_file slots/width/func/app.tsx preview %}
 {% embed_file slots/width/func/main.tsx %}
 {% endmeta %}
@@ -19,7 +21,9 @@ The KendoReact Gantt component can have customized slot width. To achieve that, 
 
 The KendoReact Gantt allows slot duration customization in DayView. To set the new time, set the `slotDuration` to the time interval in minutes.
 
-{% meta height:560 %}
+The following example demonstrates how to configure the `slotDuration` property to set a custom time interval for slots in the Day view.
+
+{% meta height:680 %}
 {% embed_file slots/duration/func/app.tsx preview %}
 {% embed_file slots/duration/func/main.tsx %}
 {% endmeta %}

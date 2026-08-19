@@ -24,7 +24,7 @@ const App = () => {
     const [isSmart, setIsSmart] = React.useState<boolean>(false);
 
     React.useEffect(() => {
-        document.title = 'KendoReact Smart Data Grid';
+        document.title = 'KendoReact Smart Grid';
     }, []);
 
     React.useEffect(() => {
@@ -124,7 +124,7 @@ const App = () => {
                                 letterSpacing: 'var(--kendo-letter-spacing, 0px)'
                             }}
                         >
-                            KendoReact Smart Data Grid
+                            KendoReact Smart Grid
                         </span>
                     </div>
                 </AppBarSection>

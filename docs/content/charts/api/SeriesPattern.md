@@ -9,4 +9,6 @@ slug: api_charts_seriespattern
 # SeriesPattern
 Represents the pattern option of the series.
 
+See the [Using Pattern Fills](https://www.telerik.com/kendo-react-ui/components/charts/chart/styling#using-pattern-fills) example.
+
 `type` SeriesPattern = [VerticalStripesPattern]({% slug api_charts_verticalstripespattern %}) | [CrosshatchPattern]({% slug api_charts_crosshatchpattern %}) | [DiagonalStripesPattern]({% slug api_charts_diagonalstripespattern %}) | [GridPattern]({% slug api_charts_gridpattern %}) | [DotsPattern]({% slug api_charts_dotspattern %});

@@ -20,6 +20,8 @@ After completing this guide, you will be able to reproduce the following example
 
 ## Before You Begin
 
+To follow the steps in this guide, you need to have a React project set up. If you don't have one, you can create a new React application using Vite by running the following command in your terminal:
+
 ```sh
 npm create vite@latest my-app -- --template react
 ```
@@ -29,6 +31,8 @@ This guide requires that you have **basic knowledge of React and TypeScript**, a
 > tip You can speed up the development of your KendoReact application with the [Kendo UI Template Wizard for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=KendoUI.kendotemplatewizard).
 
 ## Install the Component
+
+To install the Tooltip package, run the following command in the root folder of your React project:
 
 ```sh
 npm i @progress/kendo-react-tooltip @progress/kendo-theme-default
@@ -78,7 +82,7 @@ With the `import "@progress/kendo-theme-default/dist/all.css";` statement presen
 
 ## Next Steps
 
-Now try to add another component from the Tooltips package yourself. The procedures for [installing](#install-the-components), [importing](#import-the-components), and [using](#use-the-components) the tooltip components are identical for all components in the package.
+Now try to add another component from the Tooltips package yourself. The procedures for [installing](#install-the-component), [importing](#import-the-component), and [using](#use-the-component) the tooltip components are identical for all components in the package.
 
 The Tooltips package provides the following free React components:
 

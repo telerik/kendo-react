@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: 'Try now the React Barcodes package by KendoReact and discover the variety of features that it provides for your next React project.'
-components: ["barcode"]
+components: ['barcode']
 slug: overview_barcodes
 position: 0
 ---
@@ -41,7 +41,7 @@ The Barcodes components are part of the KendoReact library which provides native
 
 The following example demonstrates the Barcode and QR Code in action.
 
-{% meta height:350 %}
+{% meta height:420 %}
 {% embed_file overview/func/app.tsx preview %}
 {% embed_file overview/func/main.tsx %}
 {% endmeta %}
@@ -59,7 +59,6 @@ The Barcodes provide built-in support to save your the output as an image (PNG),
 ## Support Options
 
 For support options, see the [KendoReact Support](https://www.telerik.com/kendo-react-ui/support) page.
-
 
 ## Suggested Links
 

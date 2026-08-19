@@ -28,7 +28,7 @@ By using arrays for these props, you can create highly flexible and adaptive for
 
 The following example demonstrates how the Form adapts to different screen sizes. Use the device setting panel to choose the desired screen size and observe how the layout responds accordingly.
 
-{% meta height:600 %}
+{% meta height:840 %}
 {% embed_file responsive/app.tsx preview %}
 {% embed_file responsive/main.tsx %}
 {% endmeta %}

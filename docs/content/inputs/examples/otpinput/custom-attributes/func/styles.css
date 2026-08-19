@@ -1,0 +1,12 @@
+.example-info {
+    background: rgba(83, 146, 228, 0.1);
+    border-radius: 2px;
+    margin: 20px auto 20px auto;
+    padding: 15px;
+    border-left: 4px solid #5392e4;
+    font-size: 14px;
+}
+
+.k-form-buttons {
+    margin-top: 10px;
+}

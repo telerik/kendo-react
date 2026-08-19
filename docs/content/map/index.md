@@ -15,7 +15,7 @@ The KendoReact Map is a native KendoReact component built specifically for the R
 
 <CtaPanelOverview></CtaPanelOverview>
 
-{% meta height:660 %}
+{% meta height:780 %}
 {% embed_file overview/func/app.tsx preview %}
 {% embed_file overview/func/main.tsx %}
 {% endmeta %}

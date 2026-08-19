@@ -1,7 +1,7 @@
 ---
 title: Formula Injection Protection
-description: 'Learn how to protect against CSV formula injection attacks in the KendoKendoReact Data Grid CSV export.'
-components: ['datagrid']
+description: 'Learn how to protect against CSV formula injection attacks in the KendoReact Grid CSV export.'
+components: ['grid']
 slug: formulainjection_csvexport_grid
 position: 40
 subject: CSV Export feature of the Grid
@@ -10,7 +10,7 @@ tier: free
 
 # Formula Injection Protection
 
-CSV formula injection is a security vulnerability where malicious formulas embedded in data can be executed when the CSV file is opened in spreadsheet applications like Microsoft Excel. The KendoKendoReact Data Grid CSV export includes built-in protection against this attack vector.
+CSV formula injection is a security vulnerability where malicious formulas embedded in data can be executed when the CSV file is opened in spreadsheet applications like Microsoft Excel. The KendoReact Grid CSV export includes built-in protection against this attack vector.
 
 <CtaPanelOverview></CtaPanelOverview>
 
@@ -24,6 +24,8 @@ CSV formula injection occurs when data containing formula characters (`=`, `+`, 
 -   Unauthorized system access
 
 ### Example of Vulnerable Data
+
+The following dataset contains values that could be interpreted as formulas:
 
 ```javascript
 const products = [
@@ -141,6 +143,6 @@ const csvOptions = {
 
 -   [CSV Export Basics]({% slug overview_csvexport_grid %})
 -   [Data Transformation]({% slug datatransformation_csvexport_grid %})
--   [React Data Grid](slug://overview_grid)
+-   [React Grid](slug://overview_grid)
 -   [API Reference of the Grid]({% slug api_grid_gridprops %})
 -   [OWASP CSV Injection](https://owasp.org/www-community/attacks/CSV_Injection)

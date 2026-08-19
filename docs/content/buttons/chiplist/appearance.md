@@ -27,8 +27,8 @@ You can also use the [`chip`]({% slug api_buttons_chiplistprops %}#toc-chip) pro
 -   [Border Radius](#chip-border-radius)
 -   [Fill Mode](#chip-fill-mode)
 -   [Theme Color](#chip-theme-color)
--   [SVG Icon](#chip-with-svg-icon)
--   [Icon](#chip-with-icon)
+-   [SVG Icon](#chip-with-svg-icons)
+-   [Icon](#chip-with-icons)
 
 ## Chip Fill Mode
 

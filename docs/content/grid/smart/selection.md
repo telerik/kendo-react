@@ -1,16 +1,16 @@
 ---
 title: AI-Powered Row Selection
-description: 'Learn how to use the selection in the KendoKendoReact Data Grid to interact with your data using natural language prompts.'
-components: ['datagrid']
+description: 'Learn how to use the selection in the KendoReact Grid to interact with your data using natural language prompts.'
+components: ['grid']
 slug: ai_selection
 position: 70
 tier: premium
 subject: AI Toolbar Assistant feature of the Grid
 ---
 
-# KendoReact Data Grid AI-Powered Selection
+# KendoReact Grid AI-Powered Selection
 
-The [KendoReact Data Grid](slug:overview_grid) provides intelligent row selection functionality through its AI Toolbar Assistant. This feature enables users to select specific data rows based on natural language prompts, making data interaction more intuitive and efficient.
+The [KendoReact Grid](slug:overview_grid) provides intelligent row selection functionality through its AI Toolbar Assistant. This feature enables users to select specific data rows based on natural language prompts, making data interaction more intuitive and efficient.
 
 AI-powered selection interprets user requests and automatically selects relevant rows based on the specified criteria, allowing for complex selection patterns without manual clicking or complex filter combinations.
 
@@ -54,7 +54,7 @@ Your AI service should return responses that include selection information, whic
 
 The following example demonstrates automatic selection where users can request patterns like "select patients over 60" or "select critical cases":
 
-<demo metaUrl="grid/smart/select/basic/" height="670"></demo>
+<demo metaUrl="grid/smart/select/basic/" height="780"></demo>
 
 > By default, the `GridToolbarAIAssistant` doesn't keep the prompt history and result returned by the AI model. If you need to keep the history, check the following two examples that use the `outputs` prop.
 
@@ -94,7 +94,7 @@ This approach is ideal when you need custom selection validation, complex select
 
 The following example demonstrates manual integration where you have complete control over the selection interaction.
 
-<demo metaUrl="grid/smart/select/manual/" height="700"></demo>
+<demo metaUrl="grid/smart/select/manual/" height="780"></demo>
 
 ### Controlled Selection
 
@@ -119,7 +119,7 @@ This approach is perfect when you need to integrate selection with your applicat
 
 The following example showcases controlled selection with custom validation and response handling. In this demo, the selection logic filters out deceased patients from AI suggestions, demonstrating how business rules can be applied to AI-generated selections. Because this demo showcases the controlled mode of the component, it demonstrates how to use the `outputs` prop along with additional logic to display the prompt output history.
 
-<demo metaUrl="grid/smart/select/controlled/" height="670"></demo>
+<demo metaUrl="grid/smart/select/controlled/" height="780"></demo>
 
 #### Selection Event Handling
 
@@ -131,7 +131,7 @@ The `GridToolbarAIAssistant` component exposes several events that are particula
 
 ## Suggested Links
 
--   [React Data Grid](slug:overview_grid)
+-   [React Grid](slug:overview_grid)
 -   [Smart Grid Overview](slug:smart_grid)
 -   [Smart Grid Basic Operations](slug:smart_grid_toolbar_assistant)
 -   [Smart Grid AI Custom Column](slug:ai_custom_column)

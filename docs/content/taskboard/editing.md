@@ -14,7 +14,7 @@ The TaskBoard allows you to edit the columns and cards.
 
 The following example demonstrates how to implement the editing for columns and cards of the TaskBoard.
 
-{% meta height:760 %}
+{% meta height:880 %}
 {% embed_file basic/func/app.tsx preview %}
 {% embed_file basic/func/main.tsx %}
 {% embed_file basic/func/cards.ts %}

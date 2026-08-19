@@ -45,16 +45,52 @@ interface ChartContainerProps {
 const ChartContainer = (props: ChartContainerProps) => {
     const { onEvent } = props;
 
+    // seriesHover/plotAreaHover/legendItemHover fire continuously while the pointer moves
+    // or stays over the same target, so without de-duping on the hovered target they flood
+    // the event log (and state updates) fast enough to eventually trip React's
+    // update-depth safeguard.
+    const lastSeriesHoverKey = React.useRef<string | null>(null);
+    const lastPlotAreaHoverKey = React.useRef<string | null>(null);
+    const lastLegendItemHoverKey = React.useRef<string | null>(null);
+
+    const handleSeriesHover = (event: SeriesHoverEvent) => {
+        const key = `${event.series?.name ?? ''}|${event.category ?? ''}|${event.value ?? ''}`;
+        if (key === lastSeriesHoverKey.current) {
+            return;
+        }
+        lastSeriesHoverKey.current = key;
+        onEvent('seriesHover', event);
+    };
+
+    const handlePlotAreaHover = (event: PlotAreaHoverEvent) => {
+        const key = `${event.x ?? ''}|${event.y ?? ''}`;
+        if (key === lastPlotAreaHoverKey.current) {
+            return;
+        }
+        lastPlotAreaHoverKey.current = key;
+        onEvent('plotAreaHover', event);
+    };
+
+    const handleLegendItemHover = (event: LegendItemHoverEvent) => {
+        const key = `${event.seriesIndex ?? ''}|${event.pointIndex ?? ''}`;
+        if (key === lastLegendItemHoverKey.current) {
+            return;
+        }
+        lastLegendItemHoverKey.current = key;
+        onEvent('legendItemHover', event);
+    };
+
     return (
         <Chart
+            style={{width: "100%"}}
             transitions={false}
             onAxisLabelClick={(event: AxisLabelClickEvent) => onEvent('axisLabelClick', event)}
             onLegendItemClick={(event: LegendItemClickEvent) => onEvent('legendItemClick', event)}
-            onLegendItemHover={(event: LegendItemHoverEvent) => onEvent('legendItemHover', event)}
+            onLegendItemHover={handleLegendItemHover}
             onPlotAreaClick={(event: PlotAreaClickEvent) => onEvent('plotAreaClick', event)}
-            onPlotAreaHover={(event: PlotAreaHoverEvent) => onEvent('plotAreaHover', event)}
+            onPlotAreaHover={handlePlotAreaHover}
             onSeriesClick={(event: SeriesClickEvent) => onEvent('seriesClick', event)}
-            onSeriesHover={(event: SeriesHoverEvent) => onEvent('seriesHover', event)}
+            onSeriesHover={handleSeriesHover}
         >
             <ChartTitle text="Gross domestic product growth GDP annual" />
             <ChartLegend position="bottom" orientation="horizontal" />

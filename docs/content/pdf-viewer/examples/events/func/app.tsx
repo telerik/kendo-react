@@ -1,62 +1,35 @@
 import * as React from 'react';
 import { PDFViewer, ZoomEvent, ErrorEvent, PageEvent } from '@progress/kendo-react-pdf-viewer';
+import { EventLog } from '@docs-shared/EventLog';
 import { SampleFileBase64 } from './shared-pv-base64Sample';
-
-const EventsLogger = (props: { events: string[] }) => {
-    return (
-        <div className="example-config">
-            <h5>Event log</h5>
-            <ul
-                className="event-log"
-                style={{
-                    textAlign: 'right'
-                }}
-            >
-                {props.events
-                    .slice()
-                    .reverse()
-                    .map((event, index) => {
-                        return <li key={index}>{event}</li>;
-                    })}
-            </ul>
-        </div>
-    );
-};
 
 function App() {
     const [events, setEvents] = React.useState<string[]>([]);
 
-    const onError = React.useCallback(
-        (e: ErrorEvent) => {
-            setEvents([...events, 'error ' + e.error.message]);
-        },
-        [events]
-    );
+    const log = (message: string) => setEvents((prev) => [message, ...prev]);
+
+    const onError = React.useCallback((e: ErrorEvent) => {
+        log('error ' + e.error.message);
+    }, []);
 
     const onDownload = React.useCallback(() => {
-        setEvents([...events, 'download']);
-    }, [events]);
+        log('download');
+    }, []);
 
     const onLoad = React.useCallback(() => {
-        setEvents([...events, 'load']);
-    }, [events]);
+        log('load');
+    }, []);
 
-    const onZoom = React.useCallback(
-        (e: ZoomEvent) => {
-            setEvents([...events, 'zoom ' + e.zoom]);
-        },
-        [events]
-    );
+    const onZoom = React.useCallback((e: ZoomEvent) => {
+        log('zoom ' + e.zoom);
+    }, []);
 
-    const onPageChange = React.useCallback(
-        (e: PageEvent) => {
-            setEvents([...events, 'page change ' + e.page]);
-        },
-        [events]
-    );
+    const onPageChange = React.useCallback((e: PageEvent) => {
+        log('page change ' + e.page);
+    }, []);
 
     return (
-        <>
+        <EventLog events={events} onClear={() => setEvents([])}>
             <PDFViewer
                 style={{ height: 500 }}
                 data={SampleFileBase64}
@@ -66,10 +39,7 @@ function App() {
                 onZoom={onZoom}
                 onPageChange={onPageChange}
             />
-            <br />
-            <br />
-            <EventsLogger events={events} />
-        </>
+        </EventLog>
     );
 }
 

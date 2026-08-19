@@ -27,7 +27,7 @@ Because of the larger license key file size, the key length is automatically tru
 
 To fix the error, copy the file to `%AppData%\Telerik\telerik-license.txt` or put the `telerik-license.txt` file in the root folder of the application.
 
-We do not recommend using the `TELERIK_LICENSE` environment variable for local development on Windows. Using the environment variable is recommended on CI/CD platforms where the variable size limit is larger. Refer to [Adding the License Key to CI Services](slug:ci_services_license).
+We do not recommend using the `TELERIK_LICENSE` environment variable for local development on Windows. Using the environment variable is recommended on CI/CD platforms where the variable size limit is larger. Refer to [Adding Deployment Keys to CI/CD Services](slug:ci_services_license).
 
 ## Will the product function with an expired license key?
 
@@ -51,7 +51,7 @@ This depends on the type of license you have:
     -   A warning message will appear when calling the `kendo-ui-license activate` command.
     -   A warning message similar to the following is logged in the build log.
 
-See the [Invalid License](#toc-invalid-license) section for more information.
+See the [License Activation Errors and Warnings](slug:license_activation_errors) article for more information.
 
 > Note: Future updates of the library may restrict or disable some features when no valid license is present.
 
@@ -60,13 +60,19 @@ See the [Invalid License](#toc-invalid-license) section for more information.
 The most likely cause is that the newly installed KendoReact components were released after the expiration date of your current license. To fix this issue:
 
 1. [Download a new license key](https://www.telerik.com/account/your-licenses/license-keys).
-1. [Activate the new license key](slug:my_license#toc-install-or-update-a-license-key).
+1. [Activate the new license key](slug:my_license#install-or-update-the-license-key-file-in-your-project).
 
 ## Can I use the same license key in multiple builds?
 
-You can use your personal license key in multiple pipelines, builds, and environments.
+You can use your developer license key in multiple pipelines, builds, and environments.
 
-However, each individual developer must use a unique personal license key.
+However, each individual developer must use a unique developer license key.
+
+## What is the difference between developer license keys and deployment keys?
+
+Developer license keys remain valid for CI/CD deployments and can be used in multiple pipelines, builds, and environments. However, their larger size can exceed the environment-variable limits of some CI/CD services. If a developer license key is exposed, you cannot revoke it independently.
+
+Deployment keys are application-specific keys designed for build pipelines. They are shorter than developer license keys, which helps avoid environment-variable limits, and you can remove a deployment key if it is exposed. For new CI/CD pipelines, we recommend using deployment keys.
 
 ## Will the product function without a license key?
 
@@ -76,13 +82,13 @@ Yes, the product will continue to function normally without a license key. Howev
 -   A licensing banner will pop over a page that uses unlicensed KendoReact components.
 -   A warning message will appear in the browser console.
 
-See the [Invalid License](#toc-invalid-license) section for more information.
+See the [License Activation Errors and Warnings](slug:license_activation_errors) article for more information.
 
 Please, be aware that future updates of the library may restrict or disable some features when no valid license is present.
 
 ## Will a watermark and license banner appear if I use a Kendo React version that was released prior to v.5.16.0?
 
-If you have a valid license activated for your project, you won't get any [invalid license attributes](#toc-invalid-license).
+If you have a valid license activated for your project, you won't get any invalid license attributes.
 
 ## Does the license key expire?
 
@@ -97,7 +103,7 @@ You will need to [download and install a new license key](slug:my_license) after
 
 ## I am using Vite in my project. I can't hide the invalid license watermarks, banner, and console warning even though the license activation is successful. What should I do?
 
-The described scenario happens in Vite context and most often when you have previously activated a commercial or trial license in your project and now you want to renew this license. In the discussed case, once you run `npx kendo-ui-license activate`, the console message says you have successfully activated your license but in fact, all [invalid license attributes](#toc-invalid-license) are still presented.
+The described scenario happens in Vite context and most often when you have previously activated a commercial or trial license in your project and now you want to renew this license. In the discussed case, once you run `npx kendo-ui-license activate`, the console message says you have successfully activated your license but in fact, invalid license attributes are still presented.
 
 The reason for the issue is that Vite is not updating its cache after the licensing command is executed. To make the warning disappear:
 
@@ -108,8 +114,8 @@ The reason for the issue is that Vite is not updating its cache after the licens
 
 If this happens, the possible reason is that the end date of the license activated in your application is before the release date of the newly installed KendoReact packages. To fix this issue:
 
-1. [Download a new license key](#toc-download-your-license-key).
-1. [Activate the new license key](#toc-install-or-update-a-license-key) in your project.
+1. [Download a new license key](slug:my_license#download-your-license-key-file).
+1. [Activate the new license key](slug:my_license#install-or-update-the-license-key-file-in-your-project) in your project.
 
 ## Do I need an Internet connection to activate the license?
 
@@ -121,7 +127,7 @@ No network requests are made at any point of the project lifecycle.
 
 No, you do not have to add the `telerik-license.txt` license key file or its contents to source control.
 
-Build servers have to use the `TELERIK_LICENSE` environment variable as described in [Adding the License Key to CI Services](slug:my_license#toc-add-the-license-key-to-ci-services).
+Build servers have to use the `TELERIK_LICENSE` environment variable as described in [Adding Deployment Keys to CI/CD Services](slug:ci_services_license).
 
 **DO NOT** Store the license key in plaintext, for example in a GitHub Actions Workflow definition.
 
@@ -162,5 +168,5 @@ You can use any of the keys associated with your subscriptions to activate your 
 
 -   [Setting Up Your License Key](slug:my_license)
 -   [License Activation Errors and Warnings](slug:license_activation_errors)
--   [Adding the License Key to CI Services](slug:ci_services_license)
+-   [Adding Deployment Keys to CI/CD Services](slug:ci_services_license)
 -   [Get Started with KendoReact Free](slug://getting_started_free_vs_premium)

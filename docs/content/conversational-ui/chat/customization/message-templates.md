@@ -24,7 +24,7 @@ The Chat allows you to customize the appearance of messages through the [`messag
 
 To set a custom message template, create a React component and assign it to the `messageTemplate` property of the Chat component.
 
-{% meta height:830 %}
+{% meta height:940 %}
 {% embed_file chat/customization/message-templates/app.tsx preview %}
 {% embed_file chat/customization/message-templates/main.tsx %}
 {% embed_file chat/customization/message-templates/templates.tsx %}
@@ -35,7 +35,7 @@ To set a custom message template, create a React component and assign it to the 
 
 The following example demonstrates how to create custom message templates that can display images alongside text content. This approach gives you full control over image rendering, including sizing, positioning, and layout.
 
-{% meta height:680 %}
+{% meta height:780 %}
 {% embed_file chat/customization/message-templates-images/app.tsx preview %}
 {% embed_file chat/customization/message-templates-images/main.tsx %}
 {% embed_file chat/customization/message-templates-images/templates.tsx %}
@@ -46,7 +46,7 @@ The following example demonstrates how to create custom message templates that c
 
 The following example demonstrates how to render Markdown by utilizing the marked library.
 
-{% meta height:680 %}
+{% meta height:780 %}
 {% embed_file chat/customization/markdown-messages/app.tsx preview %}
 {% embed_file chat/customization/markdown-messages/main.tsx %}
 {% endmeta %}

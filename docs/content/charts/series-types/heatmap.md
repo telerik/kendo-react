@@ -88,14 +88,16 @@ The Heatmap supports the following shapes for each point (marker):
 -   `circle`&mdash;Circle markers.
 -   `triangle`&mdash;Triangle markers.
 
-{% meta height:600 %}
+The following example shows the available marker shapes and how to configure them using the series `markers` prop.
+
+{% meta height:630 %}
 {% embed_file series-types/heatmap/marker-shapes/func/app.tsx preview %}
 {% embed_file series-types/heatmap/marker-shapes/func/main.tsx %}
 {% endmeta %}
 
 Normally, the distance between the markers is fixed and the size of each marker is determined by the available space. To use a fixed marker size and variable distance instead, set the [marker size]({% slug api_charts_chartseriesmarkersprops %}#toc-size) to a value in pixels:
 
-{% meta height:600 %}
+{% meta height:630 %}
 {% embed_file series-types/heatmap/marker-size/func/app.tsx preview %}
 {% embed_file series-types/heatmap/marker-size/func/main.tsx %}
 {% endmeta %}

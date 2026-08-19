@@ -31,9 +31,9 @@ The Adaptive Mode changes the rendering of the popup element of the DateRangePic
 
 ## On-Screen Keyboard
 
-To enhance the mobile user experience of your React apps, you can configure the type of the on-screen keyboard for the KendoReact DateRangePicker. Use the [`inputAttributes`]({% slug api_dateinputs_daterangepicker %}#toc-inputAttributes) property to set the `inputMode`. Based on the `inputMode` setting, the browser will display the most appropriate virtual keyboard.
+To enhance the mobile user experience of your React apps, you can configure the type of the on-screen keyboard for the KendoReact DateRangePicker. Use the [`inputAttributes`]({% slug api_dateinputs_daterangepickerprops %}) property to set the `inputMode`. Based on the `inputMode` setting, the browser will display the most appropriate virtual keyboard.
 
-The [`inputAttributes`]({% slug api_dateinputs_daterangepicker %}#toc-inputAttributes) property lets you set custom HTML attributes to the inner focusable input.
+The [`inputAttributes`]({% slug api_dateinputs_daterangepickerprops %}) property lets you set custom HTML attributes to the inner focusable input.
 
 > Check out the different type of virtual keyboard on a mobile device.
 

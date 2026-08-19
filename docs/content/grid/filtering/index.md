@@ -1,15 +1,15 @@
 ---
 title: Overview
-description: 'Learn how to apply filtering in the KendoReact Data Grid to display only relevant records.'
-components: ["datagrid"]
+description: 'Learn how to apply filtering in the KendoReact Grid to display only relevant records.'
+components: ['grid']
 slug: filtering_grid
 position: 0
 tier: mixed
 ---
 
-# KendoReact Data Grid Filtering Overview
+# KendoReact Grid Filtering Overview
 
-The KendoReact Data Grid enables you to display only those Grid records which meet specified criteria.
+The KendoReact Grid enables you to display only those Grid records which meet specified criteria.
 
 When filtering is enabled, the Grid renders a filter row in its header. Depending on the data type of each column, the filter row displays filtering components where the user can filter string, numeric, boolean, or date data types. Each consecutive filter is added to the previous ones and reduces the subset of data.
 
@@ -17,7 +17,7 @@ When filtering is enabled, the Grid renders a filter row in its header. Dependin
 
 ## Enabling Filtering
 
-The KendoKendoReact Data Grid supports filtering in two modes:
+The KendoReact Grid supports filtering in two modes:
 
 -   [Built-in State Management](#using-the-built-in-state-management-for-filtering): The Grid manages its own filtering state internally.
 
@@ -31,7 +31,7 @@ To enable filtering using the built-in state management mechanism, follow these 
 1. Set the [`filterable`]({% slug api_grid_gridprops %}#toc-filterable) prop of the Grid to render a filter row under the column headers.
 1. Set the [`defaultFilter`](slug:api_grid_gridprops#defaultFilter) prop to set initial filtering for the Grid.
 
-The following example demonstrates how to implement filtering using the built-in state management of the KendoKendoReact Data Grid.
+The following example demonstrates how to implement filtering using the built-in state management of the KendoReact Grid.
 
 {% meta height:440 %}
 {% embed_file filtering/built-in/func/app.tsx preview %}
@@ -40,7 +40,7 @@ The following example demonstrates how to implement filtering using the built-in
 
 ## Using the Filtering in Controlled Mode
 
-To enable numeric paging in the KendoKendoReact Data Grid and use it in controlled mode, follow these steps:
+To enable numeric paging in the KendoReact Grid and use it in controlled mode, follow these steps:
 
 1. Set the [`filterable`]({% slug api_grid_gridprops %}#toc-filterable) prop of the Grid to render a filter row under the column headers.
 1. Set the [`filter`]({% slug api_grid_gridprops %}#toc-filter) option of the Grid. Filtering conditions are declared as [`FilterDescriptors`]({% slug api_kendo-data-query_filterdescriptor %}) or [`CompositeFilterDescriptor`]({% slug api_kendo-data-query_compositefilterdescriptor %}).
@@ -53,12 +53,14 @@ To enable numeric paging in the KendoKendoReact Data Grid and use it in controll
 
 The Grid allows you also to customize the operators for the `numeric`, `text`, and `date` filter types by using the [`filterOperators`]({% slug api_grid_gridfilteroperators %}) property. The Grid uses the first operator from each type as its default operator. The Boolean filter types always use the `equal` operator.
 
+The following example demonstrates how to restrict available filter operators per column type using the `filterOperators` property.
+
 {% meta height:480 %}
 {% embed_file filtering/operators/func/app.tsx preview %}
 {% embed_file filtering/operators/func/main.tsx %}
 {% endmeta %}
 
-## KendoReact Data Grid Filtering APIs
+## KendoReact Grid Filtering APIs
 
 -   [FilterDescriptors]({% slug api_kendo-data-query_filterdescriptor %})
 -   [onDataStateChange]({% slug api_grid_gridprops %}#toc-ondatastatechange)

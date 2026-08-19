@@ -12,6 +12,7 @@ import {
     promptViewDefaults
 } from '@progress/kendo-react-conversational-ui';
 import { suggestionsList, promptCommands } from './service-ai-data';
+import { EventLog } from '@docs-shared/EventLog';
 
 import './overview-styles.css';
 
@@ -216,7 +217,7 @@ const App = () => {
     };
 
     return (
-        <div className="k-d-flex k-gap-3">
+        <EventLog events={events} onClear={() => setEvents([])}>
             <AIPrompt
                 style={{ width: '400px', height: '400px' }}
                 activeView={activeView}
@@ -233,16 +234,7 @@ const App = () => {
                 <AIPromptOutputView outputs={outputs} showOutputRating={true} />
                 <AIPromptCommandsView commands={promptCommands} />
             </AIPrompt>
-            <br />
-            <div className="example-config">
-                <h5>Event Log</h5>
-                <ul className="event-log">
-                    {events.map((event, index) => (
-                        <li key={index}>{event}</li>
-                    ))}
-                </ul>
-            </div>
-        </div>
+        </EventLog>
     );
 };
 

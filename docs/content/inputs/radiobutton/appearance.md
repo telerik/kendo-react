@@ -12,7 +12,7 @@ The RadioButton component provides a predefined set of appearance options.
 
 Apart from the default vision of the RadioButton, these alternative styling options enable you to configure each individual aspect of the appearance of a RadioButton.
 
--   [`size`]({% slug api_inputs_radiobuttonprops %}#toc-shape)
+-   [`size`]({% slug api_inputs_radiobuttonprops %}#toc-size)
 
 The following example demonstrates the different sizes for the RadioButton component.
 

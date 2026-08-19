@@ -16,7 +16,7 @@ The column menu provides flexible options for high-level customization. For exam
 
 To configure the column menu, use the [`columnMenu`]({% slug api_treelist_treelistcolumnprops %}#toc-columnmenu) option of the columns and pass the corresponding ColumnMenu component base on the column data type.
 
-{% meta height:600 %}
+{% meta height:770 %}
 {% embed_file column-menu/func/app.tsx preview %}
 {% embed_file column-menu/func/main.tsx %}
 {% endmeta %}
@@ -39,7 +39,7 @@ The following example demonstrates how to customize the column menus:
 -   Boolean ColumnMenu
     -   implement a custom filter editor
 
-{% meta height:600 %}
+{% meta height:770 %}
 {% embed_file column-menu-custom/func/app.tsx preview %}
 {% embed_file column-menu-custom/func/main.tsx %}
 {% embed_file column-menu-custom/func/textColumnMenu.tsx %}

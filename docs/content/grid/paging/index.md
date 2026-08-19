@@ -1,23 +1,23 @@
 ---
 title: Overview
-description: 'Get started with the paging functionality of the KendoKendoReact Data Grid and learn how to split content into pages.'
-components: ["datagrid"]
+description: 'Get started with the paging functionality of the KendoReact Grid and learn how to split content into pages.'
+components: ['grid']
 slug: paging_grid
 position: 0
 tier: mixed
 ---
 
-# KendoReact Data Grid Paging Overview
+# KendoReact Grid Paging Overview
 
-The KendoReact Data Grid provides a flexible paging mechanism that enables users to navigate large datasets efficiently. The built-in pager allows for numeric and input-based navigation, as well as customizable paging components.
+The KendoReact Grid provides a flexible paging mechanism that enables users to navigate large datasets efficiently. The built-in pager allows for numeric and input-based navigation, as well as customizable paging components.
 
-## Getting Started with the KendoReact Data Grid Paging
+## Getting Started with the KendoReact Grid Paging
 
 Pagination is enabled in the Grid by setting the `pageable` property. This adds navigation controls to the bottom of the Grid, allowing users to move between pages.
 
 ## Enabling Paging
 
-The KendoKendoReact Data Grid supports paging in two modes:
+The KendoReact Grid supports paging in two modes:
 
 -   [Built-in State Management](#using-the-built-in-state-management-for-paging): The Grid manages its own paging state internally.
 
@@ -32,7 +32,7 @@ To enable basic numeric paging using the built-in state management mechanism, fo
 1. Set the [`defaultTake`](slug:api_grid_gridprops#defaulttake) prop to define the number of items rendered initially.
 1. Use the [`defaultSkip`](slug:api_grid_gridprops#defaultskip) prop to specify the number of items to be skipped initially, determining the starting page.
 
-The following example demonstrates how to implement numeric paging using the built-in state management of the KendoKendoReact Data Grid.
+The following example demonstrates how to implement numeric paging using the built-in state management of the KendoReact Grid.
 
 {% meta height:470 %}
 {% embed_file paging-basic/built-in/func/app.tsx preview %}
@@ -41,7 +41,7 @@ The following example demonstrates how to implement numeric paging using the bui
 
 ## Using the Paging in Controlled Mode
 
-To enable numeric paging in the KendoKendoReact Data Grid and use it in controlled mode, follow these steps:
+To enable numeric paging in the KendoReact Grid and use it in controlled mode, follow these steps:
 
 1. Set the [`pageable`]({% slug api_grid_gridprops %}#toc-pageable) prop of the Grid to enable paging.
 1. Use the [`skip`]({% slug api_grid_gridprops %}#toc-skip) prop used to track the current page.

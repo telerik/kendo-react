@@ -1,16 +1,16 @@
 ---
 title: Column Widths
-description: 'Get started with the KendoKendoReact Data Grid and set up the widths of its columns.'
-components: ["datagrid"]
+description: 'Get started with the KendoReact Grid and set up the widths of its columns.'
+components: ['grid']
 slug: width_grid
 position: 10
-subject: Data Grid
+subject: Grid
 tier: free
 ---
 
 # Column Widths
 
-The KendoKendoReact Data Grid is responsive and has no fixed width&mdash;it behaves like a block-level element, expanding to occupy 100% of its parent element's width.
+The KendoReact Grid is responsive and has no fixed width&mdash;it behaves like a block-level element, expanding to occupy 100% of its parent element's width.
 
 As a result, the Grid will be resized based on the available space.
 
@@ -29,6 +29,8 @@ You can dynamically change the width of the Grid columns and set a minimum width
 
 > The `resize` event is not debounced to show the main logic. Debouncing can be done depending on the application requirements.
 
+The following example demonstrates how to set a minimum column width threshold so that a horizontal scrollbar appears when the Grid is resized below the combined minimum widths.
+
 {% meta height:480 %}
 {% embed_file column-min-width/func/app.tsx preview %}
 {% embed_file column-min-width/func/main.tsx %}
@@ -39,6 +41,8 @@ You can dynamically change the width of the Grid columns and set a minimum width
 ### Grid With Fixed Width
 
 You can set the Grid column widths in percentage by using a function that programmatically calculates the real width based on the passed percentage value.
+
+The following example demonstrates how to calculate column widths as percentages of a fixed Grid width using a helper function.
 
 {% meta height:480 %}
 {% embed_file column-width-percentage/func/app.tsx preview %}
@@ -60,6 +64,8 @@ When the Grid has no fixed width and resizes based on available space, you can s
 
 You can make these styles specific to one or more Grids by adding a [className]({% slug api_grid_gridprops %}#toc-className).
 
+The following example demonstrates how to set column widths as percentages via CSS rules targeting the Grid header and table column elements.
+
 {% meta height:460 %}
 {% embed_file column-width-percentage-100/func/app.tsx preview %}
 {% embed_file column-width-percentage-100/func/main.tsx %}
@@ -68,6 +74,8 @@ You can make these styles specific to one or more Grids by adding a [className](
 ## Fitting Grids on Smaller Screens
 
 To accommodate the Grid on smaller screens, you can programmatically hide columns based on the width of the Grid. To achieve this scenario, subscribe to the `resize` event of the Window and hide a column under a specific width of the Grid.
+
+The following example demonstrates how to hide columns dynamically by listening to window resize events and toggling column visibility based on the Grid's current width.
 
 {% meta height:460 %}
 {% embed_file grid-min-width/func/app.tsx preview %}

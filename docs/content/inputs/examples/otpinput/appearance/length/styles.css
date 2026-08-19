@@ -1,0 +1,13 @@
+.length-label {
+    margin-right: 15px;
+    white-space: nowrap;
+    color: var(--kendo-color-subtle, #a1a1a1);
+}
+
+.example-config {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}

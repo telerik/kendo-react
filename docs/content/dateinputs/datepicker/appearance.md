@@ -12,6 +12,13 @@ The DatePicker provides a predefined set of appearance options.
 
 Apart from the default vision of the DatePicker, these alternative styling options enable you to configure each individual aspect of the appearance of a DatePicker.
 
+The following example demonstrates all the available appearance options of the DatePicker in a single, configurable demo.
+
+{% meta height:470 %}
+{% embed_file datepicker/appearance/overview/app.tsx preview %}
+{% embed_file datepicker/appearance/overview/main.tsx %}
+{% endmeta %}
+
 ## Size
 
 You can set the size of the DatePicker through the [`size`]({% slug api_dateinputs_datepickerprops %}#toc-size) property. The DatePicker component comes in three different sizes: `small`, `medium` (default), and `large`.

@@ -16,12 +16,12 @@ Using the KendoReact premium components and features without a license or with a
 
 When using KendoReact premium components or features in your app, the `kendo-licensing` module may recognize your license as invalid in the following cases:
 
--   Using an expired subscription license&mdash;subscription licenses expire at the end of the subscription term.
--   Using an expired trial license.
--   A missing license for KendoReact.
--   Not [installing a license key](slug:my_license#install-or-update-the-license-key-file-in-your-project) in your application.
--   Not [updating the license key](slug:my_license#install-or-update-the-license-key-file-in-your-project) after renewing your KendoReact license.
--   Cached old (expired) license key.
+- Using an expired subscription license&mdash;subscription licenses expire at the end of the subscription term.
+- Using an expired trial license.
+- A missing license for KendoReact.
+- Not [installing a license key](slug:my_license#install-or-update-the-license-key-file-in-your-project) in your application.
+- Not [updating the license key](slug:my_license#install-or-update-the-license-key-file-in-your-project) after renewing your KendoReact license.
+- Cached old (expired) license key.
 
 When using the [KendoReact Free components and features](slug://getting_started_free_vs_premium), no license is required.
 
@@ -29,9 +29,9 @@ When using the [KendoReact Free components and features](slug://getting_started_
 
 If you use KendoReact premium components or features in a project with an expired or missing license, the UI components exhibit the following invalid license attributes:
 
--   A [watermark](#watermark) appears over the premium KendoReact components.
--   A [banner](#banner) is rendered on pages that use the KendoReact premium components.
--   A [warning message](#console-warning) is logged in the browser console of pages rendering the KendoReact premium components.
+- A [watermark](#watermark) appears over the premium KendoReact components.
+- A [banner](#banner) is rendered on pages that use the KendoReact premium components.
+- A [warning message](#console-warning) is logged in the browser console of pages rendering the KendoReact premium components.
 
 ### Watermark
 
@@ -49,8 +49,8 @@ A banner with an action button appears on pages that use KendoReact premium comp
 
 ![KendoReact - Invalid License Banner](./assets/no-license-key-banner.png)
 
--   Clicking the action button redirects you to start a trial, purchase, or renew your license, depending on your license status.
--   Clicking the **x** button of the banner closes it until the page is reloaded.
+- Clicking the action button redirects you to start a trial, purchase, or renew your license, depending on your license status.
+- Clicking the **x** button of the banner closes it until the page is reloaded.
 
 ### Console Warning
 
@@ -73,7 +73,7 @@ If you use KendoReact premium components and features in a project with an expir
 
 ## See Also
 
--   [Setting Up Your License Key](slug:my_license)
--   [Adding the License Key to CI Services](slug:my_license#add-the-license-key-to-ci-services)
--   [Frequently Asked Questions](slug:faq_license)
--   [Get Started with KendoReact Free](slug://getting_started_free_vs_premium)
+- [Setting Up Your License Key](slug:my_license)
+- [Adding Deployment Keys to CI/CD Services](slug:ci_services_license)
+- [Frequently Asked Questions](slug:faq_license)
+- [Get Started with KendoReact Free](slug://getting_started_free_vs_premium)

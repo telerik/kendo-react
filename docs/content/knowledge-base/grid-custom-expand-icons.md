@@ -1,11 +1,11 @@
 ---
-title: Customizing Expand/Collapse Icons for Detail Rows in KendoReact Data Grid
-description: Learn how to customize the expand/collapse icons for Detail Rows in KendoReact Data Grid by using custom icons.
+title: Customizing Expand/Collapse Icons for Detail Rows in KendoReact Grid
+description: Learn how to customize the expand/collapse icons for Detail Rows in KendoReact Grid by using custom icons.
 type: how-to
-page_title: How to Customize Expand/Collapse Icons in KendoReact Data Grid
-meta_title: How to Customize Expand/Collapse Icons in KendoReact Data Grid
+page_title: How to Customize Expand/Collapse Icons in KendoReact Grid
+meta_title: How to Customize Expand/Collapse Icons in KendoReact Grid
 slug: grid-custom-expand-icons
-tags: kendoreact, datagrid, expand-collapse, hierarchycell, detail-expand, customization
+tags: kendoreact, grid, expand-collapse, hierarchycell, detail-expand, customization
 res_type: kb
 ticketid: 1694742
 components: ["grid"]
@@ -28,7 +28,7 @@ components: ["grid"]
 
 ## Description
 
-I want to customize the expand/collapse icons for the Detail Rows in the [KendoReact Data Grid](slug:overview_grid). I want to replace the default icons with custom ones.
+I want to customize the expand/collapse icons for the Detail Rows in the [KendoReact Grid](slug:overview_grid). I want to replace the default icons with custom ones.
 
 ## Solution
 
@@ -43,6 +43,6 @@ To achieve the desired behavior you can use the `IconsContext.Provider` to provi
 
 ## See Also
 
--   [KendoReact Data Grid Overview](slug:overview_grid)
+-   [KendoReact Grid Overview](slug:overview_grid)
 -   [Hierarchy Cells Documentation](slug:hierarchy_cells_grid)
 -   [Grid Properties API Reference](slug:api_grid_gridprops)

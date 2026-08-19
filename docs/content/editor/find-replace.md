@@ -18,7 +18,7 @@ The following example demonstrates how to:
 -   Add the matches highlighting plugin.
 -   Add a plugin which will bind `Ctrl + F` keys to open the `Find and Replace` dialog.
 
-{% meta height:810 %}
+{% meta height:870 %}
 {% embed_file find-replace/func/app.tsx preview %}
 {% embed_file find-replace/func/main.tsx %}
 {% endmeta %}

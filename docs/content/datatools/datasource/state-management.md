@@ -33,7 +33,7 @@ const dataSource = useDataSource({
 
 Here's a complete example demonstrating built-in state management with persistence:
 
-{% meta height:520 %}
+{% meta height:630 %}
 {% embed_file datasource/state-management/built-in/app.tsx preview %}
 {% endmeta %}
 

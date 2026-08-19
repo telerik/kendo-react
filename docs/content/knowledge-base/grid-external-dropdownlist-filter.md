@@ -37,7 +37,7 @@ All data operations in the Grid are handled manually, so including a filter expr
 
 This is an example showcasing this approach:
 
-{% meta height:700 %}
+{% meta height:780 %}
 {% embed_file grid/grid-external-dropdownlist-filter/app.jsx preview %}
 {% embed_file grid/grid-external-dropdownlist-filter/main.jsx %}
 {% embed_file grid/grid-external-dropdownlist-filter/products.json %}

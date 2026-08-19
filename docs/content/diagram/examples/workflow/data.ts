@@ -14,7 +14,7 @@ export const shapes: ShapeOptions[] = [
         tooltipText: 'Entry point of the workflow process.',
         x: 237,
         y: 50,
-        width: 266,
+        width: 216,
         height: 100
     },
     {

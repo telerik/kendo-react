@@ -45,9 +45,10 @@
 .card-article-description .title {
     font-size: 18px;
     line-height: 24px;
+    font-weight: bold;
 }
 
-.card-article-description .sub-title {
+.card-article-description .subtitle {
     font-size: 14px;
     line-height: 24px;
 }
@@ -56,17 +57,30 @@
     font-size: 14px;
     line-height: 20px;
     padding-bottom: 4px;
+    font-weight: bold;
 }
 
-.k-card-horizontal .k-card-image.card-article-image {
+.k-card-horizontal .k-card-media.card-article-image {
+    width: 225px;
     max-width: 225px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-article-media {
+    position: relative;
+    width: 225px;
+    min-height: 150px;
+    flex-shrink: 0;
+    margin-left: auto;
 }
 
 .card-article .photo-text {
     text-align: right;
     font-style: italic;
     font-size: 10px;
-    opacity: 0.7;
+    opacity: 0.9;
+    color: var(--kendo-color-subtle-text, #767676);
 }
 
 .k-chip-list {

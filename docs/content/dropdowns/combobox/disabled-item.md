@@ -19,12 +19,16 @@ The [skipDisabledItems]({% slug api_dropdowns_comboboxprops %}#toc-skipdisabledi
 
 ## Disabled Items Without Keyboard Focusing
 
+The following example demonstrates ComboBox items that are disabled and cannot receive keyboard focus when navigating the list.
+
 {% meta height:330 %}
 {% embed_file combobox/disabled-item/disabled-item-not-focusable/app.tsx preview %}
 {% embed_file combobox/disabled-item/disabled-item-not-focusable/main.tsx %}
 {% endmeta %}
 
 ## Disabled Items With Keyboard Focusing
+
+The following example demonstrates disabled ComboBox items that can still receive keyboard focus. Selecting a disabled item does not change the ComboBox value.
 
 {% meta height:330 %}
 {% embed_file combobox/disabled-item/disabled-item-focusable/app.tsx preview %}
@@ -33,12 +37,16 @@ The [skipDisabledItems]({% slug api_dropdowns_comboboxprops %}#toc-skipdisabledi
 
 ## Disabled Items Without Keyboard Focusing + Grouping
 
+The following example demonstrates how to combine data grouping with disabled items that cannot receive keyboard focus.
+
 {% meta height:330 %}
 {% embed_file combobox/disabled-item/disabled-item-not-focusable-grouping/app.tsx preview %}
 {% embed_file combobox/disabled-item/disabled-item-not-focusable-grouping/main.tsx %}
 {% endmeta %}
 
 ## Disabled Items With Keyboard Focusing + Grouping
+
+The following example demonstrates how to combine data grouping with disabled items that can receive keyboard focus but cannot be selected.
 
 {% meta height:330 %}
 {% embed_file combobox/disabled-item/disabled-item-focusable-grouping/app.tsx preview %}

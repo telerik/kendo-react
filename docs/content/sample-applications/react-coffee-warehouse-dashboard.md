@@ -11,7 +11,7 @@ level: 0
 
 # Coffee Warehouse Dashboard Application
 
-The Coffee Warehouse sample app showcases React UI components such as a Data Grid, Charts, Scheduler and more into one single dashboard. It was built following the same principles and quality standards you would use when building an app for production, so make sure you take a peek at the source code as you can probably learn a thing or two.
+The Coffee Warehouse sample app showcases React UI components such as a Grid, Charts, Scheduler and more into one single dashboard. It was built following the same principles and quality standards you would use when building an app for production, so make sure you take a peek at the source code as you can probably learn a thing or two.
 
 <CtaPanelOverview message="The Coffee Warehouse Sample App was created with KendoReact, an enterprise-grade UI library with 120+ free and premium components. To try out the premium components used in this app, you need to sign up for a 30-day trial, which gives you access to the full KendoReact library."></CtaPanelOverview>
 
@@ -29,7 +29,7 @@ To play with the demo and see how it’s built, you may want to run it locally:
 
 ## About the App
 
-This application was created following the best practices of building with KendoReact components and has a clean structure, which makes it a fantastic learning resource. You can see how easy it is to set up complex components such as the Data Grid (Table), Charts, Scheduler or Forms. You will also find examples for handling the connections between the components. For example, how to set up the Chart type based on button selection, or how to save a newly uploaded avatar in your global user settings.
+This application was created following the best practices of building with KendoReact components and has a clean structure, which makes it a fantastic learning resource. You can see how easy it is to set up complex components such as the Grid (Table), Charts, Scheduler or Forms. You will also find examples for handling the connections between the components. For example, how to set up the Chart type based on button selection, or how to save a newly uploaded avatar in your global user settings.
 
 ## Styling KendoReact Components with Ease
 
@@ -52,7 +52,7 @@ Globalization is a process which combines the translation of component messages 
 -   [Get Started with KendoReact Free](https://www.telerik.com/kendo-react-ui/components/getting-started)
 
 -   [Get Started with KendoReact Free](slug://getting_started_free_vs_premium)
--   [KendoReact Data Grid]({% slug overview_grid %})
+-   [KendoReact Grid]({% slug overview_grid %})
 -   [KendoReact Charts]({% slug overview_charts %})
 -   [KendoReact Scheduler]({% slug overview_scheduler %})
 -   [KendoReact Globalization]({% slug overview_globalization %})

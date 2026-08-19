@@ -12,7 +12,7 @@ The KendoReact Date Inputs is a collection of customizable, responsive, and inte
 
 <CtaPanelOverview></CtaPanelOverview>
 
-{% meta height:750 %}
+{% meta height:1140 %}
 {% embed_file overview/func/app.tsx preview %}
 {% embed_file overview/func/main.tsx %}
 {% endmeta %}
@@ -147,7 +147,7 @@ Based on the frameworks and technologies used in your project, you can combine U
 
 ### Are the KendoReact Date Inputs Free to Use?
 
-The KendoReact Date Inputs provide both [free React date inputs](#free-react-date-inputs) and [advanced date inputs](#advanced-date-inputs) which require a commercial license key or an active trial license key.
+The KendoReact Date Inputs provide both [free React date inputs](#free-react-date-inputs) and [advanced date inputs](#advanced-react-date-inputs) which require a commercial license key or an active trial license key.
 
 You can start using the free components without any license or registration with Progress or Telerik.
 

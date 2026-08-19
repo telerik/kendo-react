@@ -18,7 +18,7 @@ Our React Charts library features a large collection of data visualization chart
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AYvVFUvxo0o" title="React Charts Made Easy: KendoReact Getting Started" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-{% meta height:850 %}
+{% meta height:1790 %}
 {% embed_file overview/func/app.tsx preview %}
 {% embed_file overview/func/main.tsx %}
 {% endmeta %}

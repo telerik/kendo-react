@@ -72,12 +72,6 @@ position: 1
         <a href="{% slug api_diagram_delay %}">Delay</a>
     </li>
     <li class="api-item">
-        <a href="{% slug api_diagram_diagramconnectiontooltip %}">DiagramConnectionTooltip</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_diagram_diagramshapetooltip %}">DiagramShapeTooltip</a>
-    </li>
-    <li class="api-item">
         <a href="{% slug api_diagram_directaccessstorage %}">DirectAccessStorage</a>
     </li>
     <li class="api-item">
@@ -222,6 +216,9 @@ position: 1
         <a href="{% slug api_diagram_connectionpointseditable %}">ConnectionPointsEditable</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_diagram_connectionrichtextcontent %}">ConnectionRichTextContent</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_diagram_convertresult %}">ConvertResult</a>
     </li>
     <li class="api-item">
@@ -339,6 +336,9 @@ position: 1
         <a href="{% slug api_diagram_shapeoptionsbase %}">ShapeOptionsBase</a>
     </li>
     <li class="api-item">
+        <a href="{% slug api_diagram_shaperichtextcontent %}">ShapeRichTextContent</a>
+    </li>
+    <li class="api-item">
         <a href="{% slug api_diagram_shaperotation %}">ShapeRotation</a>
     </li>
     <li class="api-item">
@@ -346,6 +346,42 @@ position: 1
     </li>
     <li class="api-item">
         <a href="{% slug api_diagram_tooltipoptions %}">TooltipOptions</a>
+    </li>
+  </ul>
+</div>
+<div class="api-index-section">
+
+
+<span class="section-key">
+
+
+## Union
+
+
+</span>
+
+
+  <ul class="api-item-list">
+    <li class="api-item">
+        <a href="{% slug api_diagram_connectiontype %}">ConnectionType</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_diagram_dashtype %}">DashType</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_diagram_diagramdataitem %}">DiagramDataItem</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_diagram_diagramevent %}">DiagramEvent</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_diagram_direction %}">Direction</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_diagram_frompathorfn %}">FromPathOrFn</a>
+    </li>
+    <li class="api-item">
+        <a href="{% slug api_diagram_shapetype %}">ShapeType</a>
     </li>
   </ul>
 </div>
@@ -364,39 +400,6 @@ position: 1
   <ul class="api-item-list">
     <li class="api-item">
         <a href="{% slug api_diagram_converttodiagrammodel %}">convertToDiagramModel</a>
-    </li>
-  </ul>
-</div>
-<div class="api-index-section">
-
-
-<span class="section-key">
-
-
-## Union
-
-
-</span>
-
-
-  <ul class="api-item-list">
-    <li class="api-item">
-        <a href="{% slug api_diagram_dashtype %}">DashType</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_diagram_diagramdataitem %}">DiagramDataItem</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_diagram_diagramevent %}">DiagramEvent</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_diagram_direction %}">Direction</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_diagram_frompathorfn %}">FromPathOrFn</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_diagram_shapetype %}">ShapeType</a>
     </li>
   </ul>
 </div>

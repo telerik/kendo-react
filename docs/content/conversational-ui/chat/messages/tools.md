@@ -28,7 +28,7 @@ The default actions are **Copy** and **Reply**. However, you can extend them and
 
 Upon selecting an action from the context menu, the [`onContextMenuAction`](slug:api_conversational-ui_chatprops#oncontextmenuaction) event is triggered, returning the selected [`MessageAction`](slug:api_conversational-ui_messageaction) as an argument, allowing you to handle the action accordingly.
 
-{% meta height:680 %}
+{% meta height:800 %}
 {% embed_file chat/messages/context-menu/app.tsx preview %}
 {% embed_file chat/messages/context-menu/main.tsx %}
 {% endmeta %}
@@ -41,7 +41,7 @@ To customize the message toolbar actions, set the [`messageToolbarActions`](slug
 
 Upon clicking any of the toolbar action buttons, the [`onToolbarAction`](slug:api_conversational-ui_chatprops#ontoolbaraction) event is triggered, returning the selected [`MessageAction`](slug:api_conversational-ui_messageaction) as an argument. This allows you to handle the action accordingly.
 
-{% meta height:680 %}
+{% meta height:800 %}
 {% embed_file chat/messages/toolbar/app.tsx preview %}
 {% embed_file chat/messages/toolbar/main.tsx %}
 {% endmeta %}
@@ -54,7 +54,7 @@ To customize the file actions, set the [`fileActions`](slug:api_conversational-u
 
 When a user clicks any of the file action buttons, the [`onFileAction`](slug:api_conversational-ui_chatprops#onfileaction) event is triggered, returning the selected [`MessageAction`](slug:api_conversational-ui_messageaction) along with the file information. This allows you to handle file-related operations accordingly.
 
-{% meta height:680 %}
+{% meta height:800 %}
 {% embed_file chat/messages/file-actions/app.tsx preview %}
 {% embed_file chat/messages/file-actions/main.tsx %}
 {% embed_file chat/messages/file-actions/ActionLogger.tsx %}

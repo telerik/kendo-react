@@ -12,7 +12,7 @@ The KendoReact Spreadsheet allows you to control the enabled and disabled state 
 
 In the following example, you can see how to disable the cells in the target range programmatically:
 
-{% meta height:760 %}
+{% meta height:880 %}
 {% embed_file disabled-cells/func/app.tsx preview %}
 {% embed_file disabled-cells/func/main.tsx %}
 {% endmeta %}

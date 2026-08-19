@@ -8,7 +8,7 @@ position: 6
 
 # Placeholders
 
-The DatePicker enables you to [render a text hint](#toc-text-hints) for its input field and to [provide descriptions for the format sections](#toc-format-sections-description).
+The DatePicker enables you to [render a text hint](#text-hints) for its input field and to [provide descriptions for the format sections](#format-sections-description).
 
 ## Text Hints
 
@@ -21,7 +21,6 @@ When the value of the DatePicker is `null`, or there is no partial selection, yo
 
 ## Format Sections Description
 
-For its input field, the DatePicker enables you to [provide descriptions for the format sections](#toc-setting-the-description-of-the-format-sections).
 
 The [`formatPlaceholder`]({% slug api_dateinputs_datepickerprops %}#toc-formatplaceholder) option enables you to set the way the format sections of the input field are rendered. For example, whether the month input is prompted as `month` or `MM`.
 

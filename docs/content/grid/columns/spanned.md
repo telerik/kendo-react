@@ -1,16 +1,16 @@
 ---
 title: Spanning Columns
-description: 'Get started with the KendoKendoReact Data Grid supporting the spanning of columns'
-components: ["datagrid"]
+description: 'Get started with the KendoReact Grid supporting the spanning of columns'
+components: ['grid']
 slug: spanned_columns_grid
 position: 30
-subject: Data Grid
+subject: Grid
 tier: free
 ---
 
 # Spanning Columns
 
-The KendoKendoReact Data Grid supports spanning row content across multiple cells while retaining individual header and footer cells.
+The KendoReact Grid supports spanning row content across multiple cells while retaining individual header and footer cells.
 
 <CtaPanelOverview title="Use the React @Subject for Free" message="You can use the free feature set of the @Subject in production, with no sign-up or license required. @Subject is part of KendoReact, an enterprise-grade UI library with 120+ @FreemiumShortLink and premium components. To try out the @Subject premium functionality, @StartTrialLink."></CtaPanelOverview>
 
@@ -26,6 +26,8 @@ In the sample below, the `colSpan` prop is configured for the **Product Name** c
 ## Spanned Column Headers
 
 You can also use the `colSpan` prop to span multiple column headers, as demonstrated in the sample below.
+
+The following example demonstrates how to use the `colSpan` prop to span header cells across multiple columns, including spanning within a nested multi-level header structure.
 
 {% meta height:480 %}
 {% embed_file colspan-headers/func/app.tsx preview %}

@@ -19,7 +19,7 @@ To implement streaming AI responses, you need to configure the following propert
 3. **Handle cancellation** &mdash; Use the [`onCancel`](slug:api_conversational-ui_aipromptprops#oncancel) event to stop streaming when users click the Stop Generation button.
 4. **Manage outputs** &mdash; Update the `outputs` array progressively as streamed content arrives.
 
-{% meta height:570 %}
+{% meta height:680 %}
 {% embed_file ai-prompt/streaming/app.tsx preview %}
 {% embed_file ai-prompt/streaming/main.tsx %}
 {% embed_file ai-prompt/streaming/service-ai-data %}

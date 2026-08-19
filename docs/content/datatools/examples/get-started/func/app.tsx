@@ -9,7 +9,11 @@ const App = () => {
         setSkip(event.skip);
         setTake(event.take);
     };
-    return <Pager skip={skip} take={take} total={50} previousNext={true} onPageChange={handlePageChange} />;
+    return (
+        <div className="example-wrapper-center">
+            <Pager skip={skip} take={take} total={50} previousNext={true} onPageChange={handlePageChange} />
+        </div>
+    );
 };
 
 export default App;

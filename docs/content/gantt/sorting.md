@@ -21,7 +21,7 @@ To enable sorting:
 
 The following example demonstrates the minimum required configuration for sorting the Gantt records.
 
-{% meta height:560 %}
+{% meta height:680 %}
 {% embed_file sorting/func/app.tsx preview %}
 {% embed_file sorting/func/main.tsx %}
 {% endmeta %}

@@ -681,129 +681,6 @@ position: 1
         <a href="{% slug api_charts_axislabelclickevent %}">AxisLabelClickEvent</a>
     </li>
     <li class="api-item">
-        <a href="{% slug api_charts_chart %}">Chart</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartarea %}">ChartArea</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartaxisdefaultscrosshair %}">ChartAxisDefaultsCrosshair</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartaxisdefaultscrosshairtooltip %}">ChartAxisDefaultsCrosshairTooltip</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartaxisdefaultslabels %}">ChartAxisDefaultsLabels</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartaxisdefaultstitle %}">ChartAxisDefaultsTitle</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartcategoryaxis %}">ChartCategoryAxis</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartcategoryaxisitem %}">ChartCategoryAxisItem</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartcategoryaxistitle %}">ChartCategoryAxisTitle</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartlegend %}">ChartLegend</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartlegendinactiveitems %}">ChartLegendInactiveItems</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartlegenditem %}">ChartLegendItem</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartlegendtitle %}">ChartLegendTitle</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartnavigator %}">ChartNavigator</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartnavigatorcategoryaxis %}">ChartNavigatorCategoryAxis</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartnavigatorcategoryaxistitle %}">ChartNavigatorCategoryAxisTitle</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartnavigatorpane %}">ChartNavigatorPane</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartnavigatorpanetitle %}">ChartNavigatorPaneTitle</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartnavigatorseries %}">ChartNavigatorSeries</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartnavigatorseriesitem %}">ChartNavigatorSeriesItem</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartnodataoverlay %}">ChartNoDataOverlay</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartpane %}">ChartPane</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartpanedefaults %}">ChartPaneDefaults</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartpanedefaultstitle %}">ChartPaneDefaultsTitle</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartpanes %}">ChartPanes</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartpanetitle %}">ChartPaneTitle</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartseries %}">ChartSeries</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartseriesitem %}">ChartSeriesItem</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartsubtitle %}">ChartSubtitle</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_charttitle %}">ChartTitle</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_charttooltip %}">ChartTooltip</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartvalueaxis %}">ChartValueAxis</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartvalueaxisitem %}">ChartValueAxisItem</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartvalueaxistitle %}">ChartValueAxisTitle</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartxaxis %}">ChartXAxis</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartxaxisitem %}">ChartXAxisItem</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartxaxistitle %}">ChartXAxisTitle</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartyaxis %}">ChartYAxis</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartyaxisitem %}">ChartYAxisItem</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_chartyaxistitle %}">ChartYAxisTitle</a>
-    </li>
-    <li class="api-item">
-        <a href="{% slug api_charts_container %}">Container</a>
-    </li>
-    <li class="api-item">
         <a href="{% slug api_charts_dragendevent %}">DragEndEvent</a>
     </li>
     <li class="api-item">
@@ -959,9 +836,6 @@ position: 1
 
 
   <ul class="api-item-list">
-    <li class="api-item">
-        <a href="{% slug api_charts_chart %}">Chart</a>
-    </li>
     <li class="api-item">
         <a href="{% slug api_charts_chart %}">Chart</a>
     </li>

@@ -15,13 +15,13 @@ You can configure each individual aspect of the appearance of the SpeechToTextBu
 -   [Configure the size](#size)
 -   [Configure the border radius](#border-radius)
 -   [Configure the fill mode](#fill-mode)
--   [Configure the theme color](#theme-color)
+-   [Configure the theme color](#theme-colors)
 -   [Customizing further the button's styling](#custom-styling)
 -   [Customizing the active state styling](#active-state-styling)
 
 The following example demonstrates all available appearance options of the SpeechToTextButton in action.
 
-{% meta height:630 %}
+{% meta height:500 %}
 {% embed_file speechtotextbutton/button-appearance/app.tsx preview %}
 {% embed_file speechtotextbutton/button-appearance/main.tsx %}
 {% embed_file speechtotextbutton/button-appearance/styles.css %}

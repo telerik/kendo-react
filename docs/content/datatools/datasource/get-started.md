@@ -20,6 +20,8 @@ After completing this guide, you will have a React Grid running with the [`useDa
 
 ## Before You Begin
 
+To follow the steps in this guide, you need to have a React project set up. If you don't have one, you can create a new React application using Vite by running the following command in your terminal:
+
 ```sh
 npm create vite@latest my-app -- --template react
 ```
@@ -29,6 +31,8 @@ This guide requires that you have **basic knowledge of React and TypeScript**, a
 > tip You can speed up the development of your KendoReact application with the [Kendo UI Template Wizard for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=KendoUI.kendotemplatewizard).
 
 ## Install the package
+
+To install the Data Tools package, run the following command in the root folder of your React project:
 
 ```sh
 npm i @progress/kendo-react-data-tools
@@ -105,7 +109,7 @@ const result = useODataDataSource({
 
 ## Next Steps
 
-Now try to add another component from the Data tools package yourself. The procedures for [installing](#install-the-components), [importing](#import-the-components), and [using](#use-the-components) the data tools components are identical for all components in the package.
+Now try to add another component from the Data tools package yourself. The procedures for [installing](#install-the-package), [importing](#import-the-hooks), and [using](#use-the-component) the data tools components are identical for all components in the package.
 
 The Data Tools package provides the following components:
 

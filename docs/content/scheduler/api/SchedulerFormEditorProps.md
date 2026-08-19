@@ -34,7 +34,7 @@ Represents the props of the KendoReact `SchedulerFormEditor` component.
 <code>
 
 
-React.ComponentType&lt;TargetlessChangeEvent&lt;CheckboxProps [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with FieldProps&gt;&gt;
+React.ComponentType&lt;TargetlessChangeEvent&lt;SwitchProps [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with FieldProps&gt;&gt;
 
 
 </code>
@@ -51,7 +51,7 @@ React.ComponentType&lt;TargetlessChangeEvent&lt;CheckboxProps [intersected](http
 
 
 Overrides the component used for visualizing the `allDay` field editor.
-The [KendoReact Checkbox](https://www.telerik.com/kendo-react-ui/components/inputs/checkbox) component is used, by default.
+The [KendoReact Switch](https://www.telerik.com/kendo-react-ui/components/inputs/switch) component is used, by default.
 
 For more information, please refer to the [`Scheduler Form Editor Customization`](https://www.telerik.com/kendo-react-ui/components/scheduler/customization/form/editor) article.
 
@@ -181,82 +181,6 @@ For more information, please refer to the [`Scheduler Form Editor Customization`
 <td class="table-cell-name">
 
 
-#### descriptionError?
-
-
-</td>
-<td type class="table-cell-type">
-
-
-<code>
-
-
-React.ComponentType&lt;ErrorProps [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with FieldProps&gt;
-
-
-</code>
-
-
-</td>
-<td class="table-cell-default">
-
-
-
-
-</td>
-<td class="table-cell-comment">
-
-
-Overrides the component used for visualizing the `description` field error.
-The [KendoReact Error](https://www.telerik.com/kendo-react-ui/components/labels/error) component is used, by default.
-
-For more information, please refer to the [`Scheduler Form Editor Customization`](https://www.telerik.com/kendo-react-ui/components/scheduler/customization/form/editor) article.
-
-
-</td>
-</tr>
-<tr>
-<td class="table-cell-name">
-
-
-#### descriptionLabel?
-
-
-</td>
-<td type class="table-cell-type">
-
-
-<code>
-
-
-React.ComponentType&lt;LabelProps [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with FieldProps&gt;
-
-
-</code>
-
-
-</td>
-<td class="table-cell-default">
-
-
-
-
-</td>
-<td class="table-cell-comment">
-
-
-Overrides the component used for visualizing the `description` field label.
-The [KendoReact Label](https://www.telerik.com/kendo-react-ui/components/labels/label) component is used, by default.
-
-For more information, please refer to the [`Scheduler Form Editor Customization`](https://www.telerik.com/kendo-react-ui/components/scheduler/customization/form/editor) article.
-
-
-</td>
-</tr>
-<tr>
-<td class="table-cell-name">
-
-
 #### endEditor?
 
 
@@ -285,44 +209,6 @@ React.ComponentType&lt;TargetlessChangeEvent&lt;Omit&lt;DatePickerProps | DateTi
 
 Overrides the component used for visualizing the `end` field editor.
 The [KendoReact DatePicker](https://www.telerik.com/kendo-react-ui/components/dateinputs/datepicker) or [KendoReact DateTimePicker](https://www.telerik.com/kendo-react-ui/components/dateinputs/datetimepicker) component is used by default depending on the `allDay` field value.
-
-For more information, please refer to the [`Scheduler Form Editor Customization`](https://www.telerik.com/kendo-react-ui/components/scheduler/customization/form/editor) article.
-
-
-</td>
-</tr>
-<tr>
-<td class="table-cell-name">
-
-
-#### endError?
-
-
-</td>
-<td type class="table-cell-type">
-
-
-<code>
-
-
-React.ComponentType&lt;ErrorProps [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with FieldProps&gt;
-
-
-</code>
-
-
-</td>
-<td class="table-cell-default">
-
-
-
-
-</td>
-<td class="table-cell-comment">
-
-
-Overrides the component used for visualizing the `end` field error.
-The [KendoReact Error](https://www.telerik.com/kendo-react-ui/components/labels/error) component is used, by default.
 
 For more information, please refer to the [`Scheduler Form Editor Customization`](https://www.telerik.com/kendo-react-ui/components/scheduler/customization/form/editor) article.
 
@@ -371,82 +257,6 @@ For more information, please refer to the [`Scheduler Form Editor Customization`
 <td class="table-cell-name">
 
 
-#### endTimezoneCheckedEditor?
-
-
-</td>
-<td type class="table-cell-type">
-
-
-<code>
-
-
-React.ComponentType&lt;TargetlessChangeEvent&lt;CheckboxProps&gt;&gt;
-
-
-</code>
-
-
-</td>
-<td class="table-cell-default">
-
-
-
-
-</td>
-<td class="table-cell-comment">
-
-
-Overrides the component used for visualizing the `end timezone checked` editor.
-The [KendoReact Checkbox](https://www.telerik.com/kendo-react-ui/components/inputs/checkbox) component is used, by default.
-
-For more information, please refer to the [`Scheduler Form Editor Customization`](https://www.telerik.com/kendo-react-ui/components/scheduler/customization/form/editor) article.
-
-
-</td>
-</tr>
-<tr>
-<td class="table-cell-name">
-
-
-#### endTimezoneCheckedLabel?
-
-
-</td>
-<td type class="table-cell-type">
-
-
-<code>
-
-
-React.ComponentType&lt;LabelProps&gt;
-
-
-</code>
-
-
-</td>
-<td class="table-cell-default">
-
-
-
-
-</td>
-<td class="table-cell-comment">
-
-
-Overrides the component used for visualizing the `start timezone checked` label.
-The [KendoReact Label](https://www.telerik.com/kendo-react-ui/components/labels/label) component is used, by default.
-
-For more information, please refer to the [`Scheduler Form Editor Customization`](https://www.telerik.com/kendo-react-ui/components/scheduler/customization/form/editor) article.
-
-
-</td>
-</tr>
-<tr>
-<td class="table-cell-name">
-
-
 #### endTimezoneEditor?
 
 
@@ -457,7 +267,7 @@ For more information, please refer to the [`Scheduler Form Editor Customization`
 <code>
 
 
-React.ComponentType&lt;TargetlessChangeEvent&lt;ComboBoxProps&gt;&gt;
+React.ComponentType&lt;TargetlessChangeEvent&lt;DropDownListProps&gt;&gt;
 
 
 </code>
@@ -474,83 +284,7 @@ React.ComponentType&lt;TargetlessChangeEvent&lt;ComboBoxProps&gt;&gt;
 
 
 Overrides the component used for visualizing the `end timezone` field editor.
-An extended [KendoReact ComboBox](https://www.telerik.com/kendo-react-ui/components/dropdowns/combobox) component is used, by default.
-
-For more information, please refer to the [`Scheduler Form Editor Customization`](https://www.telerik.com/kendo-react-ui/components/scheduler/customization/form/editor) article.
-
-
-</td>
-</tr>
-<tr>
-<td class="table-cell-name">
-
-
-#### endTimezoneError?
-
-
-</td>
-<td type class="table-cell-type">
-
-
-<code>
-
-
-React.ComponentType&lt;ErrorProps&gt;
-
-
-</code>
-
-
-</td>
-<td class="table-cell-default">
-
-
-
-
-</td>
-<td class="table-cell-comment">
-
-
-Overrides the component used for visualizing the `end timezone` field error.
-The [KendoReact Error](https://www.telerik.com/kendo-react-ui/components/labels/error) component is used, by default.
-
-For more information, please refer to the [`Scheduler Form Editor Customization`](https://www.telerik.com/kendo-react-ui/components/scheduler/customization/form/editor) article.
-
-
-</td>
-</tr>
-<tr>
-<td class="table-cell-name">
-
-
-#### endTimezoneLabel?
-
-
-</td>
-<td type class="table-cell-type">
-
-
-<code>
-
-
-React.ComponentType&lt;LabelProps&gt;
-
-
-</code>
-
-
-</td>
-<td class="table-cell-default">
-
-
-
-
-</td>
-<td class="table-cell-comment">
-
-
-Overrides the component used for visualizing the `end timezone` field label.
-The [KendoReact Label](https://www.telerik.com/kendo-react-ui/components/labels/label) component is used, by default.
+A [KendoReact DropDownList](https://www.telerik.com/kendo-react-ui/components/dropdowns/dropdownlist) component is used, by default.
 
 For more information, please refer to the [`Scheduler Form Editor Customization`](https://www.telerik.com/kendo-react-ui/components/scheduler/customization/form/editor) article.
 
@@ -802,6 +536,44 @@ const handleSubmit = event => console.log("Form submitted");
 <td class="table-cell-name">
 
 
+#### recurrenceButtonTextTemplate?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+React.ComponentType&lt;[RecurrenceButtonTextTemplateProps]({% slug api_scheduler_recurrencebuttontexttemplateprops %})&gt;
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Overrides the content rendered inside the "Make recurring" button in the event edit form.
+
+Receives the current `recurrenceRule` (RRULE string or `null` when no recurrence is set).
+The developer controls the entire button content for both states.
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### recurrenceEditor?
 
 
@@ -842,6 +614,44 @@ For more information, please refer to the [`Scheduler Form Editor Customization`
 <td class="table-cell-name">
 
 
+#### recurrenceSummaryTemplate?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+React.ComponentType&lt;[RecurrenceSummaryTemplateProps]({% slug api_scheduler_recurrencesummarytemplateprops %})&gt;
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+Overrides the recurrence summary hint displayed inside the recurrence editor dialog.
+
+Receives the current `recurrenceRule` (RRULE string) and should render the desired summary.
+This template is only used when a recurrence rule exists.
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### resourceEditor?
 
 
@@ -870,82 +680,6 @@ React.ComponentType&lt;TargetlessChangeEvent&lt;Object&gt;&gt;
 
 Overrides the component used for visualizing each `resource` field editor.
 An extended KendoReact [MultiSelect](https://www.telerik.com/kendo-react-ui/components/dropdowns/multiselect) or [DropDownList](https://www.telerik.com/kendo-react-ui/components/dropdowns/dropdownlist) component is used by default, depending on the `multiple` field of each individual `resource`.
-
-For more information, please refer to the [`Scheduler Form Editor Customization`](https://www.telerik.com/kendo-react-ui/components/scheduler/customization/form/editor) article.
-
-
-</td>
-</tr>
-<tr>
-<td class="table-cell-name">
-
-
-#### resourceLabel?
-
-
-</td>
-<td type class="table-cell-type">
-
-
-<code>
-
-
-React.ComponentType&lt;LabelProps [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with FieldProps&gt;
-
-
-</code>
-
-
-</td>
-<td class="table-cell-default">
-
-
-
-
-</td>
-<td class="table-cell-comment">
-
-
-Overrides the component used for visualizing the `start timezone checked` field label.
-The [KendoReact Label](https://www.telerik.com/kendo-react-ui/components/labels/label) component is used, by default.
-
-For more information, please refer to the [`Scheduler Form Editor Customization`](https://www.telerik.com/kendo-react-ui/components/scheduler/customization/form/editor) article.
-
-
-</td>
-</tr>
-<tr>
-<td class="table-cell-name">
-
-
-#### resourcesError?
-
-
-</td>
-<td type class="table-cell-type">
-
-
-<code>
-
-
-React.ComponentType&lt;ErrorProps [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with FieldProps&gt;
-
-
-</code>
-
-
-</td>
-<td class="table-cell-default">
-
-
-
-
-</td>
-<td class="table-cell-comment">
-
-
-Overrides the component used for visualizing each `resources` field error.
-The [KendoReact Error](https://www.telerik.com/kendo-react-ui/components/labels/error) component is used, by default.
 
 For more information, please refer to the [`Scheduler Form Editor Customization`](https://www.telerik.com/kendo-react-ui/components/scheduler/customization/form/editor) article.
 
@@ -994,44 +728,6 @@ For more information, please refer to the [`Scheduler Form Editor Customization`
 <td class="table-cell-name">
 
 
-#### startError?
-
-
-</td>
-<td type class="table-cell-type">
-
-
-<code>
-
-
-React.ComponentType&lt;ErrorProps [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with FieldProps&gt;
-
-
-</code>
-
-
-</td>
-<td class="table-cell-default">
-
-
-
-
-</td>
-<td class="table-cell-comment">
-
-
-Overrides the component used for visualizing the `start` field error.
-The [KendoReact Error](https://www.telerik.com/kendo-react-ui/components/labels/error) component is used, by default.
-
-For more information, please refer to the [`Scheduler Form Editor Customization`](https://www.telerik.com/kendo-react-ui/components/scheduler/customization/form/editor) article.
-
-
-</td>
-</tr>
-<tr>
-<td class="table-cell-name">
-
-
 #### startLabel?
 
 
@@ -1070,82 +766,6 @@ For more information, please refer to the [`Scheduler Form Editor Customization`
 <td class="table-cell-name">
 
 
-#### startTimezoneCheckedEditor?
-
-
-</td>
-<td type class="table-cell-type">
-
-
-<code>
-
-
-React.ComponentType&lt;TargetlessChangeEvent&lt;CheckboxProps&gt;&gt;
-
-
-</code>
-
-
-</td>
-<td class="table-cell-default">
-
-
-
-
-</td>
-<td class="table-cell-comment">
-
-
-Overrides the component used for visualizing the `start timezone checked` editor.
-The [KendoReact Checkbox](https://www.telerik.com/kendo-react-ui/components/inputs/checkbox) component is used, by default.
-
-For more information, please refer to the [`Scheduler Form Editor Customization`](https://www.telerik.com/kendo-react-ui/components/scheduler/customization/form/editor) article.
-
-
-</td>
-</tr>
-<tr>
-<td class="table-cell-name">
-
-
-#### startTimezoneCheckedLabel?
-
-
-</td>
-<td type class="table-cell-type">
-
-
-<code>
-
-
-React.ComponentType&lt;LabelProps&gt;
-
-
-</code>
-
-
-</td>
-<td class="table-cell-default">
-
-
-
-
-</td>
-<td class="table-cell-comment">
-
-
-Overrides the component used for visualizing the `start timezone checked` label.
-The [KendoReact Label](https://www.telerik.com/kendo-react-ui/components/labels/label) component is used, by default.
-
-For more information, please refer to the [`Scheduler Form Editor Customization`](https://www.telerik.com/kendo-react-ui/components/scheduler/customization/form/editor) article.
-
-
-</td>
-</tr>
-<tr>
-<td class="table-cell-name">
-
-
 #### startTimezoneEditor?
 
 
@@ -1156,7 +776,7 @@ For more information, please refer to the [`Scheduler Form Editor Customization`
 <code>
 
 
-React.ComponentType&lt;TargetlessChangeEvent&lt;ComboBoxProps [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with FieldProps&gt;&gt;
+React.ComponentType&lt;TargetlessChangeEvent&lt;DropDownListProps [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with FieldProps&gt;&gt;
 
 
 </code>
@@ -1173,83 +793,7 @@ React.ComponentType&lt;TargetlessChangeEvent&lt;ComboBoxProps [intersected](http
 
 
 Overrides the component used for visualizing the `start timezone` field editor.
-An extended [KendoReact ComboBox](https://www.telerik.com/kendo-react-ui/components/dropdowns/combobox) component is used, by default.
-
-For more information, please refer to the [`Scheduler Form Editor Customization`](https://www.telerik.com/kendo-react-ui/components/scheduler/customization/form/editor) article.
-
-
-</td>
-</tr>
-<tr>
-<td class="table-cell-name">
-
-
-#### startTimezoneError?
-
-
-</td>
-<td type class="table-cell-type">
-
-
-<code>
-
-
-React.ComponentType&lt;ErrorProps [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with FieldProps&gt;
-
-
-</code>
-
-
-</td>
-<td class="table-cell-default">
-
-
-
-
-</td>
-<td class="table-cell-comment">
-
-
-Overrides the component used for visualizing the `start timezone` field error.
-The [KendoReact Error](https://www.telerik.com/kendo-react-ui/components/labels/error) component is used, by default.
-
-For more information, please refer to the [`Scheduler Form Editor Customization`](https://www.telerik.com/kendo-react-ui/components/scheduler/customization/form/editor) article.
-
-
-</td>
-</tr>
-<tr>
-<td class="table-cell-name">
-
-
-#### startTimezoneLabel?
-
-
-</td>
-<td type class="table-cell-type">
-
-
-<code>
-
-
-React.ComponentType&lt;LabelProps [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with FieldProps&gt;
-
-
-</code>
-
-
-</td>
-<td class="table-cell-default">
-
-
-
-
-</td>
-<td class="table-cell-comment">
-
-
-Overrides the component used for visualizing the `start timezone` field label.
-The [KendoReact Label](https://www.telerik.com/kendo-react-ui/components/labels/label) component is used, by default.
+A [KendoReact DropDownList](https://www.telerik.com/kendo-react-ui/components/dropdowns/dropdownlist) component is used, by default.
 
 For more information, please refer to the [`Scheduler Form Editor Customization`](https://www.telerik.com/kendo-react-ui/components/scheduler/customization/form/editor) article.
 
@@ -1364,82 +908,6 @@ React.ComponentType&lt;TargetlessChangeEvent&lt;InputProps [intersected](https:/
 
 Overrides the component used for visualizing the `title` field editor.
 The [KendoReact Input](https://www.telerik.com/kendo-react-ui/components/inputs/input) component is used, by default.
-
-For more information, please refer to the [`Scheduler Form Editor Customization`](https://www.telerik.com/kendo-react-ui/components/scheduler/customization/form/editor) article.
-
-
-</td>
-</tr>
-<tr>
-<td class="table-cell-name">
-
-
-#### titleError?
-
-
-</td>
-<td type class="table-cell-type">
-
-
-<code>
-
-
-React.ComponentType&lt;LabelProps [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with FieldProps&gt;
-
-
-</code>
-
-
-</td>
-<td class="table-cell-default">
-
-
-
-
-</td>
-<td class="table-cell-comment">
-
-
-Overrides the component used for visualizing the `title` field error.
-The [KendoReact Error](https://www.telerik.com/kendo-react-ui/components/labels/error) component is used, by default.
-
-For more information, please refer to the [`Scheduler Form Editor Customization`](https://www.telerik.com/kendo-react-ui/components/scheduler/customization/form/editor) article.
-
-
-</td>
-</tr>
-<tr>
-<td class="table-cell-name">
-
-
-#### titleLabel?
-
-
-</td>
-<td type class="table-cell-type">
-
-
-<code>
-
-
-React.ComponentType&lt;LabelProps [intersected](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) with FieldProps&gt;
-
-
-</code>
-
-
-</td>
-<td class="table-cell-default">
-
-
-
-
-</td>
-<td class="table-cell-comment">
-
-
-Overrides the component used for visualizing the `title` field label.
-The [KendoReact Label](https://www.telerik.com/kendo-react-ui/components/labels/label) component is used, by default.
 
 For more information, please refer to the [`Scheduler Form Editor Customization`](https://www.telerik.com/kendo-react-ui/components/scheduler/customization/form/editor) article.
 

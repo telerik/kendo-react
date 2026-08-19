@@ -4,8 +4,6 @@ description: 'Style the appearance of the KendoReact Animations in React project
 components: ["animation"]
 slug: appearance_animation
 position: 11
-tag: updated
-release_tag: Q2 2026
 ---
 
 # Appearance

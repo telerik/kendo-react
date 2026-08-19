@@ -1,7 +1,7 @@
 ---
 title: Basics
-description: 'Get started with the KendoKendoReact Data Grid which supports the export of content to PDF.'
-components: ["datagrid"]
+description: 'Get started with the KendoReact Grid which supports the export of content to PDF.'
+components: ['grid']
 slug: overview_pdfexport_grid
 position: 0
 subject: PDF Export feature of the Grid
@@ -9,13 +9,15 @@ subject: PDF Export feature of the Grid
 
 # PDF Export Basics
 
-The [`pdf`]({% slug api_grid_gridprops %}#toc-pdf) property of the Grid component enables you to export the content of the KendoReact Data Grid to PDF, offering various configuration options for customizing the export process.
+The [`pdf`]({% slug api_grid_gridprops %}#toc-pdf) property of the Grid component enables you to export the content of the KendoReact Grid to PDF, offering various configuration options for customizing the export process.
 
 <CtaPanelOverview></CtaPanelOverview>
 
 ## Getting Started
 
 To enable the PDF export, set the Grid [`pdf`]({% slug api_grid_gridprops %}#toc-pdf) prop to `true` or provide a [`GridProps`]({% slug api_grid_gridprops %}) configuration. Then handle the [`onPdfExport`]({% slug api_grid_gridprops %}#toc-onpdfexport) event to perform a smooth asynchronous export using the [`saveGridPDF`]({% slug api_pdf_savegridpdf %}) function from the `@progress/kendo-react-pdf` package.
+
+The following example demonstrates basic PDF export, where clicking the **Export to PDF** button generates and downloads a PDF of the Grid data.
 
 {% meta height:560 %}
 {% embed_file pdf-export/func/app.tsx preview %}

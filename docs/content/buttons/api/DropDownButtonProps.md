@@ -927,7 +927,7 @@ The available options are:
 <code>
 
 
-"small" | "medium" | "large"
+"small" | "medium" | "large" | "xs"
 
 
 </code>
@@ -953,6 +953,7 @@ undefined (theme-controlled)
 Configures the `size` of the DropDownButton.
 
 The available options are:
+- `xs`
 - `small`
 - `medium`
 - `large`

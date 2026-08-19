@@ -1,20 +1,20 @@
 ---
 title: Globalization
-page_title: 'Globalization in React Data Grid RSC Mode'
-description: 'Configure Internationalization and Localization features in RSC mode of KendoReact Data Grid to adapt the Grid to different languages and cultures.'
-components: ["datagrid"]
+page_title: 'Globalization in React Grid RSC Mode'
+description: 'Configure Internationalization and Localization features in RSC mode of KendoReact Grid to adapt the Grid to different languages and cultures.'
+components: ['grid']
 slug: globalization_rsc_grid
 subject: RSC Mode of the Grid
 position: 80
 ---
 
-# KendoKendoReact Data Grid Globalization in RSC Mode
+# KendoReact Grid Globalization in RSC Mode
 
-The RSC mode of the KendoKendoReact Data Grid supports globalization features to adapt the Grid to different languages and cultures. This article explains how to configure the Grid for internationalization and localization in RSC mode.
+The RSC mode of the KendoReact Grid supports globalization features to adapt the Grid to different languages and cultures. This article explains how to configure the Grid for internationalization and localization in RSC mode.
 
 <CtaPanelOverview></CtaPanelOverview>
 
-The RSC globalization of the KendoKendoReact Data Grid works a bit differently than in the client mode. In RSC mode, the Grid keeps track of all loaded locale data & localization messages, but only sends the currently active locale and messages to the client in order to reduce the network bandwidth and improve the performance of the application.
+The RSC globalization of the KendoReact Grid works a bit differently than in the client mode. In RSC mode, the Grid keeps track of all loaded locale data & localization messages, but only sends the currently active locale and messages to the client in order to reduce the network bandwidth and improve the performance of the application.
 
 ## Loading locale & localization messages
 
@@ -65,5 +65,5 @@ The key points in the implementation of the above examples are as follows:
 ## Suggested Links
 
 -   [KendoReact Globalization](slug:overview_globalization)
--   [KendoKendoReact Data Grid Globalization](slug:globalization_grid)
--   [KendoKendoReact Data Grid RSC Mode Overview](slug:overview_rsc_grid)
+-   [KendoReact Grid Globalization](slug:globalization_grid)
+-   [KendoReact Grid RSC Mode Overview](slug:overview_rsc_grid)

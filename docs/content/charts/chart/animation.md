@@ -3,8 +3,6 @@ title: Animation
 description: 'Learn how the KendoReact Charts animate on initial render and how to customize or disable their motion.'
 slug: animation_charts
 position: 40
-tag: new
-release_tag: Q2 2026
 ---
 
 # Animation
@@ -15,7 +13,7 @@ The KendoReact Charts animate on initial render to help users perceive the data 
 
 By default, every Chart plays its initial-render animation. To turn it off for a specific Chart, set the `transitions` prop to `false`. The following example lets you toggle the prop and see the animation replay with each change.
 
-<demo metaUrl="charts/chart/animation/basic/" height="610"></demo>
+<demo metaUrl="charts/chart/animation/basic/" height="630"></demo>
 
 ## Motion CSS Variables
 

@@ -12,8 +12,6 @@ By default, the ColorPalette is enabled.
 
 To disable user interaction with the component, set the [`disabled`]({% slug api_inputs_colorpaletteprops %}#toc-disabled) property to `true`.
 
-
-
 {% meta height:250 %}
 {% embed_file colorpalette/disabled/func/app.tsx preview %}
 {% embed_file colorpalette/disabled/func/main.tsx %}

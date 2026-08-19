@@ -45,7 +45,7 @@ The following table lists the built-in message keys and their default values.
 
 The following example demonstrates how to load and apply the messages.
 
-{% meta height:770 %}
+{% meta height:880 %}
 {% embed_file globalization/func/app.tsx preview %}
 {% embed_file globalization/func/main.tsx %}
 {% embed_file globalization/func/es.json %}
@@ -55,7 +55,7 @@ The following example demonstrates how to load and apply the messages.
 
 The following example demonstrates how to utilize the RTL support for the PivotGrid.
 
-{% meta height:770 %}
+{% meta height:880 %}
 {% embed_file rtl/func/app.tsx preview %}
 {% embed_file rtl/func/main.tsx %}
 {% embed_file rtl/func/es.json %}

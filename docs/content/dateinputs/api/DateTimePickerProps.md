@@ -224,6 +224,44 @@ For example these elements could contain error or hint message.
 <td class="table-cell-name">
 
 
+#### ariaLabel?
+
+
+</td>
+<td type class="table-cell-type">
+
+
+<code>
+
+
+string
+
+
+</code>
+
+
+</td>
+<td class="table-cell-default">
+
+
+
+
+</td>
+<td class="table-cell-comment">
+
+
+The accessible label of the component.
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td class="table-cell-name">
+
+
 #### ariaLabelledBy?
 
 
@@ -1296,8 +1334,7 @@ Fires each time any of the DateTimePicker elements gets blurred.
 <td class="table-cell-comment">
 
 
-/**
- * Fires when the user selects a new `value` ([see example](https://www.telerik.com/kendo-react-ui/components/dateinputs/datetimepicker/controlled-state#toc-controlling-the-date-value)).
+Fires when the user selects a new `value` ([see example](https://www.telerik.com/kendo-react-ui/components/dateinputs/datetimepicker/controlled-state#toc-controlling-the-date-value)).
 
 
 </td>
@@ -1332,8 +1369,7 @@ Fires each time any of the DateTimePicker elements gets blurred.
 <td class="table-cell-comment">
 
 
-/**
- * Fires when the popup closes.
+Fires when the popup closes.
 
 
 </td>
@@ -1403,8 +1439,7 @@ Fires each time the user focuses any of the DateTimePicker elements.
 <td class="table-cell-comment">
 
 
-/**
- * Fires when the popup opens.
+Fires when the popup opens.
 
 
 </td>
@@ -1640,8 +1675,6 @@ Specifies if the popup will be displayed
 
 
 undefined (theme-controlled)
- *
- *
 
 
 </code>
@@ -1651,22 +1684,19 @@ undefined (theme-controlled)
 <td class="table-cell-comment">
 
 
-/**
- * Control the `size` of the DateTimePicker.
- *
- * The available options are:
- * - small
- * - medium
- * - large
- *
- *
+Control the `size` of the DateTimePicker.
+
+The available options are:
+- small
+- medium
+- large
 
 
 
 
-* ```tsx
- * <DateTimePicker size="large" />
- * ```
+```tsx
+<DateTimePicker size="large" />
+```
 
 
 
@@ -1976,9 +2006,8 @@ This property is part of the [FormComponentProps](https://www.telerik.com/kendo-
 <td class="table-cell-comment">
 
 
-/**
- * Set the current `value` ([see example](https://www.telerik.com/kendo-react-ui/components/dateinputs/datetimepicker/controlled-state#toc-controlling-the-date-value)).
- * Provide a valid `Date` or `null`.
+Set the current `value` ([see example](https://www.telerik.com/kendo-react-ui/components/dateinputs/datetimepicker/controlled-state#toc-controlling-the-date-value)).
+Provide a valid `Date` or `null`.
 
 
 </td>

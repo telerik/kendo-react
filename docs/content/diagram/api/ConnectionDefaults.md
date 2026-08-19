@@ -70,7 +70,7 @@ Defines accessibility options for the connection.
 <code>
 
 
-[ConnectionContent]({% slug api_diagram_connectioncontent %})
+[ConnectionContent]({% slug api_diagram_connectioncontent %}) | [ConnectionRichTextContent]({% slug api_diagram_connectionrichtextcontent %})
 
 
 </code>
@@ -500,7 +500,7 @@ Configures the default tooltip settings for all connections.
 <code>
 
 
-"polyline" | "cascading"
+[ConnectionType]({% slug api_diagram_connectiontype %})
 
 
 </code>

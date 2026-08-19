@@ -16,20 +16,20 @@ position: 110
 The PivotGrid component is a container that consists of two logically separated structural elements:
 
 
- - Data Grid (`role="grid"`);
+ - Grid (`role="grid"`);
  - Configurator (`role="dialog"`);
 
 
-Opening and closing the Configurator is controlled through dedicated shortcuts, and focus is trapped in the respective section once an element inside it gets focused. Closing the Configurator returns focus to the Data Grid.
+Opening and closing the Configurator is controlled through dedicated shortcuts, and focus is trapped in the respective section once an element inside it gets focused. Closing the Configurator returns focus to the Grid.
 
-### Data Grid Focus
+### Grid Focus
 
 
-The Data Grid is a single tab stop component. Upon focusing the Data Grid, the initial focus is set to either the previously focused cell (if any), or the first data (`<td>`) cell in the Data Grid. The change of the focused cell should be implemented using one of the following two techniques:
+The Grid is a single tab stop component. Upon focusing the Grid, the initial focus is set to either the previously focused cell (if any), or the first data (`<td>`) cell in the Grid. The change of the focused cell should be implemented using one of the following two techniques:
 
 
  - Roving TabIndex components Practice for managing the focus. Meaning that going through the cells will update the tabindex of the cell.
- - Active descendant - keeping the focus always on the Data Grid and using the `aria-activedescendant` on the Data Grid element which points to the id of the currently focused cell.
+ - Active descendant - keeping the focus always on the Grid and using the `aria-activedescendant` on the Grid element which points to the id of the currently focused cell.
  - When the Configurator is available, opening it moves the focus to the first focusable element inside. The focus is trapped and wrapped, meaning the focusable components inside will follow their natural tab index, and when the last/first element is reached `Tab`/`Shift-Tab` will focus the first/last element respectively.
  - Pressing `Escape` while the Configurator is opened and contains the focus, closes the Configurator panel and returns focus to the last focused PivotGrid cell or the first cell if no PivotGrid cell was previously focused.
 
@@ -84,7 +84,7 @@ The Data Grid is a single tab stop component. Upon focusing the Data Grid, the i
 
 [ARIA Authoring Practices: Grid Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/grid/)
 
-[ARIA Authoring Practices: Data Grid](https://www.w3.org/WAI/ARIA/apg/patterns/grid/examples/dataGrids/)
+[ARIA Authoring Practices: Grid](https://www.w3.org/WAI/ARIA/apg/patterns/grid/examples/dataGrids/)
 
 
 

@@ -14,7 +14,7 @@ The Calendar provides options for:
 
 -   [Setting default values for the uncontrolled state](#toc-setting-default-values)
 -   [Controlling the state](#toc-controlling-the-state)
--   [Programmatically changing the selected value](#toc-dynamically-chaning-the-value)
+-   [Programmatically changing the selected value](#toc-programmatically-changing-the-value)
 
 ## Setting Default Values
 

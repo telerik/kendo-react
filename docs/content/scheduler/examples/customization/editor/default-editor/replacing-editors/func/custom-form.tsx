@@ -5,43 +5,22 @@ import { CustomFormEditor } from './custom-form-editor';
 export const FormWithCustomEditor = (props: SchedulerFormProps) => {
     const fields = useSchedulerFieldsContext();
 
-    const requiredValidator = React.useCallback(
-        (value) => (!value
-            ? 'Field is required.'
-            : undefined),
-        []
-    );
-
-    const titleLengthValidator = React.useCallback(
-        (title) => {
-            return (!title || title.length < 40)
-                ? 'The title should be at least 40 characters.'
-                : undefined
-        },
-        [])
+    const descriptionValidator = React.useCallback((description) => {
+        return !description || description.length < 40
+            ? 'The description should be at least 40 characters.'
+            : undefined;
+    }, []);
 
     const customValidator = React.useCallback(
         (_dataItem, formValueGetter) => {
-            let result = {}
+            let result = {};
 
-            result[fields.title] = [
-                requiredValidator(formValueGetter(fields.title)),
-                titleLengthValidator(formValueGetter(fields.title))
-            ].filter(Boolean).reduce((current, acc) => current || acc, '')
-
-            result[fields.description] = [
-                requiredValidator(formValueGetter(fields.description))
-            ].filter(Boolean).reduce((current, acc) => current || acc, '')
+            result[fields.description] = descriptionValidator(formValueGetter(fields.description));
 
             return result;
         },
-        [fields, requiredValidator, titleLengthValidator]
-    )
+        [fields, descriptionValidator]
+    );
 
-    return (
-      <SchedulerForm
-        {...props}
-        validator={customValidator}
-        editor={CustomFormEditor}
-    />)
-}
+    return <SchedulerForm {...props} validator={customValidator} editor={CustomFormEditor} />;
+};

@@ -38,6 +38,7 @@ import '@progress/kendo-date-math/tz/America/Los_Angeles';
 import esMessages from './es.json';
 import { sampleDataWithCustomSchema, displayDate, customModelFields } from './sc-events-utc';
 import { RadioButton } from '@progress/kendo-react-inputs';
+import { locationsIcon, tagSimpleIcon } from '@progress/kendo-svg-icons';
 
 load(likelySubtags, currencyData, weekData, numbers, currencies, caGregorian, dateFields, timeZoneNames);
 loadMessages(esMessages, 'es-ES');
@@ -172,7 +173,8 @@ const App = () => {
                                 field: 'RoomID',
                                 valueField: 'value',
                                 textField: 'text',
-                                colorField: 'color'
+                                colorField: 'color',
+                                svgIcon: locationsIcon
                             },
                             {
                                 name: 'Persons',
@@ -183,7 +185,8 @@ const App = () => {
                                 field: 'PersonIDs',
                                 valueField: 'value',
                                 textField: 'text',
-                                colorField: 'color'
+                                colorField: 'color',
+                                svgIcon: tagSimpleIcon
                             }
                         ]}
                     >

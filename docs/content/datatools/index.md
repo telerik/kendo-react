@@ -14,7 +14,7 @@ The KendoReact Data Tools is a collection of customizable, responsive, and inter
 
 The following demo shows the components included in the KendoReact Data Tools package:
 
-{% meta height:850 %}
+{% meta height:1060 %}
 {% embed_file overview/func/app.tsx preview %}
 {% embed_file overview/func/main.tsx %}
 {% endmeta %}
@@ -82,7 +82,7 @@ The KendoReact Data Tools provide the following key features. Note that this is 
 
 ## How Do the KendoReact Data Tools Work?
 
-> The KendoReact Data Tools provide both [free React data tools](#free-react-data-tools) and premium data tools which require a commercial license key or an active trial license key. If you need to develop apps using the [premium React data tools](#premium-react-data-tools) or other premium KendoReact components and features, follow the instructions on the [My License page](slug://my_license) to activate your license.
+> The KendoReact Data Tools provide both [free React data tools](#free-react-datatools) and premium data tools which require a commercial license key or an active trial license key. If you need to develop apps using the [premium React data tools](#premium-react-data-tools) or other premium KendoReact components and features, follow the instructions on the [My License page](slug://my_license) to activate your license.
 
 The KendoReact Data Tools are built natively for React, with no dependencies. They leverage key React concepts such as components-based architecture, props and state management, conditional rendering, and event handling.
 
@@ -104,7 +104,7 @@ Based on the frameworks and technologies used in your project, you can combine U
 
 ### Are the KendoReact Data Tools Free to Use?
 
-The KendoReact Data Tools provide both [free React data tools](#free-react-data-tools) and [premium data tools](#premium-react-data-tools) which require a commercial license key or an active trial license key.
+The KendoReact Data Tools provide both [free React data tools](#free-react-datatools) and [premium data tools](#premium-react-data-tools) which require a commercial license key or an active trial license key.
 
 You can start using the free components without any license or registration with Progress or Telerik.
 

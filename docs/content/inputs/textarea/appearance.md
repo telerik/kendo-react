@@ -16,6 +16,13 @@ Apart from the default vision of the TextArea, these alternative styling options
 -   [Fill Mode](#fill-mode)
 -   [Border Radius](#border-radius)
 
+The following example demonstrates all the available appearance options of the TextArea in a single, configurable demo.
+
+{% meta height:180 %}
+{% embed_file textarea/appearance/func/app.tsx preview %}
+{% embed_file textarea/appearance/func/main.tsx %}
+{% endmeta %}
+
 ## Size
 
 The KendoReact TextArea enables you to configure its [`size`](slug:api_inputs_textareaprops#size).

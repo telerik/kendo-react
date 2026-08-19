@@ -34,7 +34,7 @@ The `onCancel` event.
 <code>
 
 
-[Upload]({% slug api_upload_upload %})
+[UploadHandle]({% slug api_upload_uploadhandle %})
 
 
 </code>

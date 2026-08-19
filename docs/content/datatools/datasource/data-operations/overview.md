@@ -1,7 +1,7 @@
 ---
 title: Basics
 description: 'Learn how to perform sorting, filtering, grouping, and paging operations with KendoReact DataSource hooks.'
-components: ["filter", "pager"]
+components: ['filter', 'pager']
 slug: data_operations_datasource
 position: 10
 ---
@@ -16,7 +16,7 @@ The KendoReact DataSource hooks provide built-in support for common data operati
 
 Here's a complete example demonstrating data operations:
 
-{% meta height:690 %}
+{% meta height:820 %}
 {% embed_file datasource/data-operations/app.tsx preview %}
 {% embed_file datasource/data-operations/main.tsx %}
 {% endmeta %}

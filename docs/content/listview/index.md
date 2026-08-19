@@ -16,7 +16,7 @@ The ListView is ideally suited for displaying a list of items in a consistent ma
 
 The following example demonstrates the ListView in action.
 
-{% meta height:580 %}
+{% meta height:620 %}
 {% embed_file overview/func/app.tsx preview %}
 {% embed_file overview/func/main.tsx %}
 {% embed_file overview/func/contacts.json %}

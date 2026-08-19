@@ -25,7 +25,7 @@ The following example shows how to enable and configure the resizing.
 
 To enable the resizing of images, add the image resizing plugin to the plugins collection.
 
-{% meta height:580 %}
+{% meta height:690 %}
 {% embed_file resizing/images/func/app.tsx preview %}
 {% embed_file resizing/images/func/main.tsx %}
 {% endmeta %}
@@ -39,7 +39,7 @@ Once you enable the resizing of tables, the users can alter the size of the foll
 -   Columns and Rows&mdash;hover over the border of a cell, and a resize handle will appear. Drag the handle to resize the column or row.
 -   Tables&mdash;click in the table to set the caret/selection inside it and the resize handles will appear.
 
-{% meta height:580 %}
+{% meta height:690 %}
 {% embed_file resizing/tables/func/app.tsx preview %}
 {% embed_file resizing/tables/func/main.tsx %}
 {% embed_file resizing/tables/func/content.ts %}

@@ -2,141 +2,65 @@ import * as React from 'react';
 import {
     AIPrompt,
     AIPromptOutputInterface,
+    AIPromptCommandsView,
     AIPromptOutputView,
     AIPromptView,
     outputViewDefaults,
+    CommandItemInterface,
+    commandsViewDefaults,
     promptViewDefaults
 } from '@progress/kendo-react-conversational-ui';
-import { getSuggestion } from './service-ai-data';
-import { Label } from '@progress/kendo-react-labels';
+import { bookIcon, infoCircleIcon, shareIcon, starIcon } from '@progress/kendo-svg-icons';
 
-const App = () => {
-    const [activeView, setActiveView] = React.useState<string>(promptViewDefaults.name);
-    const [outputs, setOutputs] = React.useState<AIPromptOutputInterface[]>([]);
-    const [isLoading, setIsLoading] = React.useState<boolean>(false);
-    const [isStreaming, setIsStreaming] = React.useState<boolean>(false);
-    const [abortController, setAbortController] = React.useState<AbortController | null>(null);
+interface OverviewAIPromptProps {
+    activeView: string;
+    outputs: AIPromptOutputInterface[];
+    onActiveViewChange: (viewName: string) => void;
+    onPromptRequest: (prompt?: string, output?: AIPromptOutputInterface) => void;
+    onCommandExecute: (command: CommandItemInterface) => void;
+}
 
-    const promptSuggestions = ['Explain React hooks', 'How to optimize performance?'];
+const promptSuggestions = [
+    'Build a 10-day Tokyo & Kyoto itinerary with day-by-day schedule',
+    'Recommend top 10 restaurants in Tokyo for a foodie traveler',
+    'Create a Japan packing list for late October weather',
+    'Plan a day trip from Kyoto to Nara including temple visits'
+];
 
-    const handleOnRequest = async (prompt?: string, output?: AIPromptOutputInterface) => {
-        if (!prompt) {
-            return;
-        }
+const promptCommands: CommandItemInterface[] = [
+    { id: '1', text: 'Save to Trip Folder', svgIcon: bookIcon },
+    { id: '2', text: 'Share with Travel Buddy', svgIcon: shareIcon },
+    { id: '3', text: 'Find Budget Alternatives', svgIcon: starIcon },
+    { id: '4', text: 'Add Accessibility Notes', svgIcon: infoCircleIcon }
+];
 
-        // Create new abort controller for this request
-        const controller = new AbortController();
-        setAbortController(controller);
+const outputCard = {
+    body: (output: AIPromptOutputInterface) => {
+        return <div className="output-body" dangerouslySetInnerHTML={{ __html: output.responseContent || '' }} />;
+    }
+};
 
-        setIsLoading(true);
-        setIsStreaming(true);
-        setActiveView(outputViewDefaults.name); // Switch to output view when streaming starts
-
-        try {
-            let responseContent: string;
-
-            if (output?.isRetry) {
-                // Handle retry - get a new response
-                responseContent = await getSuggestion(
-                    prompt + ' (please provide an alternative response)',
-                    controller.signal
-                );
-            } else if (output?.ratingType) {
-                // Handle rating - could log the rating and still provide a response
-                responseContent = await getSuggestion(prompt, controller.signal);
-            } else {
-                // Regular request
-                responseContent = await getSuggestion(prompt, controller.signal);
-            }
-
-            // Set loading to false after getSuggestion completes
-            setIsLoading(false);
-
-            // Streaming output in chunks
-            const newOutput: AIPromptOutputInterface = {
-                id: outputs.length + 1,
-                title: prompt,
-                responseContent: '',
-                prompt
-            };
-
-            setOutputs((prevOutputs) => [newOutput, ...prevOutputs]);
-
-            // Simulate streaming by splitting responseContent into chunks
-            const chunkSize = 20;
-            let currentIndex = 0;
-            while (currentIndex < responseContent.length && !controller.signal.aborted) {
-                await new Promise((resolve) => setTimeout(resolve, 100));
-
-                if (controller.signal.aborted) {
-                    break;
-                }
-
-                const nextChunk = responseContent.slice(0, currentIndex + chunkSize);
-                setOutputs((prevOutputs) => {
-                    const updated = [...prevOutputs];
-                    if (updated[0]?.id === newOutput.id) {
-                        updated[0] = {
-                            ...updated[0],
-                            responseContent: nextChunk
-                        };
-                    }
-                    return updated;
-                });
-                currentIndex += chunkSize;
-            }
-            setActiveView(outputViewDefaults.name);
-        } catch (error) {
-            // Handle abort - don't add any output, just stop streaming
-            if (error instanceof Error && error.name === 'AbortError') {
-                return;
-            }
-
-            // Handle other errors
-            const errorOutput: AIPromptOutputInterface = {
-                id: outputs.length + 1,
-                title: prompt,
-                responseContent: 'Sorry, there was an error processing your request. Please try again.',
-                prompt
-            };
-            setOutputs((prevOutputs) => [errorOutput, ...prevOutputs]);
-            setActiveView(outputViewDefaults.name);
-        } finally {
-            setIsLoading(false);
-            setIsStreaming(false);
-            setAbortController(null);
-        }
-    };
-
-    const handleActiveViewChange = (viewName: string) => {
-        setActiveView(viewName);
-    };
-
-    const handleCancel = () => {
-        if (abortController) {
-            abortController.abort();
-        }
-    };
-
+const OverviewAIPrompt = ({
+    activeView,
+    outputs,
+    onActiveViewChange,
+    onPromptRequest,
+    onCommandExecute
+}: OverviewAIPromptProps) => {
     return (
-        <div className="k-d-flex-col k-align-items-center">
-            <Label>AIPrompt</Label>
-            <AIPrompt
-                style={{ width: '400px', height: '600px' }}
-                activeView={activeView}
-                streaming={isStreaming}
-                loading={isLoading}
-                suggestionsView={'modern'}
-                onActiveViewChange={handleActiveViewChange}
-                onPromptRequest={handleOnRequest}
-                onCancel={handleCancel}
-                toolbarItems={[promptViewDefaults, outputViewDefaults]}
-            >
-                <AIPromptView promptSuggestions={promptSuggestions} enableSpeechToText={true} />
-                <AIPromptOutputView outputs={outputs} />
-            </AIPrompt>
-        </div>
+        <AIPrompt
+            className="aiprompt"
+            activeView={activeView}
+            onActiveViewChange={onActiveViewChange}
+            onPromptRequest={onPromptRequest}
+            onCommandExecute={onCommandExecute}
+            toolbarItems={[promptViewDefaults, outputViewDefaults, commandsViewDefaults]}
+        >
+            <AIPromptView promptSuggestions={promptSuggestions} />
+            <AIPromptOutputView outputs={outputs} outputCard={outputCard} />
+            <AIPromptCommandsView commands={promptCommands} />
+        </AIPrompt>
     );
 };
 
-export default App;
+export default OverviewAIPrompt;

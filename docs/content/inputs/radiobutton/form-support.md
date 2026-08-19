@@ -12,7 +12,7 @@ The RadioButton component can be easily integrated with [HTML5 form](https://dev
 
 The form enables you to validate checkbox values and prevent the submission of forms which are in an invalid state.
 
-{% meta height:600 %}
+{% meta height:650 %}
 {% embed_file radiobutton/form-support/app.tsx preview %}
 {% embed_file radiobutton/form-support/main.tsx %}
 {% endmeta %}

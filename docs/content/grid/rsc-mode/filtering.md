@@ -1,8 +1,8 @@
 ---
 title: Filtering
-page_title: 'Filtering in React Data Grid RSC Mode'
-description: 'Leverage powerful filtering capabilities in the RSC mode of KendoReact Data Grid to refine datasets dynamically and enhance data exploration.'
-components: ["datagrid"]
+page_title: 'Filtering in React Grid RSC Mode'
+description: 'Leverage powerful filtering capabilities in the RSC mode of KendoReact Grid to refine datasets dynamically and enhance data exploration.'
+components: ['grid']
 subject: RSC Mode of the Grid
 slug: filtering_rsc_grid
 position: 40
@@ -37,7 +37,7 @@ You can see how to handle filtering changes on the server for consistent state p
 
 ## Suggested Links
 
--   [KendoKendoReact Data Grid Filtering Documentation](slug:filtering_grid)
--   [KendoKendoReact Data Grid RSC Mode Server Actions](slug:server_actions_rsc_grid)
--   [КendoReact Data Grid RSC Mode Overview](slug:overview_rsc_grid)
--   [Getting Started with КendoReact Data Grid RSC Mode](slug:getstarted_rsc_grid)
+-   [KendoReact Grid Filtering Documentation](slug:filtering_grid)
+-   [KendoReact Grid RSC Mode Server Actions](slug:server_actions_rsc_grid)
+-   [КendoReact Grid RSC Mode Overview](slug:overview_rsc_grid)
+-   [Getting Started with КendoReact Grid RSC Mode](slug:getstarted_rsc_grid)

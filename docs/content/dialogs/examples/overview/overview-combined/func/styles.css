@@ -1,0 +1,166 @@
+.demo-container {
+    padding: var(--kendo-spacing-8);
+    min-height: 400px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* ── Profile card ── */
+.profile-card {
+    width: 100%;
+    max-width: 560px;
+    background: var(--kendo-color-surface);
+    border: 1px solid var(--kendo-color-border);
+    border-radius: var(--kendo-border-radius-lg);
+    box-shadow: var(--kendo-elevation-2);
+    padding: var(--kendo-spacing-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--kendo-spacing-4);
+}
+
+.profile-hero {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--kendo-spacing-5);
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--kendo-color-primary-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--kendo-color-primary);
+    flex-shrink: 0;
+}
+
+.profile-identity {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--kendo-spacing-1);
+    padding-top: var(--kendo-spacing-1);
+}
+
+.profile-name {
+    font-size: var(--kendo-font-size-xxl);
+    font-weight: 700;
+    color: var(--kendo-color-on-app-surface);
+    margin: 0;
+}
+
+.profile-role {
+    font-size: var(--kendo-font-size-md);
+    color: var(--kendo-color-subtle);
+    margin: 0;
+}
+
+.profile-contact {
+    font-size: var(--kendo-font-size-sm);
+    color: var(--kendo-color-on-app-surface);
+    margin: 0;
+}
+
+.profile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--kendo-spacing-2);
+    flex-shrink: 1;
+    min-width: 0;
+    padding-top: var(--kendo-spacing-1);
+}
+
+.profile-divider {
+    height: 1px;
+    background: var(--kendo-color-border);
+}
+
+/* Stats row */
+.profile-stats {
+    display: flex;
+    gap: var(--kendo-spacing-10);
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--kendo-spacing-1);
+}
+
+.stat-value {
+    font-size: var(--kendo-font-size-xxl);
+    font-weight: 700;
+    color: var(--kendo-color-primary);
+}
+
+.stat-label {
+    font-size: var(--kendo-font-size-sm);
+    color: var(--kendo-color-subtle);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ── Confirm Dialog ── */
+.confirm-body {
+    padding: var(--kendo-spacing-4) var(--kendo-spacing-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--kendo-spacing-3);
+}
+
+.confirm-message {
+    font-size: var(--kendo-font-size-md);
+    color: var(--kendo-color-on-app-surface);
+    margin: 0;
+}
+
+.confirm-warning {
+    font-size: var(--kendo-font-size-sm);
+    color: var(--kendo-color-error);
+    margin: 0;
+}
+
+/* ── Window editor ── */
+.editor-body {
+    padding: var(--kendo-spacing-4) var(--kendo-spacing-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--kendo-spacing-4);
+}
+
+.editor-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--kendo-spacing-3);
+    padding: var(--kendo-spacing-4) var(--kendo-spacing-6);
+    border-top: 1px solid var(--kendo-color-border);
+}
+
+@media (max-width: 600px) {
+    .demo-container {
+        padding: var(--kendo-spacing-6);
+    }
+
+    .profile-hero {
+        flex-wrap: wrap;
+    }
+
+    .profile-actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .profile-actions > * {
+        flex: 1 1 auto;
+    }
+
+    .profile-stats {
+        flex-wrap: wrap;
+        gap: var(--kendo-spacing-6);
+    }
+}

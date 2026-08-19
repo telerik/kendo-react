@@ -1,7 +1,7 @@
 ---
 title: Column Menu
-description: 'Get started with the KendoKendoReact Data Grid allowing you to add a column menu to its columns.'
-components: ["datagrid"]
+description: 'Get started with the KendoReact Grid allowing you to add a column menu to its columns.'
+components: ['grid']
 slug: column_menu_grid
 position: 60
 tier: premium
@@ -10,7 +10,7 @@ subject: Grid Column Menu feature
 
 # Column Menu
 
-The KendoReact Data Grid enables you to show a menu with quick actions for its columns.
+The KendoReact Grid enables you to show a menu with quick actions for its columns.
 
 <CtaPanelOverview></CtaPanelOverview>
 
@@ -28,7 +28,7 @@ The following example demonstrates how to use the following built-in components 
 -   GridColumnMenuSort - component for applying sorting to the column
 -   GridColumnMenuGroup - component for applying grouping to the column
 
-{% meta height:590 %}
+{% meta height:830 %}
 {% embed_file column-menu/func/app.tsx preview %}
 {% embed_file column-menu/func/main.tsx %}
 {% embed_file column-menu/func/columnMenu.tsx %}
@@ -36,7 +36,7 @@ The following example demonstrates how to use the following built-in components 
 
 ## Tabbed Column Menu
 
-The KendoReact Data Grid allows you to render a column menu with a tabbed interface.
+The KendoReact Grid allows you to render a column menu with a tabbed interface.
 
 The below example achieves this implementation by creating a tabbed column menu and wrapping the Grid component with it. In `main.jsx`, the Grid is wrapped with a `ColumnMenuContext.Provider` where its `value` property accepts the following four arguments:
 
@@ -45,7 +45,9 @@ The below example achieves this implementation by creating a tabbed column menu 
 -   `columnState` - accepts a state variable that is initially set to the column array of objects
 -   `columns` - the initial array of objects of the column values
 
-{% meta height:580 %}
+The following example demonstrates a tabbed column menu with sorting, filtering, grouping, and column chooser options organized into separate tabs.
+
+{% meta height:830 %}
 {% embed_file column-menu-tabbed-interface/func/app.tsx preview %}
 {% embed_file column-menu-tabbed-interface/func/main.tsx %}
 {% embed_file column-menu-tabbed-interface/func/ColumnMenu.tsx %}
@@ -57,6 +59,8 @@ The below example achieves this implementation by creating a tabbed column menu 
 
 The ColumnMenu provides the [GridColumnMenuColumnsChooser]({% slug api_grid_gridcolumnmenucolumnschooser %}) component, which provides an easy way to control the visibility of the columns through the column menu.
 
+The following example demonstrates a column chooser integrated into the column menu, allowing users to toggle column visibility from the header dropdown.
+
 {% meta height:470 %}
 {% embed_file column-menu-chooser/func/app.tsx preview %}
 {% embed_file column-menu-chooser/func/main.tsx %}
@@ -67,7 +71,7 @@ The ColumnMenu provides the [GridColumnMenuColumnsChooser]({% slug api_grid_grid
 
 The [GridColumnMenuCheckboxFilter]({% slug api_grid_gridcolumnmenucheckboxfilterprops %}) can be set as a sub-component of the ColumnMenu component; this provides an interface for users to filter the column data via a checkbox list. The following example demonstrates setup for this option:
 
-{% meta height:590 %}
+{% meta height:830 %}
 {% embed_file column-menu-checkbox-filter/func/app.tsx preview %}
 {% embed_file column-menu-checkbox-filter/func/main.tsx %}
 {% embed_file column-menu-checkbox-filter/func/columnMenu.tsx %}
@@ -84,7 +88,7 @@ The following example demonstrates how to:
 
 To access all demo files, refer to the tree pane of the file.
 
-{% meta height:520 %}
+{% meta height:630 %}
 {% embed_file column-menu-custom-components/func/app.tsx preview %}
 {% embed_file column-menu-custom-components/func/main.tsx %}
 {% embed_file column-menu-custom-components/func/columns.ts %}
@@ -97,7 +101,7 @@ The filter component of the column menu enables you to customize its user interf
 
 The following example demonstrates how to customize the UI of the Column Menu filter component. To access all demo files, refer to the tree pane of the file.
 
-{% meta height:510 %}
+{% meta height:690 %}
 {% embed_file column-menu-filter-customization/func/app.tsx preview %}
 {% embed_file column-menu-filter-customization/func/main.tsx %}
 {% embed_file column-menu-filter-customization/func/customFilterUI.tsx %}

@@ -32,7 +32,7 @@ To customize the `header` or `footer` component, provide the corresponding [head
 
 The following example demonstrates how to conditionally render the `header` and `footer` components, based on user configuration and add additional tools to the `footer`.
 
-{% meta height:770 %}
+{% meta height:810 %}
 {% embed_file header-footer/customization/func/app.tsx preview %}
 {% embed_file header-footer/customization/func/main.tsx %}
 {% embed_file header-footer/customization/func/custom-footer.tsx %}

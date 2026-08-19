@@ -1,0 +1,61 @@
+.demo-container {
+    padding: var(--kendo-spacing-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--kendo-spacing-8);
+}
+
+.section-label {
+    display: block;
+    font-size: var(--kendo-font-size-md);
+    font-weight: 400;
+    color: var(--kendo-color-on-app-surface);
+    margin-bottom: var(--kendo-spacing-2);
+}
+
+.balance-section {
+    text-align: center;
+}
+
+.current-value {
+    margin-top: var(--kendo-spacing-1);
+    font-size: var(--kendo-font-size-md);
+    font-weight: 400;
+    color: var(--kendo-color-on-app-surface);
+}
+
+.equalizer-section {
+    text-align: center;
+}
+
+.eq-bands {
+    display: flex;
+    justify-content: center;
+    gap: var(--kendo-spacing-10);
+    height: 300px;
+    margin-top: var(--kendo-spacing-4);
+    align-items: flex-start;
+}
+
+.eq-band {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.eq-value {
+    margin: var(--kendo-spacing-2) 0 0;
+    font-size: var(--kendo-font-size-md);
+    font-weight: 600;
+    color: var(--kendo-color-primary);
+}
+
+.eq-band-label {
+    margin: var(--kendo-spacing-1) 0 0;
+    font-size: var(--kendo-font-size-xs);
+    font-weight: 600;
+    color: var(--kendo-color-subtle);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}

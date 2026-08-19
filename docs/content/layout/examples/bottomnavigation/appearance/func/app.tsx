@@ -1,13 +1,8 @@
 import * as React from 'react';
 
-import {
-    BottomNavigation,
-    BottomNavigationFill,
-    BottomNavigationSelectEvent,
-    BottomNavigationThemeColor
-} from '@progress/kendo-react-layout';
-import { RadioGroup } from '@progress/kendo-react-inputs';
+import { BottomNavigation, BottomNavigationProps, BottomNavigationSelectEvent } from '@progress/kendo-react-layout';
 import { chartLineIcon, arrowsSwapIcon, chartPieIcon, gearIcon, moreHorizontalIcon } from '@progress/kendo-svg-icons';
+import { useConfigurator, fillModeOptions, themeColorOptions } from '@docs-shared/configurator';
 
 const items = [
     { svgIcon: chartLineIcon, text: 'Revenue', selected: true },
@@ -17,29 +12,37 @@ const items = [
     { svgIcon: moreHorizontalIcon, text: 'More' }
 ];
 
-const themeColorOptions = [
-    { label: 'Primary', value: 'primary' },
-    { label: 'Secondary', value: 'secondary' },
-    { label: 'Tertiary', value: 'tertiary' },
-    { label: 'Inverse', value: 'inverse' }
-];
-
-const fillOptions = [
-    { label: 'Solid', value: 'solid' },
-    { label: 'Flat', value: 'flat' }
-];
-
 const App = () => {
-    const [themeColor, setThemeColor] = React.useState<BottomNavigationThemeColor>('primary');
-    const [fill, setFill] = React.useState<BottomNavigationFill>('flat');
     const [selectedIndex, setSelectedIndex] = React.useState(items.findIndex((x) => x.selected === true));
 
-    const handleThemeColorChange = (e: any) => {
-        setThemeColor(e.value);
-    };
-
-    const handleFillChange = (e: any) => {
-        setFill(e.value);
+    const config = useConfigurator({
+        sections: [
+            {
+                label: 'Fill Mode',
+                controls: [
+                    {
+                        type: 'segmented',
+                        name: 'fillMode',
+                        options: fillModeOptions(['solid', 'flat']),
+                        defaultValue: 'flat'
+                    }
+                ]
+            },
+            {
+                label: 'Theme Color',
+                controls: [
+                    {
+                        type: 'dropdown',
+                        name: 'themeColor',
+                        options: themeColorOptions(['primary', 'secondary', 'tertiary', 'inverse']),
+                        defaultValue: 'primary'
+                    }
+                ]
+            }
+        ]
+    }) as {
+        fillMode: BottomNavigationProps['fillMode'];
+        themeColor: BottomNavigationProps['themeColor'];
     };
 
     const handleSelect = (e: BottomNavigationSelectEvent) => {
@@ -47,30 +50,13 @@ const App = () => {
     };
 
     return (
-        <div className="example-wrapper">
-            <div className="example-config row">
-                <div className="col-12 mb-3">
-                    <p>Choose Theme Color</p>
-                    <RadioGroup
-                        data={themeColorOptions}
-                        value={themeColor}
-                        onChange={handleThemeColorChange}
-                        layout="horizontal"
-                    />
-                </div>
-                <div className="col-12">
-                    <p>Choose Fill Mode</p>
-                    <RadioGroup data={fillOptions} value={fill} onChange={handleFillChange} layout="horizontal" />
-                </div>
-            </div>
+        <div className="example-wrapper-center">
             <BottomNavigation
                 items={items.map((item, index) => ({ ...item, selected: index === selectedIndex }))}
-                themeColor={themeColor}
-                fillMode={fill}
+                themeColor={config.themeColor}
+                fillMode={config.fillMode}
                 onSelect={handleSelect}
             />
-            <style>{`my-app { padding: 0 !important; }
-            .example-config { margin: 20px; padding: 20px; background-color: rgba(0, 0, 0, 0.05); border-radius: 4px; }`}</style>
         </div>
     );
 };

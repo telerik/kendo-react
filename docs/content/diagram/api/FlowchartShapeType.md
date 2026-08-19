@@ -7,7 +7,7 @@ slug: api_diagram_flowchartshapetype
 ---
 
 # FlowchartShapeType
-
+Defines the available flowchart shape types.
 
 ## Values
 

@@ -14,7 +14,7 @@ By default, the [SchedulerViewSlot]({% slug api_scheduler_schedulerviewslot %}) 
 
 We will cover a simple use-case where we modify the `cursor`, based on the [isWorkDay]({% slug api_scheduler_schedulerslotprops %}#toc-isworkday) and [isWorkHour]({% slug api_scheduler_schedulerslotprops %}#toc-isworkhour) properties of the `SchedulerViewSlot`.
 
-{% meta height:700 %}
+{% meta height:780 %}
 {% embed_file slots/view-slot/extending/func/app.tsx preview %}
 {% embed_file slots/view-slot/extending/func/main.tsx %}
 {% endmeta %}

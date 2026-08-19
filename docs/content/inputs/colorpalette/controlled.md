@@ -16,7 +16,7 @@ To manage the state of the ColorPalette:
 1. Handle the [`onChange`]({% slug api_inputs_colorpaletteprops %}#toc-onchange) event.
 1. Pass the new value through the props.
 
-
+The following example demonstrates how to control the ColorPalette value and display the selected color outside the component.
 
 {% meta height:200 %}
 {% embed_file colorpalette/controlled/func/app.tsx preview %}

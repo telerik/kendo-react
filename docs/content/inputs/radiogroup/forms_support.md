@@ -20,7 +20,7 @@ You can display error messages and fully customize the behavior of the rendered 
 
 The following example demonstrates how to render a required RadioGroup within a KendoReact Form component.
 
-{% meta height:550 %}
+{% meta height:620 %}
 {% embed_file radiogroup/forms/func/app.tsx preview %}
 {% embed_file radiogroup/forms/func/main.tsx %}
 {% endmeta %}

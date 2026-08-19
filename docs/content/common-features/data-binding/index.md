@@ -79,6 +79,6 @@ Saving the changes on the server is done on the application level by the develop
 
 ## Suggested Links
 
--   [KendoReact Data Grid Local Data Operations]({% slug localoperations_grid %})
--   [KendoReact Data Grid OData Server Operations]({% slug odataserveroperations_grid %})
+-   [KendoReact Grid Local Data Operations]({% slug localoperations_grid %})
+-   [KendoReact Grid OData Server Operations]({% slug odataserveroperations_grid %})
 -   [KendoReact DropDownList Filtering]({% slug filtering_dropdownlist %})

@@ -8,7 +8,7 @@ position: 4
 
 # Formats
 
-You can control the format of the NumericTextBox by using the [`format`]({% slug api_inputs_numerictextbox %}#toc-format) property.
+You can control the format of the NumericTextBox by using the [`format`](slug:api_inputs_numerictextboxprops#format) property.
 
 <!-- TODO: Add NumberFormatOption API slug -->
 

@@ -912,7 +912,7 @@ content?
 <code>
 
 
-any
+[ShapeContent]({% slug api_diagram_shapecontent %}) | [ShapeRichTextContent]({% slug api_diagram_shaperichtextcontent %})
 
 
 </code>
@@ -949,7 +949,7 @@ The content to set. If not provided, returns the current content.
 <code>
 
 
-any
+[ShapeContent]({% slug api_diagram_shapecontent %}) | [ShapeRichTextContent]({% slug api_diagram_shaperichtextcontent %})
 
 
 </code>

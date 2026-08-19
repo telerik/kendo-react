@@ -1,39 +1,32 @@
 import * as React from 'react';
 import { Window } from '@progress/kendo-react-dialogs';
 import { Button } from '@progress/kendo-react-buttons';
+import { EventLog } from '@docs-shared/EventLog';
 
 const App = () => {
     const [visible, setVisible] = React.useState<boolean>(true);
     const [events, setEvents] = React.useState<string[]>([]);
 
+    const log = (message: string) => setEvents((prev) => [message, ...prev]);
+
     const toggleDialog = () => {
         if (visible) {
-            let newEvents: any = [...events];
-            newEvents.unshift('Close event');
-            setVisible(!visible);
-            setEvents(newEvents);
-        } else {
-            setVisible(!visible);
+            log('Close event');
         }
+        setVisible(!visible);
     };
     const handleMove = () => {
-        let newEvents: string[] = [...events];
-        newEvents.unshift('Move event');
-        setEvents(newEvents);
+        log('Move event');
     };
     const handleResize = () => {
-        let newEvents: string[] = [...events];
-        newEvents.unshift('Resize event');
-        setEvents(newEvents);
+        log('Resize event');
     };
     const handleStageChange = () => {
-        let newEvents: string[] = [...events];
-        newEvents.unshift('StageChange event');
-        setEvents(newEvents);
+        log('StageChange event');
     };
 
     return (
-        <div>
+        <EventLog events={events} onClear={() => setEvents([])}>
             <Button type="button" onClick={toggleDialog} id="open-window">
                 Open Window
             </Button>
@@ -46,15 +39,7 @@ const App = () => {
                     onStageChange={handleStageChange}
                 />
             )}
-            <div className="example-config">
-                <h5>Event Log</h5>
-                <ul className="event-log">
-                    {events.map((event, index) => (
-                        <li key={index}>{event}</li>
-                    ))}
-                </ul>
-            </div>
-        </div>
+        </EventLog>
     );
 };
 export default App;
