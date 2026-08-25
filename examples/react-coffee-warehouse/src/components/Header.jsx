@@ -51,7 +51,7 @@ export const Header = (props) => {
                     <h1>{localizationService.toLanguageString('custom.warehouse')}</h1>
                 </div>
                 <div className="settings">
-                    <span style={{ padding: '20px' }}>{localizationService.toLanguageString('custom.language')}</span>
+                    <span className="header-language">{localizationService.toLanguageString('custom.language')}</span>
                     <DropDownList
                         textField={'locale'}
                         dataItemKey={'localeId'}

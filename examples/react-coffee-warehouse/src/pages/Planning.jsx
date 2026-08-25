@@ -58,27 +58,25 @@ const Planning = () => {
                 {
 
                     orderEmployees.map(employee => {
+                        const teamColor = teams.find(({ teamID }) => teamID === employee.teamId).teamColor;
+
                         return (
                             <div
                                 key={employee.id}
                                 onClick={() => onEmployeeClick(employee.id)}
-                                style={!filterState[employee.id] ? {opacity: .5} : {}}
+                                className={`planning-employee${filterState[employee.id] ? '' : ' planning-employee--disabled'}`}
+                                style={{ '--planning-team-color': teamColor }}
                             >
-                                <Card style={{ borderWidth: 0, cursor: 'pointer'}}>
+                                <Card className="planning-employee-card">
                                     <CardHeader className="k-hbox" >
-                                        <Avatar type='image' shape='circle' size={'large'} style={{
-                                            borderWidth: 2,
-                                            borderColor: teams.find(({teamID}) => teamID === employee.teamId).teamColor,
-                                        }}>
-                                            <div className="k-avatar-image" style={{
+                                        <Avatar type='image' shape='circle' size={'large'} className="planning-employee-avatar">
+                                            <div className="k-avatar-image planning-employee-image" style={{
                                                 backgroundImage: images[employee.imgId + employee.gender],
-                                                backgroundSize: 'cover',
-                                                backgroundPosition: 'center center',
                                             }}
                                             />
                                         </Avatar>
                                         <div>
-                                            <CardTitle style={{color: teams.find(({teamID}) => teamID === employee.teamId).teamColor}}>{employee.fullName}</CardTitle>
+                                            <CardTitle className="planning-employee-name">{employee.fullName}</CardTitle>
                                             <CardSubtitle>{employee.jobTitle}</CardSubtitle>
                                         </div>
                                     </CardHeader>
@@ -87,7 +85,7 @@ const Planning = () => {
                         );
                     })
                 }
-                
+
                 <div className="card-component" >
                     <Scheduler
                         data={data.filter(event => filterState[event.employeeID])}
@@ -111,4 +109,3 @@ const Planning = () => {
 }
 
 export default Planning;
-

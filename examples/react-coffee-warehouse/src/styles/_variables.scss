@@ -1,11 +1,16 @@
-// Global variables here
-$background-color: #D4D6E4;
-$info-background: #151950;
-$react-color: #53d2fa;
-$link-color: #71A6FF;
-$white: #FFFFFF;
+// Application-specific Meridian token overrides.
+:root {
+    --kendo-color-app-surface: #D4D6E4;
+    --kendo-color-inverse: #151950;
+    --kendo-color-secondary: #53d2fa;
+    --kendo-color-info: #71A6FF;
+    --kendo-font-family: "Roboto", sans-serif;
+    --kendo-translucency-base: 25%;
+    --warehouse-header-height: var(--kendo-spacing-20);
+}
 
-$tiger-team: #FF6358;
-$lemon-team: #FFD246;
-$organic-team: #55AB1D;
-$ocean-team: #28B4C8;
+$background-color: var(--kendo-color-app-surface);
+$info-background: var(--kendo-color-inverse);
+$react-color: var(--kendo-color-secondary);
+$link-color: var(--kendo-color-info);
+$white: var(--kendo-color-on-inverse);
