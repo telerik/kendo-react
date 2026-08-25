@@ -1,6 +1,7 @@
 import React from "react";
 import { Avatar } from "@progress/kendo-react-layout";
 import { AutoComplete, AutoCompleteChangeEvent, DropDownList } from "@progress/kendo-react-dropdowns";
+import type { RouteSelection } from "./App";
 import { checkLocalStorageData } from "./data/localStorageUtils";
 import { Button } from "@progress/kendo-react-buttons";
 import { InputPrefix, InputSeparator } from "@progress/kendo-react-inputs";
@@ -8,7 +9,7 @@ import { SvgIcon } from "@progress/kendo-react-common";
 import { searchIcon } from "@progress/kendo-svg-icons";
 
 interface HeaderProps {
-  onNavigateTo: (data: { itemIndex: number; itemTarget: object }) => void;
+  onNavigateTo: (data: RouteSelection) => void;
   onCurrencyChange: (event: any) => void; 
 }
 
@@ -17,20 +18,24 @@ function Header(props: HeaderProps) {
   const name = personalInfo.name;
 
   const searchItems = [
-    { itemIndex: 2, text: "Transactions Overview", route: `${import.meta.env.BASE_URL}` },
-    { itemIndex: 3, text: "Transactions Details", route: `${import.meta.env.BASE_URL}transactions` },
+    { itemIndex: 2, text: "Account Overview", route: `${import.meta.env.BASE_URL}` },
+    { itemIndex: 3, text: "Transactions", route: `${import.meta.env.BASE_URL}transactions` },
     { itemIndex: 4, text: "Investments", route: `${import.meta.env.BASE_URL}investments` },
     { itemIndex: 5, text: "Analytics", route: `${import.meta.env.BASE_URL}analytics` },
+    { itemIndex: 8, text: "Notifications", route: `${import.meta.env.BASE_URL}notifications` },
+    { itemIndex: 9, text: "Profile", route: `${import.meta.env.BASE_URL}profile` },
+    { itemIndex: 10, text: "Settings", route: `${import.meta.env.BASE_URL}settings` },
+    { itemIndex: 11, text: "Help & Support", route: `${import.meta.env.BASE_URL}help` },
   ];
 
-  const navigateTo = React.useCallback((itemIndex: number, itemTarget: object) => {
-    props.onNavigateTo({ itemIndex, itemTarget: { ...itemTarget, route: `${import.meta.env.BASE_URL}${itemTarget.props.route}` } });
+  const navigateTo = React.useCallback((itemIndex: number, route: string) => {
+    props.onNavigateTo({ itemIndex, itemTarget: { props: { route } } });
   }, [props]);
 
   const onSearchChange = React.useCallback((event: AutoCompleteChangeEvent) => {
     const dataItem = searchItems.find((item) => item.text === event.value);
     if (dataItem) {
-        navigateTo(dataItem.itemIndex, { props: { route: dataItem.route } });
+        navigateTo(dataItem.itemIndex, dataItem.route);
     }
   }, [searchItems, navigateTo]);
 
@@ -82,7 +87,7 @@ function Header(props: HeaderProps) {
           fillMode={"solid"}
           themeColor={"primary"}
           rounded={"large"}
-          onClick={() => navigateTo(6, { props: { route: `${import.meta.env.BASE_URL}ai-assistant` } })}
+          onClick={() => navigateTo(6, `${import.meta.env.BASE_URL}ai-assistant`)}
         >
           AI ASSISTANT
         </Button>

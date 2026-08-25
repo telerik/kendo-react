@@ -13,16 +13,27 @@ import Analytics from "./Analytics";
 import AIAssistant from "./AIAssistant";
 import Footer from "./Footer";
 import Header from "./Header";
+import {
+  Help,
+  Login,
+  Notifications,
+  NotFound,
+  Profile,
+} from "./UniversalPages";
 
 interface CurrencyContextType {
   currency: string;
+}
+export interface RouteSelection {
+  itemIndex: number;
+  itemTarget: { props: { route: string } };
 }
 export const CurrencyContext = createContext<CurrencyContextType | undefined>(
   undefined
 );
 
 function App(): JSX.Element {
-  const [goToRoute, setGoToRoute] = React.useState<object | undefined>();
+  const [goToRoute, setGoToRoute] = React.useState<RouteSelection | undefined>();
   const [currency, setCurrency] = React.useState<string>("USD");
 
   const currencyContextValue = React.useMemo(() => ({ currency }), [currency]);
@@ -43,6 +54,11 @@ function App(): JSX.Element {
             <Route path={`${import.meta.env.BASE_URL}analytics`} element={<Analytics />} />
             <Route path={`${import.meta.env.BASE_URL}ai-assistant`} element={<AIAssistant />} />
             <Route path={`${import.meta.env.BASE_URL}settings`} element={<Settings />} />
+            <Route path={`${import.meta.env.BASE_URL}profile`} element={<Profile />} />
+            <Route path={`${import.meta.env.BASE_URL}notifications`} element={<Notifications />} />
+            <Route path={`${import.meta.env.BASE_URL}help`} element={<Help />} />
+            <Route path={`${import.meta.env.BASE_URL}login`} element={<Login />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </CurrencyContext.Provider>
       </Navigation>
