@@ -20,6 +20,7 @@ import { countries } from './../resources/countries';
 import { teams } from './../resources/teams';
 
 import { requiredValidator, emailValidator, phoneValidator, biographyValidator } from './../validators'
+import { PageHeader } from './../components/PageHeader';
 
 const countriesData = countries.map(country => country.name);
 const teamsData = teams.map(team => ({
@@ -49,7 +50,8 @@ const Profile = () => {
         );
 
         return (
-            <div id="Profile" className="profile-page main-content">
+            <main id="Profile" className="profile-page main-content">
+                <PageHeader title="Profile settings" description="Manage your contact details and workspace directory preferences." />
                 <div className="card-container">
                     <div className="card-component">
                         <Form
@@ -152,7 +154,7 @@ const Profile = () => {
                         />
                     </div>
                 </div>
-            </div>
+            </main>
         );
 }
 

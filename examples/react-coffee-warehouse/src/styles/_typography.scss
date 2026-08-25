@@ -1,7 +1,3 @@
-@font-face {
-    font-family: "Roboto";
-    src: url("fonts/Roboto-Regular.ttf") format("truetype");
-}
 body {
     font-family: var(--kendo-font-family);
     font-size: var(--kendo-font-size);
@@ -10,7 +6,7 @@ body {
 
 h1 {
     font-size: var(--kendo-font-size-xl);
-    font-weight: var(--kendo-font-weight-normal);
+    font-weight: var(--kendo-font-weight-semibold);
 }
 h2 {
     font-size: var(--kendo-font-size-md);

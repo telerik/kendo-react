@@ -1,27 +1,30 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Drawer, DrawerContent } from '@progress/kendo-react-layout';
 import {
     useLocalization
 } from "@progress/kendo-react-intl";
 import { Header } from './Header.jsx';
-import { gridIcon, calendarIcon, userIcon, infoCircleIcon} from '@progress/kendo-svg-icons'
+import { gridIcon, calendarIcon, userIcon, infoCircleIcon, bellIcon, questionCircleIcon, packageIcon } from '@progress/kendo-svg-icons'
 
 const items = [
     { name: 'dashboard', svgIcon: gridIcon, route: '/', selected: true },
+    { name: 'inventory', svgIcon: packageIcon, route: '/inventory', selected: false },
     { name: 'planning', svgIcon: calendarIcon, route: '/planning', selected: false },
+    { name: 'notifications', svgIcon: bellIcon, route: '/notifications', selected: false },
     { name: 'profile', svgIcon: userIcon, route: '/profile', selected: false },
     { separator: true },
+    { name: 'help', svgIcon: questionCircleIcon, route: '/help', selected: false },
     { name: 'info', svgIcon: infoCircleIcon, route: '/info', selected: false }
 ];
 
 const DrawerRouterContainer = (props) => {
 
     const navigate = useNavigate();
+    const location = useLocation();
     const localization = useLocalization();
 
     const [expanded, setExpanded] = React.useState(false);
-    const [selectedId, setSelectedId] = React.useState(items.findIndex(x => x.selected === true));
     const [isSmallerScreen, setIsSmallerScreen] = React.useState(window.innerWidth < 768);
 
     const resizeWindow = () => {
@@ -33,14 +36,14 @@ const DrawerRouterContainer = (props) => {
     }
 
     const handleSelect = (e) => {
-        setSelectedId(e.itemIndex);
         setExpanded(false);
         navigate(e.itemTarget.props.route);
     }
 
     React.useEffect(() => {
-        window.addEventListener('resize', resizeWindow, false)
+        window.addEventListener('resize', resizeWindow, false);
         resizeWindow();
+        return () => window.removeEventListener('resize', resizeWindow, false);
     }, [])
 
     return (
@@ -51,10 +54,10 @@ const DrawerRouterContainer = (props) => {
             <Drawer
                 expanded={expanded}
                 animation={{ duration: 100 }}
-                items={items.map((item, index) => ({
+                items={items.map((item) => ({
                     ...item,
                     text: localization.toLanguageString(`custom.${item.name}`),
-                    selected: index === selectedId
+                    selected: item.route === location.pathname
                 }))
                 }
                 position='start'
@@ -64,7 +67,7 @@ const DrawerRouterContainer = (props) => {
                 onOverlayClick={handleClick}
                 onSelect={handleSelect}
             >
-                <DrawerContent style={{ height: 1066 }}>
+                <DrawerContent>
                     {props.children}
                 </DrawerContent>
             </Drawer>
@@ -73,4 +76,3 @@ const DrawerRouterContainer = (props) => {
 }
 
 export default DrawerRouterContainer;
-

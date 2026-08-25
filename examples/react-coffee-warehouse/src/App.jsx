@@ -1,10 +1,14 @@
 import React from 'react';
 
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Dashboard from './pages/Dashboard.jsx';
 import Planning from './pages/Planning.jsx';
 import Profile from './pages/Profile.jsx';
 import Info from './pages/Info.jsx';
+import Inventory from './pages/Inventory.jsx';
+import Notifications from './pages/Notifications.jsx';
+import Help from './pages/Help.jsx';
+import NotFound from './pages/NotFound.jsx';
 import DrawerRouterContainer from './components/DrawerRouterContainer.jsx';
 import { AppContext } from './AppContext';
 import { countries } from './resources/countries';
@@ -93,9 +97,12 @@ const App = () => {
                                 <Routes> 
                                     <Route path="/" element={<Dashboard />} />
                                     <Route path="/planning" element={<Planning />} />
+                                    <Route path="/inventory" element={<Inventory />} />
+                                    <Route path="/notifications" element={<Notifications />} />
+                                    <Route path="/help" element={<Help />} />
                                     <Route path="/profile" element={<Profile />} />
                                     <Route path="/info" element={<Info />} />
-                                    <Route path="*" element={<Navigate to={"/react-coffee-warehouse"}/>} />
+                                    <Route path="*" element={<NotFound />} />
                                 </Routes>
                             </DrawerRouterContainer>
                         </BrowserRouter>

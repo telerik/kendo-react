@@ -12,6 +12,8 @@ import { Chart } from './../components/Chart';
 import { FullNameCell, FlagCell, OnlineCell, RatingCell, EngagementCell, CurrencyCell } from './../components/GridCells';
 
 import { AppContext } from './../AppContext'
+import { PageHeader } from './../components/PageHeader';
+import { KpiCard } from './../components/KpiCard';
 
 import { employees } from './../resources/employees';
 import { teams } from './../resources/teams';
@@ -76,9 +78,20 @@ const Dashboard = () => {
     );
 
     return (
-        <div id="Dashboard" className="dashboard-page main-content">
+        <main id="Dashboard" className="dashboard-page main-content">
+            <PageHeader
+                title="Warehouse dashboard"
+                description="Monitor fulfillment performance, team capacity, and operational commitments."
+                meta="Last updated: 5 minutes ago"
+            />
+            <section className="kpi-grid" aria-label="Warehouse performance summary">
+                <KpiCard label="ORDERS SHIPPED TODAY" value="284" detail="▲ 8.4% vs yesterday" />
+                <KpiCard label="ON-TIME FULFILLMENT" value="96.8%" detail="▲ 1.2 points vs target" />
+                <KpiCard label="PICK QUEUE" value="37" detail="▲ 9 orders need attention" status="warning" />
+                <KpiCard label="LOW-STOCK ALERTS" value="12" detail="▲ 3 new since 08:00" status="error" />
+            </section>
             <div className="card-container grid">
-                <h3 className="card-title">{localizationService.toLanguageString('custom.teamEfficiency')}</h3>
+                <div className="card-title"><h2>{localizationService.toLanguageString('custom.teamEfficiency')}</h2><p>Order revenue (USD) by team for the selected period.</p></div>
                 <div className="card-buttons">
                     <ButtonGroup>
                         <Button togglable={true} selected={isTrend} onClick={trendOnClick}>
@@ -109,7 +122,7 @@ const Dashboard = () => {
                 </div>
             </div>
             <div className="card-container grid">
-                <h3 className="card-title">{localizationService.toLanguageString('custom.teamMembers')}</h3>
+                <div className="card-title"><h2>{localizationService.toLanguageString('custom.teamMembers')}</h2><p>Team capacity, engagement, and operating budget.</p></div>
                 <div className="card-buttons">
                     <ButtonGroup>
                         <Button togglable={true} selected={isMyTeam} onClick={myTeamOnClick}>
@@ -141,9 +154,8 @@ const Dashboard = () => {
                     </Grid>
                 </div>
             </div>
-        </div>
+            </main>
     );
 }
 
 export default Dashboard;
-

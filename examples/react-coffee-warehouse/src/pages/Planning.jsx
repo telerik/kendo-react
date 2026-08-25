@@ -6,6 +6,7 @@ import { Card, CardHeader, Avatar, CardTitle, CardSubtitle } from '@progress/ken
 import { guid } from '@progress/kendo-react-common';
 
 import { Scheduler } from './../components/Scheduler';
+import { PageHeader } from './../components/PageHeader';
 
 import { employees } from './../resources/employees';
 import { images } from './../resources/images';
@@ -50,11 +51,21 @@ const Planning = () => {
         },
         [filterState, setFilterState]
     );
+    const onEmployeeKeyDown = React.useCallback(
+        (event, employeeId) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                onEmployeeClick(employeeId);
+            }
+        },
+        [onEmployeeClick]
+    );
 
     return (
-        <div id="Planning" className="planning-page main-content">
+        <main id="Planning" className="planning-page main-content">
+            <PageHeader title="Team planning" description="Assign sales representatives to scheduled order activity." meta="Work week: Apr 27 - May 3" />
             <div className="card-container grid">
-                <h3 className="card-title">{localizationService.toLanguageString('custom.teamCalendar')}</h3>
+                <div className="card-title"><h2>{localizationService.toLanguageString('custom.teamCalendar')}</h2><p>Select team members to include in the shared schedule.</p></div>
                 {
 
                     orderEmployees.map(employee => {
@@ -64,6 +75,11 @@ const Planning = () => {
                             <div
                                 key={employee.id}
                                 onClick={() => onEmployeeClick(employee.id)}
+                                onKeyDown={(event) => onEmployeeKeyDown(event, employee.id)}
+                                role="button"
+                                tabIndex={0}
+                                aria-pressed={filterState[employee.id]}
+                                aria-label={`${employee.fullName}: ${filterState[employee.id] ? 'included in' : 'excluded from'} schedule`}
                                 className={`planning-employee${filterState[employee.id] ? '' : ' planning-employee--disabled'}`}
                                 style={{ '--planning-team-color': teamColor }}
                             >
@@ -104,7 +120,7 @@ const Planning = () => {
                     />
                 </div>
             </div>
-        </div>
+            </main>
     );
 }
 
