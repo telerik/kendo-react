@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { Button } from '@progress/kendo-react-buttons';
 import { Card, CardBody, CardHeader } from '@progress/kendo-react-layout';
-import { Switch, Input } from '@progress/kendo-react-inputs';
+import { Switch, Input, TextArea } from '@progress/kendo-react-inputs';
 import { DropDownList } from '@progress/kendo-react-dropdowns';
 import { DatePicker } from '@progress/kendo-react-dateinputs';
 import { Grid, GridColumn } from '@progress/kendo-react-grid';
@@ -21,6 +21,13 @@ import {
 const teams = ['Core AI', 'Finance', 'Growth', 'Research'];
 const models = ['GPT-4o', 'GPT-4 Turbo', 'Gemini Pro', 'Llama 3'];
 const projects = ['Search Insights', 'AutoQA', 'Billing API', 'Workflow AI'];
+const navigationItems = [
+  { id: 'dashboard', label: 'Dashboard' },
+  { id: 'notifications', label: 'Notifications' },
+  { id: 'settings', label: 'Settings' },
+  { id: 'profile', label: 'Profile' },
+  { id: 'help', label: 'Help & support' },
+];
 
 const rows = [
   { id: 1, team: 'Core AI', project: 'Search Insights', model: 'GPT-4o', calls: 1240, spend: 410.45, latency: 245, date: '2026-04-13' },
@@ -33,20 +40,13 @@ const rows = [
   { id: 8, team: 'Finance', project: 'Workflow AI', model: 'Llama 3', calls: 610, spend: 189.7, latency: 240, date: '2026-04-07' },
 ];
 
-const usageByTime = [820, 980, 1120, 1300, 1280, 1430, 1560];
-const usageLabels = ['Apr 7', 'Apr 8', 'Apr 9', 'Apr 10', 'Apr 11', 'Apr 12', 'Apr 13'];
-const modelShare = [
-  { model: 'GPT-4o', value: 42 },
-  { model: 'GPT-4 Turbo', value: 28 },
-  { model: 'Gemini Pro', value: 18 },
-  { model: 'Llama 3', value: 12 },
-];
-
-// Single reusable formatter instance — avoids recreating on every call
 const currencyFormatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
 const formatCurrency = (value) => currencyFormatter.format(value);
+const getRoute = () => {
+  const route = window.location.hash.slice(1) || 'dashboard';
+  return navigationItems.some((item) => item.id === route) ? route : 'not-found';
+};
 
-// Shared download helper — avoids duplicated blob/link logic in both export functions
 function downloadBlob(blob, filename) {
   const url = URL.createObjectURL(blob);
   const link = document.createElement('a');
@@ -58,7 +58,18 @@ function downloadBlob(blob, filename) {
   URL.revokeObjectURL(url);
 }
 
-function App() {
+function EmptyState({ onClear }) {
+  return (
+    <section className="empty-state" aria-live="polite">
+      <div aria-hidden="true" className="empty-state-icon">0</div>
+      <h2>No usage records match these filters</h2>
+      <p>Try broadening the date range or clearing a model, team, project, or search filter.</p>
+      <Button primary onClick={onClear}>Clear all filters</Button>
+    </section>
+  );
+}
+
+function Dashboard() {
   const [theme, setTheme] = useState('light');
   const [selectedModel, setSelectedModel] = useState('');
   const [selectedTeam, setSelectedTeam] = useState('');
@@ -72,7 +83,18 @@ function App() {
     document.documentElement.classList.toggle('dark', theme === 'dark');
   }, [theme]);
 
+  const hasValidDateRange = startDate && endDate && startDate <= endDate;
+  const clearFilters = useCallback(() => {
+    setSelectedModel('');
+    setSelectedTeam('');
+    setSelectedProject('');
+    setStartDate(new Date('2026-04-07'));
+    setEndDate(new Date('2026-04-13'));
+    setSearchTerm('');
+  }, []);
+
   const filteredRows = useMemo(() => {
+    if (!hasValidDateRange) return [];
     const lowerSearch = searchTerm.toLowerCase();
     return rows.filter((item) => {
       const dateValue = new Date(item.date);
@@ -80,10 +102,10 @@ function App() {
       const matchesModel = !selectedModel || item.model === selectedModel;
       const matchesTeam = !selectedTeam || item.team === selectedTeam;
       const matchesProject = !selectedProject || item.project === selectedProject;
-      const matchesSearch = !lowerSearch || [item.model, item.team, item.project].some((v) => v.toLowerCase().includes(lowerSearch));
+      const matchesSearch = !lowerSearch || [item.model, item.team, item.project].some((value) => value.toLowerCase().includes(lowerSearch));
       return withinRange && matchesModel && matchesTeam && matchesProject && matchesSearch;
     });
-  }, [selectedModel, selectedTeam, selectedProject, startDate, endDate, searchTerm]);
+  }, [hasValidDateRange, selectedModel, selectedTeam, selectedProject, startDate, endDate, searchTerm]);
 
   const sortedRows = useMemo(() => {
     if (!sort.length) return filteredRows;
@@ -94,15 +116,11 @@ function App() {
       if (aVal === bVal) return 0;
       if (aVal == null) return dir === 'asc' ? 1 : -1;
       if (bVal == null) return dir === 'asc' ? -1 : 1;
-      if (typeof aVal === 'string') {
-        const cmp = aVal.localeCompare(bVal);
-        return dir === 'asc' ? cmp : -cmp;
-      }
+      if (typeof aVal === 'string') return dir === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
       return dir === 'asc' ? aVal - bVal : bVal - aVal;
     });
   }, [filteredRows, sort]);
 
-  // Memoized so they only recompute when sortedRows changes, not on every render
   const { totalCalls, totalSpend, avgLatency, activeTeams } = useMemo(() => {
     const totalCalls = sortedRows.reduce((sum, item) => sum + item.calls, 0);
     const totalSpend = sortedRows.reduce((sum, item) => sum + item.spend, 0);
@@ -115,235 +133,270 @@ function App() {
     };
   }, [sortedRows]);
 
+  const trend = useMemo(() => {
+    const totals = new Map();
+    filteredRows.forEach((row) => totals.set(row.date, (totals.get(row.date) || 0) + row.calls));
+    return [...totals.entries()].sort(([a], [b]) => a.localeCompare(b));
+  }, [filteredRows]);
+
+  const spendByModel = useMemo(() => models
+    .map((model) => ({
+      model,
+      value: filteredRows.filter((row) => row.model === model).reduce((sum, row) => sum + row.spend, 0),
+    }))
+    .filter((item) => item.value > 0), [filteredRows]);
+
+  const exportCsv = useCallback(() => {
+    const headers = ['Date', 'Team', 'Project', 'Model', 'Calls', 'Spend', 'Latency'];
+    const content = [headers, ...sortedRows.map((row) => [row.date, row.team, row.project, row.model, row.calls, row.spend.toFixed(2), row.latency])]
+      .map((row) => row.map((value) => `"${String(value).replace(/"/g, '""')}"`).join(','))
+      .join('\r\n');
+    downloadBlob(new Blob([content], { type: 'text/csv;charset=utf-8;' }), 'ai-usage-report.csv');
+  }, [sortedRows]);
+
+  const exportFullReport = useCallback(() => {
+    const report = [
+      'AI USAGE MONITORING REPORT',
+      `Generated: ${new Date().toLocaleString()}`,
+      '',
+      '=== SUMMARY METRICS ===',
+      `Total API Calls: ${totalCalls.toLocaleString()}`,
+      `Total Estimated Spend: ${formatCurrency(totalSpend)}`,
+      `Average Latency: ${avgLatency} ms`,
+      `Active Teams: ${activeTeams}`,
+      '',
+      '=== DETAILED RECORDS ===',
+      ['Date', 'Team', 'Project', 'Model', 'Calls', 'Spend', 'Latency'].join('\t'),
+      ...sortedRows.map((row) => [row.date, row.team, row.project, row.model, row.calls, formatCurrency(row.spend), `${row.latency}ms`].join('\t')),
+    ].join('\r\n');
+    downloadBlob(new Blob([report], { type: 'text/plain;charset=utf-8;' }), `ai-usage-report-${new Date().toISOString().split('T')[0]}.txt`);
+  }, [totalCalls, totalSpend, avgLatency, activeTeams, sortedRows]);
+
   const isDark = theme === 'dark';
   const chartStyle = { background: 'transparent', color: 'var(--kendo-color-on-app-surface)' };
   const chartLabelColor = 'var(--kendo-color-subtle)';
   const chartTitleColor = 'var(--kendo-color-on-app-surface)';
 
-  const exportCsv = useCallback(() => {
-    const headers = ['Date', 'Team', 'Project', 'Model', 'Calls', 'Spend', 'Latency'];
-    const rowsCsv = sortedRows.map((row) => [
-      row.date, row.team, row.project, row.model, row.calls, row.spend.toFixed(2), row.latency,
-    ]);
-    const csvContent = [headers, ...rowsCsv]
-      .map((row) => row.map((value) => `"${String(value).replace(/"/g, '""')}"`).join(','))
-      .join('\r\n');
-    downloadBlob(new Blob([csvContent], { type: 'text/csv;charset=utf-8;' }), 'ai-usage-report.csv');
-  }, [sortedRows]);
-
-  const exportFullReport = useCallback(() => {
-    const filtersSummary = [];
-    if (selectedModel) filtersSummary.push(`Model: ${selectedModel}`);
-    if (selectedTeam) filtersSummary.push(`Team: ${selectedTeam}`);
-    if (selectedProject) filtersSummary.push(`Project: ${selectedProject}`);
-    if (searchTerm) filtersSummary.push(`Search: "${searchTerm}"`);
-    filtersSummary.push(`Date range: ${startDate.toLocaleDateString()} to ${endDate.toLocaleDateString()}`);
-
-    const report = [
-      'AI USAGE MONITORING REPORT',
-      `Generated: ${new Date().toLocaleString()}`,
-      `URL: ${window.location.href}`,
-      '',
-      '=== FILTERS APPLIED ===',
-      ...(filtersSummary.length ? filtersSummary : ['None']),
-      '',
-      '=== SUMMARY METRICS ===',
-      `Total API Calls: ${totalCalls.toLocaleString()}`,
-      `Total Estimated Spend: $${totalSpend.toFixed(2)}`,
-      `Average Latency: ${avgLatency} ms`,
-      `Active Teams: ${activeTeams}`,
-      `Records Included: ${sortedRows.length}`,
-      '',
-      '=== DETAILED RECORDS ===',
-      ['Date', 'Team', 'Project', 'Model', 'Calls', 'Spend', 'Latency'].join('\t'),
-      ...sortedRows.map((row) =>
-        [row.date, row.team, row.project, row.model, row.calls, `$${row.spend.toFixed(2)}`, `${row.latency}ms`].join('\t')
-      ),
-    ].join('\r\n');
-
-    downloadBlob(
-      new Blob([report], { type: 'text/plain;charset=utf-8;' }),
-      `ai-usage-report-${new Date().toISOString().split('T')[0]}.txt`
-    );
-  }, [selectedModel, selectedTeam, selectedProject, searchTerm, startDate, endDate, totalCalls, totalSpend, avgLatency, activeTeams, sortedRows]);
-
   return (
-    <div className={`app-shell ${theme}`}>
-      <section className="topbar" aria-label="Dashboard controls">
+    <>
+      <header className="topbar">
         <div>
           <p className="eyebrow">AI Usage Monitoring</p>
           <h1>AI API consumption dashboard</h1>
           <p className="subtitle">Track models, teams, projects, and spend across your organization.</p>
         </div>
-
         <div className="topbar-actions">
           <label className="toggle-label">
             <span>Dark mode</span>
-            <Switch
-              checked={isDark}
-              onChange={(event) => setTheme(event.value ? 'dark' : 'light')}
-              aria-label="Toggle dark mode"
-            />
+            <Switch checked={isDark} onChange={(event) => setTheme(event.value ? 'dark' : 'light')} aria-label="Toggle dark mode" />
           </label>
-          <Button primary onClick={exportFullReport}>
-            Export report
-          </Button>
+          <Button primary onClick={exportFullReport} disabled={!sortedRows.length}>Export report</Button>
         </div>
-      </section>
+      </header>
 
       <section className="filters" aria-label="Dashboard filters">
         <div className="filter-row">
-          <DropDownList
-            data={models}
-            textField=""
-            dataItemKey=""
-            value={selectedModel}
-            onChange={(e) => setSelectedModel(e.target.value)}
-            defaultItem=""
-            label="Model"
-            aria-label="Filter by model"
-          />
-          <DropDownList
-            data={teams}
-            value={selectedTeam}
-            onChange={(e) => setSelectedTeam(e.target.value)}
-            defaultItem=""
-            label="Team"
-            aria-label="Filter by team"
-          />
-          <DropDownList
-            data={projects}
-            value={selectedProject}
-            onChange={(e) => setSelectedProject(e.target.value)}
-            defaultItem=""
-            label="Project"
-            aria-label="Filter by project"
-          />
+          <DropDownList data={models} value={selectedModel} onChange={(event) => setSelectedModel(event.target.value)} defaultItem="" label="Model" aria-label="Filter by model" />
+          <DropDownList data={teams} value={selectedTeam} onChange={(event) => setSelectedTeam(event.target.value)} defaultItem="" label="Team" aria-label="Filter by team" />
+          <DropDownList data={projects} value={selectedProject} onChange={(event) => setSelectedProject(event.target.value)} defaultItem="" label="Project" aria-label="Filter by project" />
           <div className="date-pickers">
-            <DatePicker
-              value={startDate}
-              onChange={(e) => setStartDate(e.target.value)}
-              label="Start date"
-              aria-label="Start date"
-            />
-            <DatePicker
-              value={endDate}
-              onChange={(e) => setEndDate(e.target.value)}
-              label="End date"
-              aria-label="End date"
-            />
+            <DatePicker value={startDate} onChange={(event) => setStartDate(event.target.value)} max={endDate || undefined} label="Start date" aria-label="Start date" />
+            <DatePicker value={endDate} onChange={(event) => setEndDate(event.target.value)} min={startDate || undefined} label="End date" aria-label="End date" />
           </div>
-          <Input
-            placeholder="Search teams, projects, model"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            aria-label="Search AI usage"
-          />
+          <Input placeholder="Search teams, projects, models" value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} aria-label="Search AI usage" />
         </div>
+        {!hasValidDateRange && <p className="validation-message" role="alert">Choose an end date that is on or after the start date.</p>}
       </section>
 
-      <section className="metrics-grid" aria-label="Key metrics overview">
-        <Card className="metric-card" role="region" aria-label="Total API calls">
-          <CardHeader>
-            <p className="metric-label">Total API calls</p>
-          </CardHeader>
-          <CardBody>
-            <p className="metric-value">{totalCalls.toLocaleString()}</p>
-            <p className="metric-note">Across selected time and filters.</p>
-          </CardBody>
-        </Card>
+      {hasValidDateRange && !sortedRows.length ? <EmptyState onClear={clearFilters} /> : (
+        <>
+          <section className="metrics-grid" aria-label="Key metrics overview">
+            {[
+              ['Total API calls', totalCalls.toLocaleString(), 'Across selected time and filters.'],
+              ['Estimated spend', formatCurrency(totalSpend), 'Forecasted from API usage.'],
+              ['Avg latency', `${avgLatency} ms`, 'Average response time.'],
+              ['Active teams', activeTeams, 'Teams with API activity.'],
+            ].map(([label, value, note]) => (
+              <Card className="metric-card" role="region" aria-label={label} key={label}>
+                <CardHeader><p className="metric-label">{label}</p></CardHeader>
+                <CardBody><p className="metric-value">{value}</p><p className="metric-note">{note}</p></CardBody>
+              </Card>
+            ))}
+          </section>
 
-        <Card className="metric-card" role="region" aria-label="Estimated spend">
-          <CardHeader>
-            <p className="metric-label">Estimated spend</p>
-          </CardHeader>
-          <CardBody>
-            <p className="metric-value">{formatCurrency(totalSpend)}</p>
-            <p className="metric-note">Forecasted from API usage.</p>
-          </CardBody>
-        </Card>
+          <section className="dashboard-grid">
+            <Card className="chart-card" role="region" aria-label="API usage over time">
+              <CardHeader><h2>Usage trend</h2></CardHeader>
+              <CardBody>
+                <Chart style={chartStyle} chartArea={{ background: 'transparent' }}>
+                  <ChartTitle text="API calls by day" color={chartTitleColor} />
+                  <ChartLegend position="bottom" labels={{ color: chartTitleColor }} />
+                  <ChartCategoryAxis><ChartCategoryAxisItem categories={trend.map(([date]) => date.slice(5))} labels={{ color: chartLabelColor }} /></ChartCategoryAxis>
+                  <ChartValueAxis><ChartValueAxisItem labels={{ color: chartLabelColor }} /></ChartValueAxis>
+                  <ChartSeries><ChartSeriesItem type="line" data={trend.map(([, calls]) => calls)} name="API calls" /></ChartSeries>
+                  <ChartTooltip format="{0}" />
+                </Chart>
+              </CardBody>
+            </Card>
+            <Card className="chart-card" role="region" aria-label="Spend share by model">
+              <CardHeader><h2>Spend share</h2></CardHeader>
+              <CardBody>
+                <Chart style={chartStyle} chartArea={{ background: 'transparent' }}>
+                  <ChartTitle text="Spend by model" color={chartTitleColor} />
+                  <ChartLegend position="bottom" labels={{ color: chartTitleColor }} />
+                  <ChartSeries><ChartSeriesItem type="donut" data={spendByModel} field="value" categoryField="model" /></ChartSeries>
+                  <ChartTooltip format="{0:c}" />
+                </Chart>
+              </CardBody>
+            </Card>
+          </section>
 
-        <Card className="metric-card" role="region" aria-label="Average latency">
-          <CardHeader>
-            <p className="metric-label">Avg latency</p>
-          </CardHeader>
-          <CardBody>
-            <p className="metric-value">{avgLatency} ms</p>
-            <p className="metric-note">Average response time.</p>
-          </CardBody>
-        </Card>
+          <section className="table-section" aria-label="Detailed usage records">
+            <div className="table-header">
+              <div><h2>Recent usage records</h2><p>{sortedRows.length} records shown</p></div>
+              <Button onClick={exportCsv}>Export CSV</Button>
+            </div>
+            <Grid className="usage-grid" data={sortedRows} sort={sort} onSort={(event) => setSort(event.sort || [])} pageable={false} sortable resizable>
+              <GridColumn field="date" title="Date" width="130px" />
+              <GridColumn field="team" title="Team" width="140px" />
+              <GridColumn field="project" title="Project" width="180px" />
+              <GridColumn field="model" title="Model" width="140px" />
+              <GridColumn field="calls" title="Calls" width="120px" />
+              <GridColumn field="spend" title="Spend" width="120px" format="{0:c}" />
+              <GridColumn field="latency" title="Latency (ms)" />
+            </Grid>
+          </section>
+        </>
+      )}
+    </>
+  );
+}
 
-        <Card className="metric-card" role="region" aria-label="Active teams">
-          <CardHeader>
-            <p className="metric-label">Active teams</p>
-          </CardHeader>
-          <CardBody>
-            <p className="metric-value">{activeTeams}</p>
-            <p className="metric-note">Teams with API activity.</p>
-          </CardBody>
-        </Card>
-      </section>
+function ContentPage({ title, description, children }) {
+  return <section className="content-page"><p className="eyebrow">Workspace</p><h1>{title}</h1><p className="subtitle">{description}</p>{children}</section>;
+}
 
-      <section className="table-section" aria-label="Detailed usage records">
-        <div className="table-header">
-          <div>
-            <h2>Recent usage records</h2>
-            <p>{sortedRows.length} records shown</p>
-          </div>
-          <Button primary onClick={exportCsv}>
-            Export CSV
-          </Button>
+function NotificationsPage() {
+  return (
+    <ContentPage title="Notifications" description="Operational updates from your AI usage workspace.">
+      <div className="stacked-list">
+        <article><strong>Budget watch: Search Insights</strong><p>Daily model spend reached 82% of its planned budget.</p><time dateTime="2026-04-13T09:30">Today, 9:30 AM</time></article>
+        <article><strong>Latency improved for Billing API</strong><p>Median response time dropped to 195 ms after the latest model routing update.</p><time dateTime="2026-04-12T14:20">Yesterday, 2:20 PM</time></article>
+        <article><strong>Weekly usage report is ready</strong><p>Your organization report for April 7-13 is ready to export.</p><time dateTime="2026-04-11T08:00">April 11, 8:00 AM</time></article>
+      </div>
+    </ContentPage>
+  );
+}
+
+function SettingsPage() {
+  const [alertsEnabled, setAlertsEnabled] = useState(true);
+  const [weeklyReport, setWeeklyReport] = useState(false);
+  const [saved, setSaved] = useState(false);
+  const save = () => {
+    setSaved(true);
+    window.setTimeout(() => setSaved(false), 3000);
+  };
+  return (
+    <ContentPage title="Settings" description="Control reporting and usage-alert preferences.">
+      <Card className="settings-card"><CardBody>
+        <h2>Notifications</h2>
+        <label className="settings-row"><span><strong>Budget threshold alerts</strong><small>Receive an alert when project spend reaches its configured limit.</small></span><Switch checked={alertsEnabled} onChange={(event) => setAlertsEnabled(event.value)} /></label>
+        <label className="settings-row"><span><strong>Weekly usage report</strong><small>Send a usage summary every Monday morning.</small></span><Switch checked={weeklyReport} onChange={(event) => setWeeklyReport(event.value)} /></label>
+        <Button primary onClick={save}>Save preferences</Button>
+        {saved && <p className="save-confirmation" role="status">Preferences saved.</p>}
+      </CardBody></Card>
+    </ContentPage>
+  );
+}
+
+function ProfilePage() {
+  return (
+    <ContentPage title="Profile" description="Update the workspace identity used in exports and notifications.">
+      <Card className="form-card"><CardBody>
+        <h2>Profile details</h2>
+        <Input label="Full name" defaultValue="Jordan Lee" />
+        <Input label="Work email" defaultValue="jordan.lee@example.com" type="email" />
+        <Button primary>Save profile</Button>
+      </CardBody></Card>
+    </ContentPage>
+  );
+}
+
+function HelpPage() {
+  const [sent, setSent] = useState(false);
+  return (
+    <ContentPage title="Help & support" description="Find answers or send a request to the AI platform team.">
+      {sent ? <section className="empty-state"><div aria-hidden="true" className="empty-state-icon">✓</div><h2>Request received</h2><p>Support will respond within one business day. Reference: AI-4821.</p></section> : (
+        <Card className="form-card"><CardBody>
+          <h2>Contact support</h2>
+          <Input label="Subject" placeholder="What do you need help with?" />
+          <TextArea label="Message" placeholder="Include the project, model, and date range if relevant." rows={5} />
+          <Button primary onClick={() => setSent(true)}>Send request</Button>
+        </CardBody></Card>
+      )}
+    </ContentPage>
+  );
+}
+
+function ChatAssistant({ page }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [message, setMessage] = useState('');
+  const [messages, setMessages] = useState([]);
+  const prompts = page === 'dashboard' ? ['Summarize this week', 'Which project costs most?'] : ['Explain this page', 'Talk to a human'];
+  const sendMessage = (text = message) => {
+    if (!text.trim()) return;
+    setMessages((current) => [...current, { author: 'You', text }, { author: 'AI assistant', text: 'I can help analyze usage data or connect you with the platform team.' }]);
+    setMessage('');
+  };
+  return (
+    <aside className={`chat-assistant ${isOpen ? 'is-open' : ''}`} aria-label="AI assistant">
+      {isOpen && <div className="chat-panel">
+        <header><div><strong>AI assistant</strong><span>Available now</span></div><Button fillMode="flat" onClick={() => setIsOpen(false)} aria-label="Close AI assistant">Close</Button></header>
+        <div className="chat-messages" aria-live="polite">
+          {!messages.length && <><p>Ask about usage, costs, or workspace settings.</p><div className="prompt-chips">{prompts.map((prompt) => <Button key={prompt} fillMode="outline" onClick={() => sendMessage(prompt)}>{prompt}</Button>)}</div></>}
+          {messages.map((item, index) => <p className={item.author === 'You' ? 'message user-message' : 'message assistant-message'} key={`${item.author}-${index}`}><strong>{item.author}</strong>{item.text}</p>)}
         </div>
-        <Grid className="usage-grid" data={sortedRows} sort={sort} onSort={(e) => setSort(e.sort || [])} pageable={false} sortable resizable>
-          <GridColumn field="date" title="Date" width="130px" />
-          <GridColumn field="team" title="Team" width="140px" />
-          <GridColumn field="project" title="Project" width="180px" />
-          <GridColumn field="model" title="Model" width="140px" />
-          <GridColumn field="calls" title="Calls" width="120px" />
-          <GridColumn field="spend" title="Spend" width="120px" format="{0:c}" />
-          <GridColumn field="latency" title="Latency (ms)" />
-        </Grid>
-      </section>
+        <form className="chat-form" onSubmit={(event) => { event.preventDefault(); sendMessage(); }}>
+          <Input value={message} onChange={(event) => setMessage(event.target.value)} aria-label="Message AI assistant" placeholder="Ask a question" />
+          <Button primary type="submit">Send</Button>
+        </form>
+      </div>}
+      <Button className="chat-trigger" primary onClick={() => setIsOpen((open) => !open)} aria-expanded={isOpen}>{isOpen ? 'Minimize assistant' : 'Ask AI assistant'}</Button>
+    </aside>
+  );
+}
 
-      <section className="dashboard-grid">
-        <Card className="chart-card" role="region" aria-label="API usage over time">
-          <CardHeader>
-            <h2>Usage trend</h2>
-          </CardHeader>
-          <CardBody>
-            <Chart style={chartStyle} chartArea={{ background: 'transparent' }}>
-              <ChartTitle text="API calls by day" color={chartTitleColor} />
-              <ChartLegend position="bottom" labels={{ color: chartTitleColor }} />
-              <ChartCategoryAxis>
-                <ChartCategoryAxisItem categories={usageLabels} labels={{ color: chartLabelColor }} />
-              </ChartCategoryAxis>
-              <ChartValueAxis>
-                <ChartValueAxisItem labels={{ color: chartLabelColor }} />
-              </ChartValueAxis>
-              <ChartSeries>
-                <ChartSeriesItem type="line" data={usageByTime} name="API calls" />
-              </ChartSeries>
-              <ChartTooltip format="{0}" />
-            </Chart>
-          </CardBody>
-        </Card>
+function App() {
+  const [activePage, setActivePage] = useState(getRoute);
+  const [navigationOpen, setNavigationOpen] = useState(false);
+  useEffect(() => {
+    const handleHashChange = () => setActivePage(getRoute());
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+  const navigate = (page) => {
+    window.location.hash = page;
+    setNavigationOpen(false);
+  };
+  const content = {
+    dashboard: <Dashboard />,
+    notifications: <NotificationsPage />,
+    settings: <SettingsPage />,
+    profile: <ProfilePage />,
+    help: <HelpPage />,
+  }[activePage] || <ContentPage title="Page not found" description="The page you requested is unavailable."><Button primary onClick={() => navigate('dashboard')}>Return to dashboard</Button></ContentPage>;
 
-        <Card className="chart-card" role="region" aria-label="Spend share by model">
-          <CardHeader>
-            <h2>Spend share</h2>
-          </CardHeader>
-          <CardBody>
-            <Chart style={chartStyle} chartArea={{ background: 'transparent' }}>
-              <ChartTitle text="Spend by model" color={chartTitleColor} />
-              <ChartLegend position="bottom" labels={{ color: chartTitleColor }} />
-              <ChartSeries>
-                <ChartSeriesItem type="donut" data={modelShare} field="value" categoryField="model" />
-              </ChartSeries>
-              <ChartTooltip format="{0}%" />
-            </Chart>
-          </CardBody>
-        </Card>
-      </section>
+  return (
+    <div className="app-shell">
+      <Button className="mobile-navigation-toggle" onClick={() => setNavigationOpen((open) => !open)} aria-expanded={navigationOpen}>Menu</Button>
+      <div className="app-layout">
+        <aside className={`side-navigation ${navigationOpen ? 'is-open' : ''}`} aria-label="Primary navigation">
+          <p className="navigation-title">AI Monitor</p>
+          <nav>{navigationItems.map((item) => <button className={activePage === item.id ? 'is-active' : ''} key={item.id} onClick={() => navigate(item.id)}>{item.label}</button>)}</nav>
+        </aside>
+        <main>{content}</main>
+      </div>
+      <ChatAssistant page={activePage} />
     </div>
   );
 }
