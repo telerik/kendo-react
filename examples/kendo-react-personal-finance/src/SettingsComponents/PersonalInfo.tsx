@@ -39,15 +39,15 @@ export default function PersonalInfo() {
   }, []); // Load data from localStorage on component mount
 
   return (
-    <Card className="k-p-4 k-gap-6 k-rounded-xxl k-h-full">
-      <div className={"k-d-grid k-gap-2"}>
+    <Card className="app-card">
+      <div className="app-card__content">
         <div
           style={{
             fontSize: "20px",
             letterSpacing: "wide",
             fontWeight: "500",
           }}
-          className="k-gap-2"
+          className="app-card__title"
         >
           Personal Information{" "}
         </div>
@@ -59,53 +59,53 @@ export default function PersonalInfo() {
               localStorage.setItem(personalInfoKey, JSON.stringify(dataItem)); // Save updated data to localStorage
             }}
             render={(formRenderProps) => (
-              <FormElement className="k-d-grid k-gap-4">
-                <div className="k-d-grid k-grid-cols-4 k-gap-4 k-gap-lg-10 k-overflow-hidden k-mb-4">
+              <FormElement className="app-form">
+                <div className="app-form-row">
                   <FieldWrapper
                     style={{ width: "100%" }}
-                    className={"k-col-span-5 k-col-span-lg-2 k-col-span-xl-2"}
+                    className="app-form-field"
                   >
-                    <Label className="k-form-label k-pt-1" editorId={"name"}>
+                    <Label className="k-form-label" editorId={"name"}>
                       Name
                     </Label>
                     <Field id={"name"} name="name" component={Input} />
                   </FieldWrapper>
                   <FieldWrapper
                     style={{ width: "100%" }}
-                    className={"k-col-span-5 k-col-span-lg-2 k-col-span-xl-2"}
+                    className="app-form-field"
                   >
-                    <Label className="k-form-label k-pt-1" editorId={"surname"}>
+                    <Label className="k-form-label" editorId={"surname"}>
                       Surname
                     </Label>
                     <Field id={"surname"} name="surname" component={Input} />
                   </FieldWrapper>
                 </div>
-                <div className="k-d-grid k-grid-cols-4 k-gap-4 k-gap-lg-10 k-overflow-hidden k-mb-4">
+                <div className="app-form-row">
                   <FieldWrapper
                     style={{ width: "100%" }}
-                    className={"k-col-span-5 k-col-span-lg-2 k-col-span-xl-2"}
+                    className="app-form-field"
                   >
-                    <Label className="k-form-label k-pt-1" editorId={"email"}>
+                    <Label className="k-form-label" editorId={"email"}>
                       Email
                     </Label>
                     <Field id={"email"} name="email" component={Input} />
                   </FieldWrapper>
                   <FieldWrapper
                     style={{ width: "100%" }}
-                    className={"k-col-span-5 k-col-span-lg-2 k-col-span-xl-2"}
+                    className="app-form-field"
                   >
-                    <Label className="k-form-label k-pt-1" editorId={"tag"}>
+                    <Label className="k-form-label" editorId={"tag"}>
                       Tag
                     </Label>
                     <Field id={"tag"} name="tag" component={Input} />
                   </FieldWrapper>
                 </div>
-                <div className="k-d-grid k-grid-cols-4 k-gap-4 k-gap-lg-10 k-overflow-hidden k-mb-4">
+                <div className="app-form-row">
                   <FieldWrapper
                     style={{ width: "100%" }}
-                    className={"k-col-span-5 k-col-span-lg-2 k-col-span-xl-2"}
+                    className="app-form-field"
                   >
-                    <Label className="k-form-label k-pt-1" editorId={"birthday"}>
+                    <Label className="k-form-label" editorId={"birthday"}>
                       Birthday
                     </Label>
                     <Field
@@ -116,9 +116,9 @@ export default function PersonalInfo() {
                   </FieldWrapper>
                   <FieldWrapper
                     style={{ width: "100%" }}
-                    className={"k-col-span-5 k-col-span-lg-2 k-col-span-xl-2"}
+                    className="app-form-field"
                   >
-                    <Label className="k-form-label k-pt-1" editorId={"country"}>
+                    <Label className="k-form-label" editorId={"country"}>
                       Country
                     </Label>
                     <Field
@@ -135,27 +135,27 @@ export default function PersonalInfo() {
                     />
                   </FieldWrapper>
                 </div>
-                <div className="k-d-grid k-grid-cols-4 k-gap-4 k-gap-lg-10 k-overflow-hidden k-mb-4">
+                <div className="app-form-row">
                   <FieldWrapper
                     style={{ width: "100%" }}
-                    className={"k-col-span-5 k-col-span-lg-2 k-col-span-xl-2"}
+                    className="app-form-field"
                   >
-                    <Label className="k-form-label k-pt-1" editorId={"address"}>
+                    <Label className="k-form-label" editorId={"address"}>
                       Address
                     </Label>
                     <Field id={"address"} name="address" component={Input} />
                   </FieldWrapper>
                   <FieldWrapper
                     style={{ width: "100%" }}
-                    className={"k-col-span-5 k-col-span-lg-2 k-col-span-xl-2"}
+                    className="app-form-field"
                   >
-                    <Label className="k-form-label k-pt-1" editorId={"postcode"}>
+                    <Label className="k-form-label" editorId={"postcode"}>
                       Post Code
                     </Label>
                     <Field id={"postcode"} name="postcode" component={Input} />
                   </FieldWrapper>
                 </div>
-                <div className="k-mt-6 k-d-flex k-gap-4">
+                <div className="app-form-actions">
                   <Button
                     type="submit"
                     size={"small"}

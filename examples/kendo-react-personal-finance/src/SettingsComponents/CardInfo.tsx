@@ -35,15 +35,15 @@ export default function CardInfo() {
   }, []); // Load data from localStorage on component mount
 
   return (
-    <Card className="k-p-4 k-gap-6 k-rounded-xxl k-h-full">
-      <div className={"k-d-grid k-gap-2"}>
+    <Card className="app-card">
+      <div className="app-card__content">
         <div
           style={{
             fontSize: "20px",
             letterSpacing: "wide",
             fontWeight: "500",
           }}
-          className="k-gap-2"
+          className="app-card__title"
         >
           Card Information
         </div>
@@ -55,10 +55,10 @@ export default function CardInfo() {
             localStorage.setItem(cardInfoKey, JSON.stringify(dataItem)); // Save updated data to localStorage
           }}
           render={(formRenderProps) => (
-            <FormElement className="k-d-grid k-gap-4">
-              <div className="k-d-grid k-grid-cols-4 k-gap-4 k-gap-lg-10 k-overflow-hidden k-mb-4">
+            <FormElement className="app-form">
+              <div className="app-form-row">
                 <FieldWrapper
-                  className="k-col-span-5 k-col-span-lg-2 k-col-span-xl-2"
+                  className="app-form-field"
                   style={{ width: "100%" }}
                 >
                   <Label className="k-form-label" editorId={"bank"}>
@@ -67,9 +67,9 @@ export default function CardInfo() {
                   <Field id={"bank"} name="bank" component={Input} />
                 </FieldWrapper>
               </div>
-              <div className="k-d-grid k-grid-cols-4 k-gap-4 k-gap-lg-10 k-overflow-hidden k-mb-4">
+              <div className="app-form-row">
                 <FieldWrapper
-                  className="k-col-span-5 k-col-span-lg-2 k-col-span-xl-2"
+                  className="app-form-field"
                   style={{ width: "100%" }}
                 >
                   <Label className="k-form-label" editorId={"expiryDate"}>
@@ -84,9 +84,9 @@ export default function CardInfo() {
                   />
                 </FieldWrapper>
               </div>
-              <div className="k-d-grid k-grid-cols-4 k-gap-4 k-gap-lg-10 k-overflow-hidden k-mb-4">
+              <div className="app-form-row">
                 <FieldWrapper
-                  className="k-col-span-5 k-col-span-lg-2 k-col-span-xl-2"
+                  className="app-form-field"
                   style={{ width: "100%" }}
                 >
                   <Label className="k-form-label" editorId={"cardHolder"}>
@@ -99,7 +99,7 @@ export default function CardInfo() {
                   />
                 </FieldWrapper>
                 <FieldWrapper
-                  className="k-col-span-5 k-col-span-lg-2 k-col-span-xl-2"
+                  className="app-form-field"
                   style={{ width: "100%" }}
                 >
                   <Label className="k-form-label" editorId={"cardNumber"}>
@@ -114,7 +114,7 @@ export default function CardInfo() {
                 </FieldWrapper>
               </div>
 
-              <div className="k-mt-6 k-d-flex k-gap-4">
+              <div className="app-form-actions">
                 <Button
                   type="submit"
                   size={"small"}

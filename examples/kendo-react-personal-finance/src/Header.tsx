@@ -35,8 +35,8 @@ function Header(props: HeaderProps) {
   }, [searchItems, navigateTo]);
 
   return (
-    <header className="k-d-flex k-px-lg-15 k-px-md-15 k-px-sm-5 k-px-xs-5 k-py-6.5 k-gap-4 k-flex-wrap k-justify-content-between k-align-items-center">
-      <div className="k-d-flex-row k-shrink-0 k-flex-basis-0 k-flex-grow k-gap-2 k-align-items-center">
+    <header className="app-header">
+      <div className="app-header__profile">
         <Avatar size="large">
           <img
             src="./images/avatar-image.jpeg"
@@ -44,17 +44,17 @@ function Header(props: HeaderProps) {
             style={{ verticalAlign: "top" }}
           />
         </Avatar>
-        <div className="k-d-flex k-d-flex-col k-flex-nowrap k-gap-3 k-align-items-start">
-          <span className="k-font-size-xl !k-m-0 k-font-bold k-white-space-nowrap k-h-6 k-align-middle">
+        <div className="app-header__greeting">
+          <span className="app-header__name">
             Hi, {name}
           </span>
-          <span className="k-font-size-md !k-m-0 k-font-medium k-white-space-nowrap">
+          <span className="app-header__welcome">
             Welcome back
           </span>
         </div>
       </div>
-      <div className="k-flex-basis-0 k-shrink-0 k-flex-grow">
-        <div className="k-d-flex">
+      <div className="app-header__search">
+        <div>
           <AutoComplete
             style={{ width: "100%", minWidth: "215px", maxWidth: "360px" }}
             size={"small"}
@@ -64,7 +64,7 @@ function Header(props: HeaderProps) {
             textField={"text"}
             dataItemKey={"itemIndex"}
             prefix={() => (
-              <div className="k-d-flex k-align-items-center">
+              <div className="app-header__search-prefix">
                 <InputPrefix orientation="vertical">
                   <SvgIcon icon={searchIcon} />
                 </InputPrefix>
@@ -76,7 +76,7 @@ function Header(props: HeaderProps) {
           />
         </div>
       </div>
-      <div className="k-d-flex k-flex-basis-0 k-shrink-0 k-flex-grow k-justify-content-end k-justify-content-sm-start k-gap-4">
+      <div className="app-header__actions">
         <Button
           size={"small"}
           fillMode={"solid"}
@@ -88,12 +88,12 @@ function Header(props: HeaderProps) {
         </Button>
         <DropDownList
           style={{
-            backgroundColor: "#F5F5F5",
+            backgroundColor: "var(--kendo-color-surface-alt)",
             width: "105px",
-            border: "1px solid var(--kendo-color-opacity-border, #E0E0E0A8)",
-            fontSize: "16px",
-            fontWeight: 400,
-            color: "#000000",
+            border: "1px solid var(--kendo-color-border)",
+            fontSize: "var(--kendo-font-size)",
+            fontWeight: "var(--kendo-font-weight-normal)",
+            color: "var(--kendo-color-on-surface)",
           }}
           rounded={"large"}
           data={["USD", "EUR"]}

@@ -10,8 +10,8 @@ interface SavingsProps {
 
 export default function Savings(props: SavingsProps) {
     return (
-      <Card className="k-p-4 k-gap-4 k-rounded-xxl k-gap-1.5 k-h-full">
-        <div className={"k-d-grid k-gap-4"}>
+      <Card className="app-card app-card--compact">
+        <div className="app-card__content">
           <div
             style={{
               fontSize: "20px",

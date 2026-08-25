@@ -11,12 +11,12 @@ const Analytics: React.FC = (props) => {
 
   return (
     <>
-      <h1 className="k-px-md-15 k-p-5 k-m-0">Analytics</h1>
-      <div className="k-d-grid k-grid-cols-1 k-grid-cols-md-6 k-gap-5 k-p-md-5 k-px-md-15 k-p-5">
-        <div className="k-col-span-6">
+      <h1 className="app-page-title">Analytics</h1>
+      <div className="app-page-grid">
+        <div className="app-span-all">
           <CashFlowChart />
         </div>
-        <div className="k-col-span-6">
+        <div className="app-span-all">
           <TransactionsGrid currency={currency} />
         </div>
       </div>
@@ -25,4 +25,3 @@ const Analytics: React.FC = (props) => {
 };
 
 export default Analytics;
-

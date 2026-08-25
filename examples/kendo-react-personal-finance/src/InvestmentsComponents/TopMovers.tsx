@@ -58,12 +58,12 @@ export default function TopMovers(props: TopMoversProps) {
   const ListViewItem = (props: ListViewItemProps) => {
     const { dataItem } = props;
     return (
-      <div className="k-d-grid k-grid-cols-4 k-gap-lg-6 k-gap-xxl-6 k-gap-sm-0 k-rounded-md">
-        <div className="k-d-flex k-align-items-center">
+      <div className="top-movers__item">
+        <div className="top-movers__identity">
           <Avatar rounded="full" type="image">
             <img src={dataItem.avatar} alt={dataItem.name} />
           </Avatar>
-          <div className="k-d-flex k-flex-column k-gap-4px">
+          <div className="top-movers__stack">
             <span style={{ fontSize: 14, fontWeight: 700 }}>
               {dataItem.pair}
             </span>
@@ -72,15 +72,15 @@ export default function TopMovers(props: TopMoversProps) {
             </span>
           </div>
         </div>
-        <div className="k-d-flex k-flex-column k-gap-4px k-align-items-end">
+        <div className="top-movers__stack top-movers__stack--end">
           <span>{displayCurrencySign(dataItem.price, currency)}</span>
           <Change change={dataItem.change} price={dataItem.price} />
         </div>
-        <div className="k-d-flex k-flex-column k-gap-4px k-align-items-end">
+        <div className="top-movers__stack top-movers__stack--end">
           <span>{displayCurrencySign(dataItem.price, currency)}</span>
           <Change change={dataItem.change} price={dataItem.price} />
         </div>
-        <div className="k-d-flex k-flex-column k-align-items-end k-justify-content-center ">
+        <div className="top-movers__stack top-movers__stack--end top-movers__total">
           <span>{displayCurrencySign(dataItem.total, currency)}</span>
         </div>
       </div>
@@ -88,19 +88,19 @@ export default function TopMovers(props: TopMoversProps) {
   };
 
   return (
-    <Card className="k-p-4 k-gap-6 k-rounded-xxl k-h-full">
-      <div className={"k-d-grid k-gap-10"}>
+    <Card className="app-card">
+      <div className="app-card__content top-movers__content">
         <div
           style={{
             fontSize: "20px",
             letterSpacing: "wide",
             fontWeight: "500",
           }}
-          className="k-gap-2"
+          className="app-card__title"
         >
           Today’s Top 5 Movers
         </div>
-        <div className="k-d-grid k-gap-6 k-pb-5">
+        <div className="top-movers__list">
           <ListView
             data={currencies}
             item={ListViewItem}

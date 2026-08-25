@@ -13,36 +13,36 @@ const Home = () => {
 
   return (
     <>
-      <h1 className="k-px-md-15 k-p-5 k-m-0">Overview</h1>
-      <div className="k-d-grid k-grid-cols-1 k-grid-cols-md-6 k-gap-5 k-p-md-5 k-px-md-15 k-p-5">
-        <div className="k-col-span-6 k-col-span-md-2">
+      <h1 className="app-page-title">Overview</h1>
+      <div className="app-page-grid">
+        <div className="app-span-2">
           <SmallCard
             topic={"Earnings"}
             amount={displayCurrencyValue(50000, currency)}
             percentage={200}
           />
         </div>
-        <div className="k-col-span-6 k-col-span-md-2">
+        <div className="app-span-2">
           <SmallCard
             topic={"Spendings"}
             amount={displayCurrencyValue(50000, currency)}
             percentage={100}
           />
         </div>
-        <div className="k-col-span-6 k-col-span-md-2">
+        <div className="app-span-2">
           <SmallCard
             topic={"Investments"}
             amount={displayCurrencyValue(35000, currency)}
             percentage={-80}
           />
         </div>
-        <div className="k-col-span-6 k-col-span-md-3">
+        <div className="app-span-3">
           <Savings savings={savings} currency={currency} />
         </div>
-        <div className="k-col-span-6 k-col-span-md-3">
+        <div className="app-span-3">
           <BudgetUtilization currency={currency} />
         </div>
-        <div className="k-col-span-6">
+        <div className="app-span-all">
           <TransactionsGrid currency={currency} />
         </div>
       </div>

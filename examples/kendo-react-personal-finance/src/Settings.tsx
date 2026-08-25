@@ -7,18 +7,18 @@ import Weather from "./SettingsComponents/Weather";
 const Settings: React.FC = () => {
   return (
     <>
-      <h1 className="k-px-md-15 k-p-5 k-m-0">Settings</h1>
-      <div className="k-d-grid k-grid-cols-12 k-gap-4 k-gap-lg-6 k-mb-5 k-overflow-hidden k-p-md-5 k-px-md-15 k-p-5">
-        <div className="k-col-span-12 k-col-span-xl-7 k-d-flex k-flex-col k-flex-basis-0 k-flex-grow">
+      <h1 className="app-page-title">Settings</h1>
+      <div className="app-page-grid--twelve">
+        <div className="app-column app-span-7">
           <PersonalInfo />
         </div>
-        <div className="k-col-span-12 k-col-span-xl-5 k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-1 k-h-full">
+        <div className="app-column app-span-5">
           <Calendar />
         </div>
-        <div className="k-col-span-12 k-col-span-xl-7 k-d-flex k-flex-col k-flex-basis-0 k-flex-grow">
+        <div className="app-column app-span-7">
           <CardInfo />
         </div>
-        <div className="k-col-span-12 k-col-span-xl-5 k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-1 k-h-full">
+        <div className="app-column app-span-5">
           <Weather />
         </div>
       </div>

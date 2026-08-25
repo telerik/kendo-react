@@ -119,15 +119,9 @@ export default function Transactions(props: TransactionsProps) {
   );
 
   return (
-    <Card className="k-p-4 k-gap-4 k-rounded-lg k-gap-3.5 k-h-full">
-      <div className={"k-d-grid k-gap-4"}>
-        <div
-          style={{
-            fontSize: "20px",
-            letterSpacing: "wide",
-            fontWeight: "500",
-          }}
-        >
+    <Card className="app-card app-card--section">
+      <div className="app-card__content">
+        <div className="app-card__title">
           Transactions
         </div>
       </div>

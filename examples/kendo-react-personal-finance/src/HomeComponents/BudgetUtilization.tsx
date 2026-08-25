@@ -19,8 +19,8 @@ export default function BudgetUtilization(props: BudgetUtilizationProps) {
   };
 
   return (
-    <Card className="k-p-4 k-gap-4 k-rounded-xxl k-gap-1.5 k-h-full">
-      <div className={"k-d-grid k-gap-4"}>
+    <Card className="app-card app-card--compact">
+      <div className="app-card__content">
         <div
           style={{
             fontSize: "20px",
@@ -40,7 +40,7 @@ export default function BudgetUtilization(props: BudgetUtilizationProps) {
           50% of the Budget used{" "}
         </div>
       </div>
-      <div className={"k-d-flex k-justify-content-center"}>
+      <div className="app-center">
         <ArcGauge
           value={value}
           color={"#2196F3"}
@@ -48,9 +48,9 @@ export default function BudgetUtilization(props: BudgetUtilizationProps) {
           arcCenterRender={arcCenterRenderer}
         />
       </div>
-      <div className={"k-d-flex k-justify-content-center"}>
-        <div className="k-d-flex">
-          <div className="k-d-grid k-justify-content-center k-align-items-center">
+      <div className="app-center">
+        <div className="app-center">
+          <div className="app-center-grid">
             <div
               style={{
                 fontSize: "16px",
@@ -68,7 +68,7 @@ export default function BudgetUtilization(props: BudgetUtilizationProps) {
               }}>Total budget</div>
           </div>
           <div className="separator"></div>
-          <div style={{textAlign: 'right'}} className="k-d-grid k-justify-content-center">
+          <div style={{textAlign: 'right'}} className="app-center-grid">
             <div
               style={{
                 fontSize: "16px",

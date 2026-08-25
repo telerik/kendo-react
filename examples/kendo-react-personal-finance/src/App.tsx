@@ -1,4 +1,5 @@
 import { createContext, JSX } from "react";
+import "@progress/kendo-theme-meridian/dist/all.css";
 import "./assets/App.css";
 import { Routes, Route } from "react-router-dom";
 import Navigation from "./Navigation";
