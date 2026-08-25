@@ -1,47 +1,35 @@
-@import "@progress/kendo-theme-default/dist/all.css";
+@import "@progress/kendo-theme-meridian/dist/all.css";
 
 :root {
-  /* Light Mode Colors */
-  --app-bg: #f5f1ff;
-  --panel-bg: rgba(255, 255, 255, 0.8);
-  --panel-surface: rgba(240, 234, 254, 0.5);
-  --panel-border: rgba(168, 85, 247, 0.25);
-  --text-primary: #1a1233;
-  --text-secondary: #5f5778;
-  --muted: #8b7bb8;
-  --accent: #7c3aed;
-  --accent-hover: #6d28d9;
-  --surface-alt: rgba(249, 240, 255, 0.6);
-  --card-radius: 1.25rem;
-  --shadow-soft: 0 8px 32px rgba(124, 58, 237, 0.1);
-  --shadow-medium: 0 16px 48px rgba(124, 58, 237, 0.15);
-  --focus-ring: rgba(124, 58, 237, 0.4);
-  
-  /* Glassmorphism */
-  --backdrop-blur: 12px;
-  --border-glass: 1.5px solid rgba(168, 85, 247, 0.2);
+  --kendo-color-app-surface: #f5f1ff;
+  --kendo-color-on-app-surface: #1a1233;
+  --kendo-color-surface: #ffffff;
+  --kendo-color-surface-alt: #f9f0ff;
+  --kendo-color-border: #a855f740;
+  --kendo-color-border-alt: #a855f766;
+  --kendo-color-subtle: #5f5778;
+  --kendo-color-primary: #7c3aed;
+  --kendo-color-secondary: #a78bfa;
+  --kendo-border-radius-base: 1.25rem;
+  --kendo-elevation-1: 0 8px 32px rgb(124 58 237 / 10%);
+  --kendo-elevation-2: 0 16px 48px rgb(124 58 237 / 15%);
+  --kendo-translucency-base: 30%;
+  --kendo-translucency-blur-base: 12px;
+  --kendo-translucency-blur-step: 4px;
 }
 
 html.dark {
-  /* Dark Mode Colors */
-  --app-bg: #0f0a1a;
-  --panel-bg: rgba(18, 13, 36, 0.6);
-  --panel-surface: rgba(31, 24, 56, 0.5);
-  --panel-border: rgba(168, 85, 247, 0.25);
-  --text-primary: #f3e8ff;
-  --text-secondary: #d8b4fe;
-  --muted: #c4b5fd;
-  --accent: #a78bfa;
-  --accent-hover: #c4b5fd;
-  --surface-alt: rgba(31, 24, 56, 0.4);
-  --card-radius: 1.25rem;
-  --shadow-soft: 0 8px 32px rgba(168, 85, 247, 0.15);
-  --shadow-medium: 0 16px 48px rgba(168, 85, 247, 0.25);
-  --focus-ring: rgba(168, 85, 247, 0.5);
-  
-  /* Glassmorphism */
-  --backdrop-blur: 12px;
-  --border-glass: 1.5px solid rgba(168, 85, 247, 0.3);
+  --kendo-color-app-surface: #0f0a1a;
+  --kendo-color-on-app-surface: #f3e8ff;
+  --kendo-color-surface: #120d24;
+  --kendo-color-surface-alt: #1f1838;
+  --kendo-color-border: #a855f74d;
+  --kendo-color-border-alt: #a855f780;
+  --kendo-color-subtle: #c4b5fd;
+  --kendo-color-primary: #a78bfa;
+  --kendo-color-secondary: #d8b4fe;
+  --kendo-elevation-1: 0 8px 32px rgb(168 85 247 / 15%);
+  --kendo-elevation-2: 0 16px 48px rgb(168 85 247 / 25%);
 }
 
 * {
@@ -55,10 +43,11 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: var(--app-bg);
-  color: var(--text-primary);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: var(--kendo-font-family);
+  background: var(--kendo-color-app-surface);
+  color: var(--kendo-color-on-app-surface);
+  transition: background-color var(--kendo-duration-speedy) var(--kendo-easing-standard),
+    color var(--kendo-duration-speedy) var(--kendo-easing-standard);
 }
 
 button:focus-visible,
@@ -66,206 +55,202 @@ input:focus-visible,
 .k-button:focus-visible,
 .k-dropdown-list:focus-visible,
 .k-datepicker:focus-visible {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 2px;
+  outline: var(--kendo-spacing-0\.5) solid var(--kendo-color-info);
+  outline-offset: var(--kendo-spacing-0\.5);
 }
 
 .app-shell {
-  padding: 32px;
+  padding: var(--kendo-spacing-8);
   max-width: 1440px;
   margin: 0 auto;
 }
 
 .topbar {
   display: grid;
-  gap: 24px;
+  gap: var(--kendo-spacing-6);
   grid-template-columns: 1fr auto;
   align-items: start;
-  margin-bottom: 32px;
+  margin-bottom: var(--kendo-spacing-8);
 }
 
 .eyebrow {
-  margin: 0 0 8px;
+  margin: 0 0 var(--kendo-spacing-2);
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: var(--accent);
-  font-size: 0.75rem;
-  font-weight: 700;
+  letter-spacing: var(--kendo-letter-spacing-widest);
+  color: var(--kendo-color-primary);
+  font-size: var(--kendo-font-size-xs);
+  font-weight: var(--kendo-font-weight-bold);
 }
 
 h1 {
   margin: 0;
-  font-size: clamp(2rem, 2.5vw, 3rem);
-  line-height: 1.05;
-  color: var(--text-primary);
+  font-size: clamp(var(--kendo-font-size-xl), 2.5vw, calc(var(--kendo-font-size-xl) * 2.4));
+  line-height: var(--kendo-line-height-xs);
+  color: var(--kendo-color-on-app-surface);
 }
 
 h2 {
-  color: var(--text-primary);
+  color: var(--kendo-color-on-app-surface);
 }
 
 .subtitle {
-  margin: 12px 0 0;
-  color: var(--text-secondary);
+  margin: var(--kendo-spacing-3) 0 0;
+  color: var(--kendo-color-subtle);
   max-width: 680px;
-  line-height: 1.7;
+  line-height: var(--kendo-line-height-lg);
 }
 
 .topbar-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: var(--kendo-spacing-4);
 }
 
 .toggle-label {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  color: var(--text-secondary);
-  font-weight: 500;
-  padding: 8px 12px;
-  border-radius: 0.75rem;
-  background: var(--panel-bg);
-  border: var(--border-glass);
-  backdrop-filter: blur(var(--backdrop-blur));
-  transition: all 0.2s ease;
+  gap: var(--kendo-spacing-3);
+  color: var(--kendo-color-subtle);
+  font-weight: var(--kendo-font-weight-medium);
+  padding: var(--kendo-spacing-2) var(--kendo-spacing-3);
+  border: var(--kendo-spacing-1px) solid var(--kendo-color-border);
+  border-radius: var(--kendo-border-radius-md);
+  background: color-mix(in oklch, var(--kendo-color-surface) 80%, transparent);
+  backdrop-filter: blur(var(--kendo-translucency-blur-base));
+  transition: background-color var(--kendo-duration-rapid) var(--kendo-easing-standard),
+    border-color var(--kendo-duration-rapid) var(--kendo-easing-standard);
 }
 
 .toggle-label:hover {
-  background: var(--panel-surface);
-  border-color: rgba(168, 85, 247, 0.4);
+  background: color-mix(in oklch, var(--kendo-color-surface-alt) 80%, transparent);
+  border-color: var(--kendo-color-border-alt);
 }
 
 .filters {
-  background: var(--panel-bg);
-  border: var(--border-glass);
-  border-radius: var(--card-radius);
-  padding: 24px;
-  box-shadow: var(--shadow-soft);
-  backdrop-filter: blur(var(--backdrop-blur));
-  margin-bottom: 32px;
-  transition: all 0.3s ease;
+  background: color-mix(in oklch, var(--kendo-color-surface) 80%, transparent);
+  border: var(--kendo-spacing-1px) solid var(--kendo-color-border);
+  border-radius: var(--kendo-border-radius-md);
+  padding: var(--kendo-spacing-6);
+  box-shadow: var(--kendo-elevation-1);
+  backdrop-filter: blur(var(--kendo-translucency-blur-base));
+  margin-bottom: var(--kendo-spacing-8);
+  transition: border-color var(--kendo-duration-speedy) var(--kendo-easing-standard),
+    box-shadow var(--kendo-duration-speedy) var(--kendo-easing-standard);
 }
 
 .filters:hover {
-  border-color: rgba(168, 85, 247, 0.4);
-  box-shadow: var(--shadow-medium);
+  border-color: var(--kendo-color-border-alt);
+  box-shadow: var(--kendo-elevation-2);
 }
 
 .filter-row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
+  gap: var(--kendo-spacing-4);
 }
 
 .date-pickers {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: var(--kendo-spacing-4);
 }
 
 .metrics-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
-  margin-bottom: 32px;
+  gap: var(--kendo-spacing-5);
+  margin-bottom: var(--kendo-spacing-8);
 }
 
 .metric-card,
 .chart-card,
 .table-section {
-  background: var(--panel-bg);
-  border: var(--border-glass);
-  border-radius: var(--card-radius);
-  box-shadow: var(--shadow-soft);
-  backdrop-filter: blur(var(--backdrop-blur));
-  transition: all 0.3s ease;
+  background: color-mix(in oklch, var(--kendo-color-surface) 80%, transparent);
+  border: var(--kendo-spacing-1px) solid var(--kendo-color-border);
+  border-radius: var(--kendo-border-radius-md);
+  box-shadow: var(--kendo-elevation-1);
+  backdrop-filter: blur(var(--kendo-translucency-blur-base));
+  transition: border-color var(--kendo-duration-speedy) var(--kendo-easing-standard),
+    box-shadow var(--kendo-duration-speedy) var(--kendo-easing-standard);
 }
 
 .metric-card:hover,
 .chart-card:hover,
 .table-section:hover {
-  border-color: rgba(168, 85, 247, 0.4);
-  box-shadow: var(--shadow-medium);
+  border-color: var(--kendo-color-border-alt);
+  box-shadow: var(--kendo-elevation-2);
 }
 
 .metric-card {
-  min-height: 140px;
+  min-height: calc(var(--kendo-spacing-24) * 2.5);
 }
 
 .metric-label {
   margin: 0;
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-  font-weight: 600;
+  color: var(--kendo-color-subtle);
+  font-size: var(--kendo-font-size-sm);
+  font-weight: var(--kendo-font-weight-semibold);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: var(--kendo-letter-spacing-wide);
 }
 
 .metric-value {
-  margin: 16px 0 0;
-  font-size: 2rem;
-  font-weight: 700;
-  background: linear-gradient(135deg, var(--accent), #a78bfa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-html.dark .metric-value {
-  background: linear-gradient(135deg, #a78bfa, #d8b4fe);
+  margin: var(--kendo-spacing-4) 0 0;
+  font-size: calc(var(--kendo-font-size-xl) * 1.6);
+  font-weight: var(--kendo-font-weight-bold);
+  background: linear-gradient(135deg, var(--kendo-color-primary), var(--kendo-color-secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .metric-note {
-  margin: 8px 0 0;
-  color: var(--muted);
-  font-size: 0.85rem;
+  margin: var(--kendo-spacing-2) 0 0;
+  color: var(--kendo-color-subtle);
+  font-size: var(--kendo-font-size-sm);
 }
 
 .dashboard-grid {
   display: grid;
   grid-template-columns: 1.6fr 1fr;
-  gap: 20px;
-  margin-bottom: 32px;
+  gap: var(--kendo-spacing-5);
+  margin-bottom: var(--kendo-spacing-8);
 }
 
 .chart-card {
-  padding: 24px;
+  padding: var(--kendo-spacing-6);
 }
 
 .chart-card h2 {
-  margin: 0 0 16px;
-  font-size: 1.1rem;
+  margin: 0 0 var(--kendo-spacing-4);
+  font-size: var(--kendo-font-size-lg);
 }
 
 .chart-card .k-chart {
-  min-height: 360px;
+  min-height: calc(var(--kendo-spacing-24) * 3.75);
 }
 
 .table-section {
-  padding: 24px;
+  padding: var(--kendo-spacing-6);
 }
 
 .table-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 18px;
+  gap: var(--kendo-spacing-4);
+  margin-bottom: var(--kendo-spacing-4\.5);
 }
 
 .table-header h2 {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: var(--kendo-font-size-lg);
 }
 
 .table-header p {
-  margin: 4px 0 0;
-  color: var(--text-secondary);
-  font-size: 0.9rem;
+  margin: var(--kendo-spacing-1) 0 0;
+  color: var(--kendo-color-subtle);
+  font-size: var(--kendo-font-size-sm);
 }
 
 .k-grid {
@@ -273,322 +258,16 @@ html.dark .metric-value {
 }
 
 .k-grid-header th {
-  color: var(--text-primary);
+  color: var(--kendo-color-on-app-surface);
 }
 
 .k-grid td,
 .k-grid th {
-  color: var(--text-primary);
+  color: var(--kendo-color-on-app-surface);
 }
 
-/* Kendo Component Overrides - Light Mode */
-.k-dropdown .k-input,
-.k-datepicker .k-input,
-.k-textbox,
-.k-picker-wrap input,
-.k-dropdown-wrap input {
-  background: var(--panel-bg) !important;
-  color: var(--text-primary) !important;
-  border: var(--border-glass) !important;
-  backdrop-filter: blur(var(--backdrop-blur));
-}
-
-.k-button.k-primary {
-  background: var(--accent) !important;
-  color: #ffffff !important;
-  border: var(--border-glass) !important;
-}
-
-.k-button.k-primary:hover {
-  background: var(--accent-hover) !important;
-  box-shadow: 0 4px 16px rgba(124, 58, 237, 0.3);
-}
-
-/* Dark mode Kendo widget overrides */
-html.dark .k-widget,
-html.dark .k-dropdown,
-html.dark .k-dropdown-list,
-html.dark .k-datepicker,
-html.dark .k-textbox,
-html.dark .k-button,
-html.dark .k-picker-wrap,
-html.dark .k-dropdown-wrap,
-html.dark .k-list-container,
-html.dark .k-grid,
-html.dark .k-grid-header,
-html.dark .k-grid-content {
-  background: var(--panel-surface) !important;
-  color: var(--text-primary) !important;
-  border-color: var(--panel-border) !important;
-}
-
-html.dark .k-dropdown .k-input,
-html.dark .k-datepicker .k-input,
-html.dark .k-textbox,
-html.dark .k-picker-wrap input,
-html.dark .k-dropdown-wrap input,
-html.dark .k-dropdown-wrap .k-select,
-html.dark .k-button {
-  background: rgba(31, 24, 56, 0.8) !important;
-  color: #f3e8ff !important;
-  border: var(--border-glass) !important;
-  backdrop-filter: blur(var(--backdrop-blur));
-}
-
-html.dark .k-button.k-primary {
-  background: var(--accent) !important;
-  color: #ffffff !important;
-}
-
-html.dark .k-button.k-primary:hover {
-  background: var(--accent-hover) !important;
-}
-
-html.dark .k-grid-header {
-  background: rgba(18, 13, 36, 0.7) !important;
-}
-
-html.dark .k-grid-header .k-table-thead {
-  background: transparent !important;
-}
-
-html.dark .k-grid-content {
-  background: var(--panel-surface) !important;
-}
-
-html.dark .k-grid td,
-html.dark .k-grid th {
-  border-color: rgba(168, 85, 247, 0.15) !important;
-}
-
-html.dark .k-grid th {
-  color: #d8b4fe !important;
-}
-
-html.dark .k-grid td {
-  color: #f3e8ff !important;
-}
-
-html.dark .k-popup,
-html.dark .k-list-container,
-html.dark .k-list {
-  background: rgba(18, 13, 36, 0.95) !important;
-  color: #f3e8ff !important;
-  border: var(--border-glass) !important;
-  backdrop-filter: blur(var(--backdrop-blur));
-}
-
-/* Chart styling - dark mode */
-html.dark .k-chart,
-html.dark .k-chart .k-plot-area,
-html.dark .k-chart .k-chart-area,
-html.dark .k-chart .k-legend,
-html.dark .k-chart .k-tooltip {
-  background: transparent;
-  color: #d8b4fe;
-}
-
-html.dark .k-chart text,
-html.dark .k-chart .k-chart-title,
-html.dark .k-chart .k-axis-title,
-html.dark .k-chart .k-axis-label,
-html.dark .k-chart .k-legend text,
-html.dark .k-chart .k-tooltip text {
-  fill: #d8b4fe !important;
-}
-
-html.dark .k-chart .k-plot-area rect,
-html.dark .k-chart .k-gridline,
-html.dark .k-chart .k-major-gridline,
-html.dark .k-chart .k-minor-gridline {
-  stroke: rgba(168, 85, 247, 0.15) !important;
-}
-
-html.dark .k-chart .k-tooltip {
-  background: rgba(18, 13, 36, 0.95) !important;
-  border: var(--border-glass) !important;
-}
-
-html.dark .k-chart .k-series-a text,
-html.dark .k-chart .k-series-b text {
-  fill: #a78bfa !important;
-}
-
-/* Force chart SVG background path to transparent in dark mode */
-html.dark .k-chart-surface svg > g > path[fill="#ffffff"],
-html.dark .k-chart-surface svg path[fill="#ffffff"],
-html.dark .k-chart-surface svg path[fill="white"] {
-  fill: transparent !important;
-}
-
-/* Dark mode floating labels for dropdowns and datepickers */
-html.dark .k-floating-label,
-html.dark .k-floating-label-container > .k-label,
-html.dark .k-floating-label-container .k-floating-label,
-html.dark .k-label {
-  color: #e2d6f8 !important;
-}
-
-/* Dark mode - dropdown/picker and input backgrounds */
-html.dark .k-picker,
-html.dark .k-picker.k-picker-solid,
-html.dark .k-dropdownlist,
-html.dark .k-input.k-textbox,
-html.dark .k-textbox.k-input,
-html.dark .k-floating-label-container .k-picker,
-html.dark .k-floating-label-container .k-input {
-  background: rgba(31, 24, 56, 0.9) !important;
-  background-color: rgba(31, 24, 56, 0.9) !important;
-  color: #f3e8ff !important;
-  border-color: rgba(168, 85, 247, 0.3) !important;
-}
-
-html.dark .filter-row > .k-input {
-  background: rgba(31, 24, 56, 0.9) !important;
-  background-color: rgba(31, 24, 56, 0.9) !important;
-  color: #c4b5fd !important;
-  border-color: rgba(168, 85, 247, 0.3) !important;
-}
-
-html.dark .k-input-inner {
-  background: transparent !important;
-  color: #c4b5fd !important;
-}
-
-html.dark .k-input-inner::placeholder {
-  color: #c4b5fd !important;
-}
-
-html.dark input.k-input::placeholder {
-  color: #c4b5fd !important;
-}
-
-/* Dark mode Switch overrides */
-html.dark .k-switch-on .k-switch-track {
-  background-color: var(--accent) !important;
-  border-color: var(--accent) !important;
-}
-
-html.dark .k-switch-on:hover .k-switch-track,
-html.dark .k-switch-on:focus .k-switch-track {
-  background-color: var(--accent-hover) !important;
-  border-color: var(--accent-hover) !important;
-}
-
-html.dark .k-switch-off .k-switch-track {
-  background-color: rgba(31, 24, 56, 0.9) !important;
-  border-color: rgba(168, 85, 247, 0.3) !important;
-}
-
-html.dark .k-switch-thumb {
-  background-color: #f3e8ff !important;
-  border-color: transparent !important;
-}
-
-/* Dark mode DatePicker / Calendar popup overrides */
-
-/* Outermost popup + animation wrappers */
-html.dark .k-animation-container .k-calendar,
-html.dark .k-calendar,
-html.dark .k-calendar-container,
-html.dark .k-datetime-container {
-  background-color: rgba(18, 13, 36, 0.98) !important;
-  color: #f3e8ff !important;
-  border-color: rgba(168, 85, 247, 0.3) !important;
-}
-
-/* Every direct and nested child gets the dark background so no white
-   bleeds through any unknown intermediate wrappers (k-hstack, k-vstack, etc.) */
-html.dark .k-calendar *:not(.k-link):not(span) {
-  background-color: rgba(18, 13, 36, 0.98) !important;
-}
-
-/* Navigation sidebar (month list) */
-html.dark .k-calendar-navigation,
-html.dark .k-calendar-navigation .k-content,
-html.dark .k-calendar-navigation ul,
-html.dark .k-calendar-navigation li {
-  background-color: rgba(18, 13, 36, 0.98) !important;
-  color: #c4b5fd !important;
-  border-color: rgba(168, 85, 247, 0.2) !important;
-}
-
-html.dark .k-calendar-navigation li:hover,
-html.dark .k-calendar-navigation .k-item:hover {
-  background-color: rgba(124, 58, 237, 0.25) !important;
-  color: #f3e8ff !important;
-}
-
-html.dark .k-calendar-navigation .k-selected,
-html.dark .k-calendar-navigation li.k-selected {
-  color: var(--accent) !important;
-  font-weight: 700;
-}
-
-/* Day-of-week header cells */
-html.dark .k-calendar .k-calendar-th,
-html.dark .k-calendar th {
-  color: #c4b5fd !important;
-}
-
-/* Regular date cells */
-html.dark .k-calendar .k-calendar-td .k-link,
-html.dark .k-calendar td .k-link {
-  color: #e9d5ff !important;
-  background-color: transparent !important;
-}
-
-html.dark .k-calendar .k-calendar-td:hover .k-link,
-html.dark .k-calendar td:hover .k-link {
-  background-color: rgba(124, 58, 237, 0.25) !important;
-  color: #f3e8ff !important;
-}
-
-/* Selected date */
-html.dark .k-calendar .k-selected .k-link,
-html.dark .k-calendar .k-state-selected .k-link,
-html.dark .k-calendar td.k-selected .k-link {
-  background-color: var(--accent) !important;
-  color: #ffffff !important;
-  border-color: var(--accent) !important;
-}
-
-/* Today marker */
-html.dark .k-calendar .k-today .k-link {
-  border-color: var(--accent) !important;
-  color: var(--accent) !important;
-}
-
-html.dark .k-calendar td.k-selected.k-today .k-link {
-  background-color: var(--accent) !important;
-  color: #ffffff !important;
-}
-
-/* Header nav buttons ("Today", prev/next arrows, month title) */
-html.dark .k-calendar .k-button {
-  background-color: rgba(31, 24, 56, 0.9) !important;
-  color: #c4b5fd !important;
-  border-color: rgba(168, 85, 247, 0.3) !important;
-}
-
-html.dark .k-calendar .k-button:hover {
-  background-color: rgba(124, 58, 237, 0.3) !important;
-  color: #f3e8ff !important;
-}
-
-html.dark .k-calendar .k-calendar-title {
-  color: #f3e8ff !important;
-  background-color: transparent !important;
-}
-
-html.dark .k-calendar .k-calendar-title:hover {
-  background-color: rgba(124, 58, 237, 0.2) !important;
-}
-
-/* Month list inside the year-scroll panel */
-html.dark .k-calendar .k-month,
-html.dark .k-calendar .k-calendar-monthview .k-link {
-  color: #e9d5ff !important;
+.usage-grid {
+  min-height: calc(var(--kendo-spacing-24) * 3.75);
 }
 
 /* Responsive Design */
@@ -622,11 +301,12 @@ html.dark .k-calendar .k-calendar-monthview .k-link {
   }
 
   .app-shell {
-    padding: 16px;
+    padding: var(--kendo-spacing-4);
   }
 }
 
-/* Smooth transitions for theme changes */
 * {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition: background-color var(--kendo-duration-speedy) var(--kendo-easing-standard),
+    color var(--kendo-duration-speedy) var(--kendo-easing-standard),
+    border-color var(--kendo-duration-speedy) var(--kendo-easing-standard);
 }

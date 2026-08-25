@@ -116,9 +116,9 @@ function App() {
   }, [sortedRows]);
 
   const isDark = theme === 'dark';
-  const chartStyle = isDark ? { background: 'transparent', color: '#e2d6f8' } : {};
-  const chartLabelColor = isDark ? '#c4b5fd' : '#3d3d3d';
-  const chartTitleColor = isDark ? '#e2d6f8' : '#3d3d3d';
+  const chartStyle = { background: 'transparent', color: 'var(--kendo-color-on-app-surface)' };
+  const chartLabelColor = 'var(--kendo-color-subtle)';
+  const chartTitleColor = 'var(--kendo-color-on-app-surface)';
 
   const exportCsv = useCallback(() => {
     const headers = ['Date', 'Team', 'Project', 'Model', 'Calls', 'Spend', 'Latency'];
@@ -294,7 +294,7 @@ function App() {
             Export CSV
           </Button>
         </div>
-        <Grid data={sortedRows} sort={sort} onSort={(e) => setSort(e.sort || [])} style={{ minHeight: '360px' }} pageable={false} sortable resizable>
+        <Grid className="usage-grid" data={sortedRows} sort={sort} onSort={(e) => setSort(e.sort || [])} pageable={false} sortable resizable>
           <GridColumn field="date" title="Date" width="130px" />
           <GridColumn field="team" title="Team" width="140px" />
           <GridColumn field="project" title="Project" width="180px" />
@@ -311,7 +311,7 @@ function App() {
             <h2>Usage trend</h2>
           </CardHeader>
           <CardBody>
-            <Chart style={chartStyle} chartArea={{ background: isDark ? 'transparent' : '' }}>
+            <Chart style={chartStyle} chartArea={{ background: 'transparent' }}>
               <ChartTitle text="API calls by day" color={chartTitleColor} />
               <ChartLegend position="bottom" labels={{ color: chartTitleColor }} />
               <ChartCategoryAxis>
@@ -333,7 +333,7 @@ function App() {
             <h2>Spend share</h2>
           </CardHeader>
           <CardBody>
-            <Chart style={chartStyle} chartArea={{ background: isDark ? 'transparent' : '' }}>
+            <Chart style={chartStyle} chartArea={{ background: 'transparent' }}>
               <ChartTitle text="Spend by model" color={chartTitleColor} />
               <ChartLegend position="bottom" labels={{ color: chartTitleColor }} />
               <ChartSeries>

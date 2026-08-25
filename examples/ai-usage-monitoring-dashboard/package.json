@@ -11,18 +11,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "@progress/kendo-react-buttons": "^14.4.1",
-    "@progress/kendo-react-charts": "^14.4.1",
-    "@progress/kendo-react-dateinputs": "^14.4.1",
-    "@progress/kendo-react-dropdowns": "^14.4.1",
-    "@progress/kendo-react-grid": "^14.4.1",
-    "@progress/kendo-react-inputs": "^14.4.1",
-    "@progress/kendo-react-intl": "^14.4.1",
-    "@progress/kendo-react-layout": "^14.4.1",
     "@progress/kendo-drawing": "latest",
-    "@progress/kendo-theme-default": "^13.1.1"
+    "@progress/kendo-react-buttons": "^16.0.0",
+    "@progress/kendo-react-charts": "^16.0.0",
+    "@progress/kendo-react-dateinputs": "^16.0.0",
+    "@progress/kendo-react-dropdowns": "^16.0.0",
+    "@progress/kendo-react-grid": "^16.0.0",
+    "@progress/kendo-react-inputs": "^16.0.0",
+    "@progress/kendo-react-intl": "^16.0.0",
+    "@progress/kendo-react-layout": "^16.0.0",
+    "@progress/kendo-svg-icons": "^5.4.0",
+    "@progress/kendo-theme-meridian": "^14.5.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "latest",
