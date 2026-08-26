@@ -266,7 +266,8 @@ export const getTranslatedListData = (): ListDataDescriptor[] => {
   ].map((item, index) => ({
     ...item,
     id: index + 1,
-    rating: Math.floor(Math.random() * 5) + 3,
+    rating: 3 + (index % 3),
+    reviews: 12 + ((index * 7) % 83),
   }));
 };
 

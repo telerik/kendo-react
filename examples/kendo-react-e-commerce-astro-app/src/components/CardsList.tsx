@@ -1,6 +1,7 @@
 import React from 'react';
 import { Badge, BadgeContainer } from '@progress/kendo-react-indicators';
 import { Button } from '@progress/kendo-react-buttons';
+import { Rating } from '@progress/kendo-react-inputs';
 import { cartIcon } from '@progress/kendo-svg-icons';
 import { CardListProps } from '../data/types';
 
@@ -45,14 +46,8 @@ export const CardsList: React.FC<CardListProps> = (props) => {
                 <BadgeContainer>
                   <div
                     className="cards-list__image"
-                    style={{
-                      backgroundImage: `url(${item.img})`,
-                      width: '278px',
-                      height: '236px',
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                      backgroundRepeat: 'no-repeat',
-                    }}
+                    role="img"
+                    aria-label={t[item.title] || item.title}
                   ></div>
                   {item.status && (
                     <Badge
@@ -72,15 +67,16 @@ export const CardsList: React.FC<CardListProps> = (props) => {
               ) : (
                 <div
                   className="cards-list__image"
-                  style={{
-                    backgroundImage: `url(${item.img})`,
-                    width: '278px',
-                    height: '236px',
-                  }}
+                  role="img"
+                  aria-label={t[item.title] || item.title}
                 ></div>
               )}
               <div>
                 <div className="cards-list__title">{t[item.title] || item.title}</div>
+                <div className="cards-list__meta">
+                  <Rating value={item.rating} readonly aria-label={`${item.rating} out of 5 stars`} />
+                  <span>{item.status ? t.statuses[item.status] || item.status : "In stock"}</span>
+                </div>
                 <div className="cards-list__actions">
                   <span>
                     {item.oldPrice && (

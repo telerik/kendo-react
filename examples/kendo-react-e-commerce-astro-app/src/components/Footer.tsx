@@ -42,12 +42,9 @@ const Footer: React.FC = () => {
     <LocalizationProvider language={language}>
       <section className="footer">
         <div className="footer__content">
-          <div
-            className="footer__brand"
-            style={{ marginLeft: "50px" }}
-          >
+          <div className="footer__brand">
             <a href="/" className="footer__column">
-              <img src="/kendo-react/kendo-react-e-commerce-astro-app/vilora-logo.png" alt="Logo" />
+              <img src="/kendo-react/kendo-react-e-commerce-astro-app/vilora-logo.png" alt="Vilora home" />
             </a>
             <p>{t.cookiesText}</p>
             <p>{t.rightsReservedText}</p>
@@ -117,10 +114,7 @@ const Footer: React.FC = () => {
             )}
           </div>
 
-          <div
-            className="footer__column"
-            style={{ marginRight: "150px" }}
-          >
+          <div className="footer__column">
             <h4 className="footer__heading">
               {t.legalPrivacyTitle}
             </h4>

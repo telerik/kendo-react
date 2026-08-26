@@ -107,12 +107,16 @@ export const AllProductsListView: React.FC = () => {
                 svgIcon={gridLayoutIcon}
                 selected={currentLayout === "grid"}
                 onClick={() => setCurrentLayout("grid")}
+                aria-label="Grid view"
+                title="Grid view"
               />
               <Button
                 fillMode="flat"
                 svgIcon={layout2By2Icon}
                 selected={currentLayout === "list"}
                 onClick={() => setCurrentLayout("list")}
+                aria-label="List view"
+                title="List view"
               />
             </ButtonGroup>
           </section>

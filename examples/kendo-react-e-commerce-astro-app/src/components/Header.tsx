@@ -14,6 +14,7 @@ import {
   userIcon,
   cartIcon,
   paletteIcon,
+  bellIcon,
 } from "@progress/kendo-svg-icons";
 import { isAdmin } from "../helpers/adminStore";
 import { useStore } from "@nanostores/react";
@@ -112,6 +113,9 @@ const Header: React.FC = () => {
   const handleCartClick = () => {
     window.location.href = "/kendo-react/kendo-react-e-commerce-astro-app/shoppingcart";
   };
+  const handleAccountClick = () => {
+    window.location.href = "/kendo-react/kendo-react-e-commerce-astro-app/account";
+  };
 
   const handleSwitchChange = () => {
     isAdmin.set(!isAdminValue);
@@ -141,22 +145,21 @@ const Header: React.FC = () => {
         <AppBar themeColor="base">
           <AppBarSection
             className="header__start"
-            style={{ paddingLeft: "50px" }}
           >
             <a
               href="/kendo-react/kendo-react-e-commerce-astro-app/"
               className="header__logo"
-              style={{ marginRight: "50px" }}
             >
               <img
                 src="/kendo-react/kendo-react-e-commerce-astro-app/vilora-logo.png"
-                alt="Logo"
+                alt="Vilora home"
               />
             </a>
             <Menu items={menuItems} onSelect={handleMenuSelect} />
           </AppBarSection>
           <AppBarSection className="header__end">
             <TextBox
+              aria-label="Search products"
               placeholder={t.searchPlaceholder}
               prefix={() => (
                 <>
@@ -168,15 +171,18 @@ const Header: React.FC = () => {
                   <InputSeparator />
                 </>
               )}
-              style={{ width: 300 }}
+              className="header__search"
             />
-            <Button svgIcon={userIcon} fillMode="flat" className="header__icon-button" />
+            <Button svgIcon={userIcon} fillMode="flat" className="header__icon-button" aria-label="Account" title="Account" onClick={handleAccountClick} />
             <Button
               svgIcon={cartIcon}
               fillMode="flat"
               className="header__icon-button"
               onClick={handleCartClick}
+              aria-label="Shopping cart"
+              title="Shopping cart"
             />
+            <Button svgIcon={bellIcon} fillMode="flat" className="header__icon-button" aria-label="Notifications" title="Notifications" onClick={() => { window.location.href = "/kendo-react/kendo-react-e-commerce-astro-app/notifications"; }} />
             <DropDownButton
               svgIcon={paletteIcon}
               items={themeItems}

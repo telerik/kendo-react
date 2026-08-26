@@ -35,10 +35,9 @@ export const ProductCard: React.FC<ProductCardProps> = (props) => {
           className="product-card__image"
           style={{
             backgroundImage: `url(${props.image})`,
-            backgroundSize: 'cover',
-            height: '385px',
-            width: '476px',
           }}
+          role="img"
+          aria-label={props.title}
         ></div>
 
         <div className="product-card__details">
@@ -71,9 +70,7 @@ export const ProductCard: React.FC<ProductCardProps> = (props) => {
           <div className="product-card__actions">
             <NumericTextBox
               spinners={true}
-              style={{
-                width: '84px',
-              }}
+              aria-label="Quantity"
               value={1}
             ></NumericTextBox>
             <Button themeColor={'primary'} onClick={props.addToCart}>

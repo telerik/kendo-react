@@ -54,6 +54,10 @@ export const ShoppingCartList: React.FC = () => {
     setShoppingCart(updatedCart);
     localStorage.setItem('cart', JSON.stringify(updatedCart));
   };
+  const subtotal = shoppingCart.reduce(
+    (total, item) => total + item.newPrice * item.quantity,
+    0
+  );
 
   return (
     <LocalizationProvider language={language}>
@@ -113,18 +117,22 @@ export const ShoppingCartList: React.FC = () => {
               </div>
             ))
           ) : (
-            <p>{t.emptyCartMessage}</p>
+            <div className="cart__empty">
+              <h2>Your cart is empty</h2>
+              <p>{t.emptyCartMessage}</p>
+              <Button themeColor="primary" onClick={onBackClick}>Continue shopping</Button>
+            </div>
           )}
         </Layout>
         {shoppingCart.length > 0 && (
           <Layout>
-            <Button
-              themeColor={'primary'}
-              size={'large'}
-              onClick={onProceedClick}
-            >
-              {t.proceedToCheckoutButtonText}
-            </Button>
+            <aside className="cart__summary" aria-label="Order summary">
+              <span>Subtotal</span>
+              <strong>${subtotal.toLocaleString()}</strong>
+              <Button themeColor={'primary'} size={'large'} onClick={onProceedClick}>
+                {t.proceedToCheckoutButtonText}
+              </Button>
+            </aside>
           </Layout>
         )}
       </>
