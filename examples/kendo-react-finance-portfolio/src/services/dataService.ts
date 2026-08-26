@@ -1,4 +1,5 @@
 import { SECTOR } from "../context/SectorContext";
+import { getKendoColor } from "../styles/tokens";
 
 const processData = (data: any) => {
     const result = Object.keys(data.intraday).reduce((acc: any[], current: string) => {
@@ -10,7 +11,9 @@ const processData = (data: any) => {
         const volume = Number.parseFloat(other.volume);
         const formatedDate = `/Date(${new Date(current).getTime()})/`;
         const change = (((close - open) / close) * 1);
-        const color = change >= 0 ? '#58B854' : '#D9534F';
+        const color = change >= 0
+            ? getKendoColor('success')
+            : getKendoColor('error');
 
         return [...acc, {
             open,

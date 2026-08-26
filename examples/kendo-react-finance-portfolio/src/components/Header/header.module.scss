@@ -2,25 +2,31 @@
   height: 140px;
   h1,
   p {
-    line-height: 1;
-    color: white;
+    color: var(--kendo-color-on-primary);
   }
 
   @media (max-width: 768px) {
     h1 {
-      font-size: 1.5rem;
+      font-size: var(--kendo-font-size-xl);
     }
   }
+}
+
+.title {
+  font-family: var(--kendo-font-family);
+  font-size: calc(var(--kendo-font-size) * 2.5);
+  font-weight: var(--kendo-font-weight-bold);
+  line-height: var(--kendo-line-height-xs);
 }
 
 .currency-input {
   img {
     width: 58px;
     height: 58px;
-    border-radius: 100%;
+    border-radius: var(--kendo-border-radius-full);
   }
   span {
-    font-weight: 300;
-    color: white;
+    font-weight: var(--kendo-font-weight-light);
+    color: var(--kendo-color-on-primary);
   }
 }

@@ -1,43 +1,51 @@
 .list-item {
-  color: black;
+  color: var(--kendo-color-on-surface);
   &:hover {
     text-decoration: none;
-    color: black;
+    color: var(--kendo-color-on-surface);
   }
 
   &.list-item-selected {
-    font-weight: bold;
+    font-weight: var(--kendo-font-weight-bold);
     position: relative;
     &::after {
       content: "";
       position: absolute;
       width: 100%;
       display: block;
-      height: 0.25rem;
-      background-color: #007bff;
+      height: var(--kendo-spacing-1);
+      background-color: var(--kendo-color-primary);
     }
   }
 }
 
 .ddl-list-item {
   svg path {
-    fill: #007bff;
+    fill: var(--kendo-color-primary);
   }
 
   &.k-selected {
     svg path {
-      fill: white;
+      fill: var(--kendo-color-on-primary);
     }
   }
 }
 
+.range-list {
+  display: flex;
+  gap: var(--kendo-spacing-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .stock {
   z-index: 1040;
-  padding: 0.25rem 0.75rem;
-  border-radius: 0.75rem;
-  line-height: 1;
-  font-size: 14px;
-  color: white;
-  font-weight: bold;
-  transform: translateY(0.35rem);
+  padding: var(--kendo-spacing-1) var(--kendo-spacing-3);
+  border-radius: var(--kendo-border-radius-xl);
+  line-height: var(--kendo-line-height-xs);
+  font-size: var(--kendo-font-size-sm);
+  color: var(--kendo-color-on-primary);
+  font-weight: var(--kendo-font-weight-bold);
+  transform: translateY(var(--kendo-spacing-1\.5));
 }

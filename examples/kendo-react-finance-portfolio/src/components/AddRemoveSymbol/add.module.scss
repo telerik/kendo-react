@@ -1,23 +1,23 @@
 .stock-item {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: var(--kendo-spacing-4);
+  padding-bottom: var(--kendo-spacing-4);
   cursor: pointer;
   &:hover {
-      background-color: #e6e6e6;
+      background-color: var(--kendo-color-base-hover);
   }
 }
 
 .stock-item-symbol {
-  line-height: 1;
+  line-height: var(--kendo-line-height-xs);
   display: block;
-  font-size: 14px;
-  color: #007BFF;
+  font-size: var(--kendo-font-size-sm);
+  color: var(--kendo-color-primary);
 }
 
 .stock-item-name {
-  line-height: 1;
+  line-height: var(--kendo-line-height-xs);
   display: block;
 
-  font-size: 11px;
-  color: #55595C;
+  font-size: var(--kendo-font-size-xs);
+  color: var(--kendo-color-subtle);
 }

@@ -4,6 +4,7 @@ import { dataService } from '../services';
 import $ from 'jquery';
 import '@progress/kendo-ui';
 import { Tooltip } from '@progress/kendo-react-tooltip';
+import { getKendoColor } from '../styles/tokens';
 declare const window: any;
 
 type HeatMapItemType = {
@@ -81,7 +82,10 @@ export const HeatmapView = () => {
             }),
             valueField: "value",
             textField: "name",
-            colors: [["#00AD51", "#00EF81"], ["#FF0000", "#FF8F8F"]]
+            colors: [
+                [getKendoColor('success'), getKendoColor('success-subtle')],
+                [getKendoColor('error'), getKendoColor('error-subtle')]
+            ]
         })
     }, []);
     const nFormatter = (num: number) => {

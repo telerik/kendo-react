@@ -1,4 +1,4 @@
 .main {
   min-height: 450px;
-  background-color: rgba(236, 238, 239, .5);
+  background-color: color-mix(in srgb, var(--kendo-color-surface) 50%, transparent);
 }

@@ -1,5 +1,5 @@
 .wrapper-profile {
-  background-color: white;
+  background-color: var(--kendo-color-surface-alt);
 }
 
 .close-icon {
@@ -10,12 +10,12 @@
 .user-icon {
   width: 120px;
   height: 120px;
-  border-radius: 100%;
+  border-radius: var(--kendo-border-radius-full);
 }
 
 .symbol-cell {
-    color: #007BFF;
-    font-weight: bold !important;
+    color: var(--kendo-color-primary);
+    font-weight: var(--kendo-font-weight-bold) !important;
   }
   
 
@@ -24,28 +24,28 @@
   tr {
     td {
       text-align: left;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
+      padding-top: var(--kendo-spacing-4);
+      padding-bottom: var(--kendo-spacing-4);
     }
     & > td:nth-child(1) {
-      color: #55595C;
-      font-weight: 300;
+      color: var(--kendo-color-subtle);
+      font-weight: var(--kendo-font-weight-light);
     }
     & > td:nth-child(2) {
-      padding-left: 1rem;
+      padding-left: var(--kendo-spacing-4);
     }
   }
 }
 .large {
   font-size: 2em;
-  font-weight: bold;
+  font-weight: var(--kendo-font-weight-bold);
   padding: 0;
 }
 
 .green {
-  color: green;
+  color: var(--kendo-color-success);
 }
 
 .red {
-  color: red;
+  color: var(--kendo-color-error);
 }

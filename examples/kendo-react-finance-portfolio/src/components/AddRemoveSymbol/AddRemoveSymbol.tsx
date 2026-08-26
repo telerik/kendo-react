@@ -105,7 +105,7 @@ export const AddRemoveSymbol = (props: AddRemoveSymbolProps) => {
             />
 
             &nbsp;
-            <Button svgIcon={trashIcon} fillMode={"flat"} style={{ color: '#D9534F' }} onClick={handleRemoveClick}>Remove</Button>
+            <Button svgIcon={trashIcon} fillMode={"flat"} style={{ color: 'var(--kendo-color-error)' }} onClick={handleRemoveClick}>Remove</Button>
 
         </div>
     )

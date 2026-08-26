@@ -1,40 +1,37 @@
-$negative-value: #d9534f;
-$positive-value: #5cb85c;
-
 .symbol-cell {
-  color: #55595c;
-  font-weight: bold !important;
+  color: var(--kendo-color-primary-on-surface);
+  font-weight: var(--kendo-font-weight-bold) !important;
 }
 
 .name-cell {
-  color: #373a3c;
+  color: var(--kendo-color-on-surface);
 }
 
 .price-cell {
-  font-weight: bold !important;
+  font-weight: var(--kendo-font-weight-bold) !important;
 }
 
 .negative-cell {
-  color: $negative-value;
+  color: var(--kendo-color-error);
 }
 
 .positive-cell {
-  color: $positive-value;
+  color: var(--kendo-color-success);
 }
 
 .multiline-header-cell {
   & > small {
     display: block;
-    font-weight: 300;
-    font-size: 11px;
+    font-weight: var(--kendo-font-weight-light);
+    font-size: var(--kendo-font-size-xs);
   }
 }
 
 .grid thead {
-    background-color: #eceeef !important;
-    color: #55595c !important;
-    line-height: 1;
-    font-weight: bold !important;
+    background-color: var(--kendo-color-surface) !important;
+    color: var(--kendo-color-primary-on-surface) !important;
+    line-height: var(--kendo-line-height-xs);
+    font-weight: var(--kendo-font-weight-bold) !important;
     & > th {
       vertical-align: middle;
     }

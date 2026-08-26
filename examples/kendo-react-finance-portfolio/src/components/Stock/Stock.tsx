@@ -28,6 +28,7 @@ import 'hammerjs';
 import styles from './stock.module.scss';
 import { dataService } from '../../services';
 import { useInternationalization } from '@progress/kendo-react-intl';
+import { getKendoColor } from '../../styles/tokens';
 
 const DEFAULT_RANGE = {
     start: new Date(2019, 9, 28),
@@ -230,7 +231,7 @@ const ChartPredefinedRange = (props: any) => {
     React.useEffect(clear, [props.value, props.last, selected]);
     return (
         <div className={classNames("d-inline-block", styles['end-date-input'])}>
-            <ul className="k-reset d-flex">
+            <ul className={styles['range-list']}>
                 {options.map((item) =>
                     <li className="ml-3" key={item.name} >
                         <span
@@ -343,7 +344,7 @@ const AreaChart = (props: any) => {
             for (let i = 0; i < categories; i += step) {
                 if (index++ % 2 === 0) {
                     result.push({
-                        color: '#000',
+                        color: getKendoColor('on-app-surface'),
                         opacity: 0.03,
                         from: i,
                         to: i + step
@@ -366,14 +367,14 @@ const AreaChart = (props: any) => {
                 data={props.data}
                 type="area"
                 field="close"
-                color="#007BFF"
+                color={getKendoColor('primary')}
                 // eslint-disable-next-line
                 style={"smooth"}
                 categoryAxis="close"
                 axis="valueCloseAxis"
                 categoryField="date"
-                markers={{ visible: false, border: { color: "#007BFF" } }}
-                tooltip={{ background: "#007BFF", visible: true, format: "{0:c}" }}
+                markers={{ visible: false, border: { color: getKendoColor('primary') } }}
+                tooltip={{ background: getKendoColor('primary'), visible: true, format: "{0:c}" }}
             />
         </ChartSeries>
         <ChartValueAxis>
@@ -416,7 +417,7 @@ const LineChart = (props: any) => {
             for (let i = 0; i < categories; i += step) {
                 if (index++ % 2 === 0) {
                     result.push({
-                        color: '#000',
+                        color: getKendoColor('on-app-surface'),
                         opacity: 0.03,
                         from: i,
                         to: i + step
@@ -437,14 +438,14 @@ const LineChart = (props: any) => {
                 data={props.data}
                 type="line"
                 field="close"
-                color="#007BFF"
+                color={getKendoColor('primary')}
                 // eslint-disable-next-line react/style-prop-object
                 style={"smooth"}
                 categoryAxis="close"
                 axis="valueCloseAxis"
                 categoryField="date"
-                markers={{ visible: true, border: { color: '#007BFF' } }}
-                tooltip={{ background: "#007BFF", visible: true, format: "{0:c}" }}
+                markers={{ visible: true, border: { color: getKendoColor('primary') } }}
+                tooltip={{ background: getKendoColor('primary'), visible: true, format: "{0:c}" }}
             />
             <ChartSeriesItem
                 data={props.data}
@@ -539,7 +540,7 @@ const CandleChart = (props: any) => {
             for (let i = 0; i < categories; i += step) {
                 if (index++ % 2 === 0) {
                     result.push({
-                        color: '#000',
+                        color: getKendoColor('on-app-surface'),
                         opacity: 0.03,
                         from: i,
                         to: i + step
