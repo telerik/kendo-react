@@ -726,39 +726,27 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
    Responsive Breakpoints
    ======================== */
 
-/* Default: 900px–1444px */
+/* Default: 992px–1399px */
 :root {
   --page-gap: var(--kendo-spacing-6);
   --page-padding-block: var(--kendo-spacing-8);
   --page-padding-inline: var(--kendo-spacing-10);
 }
 
-/* 1920px+ — content 87.5%, padding 6.25% each side */
-@media (min-width: 1920px) {
+/* 1400px+ */
+@media (min-width: 1400px) {
   :root {
-    --page-padding-inline: 6.25%;
-  }
-}
-
-/* 1760px–1919px — content fixed 1680px, rest is padding */
-@media (min-width: 1760px) and (max-width: 1919px) {
-  :root {
-    --page-padding-inline: calc((100vw - 1680px) / 2);
-  }
-}
-
-/* 1445px–1759px — gaps 24px, icon-only View Profile */
-@media (min-width: 1445px) and (max-width: 1759px) {
-  :root {
-    --page-padding-inline: calc(var(--kendo-spacing-10) * 3);
+    --page-padding-inline: max(
+      calc(var(--kendo-spacing-10) * 3),
+      calc((100vw - 1680px) / 2)
+    );
   }
   .quick-actions {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* 900px–1444px (default values already set in :root) */
-@media (max-width: 1444px) {
+@media (max-width: 1399px) {
   .general-info .general-info-sidebar {
     width: 100%;
     min-width: 0;
@@ -787,14 +775,14 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1199px) {
   .analytics-grid {
     grid-template-columns: 1fr;
   }
 }
 
-/* Below 900px — gaps 16px, padding 24px, icon-only View Profile, stacked layout */
-@media (max-width: 899px) {
+/* Below 992px — gaps 16px, compact padding, and stacked layout */
+@media (max-width: 991px) {
   :root {
     --page-gap: var(--kendo-spacing-4);
     --page-padding-block: var(--kendo-spacing-6);
@@ -2324,4 +2312,292 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
 
 .ai-chat-header-spacer {
   flex: 1 1 auto;
+}
+
+/* ========================
+   Healthcare taxonomy pages
+   ======================== */
+.clinical-alert,
+.table-toolbar,
+.directory-toolbar,
+.intake-actions,
+.notification-feed-item,
+.help-layout,
+.messages-layout {
+  display: flex;
+  gap: var(--kendo-spacing-4);
+}
+
+.clinical-alert {
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--kendo-spacing-4);
+  margin-bottom: var(--kendo-spacing-5);
+  border: 1px solid var(--kendo-color-error-emphasis);
+  border-radius: var(--kendo-border-radius-lg);
+  background: var(--kendo-color-error-subtle);
+  color: var(--kendo-color-error-on-subtle);
+}
+
+.table-toolbar,
+.directory-toolbar {
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--kendo-spacing-5);
+}
+
+.table-toolbar .k-textbox,
+.directory-toolbar .k-textbox {
+  width: min(100%, 28rem);
+}
+
+.data-table-card {
+  overflow: hidden;
+}
+
+.provider-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--kendo-spacing-5);
+}
+
+.provider-card {
+  display: grid;
+  grid-template-columns: var(--kendo-spacing-14) 1fr;
+  gap: var(--kendo-spacing-4);
+  align-items: center;
+  padding: var(--kendo-spacing-5);
+  border: 1px solid var(--kendo-color-border);
+  border-radius: var(--kendo-border-radius-lg);
+  background: var(--kendo-color-surface-alt);
+}
+
+.provider-card img {
+  width: var(--kendo-spacing-14);
+  height: var(--kendo-spacing-14);
+  border-radius: var(--kendo-border-radius-full);
+  object-fit: cover;
+}
+
+.provider-card h2,
+.message-thread-list h2,
+.settings-section h2,
+.help-card h2,
+.notification-feed-item h2 {
+  margin: 0 0 var(--kendo-spacing-1);
+  font-size: var(--kendo-font-size-lg);
+}
+
+.provider-card p,
+.notification-feed-item p,
+.settings-section p {
+  margin: 0;
+  color: var(--kendo-color-subtle);
+}
+
+.provider-card .k-button {
+  grid-column: 2;
+  justify-self: start;
+}
+
+.messages-layout {
+  align-items: stretch;
+}
+
+.message-thread-list {
+  width: 18rem;
+  flex: 0 0 18rem;
+  padding: var(--kendo-spacing-4);
+}
+
+.message-thread {
+  display: flex;
+  width: 100%;
+  min-height: 44px;
+  flex-direction: column;
+  gap: var(--kendo-spacing-1);
+  padding: var(--kendo-spacing-3);
+  border: 0;
+  border-bottom: 1px solid var(--kendo-color-border);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.message-thread:hover,
+.message-thread:focus-visible {
+  background: var(--kendo-color-primary-subtle);
+}
+
+.message-thread small {
+  color: var(--kendo-color-subtle);
+}
+
+.message-chat {
+  min-width: 0;
+  flex: 1;
+  padding: var(--kendo-spacing-3);
+}
+
+.intake-card,
+.settings-section,
+.help-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kendo-spacing-4);
+  padding: var(--kendo-spacing-6);
+}
+
+.intake-card {
+  max-width: 52rem;
+}
+
+.intake-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kendo-spacing-3);
+}
+
+.intake-content h2 {
+  margin: 0;
+}
+
+.intake-actions {
+  justify-content: space-between;
+}
+
+.settings-stack {
+  display: grid;
+  max-width: 52rem;
+  gap: var(--kendo-spacing-5);
+}
+
+.settings-section label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--kendo-spacing-4);
+}
+
+.danger-zone {
+  border: 1px solid var(--kendo-color-error-emphasis);
+}
+
+.notification-feed {
+  display: flex;
+  flex-direction: column;
+}
+
+.notification-feed-item {
+  align-items: flex-start;
+  padding: var(--kendo-spacing-5);
+  border-bottom: 1px solid var(--kendo-color-border);
+}
+
+.notification-feed-item > div {
+  flex: 1;
+}
+
+.notification-feed-item time {
+  color: var(--kendo-color-subtle);
+  white-space: nowrap;
+}
+
+.help-layout {
+  align-items: start;
+}
+
+.help-card {
+  flex: 1;
+  min-width: 0;
+}
+
+.auth-page,
+.empty-state {
+  display: grid;
+  min-height: calc(100vh - 10rem);
+  place-items: center;
+  padding: var(--kendo-spacing-6);
+}
+
+.auth-card {
+  display: flex;
+  width: min(100%, 28rem);
+  flex-direction: column;
+  gap: var(--kendo-spacing-4);
+  padding: var(--kendo-spacing-6);
+}
+
+.auth-card h1,
+.empty-state h1 {
+  margin: 0;
+}
+
+.auth-card p,
+.empty-state p {
+  margin: 0;
+  color: var(--kendo-color-subtle);
+}
+
+.empty-state {
+  align-content: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.empty-state > div {
+  display: flex;
+  gap: var(--kendo-spacing-3);
+}
+
+@media (max-width: 1199px) {
+  .provider-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991px) {
+  .messages-layout,
+  .help-layout {
+    flex-direction: column;
+  }
+
+  .message-thread-list {
+    width: 100%;
+    flex-basis: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .clinical-alert,
+  .table-toolbar,
+  .directory-toolbar,
+  .notification-feed-item {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .provider-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .notification-feed-item time {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 575px) {
+  .intake-card,
+  .settings-section,
+  .help-card,
+  .auth-card {
+    padding: var(--kendo-spacing-4);
+  }
+
+  .empty-state > div {
+    width: 100%;
+    flex-direction: column;
+  }
 }

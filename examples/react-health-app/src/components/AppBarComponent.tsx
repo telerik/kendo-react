@@ -42,9 +42,16 @@ const navItems = [
   { path: "/patients", label: "Patients", icon: appBarPatientsIcon },
   {
     path: "/analytics",
-    label: "Clinical Analytics",
+    label: "Reports",
     icon: appBarAnalyticsIcon,
   },
+];
+const moreNavItems = [
+  { path: "/labs", text: "Labs" },
+  { path: "/messages", text: "Messages" },
+  { path: "/providers", text: "Providers" },
+  { path: "/settings", text: "Settings" },
+  { path: "/help", text: "Help & Support" },
 ];
 
 export default function AppBarComponent() {
@@ -59,8 +66,8 @@ export default function AppBarComponent() {
   const [showGitHub, setShowGitHub] = useState(false);
   const [gitHubAnchor, setGitHubAnchor] = useState<HTMLDivElement | null>(null);
 
-  const isCompact = useMediaQuery("(max-width: 1445px)");
-  const isSmallScreen = useMediaQuery("(max-width: 899px)");
+  const isCompact = useMediaQuery("(max-width: 1399px)");
+  const isSmallScreen = useMediaQuery("(max-width: 991px)");
   const isMobile = useMediaQuery("(max-width: 575px)");
 
   const handleMobileNavSelect = (e: DropDownButtonItemClickEvent) => {
@@ -110,11 +117,17 @@ export default function AppBarComponent() {
               svgIcon={hamburgerMenuIcon}
               fillMode="flat"
               rounded="full"
-              items={navItems.map((item) => ({
-                text: item.label,
-                svgIcon: item.icon,
-                path: item.path,
-              }))}
+              items={[
+                ...navItems.map((item) => ({
+                  text: item.label,
+                  svgIcon: item.icon,
+                  path: item.path,
+                })),
+                ...moreNavItems.map((item) => ({
+                  ...item,
+                  svgIcon: undefined,
+                })),
+              ]}
               onItemClick={handleMobileNavSelect}
               popupSettings={{ popupClass: "mobile-nav-popup" }}
             />
@@ -127,21 +140,30 @@ export default function AppBarComponent() {
       {/* Centered nav */}
       {!isMobile && (
         <AppBarSection className="app-topbar-nav">
-          <SegmentedControl
-            value={
-              navItems.find((item) =>
-                item.path === "/"
-                  ? location.pathname === "/"
-                  : location.pathname.startsWith(item.path),
-              )?.path ?? "/"
-            }
-            onChange={(value) => navigate(value)}
-            items={navItems.map((item) => ({
-              value: item.path,
-              text: isCompact ? undefined : item.label,
-              svgIcon: item.icon,
-            }))}
-          />
+          <>
+            <SegmentedControl
+              value={
+                navItems.find((item) =>
+                  item.path === "/"
+                    ? location.pathname === "/"
+                    : location.pathname.startsWith(item.path),
+                )?.path ?? ""
+              }
+              onChange={(value) => navigate(value)}
+              items={navItems.map((item) => ({
+                value: item.path,
+                text: isCompact ? undefined : item.label,
+                svgIcon: item.icon,
+              }))}
+            />
+            <DropDownButton
+              fillMode="flat"
+              text={isCompact ? undefined : "More"}
+              items={moreNavItems}
+              onItemClick={handleMobileNavSelect}
+              aria-label="More clinical sections"
+            />
+          </>
         </AppBarSection>
       )}
 
@@ -193,6 +215,10 @@ export default function AppBarComponent() {
             onMarkAllRead={() =>
               setNotifList((prev) => prev.map((n) => ({ ...n, read: true })))
             }
+            onViewAll={() => {
+              setShowNotifications(false);
+              navigate("/notifications");
+            }}
             anchor={notifAnchor}
             show={showNotifications}
           />
