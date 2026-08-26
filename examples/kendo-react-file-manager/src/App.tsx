@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import '@progress/kendo-theme-default/dist/all.css';
+import '@progress/kendo-theme-meridian/dist/all.css';
 import { Splitter, SplitterOnChangeEvent, BreadcrumbLinkMouseEvent } from '@progress/kendo-react-layout';
 import { useInternationalization } from '@progress/kendo-react-intl';
 import { process, SortDescriptor, State } from '@progress/kendo-data-query';

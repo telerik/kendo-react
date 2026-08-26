@@ -28,7 +28,7 @@ export const ListView = (props) => {
   
   return (
     <div className="k-listview k-selectable k-filemanager-listview">
-      <div className="k-listview-content k-d-flex k-flex-row k-flex-wrap">
+      <div className="k-listview-content file-manager-listview__content">
         {props.data && 
           props.data.data.map((item: any, i: number) => {
             const name = getName(item.path);
