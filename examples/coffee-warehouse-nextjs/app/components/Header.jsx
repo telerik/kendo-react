@@ -46,7 +46,7 @@ export const Header = (props) => {
           </h1>
         </div>
         <div className="settings">
-          <span style={{ padding: "20px" }}>
+          <span style={{ padding: "var(--kendo-spacing-5)" }}>
             {localizationService.toLanguageString("custom.language", noMessage)}
           </span>
           <DropDownList

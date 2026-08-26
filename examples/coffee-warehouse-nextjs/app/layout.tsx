@@ -1,9 +1,8 @@
 import React from "react";
 
-import "./App.scss";
-
 import type { Metadata } from "next";
-import "@progress/kendo-theme-default/dist/all.css"
+import "@progress/kendo-theme-meridian/dist/all.css";
+import "./App.scss";
 import { GlobalizationAndHeader } from "./globalization-and-header";
 
 export const metadata: Metadata = {

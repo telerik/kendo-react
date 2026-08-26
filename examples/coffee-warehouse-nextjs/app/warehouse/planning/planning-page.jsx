@@ -87,7 +87,7 @@ const Planning = (props) => {
               style={!filterState[employee.id] ? { opacity: 0.5 } : {}}
             >
               <Card style={{ borderWidth: 0, cursor: "pointer" }}>
-                <CardHeader className="k-hbox">
+                <CardHeader className="planning-card-header">
                   <Avatar
                     type="image"
                     shape="circle"
