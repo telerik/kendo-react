@@ -10,10 +10,7 @@ export const KendoGrid = props => {
     props.onStartLiveUpdate(props.refreshRate);
   }, [props.refreshRate]);
   return <>
-      <Grid style={{
-      height: '400px'
-
-    }} data={props.data} rowHeight={63}  size={"small"}>
+      <Grid className="market-grid" data={props.data} rowHeight={63} size="small">
         <GridColumn field={'Ticker'} title="TICKER" cell={TickerCell} />
         <GridColumn field={'Price'} title="LAST" filter={'numeric'} cell={PriceCell} />
         <GridColumn field={'Change(%)'} title="CHG %" cell={ChangePercentCell} />

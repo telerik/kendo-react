@@ -28,7 +28,7 @@ export const ChangeCell = props => {
   const fieldName = field || '';
   return <td className={className} colSpan={props.colSpan}>
       <div className={classNames(currentTrends)}>
-        {intl.formatNumber(dataItem[fieldName], 'n5')}
+        {dataItem[fieldName] > 0 ? '+' : ''}{intl.formatNumber(dataItem[fieldName], 'n5')}
       </div>
     </td>;
 };
@@ -43,7 +43,7 @@ export const ChangePercentCell = props => {
   const fieldName = field || '';
   return <td className={className} colSpan={props.colSpan}>
       <div className={classNames(currentTrends)}>
-        {intl.formatNumber(dataItem[fieldName], '0.##')}%
+        {dataItem[fieldName] > 0 ? '+' : ''}{intl.formatNumber(dataItem[fieldName], '0.##')}%
       </div>
     </td>;
 };
@@ -58,14 +58,6 @@ export const RatingCell = props => {
     value = 'Strong Buy';
   } else {
     value = 'Buy';
-  }
-  let color;
-  if (value === 'Sell' || value === 'Strong Sell') {
-    color = 'red';
-  } else if (value === 'buy') {
-    color = 'green';
-  } else {
-    color = 'black';
   }
   return <td>
       <div className={classNames(currentTrends) + ' rating-cell'}>

@@ -1,0 +1,393 @@
+.app-shell {
+  min-height: 100vh;
+}
+
+.app-bar {
+  min-height: var(--kendo-spacing-16);
+  padding-inline: var(--kendo-spacing-6);
+  background: var(--kendo-color-surface);
+  border-bottom: 1px solid var(--kendo-color-border);
+  box-shadow: none;
+}
+
+.brand,
+.primary-nav a {
+  color: var(--kendo-color-primary-on-surface);
+  font-weight: var(--kendo-font-weight-semibold);
+  text-decoration: none;
+}
+
+.brand {
+  font-size: var(--kendo-font-size-xl);
+}
+
+.primary-nav,
+.app-bar__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--kendo-spacing-4);
+}
+
+.primary-nav {
+  margin-left: var(--kendo-spacing-10);
+}
+
+.primary-nav a {
+  padding-block: var(--kendo-spacing-2);
+  border-bottom: 2px solid transparent;
+  font-size: var(--kendo-font-size-sm);
+}
+
+.primary-nav a[aria-current="page"] {
+  border-color: var(--kendo-color-secondary);
+  color: var(--kendo-color-secondary-on-surface);
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--kendo-spacing-11);
+  min-height: var(--kendo-spacing-11);
+  color: var(--kendo-color-primary-on-surface);
+}
+
+.market-status,
+.live-status,
+.last-updated {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--kendo-spacing-2);
+  color: var(--kendo-color-subtle);
+  font-size: var(--kendo-font-size-sm);
+  font-weight: var(--kendo-font-weight-medium);
+}
+
+.market-status__dot {
+  width: var(--kendo-spacing-2);
+  height: var(--kendo-spacing-2);
+  border-radius: var(--kendo-border-radius-full);
+  background: var(--kendo-color-success);
+}
+
+.profile-avatar {
+  margin-left: var(--kendo-spacing-2);
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 20rem);
+  gap: var(--kendo-spacing-8);
+  width: min(100% - var(--kendo-spacing-12), 90rem);
+  margin-inline: auto;
+  padding-block: var(--kendo-spacing-8) var(--kendo-spacing-16);
+}
+
+.dashboard__main,
+.dashboard__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kendo-spacing-8);
+}
+
+.dashboard__sidebar {
+  padding-left: var(--kendo-spacing-8);
+  border-left: 1px solid var(--kendo-color-border);
+}
+
+.page-heading,
+.section-heading,
+.balance-card__footer,
+.holding-card__header,
+.transaction,
+.news-item {
+  display: flex;
+  align-items: center;
+}
+
+.page-heading,
+.section-heading {
+  justify-content: space-between;
+  gap: var(--kendo-spacing-4);
+  margin-bottom: var(--kendo-spacing-4);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  color: var(--kendo-color-primary-on-surface);
+  font-size: var(--kendo-font-size-xl);
+  font-weight: var(--kendo-font-weight-semibold);
+  line-height: var(--kendo-line-height-md);
+}
+
+h2 {
+  color: var(--kendo-color-primary-on-surface);
+  font-size: var(--kendo-font-size-lg);
+  font-weight: var(--kendo-font-weight-semibold);
+  line-height: var(--kendo-line-height-md);
+}
+
+h3 {
+  color: var(--kendo-color-primary-on-surface);
+  font-size: var(--kendo-font-size-sm);
+  font-weight: var(--kendo-font-weight-medium);
+  line-height: var(--kendo-line-height-sm);
+}
+
+.page-heading p,
+.section-heading p,
+.holding-card__name,
+.transaction__action,
+.transaction time,
+.news-item p {
+  color: var(--kendo-color-subtle);
+  font-size: var(--kendo-font-size-sm);
+  line-height: var(--kendo-line-height-sm);
+}
+
+.holdings-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--kendo-spacing-4);
+}
+
+.holding-card {
+  min-width: 0;
+  border: 1px solid var(--kendo-color-border);
+  box-shadow: none;
+}
+
+.holding-card__header {
+  gap: var(--kendo-spacing-3);
+  padding: var(--kendo-spacing-4);
+}
+
+.asset-avatar {
+  flex: 0 0 auto;
+}
+
+.asset-avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: var(--kendo-border-radius-full);
+}
+
+.holding-card__identity {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.holding-card__symbol,
+.transaction__symbol {
+  color: var(--kendo-color-primary-on-surface);
+  font-family: var(--kendo-font-family-monospace);
+  font-size: var(--kendo-font-size-sm);
+  font-weight: var(--kendo-font-weight-semibold);
+}
+
+.holding-card__amount,
+.transaction__amount {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: var(--kendo-font-family-monospace);
+  font-size: var(--kendo-font-size-sm);
+  text-align: right;
+}
+
+.change-indicator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--kendo-spacing-1);
+  font-family: var(--kendo-font-family);
+  font-size: var(--kendo-font-size-xs);
+  font-weight: var(--kendo-font-weight-medium);
+}
+
+.positive {
+  color: var(--kendo-color-success-on-surface);
+}
+
+.negative {
+  color: var(--kendo-color-error-on-surface);
+}
+
+.chart-section,
+.market-section {
+  padding: var(--kendo-spacing-6);
+  border: 1px solid var(--kendo-color-border);
+  border-radius: var(--kendo-border-radius-md);
+  background: var(--kendo-color-surface);
+}
+
+.balance-card {
+  border: 0;
+  border-radius: var(--kendo-border-radius-lg);
+  background: var(--kendo-color-primary);
+  color: var(--kendo-color-on-primary);
+  box-shadow: var(--kendo-elevation-1);
+}
+
+.balance-card .k-card-title {
+  color: var(--kendo-color-on-primary);
+  font-size: var(--kendo-font-size-md);
+  font-weight: var(--kendo-font-weight-medium);
+}
+
+.balance-card__value {
+  margin-block: var(--kendo-spacing-4) var(--kendo-spacing-6);
+  font-family: var(--kendo-font-family-monospace);
+  font-size: var(--kendo-font-size-xl);
+  font-weight: var(--kendo-font-weight-semibold);
+}
+
+.balance-card__footer {
+  justify-content: space-between;
+  gap: var(--kendo-spacing-4);
+}
+
+.balance-card__footer div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kendo-spacing-1);
+  font-size: var(--kendo-font-size-sm);
+}
+
+.balance-card__footer strong {
+  font-family: var(--kendo-font-family-monospace);
+  font-size: var(--kendo-font-size-md);
+}
+
+.balance-card .k-chip {
+  background: color-mix(in srgb, var(--kendo-color-on-primary) 20%, transparent);
+  color: var(--kendo-color-on-primary);
+}
+
+.transaction-list,
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kendo-spacing-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.transaction {
+  gap: var(--kendo-spacing-3);
+  padding-bottom: var(--kendo-spacing-3);
+  border-bottom: 1px solid var(--kendo-color-border);
+}
+
+.transaction__details {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: var(--kendo-spacing-1);
+}
+
+.transaction__amount {
+  gap: var(--kendo-spacing-1);
+  color: var(--kendo-color-primary-on-surface);
+}
+
+.news-item {
+  align-items: flex-start;
+  gap: var(--kendo-spacing-3);
+  padding-bottom: var(--kendo-spacing-3);
+  border-bottom: 1px solid var(--kendo-color-border);
+}
+
+.news-item > div {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: var(--kendo-spacing-2);
+}
+
+.news-item img {
+  width: var(--kendo-spacing-16);
+  height: var(--kendo-spacing-12);
+  object-fit: cover;
+  border-radius: var(--kendo-border-radius-sm);
+}
+
+@media (max-width: 87.5rem) {
+  .holdings-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 62rem) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard__sidebar {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-top: var(--kendo-spacing-8);
+    padding-left: 0;
+    border-top: 1px solid var(--kendo-color-border);
+    border-left: 0;
+  }
+
+  .dashboard__sidebar > section:first-child {
+    grid-row: span 2;
+  }
+}
+
+@media (max-width: 48rem) {
+  .app-bar {
+    padding-inline: var(--kendo-spacing-4);
+  }
+
+  .primary-nav,
+  .market-status,
+  .icon-link {
+    display: none;
+  }
+
+  .dashboard {
+    width: min(100% - var(--kendo-spacing-8), 90rem);
+    gap: var(--kendo-spacing-6);
+    padding-block: var(--kendo-spacing-6) var(--kendo-spacing-10);
+  }
+
+  .dashboard__main,
+  .dashboard__sidebar {
+    gap: var(--kendo-spacing-6);
+  }
+
+  .dashboard__sidebar {
+    display: flex;
+    padding-top: var(--kendo-spacing-6);
+  }
+
+  .holdings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-heading,
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .chart-section,
+  .market-section {
+    padding: var(--kendo-spacing-4);
+  }
+}
