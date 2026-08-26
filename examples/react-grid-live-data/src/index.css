@@ -1,193 +1,190 @@
-html {
-  height: 100%;
+:root {
+  --kendo-color-primary: #4b5ffa;
+  --kendo-color-secondary: #6626ed;
+  --kendo-color-success: #37b400;
+  --kendo-color-error: #f31700;
+  --kendo-font-family: Roboto, sans-serif;
+  --kendo-translucency-base: 30%;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
 }
 
 body {
-  height: 100%;
   margin: 0;
-  font-family: Ubuntu;
+  background-color: var(--kendo-color-app-surface);
+  color: var(--kendo-color-on-app-surface);
+  font-family: var(--kendo-font-family);
+  font-size: var(--kendo-font-size);
+  line-height: var(--kendo-line-height);
 }
 
 #page {
   display: flex;
-  height: calc( 100vh - 30px);
-  height: 100%;
+  min-height: 100%;
   width: 100%;
 }
 
 #sideBar {
-  height: 100%;
   width: 100%;
-  background-color: #f8f9fc;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin-left: 20px;
+  margin-left: var(--kendo-spacing-5);
+  padding-inline: var(--kendo-spacing-7\.5);
+  background-color: var(--kendo-color-surface);
 }
 
 #content {
   flex: 1 1 auto;
-  margin-left: 25px;
-  margin-bottom: 100px;
+  margin-bottom: var(--kendo-spacing-24);
+  margin-left: var(--kendo-spacing-6);
 }
 
-.k-appbar  {
-  background: linear-gradient(90deg,#6626ed 0%,#4b5ffa 100%);
-  height: 55px;
-}
-.app-bar-container {
- width: 100%;
+.k-appbar {
+  height: var(--kendo-spacing-14);
+  background: linear-gradient(90deg, var(--kendo-color-secondary) 0%, var(--kendo-color-primary) 100%);
+  box-shadow: var(--kendo-elevation-1);
+  transition: background-color var(--kendo-duration-quick) var(--kendo-easing-standard);
 }
 
-.card-balance-currency, .card-profit-text {
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 48px;
-  color: #fff;
+.card-balance-currency,
+.card-profit-text {
+  color: var(--kendo-color-on-primary);
+  font-size: var(--kendo-font-size-xl);
+  font-weight: var(--kendo-font-weight-bold);
+  line-height: var(--kendo-line-height-md);
 }
 
 .panel-card {
-  line-height: 1;
-  padding: 16px;
-  border-radius: 20px;
-  background: radial-gradient(44.65% 148.96% at 31.52% 49.82%,#4c5ffa 0%,#b5a9ff 100%);
-  width: 300px;
+  width: 18.75rem;
+  padding: var(--kendo-spacing-4);
+  border-radius: var(--kendo-border-radius-xxl);
+  background: radial-gradient(
+    44.65% 148.96% at 31.52% 49.82%,
+    var(--kendo-color-primary) 0%,
+    var(--kendo-color-tertiary) 100%
+  );
+  color: var(--kendo-color-on-primary);
+  line-height: var(--kendo-line-height-xs);
+  box-shadow: var(--kendo-elevation-2);
 }
 
 .card-container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   align-items: center;
-  gap: 20px;
-}
-
-.card {
-  width: 320px;
-  margin-bottom: 20px;
-  padding-left: 5px;
-}
-
-.right-panel-title {
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 30px;
-  color: #626880;
-}
-
-.panel-card {
-  line-height: 1;
-  padding: 16px;
-  border-radius: 20px;
-  background: radial-gradient(44.65% 148.96% at 31.52% 49.82%,#4c5ffa 0%,#b5a9ff 100%);
-}
-.right-panel-card {
-  background: inherit;
-  border-width: 0;
-}
-
-.my-portfolio-title {
-  font-size: 24px;
-  line-height: 30px;
-  color: #626880;
-  margin-top: 20px;
-}
-
-@media only screen   
-and (min-device-width : 768px)   
-and (max-device-width : 1024px) {
-  .card-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-}
-@media screen and (width: 581px) and (height: 1218px) {
-  .card-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+  justify-content: space-between;
+  gap: var(--kendo-spacing-5);
 }
 
 .card-container > * {
   flex: 1 1 auto;
 }
 
-.card-content {
-  display: flex;
-  justify-content: space-between;
+.right-panel-title,
+.my-portfolio-title {
+  color: var(--kendo-color-primary-on-surface);
+  font-size: var(--kendo-font-size-xl);
+  font-weight: var(--kendo-font-weight-medium);
+  line-height: var(--kendo-line-height-md);
 }
 
-td>.negative {
-  color: #F31700
+.my-portfolio-title {
+  margin-top: var(--kendo-spacing-5);
 }
 
-td>.positive {
-  color: #37B400
+.right-panel-card {
+  border-width: 0;
+  background: transparent;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
+td > .negative,
+.negative {
+  color: var(--kendo-color-error);
 }
 
-.flex-container {
-  display: flex;
-  align-items: center; 
-}
-
-.image-container {
-  margin-right: 10px; 
-}
-
-.image-container img {
-  display: block; 
-  max-width: 100%; 
-  height: auto; 
-}
-
-.right-panel-avatar img {
-  border-radius: 10%; 
-  overflow: hidden;  
-}
-
-.title {
-  font-family: "Helvetica Neue",sans-serif;
-  font-weight: 700;
-  line-height: 20px;
-  color: #fff;
-  margin: 0 10px;
-  font-size: 25px;
-}
-
-.docs-icon, .k-i-bell {
-  font-size: 25px;
-}
-
-.right-panel-card-title {
-  font-size: 22px;
-  font-weight: 500;
-  color: #424242;
-}
-
-.right-panel-card-subtitle {
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 24px;
-  color: #424242;
+td > .positive {
+  color: var(--kendo-color-success);
 }
 
 .positive {
-  color: #4b5ffa;
+  color: var(--kendo-color-primary);
 }
 
-.negative {
- color: #f31700
+.right-panel-avatar img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: var(--kendo-border-radius-md);
+}
+
+.title {
+  margin: 0 var(--kendo-spacing-2\.5);
+  color: var(--kendo-color-on-primary);
+  font-family: var(--kendo-font-family);
+  font-size: var(--kendo-font-size-xl);
+  font-weight: var(--kendo-font-weight-bold);
+  line-height: var(--kendo-line-height-md);
+}
+
+.appbar-docs-link {
+  color: var(--kendo-color-on-primary);
+}
+
+.balance-chip {
+  border-radius: var(--kendo-border-radius-full);
+  background-color: color-mix(in srgb, var(--kendo-color-primary) 50%, transparent);
+  color: var(--kendo-color-on-primary);
+}
+
+.portfolio-card__value {
+  margin: 0;
+  color: var(--kendo-color-on-surface);
+  font-weight: var(--kendo-font-weight-bold);
+}
+
+.balance-card__title {
+  color: var(--kendo-color-on-primary);
+  font-size: var(--kendo-font-size-xl);
+  font-weight: var(--kendo-font-weight-normal);
+}
+
+.balance-card__profit-label {
+  color: var(--kendo-color-on-primary);
+  font-size: var(--kendo-font-size-md);
+  font-weight: var(--kendo-font-weight-normal);
+  line-height: var(--kendo-line-height-sm);
+}
+
+.right-panel-card-title {
+  color: var(--kendo-color-on-surface);
+  font-size: var(--kendo-font-size-lg);
+  font-weight: var(--kendo-font-weight-medium);
+}
+
+.right-panel-card-subtitle {
+  color: var(--kendo-color-on-surface);
+  font-size: var(--kendo-font-size-md);
+  font-weight: var(--kendo-font-weight-light);
+  line-height: var(--kendo-line-height-md);
 }
 
 .top-card-subtitle {
-  font-size: 12px;
-  line-height: 10px;
-  color: #aeaeae;
+  color: var(--kendo-color-subtle);
+  font-size: var(--kendo-font-size-sm);
+  line-height: var(--kendo-line-height-sm);
+}
+
+.ticker-cell__symbol {
+  margin-left: var(--kendo-spacing-1\.5);
+  color: var(--kendo-color-primary);
+  font-weight: var(--kendo-font-weight-bold);
+}
+
+@media (min-width: 48rem) and (max-width: 64rem) {
+  .card-container {
+    flex-direction: column;
+  }
 }

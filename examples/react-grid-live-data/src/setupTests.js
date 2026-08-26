@@ -3,3 +3,7 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
+
+if (!globalThis.structuredClone) {
+  globalThis.structuredClone = value => JSON.parse(JSON.stringify(value));
+}

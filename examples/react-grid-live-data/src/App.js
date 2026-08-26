@@ -50,7 +50,7 @@ function App() {
           
             </BadgeContainer>
             <BadgeContainer>
-              <a href='https://www.telerik.com/kendo-react-ui/components/grid/get-started/' style={{color: '#FFF'}}><SvgIcon icon={fileTxtIcon} size='xxlarge'/></a>
+              <a className="appbar-docs-link" href='https://www.telerik.com/kendo-react-ui/components/grid/get-started/'><SvgIcon icon={fileTxtIcon} size='xxlarge'/></a>
             </BadgeContainer>
           </Button>
             <span className="k-appbar-separator" />
@@ -89,7 +89,7 @@ function App() {
           </div>
         </div>
         <div style={{ textAlign: 'right' }}>
-          <p style={{ margin: 0, color: 'black', fontWeight: 'bold' }}>$48,500.51</p>
+          <p className="portfolio-card__value">$48,500.51</p>
           <p style={{ margin: 0 }} className="positive">$9,247.91 (23.56%)</p>
         </div>
       </div>
@@ -112,7 +112,7 @@ function App() {
           </div>
         </div>
         <div style={{ textAlign: 'right' }}>
-          <p style={{ margin: 0, color: 'black', fontWeight: 'bold'  }}>$4,062.86</p>
+          <p className="portfolio-card__value">$4,062.86</p>
           <p style={{ margin: 0 }} className="positive">$1,972.91 (94.4%)</p>
         </div>
       </div>
@@ -135,7 +135,7 @@ function App() {
           </div>
         </div>
         <div style={{ textAlign: 'right' }}>
-          <p style={{ margin: 0, color: 'black', fontWeight: 'bold'  }}>$183.81</p>
+          <p className="portfolio-card__value">$183.81</p>
           <p style={{ margin: 0 }} className="positive">$74.67 (68.41%)</p>
         </div>
       </div>
@@ -158,7 +158,7 @@ function App() {
           </div>
         </div>
         <div style={{ textAlign: 'right' }}>
-          <p style={{ margin: 0, color: 'black', fontWeight: 'bold'  }}>$1.31</p>
+          <p className="portfolio-card__value">$1.31</p>
           <p style={{ margin: 0 }} className="negative">$0.06 (-4.56%)</p>
         </div>
       </div>
@@ -186,21 +186,12 @@ function App() {
       width: '370px'
     }}> 
         <CardBody>
-          <CardTitle style={{
-            color: 'white',
-            fontSize: '25px',
-            fontWeight: 400,
-          }}>Balance</CardTitle>
+          <CardTitle className="balance-card__title">Balance</CardTitle>
           <p className='card-balance-currency'>
           $430,933
           </p>
          <br/>
-          <p style={{
-            color: 'white',
-            fontSize: '16px',
-            fontWeight: 400,
-            lineHeight: '10px'
-          }}>
+          <p className="balance-card__profit-label">
             Monthly profit
           </p>
 
@@ -214,11 +205,7 @@ function App() {
         selection={"single"}
         chip={(props) => (
           <Chip
-          style={{
-            backgroundColor: 'rgba(75,95,250,.5)',
-            borderRadius: '25px',
-            color: 'white'
-          }}
+          className="balance-chip"
             {...props}
             svgIcon={props.dataItem.svgIcon}
           />

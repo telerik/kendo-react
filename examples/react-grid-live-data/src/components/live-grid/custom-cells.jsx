@@ -78,11 +78,7 @@ export const TickerCell = props => {
   let value = props.dataItem[fieldName];
   return <td>
       <img alt={`KendoReact Grid ${value} icon`} src={require(`../../assets/${value}.png`)} />
-      <span style={{
-      color: '#4B5FFA',
-      marginLeft: '5px',
-      fontWeight: 'bold'
-    }}>
+      <span className="ticker-cell__symbol">
         {value}
       </span>
     </td>;
