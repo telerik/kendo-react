@@ -3,8 +3,7 @@ import { NumericTextBox } from '@progress/kendo-react-inputs';
 import { Button } from '@progress/kendo-react-buttons';
 import { Input } from '@progress/kendo-react-inputs';
 import { Label } from '@progress/kendo-react-labels';
-import { graphql } from '@apollo/client/react/hoc';
-import flowRight from 'lodash.flowright'; 
+import { useMutation } from '@apollo/client';
 import { addProductMutation, getProductsQuery, updateProductMutation} from '../queries/queries';
 
 class ProductsForm extends Component {
@@ -76,8 +75,8 @@ class ProductsForm extends Component {
     }
     render() {
         return (
-            <div className="col-md-4 col-sm-12 col-xs-12">
-                <div className="header">
+            <section className="product-form">
+                <div className="section-header">
                     <h5>Product</h5>
                 </div>
                     <form className="k-form" onSubmit={this.handleSubmit}>
@@ -112,20 +111,27 @@ class ProductsForm extends Component {
                                 }}/>
                             </Label>
                         </fieldset>
-                    <div className="text-right">
+                    <div className="product-form__actions">
                         <Button className="k-button k-primary" type="submit">{!this.props.inEdit
                             ? "Add new product"
                             : "Update"
                             }</Button>
                     </div>
                 </form>
-            </div>
+            </section>
         )
     }
 }
 
-export default flowRight(
-    graphql(addProductMutation, { name: "addProductMutation" }),
-    graphql(getProductsQuery, { name: "getProductsQuery" }),
-    graphql(updateProductMutation, { name: "updateProductMutation" })
-)(ProductsForm);
+export default function ProductsFormContainer(props) {
+    const [addProduct] = useMutation(addProductMutation);
+    const [updateProduct] = useMutation(updateProductMutation);
+
+    return (
+        <ProductsForm
+            {...props}
+            addProductMutation={addProduct}
+            updateProductMutation={updateProduct}
+        />
+    );
+}

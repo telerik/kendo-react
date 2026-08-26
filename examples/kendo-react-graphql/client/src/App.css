@@ -1,27 +1,55 @@
-.header {
+.app-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: var(--kendo-spacing-4);
+  margin: var(--kendo-spacing-2);
+}
+
+.section-header {
   position: relative;
 }
-.header h5 {
-  color: #888888;
+
+.section-header h5 {
+  color: var(--kendo-color-subtle);
   display: inline-block;
   position: relative;
-  margin: 0 0 10px;
-  padding: 0 10px 0 0;
-  background: #fff;
+  margin: 0 0 var(--kendo-spacing-3);
+  padding: 0 var(--kendo-spacing-3) 0 0;
+  background: var(--kendo-color-app-surface);
+  font-size: var(--kendo-font-size-sm);
+  font-weight: var(--kendo-font-weight-semibold);
+  letter-spacing: var(--kendo-letter-spacing-wide);
+  line-height: var(--kendo-line-height-sm);
   text-transform: uppercase;
 }
-.header:before {
+
+.section-header::before {
   content: "";
   display: block;
   position: absolute;
-  left: 20px;
-  right: 20px;
-  bottom: 18px;
-  border-top: 1px solid #e8ecef;
+  left: var(--kendo-spacing-5);
+  right: var(--kendo-spacing-5);
+  bottom: var(--kendo-spacing-4\.5);
+  border-top: var(--kendo-spacing-1px) solid var(--kendo-color-border);
 }
+
 .k-grid {
-  margin-bottom: 20px;
+  margin-bottom: var(--kendo-spacing-5);
+  box-shadow: var(--kendo-elevation-1);
 }
+
 .k-form fieldset {
   border-top-width: 0;
+}
+
+.product-form__actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--kendo-spacing-4);
+}
+
+@media (max-width: 767px) {
+  .app-layout {
+    grid-template-columns: 1fr;
+  }
 }

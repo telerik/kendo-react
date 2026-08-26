@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import '@progress/kendo-theme-default/dist/all.css';
 import 'bootstrap';
 import './App.css';
 import GridContainer from './components/GridContainer'
 import ProductsForm from './components/ProductForm'
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import { ApolloClient, ApolloProvider, HttpLink, InMemoryCache } from '@apollo/client';
 
 
 // apollo client setup
 const client = new ApolloClient({
-  uri: 'http://localhost:4000/graphql',
+  link: new HttpLink({ uri: 'http://localhost:4000/graphql' }),
   cache: new InMemoryCache(),
 });
 
@@ -39,7 +38,7 @@ class App extends Component {
   render() {
     return (
       <ApolloProvider client={client}>
-        <div className="App row m-2">
+        <div className="app-layout">
           <ProductsForm selectedItem={this.state.selectedItem} inEdit={this.state.inEdit} addItem={this.addItem}/>
           <GridContainer changeRowSelection={this.changeRowSelection} addItem={this.addItem} inEdit={this.state.inEdit}/>
         </div>

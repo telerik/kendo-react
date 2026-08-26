@@ -1,66 +1,50 @@
-import React, {Component} from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { Grid, GridColumn, GridToolbar, GridToolbarFilter, GridToolbarColumnsChooser } from '@progress/kendo-react-grid';
 import { gearIcon } from '@progress/kendo-svg-icons';
 import MyCommandCell from './MyCommandCell'
 import { getProductsQuery, deleteProductMutation } from '../queries/queries';
-import { graphql } from '@apollo/client/react/hoc';
-import flowRight from 'lodash.flowright';
+import { useMutation, useQuery } from '@apollo/client';
 
-class GridContainer extends Component {
+const GridContainer = ({ changeRowSelection }) => {
+    const { data, loading } = useQuery(getProductsQuery);
+    const [deleteProduct] = useMutation(deleteProductMutation);
 
-    constructor(props){
-        super(props)
-        this.remove = this.remove.bind(this);
-        this.CommandCell = MyCommandCell(this.remove);
-    }
-
-    remove(dataItem) {
-        this.props.deleteProductMutation({
+    const remove = useCallback((dataItem) => {
+        deleteProduct({
             variables: {
                 ProductID: dataItem.ProductID,
             },
             refetchQueries: [{ query: getProductsQuery }]
         });
-    }
+    }, [deleteProduct]);
 
-    handleRowClick = (event) => {
-        this.props.changeRowSelection(event.dataItem)
-    }
+    const CommandCell = useMemo(() => MyCommandCell(remove), [remove]);
 
-    handleAddItem = () => {
-        this.props.addItem()
-    }
-
-    render() {
-        return (
-            <div className="grid-container col-md-8 col-sm-12 col-xs-12">
-                <div className="header">
-                    <h5>Data</h5>
-                </div>
-                <Grid data={this.props.getProductsQuery.loading === true ? [] : this.props.getProductsQuery.products}
-                    onRowClick={this.handleRowClick}
-                    style={{ maxHeight: "600px" }}
-                    adaptive={true}
-                    dataItemKey="ProductID"
-                    autoProcessData={true}
-                    navigatable={true}
-                >
-                    <GridToolbar>
-                        <GridToolbarFilter svgIcon={gearIcon} />
-                        <GridToolbarColumnsChooser />
-                    </GridToolbar>
-                    <GridColumn field="ProductID" title="ID" width="100px" />
-                    <GridColumn field="ProductName" title="Product Name"/>
-                    <GridColumn field="UnitPrice" title="Unit Price" width="150px" />
-                    <GridColumn field="UnitsInStock" title="Units in Stock" width="150px"/>
-                    <GridColumn cells={{ data: this.CommandCell }} width="120px" />
-                </Grid>
+    return (
+        <section className="products-grid">
+            <div className="section-header">
+                <h5>Data</h5>
             </div>
-        );
-    }
-}
+            <Grid data={loading ? [] : data?.products ?? []}
+                onRowClick={(event) => changeRowSelection(event.dataItem)}
+                style={{ maxHeight: "600px" }}
+                adaptive={true}
+                dataItemKey="ProductID"
+                autoProcessData={true}
+                navigatable={true}
+            >
+                <GridToolbar>
+                    <GridToolbarFilter svgIcon={gearIcon} />
+                    <GridToolbarColumnsChooser />
+                </GridToolbar>
+                <GridColumn field="ProductID" title="ID" width="100px" />
+                <GridColumn field="ProductName" title="Product Name"/>
+                <GridColumn field="UnitPrice" title="Unit Price" width="150px" />
+                <GridColumn field="UnitsInStock" title="Units in Stock" width="150px"/>
+                <GridColumn cells={{ data: CommandCell }} width="120px" />
+            </Grid>
+        </section>
+    );
+};
 
-export default flowRight(
-    graphql(getProductsQuery, { name: "getProductsQuery" }),
-    graphql(deleteProductMutation, { name: "deleteProductMutation" })
-  )(GridContainer);
+export default GridContainer;
