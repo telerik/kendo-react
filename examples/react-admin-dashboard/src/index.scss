@@ -1,5 +1,17 @@
 @import "./styles/typography.scss";
 
+:root {
+  --kendo-font-family: "Roboto", sans-serif;
+  --kendo-color-primary: #ff6358;
+  --kendo-color-secondary: #2d73f5;
+  --kendo-color-info: #0058e9;
+  --kendo-color-success: #37b400;
+  --kendo-color-warning: #ffc000;
+  --kendo-color-error: #f31700;
+  --kendo-color-app-surface: #fafafa;
+  --kendo-translucency-base: 24%;
+}
+
 span.k-textbox {
   width: 100%;
 }
@@ -48,7 +60,7 @@ span.k-textbox {
 }
 .continue-with-wrapper>span{
   position: static;
-  color: #8F8F8F;       
+  color: #8F8F8F;
   font-size: 14px;
   line-height: 20px;
 
@@ -102,12 +114,12 @@ div.k-form-field:nth-child(3) {
 .sign-button {
   height: 30px;
   width: 270px;
-  background:#FF6358;
-  color: #FFFFFF;
+  background: var(--kendo-color-primary);
+  color: var(--kendo-color-on-primary);
 }
 
 .sign-button:hover  {
-  background:#FF6358;
+  background: var(--kendo-color-primary-hover);
 }
 
 .k-button-text {
@@ -117,10 +129,10 @@ div.k-form-field:nth-child(3) {
 .social-wrapper {
   display: flex;
   width:194px;
-  height:30px; 
+  height:30px;
   top:755px;
-  left:183px; 
-  
+  left:183px;
+
 }
 
 .facebook {
@@ -230,8 +242,8 @@ div.k-form-field:nth-child(3) {
 .custom-toolbar {
   padding: 6px 25px 0px 24px;
   height: 48px;
-  background-color: #FFFFFF;
-  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.06);
+  background-color: var(--kendo-color-surface);
+  box-shadow: var(--kendo-elevation-1);
   height: 40px;
 
   button {
@@ -251,7 +263,7 @@ div.k-form-field:nth-child(3) {
 .overview-button {
   height: 30px;
   width: 30px;
-  color: #2D73F5;
+  color: var(--kendo-color-secondary-on-surface);
 
 }
 
@@ -262,23 +274,23 @@ div.k-form-field:nth-child(3) {
 }
 
 .overview {
- color: #2D73F5;
- margin-left: 16px;
- font-family: 'Roboto';
+ color: var(--kendo-color-secondary-on-surface);
+ margin-left: var(--kendo-spacing-4);
+ font-family: var(--kendo-font-family);
  font-style: normal;
- font-weight: 400;
- font-size: 18px;
+ font-weight: var(--kendo-font-weight-normal);
+ font-size: calc(var(--kendo-font-size) * 1.125);
 }
 
 .right-widget {
   float: right;
   display: flex;
-  gap: 4px;
+  gap: var(--kendo-spacing-1);
 }
 
 .alert-container {
    a {
-    color: #424242 !important;
+    color: var(--kendo-color-on-surface) !important;
    }
 }
 
@@ -294,7 +306,7 @@ div.k-form-field:nth-child(3) {
 .message-container {
   margin-top: 16px;
   margin-left: 8px;
-   
+
   h1, h2 {
     width: 300px;
    }
@@ -308,9 +320,9 @@ div.k-form-field:nth-child(3) {
   height: 30px;
   width: 165px;
   float: right;
-  border: solid 1px #FF6358;
-  color: #FF6358;
-  background-color: white;
+  border: solid 1px var(--kendo-color-primary);
+  color: var(--kendo-color-primary-on-surface);
+  background-color: var(--kendo-color-surface-alt);
   right: 10px;
 }
 
@@ -322,7 +334,7 @@ div.k-form-field:nth-child(3) {
   margin-top: -210px;
   height: 100%;
   width: 100%;
-  background-color: #fafafa;
+  background-color: var(--kendo-color-app-surface);
 }
 
 .user-container {
@@ -330,7 +342,7 @@ div.k-form-field:nth-child(3) {
   padding-top: 32px;
   max-width: 100%;
   border-width: 0;
-  border-right: solid 1px rgba(0, 0, 0, 0.08);;
+  border-right: solid 1px var(--kendo-color-border);
 
   box-sizing: border-box;
   outline: 0;
@@ -386,15 +398,15 @@ my-app { padding: 0 !important; }
   box-sizing: border-box;
   outline: 0;
   font-family: inherit;
-  font-size: 14px;
-  line-height: 1.42857143;
+  font-size: var(--kendo-font-size-sm);
+  line-height: var(--kendo-line-height-sm);
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  transition: all .3s ease-in-out;
+  transition: all var(--kendo-duration-speedy) var(--kendo-easing-standard);
   overflow: hidden;
   -webkit-touch-callout: none;
   -webkit-tap-highlight-color: transparent;
@@ -405,8 +417,8 @@ my-app { padding: 0 !important; }
   position: relative;
   z-index: 300;
   height: 48px;
-  background: #FFFFFF;
-  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.06);
+  background: var(--kendo-color-surface);
+  box-shadow: var(--kendo-elevation-1);
   width: 100%;
   height: 40px;
 }
@@ -428,7 +440,7 @@ my-app { padding: 0 !important; }
   font-weight: 300;
   font-size: 28px;
   padding: 24px 0px 8px 17px;
-  background: #fafafa;
+  background: var(--kendo-color-app-surface);
 }
 
 .dashboard-card-content-number {
@@ -447,20 +459,20 @@ text-align: center;
 }
 
 .green {
-  color: #37B400;
+  color: var(--kendo-color-success-on-surface);
 }
 
 .red {
-  color: #F31700;
+  color: var(--kendo-color-error-on-surface);
 }
 
 .orange {
-  color: #FFC000;
+  color: var(--kendo-color-warning-on-surface);
 }
 
-.footer, .k-card-title 
+.footer, .k-card-title
   {
-  color: #666666;
+  color: var(--kendo-color-subtle);
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -476,7 +488,7 @@ text-align: center;
 }
 
 .gauge-footer {
-  color: #666666;
+  color: var(--kendo-color-subtle);
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -514,8 +526,8 @@ text-align: center;
 }
 
 .k-rating-item.k-selected {
-  color: #FFA600;
-}  
+  color: var(--kendo-color-warning-on-surface);
+}
 
 .person-name {
   margin-left: 10px;
@@ -542,8 +554,8 @@ text-align: center;
 .progress-bar-container {
   display: flex;
   padding-bottom: 10px;
-  color: black;
-  font-weight: 700;
+  color: var(--kendo-color-on-surface);
+  font-weight: var(--kendo-font-weight-bold);
   margin-bottom: -20px;
   font-size: 12px;
    span {
@@ -584,7 +596,7 @@ text-align: center;
     height: 24px;
     color: gray;
   }
-  
+
 }
 
 .input-container {
@@ -634,7 +646,7 @@ text-align: center;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid var(--kendo-color-border);
   width: 100%;
   text-align: center;
 }
@@ -643,6 +655,35 @@ text-align: center;
   margin-top: 16px;
   padding: 8px 0px 0px;
   gap: 18px;
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.weather-data-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather__icon {
+  width: calc(var(--kendo-spacing-4) * 6.25);
+  height: calc(var(--kendo-spacing-4) * 6.25);
+}
+
+.weather__condition {
+  color: var(--kendo-color-subtle);
+}
+
+.weather__temperature {
+  color: var(--kendo-color-info-on-surface);
+  font-family: var(--kendo-font-family);
+  font-size: calc(var(--kendo-font-size) * 4.375);
+  font-weight: var(--kendo-font-weight-light);
 }
 
 .icon-header-container {
