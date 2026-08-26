@@ -119,8 +119,8 @@ const Header: React.FC = () => {
             )}
             style={{ width: 300 }}
           />
-          <Button svgIcon={userIcon} fillMode="flat" className="header__icon-action" />
-          <Button svgIcon={cartIcon} fillMode="flat" className="header__icon-action" onClick={handleCartClick} />
+          <Button svgIcon={userIcon} fillMode="flat" className="header__icon-action" aria-label="Account" />
+          <Button svgIcon={cartIcon} fillMode="flat" className="header__icon-action" aria-label="Shopping cart" onClick={handleCartClick} />
           <DropDownButton
             svgIcon={paletteIcon}
             items={themeItems}

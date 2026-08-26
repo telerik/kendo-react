@@ -15,6 +15,7 @@ import { AdminProvider } from './helpers/AdminContext';
 import { CategoriesProvider } from './helpers/CategoriesContext';
 import { ThemeProvider } from './helpers/ThemeContext'; 
 import { LanguageProvider } from "./helpers/LanguageContext";
+import { NotFound } from "./pages/NotFound";
 
 function App() {
   return (
@@ -35,6 +36,8 @@ function App() {
                     <Route path="/category" element={<DetailedCategory />} />
                     <Route path="/product/:id" element={<ProductDetails />} />
                     <Route path="/shoppingcart" element={<ShoppingCartList />} />
+                    <Route path="/not-found" element={<NotFound />} />
+                    <Route path="*" element={<NotFound />} />
                   </Routes>
                 </SizedParent>
                 <Footer />

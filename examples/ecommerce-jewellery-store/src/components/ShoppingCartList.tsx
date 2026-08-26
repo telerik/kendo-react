@@ -37,7 +37,7 @@ const EmailInput = (fieldRenderProps: FieldRenderProps) => {
 };
 
 export const ShoppingCartList: React.FC = () => {
-  const { cart, updateIndividualCartItem } = useCart();
+  const { cart, updateIndividualCartItem, removeItemFromCart } = useCart();
   const navigate = useNavigate();
   const { t } = useLanguageContext();
 
@@ -53,7 +53,7 @@ export const ShoppingCartList: React.FC = () => {
     const id = event.target.element?.id;
 
     if (id) {
-      updateIndividualCartItem(id);
+      updateIndividualCartItem(id, Math.max(1, event.value ?? 1));
     }
   };
 
@@ -73,41 +73,41 @@ export const ShoppingCartList: React.FC = () => {
           </Button>
         </div>
 
-        {cart.map((item) => {
-          const isCartItem = "quantity" in item;
-
+        {cart.length === 0 ? (
+          <section className="shopping-cart__empty" aria-live="polite">
+            <h2>Your cart is empty</h2>
+            <p>Explore our handcrafted collections to find your next signature piece.</p>
+            <Button themeColor="primary" onClick={onBackClick}>Continue shopping</Button>
+          </section>
+        ) : cart.map((item) => {
           return (
             <div
               className="shopping-cart__item"
               key={item.product.id}
-              style={{
-                height: "120px",
-              }}
             >
               <img
                 className="shopping-cart__item-image"
-                src={isCartItem ? item.product.img : undefined}
-                alt={isCartItem ? item.product.title : undefined}
-                style={{
-                  maxHeight: "120px",
-                }}
+                src={item.product.img}
+                alt={item.product.title}
               />
               <div className="shopping-cart__item-details">
-                <span>{isCartItem ? item.product.title : null}</span>
-                <span>{`$${isCartItem ? item.product.newPrice.toLocaleString() : null}`}</span>
+                <span>{item.product.title}</span>
+                <span>{`$${item.product.newPrice.toLocaleString()}`}</span>
                 <span>
-                  {isCartItem ? (
-                    <NumericTextBox
-                      value={item.quantity}
-                      id={String(item.product.id)}
-                      onChange={updateQuantity}
-                      width={"118px"}
-                      fillMode={"flat"}
-                    />
-                  ) : (
-                    <span>{t.emptyCartMessage}</span>
-                  )}
-                  <Button svgIcon={trashIcon} fillMode={"flat"}></Button>
+                  <NumericTextBox
+                    value={item.quantity}
+                    id={String(item.product.id)}
+                    onChange={updateQuantity}
+                    width={"118px"}
+                    min={1}
+                    fillMode={"flat"}
+                  />
+                  <Button
+                    svgIcon={trashIcon}
+                    fillMode={"flat"}
+                    aria-label={`Remove ${item.product.title} from cart`}
+                    onClick={() => removeItemFromCart(item.product.id ?? 0)}
+                  />
                 </span>
                 <span>
                   {`$${(

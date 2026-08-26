@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Layout } from "../components/Layout";
 import CardNumber from "../components/CardNumber";
 import ExpiryDate from "../components/ExpiryDate";
@@ -16,6 +16,7 @@ import {
 import {
   RadioButton,
 } from "@progress/kendo-react-inputs";
+import { Stepper } from "@progress/kendo-react-layout";
 import {
   Label,
 } from "@progress/kendo-react-labels";
@@ -26,6 +27,7 @@ import { useLanguageContext } from "../helpers/LanguageContext";
 const PaymentDetails: React.FC = () => {
   const navigate = useNavigate();
   const { t } = useLanguageContext();
+  const [step, setStep] = useState(1);
 
   const onSubmitClick = () => {
     navigate("/thankyou")
@@ -34,6 +36,17 @@ const PaymentDetails: React.FC = () => {
   return (
     <Layout>
       <div className="payment-details">
+        <Stepper
+          className="payment-details__stepper"
+          linear
+          value={step}
+          onChange={(event) => setStep(event.value)}
+          items={[
+            { label: "Shipping", isValid: true },
+            { label: "Payment" },
+            { label: "Review" },
+          ]}
+        />
         <div className="payment-details__grid">
           <div className="payment-details__form">
             <h1>{t.paymentDetailsTitle}</h1>
@@ -76,7 +89,13 @@ const PaymentDetails: React.FC = () => {
                 </FormElement>
               )}
             />
-            <Button className="payment-details__submit" onClick={onSubmitClick} themeColor={"primary"}>{t.submitOrderButton}</Button>
+            <Button
+              className="payment-details__submit"
+              onClick={step === 2 ? onSubmitClick : () => setStep(step + 1)}
+              themeColor={"primary"}
+            >
+              {step === 2 ? t.submitOrderButton : "Continue to review"}
+            </Button>
           </div>
           <div className="payment-details__summary">
             <h2 className="payment-details__heading">{t.subTotalLabel}</h2>
