@@ -59,6 +59,20 @@ const splitterPanes: PanesModel[] = [
   },
 ];
 
+const compactSplitterPanes: PanesModel[] = [
+  {
+    size: '35%',
+    min: '96px',
+    collapsible: true,
+  },
+  {},
+  {
+    size: '0%',
+    min: '0px',
+    collapsible: true,
+  },
+];
+
 const initialSort: SortDescriptor[] = [{
   field: 'path',
   dir: 'asc'
@@ -350,12 +364,24 @@ const App = () => {
     setEditDialogView(false);
   };
 
-  document.addEventListener('click', () => {
-    setContextMenuView(false);
-  });
+  React.useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 767.98px)');
+    const updatePanes = () => setPanes(mediaQuery.matches ? compactSplitterPanes : splitterPanes);
+
+    updatePanes();
+    mediaQuery.addEventListener('change', updatePanes);
+    return () => mediaQuery.removeEventListener('change', updatePanes);
+  }, []);
+
+  React.useEffect(() => {
+    const closeContextMenu = () => setContextMenuView(false);
+
+    document.addEventListener('click', closeContextMenu);
+    return () => document.removeEventListener('click', closeContextMenu);
+  }, []);
 
   return (
-    <div className='k-widget k-filemanager k-filemanager-resizable'>
+    <main className='k-widget k-filemanager k-filemanager-resizable' aria-label='File manager'>
       <div className='k-filemanager-header'>
         <FileManagerToolbar
           splitItems={splitBtnItems}
@@ -448,7 +474,7 @@ const App = () => {
           <FileInformation data={detailsData} />
         </Splitter>
       </div>
-    </div>
+    </main>
   );
 }
 

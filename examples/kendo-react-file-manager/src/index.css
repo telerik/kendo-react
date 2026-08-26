@@ -17,3 +17,28 @@ code {
   display: flex;
   flex-flow: row wrap;
 }
+
+.k-filemanager-listview .k-listview-item:focus-visible {
+  outline: 2px solid var(--kendo-color-info);
+  outline-offset: 2px;
+}
+
+@media (max-width: 767.98px) {
+  .k-filemanager .k-button,
+  .k-filemanager .k-switch {
+    min-height: 44px;
+  }
+
+  .k-filemanager .k-toolbar {
+    flex-wrap: wrap;
+  }
+
+  .k-filemanager .k-filemanager-details-toggle {
+    display: none;
+  }
+
+  .k-filemanager .k-filemanager-search-tool {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+}
