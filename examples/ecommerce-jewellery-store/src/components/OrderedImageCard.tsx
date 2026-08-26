@@ -13,15 +13,15 @@ export const OrderedImgText = (props: OrderedImgTextProps) => {
           height: "508px",
           width: "768px",
         }}
-        className={`k-col-span-8 k-order-${order} k-rounded-lg`}
+        className={`ordered-image-card__image ordered-image-card__image--${order}`}
       />
-      <span className="k-text-center k-col-span-4">
-        <div className="k-h2 k-font-bold k-text-black">{title}</div>
-        <div className="k-font-size-xl k-p-5">{subtitle}</div>
-        <span className="k-font-size-md">{contentText}</span>
+      <span className="ordered-image-card__content">
+        <div className="ordered-image-card__title">{title}</div>
+        <div className="ordered-image-card__subtitle">{subtitle}</div>
+        <span className="ordered-image-card__body">{contentText}</span>
 
         {link && (
-          <div className="k-pt-5">
+          <div className="ordered-image-card__link">
             <Button fillMode={"link"}>{link}</Button>
           </div>
         )}

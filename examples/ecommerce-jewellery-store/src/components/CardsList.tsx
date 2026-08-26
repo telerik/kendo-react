@@ -12,21 +12,19 @@ export const CardsList = (props: CardListProps) => {
   };
 
   return (
-    <section className="k-d-grid k-grid-cols-12 k-col-span-12 k-justify-content-center k-align-items-center k-gap-3">
+    <section className="cards-list">
       {props.data.map((item, index) => {
         return (
           <div
             key={index}
-            className={`${props.layout === 'grid' ? 'k-col-span-4' : 'k-col-span-3'} k-text-center k-border k-border-primary k-gap-1 k-pb-5`}
+            className={`cards-list__item cards-list__item--${props.layout}`}
           >
             {item.status !== null ? (
               <BadgeContainer>
                 <div
-                  className="k-d-flex k-justify-content-center k-align-items-center k-rounded-lg"
+                  className="cards-list__image"
                   style={{
                     backgroundImage: `url(${item.img})`,
-                    width: "278px",
-                    height: "236px",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
@@ -35,7 +33,7 @@ export const CardsList = (props: CardListProps) => {
 
                 <Badge
                   themeColor="primary"
-                  className="k-text-uppercase"
+                  className="cards-list__badge"
                   position={"inside"}
                   align={{
                     horizontal: "start",
@@ -48,24 +46,19 @@ export const CardsList = (props: CardListProps) => {
               </BadgeContainer>
             ) : (
               <div
-                className="k-d-inline-block k-justify-content-center k-align-items-center k-rounded-lg"
+                className="cards-list__image"
                 style={{
                   backgroundImage: `url(${item.img})`,
-                  width: "278px",
-                  height: "236px",
                 }}
               ></div>
             )}
             <div>
-              <div className="k-pt-2">{item.title}</div>
-              <div className="k-d-flex k-justify-content-center k-gap-xl k-align-items-center k-pt-2">
+              <div className="cards-list__title">{item.title}</div>
+              <div className="cards-list__actions">
                 <span>
                   {item.oldPrice && (
                     <span
-                      className="k-text-line-through"
-                      style={{
-                        paddingRight: "8px",
-                      }}
+                      className="cards-list__old-price"
                     >{`$${item.oldPrice}`}</span>
                   )}
                   <span

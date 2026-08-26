@@ -51,13 +51,13 @@ export const FilterComponent: React.FC<FilterComponentProps> = ({ updateUI }) =>
     updateUI(customCompositeFilters);
   };
 
-  const onCategoryChange = (e: any) => {
+  const onCategoryChange = (e: { value: string[] }) => {
     setCategoryValue(e.value);
     applyCategoryFilter(e.value);
     setSelectedCategory(e.value.length > 0 ? e.value[0] : null);
   };
 
-  const onStatusChange = (e: any) => {
+  const onStatusChange = (e: { value: string }) => {
     setStatusValue(e.value);
 
     const newSorts: SortDescriptor[] = [
@@ -75,7 +75,7 @@ export const FilterComponent: React.FC<FilterComponentProps> = ({ updateUI }) =>
     updateUI(customCompositeFilters);
   };
 
-  const onMaterialChange = (e: any) => {
+  const onMaterialChange = (e: { value: string }) => {
     setMaterialValue(e.value);
 
     const newFilter: FilterDescriptor[] = [
@@ -107,12 +107,12 @@ export const FilterComponent: React.FC<FilterComponentProps> = ({ updateUI }) =>
   };
 
   return (
-    <section className="k-d-flex k-justify-content-between k-align-items-center">
-      <span className="k-d-flex k-align-items-center">
-        <span className="k-d-flex k-align-items-center k-pr-2">
+    <section className="filter-component">
+      <span className="filter-component__group">
+        <span className="filter-component__label">
           <SvgIcon icon={filterIcon}></SvgIcon> {t.filterLabel}
         </span>
-        <span className="k-pr-2">
+        <span className="filter-component__control">
           <MultiSelect
             data={chips}
             value={categoryValue}
@@ -121,12 +121,12 @@ export const FilterComponent: React.FC<FilterComponentProps> = ({ updateUI }) =>
             style={{ minWidth: "119px" }}
           />
         </span>
-        <span className="k-pr-2">
+        <span className="filter-component__control">
           <DropDownList value={materialValue} data={materials} onChange={onMaterialChange} />
         </span>
       </span>
-      <span className="k-d-flex k-align-items-center">
-        <span className="k-d-flex k-align-items-center k-pr-2">
+      <span className="filter-component__group">
+        <span className="filter-component__label">
           <SvgIcon icon={sortAscIcon}></SvgIcon> {t.sortByLabel}
         </span>
         <span>

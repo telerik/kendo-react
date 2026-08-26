@@ -7,7 +7,6 @@ import ThankYou from "./pages/ThankYou";
 import PaymentDetails from "./pages/PaymentDetails";
 import { AllProductsListView } from "./pages/AllProductsListView";
 import Home from "./pages/Home";
-import "@progress/kendo-theme-utils/dist/all.scss";
 import { SizedParent } from "./components/SizedParent";
 import { DetailedCategory } from "./pages/DetailedCategory";
 import { ProductDetails } from "./pages/ProductsDetails";

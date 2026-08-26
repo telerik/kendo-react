@@ -13,6 +13,7 @@ import {
   FieldRenderProps,
   FieldWrapper,
 } from "@progress/kendo-react-form";
+import { NumericTextBoxChangeEvent } from "@progress/kendo-react-inputs";
 import { Error } from "@progress/kendo-react-labels";
 import { Input } from "@progress/kendo-react-inputs";
 import { Button } from "@progress/kendo-react-buttons";
@@ -48,20 +49,21 @@ export const ShoppingCartList: React.FC = () => {
     navigate("/paymentdetails");
   };
 
-  const updateQuantity = (event: any) => {
-    const target = event.target.element;
-    const id = target.getAttribute("id");
+  const updateQuantity = (event: NumericTextBoxChangeEvent) => {
+    const id = event.target.element?.id;
 
-    updateIndividualCartItem(id);
+    if (id) {
+      updateIndividualCartItem(id);
+    }
   };
 
   return (
     <>
       <Layout>
-        <div className="k-h2 k-font-bold k-text-black k-col-span-12 k-pt-5">
+        <div className="shopping-cart__title">
           {t.shoppingCartTitle}
         </div>
-        <div className="k-pb-5">
+        <div className="shopping-cart__back">
           <Button
             svgIcon={chevronLeftIcon}
             fillMode={"flat"}
@@ -76,21 +78,21 @@ export const ShoppingCartList: React.FC = () => {
 
           return (
             <div
-              className="k-d-flex k-gap-5 k-justify-content-center k-border-y k-align-items-center k-pb-5"
+              className="shopping-cart__item"
               key={item.product.id}
               style={{
                 height: "120px",
               }}
             >
               <img
-                className="k-rounded-lg"
+                className="shopping-cart__item-image"
                 src={isCartItem ? item.product.img : undefined}
                 alt={isCartItem ? item.product.title : undefined}
                 style={{
                   maxHeight: "120px",
                 }}
               />
-              <div className="k-d-flex k-justify-content-between k-w-full">
+              <div className="shopping-cart__item-details">
                 <span>{isCartItem ? item.product.title : null}</span>
                 <span>{`$${isCartItem ? item.product.newPrice.toLocaleString() : null}`}</span>
                 <span>
@@ -119,8 +121,8 @@ export const ShoppingCartList: React.FC = () => {
       </Layout>
       {cart.length > 0 ? (
         <Layout>
-          <section className="k-d-flex k-justify-content-between k-align-items-center">
-            <div className="k-col-span-3">
+          <section className="shopping-cart__checkout">
+            <div className="shopping-cart__checkout-form">
               <Form
                 render={() => (
                   <FormElement style={{ maxWidth: 650 }}>
@@ -168,7 +170,7 @@ export const ShoppingCartList: React.FC = () => {
               />
             </div>
             <div
-              className="k-col-span-9 k-rounded-lg"
+              className="shopping-cart__checkout-image"
               style={{
                 backgroundImage: `url(${shoppingCartImage})`,
                 width: "630px",
@@ -182,30 +184,30 @@ export const ShoppingCartList: React.FC = () => {
         </Layout>
       ) : null}
       <Layout>
-        <div className="k-d-flex k-flex-col k-align-items-center k-py-12 k-gap-10">
-          <h2 className="k-h2 !k-mb-0">{t.whyChooseUs}</h2>
-          <div className="k-d-grid k-grid-cols-1 k-grid-cols-md-3 k-gap-5">
-            <div className="k-d-flex k-flex-col k-align-items-center">
+        <div className="shopping-cart__benefits">
+          <h2>{t.whyChooseUs}</h2>
+          <div className="shopping-cart__benefit-items">
+            <div className="shopping-cart__benefit">
               <Avatar rounded="full" themeColor="primary" size="large">
                 <SvgIcon icon={walletIcon} size="xxlarge" />
               </Avatar>
-              <p className="k-font-size-xl k-font-bold">{t.returnPolicyTitle}</p>
+              <p className="shopping-cart__benefit-title">{t.returnPolicyTitle}</p>
               <p>{t.returnPolicyContent}</p>
             </div>
-            <div className="k-d-flex k-flex-col k-align-items-center">
+            <div className="shopping-cart__benefit">
               <Avatar rounded="full" themeColor="primary" size="large">
                 <SvgIcon icon={heartIcon} size="xxlarge" />
               </Avatar>
-              <p className="k-font-size-xl k-font-bold">
+              <p className="shopping-cart__benefit-title">
                 {t.includedGiftWrappingTitle}
               </p>
               <p>{t.includedGiftWrappingContent}</p>
             </div>
-            <div className="k-d-flex k-flex-col k-align-items-center">
+            <div className="shopping-cart__benefit">
               <Avatar rounded="full" themeColor="primary" size="large">
                 <SvgIcon icon={percentIcon} size="xxlarge" />
               </Avatar>
-              <p className="k-font-size-xl k-font-bold">{t.discountCodeTitle}</p>
+              <p className="shopping-cart__benefit-title">{t.discountCodeTitle}</p>
               <p>{t.discountCodeContent}</p>
             </div>
           </div>

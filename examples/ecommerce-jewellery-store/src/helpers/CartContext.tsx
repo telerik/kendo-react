@@ -5,7 +5,7 @@ import React from 'react';
 interface CartContextType {
     cart: CartContextDescriptor[];
     addItemToCart: (product: ListDataDescriptor) => void;
-    updateIndividualCartItem: (cart: CartContextDescriptor) => void;
+    updateIndividualCartItem: (id: string | number) => void;
 }
 
 const ShoppingCartContext = createContext<CartContextType | null>(null);
@@ -31,7 +31,7 @@ export const CartProvider = ({ children }: CartProviderProps) => {
         }
     };
 
-    const updateCartItem = React.useCallback((id: any) => {
+    const updateCartItem = React.useCallback((id: string | number) => {
         setShoppingCart(shoppingCart.map(item => {
             if (item.product.id === Number(id)) {
                 return {...item, quantity: item.quantity + 1};

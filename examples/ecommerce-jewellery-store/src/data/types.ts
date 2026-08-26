@@ -68,7 +68,9 @@ export interface GridTranslations {
     materials: { [key: string]: string };
     diamondWeddingRing: string;
     silverBraceletWithCross: string;
-    [key: string]: any; 
+    // Translation content is dynamic because language files include page-specific sections.
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    [key: string]: any;
   }
   
   export type LanguageContextType = {
@@ -78,7 +80,7 @@ export interface GridTranslations {
   };
 
 export type CardListProps = {
-    data: any[];
+    data: ListDataDescriptor[];
     layout: "grid" | "list";
 }
 
@@ -105,7 +107,7 @@ export type SizedParentProps = {
 };
 
 export type CategoryListProps = {
-    data: any[];
+    data: CardDescriptor[];
     title: string;
     subtitle: string;
     colSpan?: number;

@@ -55,8 +55,7 @@ export const AllProductsListView = () => {
     <>
       <Layout>
         <section
-          className="k-d-grid k-grid-cols-12 k-justify-content-center k-align-items-center k-col-span-12"
-          style={{ paddingTop: "60px" }}
+          className="products__hero"
         >
           <OrderedImgText
             title={t.allProductsTitle}
@@ -80,7 +79,7 @@ export const AllProductsListView = () => {
       </Layout>
 
       <Layout>
-        <section className="k-d-flex k-justify-content-between k-align-items-center k-py-4">
+        <section className="products__toolbar">
           <Breadcrumb data={BreakcrumbData} />
           <ButtonGroup>
             <Button
