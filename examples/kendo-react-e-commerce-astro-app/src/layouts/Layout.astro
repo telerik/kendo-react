@@ -1,10 +1,13 @@
+---
+import '../styles.css';
+---
+
 <html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet"
-    href="https://unpkg.com/@progress/kendo-theme-default@14.1.0/dist/all.css"> <link rel="stylesheet"
-    href="https://unpkg.com/@progress/kendo-theme-utils@14.1.0/dist/all.css">
+    href="https://unpkg.com/@progress/kendo-theme-meridian@14.5.0/dist/all.css">
     <style is:global>
       /* Reset styles */
       *,
@@ -58,6 +61,12 @@
       }
       .switch-width {
         width: 72px !important;
+      }
+
+      :root {
+        --kendo-translucency-base: 0.3;
+        --kendo-translucency-blur-base: 8px;
+        --kendo-translucency-blur-step: 2px;
       }
     </style>
     <slot name="head" />

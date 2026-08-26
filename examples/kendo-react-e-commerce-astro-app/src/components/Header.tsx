@@ -84,7 +84,7 @@ const Header: React.FC = () => {
   );
 
   const [theme, setTheme] = useState<string>(
-    "https://unpkg.com/@progress/kendo-theme-default@10.3.1/dist/default-main.css"
+    "https://unpkg.com/@progress/kendo-theme-meridian@14.5.0/dist/meridian-main.css"
   );
 
   useEffect(() => {
@@ -140,12 +140,12 @@ const Header: React.FC = () => {
       <LocalizationProvider language={language}>
         <AppBar themeColor="base">
           <AppBarSection
-            className="k-flex-basis-0 k-flex-grow k-gap-2 k-align-items-center"
+            className="header__start"
             style={{ paddingLeft: "50px" }}
           >
             <a
               href="/kendo-react/kendo-react-e-commerce-astro-app/"
-              className="k-d-sm-flex"
+              className="header__logo"
               style={{ marginRight: "50px" }}
             >
               <img
@@ -155,7 +155,7 @@ const Header: React.FC = () => {
             </a>
             <Menu items={menuItems} onSelect={handleMenuSelect} />
           </AppBarSection>
-          <AppBarSection className="k-flex-basis-0 k-flex-grow k-justify-content-end k-gap-1.5">
+          <AppBarSection className="header__end">
             <TextBox
               placeholder={t.searchPlaceholder}
               prefix={() => (
@@ -170,11 +170,11 @@ const Header: React.FC = () => {
               )}
               style={{ width: 300 }}
             />
-            <Button svgIcon={userIcon} fillMode="flat" className="k-ml-2" />
+            <Button svgIcon={userIcon} fillMode="flat" className="header__icon-button" />
             <Button
               svgIcon={cartIcon}
               fillMode="flat"
-              className="k-ml-2"
+              className="header__icon-button"
               onClick={handleCartClick}
             />
             <DropDownButton

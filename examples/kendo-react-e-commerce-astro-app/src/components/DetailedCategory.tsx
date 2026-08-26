@@ -65,10 +65,10 @@ const ShoppingCartList: React.FC = () => {
   return (
     <>
       <Layout>
-        <div className="k-h2 k-font-bold k-text-black k-col-span-12 k-pt-5">
+        <div className="cart__title">
           Shopping Cart
         </div>
-        <div className="k-pb-5">
+        <div className="cart__back">
           <Button svgIcon={chevronLeftIcon} fillMode={"flat"}>
             Back
           </Button>
@@ -76,17 +76,17 @@ const ShoppingCartList: React.FC = () => {
 
         {cart.map((item) => (
           <div
-            className="k-d-flex k-gap-5 k-justify-content-center k-border-y k-align-items-center k-pb-5"
+            className="cart__item"
             key={item.product.id}
             style={{ height: "120px" }}
           >
             <img
-              className="k-rounded-lg"
+              className="cart__image"
               src={item.product.img} 
               alt={item.product.title}
               style={{ maxHeight: "120px" }}
             />
-            <div className="k-d-flex k-justify-content-between k-w-full">
+            <div className="cart__item-details">
               <span>{item.product.title}</span>
               <span>{`$${item.product.newPrice.toLocaleString()}`}</span>
               <span>
@@ -106,8 +106,8 @@ const ShoppingCartList: React.FC = () => {
       </Layout>
       {cart.length > 0 ? (
         <Layout>
-          <section className="k-d-flex k-justify-content-between k-align-items-center">
-            <div className="k-col-span-3">
+          <section className="detailed-category__checkout">
+            <div className="detailed-category__form">
               <Form
                 render={() => (
                   <FormElement style={{ maxWidth: 650 }}>
@@ -164,7 +164,7 @@ const ShoppingCartList: React.FC = () => {
                 )}
               />
             </div>
-            <div className="k-col-span-9 k-rounded-lg">
+            <div className="detailed-category__visual">
               <img
                 src="/shoppingCartImg.png" 
                 alt="Shopping Cart Background"

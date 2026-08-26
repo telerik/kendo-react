@@ -59,10 +59,10 @@ export const ShoppingCartList: React.FC = () => {
     <LocalizationProvider language={language}>
       <>
         <Layout>
-          <div className="k-h2 k-font-bold k-text-black k-col-span-12 k-pt-5">
+          <div className="cart__title">
             {t.shoppingCartTitle}
           </div>
-          <div className="k-pb-5">
+          <div className="cart__back">
             <Button
               svgIcon={chevronLeftIcon}
               fillMode={'flat'}
@@ -75,21 +75,21 @@ export const ShoppingCartList: React.FC = () => {
           {shoppingCart.length > 0 ? (
             shoppingCart.map((item, index) => (
               <div
-                className="k-d-flex k-gap-5 k-justify-content-center k-border-y k-align-items-center k-pb-5"
+                className="cart__item"
                 key={item.id}
                 style={{
                   height: '120px',
                 }}
               >
                 <img
-                  className="k-rounded-lg"
+                  className="cart__image"
                   src={item.img}
                   alt={item.title}
                   style={{
                     maxHeight: '120px',
                   }}
                 />
-                <div className="k-d-flex k-justify-content-between k-w-full">
+                <div className="cart__item-details">
                   <span>{item.title}</span>
                   <span>{`$${item.newPrice.toLocaleString()}`}</span>
                   <span>
