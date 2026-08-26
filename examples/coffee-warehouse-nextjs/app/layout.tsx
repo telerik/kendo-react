@@ -6,8 +6,8 @@ import "./App.scss";
 import { GlobalizationAndHeader } from "./globalization-and-header";
 
 export const metadata: Metadata = {
-  title: "KendoReact Coffee WareHouse DashBoard",
-  description: "Coffee WareHouse DashBoard Next.js sample application",
+  title: "KendoReact Coffee Warehouse Dashboard",
+  description: "Coffee warehouse operations dashboard sample application",
 };
 
 export default function RootLayout({

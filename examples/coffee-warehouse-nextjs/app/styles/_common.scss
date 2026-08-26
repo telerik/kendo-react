@@ -72,7 +72,7 @@ a {
     }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 576px) {
     .card-container {
         text-align: initial;
         padding: var(--kendo-spacing-7\.5);
@@ -183,7 +183,7 @@ a {
     }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 576px) {
     .header {
         .title {
             flex-direction: row;
@@ -236,7 +236,7 @@ a {
     }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 576px) {
     .dashboard-page {
         .k-grid-toolbar .k-textbox {
             margin-bottom: 0;
@@ -285,7 +285,7 @@ a {
     }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 576px) {
     .planning-page {
         .card-container {
             grid-template-columns: repeat(2, 1fr);
@@ -302,7 +302,7 @@ a {
     }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 992px) {
     .planning-page {
         .card-container {
             grid-template-columns: repeat(3, 1fr);
@@ -310,7 +310,7 @@ a {
     }
 }
 
-@media (min-width: 1360px) {
+@media (min-width: 1400px) {
     .planning-page {
         .card-container {
             grid-template-columns: repeat(5, 1fr);
@@ -355,7 +355,7 @@ a {
     }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 576px) {
     .profile-page {
         .k-form .k-form-field {
             display: flex;
@@ -491,7 +491,7 @@ a {
     }
 }
 
-@media (min-width: 480px) { 
+@media (min-width: 576px) {
     .info-page {
         .content {
             padding: var(--kendo-spacing-10) var(--kendo-spacing-10) 0;
@@ -525,7 +525,7 @@ a {
         }
     }
 }
-@media (max-width: 480px) {
+@media (max-width: 575px) {
     .k-form-horizontal .k-form-field-wrap {
         max-width: 100%;
     }
@@ -567,4 +567,85 @@ a {
     h3 {
         margin-left: var(--kendo-spacing-2);
     }
+}
+
+.main-content {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: var(--kendo-spacing-4);
+}
+
+.employee-toggle {
+    height: auto;
+    padding: 0;
+    text-align: left;
+}
+
+.employee-toggle:focus-visible {
+    outline: 2px solid var(--kendo-color-info);
+    outline-offset: var(--kendo-spacing-1);
+}
+
+.utility-page {
+    max-width: 720px;
+    margin: var(--kendo-spacing-8) auto;
+}
+
+.utility-page .card-container {
+    padding: var(--kendo-spacing-8);
+    text-align: left;
+}
+
+.utility-page h1 {
+    margin-bottom: var(--kendo-spacing-2);
+}
+
+.utility-page__description {
+    color: var(--kendo-color-subtle);
+    margin: 0 0 var(--kendo-spacing-6);
+}
+
+.utility-page__fields {
+    display: grid;
+    gap: var(--kendo-spacing-4);
+}
+
+.utility-page__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--kendo-spacing-3);
+    margin-top: var(--kendo-spacing-6);
+}
+
+.notification-list {
+    display: grid;
+    gap: var(--kendo-spacing-3);
+}
+
+.notification-card {
+    padding: var(--kendo-spacing-4);
+}
+
+.notification-card p {
+    margin: var(--kendo-spacing-1) 0 0;
+}
+
+.auth-page {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    padding: var(--kendo-spacing-4);
+    background: var(--kendo-color-app-surface);
+}
+
+.auth-page .card-container {
+    width: min(100%, 420px);
+    padding: var(--kendo-spacing-8);
+    text-align: left;
+    border-radius: var(--kendo-border-radius-lg);
+    box-shadow: var(--kendo-elevation-2);
+}
+
+.auth-page .k-button {
+    width: 100%;
 }

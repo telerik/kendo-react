@@ -55,16 +55,18 @@ loadMessages(enMessages, "en");
 loadMessages(frMessages, "fr");
 
 import { Header } from "./components/Header";
+import { usePathname } from "next/navigation";
 
 export function GlobalizationAndHeader(props) {
   const [language, setLanguage] = React.useState("en");
+  const pathname = usePathname();
   const onButtonClick = (event) => {
     setLanguage(event.value.localeId);
   };
   return (
     <LocalizationProvider language={language}>
       <IntlProvider locale={language}>
-        <Header onButtonClick={onButtonClick} />
+        {!pathname.startsWith("/auth") && <Header onButtonClick={onButtonClick} />}
         {props.children}
       </IntlProvider>
     </LocalizationProvider>

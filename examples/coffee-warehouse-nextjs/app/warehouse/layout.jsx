@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import {
   Drawer,
   DrawerContent,
@@ -14,11 +14,14 @@ import {
   userIcon,
   infoCircleIcon,
   gridIcon,
+  gearIcon,
+  bellIcon,
+  questionCircleIcon,
 } from "@progress/kendo-svg-icons";
 
 const items = [
   {
-    text: "DashBoard",
+    text: "Dashboard",
     svgIcon: gridIcon,
     selected: true,
     route: "/warehouse/dashboard",
@@ -32,6 +35,26 @@ const items = [
     separator: true,
   },
   {
+    text: "Profile",
+    svgIcon: userIcon,
+    route: "/warehouse/profile",
+  },
+  {
+    text: "Settings",
+    svgIcon: gearIcon,
+    route: "/warehouse/settings",
+  },
+  {
+    text: "Notifications",
+    svgIcon: bellIcon,
+    route: "/warehouse/notifications",
+  },
+  {
+    text: "Help & Support",
+    svgIcon: questionCircleIcon,
+    route: "/warehouse/help",
+  },
+  {
     text: "Info",
     svgIcon: infoCircleIcon,
     route: "/warehouse/info",
@@ -41,33 +64,27 @@ const items = [
 export default function DrawerLayout(props) {
   const children = props.children;
   const [expanded, setExpanded] = React.useState(true);
-  const [selected, setSelected] = React.useState("/warehouse/dashboard");
-
   const router = useRouter();
+  const pathname = usePathname();
 
   const handleClick = () => {
     setExpanded(!expanded);
   };
 
-  const setSelectedItem = (pathName) => {
-    const currentPath = items.find((item) => item.route === pathName);
-    if (currentPath.text) {
-      return currentPath.text;
-    }
-  };
-
   const onSelect = (e) => {
     router.push(e.itemTarget.props.route);
-    setSelected(e.itemTarget.props.route);
   };
-
-  const selectedItem = setSelectedItem(selected);
 
   return (
     <>
       <div className="custom-toolbar">
-        <Button svgIcon={menuIcon} fillMode="flat" onClick={handleClick} />
-        <h3>Settings</h3>
+        <Button
+          aria-label="Toggle navigation"
+          svgIcon={menuIcon}
+          fillMode="flat"
+          onClick={handleClick}
+        />
+        <h3>Warehouse operations</h3>
       </div>
       <Drawer
         expanded={expanded}
@@ -76,7 +93,7 @@ export default function DrawerLayout(props) {
         mini={true}
         items={items.map((item) => ({
           ...item,
-          selected: item.text === selectedItem,
+          selected: item.route === pathname,
         }))}
         onSelect={onSelect}
       >

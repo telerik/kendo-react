@@ -50,6 +50,7 @@ export const Header = (props) => {
             {localizationService.toLanguageString("custom.language", noMessage)}
           </span>
           <DropDownList
+            aria-label="Display language"
             textField={"locale"}
             dataItemKey={"localeId"}
             data={locales}
