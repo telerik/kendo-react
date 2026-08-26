@@ -7,23 +7,12 @@
      ======================== */
 
   --avatar-gradient: linear-gradient(135deg, #334155, #64748b);
-  --radius-pill: 85px;
-
-  /* Display & heading type scale (beyond Kendo's xs–xl range) */
-  --font-size-h6: 23px;
-  --font-size-h5: 27px;
-  --font-size-h4: 30px;
-  --font-size-h3: 32px;
-  --font-size-h2: 35px;
-  --font-size-h1: 42px;
-  --font-size-d4: 46px;
-  --font-size-d3: 52px;
-  --font-size-d2: 58px;
-  --font-size-d1: 66px;
-
   --kendo-font-family: "Poppins", "Roboto", sans-serif;
   --kendo-font-family-sans: "Poppins", sans-serif;
   --kendo-font-family-serif: "Roboto", serif;
+  --kendo-translucency-base: 30%;
+  --kendo-translucency-blur-base: 8px;
+  --kendo-translucency-blur-step: 2px;
 }
 
 * {
@@ -86,7 +75,7 @@ body {
 }
 
 .scheduler-event-meta {
-  font-size: 11px;
+  font-size: var(--kendo-font-size-xs);
   opacity: 0.85;
   white-space: nowrap;
   overflow: hidden;
@@ -204,7 +193,7 @@ body {
 }
 
 .page-heading h1 {
-  font-size: 36px;
+  font-size: var(--kendo-font-size-xl);
   font-weight: var(--kendo-font-weight-semibold);
   color: var(--kendo-color-on-app-surface);
   line-height: 1.4;
@@ -296,7 +285,7 @@ body {
   border: 1px solid var(--kendo-color-border);
   border-radius: var(--kendo-border-radius-xxl);
   padding: var(--kendo-spacing-4);
-  transition: all 0.2s ease;
+  transition: box-shadow var(--kendo-duration-rapid) var(--kendo-easing-standard);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -419,7 +408,7 @@ body {
   padding: var(--kendo-spacing-2\.5) var(--kendo-spacing-5);
   border-bottom: 1px solid var(--kendo-color-border);
   cursor: pointer;
-  transition: background 0.15s;
+  transition: background-color var(--kendo-duration-quick) var(--kendo-easing-standard);
 }
 
 .message-item:hover {
@@ -493,7 +482,7 @@ body {
 .ai-chat-popup {
   border-radius: var(--kendo-border-radius-xxxl);
   overflow: hidden;
-  box-shadow: var(--kendo-elevation-6);
+  box-shadow: var(--kendo-elevation-5);
 }
 
 .ai-chat-popup .k-chat {
@@ -528,19 +517,19 @@ body {
 }
 
 .ai-chat-message {
-  padding: 4px 0;
+  padding: var(--kendo-spacing-1) 0;
 }
 
 .ai-chat-message-body {
-  font-size: 0.9rem;
-  line-height: 1.5;
+  font-size: var(--kendo-font-size-sm);
+  line-height: var(--kendo-line-height-md);
   word-wrap: break-word;
   flex: 1;
   min-width: 0;
 }
 
 .ai-chat-message-body p {
-  margin: 0 0 6px;
+  margin: 0 0 var(--kendo-spacing-1\.5);
 }
 
 .ai-chat-message-body p:last-child {
@@ -550,14 +539,14 @@ body {
 .ai-chat-message-body h1,
 .ai-chat-message-body h2,
 .ai-chat-message-body h3 {
-  margin: 8px 0 4px;
-  font-weight: 700;
-  font-size: 1.05em;
-  line-height: 1.3;
+  margin: var(--kendo-spacing-2) 0 var(--kendo-spacing-1);
+  font-weight: var(--kendo-font-weight-bold);
+  font-size: var(--kendo-font-size-md);
+  line-height: var(--kendo-line-height-sm);
 }
 
 .ai-chat-message-body strong {
-  font-weight: 600;
+  font-weight: var(--kendo-font-weight-semibold);
 }
 
 .ai-chat-message-body em {
@@ -566,17 +555,17 @@ body {
 
 .ai-chat-message-body ul,
 .ai-chat-message-body ol {
-  margin: 2px 0 6px;
-  padding-left: 18px;
+  margin: var(--kendo-spacing-0\.5) 0 var(--kendo-spacing-1\.5);
+  padding-left: var(--kendo-spacing-4\.5);
 }
 
 .ai-chat-message-body li {
-  margin-bottom: 2px;
+  margin-bottom: var(--kendo-spacing-0\.5);
 }
 
 .ai-chat-message-body blockquote {
-  margin: 4px 0;
-  padding-left: 10px;
+  margin: var(--kendo-spacing-1) 0;
+  padding-left: var(--kendo-spacing-2\.5);
   border-left: 3px solid var(--kendo-color-border);
   color: var(--kendo-color-subtle);
 }
@@ -584,15 +573,15 @@ body {
 .ai-chat-message-body code {
   background: var(--kendo-color-surface);
   border-radius: var(--kendo-border-radius-sm);
-  padding: 1px 5px;
-  font-size: 0.9em;
-  font-family: monospace;
+  padding: var(--kendo-spacing-0\.5) var(--kendo-spacing-1\.5);
+  font-size: var(--kendo-font-size-sm);
+  font-family: var(--kendo-font-family-monospace);
 }
 
 .app-topbar,
 .app-topbar.k-appbar {
   background: var(--kendo-color-surface-alt);
-  border-radius: var(--radius-pill);
+  border-radius: var(--kendo-border-radius-full);
   box-shadow: var(--kendo-elevation-4);
   border: 1px solid var(--kendo-color-border);
   padding: var(--kendo-spacing-4);
@@ -618,13 +607,13 @@ body {
 }
 
 .app-topbar-separator {
-  border-color: var(--kendo-color-border, #17386314);
+  border-color: var(--kendo-color-border);
 }
 
 /* SegmentedControl: slightly larger than medium */
 .app-topbar .k-segmented-control .k-segmented-control-button,
 .btn-segmented-size {
-  padding-block: 7px;
+  padding-block: var(--kendo-spacing-1\.5);
   padding-inline: var(--kendo-spacing-3);
   font-size: var(--kendo-font-size-md);
 }
@@ -641,7 +630,7 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background 0.15s;
+  transition: background-color var(--kendo-duration-quick) var(--kendo-easing-standard);
 }
 
 .icon-btn:hover {
@@ -689,7 +678,7 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   border: none;
   background: transparent;
   color: var(--kendo-color-subtle);
-  transition: background 0.15s;
+  transition: background-color var(--kendo-duration-quick) var(--kendo-easing-standard);
 }
 
 .topbar-icon-btn:hover {
@@ -726,7 +715,7 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
 .dialog-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: color-mix(in srgb, var(--kendo-color-inverse) 40%, transparent);
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -834,7 +823,7 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   width: 380px;
   background: var(--kendo-color-surface-alt);
   border-radius: var(--kendo-border-radius-xxl);
-  box-shadow: var(--kendo-elevation-6);
+  box-shadow: var(--kendo-elevation-5);
   border: 1px solid var(--kendo-color-border);
   overflow: hidden;
 }
@@ -858,7 +847,7 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   padding: var(--kendo-spacing-3) var(--kendo-spacing-5);
   border-bottom: 1px solid var(--kendo-color-border);
   cursor: pointer;
-  transition: background 0.15s;
+  transition: background-color var(--kendo-duration-quick) var(--kendo-easing-standard);
 }
 
 .notification-item:hover {
@@ -866,7 +855,7 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
 }
 
 .notification-item.unread {
-  background: rgba(78, 107, 255, 0.03);
+  background: color-mix(in srgb, var(--kendo-color-secondary) 3%, transparent);
 }
 
 .notification-dot {
@@ -899,7 +888,7 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
 }
 
 .notification-time {
-  font-size: 11px;
+  font-size: var(--kendo-font-size-xs);
   color: var(--kendo-color-subtle);
   flex-shrink: 0;
   white-space: nowrap;
@@ -977,7 +966,7 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
 .patients-layout {
   display: flex;
   gap: var(--page-gap);
-  transition: all 0.3s ease;
+  transition: flex var(--kendo-duration-speedy) var(--kendo-easing-standard);
   flex: 1;
   min-height: 400px;
   max-height: 800px;
@@ -989,7 +978,7 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   min-height: 0;
   display: flex;
   flex-direction: column;
-  transition: all 0.3s ease;
+  transition: flex var(--kendo-duration-speedy) var(--kendo-easing-standard);
 }
 
 .patients-side-panel {
@@ -998,7 +987,7 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   min-height: 0;
   display: flex;
   flex-direction: column;
-  transition: all 0.3s ease;
+  transition: flex var(--kendo-duration-speedy) var(--kendo-easing-standard);
 }
 
 .side-panel-card {
@@ -1234,7 +1223,7 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   justify-content: space-between;
   align-items: center;
   padding: 0;
-  font-size: 16px;
+  font-size: var(--kendo-font-size-md);
 }
 
 .profile-metric-item > span:first-child {
@@ -1251,7 +1240,7 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
 }
 
 .profile-editor-wrap .k-editor-content {
-  padding: 1rem;
+  padding: var(--kendo-spacing-4);
 }
 
 .profile-info-grid {
@@ -1284,7 +1273,7 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
 .profile-sidebar-info-item {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: var(--kendo-spacing-0\.5);
 }
 
 .profile-sidebar-info-label {
@@ -1336,7 +1325,7 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   font-size: var(--kendo-font-size-xs);
   color: var(--kendo-color-subtle);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: var(--kendo-letter-spacing-wide);
 }
 
 .profile-info-item .value {
@@ -1382,15 +1371,15 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   color: var(--kendo-color-secondary);
   opacity: 60%;
   transition:
-    transform 0.2s ease,
-    opacity 0.2s ease;
+    transform var(--kendo-duration-rapid) var(--kendo-easing-standard),
+    opacity var(--kendo-duration-rapid) var(--kendo-easing-standard);
   flex-shrink: 0;
   width: 42px;
   height: 42px;
 }
 
 .quick-action-icon g {
-  transition: opacity 0.2s ease;
+  transition: opacity var(--kendo-duration-rapid) var(--kendo-easing-standard);
 }
 
 .quick-action-card:hover .quick-action-icon {
@@ -1413,7 +1402,7 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   border-radius: var(--kendo-border-radius-full);
   overflow: hidden;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: background-color var(--kendo-duration-rapid) var(--kendo-easing-standard);
   border: none;
   padding: 0;
   height: var(--kendo-spacing-10);
@@ -1440,8 +1429,8 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   font-weight: var(--kendo-font-weight-medium);
   color: var(--kendo-color-on-primary);
   transition:
-    max-width 0.25s ease,
-    padding 0.25s ease;
+    max-width var(--kendo-duration-swift) var(--kendo-easing-standard),
+    padding var(--kendo-duration-swift) var(--kendo-easing-standard);
   padding-left: 0;
   padding-right: 0;
 }
@@ -1562,8 +1551,8 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   position: relative;
   border-width: 1px 2px 2px 1px;
   border-style: solid;
-  border-color: var(--kendo-color-border, rgba(0, 0, 0, 0.08));
-  transition: box-shadow 0.2s ease;
+  border-color: var(--kendo-color-border);
+  transition: box-shadow var(--kendo-duration-rapid) var(--kendo-easing-standard);
 }
 
 .next-patient-detail-card:hover {
@@ -1572,7 +1561,7 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
 
 .next-patient-detail-card.reason-card,
 .next-patient-detail-card.allergy-card {
-  background: var(--kendo-color-surface-alt, #ffffff);
+  background: var(--kendo-color-surface-alt);
 }
 
 .detail-card-icon {
@@ -1586,13 +1575,13 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
 }
 
 .reason-icon {
-  background: var(--kendo-color-info-subtle, #d2e2fb);
-  color: var(--kendo-color-info-emphasis, #6098f2);
+  background: var(--kendo-color-info-subtle);
+  color: var(--kendo-color-info-emphasis);
 }
 
 .allergy-icon {
-  background: var(--kendo-color-warning-subtle, #fff4d4);
-  color: var(--kendo-color-warning-emphasis, #ffd54f);
+  background: var(--kendo-color-warning-subtle);
+  color: var(--kendo-color-warning-emphasis);
 }
 
 .detail-card-content {
@@ -1652,10 +1641,10 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   border-radius: var(--kendo-border-radius-lg);
   border-width: 1px 1px 1px 0px;
   border-style: solid;
-  border-color: var(--kendo-color-border, #17386314);
-  border-left: 3px solid var(--kendo-color-primary-emphasis, #ff6358);
-  background: var(--kendo-color-primary-subtle, #ffeceb);
-  transition: box-shadow 0.2s ease;
+  border-color: var(--kendo-color-border);
+  border-left: 3px solid var(--kendo-color-primary-emphasis);
+  background: var(--kendo-color-primary-subtle);
+  transition: box-shadow var(--kendo-duration-rapid) var(--kendo-easing-standard);
 }
 
 .daily-alert-item:hover {
@@ -1704,7 +1693,7 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   background: var(--kendo-color-surface-alt);
   border-radius: var(--kendo-border-radius-lg);
   border: 1px solid var(--kendo-color-border);
-  transition: box-shadow 0.2s ease;
+  transition: box-shadow var(--kendo-duration-rapid) var(--kendo-easing-standard);
 }
 
 .daily-task-item:hover {
@@ -1753,25 +1742,25 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
 }
 
 .appointment-badge-complete {
-  background: var(--kendo-color-primary-subtle-hover, #eaeff5);
+  background: var(--kendo-color-primary-subtle-hover);
   color: var(--kendo-color-primary-on-subtle);
   border: 1px solid var(--kendo-color-primary-emphasis);
 }
 
 .appointment-badge-in-progress {
-  background: var(--kendo-color-secondary-subtle-hover, #ebecff);
+  background: var(--kendo-color-secondary-subtle-hover);
   color: var(--kendo-color-secondary-on-subtle);
   border: 1px solid var(--kendo-color-secondary-emphasis);
 }
 
 .appointment-badge-upcoming {
-  background: var(--kendo-color-tertiary-subtle, #fdf6ff);
+  background: var(--kendo-color-tertiary-subtle);
   color: var(--kendo-color-tertiary-on-subtle);
   border: 1px solid var(--kendo-color-tertiary-emphasis);
 }
 
 .appointment-badge-cancelled {
-  background: var(--kendo-color-info-subtle, #d2e2fb);
+  background: var(--kendo-color-info-subtle);
   color: var(--kendo-color-info-on-subtle);
   border: 1px solid var(--kendo-color-info-emphasis);
 }
@@ -2218,21 +2207,21 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
 }
 
 .priority-badge-high {
-  background: var(--kendo-color-error-subtle, #fcddda);
-  color: var(--kendo-color-error-on-subtle, #7a0c00);
-  border-color: var(--kendo-color-error-emphasis, #f76f60);
+  background: var(--kendo-color-error-subtle);
+  color: var(--kendo-color-error-on-subtle);
+  border-color: var(--kendo-color-error-emphasis);
 }
 
 .priority-badge-medium {
-  background: var(--kendo-color-warning-subtle, #fff4d3);
-  color: var(--kendo-color-warning-on-subtle, #5e4700);
-  border-color: var(--kendo-color-warning-emphasis, #ffd760);
+  background: var(--kendo-color-warning-subtle);
+  color: var(--kendo-color-warning-on-subtle);
+  border-color: var(--kendo-color-warning-emphasis);
 }
 
 .priority-badge-low {
-  background: var(--kendo-color-success-subtle, #dcf0d3);
-  color: var(--kendo-color-success-on-subtle, #1c5a00);
-  border-color: var(--kendo-color-success-emphasis, #81d15f);
+  background: var(--kendo-color-success-subtle);
+  color: var(--kendo-color-success-on-subtle);
+  border-color: var(--kendo-color-success-emphasis);
 }
 
 /* ========================
@@ -2301,34 +2290,38 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
   border-radius: var(--kendo-border-radius-xxl);
   border: 1px solid var(--kendo-color-border);
   box-shadow: var(--kendo-elevation-4);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(var(--kendo-translucency-blur-base));
   overflow: hidden;
 }
 
 /* GitHub source code popup */
 .github-popup {
-  margin-top: 8px;
+  margin-top: var(--kendo-spacing-2);
 }
 
 .github-popup-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  padding: 20px 24px;
+  gap: var(--kendo-spacing-2);
+  padding: var(--kendo-spacing-5) var(--kendo-spacing-6);
   text-align: center;
   min-width: 220px;
 }
 
 .github-popup-content h4 {
-  margin: 4px 0 0;
-  font-size: 14px;
-  font-weight: 600;
+  margin: var(--kendo-spacing-1) 0 0;
+  font-size: var(--kendo-font-size-sm);
+  font-weight: var(--kendo-font-weight-semibold);
 }
 
 .github-popup-content p {
   margin: 0;
-  font-size: 12px;
-  color: #888;
-  line-height: 1.4;
+  font-size: var(--kendo-font-size-xs);
+  color: var(--kendo-color-subtle);
+  line-height: var(--kendo-line-height-sm);
+}
+
+.ai-chat-header-spacer {
+  flex: 1 1 auto;
 }
