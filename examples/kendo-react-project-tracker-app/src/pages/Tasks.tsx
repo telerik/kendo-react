@@ -8,6 +8,7 @@ import { CSVLink } from "react-csv";
 import { useNavigate } from "react-router-dom";
 import { tasksData } from "./data";
 import { SvgIcon } from "@progress/kendo-react-common";
+import "./Tasks.css";
 
 interface DataModel {
   id: string;
@@ -74,7 +75,7 @@ export default function Tasks() {
       </div>
 
       <Grid
-        className="k-grid-no-scrollbar"
+        className="tasks-grid"
         data={data}
         autoProcessData={{
           filter: false,
