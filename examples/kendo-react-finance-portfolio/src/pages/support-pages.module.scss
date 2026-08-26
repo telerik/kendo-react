@@ -1,0 +1,116 @@
+.page {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: var(--kendo-spacing-8) var(--kendo-spacing-4);
+}
+
+.pageHeader {
+  margin-bottom: var(--kendo-spacing-6);
+
+  h2, h3, p {
+    margin: 0;
+  }
+
+  h2 {
+    color: var(--kendo-color-primary-on-surface);
+    font-size: var(--kendo-font-size-xl);
+    font-weight: var(--kendo-font-weight-semibold);
+  }
+
+  p {
+    color: var(--kendo-color-subtle);
+    margin-top: var(--kendo-spacing-2);
+  }
+}
+
+.toolbar, .split, .settings, .metrics {
+  display: grid;
+  gap: var(--kendo-spacing-4);
+  margin-bottom: var(--kendo-spacing-6);
+}
+
+.toolbar {
+  align-items: center;
+  grid-template-columns: minmax(220px, 1fr) auto auto;
+}
+
+.metrics {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.metric, .callout, .notification {
+  background: var(--kendo-color-surface-alt);
+  border: 1px solid var(--kendo-color-border);
+  border-radius: var(--kendo-border-radius-md);
+  padding: var(--kendo-spacing-4);
+}
+
+.metric {
+  display: grid;
+  gap: var(--kendo-spacing-2);
+
+  span, small {
+    color: var(--kendo-color-subtle);
+  }
+
+  .amount {
+    font-family: var(--kendo-font-family-monospace);
+    font-size: var(--kendo-font-size-lg);
+  }
+
+  strong {
+    font-family: var(--kendo-font-family-monospace);
+    font-size: var(--kendo-font-size-lg);
+  }
+}
+
+.split, .settings {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.callout {
+  display: grid;
+  gap: var(--kendo-spacing-3);
+  margin-bottom: var(--kendo-spacing-6);
+}
+
+.switchRow {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.notification {
+  display: grid;
+  gap: var(--kendo-spacing-2);
+  margin-bottom: var(--kendo-spacing-3);
+
+  small {
+    color: var(--kendo-color-subtle);
+  }
+}
+
+.auth {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 600px;
+  padding: var(--kendo-spacing-6) var(--kendo-spacing-4);
+
+  .callout {
+    max-width: 420px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767.98px) {
+  .toolbar, .split, .settings {
+    grid-template-columns: 1fr;
+  }
+}

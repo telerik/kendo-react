@@ -6,7 +6,7 @@ import { classNames } from '@progress/kendo-react-common';
 
 const headerBg = `${import.meta.env.BASE_URL}header-bg.svg`;
 import userImg from '../../images/user.jpg';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const customValueRender = (el: any, value: any) => (
     <el.type
@@ -38,15 +38,17 @@ export const Header: React.FunctionComponent<any> = () => {
     )
 
     return (
-        
+
         <header
             className={classNames(styles.header, styles['currency-input'], 'py-3')}
             style={{ background: `url(${headerBg})` }}
         >
             <div className="container pt-4 pb-2">
                 <div className="row">
-                    <div className="col-9">
-                        <h1 className={classNames(styles.title, "mb-0")}>My Stocks Portfolio</h1>
+                    <div className="col-8">
+                        <Link className={styles.brand} to="/">
+                            <h1 className={classNames(styles.title, "mb-0")}>My Stocks Portfolio</h1>
+                        </Link>
                         <DropDownList
                             popupSettings={{
                                 animate: {
@@ -64,14 +66,22 @@ export const Header: React.FunctionComponent<any> = () => {
                             textField="name"
                         />
                     </div>
-                    <div className="col-3">
+                    <div className="col-4">
                         <div className="text-right">
-                            <Link to="/profile">
-                                <img src={userImg} alt="user" />
+                            <Link to="/settings" aria-label="Open account settings">
+                                <img src={userImg} alt="Collin Johnson" />
                             </Link>
                         </div>
                     </div>
                 </div>
+                <nav className={styles.navigation} aria-label="Primary navigation">
+                    <NavLink end to="/">Portfolio</NavLink>
+                    <NavLink to="/watchlist">Watchlist</NavLink>
+                    <NavLink to="/markets">Markets</NavLink>
+                    <NavLink to="/trade">Trade</NavLink>
+                    <NavLink to="/transactions">Transactions</NavLink>
+                    <NavLink to="/accounts">Account</NavLink>
+                </nav>
             </div>
         </header >
     )

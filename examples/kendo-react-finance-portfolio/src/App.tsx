@@ -40,6 +40,20 @@ import { StockPage } from './pages/StockPage';
 import { HeatmapPage } from './pages/HeatmapPage';
 import { VirtualizedPage } from './pages/VirtualizedPage';
 import { SymbolsContext } from './context/SymbolsContext';
+import {
+  AccountsPage,
+  BillingPage,
+  HelpPage,
+  LoginPage,
+  MarketsPage,
+  NotFoundPage,
+  NotificationsPage,
+  RegisterPage,
+  SettingsPage,
+  TradePage,
+  TransactionsPage,
+  WatchlistPage
+} from './pages/SupportPages';
 
 load(
   likelySubtags,
@@ -61,15 +75,29 @@ load(
 
 const Main = () => {
   return (
+    <>
+      <Header />
       <Routes>
-        <Route path={"/"} element={<><Header /><StockPage /></>} />
-        <Route path={"/profile"} element={<UserProfile />} />
-        <Route path="/heatmap" element={<><Header /><HeatmapPage /></>} />
-        <Route path="/virtualized" element={<><Header /><VirtualizedPage /></>} />
-        <Route path={'/stocks'} element={<><Header /><StockPage /></>} />
-        <Route path={"/stocks/:symbol"} element={<><Header /><StockPage /></>} />
-    </Routes>
-
+        <Route path="/" element={<StockPage />} />
+        <Route path="/profile" element={<UserProfile />} />
+        <Route path="/watchlist" element={<WatchlistPage />} />
+        <Route path="/markets" element={<MarketsPage />} />
+        <Route path="/trade" element={<TradePage />} />
+        <Route path="/transactions" element={<TransactionsPage />} />
+        <Route path="/accounts" element={<AccountsPage />} />
+        <Route path="/billing" element={<BillingPage />} />
+        <Route path="/settings" element={<SettingsPage />} />
+        <Route path="/notifications" element={<NotificationsPage />} />
+        <Route path="/help" element={<HelpPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/heatmap" element={<HeatmapPage />} />
+        <Route path="/virtualized" element={<VirtualizedPage />} />
+        <Route path="/stocks" element={<StockPage />} />
+        <Route path="/stocks/:symbol" element={<StockPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </>
   )
 }
 

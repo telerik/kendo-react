@@ -1,5 +1,5 @@
 .header {
-  height: 140px;
+  min-height: 140px;
   h1,
   p {
     color: var(--kendo-color-on-primary);
@@ -12,11 +12,37 @@
   }
 }
 
+.brand {
+  color: inherit;
+  text-decoration: none;
+}
+
 .title {
   font-family: var(--kendo-font-family);
   font-size: calc(var(--kendo-font-size) * 2.5);
   font-weight: var(--kendo-font-weight-bold);
   line-height: var(--kendo-line-height-xs);
+}
+
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--kendo-spacing-2);
+  margin-top: var(--kendo-spacing-4);
+
+  a {
+    border-radius: var(--kendo-border-radius-md);
+    color: var(--kendo-color-on-primary);
+    font-size: var(--kendo-font-size-sm);
+    font-weight: var(--kendo-font-weight-medium);
+    padding: var(--kendo-spacing-2) var(--kendo-spacing-3);
+    text-decoration: none;
+  }
+
+  a[aria-current="page"],
+  a:hover {
+    background-color: color-mix(in srgb, var(--kendo-color-on-primary) 16%, transparent);
+  }
 }
 
 .currency-input {
