@@ -44,51 +44,39 @@ export default function Projects() {
       </div>
 
       <GridLayout className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" style={{ gap: "var(--kendo-spacing-4) var(--kendo-spacing-6)" }}>
-        {projectsData.map((project, index) => {
-          return (
-            <div key={index} className="bg-surface-alt border-1 border-border rounded-lg">
-              <div className="px-4 py-3">
-                <div className="font-medium">{project.ProjectName}</div>
-                <div className="mt-2 flex flex-wrap items-center justify-between">
-                  <span className="text-sm text-subtle">
-                    Due Date: <span className="font-medium">{project.DueDate}</span>
-                  </span>
-                  <Badge themeColor={
-                    project.Priority === "Urgent"
-                      ? "error"
-                      : project.Priority === "Medium priority"
-                        ? "warning"
-                        : project.Priority === "Low priority"
-                          ? "success"
-                          : project.Priority === "Routine"
-                            ? "tertiary"
-                            : "primary"
-                  } rounded="full" position="inside" className="!relative !z-0">{project.Priority}</Badge>
+        {projectsData.map((project) => (
+          <button
+            key={project.ProjectID}
+            type="button"
+            onClick={() => navigate(`/projects/${project.ProjectID}`)}
+            className="rounded-lg border-1 border-border bg-surface-alt text-left transition-colors hover:bg-primary-subtle focus:outline-none focus:ring-2 focus:ring-info"
+            aria-label={`Open ${project.ProjectName}`}
+          >
+            <div className="px-4 py-3">
+              <div className="font-medium">{project.ProjectName}</div>
+              <div className="mt-2 flex flex-wrap items-center justify-between">
+                <span className="text-sm text-subtle">Due date: <span className="font-medium">{project.DueDate}</span></span>
+                <Badge themeColor={project.Priority === "Urgent" ? "error" : project.Priority === "Medium priority" ? "warning" : project.Priority === "Low priority" ? "success" : project.Priority === "Routine" ? "tertiary" : "primary"} rounded="full" position="inside" className="!relative !z-0">{project.Priority}</Badge>
+              </div>
+            </div>
+            <div className="flex flex-col gap-2 px-4 py-3">
+              <div>
+                <div className="text-sm text-subtle">Project manager</div>
+                <div className="flex items-center">
+                  <Avatar type="image" size="small" className="mr-1" border={false}><img src={project.AvatarSrc} alt={project.ProjectManager} /></Avatar>
+                  <span className="truncate">{project.ProjectManager}</span>
                 </div>
               </div>
-              <div className="flex flex-col gap-2 px-4 py-3">
-                <div>
-                  <div className="text-sm text-subtle">Project Manager</div>
-                  <div className="flex items-center">
-                    <Avatar type={'image'} size="small" className="mr-1" border={false}>
-                      <img src={project.AvatarSrc}  alt={project.ProjectManager} />
-                    </Avatar>
-                    <span className="truncate">Marlon66</span>
-                  </div>
-                </div>
-                <div>
-                  <div className="text-sm text-subtle">Stakeholder(s)</div>
-                  <div className="flex items-center">
-                    <Avatar type={'image'} size="small" className="mr-1">
-                      <img src={project.AvatarSrc} alt={project.Stakeholders} />
-                    </Avatar>
-                    <span className="truncate">Monserrat49</span>
-                  </div>
+              <div>
+                <div className="text-sm text-subtle">Stakeholder</div>
+                <div className="flex items-center">
+                  <Avatar type="image" size="small" className="mr-1"><img src={project.AvatarSrc} alt={project.Stakeholders} /></Avatar>
+                  <span className="truncate">{project.Stakeholders}</span>
                 </div>
               </div>
             </div>
-          )
-        })}
+          </button>
+        ))}
       </GridLayout>
     </div>
   );

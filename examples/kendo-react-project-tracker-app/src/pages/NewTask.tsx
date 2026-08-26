@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { priorities, projectManagers, projectsData, tasksData, taskTags } from "./data";
 import { Button } from "@progress/kendo-react-buttons";
 import { Avatar, Breadcrumb, BreadcrumbLinkMouseEvent, ExpansionPanel, ExpansionPanelContent } from "@progress/kendo-react-layout";
-import { homeIcon, folderIcon, trashIcon, checkIcon } from "@progress/kendo-svg-icons";
+import { homeIcon, checkIcon } from "@progress/kendo-svg-icons";
 import { SvgIcon } from "@progress/kendo-react-common";
 import { Reveal } from '@progress/kendo-react-animation';
 import React, { ReactElement } from "react";
@@ -146,24 +146,22 @@ export default function Task() {
 
             <h1 className="text-4xl">New Task</h1>
 
-            <div className="grid grid-cols-12 gap-6">
-                  <div className="col-span-6 lg:col-span-8">
+            <div className="mx-auto w-full max-w-180">
+                  <div>
                       <TextArea rows={30} className="rounded-t-2xl"/>
                       <div className="bg-surface-alt border-1 border-t-0 border-border rounded-b-2xl px-4 py-2">
                           <div className="hidden lg:flex gap-1">
                               <Button svgIcon={checkIcon} themeColor="primary" size="large" title="Save changes">Save changes</Button>
-                              <Button svgIcon={folderIcon} fillMode="flat" size="large" className="ml-auto" title="Archive task">Archive Task</Button>
-                              <Button svgIcon={trashIcon} fillMode="flat" themeColor="error" size="large" title="Delete task">Delete task</Button>
+                              <Button fillMode="flat" size="large" className="ml-auto" onClick={() => navigate('/tasks')} title="Cancel task creation">Cancel</Button>
                           </div>
                           <div className="flex lg:hidden gap-1">
                               <Button svgIcon={checkIcon} themeColor="primary" size="large" title="Save changes">Save changes</Button>
-                              <Button svgIcon={folderIcon} fillMode="flat" size="large" className="ml-auto" title="Archive task">Archive Task</Button>
-                              <Button svgIcon={trashIcon} fillMode="flat" themeColor="error" size="large" title="Delete task">Delete task</Button>
+                              <Button fillMode="flat" size="large" className="ml-auto" onClick={() => navigate('/tasks')} title="Cancel task creation">Cancel</Button>
                           </div>
                       </div>
                   </div>
 
-                  <div className="col-span-6 lg:col-span-4 flex flex-col gap-2">
+                  <div className="mt-6 flex flex-col gap-2">
                       <ExpansionPanel title="Project" expanded={projExpanded} onAction={() => setProjExpanded(!projExpanded)} className="rounded-2xl">
                           <Reveal>
                             {projExpanded && <ExpansionPanelContent>

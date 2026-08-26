@@ -81,8 +81,8 @@ export default function AppBarComponent() {
                 </Popover>
                 <span className="k-appbar-separator border-border"></span>
                 <BadgeContainer>
-                    <Button svgIcon={bellIcon} fillMode="flat" title="Notifications button" />
-                    <Badge rounded="full" position="inside" align={{ vertical: 'top', horizontal: 'end' }} themeColor="primary" />
+                    <Button svgIcon={bellIcon} fillMode="flat" title="Notifications" onClick={() => navigate('/notifications')} />
+                    <Badge rounded="full" position="inside" align={{ vertical: 'top', horizontal: 'end' }} themeColor="primary">3</Badge>
                 </BadgeContainer>
                 </AppBarSection>
         </AppBar>

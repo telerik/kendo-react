@@ -1,5 +1,5 @@
 import { useParams } from "react-router";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import { priorities, projectManagers, projectsData, tasksData, taskTags } from "./data";
 import { Button } from "@progress/kendo-react-buttons";
 import { Avatar, Breadcrumb, BreadcrumbLinkMouseEvent, ExpansionPanel, ExpansionPanelContent } from "@progress/kendo-react-layout";
@@ -21,14 +21,18 @@ interface DataModel {
 
 export default function Task() {
   let params = useParams();
+  const task = tasksData.find((item) => item.taskId === params.taskId);
   const navigate = useNavigate();
+  if (!task) {
+    return <Navigate to="/not-found" replace />;
+  }
   const [projExpanded, setProjExpanded] = React.useState(true);
   const [dateExpanded, setDateExpanded] = React.useState(true);
   const [assigneeExpanded, setAssigneeExpanded] = React.useState(true);
   const [priorityExpanded, setPriorityExpanded] = React.useState(true);
   const [statusExpanded, setStatusExpanded] = React.useState(true);
   const [tagsExpanded, setTagsExpanded] = React.useState(true);
-  const projectId = tasksData.filter(task => task.taskId === params.taskId)[0].projectId;
+  const projectId = task.projectId;
   const [project, setProject] = React.useState(projectsData.filter(proj => proj.ProjectID === projectId)[0].ProjectName);
   const [assignee, setAssignee] = React.useState([tasksData.filter(task => task.taskId === params.taskId)[0].assignedTo] as string[]);
   const [dueDate, setDueDate] = React.useState(new Date(tasksData.filter(task => task.taskId === params.taskId)[0].dueDate));
