@@ -9,7 +9,7 @@ body {
    font-weight: var(--kendo-font-weight-normal);
 }
 
-@media (min-width: 480px) {
+@media (min-width: 576px) {
    h1 {
        font-size: calc(var(--kendo-font-size) * 1.5);
        font-weight: var(--kendo-font-weight-normal);

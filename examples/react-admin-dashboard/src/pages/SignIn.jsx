@@ -4,7 +4,6 @@ import { Input } from '@progress/kendo-react-inputs';
 import { Checkbox } from '@progress/kendo-react-inputs';
 import { Link } from 'react-router-dom';
 import { Button } from '@progress/kendo-react-buttons';
-import { SvgIcon } from '@progress/kendo-react-common'; 
 import { eyeIcon } from '@progress/kendo-svg-icons';
 
 
@@ -39,11 +38,11 @@ maxWidth: 650
 }}>
      <fieldset className={'k-form-fieldset'}>         
        <div className="mb-3">
-         <Field name={"email"} type={"email"} component={Input} label={"Email"} />
+         <Field name={"email"} type={"email"} component={Input} label={"Email"} autoComplete="email" />
        </div>
        <div className="mb-3" style={{display: 'flex'}}>
-         <Field name={"password"} type={paswordType} component={Input} label={"Password"} />
-         <SvgIcon icon={eyeIcon} className='password-icon' onClick={handleClick}/>
+         <Field name={"password"} type={paswordType} component={Input} label={"Password"} autoComplete="current-password" />
+         <Button svgIcon={eyeIcon} className="password-icon" onClick={handleClick} aria-label={paswordType === 'password' ? 'Show password' : 'Hide password'} title={paswordType === 'password' ? 'Show password' : 'Hide password'} />
        </div>
      </fieldset>
      <fieldset className={'k-form-fieldset'}>         

@@ -4,11 +4,7 @@ import { ArcGauge } from '@progress/kendo-react-gauges';
 import { DashboardChart } from '../components/dashboard/DashboardChart';
 import { DashboardGrid } from '../components/dashboard/DashboardGrid'
 
-const colors = [
-  {
-    color: '#0058e9',
-  },
-];
+const colors = [{ color: 'var(--kendo-color-secondary)' }];
 
 const ArcGaugeComponent = () => {
   const [value] = React.useState(50);
@@ -28,9 +24,7 @@ const ArcGaugeComponent = () => {
       </h3>
     );
   };
-  return <div style={{
-    height: '150px',
-  }}>
+  return <div className="dashboard-gauge">
     <ArcGauge {...arcOptions} arcCenterRender={arcCenterRenderer} />
   </div>;
 };
@@ -44,7 +38,7 @@ const tiles = [
     },
     header: 'Tasks On Track',
     body: <div className="dashboard-card-content">
-      <p className="dashboard-card-content-number green">22</p>
+      <p className="dashboard-card-content-number green">22 <span className="status-label">on track</span></p>
       <div>
         <p className="footer">
         In Backlog: 43
@@ -61,7 +55,7 @@ const tiles = [
     },
     header: 'Overdue Tasks',
     body: <div className="dashboard-card-content">
-    <p className="dashboard-card-content-number red">7</p>
+    <p className="dashboard-card-content-number red">7 <span className="status-label">overdue</span></p>
     <div>
     <p className="footer">
     From Yesterday: 16
@@ -77,7 +71,7 @@ const tiles = [
     },
     header: 'Issues',
     body: <div className="dashboard-card-content">
-    <p className="dashboard-card-content-number orange">47</p>
+    <p className="dashboard-card-content-number orange">47 <span className="status-label">open</span></p>
     <div>
     <p className="footer">
     Closed By Team 15
@@ -132,10 +126,11 @@ export  const Dashboard = () => {
 
  
   return (
-    <div>
+    <div className="dashboard-page">
       <div className="greeting">
-      Hello again, Jaxons!
-    </div>
+        <h1>Hello again, Jaxons!</h1>
+        <p>Here's how your workspace is progressing.</p>
+      </div>
 
     <TileLayout columns={4} items={tiles} rowHeight={230} />
     
@@ -154,5 +149,4 @@ export  const Dashboard = () => {
     </div>
   );
 };
-
 

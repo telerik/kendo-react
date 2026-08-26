@@ -11,3 +11,15 @@ test('renders the sign-in page', () => {
 
   expect(screen.getByAltText('sign in icon')).toBeInTheDocument();
 });
+
+test('renders a not-found page for unknown routes', () => {
+  window.location.hash = '#/missing-page';
+
+  render(
+    <HashRouter>
+      <App />
+    </HashRouter>
+  );
+
+  expect(screen.getByRole('heading', { name: 'Page not found' })).toBeInTheDocument();
+});

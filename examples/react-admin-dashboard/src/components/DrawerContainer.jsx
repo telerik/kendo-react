@@ -3,7 +3,7 @@ import { useLocation, useNavigate, Outlet, Link } from 'react-router-dom';
 import { Drawer, DrawerContent } from '@progress/kendo-react-layout';
 import { Button } from '@progress/kendo-react-buttons';
 import { Alert } from './dashboard/Alert';
-import { menuIcon, gridIcon, globeIcon, aggregateFieldsIcon, gearIcon } from '@progress/kendo-svg-icons';
+import { menuIcon, gridIcon, globeIcon, aggregateFieldsIcon, gearIcon, bellIcon, questionCircleIcon } from '@progress/kendo-svg-icons';
 
 
 export const items = [
@@ -33,16 +33,14 @@ export const items = [
     svgIcon: gearIcon,
   },
   {
-    route: '/home/billing',
-    disabled: true,
-  },
-  {
+    text: 'Notifications',
     route: '/home/notifications',
-    disabled: true,
+    svgIcon: bellIcon,
   },
   {
-    route: '/home/about',
-    disabled: true,
+    text: 'Help & support',
+    route: '/home/help',
+    svgIcon: questionCircleIcon,
   },
 ];
 
@@ -61,25 +59,26 @@ export const DrawerContainer = (props) => {
 
   const setSelectedItem = (pathName) => {
     let currentPath = items.find((item) => item.route === pathName);
-    if (currentPath.text) {
+    if (currentPath?.text) {
       return currentPath.text;
     }
+    return 'Dashboard';
   };
 
   const selected = setSelectedItem(location.pathname);
 
   return (
-    <div>
-      <div className="custom-toolbar">
-        <Button svgIcon={menuIcon} onClick={handleClick} />
+    <div className="app-shell">
+      <header className="custom-toolbar">
+        <Button svgIcon={menuIcon} onClick={handleClick} aria-label="Toggle navigation" title="Toggle navigation" />
         <span className="overview">{selected === 'Dashboard'? 'Overview' : selected}</span>
         <div className="right-widget">
           <div className="alert-container">
           <Alert/>
           </div>
-          <Link to="/home/about" style={{color: '#424242', fontWeight: '400', fontSize: '14px', fontFamily: 'Roboto', marginTop: '3px'}}>About</Link>             
+          <Link to="/home/about" className="toolbar-link">About</Link>
         </div>
-      </div>
+      </header>
 
      <div>
 
@@ -104,7 +103,9 @@ export const DrawerContainer = (props) => {
         onSelect={onSelect}
         className="drawer"
       >
-        <DrawerContent>{props.children}<Outlet/> </DrawerContent>
+        <DrawerContent>
+          <main className="app-content">{props.children}<Outlet/></main>
+        </DrawerContent>
       </Drawer>
      </div>
  

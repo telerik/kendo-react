@@ -14,7 +14,7 @@ export const SignUp = () => {
          <img src={require('../assets/signin.png')} alt={'sign in icon'} /> :
          </div>
          <div className='banner'>
-             Sign In
+             Create account
          </div>
          <div className="account">
          Already have an account?  <Link style={{ textDecoration: 'none' }} to="/">Sign In</Link>
@@ -30,18 +30,20 @@ maxWidth: 650
                 name={"fullName"}
                 component={Input}
                 label={"Full Name"}
+                autoComplete="name"
               />
             </div>        
        <div className="mb-3">
-         <Field name={"email"} type={"email"} component={Input} label={"Email"} />
+         <Field name={"email"} type={"email"} component={Input} label={"Email"} autoComplete="email" />
        </div>
        <div className="mb-3">
-         <Field name={"password"} type={"password"} component={Input} label={"Password"} />
+         <Field name={"password"} type={"password"} component={Input} label={"Password"} autoComplete="new-password" />
          <div className="mb-3">
               <Field
                 name={"Company"}
                 component={Input}
                 label={"Company"}
+                autoComplete="organization"
               />
             </div> 
        </div>

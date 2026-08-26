@@ -745,7 +745,7 @@ text-align: center;
   overflow-y: scroll;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 767px) {
   .image-wrapper {
     display: none;
   }
@@ -755,7 +755,7 @@ text-align: center;
   position: absolute;
   margin-left: 245px;
   margin-top: 28px;
-  color: gray;
+  color: var(--kendo-color-subtle);
 }
 
 .switch {
@@ -768,4 +768,159 @@ text-align: center;
 
 .dasboard-class .k-tilelayout-item-header {
   display: none;
+}
+
+/* Structural layout for the shared application shell and responsive pages. */
+.app-shell {
+  min-height: 100vh;
+  background: var(--kendo-color-app-surface);
+}
+
+.app-content {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: var(--kendo-spacing-6);
+}
+
+.toolbar-link {
+  color: var(--kendo-color-primary-on-surface);
+  font-size: var(--kendo-font-size-sm);
+  margin-top: var(--kendo-spacing-1);
+}
+
+.dashboard-page,
+.products-page,
+.help-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kendo-spacing-6);
+}
+
+.greeting {
+  padding: 0;
+}
+
+.greeting h1,
+.page-heading h1,
+.help-page h1,
+.not-found-page h1 {
+  margin: 0;
+  color: var(--kendo-color-primary-on-surface);
+  font-size: calc(var(--kendo-font-size) * 2);
+  font-weight: var(--kendo-font-weight-semibold);
+}
+
+.greeting p,
+.page-heading p,
+.support-card p,
+.not-found-page p {
+  color: var(--kendo-color-subtle);
+  margin: var(--kendo-spacing-2) 0 0;
+}
+
+.dashboard-gauge {
+  height: calc(var(--kendo-spacing-4) * 9.5);
+}
+
+.status-label {
+  display: block;
+  color: var(--kendo-color-subtle);
+  font-size: var(--kendo-font-size-sm);
+  font-weight: var(--kendo-font-weight-medium);
+}
+
+.input-container input {
+  width: min(100%, calc(var(--kendo-spacing-4) * 32));
+}
+
+.help-page {
+  max-width: 800px;
+}
+
+.help-search {
+  display: grid;
+  gap: var(--kendo-spacing-2);
+}
+
+.help-search label,
+.help-section h2,
+.support-card h2 {
+  color: var(--kendo-color-primary-on-surface);
+  font-size: var(--kendo-font-size-lg);
+  font-weight: var(--kendo-font-weight-semibold);
+}
+
+.help-section {
+  display: grid;
+  gap: var(--kendo-spacing-3);
+}
+
+.support-card {
+  align-items: center;
+  background: var(--kendo-color-surface);
+  border: 1px solid var(--kendo-color-border);
+  border-radius: var(--kendo-border-radius-md);
+  display: flex;
+  gap: var(--kendo-spacing-6);
+  justify-content: space-between;
+  padding: var(--kendo-spacing-6);
+}
+
+.not-found-page {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding: var(--kendo-spacing-6);
+  text-align: center;
+}
+
+.not-found-code {
+  color: var(--kendo-color-secondary-on-surface) !important;
+  font-size: calc(var(--kendo-font-size) * 6);
+  font-weight: var(--kendo-font-weight-semibold);
+  line-height: 1;
+}
+
+.empty-state {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--kendo-spacing-3);
+  padding: var(--kendo-spacing-12);
+  text-align: center;
+}
+
+.empty-state h2 {
+  color: var(--kendo-color-primary-on-surface);
+  font-size: var(--kendo-font-size-xl);
+  font-weight: var(--kendo-font-weight-semibold);
+  margin: 0;
+}
+
+.empty-state p {
+  color: var(--kendo-color-subtle);
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .app-content {
+    padding: var(--kendo-spacing-4);
+  }
+
+  .support-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 767px) {
+  .app-content {
+    padding: var(--kendo-spacing-3);
+  }
+
+  .dashboard-card-content-number {
+    font-size: calc(var(--kendo-font-size) * 3);
+  }
 }

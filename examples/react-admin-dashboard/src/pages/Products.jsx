@@ -2,6 +2,7 @@ import * as React from 'react';
 import { ListView } from '@progress/kendo-react-listview';
 import { Input } from '@progress/kendo-react-inputs';
 import { Window } from '@progress/kendo-react-dialogs';
+import { Button } from '@progress/kendo-react-buttons';
 
 import {
   Card,
@@ -14,7 +15,7 @@ import { Pager } from '@progress/kendo-react-data-tools';
 import articles from '../data/articles.json';
 import { BubbleChart } from "../components/products/BubbleChart"
 import { SvgIcon } from '@progress/kendo-react-common';
-import { checkIcon, pencilIcon, eyeIcon } from '@progress/kendo-svg-icons';
+import { checkIcon, pencilIcon, eyeIcon, searchIcon } from '@progress/kendo-svg-icons';
 
  const MyItemRender = (props) => {
   const [toggle, setToggle] = React.useState(false)
@@ -88,14 +89,14 @@ import { checkIcon, pencilIcon, eyeIcon } from '@progress/kendo-svg-icons';
                </div>
               </Window>}
                 <span>
-                    <span className="k-button k-button-md k-button-rectangle k-rounded-md k-button-flat k-button-flat-base" onClick={toggleDialog}>
+                    <button type="button" className="k-button k-button-md k-rounded-md k-button-flat k-button-flat-base" onClick={toggleDialog}>
                         <SvgIcon icon={eyeIcon}/>Review
-                    </span>
+                    </button>
                 </span>
                 <span>
-                    <span className="k-button k-edit-button k-button-md k-button-rectangle k-rounded-md k-button-flat k-button-flat-primary" onClick={handleClick}>
+                    <button type="button" className="k-button k-edit-button k-button-md k-rounded-md k-button-flat k-button-flat-primary" onClick={handleClick}>
                       <SvgIcon icon={isEditMode ? checkIcon : pencilIcon}/>Edit
-                    </span>
+                    </button>
                 </span>
             </div>
            </CardActions>
@@ -134,8 +135,17 @@ export const Products = () => {
 
 
     const { skip, take } = page;
+    const clearSearch = () => {
+      setValue('');
+      setFilteredList(articles);
+      setPage({ skip: 0, take: 10 });
+    };
 
-   return <div>
+   return <div className="products-page">
+      <div className="page-heading">
+        <h1>Product updates</h1>
+        <p>Browse the latest product stories, releases, and research.</p>
+      </div>
       <div className="chart-container">
         <br/>
         <br/>
@@ -144,27 +154,35 @@ export const Products = () => {
 
       <div className="input-container">
       <Input
-        style={{
-          border: '2px solid #ccc',
-          boxShadow: 'inset 0px 0px 0.5px 0px rgba(0,0,0,0.0.1)',
-        }}
-        placeholder={'Search'}
+        aria-label="Search product updates"
+        placeholder="Search product updates"
         value={value}
         onChange={handleChange}
+        prefix={() => <SvgIcon icon={searchIcon} />}
       />
       </div>
 
       <div className="listbox-card-container">
-      <ListView
-        data={filteredList.slice(skip, skip + take)}
-        item={MyItemRender}
-      />
-      <Pager
-        skip={skip}
-        take={take}
-        onPageChange={handlePageChange}
-        total={articles.length}
-      />
+      {filteredList.length ? (
+        <>
+          <ListView
+            data={filteredList.slice(skip, skip + take)}
+            item={MyItemRender}
+          />
+          <Pager
+            skip={skip}
+            take={take}
+            onPageChange={handlePageChange}
+            total={filteredList.length}
+          />
+        </>
+      ) : (
+        <div className="empty-state">
+          <h2>No product updates found</h2>
+          <p>Try a different search term or clear the search to browse all updates.</p>
+          <Button fillMode="outline" onClick={clearSearch}>Clear search</Button>
+        </div>
+      )}
       </div>
    </div>
 }
