@@ -32,7 +32,7 @@ let contacts = [
     },
  ];
 
- 
+
 
  export const Alert = () => {
    const anchor = React.useRef(null);
@@ -42,12 +42,7 @@ let contacts = [
    const MyHeader = () => {
     return (
       <ListViewHeader
-        style={{
-          color: 'black',
-          fontSize: 19,
-          borderBottom: '1px solid #dee2e6'
-        }}
-        className="pl-3 pb-2 pt-2"
+        className="notification-header"
       >
         Notifications <Notification type={{
            style: 'warning',
@@ -64,11 +59,7 @@ let contacts = [
     });
     return (
       <ListViewFooter
-      style={{
-       color: 'black',
-       fontSize: 19,
-     }}
-        className="pl-3 pb-2 pt-2"
+        className="notification-footer"
       >
        <div>
        <Button type={'submit'} className="mark-button" onClick={() => {setNotifications('0')}}>
@@ -82,12 +73,9 @@ let contacts = [
     let item = props.dataItem;
     return (
       <div
-        className="row p-2 border-bottom align-middle"
-        style={{
-          margin: 0,
-        }}
+        className="notification-item"
       >
-        <div className="col-2 avatar-container">
+        <div className="notification-avatar">
           <Avatar type="image">
             <img
              src={item.image}
@@ -95,25 +83,13 @@ let contacts = [
             />
           </Avatar>
         </div>
-        <div className="col-6 message-container">
-          <h1
-            style={{
-              fontSize: 14,
-              color: 'black',
-              marginBottom: 0,
-            }}
-          >
+        <div className="notification-message">
+          <h2>
             {item.message}
-          </h1>
-          <h2
-            style={{
-              fontSize: 14,
-              color: 'black',
-              marginBottom: 0,
-            }}
-          >
-            {item.additionalText}
           </h2>
+          <p>
+            {item.additionalText}
+          </p>
         </div>
       </div>
     );
@@ -141,9 +117,7 @@ let contacts = [
          <ListView
            data={contacts}
            item={MyItemRender}
-           style={{
-             width: '100%',
-           }}
+           className="notification-list"
            header={MyHeader}
            footer={MyFooter}
          />

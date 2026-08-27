@@ -19,81 +19,62 @@ export const TopFiveCitiesGlobal = () => {
                <span className="country-name">Russia</span>
              </div>
              <ProgressBar
-               style={{
-                 height: '6px',
-               }}
+               className="city-progress city-progress-info"
                value={47}
-               progressStyle={{ backgroundColor: '#28B4C8' }}
                labelVisible={false}
              />
              <span className="value-span"> 47%</span>
            </div>
-           <br />
- 
+
            <div className="progress-bar-container">
            <div className="country-name-container">
                <span className="country-name">Beijing,</span>
                <span className="country-name">China</span>
              </div>
- 
+
              <ProgressBar
-               style={{
-                 height: '6px',
-               }}
+               className="city-progress city-progress-secondary"
                value={52}
-               progressStyle={{ backgroundColor: '#2D73F5' }}
                labelVisible={false}
              />
              <span className="value-span"> 52%</span>
            </div>
-           <br />
- 
+
            <div className="progress-bar-container">
            <div className="country-name-container">
                <span className="country-name">Paris,</span>
                <span className="country-name">France</span>
              </div>
- 
+
              <ProgressBar
-               style={{
-                 height: '6px',
-               }}
+               className="city-progress city-progress-tertiary"
                value={75}
-               progressStyle={{ backgroundColor: '#AA46BE' }}
                labelVisible={false}
              />
              <span className="value-span"> 75%</span>
            </div>
-           <br />
            <div className="progress-bar-container">
            <div className="country-name-container">
                <span className="country-name">Dubai,</span>
                <span className="country-name">UAE</span>
              </div>
- 
+
              <ProgressBar
-               style={{
-                 height: '6px',
-               }}
+               className="city-progress city-progress-warning"
                value={82}
-               progressStyle={{ backgroundColor: '#FFD246' }}
                labelVisible={false}
              />
              <span className="value-span"> 82%</span>
            </div>
-           <br />
            <div className="progress-bar-container">
            <div className="country-name-container">
                <span className="country-name">Tokio,</span>
                <span className="country-name">Japan</span>
              </div>
- 
+
              <ProgressBar
-               style={{
-                 height: '6px',
-               }}
+               className="city-progress city-progress-error"
                value={92}
-               progressStyle={{ backgroundColor: '#FF6358' }}
                labelVisible={false}
              />
              <span className="value-span"> 92%</span>

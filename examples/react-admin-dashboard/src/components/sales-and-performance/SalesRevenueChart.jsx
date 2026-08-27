@@ -9,9 +9,9 @@ export const SalesRevenueChart = () => {
         <ChartCategoryAxis>
         </ChartCategoryAxis>
         <ChartSeries>
-          <ChartSeriesItem type="area" data={firstSeries}  color={'#FFD246'}
+          <ChartSeriesItem type="area" data={firstSeries} color="var(--kendo-color-warning)"
 />
-          <ChartSeriesItem type="area" data={secondSeries} color={'#78D237'}/>
+          <ChartSeriesItem type="area" data={secondSeries} color="var(--kendo-color-success)"/>
         </ChartSeries>
       </Chart>;
 };

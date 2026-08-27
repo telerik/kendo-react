@@ -13,17 +13,21 @@ export const Weather = () => {
    </div>
 
    <div className="weather-data-container">
-      <div>
-        Humidity:<br/>
-        Dew:<br/>
-        Pressure:<br/>
-        Wind Speed:
+      <div className="weather-data-row">
+        <span>Humidity:</span>
+        <span>76%</span>
       </div>
-      <div>
-        76%<br/>
-        2˚C<br/>
-        1031mb<br/>
-        12km/h NW
+      <div className="weather-data-row">
+        <span>Dew:</span>
+        <span>2˚C</span>
+      </div>
+      <div className="weather-data-row">
+        <span>Pressure:</span>
+        <span>1031mb</span>
+      </div>
+      <div className="weather-data-row">
+        <span>Wind Speed:</span>
+        <span>12km/h NW</span>
       </div>
     </div>
 

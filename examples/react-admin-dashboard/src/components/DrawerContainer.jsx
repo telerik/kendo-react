@@ -72,7 +72,7 @@ export const DrawerContainer = (props) => {
       <header className="custom-toolbar">
         <Button svgIcon={menuIcon} onClick={handleClick} aria-label="Toggle navigation" title="Toggle navigation" />
         <span className="overview">{selected === 'Dashboard'? 'Overview' : selected}</span>
-        <div className="right-widget">
+        <div className="toolbar-actions">
           <div className="alert-container">
           <Alert/>
           </div>
@@ -82,13 +82,13 @@ export const DrawerContainer = (props) => {
 
      <div>
 
-     <div className='user-container' > 
-        <img src={require('../assets/people/user-avatar.jpg')} alt="user avatar"/> 
-       <h1>Jaxons Danniels</h1> 
-       <div className="user-email">jaxons.daniels@company.com</div> 
-       <Link to="/"  style={{ textDecoration: 'none' }}>
-       <Button className="user-button k-button k-button-md k-rounded-md k-button-solid k-button-solid-base" 
-       >Sign Out</Button> 
+     <div className='user-container' >
+        <img src={require('../assets/people/user-avatar.jpg')} alt="user avatar"/>
+       <h1>Jaxons Danniels</h1>
+       <div className="user-email">jaxons.daniels@company.com</div>
+       <Link to="/">
+       <Button className="user-button k-button k-button-md k-rounded-md k-button-solid k-button-solid-base"
+       >Sign Out</Button>
        </Link>
       </div>
       <Drawer
@@ -108,7 +108,7 @@ export const DrawerContainer = (props) => {
         </DrawerContent>
       </Drawer>
      </div>
- 
+
     </div>
 
   );

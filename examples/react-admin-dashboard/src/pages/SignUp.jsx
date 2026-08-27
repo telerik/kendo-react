@@ -16,49 +16,47 @@ export const SignUp = () => {
          <div className='banner'>
              Create account
          </div>
-         <div className="account">
-         Already have an account?  <Link style={{ textDecoration: 'none' }} to="/">Sign In</Link>
+         <div className="auth-account">
+         Already have an account?  <Link to="/">Sign In</Link>
          </div>
      </div>
      <div className="inputs-wrapper">
-     <Form  render={formRenderProps => <FormElement style={{
-maxWidth: 650
-}}>
-   <fieldset className={'k-form-fieldset'}> 
-   <div className="mb-3">
+     <Form  render={formRenderProps => <FormElement className="auth-form">
+   <fieldset className={'k-form-fieldset'}>
+   <div className="auth-field">
               <Field
                 name={"fullName"}
                 component={Input}
                 label={"Full Name"}
                 autoComplete="name"
               />
-            </div>        
-       <div className="mb-3">
+            </div>
+       <div className="auth-field">
          <Field name={"email"} type={"email"} component={Input} label={"Email"} autoComplete="email" />
        </div>
-       <div className="mb-3">
+       <div className="auth-field">
          <Field name={"password"} type={"password"} component={Input} label={"Password"} autoComplete="new-password" />
-         <div className="mb-3">
+         <div className="auth-field">
               <Field
                 name={"Company"}
                 component={Input}
                 label={"Company"}
                 autoComplete="organization"
               />
-            </div> 
+            </div>
        </div>
-       
+
      </fieldset>
-   
-     <fieldset className={'k-form-fieldset'}>         
-     <div className="mb-3" style={{display: 'flex'}}>
+
+     <fieldset className={'k-form-fieldset'}>
+     <div className="auth-consent">
      <Checkbox />
-     <p> &nbsp; I agree to the <span style={{color: 'blue', textDecoration: 'underline'}}>Terms of Services </span> and <br></br>  <span style={{color: 'blue', textDecoration: 'underline'}}>Privacy Policy</span> </p>
+     <p>I agree to the <span className="auth-link">Terms of Services</span> and <span className="auth-link">Privacy Policy</span>.</p>
        </div>
        <div className="k-form-buttons">
        <Link to="/home/dashboard" className="dashboard-button">
        <Button type={'submit'} className="sign-button">
-         Create Free Account 
+         Create Free Account
         </Button>
         </Link>
      </div>
@@ -66,7 +64,7 @@ maxWidth: 650
 
 
    </FormElement>} />
-         
+
      </div>
 
  </div>
@@ -77,7 +75,7 @@ maxWidth: 650
          <div className="image-wrapper">
              <img src={require('../assets/kendoka.png')} alt={'kendoka'} className="kendoka"/>
          </div>
-         
+
          </div>
  </div>
 

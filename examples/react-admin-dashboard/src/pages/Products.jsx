@@ -34,36 +34,21 @@ import { checkIcon, pencilIcon, eyeIcon, searchIcon } from '@progress/kendo-svg-
    let item = props.dataItem;
    return (
      <div
-       style={{
-       
-         padding: '20px 20px',
-       }}
-       className="parent-container"
+       className="product-card-item"
      >
        <div className="k-card-list">
          <Card
-           style={{
-             width: 260,
-             height: 340
-           }}
+           className="product-card"
          >
            <CardBody
-           style={{
-            borderBottom: 'solid 1px rgba(0,0,0,.08)'
-           }}
+           className="product-card-body"
            >
              <CardImage
                src={require(`../assets/article-images/${item.Image}`)}
-               style={{
-                 width: 260,
-                 height: 140,
-                 maxWidth: 260,
-               }}
+               className="product-card-image"
              />
              <CardTitle
-               style={{
-                 fontSize: 18,
-               }}
+               className="product-card-title"
              />
              <CardTitle>{item.Title}</CardTitle>
              <CardTitle>{item.Subtitle}</CardTitle>
@@ -79,11 +64,7 @@ import { checkIcon, pencilIcon, eyeIcon, searchIcon } from '@progress/kendo-svg-
                 <p>{item.Title}</p>
                 <CardImage
                src={require(`../assets/article-images/${item.Image}`)}
-               style={{
-                 width: 260,
-                 height: 140,
-                 maxWidth: 260,
-               }}
+               className="product-window-image"
              />
                 <p>{item.Content}</p>
                </div>
@@ -115,7 +96,7 @@ export const Products = () => {
       skip: 0,
       take: 10,
     });
-    
+
     const handlePageChange = (e) => {
       setPage({
         skip: e.skip,
@@ -147,8 +128,6 @@ export const Products = () => {
         <p>Browse the latest product stories, releases, and research.</p>
       </div>
       <div className="chart-container">
-        <br/>
-        <br/>
         <BubbleChart/>
       </div>
 

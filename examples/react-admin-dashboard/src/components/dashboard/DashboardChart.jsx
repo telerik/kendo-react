@@ -29,11 +29,11 @@ import { ButtonGroup, Button } from '@progress/kendo-react-buttons';
       () => {
           setIsTrend(true);
           setChartSeries(trendSeries)
-    
+
       },
       [setIsTrend]
     );
-    
+
     const volumeOnClick = React.useCallback(
       () => {
           setIsTrend(!true);
@@ -41,25 +41,25 @@ import { ButtonGroup, Button } from '@progress/kendo-react-buttons';
       },
       [setIsTrend]
     );
-    
+
      const handleChartRefresh = (chartOptions, themeOptions, chartInstance) => {
     if (refreshChart) {
       chartInstance.setOptions(chartOptions, themeOptions);
     }
   }
-  
+
 
       return <div className="chart-container">
 
       <div className="k-card">
-       
+
       <div className="card-buttons">
       <p>Total Points</p>
          <div>
          <DateRangePicker  value={range} onChange={onRangeChange}/>
-   
+
          </div>
-   
+
          <ButtonGroup>
          <Button togglable={true} selected={isTrend} onClick={trendOnClick}>
                Trend
@@ -69,9 +69,7 @@ import { ButtonGroup, Button } from '@progress/kendo-react-buttons';
              </Button>
          </ButtonGroup>
       </div>
-      <Chart style={{
-             height: 350
-           }}  onRefresh={handleChartRefresh}>
+      <Chart className="dashboard-trend-chart" onRefresh={handleChartRefresh}>
                <ChartLegend position="bottom" orientation="horizontal" />
                <ChartCategoryAxis>
                  <ChartCategoryAxisItem categories={categories}  />
@@ -83,5 +81,5 @@ import { ButtonGroup, Button } from '@progress/kendo-react-buttons';
                </ChartSeries>
              </Chart>
              </div>
-       </div> 
+       </div>
    }

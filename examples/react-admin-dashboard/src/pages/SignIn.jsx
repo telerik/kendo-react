@@ -28,51 +28,49 @@ export const SignIn = () => {
          <div className='banner'>
              Sign In
          </div>
-         <div className="account">
+         <div className="auth-account">
              Don't have an account? <Link to="/signup">Sign up</Link>
          </div>
      </div>
      <div className="inputs-wrapper">
-     <Form  render={formRenderProps => <FormElement style={{
-maxWidth: 650
-}}>
-     <fieldset className={'k-form-fieldset'}>         
-       <div className="mb-3">
+     <Form  render={formRenderProps => <FormElement className="auth-form">
+     <fieldset className={'k-form-fieldset'}>
+       <div className="auth-field">
          <Field name={"email"} type={"email"} component={Input} label={"Email"} autoComplete="email" />
        </div>
-       <div className="mb-3" style={{display: 'flex'}}>
+       <div className="auth-field auth-password-field">
          <Field name={"password"} type={paswordType} component={Input} label={"Password"} autoComplete="current-password" />
          <Button svgIcon={eyeIcon} className="password-icon" onClick={handleClick} aria-label={paswordType === 'password' ? 'Show password' : 'Hide password'} title={paswordType === 'password' ? 'Show password' : 'Hide password'} />
        </div>
      </fieldset>
-     <fieldset className={'k-form-fieldset'}>         
+     <fieldset className={'k-form-fieldset'}>
 
-     <div className="mb-3">
+     <div className="auth-field">
      <Checkbox label={'Remember Me'} />
        </div>
        </fieldset>
 
      <div className="k-form-buttons">
-       <Link to="/home/dashboard" className="dashboard-button" style={{ textDecoration: 'none' }}>
+       <Link to="/home/dashboard" className="dashboard-button">
        <Button type={'submit'} className="sign-button">
          Sign In
         </Button>
         </Link>
      </div>
    </FormElement>} />
-         
+
      </div>
      <div className="continue-with-wrapper">
          <hr /> <span>Or continue with</span><hr/>
      </div>
      <div className="social-wrapper">
-         <a href="/#" className='facebook'>
+         <a href="/#" className='social-link'>
              <img src={require('../assets/facebook.png')} alt={'facebook icon'}></img>
          </a>
-         <a href="/#" className='twitter'>
+         <a href="/#" className='social-link'>
              <img src={require('../assets/twitter.png')} alt={'twitter icon'}></img>
          </a>
-         <a href="/#" className='reddit'>
+         <a href="/#" className='social-link'>
              <img src={require('../assets/reddit.png')} alt={'reddit icon'}></img>
          </a>
      </div>
@@ -87,7 +85,7 @@ maxWidth: 650
 
          </div>
  </div>
- 
+
 </div>
 <div className="second-image-wrapper">
          <svg shapeRendering="geometricPrecision" textRendering="geometricPrecision" viewBox="0 0 877 455" xmlns="http://www.w3.org/2000/svg">
