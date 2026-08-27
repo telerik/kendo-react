@@ -92,12 +92,54 @@ body {
 }
 
 .filter-component {
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--kendo-spacing-3);
+}
+
+.filter-component__controls,
+.filter-component__group {
+  display: flex;
+  align-items: center;
+}
+
+.filter-component__controls {
   justify-content: space-between;
+  gap: var(--kendo-spacing-4);
+}
+
+.filter-component__group {
+  gap: var(--kendo-spacing-2);
 }
 
 .filter-component__control,
 .filter-component__label {
   padding-right: var(--kendo-spacing-2);
+}
+
+.filter-component__control {
+  min-width: 10rem;
+}
+
+.filter-component__label {
+  white-space: nowrap;
+}
+
+.filter-component__chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--kendo-spacing-2);
+  padding: var(--kendo-spacing-3);
+  border: 1px solid var(--kendo-color-border);
+  border-radius: var(--kendo-border-radius-md);
+  background-color: var(--kendo-color-base-subtle);
+}
+
+.filter-component__chips-label {
+  color: var(--kendo-color-subtle);
+  font-size: var(--kendo-font-size-sm);
+  font-weight: var(--kendo-font-weight-medium);
 }
 
 .background-image {
@@ -440,54 +482,168 @@ body {
 }
 
 .cards-list {
-  place-items: center;
-  gap: var(--kendo-spacing-3);
+  display: grid;
+  gap: var(--kendo-spacing-5);
+}
+
+.cards-list--grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.cards-list--list {
+  grid-template-columns: 1fr;
 }
 
 .cards-list__item {
   display: grid;
-  gap: var(--kendo-spacing-1);
-  padding-bottom: var(--kendo-spacing-5);
-  border: 1px solid var(--kendo-color-primary);
-  text-align: center;
+  min-width: 0;
+  gap: var(--kendo-spacing-4);
+  padding: var(--kendo-spacing-4);
+  border: 1px solid var(--kendo-color-border);
+  border-radius: var(--kendo-border-radius-lg);
+  background-color: var(--kendo-color-surface);
+  box-shadow: var(--kendo-elevation-1);
 }
 
-.cards-list__item--grid {
-  grid-column: span 4;
+.cards-list--grid .cards-list__item {
+  grid-template-rows: auto 1fr;
 }
 
-.cards-list__item--list {
-  grid-column: span 3;
+.cards-list--list .cards-list__item {
+  grid-template-columns: minmax(12rem, 18rem) minmax(0, 1fr);
+  align-items: center;
+}
+
+.cards-list__media {
+  min-width: 0;
 }
 
 .cards-list__image {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 17.375rem;
-  height: 14.75rem;
+  width: 100%;
+  min-height: 14rem;
+  aspect-ratio: 1 / 1;
   border-radius: var(--kendo-border-radius-lg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .cards-list__badge {
   text-transform: uppercase;
 }
 
-.cards-list__title,
-.cards-list__actions {
-  padding-top: var(--kendo-spacing-2);
+.cards-list__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kendo-spacing-2);
+  min-width: 0;
+}
+
+.cards-list__title {
+  margin: 0;
+  color: var(--kendo-color-primary-on-surface);
+  font-size: var(--kendo-font-size-lg);
+  font-weight: var(--kendo-font-weight-semibold);
+}
+
+.cards-list__meta,
+.cards-list__rating,
+.cards-list__stock {
+  display: flex;
+  align-items: center;
+  gap: var(--kendo-spacing-2);
+}
+
+.cards-list__meta {
+  flex-wrap: wrap;
+  color: var(--kendo-color-subtle);
+  font-size: var(--kendo-font-size-sm);
+}
+
+.cards-list__rating {
+  flex-wrap: wrap;
+  color: var(--kendo-color-primary-on-surface);
+  font-size: var(--kendo-font-size-sm);
+}
+
+.cards-list__rating .k-rating {
+  flex: 0 0 auto;
+}
+
+.cards-list__stock {
+  font-size: var(--kendo-font-size-sm);
+  font-weight: var(--kendo-font-weight-medium);
+}
+
+.cards-list__stock--in-stock {
+  color: var(--kendo-color-success-on-surface);
+}
+
+.cards-list__stock--low-stock {
+  color: var(--kendo-color-warning-on-surface);
+}
+
+.cards-list__stock--out-of-stock {
+  color: var(--kendo-color-error-on-surface);
 }
 
 .cards-list__actions {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  gap: var(--kendo-spacing-6);
+  justify-content: space-between;
+  gap: var(--kendo-spacing-3);
+  padding-top: var(--kendo-spacing-2);
+  text-align: right;
+}
+
+.cards-list__price {
+  color: var(--kendo-color-error-on-surface);
+  font-size: var(--kendo-font-size-lg);
+  font-weight: var(--kendo-font-weight-semibold);
 }
 
 .cards-list__old-price {
   padding-right: var(--kendo-spacing-2);
   text-decoration: line-through;
+}
+
+.products__pager {
+  margin-top: var(--kendo-spacing-6);
+}
+
+.products__empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--kendo-spacing-3);
+  padding: var(--kendo-spacing-12) var(--kendo-spacing-4);
+  border: 1px solid var(--kendo-color-border);
+  border-radius: var(--kendo-border-radius-lg);
+  background-color: var(--kendo-color-surface);
+  color: var(--kendo-color-primary-on-surface);
+  text-align: center;
+}
+
+.products__empty-state > .k-svg-icon {
+  color: var(--kendo-color-info);
+}
+
+.products__empty-state h2,
+.products__empty-state p {
+  margin: 0;
+}
+
+.products__empty-state h2 {
+  font-size: var(--kendo-font-size-lg);
+}
+
+.products__empty-state p {
+  max-width: 34rem;
+  color: var(--kendo-color-subtle);
 }
 
 .footer {
@@ -660,6 +816,20 @@ body {
   font-weight: var(--kendo-font-weight-bold);
 }
 
+@media (max-width: 1199px) {
+  .ordered-image-card__image,
+  .category-list__item img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .category-list__item img {
+    min-width: 0 !important;
+    object-fit: cover;
+  }
+}
+
 @media (max-width: 991px) {
   .layout {
     padding-inline: var(--kendo-spacing-6);
@@ -677,6 +847,20 @@ body {
   .product-card__image {
     width: 100%;
     max-width: 100%;
+  }
+
+  .filter-component__controls {
+    flex-wrap: wrap;
+  }
+
+  .category-list__item img {
+    min-width: 0 !important;
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .cards-list--grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .contacts__form,
@@ -729,6 +913,18 @@ body {
     object-fit: cover;
   }
 
+  .cards-list--grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cards-list--list .cards-list__item {
+    grid-template-columns: 1fr;
+  }
+
+  .cards-list__actions {
+    text-align: left;
+  }
+
   .category-list__items,
   .testimonials__items,
   .shopping-cart__benefit-items {
@@ -748,6 +944,10 @@ body {
 
   .filter-component {
     gap: var(--kendo-spacing-4);
+  }
+
+  .filter-component__controls {
+    flex-wrap: wrap;
   }
 
   .filter-component__group {
