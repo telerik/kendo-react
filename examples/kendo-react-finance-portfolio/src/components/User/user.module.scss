@@ -49,3 +49,38 @@
 .red {
   color: var(--kendo-color-error);
 }
+
+.mobile-cards {
+  display: none;
+}
+
+.holding-card {
+  background: var(--kendo-color-surface-alt);
+  border: 1px solid var(--kendo-color-border);
+  border-radius: var(--kendo-border-radius-md);
+  display: grid;
+  gap: var(--kendo-spacing-3);
+  grid-template-columns: minmax(0, 1fr) auto;
+  margin-bottom: var(--kendo-spacing-3);
+  padding: var(--kendo-spacing-4);
+
+  div {
+    display: grid;
+    gap: var(--kendo-spacing-1);
+  }
+
+  span {
+    color: var(--kendo-color-subtle);
+    font-size: var(--kendo-font-size-xs);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .desktop-grid {
+    display: none !important;
+  }
+
+  .mobile-cards {
+    display: block;
+  }
+}

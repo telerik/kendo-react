@@ -1,7 +1,7 @@
 @use '@progress/kendo-theme-meridian/scss/all.scss' as *;
 
 :root {
-  --kendo-color-primary: #1c7cd5;
-  --kendo-font-family: "Roboto", Helvetica, Arial, sans-serif;
+  // The app shell uses a light frosted layer; all color and type ramps come
+  // from the Meridian theme rather than being redefined locally.
   --kendo-translucency-base: 24%;
 }

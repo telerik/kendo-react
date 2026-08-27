@@ -5,6 +5,7 @@ import $ from 'jquery';
 import '@progress/kendo-ui';
 import { Tooltip } from '@progress/kendo-react-tooltip';
 import { getKendoColor } from '../styles/tokens';
+import { DataState } from './DataState/DataState';
 declare const window: any;
 
 type HeatMapItemType = {
@@ -27,8 +28,15 @@ type TreeDataItem = {
 }
 
 export const HeatmapView = () => {
+    const [treeData, setTreeData] = React.useState<any[]>([]);
+    const [status, setStatus] = React.useState<'loading' | 'ready' | 'error'>('loading');
+    const [errorMessage, setErrorMessage] = React.useState('');
+    const [retryKey, setRetryKey] = React.useState(0);
     const fetchData = React.useCallback(async () => {
-        const newData = await dataService.getAllSymbols();
+        setStatus('loading');
+        setErrorMessage('');
+        try {
+            const newData = await dataService.getAllSymbols();
         const prizeUpItemsCollection = newData.map((item: any) => {
             if (item.change_pct.indexOf('-') !== 0) {
                 let newItem = { value: 0, name: '', change: '' }
@@ -51,7 +59,7 @@ export const HeatmapView = () => {
         })
         const prizeUpItems = prizeUpItemsCollection.filter((item: any) => item)
         const prizeDownItems = prizeDownItemsCollection.filter((item: any) => item)
-        const TreeData: TreeDataItem[] = [
+        const TreeData: any[] = [
             {
                 name: 'Market\u00a0Capitalization', isParentElement: true ,value: 1, items: [
                     { value: 1, name: 'Price\u00a0Up', isParentElement: true, items: prizeUpItems },
@@ -59,34 +67,12 @@ export const HeatmapView = () => {
                 ]
             }
         ]
-        const setData = (options: any) => {
-            options.success(TreeData)
+            setTreeData(TreeData);
+            setStatus('ready');
+        } catch (error) {
+            setStatus('error');
+            setErrorMessage(error instanceof Error ? error.message : 'The market heatmap could not be loaded.');
         }
-
-        const renderItem = (props: any) => {
-            const title = JSON.stringify(props.dataItem);
-            return `<span title=${title}>${props.text}<br/>${props.dataItem.change}%</span>`;
-        }
-
-        window.$("#heatmap").kendoTreeMap({
-            template: renderItem,
-            dataSource: new kendo.data.HierarchicalDataSource({
-                transport: {
-                    read: setData
-                },
-                schema: {
-                    model: {
-                        children: "items"
-                    }
-                }
-            }),
-            valueField: "value",
-            textField: "name",
-            colors: [
-                [getKendoColor('success'), getKendoColor('success-subtle')],
-                [getKendoColor('error'), getKendoColor('error-subtle')]
-            ]
-        })
     }, []);
     const nFormatter = (num: number) => {
         if (num >= 1000000000) {
@@ -117,13 +103,46 @@ export const HeatmapView = () => {
         )   
     }
 
-    React.useEffect(() => { fetchData() }, [fetchData]);
+    React.useEffect(() => { fetchData() }, [fetchData, retryKey]);
+
+    React.useEffect(() => {
+        if (!treeData.length) return;
+        const renderItem = (props: any) => {
+            const title = JSON.stringify(props.dataItem);
+            return `<span title=${title}>${props.text}<br/>${props.dataItem.change}%</span>`;
+        };
+        window.$("#heatmap").kendoTreeMap({
+            template: renderItem,
+            dataSource: new kendo.data.HierarchicalDataSource({ data: treeData }),
+            valueField: "value",
+            textField: "name",
+            colors: [
+                [getKendoColor('success'), getKendoColor('success-subtle')],
+                [getKendoColor('error'), getKendoColor('error-subtle')]
+            ]
+        });
+    }, [treeData]);
     
     return (
         <div>
-            <Tooltip showCallout={false} content={toolTipTemplate}>
-                <div id='heatmap' style={{ height: 600, marginBottom: 50 }}></div>
-            </Tooltip>
+            {status === 'loading' && <DataState kind="loading" title="Loading market heatmap" message="Aggregating the latest sector movements." />}
+            {status === 'error' && (
+                <DataState
+                    kind="error"
+                    title="Heatmap unavailable"
+                    message={errorMessage}
+                    actionLabel="Try again"
+                    onAction={() => setRetryKey((key) => key + 1)}
+                />
+            )}
+            {status === 'ready' && treeData[0]?.items.every((item: TreeDataItem) => !item.items?.length) && (
+                <DataState kind="empty" title="No market movements" message="There is no market movement data to visualize right now." />
+            )}
+            {status === 'ready' && treeData[0]?.items.some((item: TreeDataItem) => Boolean(item.items?.length)) && (
+                <Tooltip showCallout={false} content={toolTipTemplate}>
+                    <div id='heatmap' style={{ height: 600, marginBottom: 50 }}></div>
+                </Tooltip>
+            )}
         </div>
     )
 }

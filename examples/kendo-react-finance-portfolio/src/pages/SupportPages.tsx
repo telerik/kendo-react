@@ -5,6 +5,7 @@ import { Input, Switch } from "@progress/kendo-react-inputs";
 import { DropDownList } from "@progress/kendo-react-dropdowns";
 import { useNavigate } from "react-router-dom";
 import styles from "./support-pages.module.scss";
+import { DataState } from "../components/DataState/DataState";
 
 const transactions = [
   { date: "Aug 25, 2026", type: "Buy", symbol: "AAPL", quantity: 12, total: "$2,748.96", status: "Filled" },
@@ -23,24 +24,52 @@ const Page = ({ title, description, children }: React.PropsWithChildren<{ title:
   </section>
 );
 
-export const WatchlistPage = () => (
-  <Page title="Watchlist" description="Monitor the securities you want to trade.">
-    <div className={styles.toolbar}>
-      <Input aria-label="Add a symbol to your watchlist" placeholder="Search symbol or company" />
-      <Button themeColor="primary">Add symbol</Button>
-    </div>
-    <div className={styles.callout}>
-      <strong>Tech stocks</strong>
-      <span>Price alerts and quick trade actions are available from each security in the list.</span>
-    </div>
-    <Grid data={transactions.filter((item) => item.symbol !== "Cash")} sortable>
-      <GridColumn field="symbol" title="Ticker" width="120px" />
-      <GridColumn field="type" title="Last activity" />
-      <GridColumn field="total" title="Current value" />
-      <GridColumn field="status" title="Alert status" />
+type TableColumn = { field: keyof typeof transactions[number]; title: string };
+
+const TransactionTable = ({ data, ariaLabel, columns }: { data: typeof transactions; ariaLabel: string; columns: TableColumn[] }) => (
+  <>
+    <Grid className={styles.desktopTable} data={data} sortable>
+      {columns.map((column) => <GridColumn key={column.field} field={column.field} title={column.title} />)}
     </Grid>
-  </Page>
+    <div className={styles.mobileCards} aria-label={ariaLabel}>
+      {data.map((item) => (
+        <article className={styles.dataCard} key={`${item.date}-${item.symbol}-${item.type}`}>
+          <div className={styles.dataCardHeader}>
+            <strong>{item.symbol}</strong>
+            <span className={item.status === "Filled" || item.status === "Paid" ? styles.positive : styles.status}>{item.status}</span>
+          </div>
+          <dl>
+            {columns.filter((column) => column.field !== "symbol" && column.field !== "status").map((column) => (
+              <div key={column.field}><dt>{column.title}</dt><dd>{item[column.field]}</dd></div>
+            ))}
+          </dl>
+        </article>
+      ))}
+    </div>
+  </>
 );
+
+export const WatchlistPage = () => {
+  const [query, setQuery] = React.useState("");
+  const filtered = transactions.filter((item) => item.symbol !== "Cash" && `${item.symbol} ${item.type}`.toLowerCase().includes(query.trim().toLowerCase()));
+  return (
+    <Page title="Watchlist" description="Monitor the securities you want to trade.">
+      <div className={styles.toolbar}>
+        <Input aria-label="Filter your watchlist" placeholder="Search symbol or company" value={query} onChange={(event) => setQuery(event.value)} />
+        <Button themeColor="primary">Add symbol</Button>
+      </div>
+      <div className={styles.callout}>
+        <strong>Tech stocks</strong>
+        <span>Price alerts and quick trade actions are available from each security in the list.</span>
+      </div>
+      {filtered.length === 0
+        ? <DataState kind="no-results" title="No securities match" message="Try another symbol or clear the search." actionLabel="Clear search" onAction={() => setQuery("")} />
+        : <TransactionTable data={filtered} ariaLabel="Watchlist securities" columns={[
+          { field: "symbol", title: "Ticker" }, { field: "type", title: "Last activity" }, { field: "total", title: "Current value" }, { field: "status", title: "Alert status" }
+        ]} />}
+    </Page>
+  );
+};
 
 export const MarketsPage = () => (
   <Page title="Markets" description="Explore market movements and screen opportunities.">
@@ -67,23 +96,31 @@ export const MarketsPage = () => (
   </Page>
 );
 
-export const TransactionsPage = () => (
-  <Page title="Transaction history" description="Review your completed trades, dividends, and account activity.">
-    <div className={styles.toolbar}>
-      <Input aria-label="Search transactions" placeholder="Search symbol or transaction ID" />
-      <DropDownList aria-label="Filter transactions by type" data={["All activity", "Trades", "Dividends", "Transfers"]} defaultValue="All activity" />
-      <Button fillMode="outline">Export CSV</Button>
-    </div>
-    <Grid data={transactions} sortable pageable={{ pageSizes: true, buttonCount: 4 }}>
-      <GridColumn field="date" title="Date" />
-      <GridColumn field="type" title="Type" />
-      <GridColumn field="symbol" title="Symbol" />
-      <GridColumn field="quantity" title="Quantity" />
-      <GridColumn field="total" title="Amount" />
-      <GridColumn field="status" title="Status" />
-    </Grid>
-  </Page>
-);
+export const TransactionsPage = () => {
+  const [query, setQuery] = React.useState("");
+  const [type, setType] = React.useState("All activity");
+  const filtered = transactions.filter((item) => {
+    const matchesType = type === "All activity"
+      || (type === "Trades" && ["Buy", "Sell"].includes(item.type))
+      || (type === "Dividends" && item.type === "Dividend")
+      || (type === "Transfers" && ["Deposit", "Withdrawal"].includes(item.type));
+    return matchesType && `${item.date} ${item.type} ${item.symbol}`.toLowerCase().includes(query.trim().toLowerCase());
+  });
+  return (
+    <Page title="Transaction history" description="Review your completed trades, dividends, and account activity.">
+      <div className={styles.toolbar}>
+        <Input aria-label="Search transactions" placeholder="Search symbol or transaction ID" value={query} onChange={(event) => setQuery(event.value)} />
+        <DropDownList aria-label="Filter transactions by type" data={["All activity", "Trades", "Dividends", "Transfers"]} value={type} onChange={(event) => setType(event.value)} />
+        <Button fillMode="outline">Export CSV</Button>
+      </div>
+      {filtered.length === 0
+        ? <DataState kind="no-results" title="No transactions match" message="Try a different search or activity type." actionLabel="Reset filters" onAction={() => { setQuery(""); setType("All activity"); }} />
+        : <TransactionTable data={filtered} ariaLabel="Transaction history" columns={[
+          { field: "date", title: "Date" }, { field: "type", title: "Type" }, { field: "symbol", title: "Symbol" }, { field: "quantity", title: "Quantity" }, { field: "total", title: "Amount" }, { field: "status", title: "Status" }
+        ]} />}
+    </Page>
+  );
+};
 
 export const TradePage = () => (
   <Page title="Trade" description="Review an order before submitting it to the market.">
@@ -128,9 +165,9 @@ export const BillingPage = () => (
       <section className={styles.callout}><h3>Investor Plus</h3><strong className={styles.amount}>$12.00 / month</strong><p>Renews September 25, 2026.</p><Button themeColor="primary">Manage plan</Button></section>
       <section className={styles.callout}><h3>Default payment method</h3><p>Visa ending in 0429, expires 09/28</p><Button fillMode="outline">Update payment method</Button></section>
     </div>
-    <Grid data={[{ date: "Aug 25, 2026", description: "Investor Plus subscription", amount: "$12.00", status: "Paid" }]}>
-      <GridColumn field="date" title="Date" /><GridColumn field="description" title="Description" /><GridColumn field="amount" title="Amount" /><GridColumn field="status" title="Status" />
-    </Grid>
+    <TransactionTable data={[{ date: "Aug 25, 2026", type: "Investor Plus subscription", symbol: "—", quantity: 1, total: "$12.00", status: "Paid" }]} ariaLabel="Billing history" columns={[
+      { field: "date", title: "Date" }, { field: "type", title: "Description" }, { field: "total", title: "Amount" }, { field: "status", title: "Status" }
+    ]} />
   </Page>
 );
 

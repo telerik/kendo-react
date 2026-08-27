@@ -29,6 +29,7 @@ import styles from './stock.module.scss';
 import { dataService } from '../../services';
 import { useInternationalization } from '@progress/kendo-react-intl';
 import { getKendoColor } from '../../styles/tokens';
+import { DataState } from '../DataState/DataState';
 
 const DEFAULT_RANGE = {
     start: new Date(2019, 9, 28),
@@ -258,6 +259,9 @@ export const Stock = () => {
     const [range, setRange] = React.useState(DEFAULT_RANGE);
     const [interval, setInterval] = React.useState(DEFAULT_INTERVAL);
     const [type, setType] = React.useState<CHART_TYPES>(CHART_TYPES.candle);
+    const [status, setStatus] = React.useState<'loading' | 'ready' | 'error'>('loading');
+    const [errorMessage, setErrorMessage] = React.useState('');
+    const [retryKey, setRetryKey] = React.useState(0);
 
     const handleRangeChange = React.useMemo(
         () => (event: any) => {
@@ -274,11 +278,19 @@ export const Stock = () => {
     }
 
     const fetchData = React.useCallback(async () => {
-        const newData = await dataService.getSymbol(symbol);
-        setData(newData)
+        setStatus('loading');
+        setErrorMessage('');
+        try {
+            const newData = await dataService.getSymbol(symbol);
+            setData(newData);
+            setStatus('ready');
+        } catch (error) {
+            setStatus('error');
+            setErrorMessage(error instanceof Error ? error.message : 'The price history could not be loaded.');
+        }
     }, [symbol])
 
-    React.useEffect(() => { fetchData() }, [fetchData]);
+    React.useEffect(() => { fetchData() }, [fetchData, retryKey]);
 
 
     const chartComp: React.ReactNode = React.useMemo(() => {
@@ -323,7 +335,22 @@ export const Stock = () => {
             </div>
             <div className="row mt-3">
                 <div className="col" >
-                    {chartComp}
+                    {status === 'loading' && (
+                        <DataState kind="loading" title="Loading price history" message={`Fetching ${symbol} price history.`} />
+                    )}
+                    {status === 'error' && (
+                        <DataState
+                            kind="error"
+                            title="Price history unavailable"
+                            message={errorMessage}
+                            actionLabel="Try again"
+                            onAction={() => setRetryKey((key) => key + 1)}
+                        />
+                    )}
+                    {status === 'ready' && data.length === 0 && (
+                        <DataState kind="empty" title="No price history" message={`There is no chart data available for ${symbol}.`} />
+                    )}
+                    {status === 'ready' && data.length > 0 && chartComp}
                 </div>
             </div>
         </>

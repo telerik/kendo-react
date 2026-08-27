@@ -21,3 +21,17 @@
   font-size: var(--kendo-font-size-xs);
   color: var(--kendo-color-subtle);
 }
+
+.symbolPicker {
+  background-color: var(--kendo-color-surface-alt);
+  flex-direction: row-reverse;
+  width: 110px;
+}
+
+.removeButton {
+  color: var(--kendo-color-error);
+}
+
+:global(.k-dropdownlist) {
+  max-width: 100%;
+}

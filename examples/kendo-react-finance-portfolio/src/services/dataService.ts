@@ -38,28 +38,32 @@ export const dataService = {
             [SECTOR.HEALTHCARE]: 'health-symbols',
             [SECTOR.TECHNOLOGY]: 'tech-symbols',
         }
-        const resp = await fetch(`${import.meta.env.BASE_URL}data/${sectorMap[sector]}.json`);
-        const symbols = await resp.json();
+        const symbols = await requestJson<{ data: any[] }>(`${import.meta.env.BASE_URL}data/${sectorMap[sector]}.json`);
         return symbols.data;
     },
     getAllSymbols: async () => {
-        const health = await fetch(`${import.meta.env.BASE_URL}data/health-symbols.json`);
-        const tech = await fetch(`${import.meta.env.BASE_URL}data/tech-symbols.json`);
-
-        const healthSymbols = await health.json();
-        const techSymbols = await tech.json();
+        const [healthSymbols, techSymbols] = await Promise.all([
+            requestJson<{ data: any[] }>(`${import.meta.env.BASE_URL}data/health-symbols.json`),
+            requestJson<{ data: any[] }>(`${import.meta.env.BASE_URL}data/tech-symbols.json`)
+        ]);
 
         return healthSymbols.data.concat(techSymbols.data);
     },
     getOneDaySymbol: async (symbol: any) => {
-        const resp = await fetch(`${import.meta.env.BASE_URL}data/symbols/${symbol}1D.json`);
-        const data = await resp.json();
+        const data = await requestJson<any>(`${import.meta.env.BASE_URL}data/symbols/${symbol}1D.json`);
         return processData(data);
     },
     getSymbol: async (symbol: any) => {
-        const resp = await fetch(`${import.meta.env.BASE_URL}data/symbols/${symbol}5M.json`);
-        const data = await resp.json();
+        const data = await requestJson<any>(`${import.meta.env.BASE_URL}data/symbols/${symbol}5M.json`);
 
         return processData(data);
     }
+}
+
+async function requestJson<T>(url: string): Promise<T> {
+    const response = await fetch(url);
+    if (!response.ok) {
+        throw new Error(`Data request failed (${response.status})`);
+    }
+    return response.json() as Promise<T>;
 }

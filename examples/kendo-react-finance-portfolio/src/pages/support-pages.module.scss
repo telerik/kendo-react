@@ -88,6 +88,60 @@
   small {
     color: var(--kendo-color-subtle);
   }
+
+  .mobileCards {
+    display: none;
+  }
+
+  .dataCard {
+    background: var(--kendo-color-surface-alt);
+    border: 1px solid var(--kendo-color-border);
+    border-radius: var(--kendo-border-radius-md);
+    margin-bottom: var(--kendo-spacing-3);
+    padding: var(--kendo-spacing-4);
+
+    dl {
+      display: grid;
+      gap: var(--kendo-spacing-3);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin: var(--kendo-spacing-4) 0 0;
+    }
+
+    dt {
+      color: var(--kendo-color-subtle);
+      font-size: var(--kendo-font-size-xs);
+    }
+
+    dd {
+      margin: var(--kendo-spacing-1) 0 0;
+      overflow-wrap: anywhere;
+    }
+  }
+
+  .dataCardHeader {
+    align-items: center;
+    display: flex;
+    gap: var(--kendo-spacing-3);
+    justify-content: space-between;
+  }
+
+  .status,
+  .positive {
+    border-radius: var(--kendo-border-radius-sm);
+    font-size: var(--kendo-font-size-xs);
+    font-weight: var(--kendo-font-weight-medium);
+    padding: var(--kendo-spacing-1) var(--kendo-spacing-2);
+  }
+
+  .status {
+    background: var(--kendo-color-base-subtle);
+    color: var(--kendo-color-on-base);
+  }
+
+  .positive {
+    background: var(--kendo-color-success-subtle);
+    color: var(--kendo-color-success-on-subtle);
+  }
 }
 
 .auth {
@@ -109,8 +163,16 @@
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .toolbar, .split, .settings {
     grid-template-columns: 1fr;
+  }
+
+  .desktopTable {
+    display: none !important;
+  }
+
+  .mobileCards {
+    display: block;
   }
 }

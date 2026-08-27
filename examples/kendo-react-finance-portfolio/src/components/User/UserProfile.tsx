@@ -7,17 +7,29 @@ import styles from './user.module.scss';
 import { SvgIcon, classNames } from '@progress/kendo-react-common';
 import { useNavigate } from 'react-router-dom';
 import { xIcon } from '@progress/kendo-svg-icons';
+import { DataState } from '../DataState/DataState';
 
 export const UserProfile = () => {
     const history = useNavigate();
     const [data, setData] = React.useState<any[]>([]);
+    const [status, setStatus] = React.useState<'loading' | 'ready' | 'error'>('loading');
+    const [errorMessage, setErrorMessage] = React.useState('');
+    const [retryKey, setRetryKey] = React.useState(0);
     const fetchData = React.useCallback(async () => {
-        const newData = await dataService.getAllSymbols();
-        const parsedData = newData.map((item: any) => {
-            item.proportion = Math.random() / 10;
-            return item;
-        })
-        setData(parsedData)
+        setStatus('loading');
+        setErrorMessage('');
+        try {
+            const newData = await dataService.getAllSymbols();
+            const parsedData = newData.map((item: any) => ({
+                ...item,
+                proportion: Math.random() / 10
+            }));
+            setData(parsedData);
+            setStatus('ready');
+        } catch (error) {
+            setStatus('error');
+            setErrorMessage(error instanceof Error ? error.message : 'Your portfolio could not be loaded.');
+        }
     }, [])
 
     const handleBackClick = React.useCallback(
@@ -33,7 +45,7 @@ export const UserProfile = () => {
             return symbol + " - " + proportion.toPrecision(3);
         }
     }
-    React.useEffect(() => { fetchData() }, [fetchData]);
+    React.useEffect(() => { fetchData() }, [fetchData, retryKey]);
 
     return (
         <div className={classNames(styles['wrapper-profile'], 'wrapper-profile')}>
@@ -78,20 +90,43 @@ export const UserProfile = () => {
                         </table>
                     </div>
                     <div className="col-12 col-lg-5">
-                        <Grid data={data}>
+                        {status === 'loading' && <DataState kind="loading" title="Loading portfolio" message="Fetching your current holdings." />}
+                        {status === 'error' && (
+                            <DataState kind="error" title="Portfolio unavailable" message={errorMessage} actionLabel="Try again" onAction={() => setRetryKey((key) => key + 1)} />
+                        )}
+                        {status === 'ready' && data.length === 0 && <DataState kind="empty" title="No holdings yet" message="Your portfolio will appear here when holdings are available." />}
+                        {status === 'ready' && data.length > 0 && <Grid className={styles['desktop-grid']} data={data}>
                             <GridColumn field='symbol' title="Symbol" className={styles['symbol-cell']} />
                             <GridColumn field='name' title="Name" width={200} />
                             <GridColumn field="proportion" title='Proportion' format={"{0:p2}"} />
-                        </Grid>
+                        </Grid>}
+                        {status === 'ready' && data.length > 0 && (
+                            <div className={styles['mobile-cards']} aria-label="Portfolio holdings">
+                                {data.map((item) => (
+                                    <article className={styles['holding-card']} key={item.symbol}>
+                                        <div>
+                                            <strong className={styles['symbol-cell']}>{item.symbol}</strong>
+                                            <span>{item.name}</span>
+                                        </div>
+                                        <div>
+                                            <span>Portfolio proportion</span>
+                                            <strong>{`${(item.proportion * 100).toFixed(2)}%`}</strong>
+                                        </div>
+                                    </article>
+                                ))}
+                            </div>
+                        )}
                     </div>
                     <div className="col-12 col-lg-4">
-                        <Chart>
-                            <ChartLegend position='bottom' />
-                            <ChartTooltip render={tooltipRender} />
-                            <ChartSeries>
-                                <ChartSeriesItem data={data} field='proportion' type='pie' />
-                            </ChartSeries>
-                        </Chart>
+                        {status === 'ready' && data.length > 0 && (
+                            <Chart>
+                                <ChartLegend position='bottom' />
+                                <ChartTooltip render={tooltipRender} />
+                                <ChartSeries>
+                                    <ChartSeriesItem data={data} field='proportion' type='pie' />
+                                </ChartSeries>
+                            </Chart>
+                        )}
                     </div>
                 </div>
             </div>
