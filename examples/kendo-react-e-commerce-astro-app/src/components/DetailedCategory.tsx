@@ -78,13 +78,11 @@ const ShoppingCartList: React.FC = () => {
           <div
             className="cart__item"
             key={item.product.id}
-            style={{ height: "120px" }}
           >
             <img
               className="cart__image"
               src={item.product.img} 
               alt={item.product.title}
-              style={{ maxHeight: "120px" }}
             />
             <div className="cart__item-details">
               <span>{item.product.title}</span>

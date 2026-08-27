@@ -81,17 +81,11 @@ export const ShoppingCartList: React.FC = () => {
               <div
                 className="cart__item"
                 key={item.id}
-                style={{
-                  height: '120px',
-                }}
               >
                 <img
                   className="cart__image"
                   src={item.img}
                   alt={item.title}
-                  style={{
-                    maxHeight: '120px',
-                  }}
                 />
                 <div className="cart__item-details">
                   <span>{item.title}</span>

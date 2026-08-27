@@ -13,7 +13,6 @@ export const BackgroundImage = (props: BackgroundImageProps) => {
       className="hero"
       style={{
         backgroundImage: `url(${img})`,
-        height: "740px"
       }}
     >
       <div className="hero__overlay">

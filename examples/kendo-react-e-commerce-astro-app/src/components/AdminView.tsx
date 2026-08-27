@@ -114,12 +114,12 @@ const AdminView: React.FC = () => {
 
   return (
     <>
-      <div style={{ marginBottom: "10px" }}>
+      <div className="admin-view__actions">
         <Button
           svgIcon={chartAreaStackedIcon}
           onClick={handleSelectedChart}
           disabled={disabled}
-          style={{ marginRight: "10px" }}
+          className="admin-view__selected-chart"
         >
           {t.chartSelectedDataButton}
         </Button>

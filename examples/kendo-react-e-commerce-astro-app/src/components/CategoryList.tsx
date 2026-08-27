@@ -56,7 +56,6 @@ export const CategoryList: React.FC<CategoryListProps> = ({
               >
                 <img
                   height={'319px'}
-                  width={'100%'}
                   src={card.img}
                   alt={t[card.collectionTextKey] || card.collectionText}
                 />
