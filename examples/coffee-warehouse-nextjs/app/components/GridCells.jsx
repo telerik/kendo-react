@@ -18,14 +18,15 @@ import { images } from "./../resources/images";
 export const FullNameCell = (props) => {
   const customerPhotoStyle = {
     display: "inline-block",
-    width: 32,
-    height: 32,
+    width: "var(--kendo-spacing-8)",
+    height: "var(--kendo-spacing-8)",
     borderRadius: "50%",
-    backgroundSize: "32px 35px",
+    backgroundSize: "var(--kendo-spacing-8) 35px",
     backgroundPosition: "center center",
     verticalAlign: "middle",
-    lineHeight: "32px",
-    boxShadow: "inset 0 0 1px #999, inset 0 0 10px rgba(0,0,0,.2)",
+    lineHeight: "var(--kendo-spacing-8)",
+    boxShadow:
+      "inset 0 0 var(--kendo-spacing-1px) var(--kendo-color-border), inset 0 0 var(--kendo-spacing-10) color-mix(in srgb, var(--kendo-color-on-app-surface) var(--kendo-translucency-base), transparent)",
     marginLeft: "var(--kendo-spacing-1)",
     backgroundImage: images[props.dataItem.imgId + props.dataItem.gender],
   };
@@ -33,7 +34,7 @@ export const FullNameCell = (props) => {
   const customerName = {
     display: "inline-block",
     verticalAlign: "middle",
-    lineHeight: "32px",
+    lineHeight: "var(--kendo-spacing-8)",
     paddingLeft: "var(--kendo-spacing-2\\.5)",
   };
 

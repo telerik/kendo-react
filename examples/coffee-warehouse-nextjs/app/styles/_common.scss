@@ -171,9 +171,9 @@ a {
 
     .k-avatar {
         display: block;
-        width: 40px;
-        height: 40px;
-        flex-basis: 40px;
+        width: var(--kendo-spacing-10);
+        height: var(--kendo-spacing-10);
+        flex-basis: var(--kendo-spacing-10);
         margin: 0 var(--kendo-spacing-6);
         box-shadow: 0 0 0 var(--kendo-spacing-1px) $on-dark-color;
     }
@@ -414,7 +414,7 @@ a {
         text-align: center;
         h1 {
             font-size: 48px;
-            font-weight: bold;
+            font-weight: var(--kendo-font-weight-bold);
             color: $react-color;
         }
 
@@ -471,8 +471,8 @@ a {
     }
 
     .package-title a {
-        font-size: 17px;
-        color: #CCCCCC;
+        font-size: var(--kendo-font-size-lg);
+        color: var(--kendo-color-subtle);
         text-transform: uppercase;
     }
 
