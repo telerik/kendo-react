@@ -24,7 +24,10 @@ export const Header = (props) => {
     const localizationService = useLocalization();
     const navigate = useNavigate();
 
-    const currentLanguage = locales.find(item => item.localeId === localeId);
+    const localizedLocales = locales.map(item => ({
+        ...item,
+        locale: localizationService.toLanguageString(`custom.locale${item.locale}`)
+    }));
 
     const imgRef = React.useRef(null);
     const hasImage = avatar && avatar.length > 0;
@@ -48,31 +51,31 @@ export const Header = (props) => {
         <header className="header" style={{ backgroundImage: `url(${headerBg})` }}>
             <div className="nav-container">
                 <div className="menu-button">
-                    <Button fillMode="flat" svgIcon={menuIcon} aria-label="Open navigation" onClick={onButtonClick} />
+                    <Button fillMode="flat" svgIcon={menuIcon} aria-label={localizationService.toLanguageString('custom.openNavigation')} onClick={onButtonClick} />
                 </div>
 
                 <div className="title">
                     <h1>{localizationService.toLanguageString('custom.warehouse')}</h1>
                 </div>
                 <div className="settings">
-                    <Input className="header-search" aria-label="Search the warehouse" placeholder="Search warehouse" />
+                    <Input className="header-search" aria-label={localizationService.toLanguageString('custom.searchWarehouse')} placeholder={localizationService.toLanguageString('custom.searchWarehouse')} />
                     <div className="header-notifications">
-                        <Button fillMode="flat" svgIcon={bellIcon} aria-label="Open notifications" onClick={() => navigate('/notifications')} />
+                        <Button fillMode="flat" svgIcon={bellIcon} aria-label={localizationService.toLanguageString('custom.openNotifications')} onClick={() => navigate('/notifications')} />
                         <Badge themeColor="error" shape="dot" />
                     </div>
                     <DropDownList
                         textField={'locale'}
                         dataItemKey={'localeId'}
-                        data={locales}
-                        value={currentLanguage}
+                        data={localizedLocales}
+                        value={localizedLocales.find(item => item.localeId === localeId)}
                         onChange={onLanguageChange}
                     />
                 </div>
                 <Avatar type={'image'} shape={'circle'}>
                     {
                         hasImage ?
-                            <img ref={imgRef} src={'#'} alt={'User Avatar'} /> :
-                            <img src={userAvatar} alt="user-avatar" />
+                            <img ref={imgRef} src={'#'} alt={localizationService.toLanguageString('custom.userAvatar')} /> :
+                            <img src={userAvatar} alt={localizationService.toLanguageString('custom.userAvatar')} />
                     }
                 </Avatar>
             </div>

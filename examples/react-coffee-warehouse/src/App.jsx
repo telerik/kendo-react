@@ -71,7 +71,7 @@ const App = () => {
         email: 'peter.douglas@progress.com',
         phoneNumber: '(+1) 8373-837-93-02',
         avatar: null,
-        country: countries[33].name,
+        country: countries[33].code,
         isInPublicDirectory: true,
         biography: '',
         teamId: 1

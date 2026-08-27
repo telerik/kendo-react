@@ -12,6 +12,7 @@ import { employees } from './../resources/employees';
 import { images } from './../resources/images';
 import { orders, ordersModelFields } from './../resources/orders';
 import { teams } from './../resources/teams';
+import { translate } from './../resources/localization';
 
 const orderEmployees = employees.filter(employee => employee.jobTitle === 'Sales Representative');
 const initialFilterState = { };
@@ -26,6 +27,14 @@ orderEmployees.forEach(employee => {
 
 const Planning = () => {
     const localizationService = useLocalization();
+    const localize = React.useCallback(
+        (key, ...values) => translate(localizationService, key, ...values),
+        [localizationService]
+    );
+    const localizedTeams = teams.map(team => ({
+        ...team,
+        teamName: localizationService.toLanguageString(`custom.team${team.teamID}`)
+    }));
     const [filterState, setFilterState] = React.useState(initialFilterState);
     const [data, setData] = React.useState(orders);
 
@@ -63,13 +72,13 @@ const Planning = () => {
 
     return (
         <main id="Planning" className="planning-page main-content">
-            <PageHeader title="Team planning" description="Assign sales representatives to scheduled order activity." meta="Work week: Apr 27 - May 3" />
+            <PageHeader title={localize('planningTitle')} description={localize('planningDescription')} meta={localize('planningWorkWeek')} />
             <div className="card-container grid">
-                <div className="card-title"><h2>{localizationService.toLanguageString('custom.teamCalendar')}</h2><p>Select team members to include in the shared schedule.</p></div>
+                <div className="card-title"><h2>{localizationService.toLanguageString('custom.teamCalendar')}</h2><p>{localize('teamCalendarDescription')}</p></div>
                 {
 
                     orderEmployees.map(employee => {
-                        const teamColor = teams.find(({ teamID }) => teamID === employee.teamId).teamColor;
+                        const teamColor = localizedTeams.find(({ teamID }) => teamID === employee.teamId).teamColor;
 
                         return (
                             <div
@@ -79,7 +88,7 @@ const Planning = () => {
                                 role="button"
                                 tabIndex={0}
                                 aria-pressed={filterState[employee.id]}
-                                aria-label={`${employee.fullName}: ${filterState[employee.id] ? 'included in' : 'excluded from'} schedule`}
+                                aria-label={`${employee.fullName}: ${filterState[employee.id] ? localize('includedInSchedule') : localize('excludedFromSchedule')}`}
                                 className={`planning-employee${filterState[employee.id] ? '' : ' planning-employee--disabled'}`}
                                 style={{ '--planning-team-color': teamColor }}
                             >
@@ -93,7 +102,7 @@ const Planning = () => {
                                         </Avatar>
                                         <div>
                                             <CardTitle className="planning-employee-name">{employee.fullName}</CardTitle>
-                                            <CardSubtitle>{employee.jobTitle}</CardSubtitle>
+                                            <CardSubtitle>{localize('salesRepresentative')}</CardSubtitle>
                                         </div>
                                     </CardHeader>
                                 </Card>
@@ -109,8 +118,8 @@ const Planning = () => {
                         modelFields={ordersModelFields}
                         resources={[
                             {
-                                name: 'Teams',
-                                data: teams,
+                                name: localize('schedulerTeams'),
+                                data: localizedTeams,
                                 field: 'teamID',
                                 valueField: 'teamID',
                                 textField: 'teamName',

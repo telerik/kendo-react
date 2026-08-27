@@ -10,6 +10,7 @@ import { Badge } from '@progress/kendo-react-indicators';
 import {
     useInternationalization
 } from '@progress/kendo-react-intl';
+import { useLocalization } from '@progress/kendo-react-intl';
 
 import { images } from './../resources/images';
 import { SvgIcon } from '@progress/kendo-react-common';
@@ -74,6 +75,7 @@ export const RatingCell = (props) => {
 };
 
 export const OnlineCell = (props) => {
+    const localizationService = useLocalization();
     if (props.rowType === 'groupHeader') {
         return null;
     }
@@ -83,8 +85,8 @@ export const OnlineCell = (props) => {
 
             {
                 props.dataItem.isOnline === true ?
-                    <Badge themeColor={'success'} shape={'rounded'} className="grid-cell-badge">Online</Badge> :
-                    <Badge themeColor={'error'} shape={'rounded'} className="grid-cell-badge">Offline</Badge>
+                    <Badge themeColor={'success'} shape={'rounded'} className="grid-cell-badge">{localizationService.toLanguageString('custom.online')}</Badge> :
+                    <Badge themeColor={'error'} shape={'rounded'} className="grid-cell-badge">{localizationService.toLanguageString('custom.offline')}</Badge>
             }
         </td>
     );

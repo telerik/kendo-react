@@ -12,18 +12,18 @@ const Info = () => {
         <div id="Info" className="info-page main-content">
             <div className="content">
                     <div className="kendoka">
-                        <img src={kendoka} alt="kendoka" />
+                        <img src={kendoka} alt={localizationService.toLanguageString('custom.kendokaIllustration')} />
                     </div>
                     <div className="section-1">
-                        <h1>KendoReact</h1>
-                    <h2>Master the Art of React UI</h2>
+                        <h1>{localizationService.toLanguageString('custom.productName')}</h1>
+                    <h2>{localizationService.toLanguageString('custom.masterReactUi')}</h2>
                         <div className="button-group">
                             <Button themeColor={"primary"} rounded={"small"} onClick={()=>{window.open("https://www.telerik.com/download-login-v2-kendo-react-ui")}}>{localizationService.toLanguageString('custom.startFreeTrial')}</Button>
                             <Button rounded={"small"} onClick={()=>{window.open("https://www.telerik.com/kendo-react-ui/#pricing")}}>{localizationService.toLanguageString('custom.buyNow')}</Button>
                         </div>
 
                         <a className="github-link" href="https://github.com/telerik/kendo-react/tree/master/examples/react-coffee-warehouse">
-                            <img src={github} alt="github icon" />
+                            <img src={github} alt={localizationService.toLanguageString('custom.githubIcon')} />
                             <span className="github-text">
                                 {localizationService.toLanguageString('custom.getSource')}
                             </span>
@@ -38,14 +38,14 @@ const Info = () => {
                         <div>
                             <div className="package-item">
                                 <h3 className="package-title">
-                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/buttons/">Buttons</a>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/buttons/">{localizationService.toLanguageString('custom.buttons')}</a>
                                 </h3>
                                 <ul className="package-items">
                                     <li className="component-link">
-                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/buttons/button">Button</a>
+                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/buttons/button">{localizationService.toLanguageString('custom.button')}</a>
                                     </li>
                                     <li className="component-link">
-                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/buttons/buttongroup">ButtonGroup</a>
+                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/buttons/buttongroup">{localizationService.toLanguageString('custom.buttonGroup')}</a>
                                     </li>
                                 </ul>
                             </div>
@@ -53,24 +53,24 @@ const Info = () => {
                         <div>
                             <div className="package-item">
                                 <h3 className="package-title">
-                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/dataquery/">Data Query</a>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/dataquery/">{localizationService.toLanguageString('custom.dataQuery')}</a>
                                 </h3>
                             </div>
                         </div>
                         <div>
                             <div className="package-item">
                                 <h3 className="package-title">
-                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/charts/">Charts</a>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/charts/">{localizationService.toLanguageString('custom.charts')}</a>
                                 </h3>
                                 <ul className="package-items">
                                     <li className="component-link">
-                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/charts/chart">Chart</a>
+                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/charts/chart">{localizationService.toLanguageString('custom.chart')}</a>
                                     </li>
                                     <li className="component-link">
-                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/bar">Column Bar</a>
+                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/bar">{localizationService.toLanguageString('custom.columnBar')}</a>
                                     </li>
                                     <li className="component-link">
-                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/line">Horizontal Line</a>
+                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/charts/series-types/line">{localizationService.toLanguageString('custom.horizontalLine')}</a>
                                     </li>
                                 </ul>
                             </div>
@@ -78,11 +78,11 @@ const Info = () => {
                         <div>
                             <div className="package-item">
                                 <h3 className="package-title">
-                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/datatools/">Data Tools</a>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/datatools/">{localizationService.toLanguageString('custom.dataTools')}</a>
                                 </h3>
                                 <ul className="package-items">
                                     <li className="component-link">
-                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/datatools/pager">Pager</a>
+                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/datatools/pager">{localizationService.toLanguageString('custom.pager')}</a>
                                     </li>
                                 </ul>
                             </div>
@@ -90,11 +90,11 @@ const Info = () => {
                         <div>
                             <div className="package-item">
                                 <h3 className="package-title">
-                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/dateinputs/">Date Inputs</a>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/dateinputs/">{localizationService.toLanguageString('custom.dateInputs')}</a>
                                 </h3>
                                 <ul className="package-items">
                                     <li className="component-link">
-                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/dateinputs/daterangepicker">DateRangePicker</a>
+                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/dateinputs/daterangepicker">{localizationService.toLanguageString('custom.dateRangePicker')}</a>
                                     </li>
                                 </ul>
                             </div>
@@ -102,11 +102,11 @@ const Info = () => {
                         <div>
                             <div className="package-item">
                                 <h3 className="package-title">
-                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/dialogs/">Dialogs</a>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/dialogs/">{localizationService.toLanguageString('custom.dialogs')}</a>
                                 </h3>
                                 <ul className="package-items">
                                     <li className="component-link">
-                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/dialogs/dialog">Dialog</a>
+                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/dialogs/dialog">{localizationService.toLanguageString('custom.dialog')}</a>
                                     </li>
                                 </ul>
                             </div>
@@ -114,21 +114,21 @@ const Info = () => {
                         <div>
                             <div className="package-item">
                                 <h3 className="package-title">
-                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/drawing/">Drawing</a>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/drawing/">{localizationService.toLanguageString('custom.drawing')}</a>
                                 </h3>
                             </div>
                         </div>
                         <div>
                             <div className="package-item">
                                 <h3 className="package-title">
-                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/dropdowns/">Dropdowns</a>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/dropdowns/">{localizationService.toLanguageString('custom.dropdowns')}</a>
                                 </h3>
                                 <ul className="package-items">
                                     <li className="component-link">
-                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/dropdowns/autocomplete">AutoComplete</a>
+                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/dropdowns/autocomplete">{localizationService.toLanguageString('custom.autoComplete')}</a>
                                     </li>
                                     <li className="component-link">
-                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/dropdowns/dropdownlist">DropDownList</a>
+                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/dropdowns/dropdownlist">{localizationService.toLanguageString('custom.dropDownList')}</a>
                                     </li>
                                 </ul>
                             </div>
@@ -136,48 +136,48 @@ const Info = () => {
                         <div>
                             <div className="package-item">
                                 <h3 className="package-title">
-                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/editor/">Editor</a>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/editor/">{localizationService.toLanguageString('custom.editor')}</a>
                                 </h3>
                             </div>
                         </div>
                         <div>
                             <div className="package-item">
                                 <h3 className="package-title">
-                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/excelexport/">Excel Export</a>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/excelexport/">{localizationService.toLanguageString('custom.excelExport')}</a>
                                 </h3>
                             </div>
                         </div>
                         <div>
                             <div className="package-item">
                                 <h3 className="package-title">
-                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/form/">Form</a>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/form/">{localizationService.toLanguageString('custom.form')}</a>
                                 </h3>
                             </div>
                         </div>
                         <div>
                             <div className="package-item">
                                 <h3 className="package-title">
-                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/grid/">Grid</a>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/grid/">{localizationService.toLanguageString('custom.grid')}</a>
                                 </h3>
                             </div>
                         </div>
                         <div>
                             <div className="package-item">
                                 <h3 className="package-title">
-                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/inputs/">Inputs</a>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/inputs/">{localizationService.toLanguageString('custom.inputs')}</a>
                                 </h3>
                                 <ul className="package-items">
                                     <li className="component-link">
-                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/inputs/checkbox">Checkbox</a>
+                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/inputs/checkbox">{localizationService.toLanguageString('custom.checkbox')}</a>
                                     </li>
                                     <li className="component-link">
-                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/inputs/input">Input</a>
+                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/inputs/input">{localizationService.toLanguageString('custom.input')}</a>
                                     </li>
                                     <li className="component-link">
-                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/inputs/maskedtextbox">MaskedTextBox</a>
+                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/inputs/maskedtextbox">{localizationService.toLanguageString('custom.maskedTextBox')}</a>
                                     </li>
                                     <li className="component-link">
-                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/inputs/switch">Switch</a>
+                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/inputs/switch">{localizationService.toLanguageString('custom.switch')}</a>
                                     </li>
                                 </ul>
                             </div>
@@ -185,17 +185,17 @@ const Info = () => {
                         <div>
                             <div className="package-item">
                                 <h3 className="package-title">
-                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/layout/">Layout</a>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/layout/">{localizationService.toLanguageString('custom.layout')}</a>
                                 </h3>
                                 <ul className="package-items">
                                     <li className="component-link">
-                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/layout/avatar">Avatar</a>
+                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/layout/avatar">{localizationService.toLanguageString('custom.avatar')}</a>
                                     </li>
                                     <li className="component-link">
-                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/layout/card">Card</a>
+                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/layout/card">{localizationService.toLanguageString('custom.card')}</a>
                                     </li>
                                     <li className="component-link">
-                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/layout/drawer">Drawer</a>
+                                        <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/layout/drawer">{localizationService.toLanguageString('custom.drawer')}</a>
                                     </li>
                                 </ul>
                             </div>
@@ -203,21 +203,21 @@ const Info = () => {
                         <div>
                             <div className="package-item">
                                 <h3 className="package-title">
-                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/scheduler/">Scheduler</a>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/scheduler/">{localizationService.toLanguageString('custom.scheduler')}</a>
                                 </h3>
                             </div>
                         </div>
                         <div>
                             <div className="package-item">
                                 <h3 className="package-title">
-                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/tooltip/">Tooltip</a>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/tooltip/">{localizationService.toLanguageString('custom.tooltip')}</a>
                                 </h3>
                             </div>
                         </div>
                         <div>
                             <div className="package-item">
                                 <h3 className="package-title">
-                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/upload/">Upload</a>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.telerik.com/kendo-react-ui/components/upload/">{localizationService.toLanguageString('custom.upload')}</a>
                                 </h3>
                             </div>
                         </div>
