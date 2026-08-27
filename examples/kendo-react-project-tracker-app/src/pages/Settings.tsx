@@ -8,6 +8,7 @@ import { ColorPalette, ColorPaletteChangeEvent, InputSuffix, Switch, TextBox } f
 import { Popup } from "@progress/kendo-react-popup";
 import { AutoComplete, DropDownList } from "@progress/kendo-react-dropdowns";
 import { useNavigate } from 'react-router-dom';
+import PageFooter from "../components/PageFooter";
 
 interface DataModel {
   id: string;
@@ -31,6 +32,11 @@ const stepperItems = [
   { label: 'Account Security', svgIcon: lockIcon },
   { label: 'Preferences', svgIcon: wrenchIcon }
 ];
+
+const colorPalette = ['#9C38FF', '#800000', '#333333', '#218247', '#DB0000', '#8F7200',
+  '#008B8B', '#C14E34', '#027EB5', '#267B92', '#637282', '#191970',
+  '#7B3F00', '#607F1F', '#DC147F', '#5769D2', '#3C73A2', '#4B0082'];
+const avatarTones = ['primary', 'secondary', 'tertiary', 'info', 'success', 'warning'] as const;
 
 export default function Settings() {
   const [value, setValue] = React.useState<number>(0);
@@ -68,6 +74,7 @@ export default function Settings() {
     setColor(e.value);
     setShow(false);
   };
+  const avatarTone = avatarTones[(Math.max(colorPalette.indexOf(color), 0)) % avatarTones.length];
 
   const handleItemSelect = (e: BreadcrumbLinkMouseEvent) => {
     if (e.id === 'home') {
@@ -77,31 +84,29 @@ export default function Settings() {
 
   return (
     <>
-        <div style={{minHeight: 'calc(100vh - 106px)'}} className="flex flex-col p-10 gap-6">
-          <Breadcrumb data={breadcrumbItems} onItemSelect={handleItemSelect} className="!bg-app-surface" />
-          <h1 className="text-4xl">Settings</h1>
+        <main className="tracker-page">
+          <Breadcrumb data={breadcrumbItems} onItemSelect={handleItemSelect} className="tracker-page__breadcrumb" />
+          <h1 className="tracker-page__heading">Settings</h1>
 
         <Stepper items={stepperItems} value={value} onChange={handleChange} />
 
         {value === 0 && (
           <>
-            <div className="grid grid-cols-2 xl:grid-cols-3">
-              <div className="col-span-2 flex flex-col gap-6">
-                  <span className="text-lg text-subtle font-bold">Details</span>
-                  <div className="flex items-center gap-2">
-              <Avatar size="large" rounded="full" style={{ background: color }}>JD</Avatar>
+            <div className="settings-content">
+              <div className="settings-form">
+                  <h2 className="settings-section-title">Details</h2>
+                  <div className="tracker-modal__person">
+              <Avatar size="large" rounded="full" className={`tracker-avatar--${avatarTone}`}>JD</Avatar>
                       <Button svgIcon={pencilIcon} size="large" fillMode="flat" themeColor="primary" ref={anchor} onClick={openPalette} title="Change color">Change color</Button>
-                      <Popup anchor={anchor.current && anchor.current.element} show={show} popupClass={'popup-content'}>
+                      <Popup anchor={anchor.current && anchor.current.element} show={show} popupClass={'settings-palette'}>
                         <ColorPalette
                           onChange={handleColorChange}
                           columns={9}
-                          palette={['#9C38FF', '#800000', '#333333', '#218247', '#DB0000', '#8F7200',
-                            '#008B8B', '#C14E34', '#027EB5', '#267B92', '#637282', '#191970',
-                            '#7B3F00', '#607F1F', '#DC147F', '#5769D2', '#3C73A2', '#4B0082']}
+                          palette={colorPalette}
                         />
                     </Popup>
                   </div>
-                  <div className="grid grid-cols-2 gap-6">
+                  <div className="settings-fields">
                       <FloatingLabel label="First Name" editorId={'first-name'} editorValue={fNValue}>
                         <TextBox aria-label="First Name" size="large" value={fNValue} onChange={e => setFNValue(e.value as string)} suffix={() => {
                           return (
@@ -127,8 +132,8 @@ export default function Settings() {
                           }}/>
                       </FloatingLabel>
                   </div>
-                  <span className="text-lg text-subtle font-bold">Contacts</span>
-                  <div className="grid grid-cols-2 gap-6">
+                  <h2 className="settings-section-title">Contacts</h2>
+                  <div className="settings-fields">
                       <FloatingLabel label="Country" editorId={'country'} editorValue={countryValue} optional={true}>
                         <TextBox aria-label="Country" size="large" value={countryValue} onChange={e => setCountryValue(e.value as string)} suffix={() => {
                           return (
@@ -156,7 +161,7 @@ export default function Settings() {
                   </div>
               </div>
             </div>
-            <div className="flex gap-2 mt-4">
+            <div className="settings-actions">
                 <Button themeColor="primary" size="large" title="Save button">Save</Button>
                 <Button themeColor="primary" fillMode="outline" size="large" title="Cancel button">Cancel</Button>
             </div>
@@ -164,10 +169,10 @@ export default function Settings() {
         )}
         {value === 1 && (
           <>
-            <div className="grid grid-cols-2 xl:grid-cols-3">
-              <div className="col-span-2 flex flex-col gap-6">
-                  <span className="text-lg text-subtle font-bold">Password</span>
-                  <div className="grid grid-cols-2 gap-6">
+            <div className="settings-content">
+              <div className="settings-form">
+                  <h2 className="settings-section-title">Password</h2>
+                  <div className="settings-fields">
                     <FloatingLabel label="Old Password" editorId={'old-password'} editorValue={oldPassword}>
                         <TextBox aria-label="Old Password" type="password" size="large" value={oldPassword} onChange={e => setOldPassword(e.value as string)} suffix={() => {
                           return (
@@ -176,7 +181,7 @@ export default function Settings() {
                           </InputSuffix>)
                         }} />
                           </FloatingLabel>
-                      <FloatingLabel label="New Password" editorId={'new-password'} editorValue={newPassword} className="col-start-1">
+                      <FloatingLabel label="New Password" editorId={'new-password'} editorValue={newPassword} className="settings-fields__field--start">
                           <TextBox aria-label="New Password" type="password" size="large" value={newPassword} onChange={e => setNewPassowrd(e.value as string)} suffix={() => {
                             return (
                             <InputSuffix>
@@ -193,8 +198,8 @@ export default function Settings() {
                           }}/>
                       </FloatingLabel>
                   </div>
-                  <span className="text-lg text-subtle font-bold">Security Questions:</span>
-                  <div className="grid grid-cols-2 gap-6">
+                  <h2 className="settings-section-title">Security Questions:</h2>
+                  <div className="settings-fields">
                     <FloatingLabel label="Question 1" editorId={'question-1'} editorValue={question1}>
                         <TextBox aria-label="Question 1" size="large" value={question1} onChange={e => setQuestion1(e.value as string)} suffix={() => {
                           return (
@@ -246,7 +251,7 @@ export default function Settings() {
                   </div>
               </div>
             </div>
-            <div className="flex gap-2 mt-4">
+            <div className="settings-actions">
                 <Button themeColor="primary" size="large" title="Save button">Save</Button>
                 <Button themeColor="primary" fillMode="outline" size="large" title="Cancel button">Cancel</Button>
             </div>
@@ -254,25 +259,25 @@ export default function Settings() {
         )}
         {value === 2 && (
           <>
-            <div className="grid grid-cols-2 xl:grid-cols-3">
-              <div className="col-span-1 col-start-1 flex flex-col gap-6">
-                  <span className="text-lg text-subtle font-bold">Notification Settings:</span>
-                  <div className="grid gap-6">
-                      <div className="flex items-center justify-between">
+            <div className="settings-content">
+              <div className="settings-form">
+                  <h2 className="settings-section-title">Notification Settings:</h2>
+                  <div className="settings-preference-list">
+                      <div className="settings-preference">
                           <label>Email Notification</label>
                           <Switch onLabel="On" offLabel="Off" />
                       </div>
-                      <div className="flex items-center justify-between">
+                      <div className="settings-preference">
                           <label>SMS Notifications</label>
                           <Switch onLabel="On" offLabel="Off" />
                       </div>
-                      <div className="flex items-center justify-between">
+                      <div className="settings-preference">
                           <label>Push Notifications</label>
                           <Switch checked onLabel="On" offLabel="Off" />
                       </div>
                   </div>
-                  <span className="text-lg text-subtle font-bold">Language and Localization</span>
-                <div className="grid gap-6">
+                  <h2 className="settings-section-title">Language and Localization</h2>
+                <div className="settings-preference-list">
                       <FloatingLabel label="Preferred Language" editorId={'lang'} editorValue={lang}>
                       <AutoComplete size="large" defaultValue="-Select Language-"
                         data={["English",
@@ -321,16 +326,14 @@ export default function Settings() {
                   </div>
               </div>
             </div>
-            <div className="flex gap-2 mt-4">
+            <div className="settings-actions">
                 <Button themeColor="primary" size="large" title="Save button">Save</Button>
                 <Button themeColor="primary" fillMode="outline" size="large" title="Cancel button">Cancel</Button>
             </div>
           </>
         )}
-      </div>
-      <div className="bg-surface-alt color-subtle p-2 text-center">
-          <span>Copyright &#169; 2025 Progress Software. All rights reserved.</span>
-      </div>
+      </main>
+      <PageFooter />
     </>
   )
 }

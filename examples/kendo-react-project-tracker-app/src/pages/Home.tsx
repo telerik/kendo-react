@@ -8,6 +8,9 @@ import { pencilIcon, plusIcon, trashIcon } from "@progress/kendo-svg-icons";
 import { tasksData, listData, projectsData, teamsData } from "./data";
 import { useNavigate } from "react-router-dom";
 import React from "react";
+import PageFooter from "../components/PageFooter";
+
+const teamThemeColors = ["primary", "secondary", "tertiary", "base"] as const;
 
 export default function Home() {
     const navigate = useNavigate();
@@ -27,21 +30,21 @@ export default function Home() {
 
   return (
     <>
-      <div style={{ minHeight: 'calc(100vh - 106px)'}} className="bg-linear-[119deg,_#F8F9FF_-1.78%,_#F3F2FF_47.75%,_#E6F5FF_97.28%] overflow-auto p-10">
-        <h1 className="text-4xl text-subtle pb-6">Welcome John Porter 👋</h1>
-        <div className="grid grid-cols-[360px_1fr] lg:grid-cols-12 xl:grid-cols-[1fr_2fr_360px] gap-6">
-            <div className="col-span-2 lg:col-span-6 xl:col-span-2">
-                <Card className="rounded-2xl">
-                    <CardHeader className="border-0">
-                        <CardTitle className="font-medium">Projects</CardTitle>
+      <main className="tracker-page tracker-page--dashboard">
+        <h1 className="tracker-page__title">Welcome John Porter</h1>
+        <div className="dashboard-grid">
+            <div className="dashboard-card--projects">
+                <Card className="dashboard-card">
+                    <CardHeader className="tracker-card-header">
+                        <CardTitle className="dashboard-card__title">Projects</CardTitle>
                     </CardHeader>
                     <CardBody>
-                              <div className="grid grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-2">
+                              <div className="dashboard-project-list">
                                   {projectsData.slice(0, 5).map((project, index) => {
-                                      return <Card key={'project-' + index} className={`${index === 3 || index === 4 ? 'hidden 2xl:flex' : ''}`}>
-                                          <CardBody className="flex flex-col justify-between">
-                                              <div onClick={() => navigate('/projects')} className="cursor-pointer">
-                                                <CardTitle className="font-medium line-clamp-5 h-25.5">{project.ProjectName}</CardTitle>
+                                      return <Card key={'project-' + index} className="dashboard-project">
+                                          <CardBody className="dashboard-project__body">
+                                              <div onClick={() => navigate('/projects')} className="dashboard-team__link">
+                                                <CardTitle className="dashboard-project__title">{project.ProjectName}</CardTitle>
                                                 <div><Badge themeColor={
                                                     project.Priority === "Urgent"
                                                     ? "error"
@@ -52,57 +55,57 @@ export default function Home() {
                                                     : project.Priority === "Routine"
                                                     ? "tertiary"
                                                     : "primary"
-                                                } rounded="full" position={'inside'} align={{ vertical: 'bottom', horizontal: 'start' }} className="relative z-0">{project.Priority}</Badge></div>
+                                                } rounded="full" position={'inside'} align={{ vertical: 'bottom', horizontal: 'start' }} className="tracker-badge">{project.Priority}</Badge></div>
                                               </div>
                                           </CardBody>
                                       </Card>
                                   })}
                         </div>
                     </CardBody>
-                    <CardFooter className="border-0 p-2">
+                    <CardFooter className="dashboard-card__footer">
                         <Button fillMode="flat" themeColor="primary" onClick={handleSeeAllProjectsClick} title="See all projects">See all</Button>
                     </CardFooter>
                 </Card>
             </div>
-            <div className="col-span-2 sm:col-span-1 lg:col-span-6 xl:col-span-1">
-                <Calendar className="rounded-2xl w-full" value={date} onChange={e => setDate(e.value)} tabIndex={0}/>
+            <div className="dashboard-card--calendar">
+                <Calendar className="dashboard-card" value={date} onChange={e => setDate(e.value)} tabIndex={0}/>
             </div>
-            <div className="col-span-2 sm:col-span-1 lg:col-span-3 xl:col-span-1 h-72.5 lg:h-116">
-                <Card className="rounded-2xl overflow-auto max-h-72.5 lg:max-h-116">
-                    <CardHeader className="border-0">
-                        <CardTitle className="font-medium">Teams</CardTitle>
+            <div className="dashboard-card--teams">
+                <Card className="dashboard-card">
+                    <CardHeader className="tracker-card-header">
+                        <CardTitle className="dashboard-card__title">Teams</CardTitle>
                     </CardHeader>
-                    <CardBody className="flex flex-col gap-2">
+                    <CardBody className="dashboard-card__list">
                         {teamsData.slice(0, 4).map((team, index) => {
-                            return <Card key={'team-' + index} className={`${index === 2 || index === 3 ? 'hidden lg:flex' : ''}`}>
-                                    <div onClick={() => navigate('/team-management')} className="cursor-pointer">
-                                        <CardBody className="flex items-center">
-                                            <Avatar style={{ background: team.avatarColor }}>{team.teamCode}</Avatar>
-                                            <div className="block sm:hidden lg:block">
-                                                <CardTitle className="m-0 font-medium">{team.teamName.replace("Team", "")}</CardTitle>
-                                                <CardSubtitle className="m-0 truncate text-subtle">{team.teamMembers.length} members</CardSubtitle>
+                            return <Card key={'team-' + index} className="tracker-card">
+                                    <div onClick={() => navigate('/team-management')} className="dashboard-team__link">
+                                        <CardBody className="dashboard-team__body">
+                                            <Avatar themeColor={teamThemeColors[index % teamThemeColors.length]}>{team.teamCode}</Avatar>
+                                            <div className="tracker-card__copy">
+                                                <CardTitle className="tracker-card__title">{team.teamName.replace("Team", "")}</CardTitle>
+                                                <CardSubtitle className="tracker-card__subtitle">{team.teamMembers.length} members</CardSubtitle>
                                             </div>
                                         </CardBody>
                                     </div>
                             </Card>
                         })}
                     </CardBody>
-                    <CardFooter className="border-0 p-2">
+                    <CardFooter className="dashboard-card__footer">
                         <Button fillMode="flat" themeColor="primary" onClick={handleSeeAllTeamsClick} title="See all teams">See all</Button>
                     </CardFooter>
                 </Card>
             </div>
-            <div className="col-span-2 lg:col-span-4 xl:col-span-1 h-116">
-                <Card className="rounded-2xl h-full">
-                    <CardHeader className="border-0 flex flex-wrap justify-between items-center gap-2">
-                        <CardTitle className="font-medium">To-Do List</CardTitle>
+            <div className="dashboard-card--todo">
+                <Card className="dashboard-card">
+                    <CardHeader className="tracker-card-header">
+                        <CardTitle className="dashboard-card__title">To-Do List</CardTitle>
                         <Button fillMode="flat" themeColor="primary" svgIcon={plusIcon} title="Add more tasks">Add more tasks</Button>
                     </CardHeader>
-                    <CardBody className="h-full overflow-y-hidden">
-                              <div className="h-full overflow-y-auto">
-                                  {listData.map((item, index) => <div className="!flex !my-2 !gap-2 !p-0.5" key={'list-item-' + index}>
+                    <CardBody className="dashboard-card__scroll">
+                              <div className="dashboard-card__list">
+                                  {listData.map((item, index) => <div className="dashboard-team__body" key={'list-item-' + index}>
                                     <Checkbox rounded="small" label={item.text}/>
-                                    <div className="ml-auto shrink-0">
+                                    <div className="task-actions__secondary">
                                         <Button svgIcon={pencilIcon} fillMode="flat" title="Edit button"/>
                                         <Button svgIcon={trashIcon} fillMode="flat" themeColor="error" title="Delete button"/>
                                     </div>
@@ -111,27 +114,25 @@ export default function Home() {
                     </CardBody>
                 </Card>
             </div>
-            <div className="col-span-2 lg:col-span-5 xl:col-span-1 h-116">
-                <Card className="rounded-2xl h-full">
-                    <CardHeader className="border-0 flex justify-between items-center">
-                        <CardTitle className="font-medium">Tasks</CardTitle>
+            <div className="dashboard-card--tasks">
+                <Card className="dashboard-card">
+                    <CardHeader className="tracker-card-header">
+                        <CardTitle className="dashboard-card__title">Tasks</CardTitle>
                     </CardHeader>
-                    <CardBody className="h-full overflow-y-hidden">
-                        <Grid className="h-full" data={tasksData} navigatable={true}>
+                    <CardBody className="dashboard-card__scroll">
+                        <Grid className="tracker-grid__table" data={tasksData} navigatable={true}>
                             <GridColumn field="taskName" title="Task Name" />
-                            <GridColumn field="status" title="Status" width={115} />
+                            <GridColumn field="status" title="Status" />
                         </Grid>
                     </CardBody>
-                    <CardFooter className="border-0 p-2">
+                    <CardFooter className="dashboard-card__footer">
                               <Button fillMode="flat" themeColor="primary" onClick={handleSeeAllTasksClick} title="See all tasks">See all</Button>
                     </CardFooter>
                 </Card>
             </div>
         </div>
-    </div>
-    <div className="bg-surface-alt color-subtle p-2 text-center">
-        <span>Copyright &#169; 2025 Progress Software. All rights reserved.</span>
-    </div>
+    </main>
+    <PageFooter />
     </>
   )
 }

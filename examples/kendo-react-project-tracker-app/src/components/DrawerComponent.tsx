@@ -40,16 +40,15 @@ const DrawerComponent: React.FC<DrawerComponentProps> = ({ children }) => {
     <Drawer
       expanded={true}
       mode="push"
-      drawerClassName="!flex-none !sticky !bg-surface-alt !px-2 !py-10 !w-16 md:!w-60 [&_.k-drawer-wrapper]:!w-12 md:[&_.k-drawer-wrapper]:!w-56 !top-[70px] !h-[calc(100vh_-_70px)]"
+      drawerClassName="tracker-drawer"
       items={drawerItems.map(item => ({
         ...item,
         selected: item.text === selected,
       }))}
       onSelect={onSelect}
-      width={223}
     >
       <DrawerContent>
-        <div role="main">
+        <div role="main" className="tracker-drawer__content">
           {children}
         </div>
       </DrawerContent>

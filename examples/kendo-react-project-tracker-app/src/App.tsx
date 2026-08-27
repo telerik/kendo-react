@@ -13,7 +13,7 @@ import { Help, Notifications, NotFound, ProjectDetail } from "./pages/SupportPag
 
 export default function App() {
   return (
-    <>
+    <div className="tracker-app-shell">
       <BrowserRouter basename="/kendo-react/kendo-react-project-tracker-app">
         <AppBarComponent />
         <DrawerComponent>
@@ -34,6 +34,6 @@ export default function App() {
             </Routes>
         </DrawerComponent>
       </BrowserRouter>
-    </>
+    </div>
   )
 }

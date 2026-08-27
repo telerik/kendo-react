@@ -1,31 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
 @import "tailwindcss/theme.css";
 @import "tailwindcss/preflight.css";
 @import "tailwindcss/utilities.css";
-
-:root {
-    /* Preserve the application's brand bases; Meridian derives state variants. */
-    --kendo-color-app-surface: #f7f8fd;
-    --kendo-color-surface: #f7f8fd;
-    --kendo-color-surface-alt: #ffffff;
-    --kendo-color-on-app-surface: #494a52;
-    --kendo-color-subtle: #595a64;
-    --kendo-color-border: rgb(0 0 0 / 8%);
-    --kendo-color-border-alt: rgb(0 0 0 / 16%);
-    --kendo-color-base: #f6f6f6;
-    --kendo-color-primary: #5769d2;
-    --kendo-color-secondary: #2a5871;
-    --kendo-color-tertiary: oklch(from #03a9f4 calc(l - 0.15) c h);
-    --kendo-color-error: oklch(from #dc4839 calc(l - 0.05) c h);
-    --kendo-color-success: oklch(from #2fb34e calc(l - 0.15) c h);
-    --kendo-color-warning: oklch(from #f0b82a calc(l + 0.10) c calc(h + 10));
-    --kendo-color-info: #0058e9;
-    --kendo-color-inverse: #3d3d3d;
-    --kendo-font-family: "Roboto", sans-serif;
-    --kendo-font-family-sans: var(--kendo-font-family);
-    --kendo-translucency-base: 24%;
-}
+@import "./project-tracker.css";
 
 @theme inline {
     --color-app-surface: var(--kendo-color-app-surface);
@@ -34,47 +10,19 @@
     --color-surface: var(--kendo-color-surface);
     --color-surface-alt: var(--kendo-color-surface-alt);
     --color-border: var(--kendo-color-border);
-    --color-border-alt: var(--kendo-color-border-alt);
-    --color-base: var(--kendo-color-base);
     --color-primary: var(--kendo-color-primary);
-    --color-secondary: var(--kendo-color-secondary);
-    --color-tertiary: var(--kendo-color-tertiary);
     --color-info: var(--kendo-color-info);
     --color-success: var(--kendo-color-success);
     --color-warning: var(--kendo-color-warning);
     --color-error: var(--kendo-color-error);
-    --color-inverse: var(--kendo-color-inverse);
-
     --font-sans: var(--kendo-font-family);
-    --font-serif: var(--kendo-font-family-serif);
-    --font-mono: var(--kendo-font-family-monospace);
     --text-xs: var(--kendo-font-size-xs);
-    --text-xs--line-height: var(--kendo-line-height-xs);
     --text-sm: var(--kendo-font-size-sm);
-    --text-sm--line-height: var(--kendo-line-height-sm);
     --text-base: var(--kendo-font-size);
-    --text-base--line-height: var(--kendo-line-height);
     --text-lg: var(--kendo-font-size-lg);
-    --text-lg--line-height: var(--kendo-line-height-lg);
-
+    --text-4xl: var(--kendo-font-size-xxl);
     --spacing: var(--kendo-spacing-1);
-    --radius-none: var(--kendo-border-radius-none);
-    --radius-xs: var(--kendo-border-radius-xs);
-    --radius-sm: var(--kendo-border-radius-sm);
     --radius-md: var(--kendo-border-radius-md);
     --radius-lg: var(--kendo-border-radius-lg);
-    --radius-xl: var(--kendo-border-radius-xl);
     --radius-2xl: var(--kendo-border-radius-xxl);
-    --radius-3xl: var(--kendo-border-radius-xxxl);
-    --radius-4xl: var(--kendo-border-radius-xxxl);
-    --radius-full: var(--kendo-border-radius-full);
-    --ease-in: var(--kendo-easing-accelerate);
-    --ease-out: var(--kendo-easing-decelerate);
-    --ease-in-out: var(--kendo-easing-standard);
-
-    --breakpoint-sm: 576px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 992px;
-    --breakpoint-xl: 1200px;
-    --breakpoint-2xl: 1400px;
 }

@@ -20,17 +20,17 @@ export default function AppBarComponent() {
         setShow(false);
     };
     return (
-        <AppBar positionMode="sticky" className="bg-surface-alt !p-4">
-            <AppBarSection className="grow gap-4">
-                <div role="banner">
+        <AppBar positionMode="sticky" className="tracker-appbar">
+            <AppBarSection className="tracker-appbar__brand">
+                <div role="banner" className="tracker-appbar__brand">
                     <a href="#" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
-                        <img src={logo} alt="Logo" className="hidden md:flex" />
-                        <img src={compactLogo} alt="Logo" className="flex md:hidden" />
+                        <img src={logo} alt="Logo" className="tracker-appbar__logo" />
+                        <img src={compactLogo} alt="Logo" className="tracker-appbar__logo tracker-appbar__logo--compact" />
                     </a>
                 </div>
                 </AppBarSection>
 
-            <AppBarSection className="grow md:grow-0 !hidden sm:!inline-flex">
+            <AppBarSection className="tracker-appbar__search">
                 <div role="search">
                     <TextBox prefix={() => (
                             <>
@@ -42,27 +42,26 @@ export default function AppBarComponent() {
                         )}
                             placeholder="Search"
                             fillMode="solid"
-                            className="!w-75"
+                            className="tracker-appbar__search"
                     />
                 </div>
             </AppBarSection>
 
-            <AppBarSection className="sm:!hidden">
+            <AppBarSection className="tracker-appbar__search--compact">
                 <div role="search">
                     <Button fillMode="flat" svgIcon={searchIcon} title="Search button" />
                 </div>
             </AppBarSection>
 
-            <AppBarSection className="gap-2">
-                <div onClick={() => setShow(!show)} ref={anchor} role="contentinfo">
-                    <Avatar rounded="full" type="text" themeColor="primary" className="cursor-pointer">JP</Avatar>
+            <AppBarSection className="tracker-appbar__profile">
+                <div onClick={() => setShow(!show)} ref={anchor} role="contentinfo" className="tracker-appbar__profile-anchor">
+                    <Avatar rounded="full" type="text" themeColor="primary">JP</Avatar>
                 </div>
                 <Popover
                     show={show}
                     anchor={anchor.current}
                     position={'bottom'}
-                    style={{ width: '120px' }}
-                    className="[&_.k-popover-body]:!p-0"
+                    className="tracker-appbar__profile-popover"
                 >
                    <div className="k-list k-list-md">
                     <div className="k-list-content">
@@ -79,7 +78,7 @@ export default function AppBarComponent() {
                         </div>
                     </div>
                 </Popover>
-                <span className="k-appbar-separator border-border"></span>
+                <span className="k-appbar-separator"></span>
                 <BadgeContainer>
                     <Button svgIcon={bellIcon} fillMode="flat" title="Notifications" onClick={() => navigate('/notifications')} />
                     <Badge rounded="full" position="inside" align={{ vertical: 'top', horizontal: 'end' }} themeColor="primary">3</Badge>

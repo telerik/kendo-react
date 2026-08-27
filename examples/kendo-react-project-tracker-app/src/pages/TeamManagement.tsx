@@ -5,6 +5,9 @@ import { checkIcon, chevronRightIcon, groupIcon, homeIcon, listUnorderedSquareIc
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { teamsChips, teamsData } from "./data";
+import PageFooter from "../components/PageFooter";
+
+const teamThemeColors = ["primary", "secondary", "tertiary", "base"] as const;
 
 interface DataModel {
   id: string;
@@ -55,22 +58,22 @@ export default function TeamManagement() {
 
   return (
     <>
-      <div style={{minHeight: 'calc(100vh - 106px)'}} className="flex flex-col p-10 gap-6">
-            <Breadcrumb data={breadcrumbItems} onItemSelect={handleItemSelect} className="!bg-app-surface" />
+      <main className="tracker-page">
+            <Breadcrumb data={breadcrumbItems} onItemSelect={handleItemSelect} className="tracker-page__breadcrumb" />
 
             <div>
-                <h1 className="text-4xl">Team Management</h1>
-                <h2 className="text-subtle">18 teams</h2>
+                <h1 className="tracker-page__heading">Team Management</h1>
+                <h2 className="tracker-page__subtitle">18 teams</h2>
             </div>
 
-            <div className="flex justify-between items-start gap-6">
+            <div className="tracker-page__toolbar">
                 <ButtonGroup>
                     <Button svgIcon={groupIcon} togglable={true} selected={isGridView}
                       onClick={() => handleViewChange('grid')} title="Grid view button" />
                     <Button svgIcon={listUnorderedSquareIcon} togglable={true} selected={!isGridView}
                     onClick={() => handleViewChange('list')} title="List view button" />
                 </ButtonGroup>
-                <ChipList ariaLabel="Filter by Team" className="justify-end" data={teamsChips} selection="multiple" onChange={handleChipValueChange} value={chipValue}
+                <ChipList ariaLabel="Filter by Team" data={teamsChips} selection="multiple" onChange={handleChipValueChange} value={chipValue}
                     chip={(props: ChipProps) => (
                       <Chip
                         {...props}
@@ -81,27 +84,25 @@ export default function TeamManagement() {
                   )} />
             </div>
 
-            <GridLayout className={`${isGridView ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4' : 'grid-cols-1'}`} style={{gap: "var(--kendo-spacing-4) var(--kendo-spacing-6)"}}>
+            <GridLayout className={`tracker-grid${isGridView ? '' : ' tracker-grid--list'}`}>
                 {teams.map((team, index) => {
-                  return <Card key={index}>
-                    <CardBody className="flex items-center">
-                      <Avatar style={{ background: team.avatarColor }}>{team.teamCode}</Avatar>
-                      <div className="overflow-hidden">
-                        <CardTitle className="font-medium truncate">{team.teamName}</CardTitle>
-                        <CardSubtitle className="text-subtle m-0 truncate">{team.teamMembers.length} team members</CardSubtitle>
+                  return <Card key={index} className="tracker-card">
+                    <CardBody className="tracker-card__body">
+                      <Avatar themeColor={teamThemeColors[index % teamThemeColors.length]}>{team.teamCode}</Avatar>
+                      <div className="tracker-card__copy">
+                        <CardTitle className="tracker-card__title">{team.teamName}</CardTitle>
+                        <CardSubtitle className="tracker-card__subtitle">{team.teamMembers.length} team members</CardSubtitle>
                       </div>
                     </CardBody>
-                    <CardFooter className="border-0 p-2">
+                    <CardFooter className="tracker-card__footer">
                       <Button svgIcon={chevronRightIcon} fillMode="flat" onClick={() => navigate(`/team-management/${team.teamCode}`)} title="Explore team">Explore team</Button>
                     </CardFooter>
                   </Card>
                 })}
             </GridLayout>
 
-        </div>
-        <div className="bg-surface-alt color-subtle p-2 text-center">
-            <span>Copyright &#169; 2025 Progress Software. All rights reserved.</span>
-        </div>
+        </main>
+        <PageFooter />
     </>
   )
 }
