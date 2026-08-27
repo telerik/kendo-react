@@ -22,10 +22,14 @@ function Header(props: HeaderProps) {
     { itemIndex: 3, text: "Transactions", route: `${import.meta.env.BASE_URL}transactions` },
     { itemIndex: 4, text: "Investments", route: `${import.meta.env.BASE_URL}investments` },
     { itemIndex: 5, text: "Analytics", route: `${import.meta.env.BASE_URL}analytics` },
-    { itemIndex: 8, text: "Notifications", route: `${import.meta.env.BASE_URL}notifications` },
-    { itemIndex: 9, text: "Profile", route: `${import.meta.env.BASE_URL}profile` },
-    { itemIndex: 10, text: "Settings", route: `${import.meta.env.BASE_URL}settings` },
-    { itemIndex: 11, text: "Help & Support", route: `${import.meta.env.BASE_URL}help` },
+    { itemIndex: 7, text: "Account detail", route: `${import.meta.env.BASE_URL}accounts/checking` },
+    { itemIndex: 8, text: "Budgets", route: `${import.meta.env.BASE_URL}budgets` },
+    { itemIndex: 9, text: "Statements", route: `${import.meta.env.BASE_URL}statements` },
+    { itemIndex: 10, text: "Cards", route: `${import.meta.env.BASE_URL}cards` },
+    { itemIndex: 12, text: "Notifications", route: `${import.meta.env.BASE_URL}notifications` },
+    { itemIndex: 13, text: "Profile", route: `${import.meta.env.BASE_URL}profile` },
+    { itemIndex: 14, text: "Settings", route: `${import.meta.env.BASE_URL}settings` },
+    { itemIndex: 15, text: "Help & Support", route: `${import.meta.env.BASE_URL}help` },
   ];
 
   const navigateTo = React.useCallback((itemIndex: number, route: string) => {

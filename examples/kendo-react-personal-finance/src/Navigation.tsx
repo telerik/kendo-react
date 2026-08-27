@@ -13,6 +13,8 @@ import {
   bellIcon,
   questionCircleIcon,
   userIcon,
+  fileReportIcon,
+  walletIcon,
 } from "@progress/kendo-svg-icons";
 
 interface NavigationItem {
@@ -54,6 +56,26 @@ const items: NavigationItem[] = [
     text: "AI Assistant",
     route: `${import.meta.env.BASE_URL}ai-assistant`,
     svgIcon: sparklesIcon,
+  },
+  {
+    text: "Account detail",
+    route: `${import.meta.env.BASE_URL}accounts/checking`,
+    svgIcon: walletIcon,
+  },
+  {
+    text: "Budgets",
+    route: `${import.meta.env.BASE_URL}budgets`,
+    svgIcon: chartColumnStackedIcon,
+  },
+  {
+    text: "Statements",
+    route: `${import.meta.env.BASE_URL}statements`,
+    svgIcon: fileReportIcon,
+  },
+  {
+    text: "Cards",
+    route: `${import.meta.env.BASE_URL}cards`,
+    svgIcon: walletIcon,
   },
   {
     separator: true,
