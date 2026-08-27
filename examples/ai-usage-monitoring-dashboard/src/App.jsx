@@ -5,6 +5,7 @@ import { Switch, Input, TextArea } from '@progress/kendo-react-inputs';
 import { DropDownList } from '@progress/kendo-react-dropdowns';
 import { DatePicker } from '@progress/kendo-react-dateinputs';
 import { Grid, GridColumn } from '@progress/kendo-react-grid';
+import darkThemeUrl from '@progress/kendo-theme-meridian/dist/meridian-main-dark.css?url';
 import {
   Chart,
   ChartSeries,
@@ -81,6 +82,18 @@ function Dashboard() {
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', theme === 'dark');
+    const darkThemeId = 'kendo-meridian-dark-theme';
+    const darkThemeLink = document.getElementById(darkThemeId);
+
+    if (theme === 'dark' && !darkThemeLink) {
+      const link = document.createElement('link');
+      link.id = darkThemeId;
+      link.rel = 'stylesheet';
+      link.href = darkThemeUrl;
+      document.head.appendChild(link);
+    } else if (theme === 'light') {
+      darkThemeLink?.remove();
+    }
   }, [theme]);
 
   const hasValidDateRange = startDate && endDate && startDate <= endDate;
@@ -173,7 +186,7 @@ function Dashboard() {
   }, [totalCalls, totalSpend, avgLatency, activeTeams, sortedRows]);
 
   const isDark = theme === 'dark';
-  const chartStyle = { background: 'transparent', color: 'var(--kendo-color-on-app-surface)' };
+  const chartStyle = { background: 'var(--kendo-color-transparent)', color: 'var(--kendo-color-on-app-surface)' };
   const chartLabelColor = 'var(--kendo-color-subtle)';
   const chartTitleColor = 'var(--kendo-color-on-app-surface)';
 
@@ -228,7 +241,7 @@ function Dashboard() {
             <Card className="chart-card" role="region" aria-label="API usage over time">
               <CardHeader><h2>Usage trend</h2></CardHeader>
               <CardBody>
-                <Chart style={chartStyle} chartArea={{ background: 'transparent' }}>
+                <Chart style={chartStyle} chartArea={{ background: 'var(--kendo-color-transparent)' }}>
                   <ChartTitle text="API calls by day" color={chartTitleColor} />
                   <ChartLegend position="bottom" labels={{ color: chartTitleColor }} />
                   <ChartCategoryAxis><ChartCategoryAxisItem categories={trend.map(([date]) => date.slice(5))} labels={{ color: chartLabelColor }} /></ChartCategoryAxis>
@@ -241,7 +254,7 @@ function Dashboard() {
             <Card className="chart-card" role="region" aria-label="Spend share by model">
               <CardHeader><h2>Spend share</h2></CardHeader>
               <CardBody>
-                <Chart style={chartStyle} chartArea={{ background: 'transparent' }}>
+                <Chart style={chartStyle} chartArea={{ background: 'var(--kendo-color-transparent)' }}>
                   <ChartTitle text="Spend by model" color={chartTitleColor} />
                   <ChartLegend position="bottom" labels={{ color: chartTitleColor }} />
                   <ChartSeries><ChartSeriesItem type="donut" data={spendByModel} field="value" categoryField="model" /></ChartSeries>
