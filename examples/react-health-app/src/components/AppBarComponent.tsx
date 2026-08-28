@@ -60,7 +60,7 @@ export default function AppBarComponent() {
   const [showNotifications, setShowNotifications] = useState(false);
   const [notifList, setNotifList] = useState(initialNotifications);
   const [showProfileDialog, setShowProfileDialog] = useState(false);
-  const [transparentMode, setTransparentMode] = useState(false);
+  const [transparentMode, setTransparentMode] = useState(true);
   const { profile, updateProfile } = useDoctorProfile();
   const [notifAnchor, setNotifAnchor] = useState<HTMLDivElement | null>(null);
   const [showGitHub, setShowGitHub] = useState(false);
@@ -82,6 +82,11 @@ export default function AppBarComponent() {
   };
 
   const unreadCount = notifList.filter((n) => !n.read).length;
+
+  useEffect(() => {
+    document.body.classList.add("transparent-surfaces");
+    return () => document.body.classList.remove("transparent-surfaces");
+  }, []);
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {

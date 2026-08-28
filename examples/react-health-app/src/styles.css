@@ -165,6 +165,8 @@ body {
   display: flex;
   flex-direction: column;
   padding-inline: var(--page-padding-inline);
+  width: min(calc(100% - (2 * var(--kendo-spacing-8))), 1440px);
+  margin-inline: auto;
 }
 
 .page-heading {
@@ -172,6 +174,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: var(--kendo-spacing-3);
+  width: min(calc(100% - (2 * var(--kendo-spacing-8))), 1440px);
+  margin-inline: auto;
 }
 
 .page-heading-row {
@@ -589,6 +593,8 @@ body {
   overflow: visible;
   margin-bottom: 0;
   top: 0;
+  width: min(calc(100% - (2 * var(--kendo-spacing-8))), 1440px);
+  margin-inline: auto;
 }
 
 .app-topbar-left {
@@ -736,13 +742,10 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
 /* 1400px+ */
 @media (min-width: 1400px) {
   :root {
-    --page-padding-inline: max(
-      calc(var(--kendo-spacing-10) * 3),
-      calc((100vw - 1680px) / 2)
-    );
+    --page-padding-inline: 0;
   }
   .quick-actions {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -801,6 +804,16 @@ body.transparent-surfaces .k-scheduler .k-scheduler-layout {
 @media (max-width: 575px) {
   :root {
     --page-padding-inline: var(--kendo-spacing-3);
+  }
+  .app-content {
+    width: calc(100% - (2 * var(--kendo-spacing-3)));
+  }
+  .page-heading {
+    width: 100%;
+    margin-inline: 0;
+  }
+  .quick-actions {
+    grid-template-columns: 1fr;
   }
 }
 
