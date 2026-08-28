@@ -92,7 +92,7 @@ const Dashboard = () => {
             <PageHeader
                 title={localize('dashboardTitle')}
                 description={localize('dashboardDescription')}
-                meta={localize('dashboardLastUpdated')}
+                meta={localize('dashboardDataPeriod')}
             />
             <section className="kpi-grid" aria-label={localize('performanceSummary')}>
                 <KpiCard label={localize('ordersShippedToday')} value={intlService.formatNumber(284)} detail={localize('ordersShippedDetail')} />

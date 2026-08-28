@@ -1,5 +1,8 @@
 :root {
     --kendo-translucency-base: 25%;
+    --kendo-translucency-blur-base: 6px;
+    --kendo-translucency-blur-step: 2px;
+    --warehouse-header-height: 5rem;
 }
 
 $background-color: var(--kendo-color-app-surface);

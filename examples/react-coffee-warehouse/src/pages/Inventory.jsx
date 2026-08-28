@@ -1,9 +1,10 @@
 import React from 'react';
-import { Grid, GridColumn as Column, GridToolbar } from '@progress/kendo-react-grid';
+import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
 import { Button } from '@progress/kendo-react-buttons';
 import { Input } from '@progress/kendo-react-inputs';
 import { Badge } from '@progress/kendo-react-indicators';
 import { useInternationalization, useLocalization } from '@progress/kendo-react-intl';
+import { useSearchParams } from 'react-router-dom';
 import { PageHeader } from '../components/PageHeader';
 import { KpiCard } from '../components/KpiCard';
 
@@ -37,7 +38,8 @@ const AvailableCell = (props) => {
 };
 
 const Inventory = () => {
-    const [query, setQuery] = React.useState('');
+    const [searchParams, setSearchParams] = useSearchParams();
+    const [query, setQuery] = React.useState(() => searchParams.get('query') || '');
     const localizationService = useLocalization();
     const intlService = useInternationalization();
     const localizedInventory = inventory.map(item => ({
@@ -50,6 +52,14 @@ const Inventory = () => {
         [item.sku, item.description, item.location, item.supplier]
             .some((value) => value.toLowerCase().includes(query.toLowerCase()))
     );
+    React.useEffect(() => {
+        setQuery(searchParams.get('query') || '');
+    }, [searchParams]);
+
+    const clearSearch = React.useCallback(() => {
+        setQuery('');
+        setSearchParams({});
+    }, [setSearchParams]);
 
     return (
         <main className="main-content inventory-page">
@@ -71,20 +81,30 @@ const Inventory = () => {
                     </div>
                     <Button themeColor="primary">{localizationService.toLanguageString('custom.createPurchaseOrder')}</Button>
                 </div>
-                <Grid data={filteredInventory} dataItemKey="id" sortable pageable resizable style={{ height: 430 }}>
-                    <GridToolbar>
-                        <Input aria-label={localizationService.toLanguageString('custom.searchInventory')} placeholder={localizationService.toLanguageString('custom.searchInventoryPlaceholder')} value={query} onChange={(event) => setQuery(event.value)} />
-                    </GridToolbar>
-                    <Column field="sku" title={localizationService.toLanguageString('custom.sku')} width="150px" />
-                    <Column field="description" title={localizationService.toLanguageString('custom.itemDescription')} />
-                    <Column field="onHand" title={localizationService.toLanguageString('custom.onHand')} width="105px" className="numeric-cell" />
-                    <Column field="reserved" title={localizationService.toLanguageString('custom.reserved')} width="105px" className="numeric-cell" />
-                    <Column title={localizationService.toLanguageString('custom.available')} width="105px" cells={{ data: AvailableCell }} />
-                    <Column field="location" title={localizationService.toLanguageString('custom.bin')} width="110px" />
-                    <Column field="supplier" title={localizationService.toLanguageString('custom.supplier')} width="150px" />
-                    <Column title={localizationService.toLanguageString('custom.stockStatus')} width="130px" cells={{ data: StatusCell }} />
-                    <Column field="movement" title={localizationService.toLanguageString('custom.lastMovement')} width="140px" />
-                </Grid>
+                <div className="inventory-filter">
+                    <Input aria-label={localizationService.toLanguageString('custom.searchInventory')} placeholder={localizationService.toLanguageString('custom.searchInventoryPlaceholder')} value={query} onChange={(event) => setQuery(event.value)} />
+                </div>
+                {filteredInventory.length > 0 ? (
+                        <Grid data={filteredInventory} dataItemKey="id" sortable pageable resizable style={{ height: 430 }}>
+                            <Column field="sku" title={localizationService.toLanguageString('custom.sku')} width="150px" />
+                            <Column field="description" title={localizationService.toLanguageString('custom.itemDescription')} />
+                            <Column field="onHand" title={localizationService.toLanguageString('custom.onHand')} width="105px" className="numeric-cell" />
+                            <Column field="reserved" title={localizationService.toLanguageString('custom.reserved')} width="105px" className="numeric-cell" />
+                            <Column title={localizationService.toLanguageString('custom.available')} width="105px" cells={{ data: AvailableCell }} />
+                            <Column field="location" title={localizationService.toLanguageString('custom.bin')} width="110px" />
+                            <Column field="supplier" title={localizationService.toLanguageString('custom.supplier')} width="150px" />
+                            <Column title={localizationService.toLanguageString('custom.stockStatus')} width="130px" cells={{ data: StatusCell }} />
+                            <Column field="movement" title={localizationService.toLanguageString('custom.lastMovement')} width="140px" />
+                        </Grid>
+                    ) : (
+                        <div className="inventory-empty-state" role="status">
+                            <h3>{localizationService.toLanguageString('custom.inventoryEmptyTitle')}</h3>
+                            <p>{localizationService.toLanguageString('custom.inventoryEmptyDescription')}</p>
+                            <Button fillMode="flat" onClick={clearSearch}>
+                                {localizationService.toLanguageString('custom.clearInventorySearch')}
+                            </Button>
+                        </div>
+                )}
             </section>
         </main>
     );

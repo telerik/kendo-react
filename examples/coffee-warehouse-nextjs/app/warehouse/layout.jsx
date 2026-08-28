@@ -5,12 +5,10 @@ import { usePathname, useRouter } from "next/navigation";
 import {
   Drawer,
   DrawerContent,
-  DrawerSelectEvent,
 } from "@progress/kendo-react-layout";
-import { Button } from "@progress/kendo-react-buttons";
+import { useLocalization } from "@progress/kendo-react-intl";
 import {
   calendarIcon,
-  menuIcon,
   userIcon,
   infoCircleIcon,
   gridIcon,
@@ -18,16 +16,17 @@ import {
   bellIcon,
   questionCircleIcon,
 } from "@progress/kendo-svg-icons";
+import { useWarehouseShell } from "../components/WarehouseShellContext";
 
 const items = [
   {
-    text: "Dashboard",
+    messageKey: "dashboard",
     svgIcon: gridIcon,
     selected: true,
     route: "/warehouse/dashboard",
   },
   {
-    text: "Planning",
+    messageKey: "planning",
     svgIcon: calendarIcon,
     route: "/warehouse/planning",
   },
@@ -35,27 +34,27 @@ const items = [
     separator: true,
   },
   {
-    text: "Profile",
+    messageKey: "profile",
     svgIcon: userIcon,
     route: "/warehouse/profile",
   },
   {
-    text: "Settings",
+    messageKey: "settings",
     svgIcon: gearIcon,
     route: "/warehouse/settings",
   },
   {
-    text: "Notifications",
+    messageKey: "notifications",
     svgIcon: bellIcon,
     route: "/warehouse/notifications",
   },
   {
-    text: "Help & Support",
+    messageKey: "helpSupport",
     svgIcon: questionCircleIcon,
     route: "/warehouse/help",
   },
   {
-    text: "Info",
+    messageKey: "info",
     svgIcon: infoCircleIcon,
     route: "/warehouse/info",
   },
@@ -63,42 +62,71 @@ const items = [
 
 export default function DrawerLayout(props) {
   const children = props.children;
-  const [expanded, setExpanded] = React.useState(true);
   const router = useRouter();
   const pathname = usePathname();
+  const localizationService = useLocalization();
+  const { closeDrawer, expanded, isMobile } = useWarehouseShell();
+  const drawerRef = React.useRef(null);
 
-  const handleClick = () => {
-    setExpanded(!expanded);
-  };
+  React.useEffect(() => {
+    const drawer = drawerRef.current?.element?.querySelector(".warehouse-drawer");
+    if (!drawer) {
+      return;
+    }
+
+    const isClosed = isMobile && !expanded;
+    drawer.toggleAttribute("aria-hidden", isClosed);
+    drawer.toggleAttribute("inert", isClosed);
+  }, [expanded, isMobile]);
 
   const onSelect = (e) => {
-    router.push(e.itemTarget.props.route);
+    const route = items[e.itemIndex]?.route;
+    if (!route) {
+      return;
+    }
+
+    router.push(route);
+    if (isMobile) {
+      closeDrawer();
+    }
   };
 
   return (
-    <>
-      <div className="custom-toolbar">
-        <Button
-          aria-label="Toggle navigation"
-          svgIcon={menuIcon}
-          fillMode="flat"
-          onClick={handleClick}
-        />
-        <h3>Warehouse operations</h3>
-      </div>
+    <div
+      id="warehouse-navigation"
+      className="warehouse-navigation"
+    >
       <Drawer
+        ref={drawerRef}
         expanded={expanded}
         position={"start"}
-        mode={"push"}
-        mini={true}
-        items={items.map((item) => ({
-          ...item,
-          selected: item.route === pathname,
-        }))}
+        mode={isMobile ? "overlay" : "push"}
+        mini={!isMobile}
+        drawerClassName="warehouse-drawer"
+        items={items.map((item) => {
+          if (item.separator) {
+            return item;
+          }
+
+          const { messageKey, route, ...drawerItem } = item;
+          return {
+            ...drawerItem,
+            text: localizationService.toLanguageString(
+              `custom.${messageKey}`,
+              messageKey
+            ),
+            selected:
+              item.route === pathname ||
+              (pathname === "/warehouse" &&
+                item.route === "/warehouse/dashboard"),
+            tabIndex: isMobile && !expanded ? -1 : 0,
+          };
+        })}
+        onOverlayClick={closeDrawer}
         onSelect={onSelect}
       >
         <DrawerContent>{children}</DrawerContent>
       </Drawer>
-    </>
+    </div>
   );
 }

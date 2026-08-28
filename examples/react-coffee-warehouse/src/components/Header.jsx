@@ -23,6 +23,7 @@ export const Header = (props) => {
     const { avatar, localeId, onLanguageChange } = React.useContext(AppContext);
     const localizationService = useLocalization();
     const navigate = useNavigate();
+    const [searchTerm, setSearchTerm] = React.useState('');
 
     const localizedLocales = locales.map(item => ({
         ...item,
@@ -58,7 +59,19 @@ export const Header = (props) => {
                     <h1>{localizationService.toLanguageString('custom.warehouse')}</h1>
                 </div>
                 <div className="settings">
-                    <Input className="header-search" aria-label={localizationService.toLanguageString('custom.searchWarehouse')} placeholder={localizationService.toLanguageString('custom.searchWarehouse')} />
+                    <Input
+                        className="header-search"
+                        aria-label={localizationService.toLanguageString('custom.searchWarehouse')}
+                        placeholder={localizationService.toLanguageString('custom.searchWarehouse')}
+                        value={searchTerm}
+                        onChange={(event) => setSearchTerm(event.value)}
+                        onKeyDown={(event) => {
+                            if (event.key === 'Enter') {
+                                const query = searchTerm.trim();
+                                navigate(query ? `/inventory?query=${encodeURIComponent(query)}` : '/inventory');
+                            }
+                        }}
+                    />
                     <div className="header-notifications">
                         <Button fillMode="flat" svgIcon={bellIcon} aria-label={localizationService.toLanguageString('custom.openNotifications')} onClick={() => navigate('/notifications')} />
                         <Badge themeColor="error" shape="dot" />

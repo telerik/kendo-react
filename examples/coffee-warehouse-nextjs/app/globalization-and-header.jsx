@@ -31,6 +31,7 @@ import esDateFields from "cldr-dates-full/main/es/dateFields.json";
 import { enMessages } from "./messages/en";
 import { frMessages } from "./messages/fr";
 import { esMessages } from "./messages/es";
+import { WarehouseShellProvider } from "./components/WarehouseShellContext";
 
 load(
   likelySubtags,
@@ -64,11 +65,15 @@ export function GlobalizationAndHeader(props) {
     setLanguage(event.value.localeId);
   };
   return (
-    <LocalizationProvider language={language}>
-      <IntlProvider locale={language}>
-        {!pathname.startsWith("/auth") && <Header onButtonClick={onButtonClick} />}
-        {props.children}
-      </IntlProvider>
-    </LocalizationProvider>
+    <WarehouseShellProvider>
+      <LocalizationProvider language={language}>
+        <IntlProvider locale={language}>
+          {!pathname.startsWith("/auth") && (
+            <Header onButtonClick={onButtonClick} />
+          )}
+          {props.children}
+        </IntlProvider>
+      </LocalizationProvider>
+    </WarehouseShellProvider>
   );
 }

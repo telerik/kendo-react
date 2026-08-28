@@ -1,7 +1,10 @@
 // Application-specific Meridian token overrides.
 :root {
     --kendo-font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    --warehouse-header-height: var(--kendo-spacing-20);
+    --kendo-translucency-base: 25%;
+    --kendo-translucency-blur-base: 6px;
+    --kendo-translucency-blur-step: 2px;
+    --warehouse-header-height: var(--kendo-spacing-16);
 }
 
 $background-color: var(--kendo-color-app-surface);

@@ -72,7 +72,7 @@ const Planning = () => {
 
     return (
         <main id="Planning" className="planning-page main-content">
-            <PageHeader title={localize('planningTitle')} description={localize('planningDescription')} meta={localize('planningWorkWeek')} />
+            <PageHeader title={localize('planningTitle')} description={localize('planningDescription')} meta={localize('planningDataPeriod')} />
             <div className="card-container grid">
                 <div className="card-title"><h2>{localizationService.toLanguageString('custom.teamCalendar')}</h2><p>{localize('teamCalendarDescription')}</p></div>
                 {
