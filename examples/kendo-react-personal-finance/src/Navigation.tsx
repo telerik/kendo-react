@@ -139,7 +139,8 @@ const DrawerContainer = (props: DrawerContainerProps) => {
         position={"start"}
         mode={"overlay"}
         mini={true}
-        miniWidth={80}
+        miniWidth={64}
+        width={240}
         items={items.map((item, index) => ({
           ...item,
           selected: index === selected,

@@ -13,14 +13,14 @@ function Footer() {
           display: "inline-flex",
           alignItems: "center",
           gap: "0.5rem",
-          color: "white",
+          color: "var(--kendo-color-on-surface)",
         }}
       >
         <img
           src={`${import.meta.env.BASE_URL}/images/github-logo.svg`}
-          style={{ width: "25px", height: "25px", color: "var(--kendo-color-subtle, #9B9B9B)" }}
+          style={{ width: "25px", height: "25px" }}
         />
-        <span style={{fontSize: '14px', fontWeight: 400, letterSpacing: 'wider', color: "var(--kendo-color-subtle, #9B9B9B)"}}>Get the Source Code</span>
+        <span style={{fontSize: '14px', fontWeight: 400, letterSpacing: 'wider', color: "var(--kendo-color-subtle)"}}>Get the Source Code</span>
       </a>
       </div>
       <div className="footer__copyright">

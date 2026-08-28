@@ -3,6 +3,8 @@
     --kendo-translucency-base: 24%;
     --kendo-translucency-blur-base: 8px;
     --kendo-translucency-blur-step: 2px;
+    --app-drawer-rail-width: 64px;
+    --app-drawer-expanded-width: 240px;
 }
 
 body {
@@ -11,6 +13,12 @@ body {
     font-family: var(--kendo-font-family);
     margin: 0;
     padding: 0;
+}
+
+/* Keep Kendo badges in normal document flow until the component bug is fixed. */
+.k-badge {
+    position: relative !important;
+    transform: none !important;
 }
 
 .app-page-title {
@@ -72,6 +80,56 @@ body {
     letter-spacing: var(--kendo-letter-spacing-wide);
 }
 
+.overview-account__content {
+    gap: var(--kendo-spacing-5);
+}
+
+.overview-account__identity {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: var(--kendo-spacing-3);
+    align-items: center;
+}
+
+.overview-account__icon {
+    display: grid;
+    place-items: center;
+    width: var(--kendo-spacing-10);
+    height: var(--kendo-spacing-10);
+    border-radius: var(--kendo-border-radius-full);
+    color: var(--kendo-color-info-on-subtle);
+    background-color: var(--kendo-color-info-subtle);
+}
+
+.overview-account__identity > div:nth-child(2) {
+    display: grid;
+    gap: var(--kendo-spacing-1);
+}
+
+.overview-account__identity span,
+.overview-account__metrics span {
+    color: var(--kendo-color-subtle);
+    font-size: var(--kendo-font-size-sm);
+}
+
+.overview-account__metrics {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--kendo-spacing-4);
+}
+
+.overview-account__metrics > div {
+    display: grid;
+    gap: var(--kendo-spacing-1);
+    border-top: var(--kendo-spacing-1px) solid var(--kendo-color-border);
+    padding-top: var(--kendo-spacing-3);
+}
+
+.overview-account__metrics strong {
+    color: var(--kendo-color-primary-on-surface);
+    font-size: var(--kendo-font-size-lg);
+}
+
 .app-details { display: grid; gap: var(--kendo-spacing-6); }
 .app-detail { display: grid; gap: var(--kendo-spacing-1); }
 .app-detail--status { gap: var(--kendo-spacing-3); }
@@ -102,7 +160,7 @@ body {
 .top-movers__total { justify-content: center; }
 .top-movers__content { gap: var(--kendo-spacing-10); }
 .top-movers__list { display: grid; gap: var(--kendo-spacing-6); padding-bottom: var(--kendo-spacing-5); }
-.footer { margin-left: var(--kendo-spacing-20); padding: var(--kendo-spacing-6\.5) var(--kendo-spacing-15); color: var(--kendo-color-subtle); background: var(--kendo-color-surface-alt); }
+.footer { margin-left: var(--app-drawer-rail-width); padding: var(--kendo-spacing-6\.5) var(--kendo-spacing-15); color: var(--kendo-color-subtle); background: var(--kendo-color-surface-alt); }
 .footer__source,
 .footer__copyright { padding: var(--kendo-spacing-2); }
 .app-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--kendo-spacing-4); padding: var(--kendo-spacing-6\.5) var(--kendo-spacing-15); }
@@ -124,6 +182,19 @@ body {
 
 .k-drawer-item{
     white-space: nowrap;
+}
+
+.app-drawer.k-drawer-mini .k-drawer-item {
+    justify-content: center;
+    padding-inline: var(--kendo-spacing-2);
+}
+
+.app-drawer.k-drawer-mini .k-item-text {
+    display: none;
+}
+
+.app-drawer.k-drawer-mini .k-drawer-item .k-icon {
+    margin-inline: auto;
 }
 
 .positive {
@@ -416,6 +487,7 @@ header .k-picker-solid {
         font-weight: var(--kendo-font-weight-medium);
         white-space: nowrap;
     }
+
     .finance-status--completed,
     .finance-status--on-track { color: var(--kendo-color-success-on-subtle); background: var(--kendo-color-success-subtle); }
     .finance-status--pending { color: var(--kendo-color-warning-on-subtle); background: var(--kendo-color-warning-subtle); }
@@ -526,7 +598,16 @@ header .k-picker-solid {
 
 .app-drawer-content {
     min-height: 92vh; 
-    margin-left: var(--kendo-spacing-20);
+    margin-inline: auto;
+    max-width: 1140px;
+    width: auto;
+}
+
+@media (min-width: 992px) {
+    .app-drawer.k-drawer-expanded .app-drawer-content {
+        margin-left: calc(var(--app-drawer-expanded-width) + max(0px, (100vw - var(--app-drawer-expanded-width) - 1140px) / 2));
+        margin-right: max(0px, (100vw - var(--app-drawer-expanded-width) - 1140px) / 2);
+    }
 }
 
 .app-centered-page,
@@ -578,6 +659,11 @@ header .k-picker-solid {
     font-weight: var(--kendo-font-weight-medium);
 }
 
+.finance-status--unknown {
+    color: var(--kendo-color-on-base);
+    background-color: var(--kendo-color-base-subtle);
+}
+
 .app-access-page,
 .app-empty-page {
     display: grid;
@@ -610,6 +696,10 @@ header .k-picker-solid {
     .app-drawer-content,
     .footer {
         margin-left: 0;
+    }
+
+    .app-drawer-content {
+        width: auto;
     }
 }
 

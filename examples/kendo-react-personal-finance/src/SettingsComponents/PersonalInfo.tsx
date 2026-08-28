@@ -162,7 +162,7 @@ export default function PersonalInfo() {
                     rounded={"large"}
                     themeColor={"primary"}
                     style={{
-                      color: "#131524",
+                      color: "var(--kendo-color-on-primary)",
                       letterSpacing: "1.25px",
                       fontWeight: "500",
                     }}
@@ -175,7 +175,7 @@ export default function PersonalInfo() {
                     rounded={"large"}
                     fillMode={"outline"}
                     style={{
-                      color: "#E0E0E0",
+                      color: "var(--kendo-color-primary)",
                       letterSpacing: "1.25px",
                       fontWeight: "500",
                     }}

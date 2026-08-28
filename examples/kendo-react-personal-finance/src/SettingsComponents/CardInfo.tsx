@@ -121,7 +121,7 @@ export default function CardInfo() {
                   rounded={"large"}
                   themeColor={"primary"}
                   style={{
-                    color: "#131524",
+                    color: "var(--kendo-color-on-primary)",
                     letterSpacing: "1.25px",
                     fontWeight: "500",
                   }}
@@ -134,7 +134,7 @@ export default function CardInfo() {
                   rounded={"large"}
                   fillMode={"outline"}
                   style={{
-                    color: "#E0E0E0",
+                    color: "var(--kendo-color-primary)",
                     letterSpacing: "1.25px",
                     fontWeight: "500",
                   }}

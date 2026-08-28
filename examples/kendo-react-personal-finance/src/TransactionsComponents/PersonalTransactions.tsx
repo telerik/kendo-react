@@ -78,7 +78,6 @@ export default function Transactions(props: TransactionsProps) {
     >
       <GridToolbar>
         <Button
-          style={{ backgroundColor: "#616161" }}
           title="Export Excel"
           type="button"
           svgIcon={fileExcelIcon}
@@ -88,7 +87,6 @@ export default function Transactions(props: TransactionsProps) {
         </Button>
 
         <Button
-          style={{ backgroundColor: "#616161" }}
           title="Export PDF"
           type="button"
           svgIcon={filePdfIcon}
