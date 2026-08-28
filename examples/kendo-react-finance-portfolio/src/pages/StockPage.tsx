@@ -2,7 +2,6 @@ import { Splitter } from "@progress/kendo-react-layout";
 import { classNames } from "@progress/kendo-react-common";
 
 import { Stock } from "../components/Stock/Stock";
-import { NavigationRow, Navigation } from "../components/Navigation";
 import { AddRemoveSymbol } from "../components/AddRemoveSymbol";
 import { StockList } from "../components/StockList";
 import { ChangeSector } from "../components/SectorChange";
@@ -12,6 +11,7 @@ export const StockPage = () => {
   return (
     <>
       <Splitter
+        className={styles.splitter}
         style={{ height: "100%" }}
         orientation={"vertical"}
         defaultPanes={[{}, {}]}
@@ -22,21 +22,11 @@ export const StockPage = () => {
           </div>
         </div>
         <div className={classNames(styles["stock-section"], "py-3")} style={{ minHeight: 600 }}>
-          <div className={"container my-3"}>
-            <NavigationRow className="row justify-content-center">
-              <AddRemoveSymbol
-                className={
-                  "col-6 col-lg-4 mb-3 mb-lg-0 text-center text-lg-left"
-                }
-              />
-              <Navigation
-                className={classNames(
-                  styles["navigation"],
-                  "col-12 col-lg-4 flex-grow-1 mb-3 mb-lg-0 text-center"
-                )}
-              />
-              <ChangeSector className="col-6 col-lg-4 text-right" />
-            </NavigationRow>
+          <div className="container my-3">
+            <div className={styles.portfolioToolbar}>
+              <AddRemoveSymbol />
+              <ChangeSector />
+            </div>
           </div>
           <div className="container">
             <StockList />

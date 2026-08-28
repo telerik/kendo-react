@@ -33,7 +33,6 @@ const customItemRender = (el: any, value: any) => (
 const customValueRender = (el: any) => (
     <el.type
         {...el.props}
-        style={{paddingInline: 0}}
     >
         Add new
     </el.type>)
@@ -101,7 +100,7 @@ export const AddRemoveSymbol = (props: AddRemoveSymbolProps) => {
     });
 
     return (
-        <div className={classNames(props.className)}>
+        <div className={classNames(styles.symbolActions, props.className)}>
             <DropDownList
                 className={styles.symbolPicker}
                 svgIcon={plusIcon}
@@ -119,7 +118,6 @@ export const AddRemoveSymbol = (props: AddRemoveSymbolProps) => {
                 itemRender={customItemRender}
             />
 
-            &nbsp;
             <Button className={styles.removeButton} svgIcon={trashIcon} fillMode={"flat"} onClick={handleRemoveClick}>Remove</Button>
             {status === 'loading' && <DataState kind="loading" title="Loading symbols" message="Fetching available securities." />}
             {status === 'error' && (

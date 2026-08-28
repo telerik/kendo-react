@@ -1,13 +1,23 @@
-.navigation {
-  @media (max-width: 991.98px) {
-    order: -1;
-  }
-}
-
 .stock-section {
   background-color: var(--kendo-color-surface);
 }
 
-div[role="separator"] {
-  z-index: 1;
+.portfolioToolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--kendo-spacing-3);
+  padding: var(--kendo-spacing-4);
+  border: var(--kendo-spacing-1px) solid var(--kendo-color-border);
+  border-radius: var(--kendo-border-radius-md);
+  background-color: var(--kendo-color-surface-alt);
+}
+
+.splitter:global(.k-splitter-flex) {
+  :global(.k-splitbar) {
+    position: relative;
+    z-index: 1;
+    background-color: var(--kendo-color-base-emphasis);
+  }
 }

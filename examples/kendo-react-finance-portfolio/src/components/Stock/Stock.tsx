@@ -114,7 +114,7 @@ const ChartTypePicker = (props: any) => {
         <DropDownList
             data={data}
             style={{
-                width: 130,
+                width: 170,
                 border: 'none'
             }}
             value={data.find(i => i.type === props.value)}

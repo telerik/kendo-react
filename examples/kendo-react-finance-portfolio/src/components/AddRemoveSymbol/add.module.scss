@@ -1,3 +1,9 @@
+.symbolActions {
+  display: flex;
+  align-items: center;
+  gap: var(--kendo-spacing-2);
+}
+
 .stock-item {
   padding-top: var(--kendo-spacing-4);
   padding-bottom: var(--kendo-spacing-4);
@@ -24,8 +30,7 @@
 
 .symbolPicker {
   background-color: var(--kendo-color-surface-alt);
-  flex-direction: row-reverse;
-  width: 110px;
+  width: 140px;
 }
 
 .removeButton {

@@ -5,9 +5,8 @@ import {
   Routes,
   Route,
   HashRouter,
+  Navigate,
 } from 'react-router-dom';
-
-import { UserProfile } from './components/User/UserProfile';
 
 import styles from './app.module.scss';
 import { CurrencyContext, CURRENCY } from './context/CurrencyContext';
@@ -37,23 +36,7 @@ import gbDateFields from 'cldr-dates-full/main/en-GB/dateFields.json';
 import { load } from '@progress/kendo-react-intl';
 import { CustomIntlProvider } from './components/CustomIntlProvider';
 import { StockPage } from './pages/StockPage';
-import { HeatmapPage } from './pages/HeatmapPage';
-import { VirtualizedPage } from './pages/VirtualizedPage';
 import { SymbolsContext } from './context/SymbolsContext';
-import {
-  AccountsPage,
-  BillingPage,
-  HelpPage,
-  LoginPage,
-  MarketsPage,
-  NotFoundPage,
-  NotificationsPage,
-  RegisterPage,
-  SettingsPage,
-  TradePage,
-  TransactionsPage,
-  WatchlistPage
-} from './pages/SupportPages';
 
 load(
   likelySubtags,
@@ -75,29 +58,12 @@ load(
 
 const Main = () => {
   return (
-    <>
-      <Header />
-      <Routes>
-        <Route path="/" element={<StockPage />} />
-        <Route path="/profile" element={<UserProfile />} />
-        <Route path="/watchlist" element={<WatchlistPage />} />
-        <Route path="/markets" element={<MarketsPage />} />
-        <Route path="/trade" element={<TradePage />} />
-        <Route path="/transactions" element={<TransactionsPage />} />
-        <Route path="/accounts" element={<AccountsPage />} />
-        <Route path="/billing" element={<BillingPage />} />
-        <Route path="/settings" element={<SettingsPage />} />
-        <Route path="/notifications" element={<NotificationsPage />} />
-        <Route path="/help" element={<HelpPage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="/heatmap" element={<HeatmapPage />} />
-        <Route path="/virtualized" element={<VirtualizedPage />} />
-        <Route path="/stocks" element={<StockPage />} />
-        <Route path="/stocks/:symbol" element={<StockPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
-    </>
+    <Routes>
+      <Route path="/" element={<StockPage />} />
+      <Route path="/stocks" element={<StockPage />} />
+      <Route path="/stocks/:symbol" element={<StockPage />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   )
 }
 
@@ -146,7 +112,7 @@ const App: React.FunctionComponent<any> = () => {
   );
 
   return (
-    <div className="App">
+    <div className={styles.app}>
       <CustomIntlProvider locale={locales[currency]}>
         <SymbolsContext.Provider value={{
           selectedSymbols,
@@ -157,6 +123,7 @@ const App: React.FunctionComponent<any> = () => {
           <SectorContext.Provider value={{ sector, onSectorChange: handleSectorChange }}>
             <CurrencyContext.Provider value={{ currency, onCurrencyChange: handleCurrencyChange }}>
               <HashRouter>
+                <Header />
                 <main className={styles.main}>
                   <Main />
                 </main>
