@@ -47,8 +47,8 @@ const DrawerComponent: React.FC<DrawerComponentProps> = ({ children }) => {
       }))}
       onSelect={onSelect}
     >
-      <DrawerContent>
-        <div role="main" className="tracker-drawer__content">
+      <DrawerContent className="tracker-drawer__content">
+        <div role="main" className="tracker-drawer__main">
           {children}
         </div>
       </DrawerContent>

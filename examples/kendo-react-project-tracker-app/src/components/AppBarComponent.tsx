@@ -30,7 +30,7 @@ export default function AppBarComponent() {
                 </div>
                 </AppBarSection>
 
-            <AppBarSection className="tracker-appbar__search">
+            <AppBarSection className="tracker-appbar__search-section">
                 <div role="search">
                     <TextBox prefix={() => (
                             <>
@@ -44,12 +44,6 @@ export default function AppBarComponent() {
                             fillMode="solid"
                             className="tracker-appbar__search"
                     />
-                </div>
-            </AppBarSection>
-
-            <AppBarSection className="tracker-appbar__search--compact">
-                <div role="search">
-                    <Button fillMode="flat" svgIcon={searchIcon} title="Search button" />
                 </div>
             </AppBarSection>
 

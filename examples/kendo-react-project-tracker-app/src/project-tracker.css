@@ -7,6 +7,9 @@
   --tracker-muted: var(--kendo-color-subtle);
   --tracker-border: var(--kendo-color-border);
   --tracker-focus: var(--kendo-color-info);
+  --kendo-translucency-base: 28%;
+  --kendo-translucency-blur-base: 6px;
+  --kendo-translucency-blur-step: 2px;
 }
 
 html,
@@ -17,7 +20,21 @@ body,
 }
 
 body {
-  background: var(--tracker-page-surface);
+  background:
+    radial-gradient(
+      ellipse at 0% 0%,
+      color-mix(in srgb,       var(--kendo-color-secondary-subtle) 72%, transparent)
+        0%,
+      transparent 46%
+    ),
+    radial-gradient(
+      ellipse at 100% 12%,
+      color-mix(in srgb,       var(--kendo-color-tertiary-subtle) 78%, transparent)
+        0%,
+      transparent 42%
+    ),
+    var(--tracker-page-surface);
+  background-attachment: fixed;
   color: var(--kendo-color-on-app-surface);
   font-family: var(--kendo-font-family);
 }
@@ -28,15 +45,28 @@ a {
 }
 
 .tracker-app-shell {
-  min-height: 100dvh;
+  height: 100dvh;
+  min-height: 0;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+}
+
+.tracker-app-shell > .k-drawer-container {
+  display: flex;
+  flex: 1 1 auto;
+  height: 100%;
+  min-height: 0;
+  align-items: stretch;
+  overflow: hidden;
 }
 
 .tracker-appbar {
   flex: none;
+  display: flex;
+  flex-wrap: nowrap;
   padding: var(--kendo-spacing-4);
-  background: color-mix(in srgb, var(--tracker-surface) 88%, transparent);
+  background: color-mix(in srgb, var(--tracker-surface) 72%, transparent);
   border-bottom: 1px solid var(--tracker-border);
   backdrop-filter: blur(var(--kendo-translucency-blur-base, 6px));
   z-index: 2;
@@ -58,13 +88,15 @@ a {
 }
 
 .tracker-appbar__search {
-  display: inline-flex;
-  flex: 1 1 auto;
-  width: min(18.75rem, 100%);
+  min-width: min(36rem, 100%);
 }
 
-.tracker-appbar__search--compact {
-  display: none;
+.tracker-appbar__search-section {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 100%;
+  justify-content: center;
 }
 
 .tracker-appbar__profile {
@@ -83,19 +115,28 @@ a {
 }
 
 .tracker-drawer {
-  flex: 0 0 14rem;
-  width: 14rem;
+  height: 100%;
   min-height: 0;
-  min-height: 100%;
-  background: color-mix(in srgb, var(--tracker-surface) 88%, transparent);
+  overflow: hidden;
+  background: color-mix(in srgb, var(--tracker-surface) 72%, transparent);
   border-right: 1px solid var(--tracker-border);
   backdrop-filter: blur(var(--kendo-translucency-blur-base, 6px));
 }
 
 .tracker-drawer .k-drawer-wrapper {
-  width: 14rem;
-  min-height: 100%;
-  padding: var(--kendo-spacing-10) var(--kendo-spacing-2);
+  height: 100%;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.tracker-drawer__content {
+  flex: 1 1 auto;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .tracker-card-header {
@@ -111,7 +152,7 @@ a {
   background: color-mix(in srgb, var(--kendo-color-primary) 8%, transparent);
 }
 
-.tracker-drawer__content {
+.tracker-drawer__main {
   min-width: 0;
   min-height: 100%;
 }
@@ -126,12 +167,19 @@ a {
 }
 
 .tracker-page--dashboard {
-  background:
-    linear-gradient(
-      119deg,
-      color-mix(in srgb, var(--tracker-page-surface) 96%, var(--kendo-color-primary) 4%),
-      color-mix(in srgb, var(--tracker-page-surface) 90%, var(--kendo-color-info) 10%)
-    );
+  background: linear-gradient(
+    119deg,
+    color-mix(
+      in srgb,
+      var(--tracker-page-surface) 96%,
+      var(--kendo-color-primary) 4%
+    ),
+    color-mix(
+      in srgb,
+      var(--tracker-page-surface) 90%,
+      var(--kendo-color-info) 10%
+    )
+  );
 }
 
 .tracker-page__breadcrumb {
@@ -183,14 +231,16 @@ a {
 
 .dashboard-grid {
   display: grid;
-  grid-template-columns: minmax(14rem, 1fr) minmax(14rem, 1fr) minmax(15rem, 1fr);
+  grid-template-columns: minmax(14rem, 1fr) minmax(14rem, 1fr) minmax(
+      15rem,
+      1fr
+    );
   gap: var(--tracker-page-gap);
   min-width: 0;
 }
 
 .dashboard-card {
   min-width: 0;
-  height: 100%;
   border-radius: var(--tracker-card-radius);
 }
 
@@ -216,6 +266,14 @@ a {
   display: flex;
   flex-direction: column;
   gap: var(--kendo-spacing-2);
+}
+
+.dashboard-card__calendar {
+  padding-top: 0;
+}
+
+.dashboard-card__calendar .k-calendar {
+  width: 100%;
 }
 
 .dashboard-card__scroll {
@@ -322,11 +380,16 @@ a {
   background: var(--tracker-surface);
   border: 1px solid var(--tracker-border);
   border-radius: var(--kendo-border-radius-lg);
-  transition: background-color var(--kendo-transition-duration, 160ms) var(--kendo-easing-standard);
+  transition: background-color var(--kendo-transition-duration, 160ms)
+    var(--kendo-easing-standard);
 }
 
 .tracker-card--project:hover {
-  background: color-mix(in srgb, var(--kendo-color-primary) 8%, var(--tracker-surface));
+  background: color-mix(
+    in srgb,
+    var(--kendo-color-primary) 8%,
+    var(--tracker-surface)
+  );
 }
 
 .tracker-card--project:focus-visible,
@@ -667,30 +730,7 @@ a {
     display: block;
   }
 
-  .tracker-appbar__search {
-    display: none;
-    width: auto;
-  }
-
-  .tracker-appbar__search--compact {
-    display: inline-flex;
-  }
-
-  .tracker-drawer .k-drawer-wrapper {
-    width: 4rem !important;
-    padding-top: var(--kendo-spacing-6);
-  }
-
-  .tracker-drawer {
-    flex-basis: 4rem;
-    width: 4rem;
-  }
-
-  .tracker-drawer .k-drawer-item {
-    justify-content: center;
-  }
-
-  .tracker-drawer .k-drawer-item-text {
+  .tracker-appbar__search-section {
     display: none;
   }
 

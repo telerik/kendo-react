@@ -68,7 +68,14 @@ export default function Home() {
                 </Card>
             </div>
             <div className="dashboard-card--calendar">
-                <Calendar className="dashboard-card" value={date} onChange={e => setDate(e.value)} tabIndex={0}/>
+                <Card className="dashboard-card">
+                    <CardHeader className="tracker-card-header">
+                        <CardTitle className="dashboard-card__title">Calendar</CardTitle>
+                    </CardHeader>
+                    <CardBody className="dashboard-card__calendar">
+                        <Calendar value={date} onChange={e => setDate(e.value)} tabIndex={0}/>
+                    </CardBody>
+                </Card>
             </div>
             <div className="dashboard-card--teams">
                 <Card className="dashboard-card">
@@ -99,18 +106,18 @@ export default function Home() {
                 <Card className="dashboard-card">
                     <CardHeader className="tracker-card-header">
                         <CardTitle className="dashboard-card__title">To-Do List</CardTitle>
-                        <Button fillMode="flat" themeColor="primary" svgIcon={plusIcon} title="Add more tasks">Add more tasks</Button>
                     </CardHeader>
                     <CardBody className="dashboard-card__scroll">
-                              <div className="dashboard-card__list">
-                                  {listData.map((item, index) => <div className="dashboard-team__body" key={'list-item-' + index}>
+                        <div className="dashboard-card__list">
+                            {listData.map((item, index) => <div className="dashboard-team__body" key={'list-item-' + index}>
                                     <Checkbox rounded="small" label={item.text}/>
                                     <div className="task-actions__secondary">
                                         <Button svgIcon={pencilIcon} fillMode="flat" title="Edit button"/>
                                         <Button svgIcon={trashIcon} fillMode="flat" themeColor="error" title="Delete button"/>
                                     </div>
-                                </div>)}
-                              </div>
+                            </div>)}
+                        </div>
+                        <Button fillMode="flat" themeColor="primary" svgIcon={plusIcon} title="Add more tasks">Add more tasks</Button>
                     </CardBody>
                 </Card>
             </div>
