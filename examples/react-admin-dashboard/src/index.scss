@@ -236,9 +236,22 @@ div.k-form-field:nth-child(3) {
 }
 
 
-.drawer {
+.k-drawer-container.drawer {
   border-right-width: 1px;
-  height: 100%;
+  position: fixed;
+  inset: var(--appbar-height) 0 0;
+  width: 100%;
+  overflow: hidden;
+
+  .k-drawer-wrapper,
+  .k-drawer-items {
+    height: 100%;
+  }
+
+  .k-drawer-items {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .overview {
@@ -299,18 +312,16 @@ div.k-form-field:nth-child(3) {
   height: 100%;
   width: 100%;
   background-color: var(--kendo-color-app-surface);
+  overflow-y: auto;
 }
 
-.user-container {
-  width: 240px;
-  padding-top: 32px;
-  max-width: 100%;
-  border-width: 0;
-  border-right: solid 1px var(--kendo-color-border);
-
+.drawer-user {
+  margin-top: auto;
+  padding: var(--kendo-spacing-6) var(--kendo-spacing-4);
+  border-top: 1px solid var(--kendo-color-border);
   box-sizing: border-box;
-  outline: 0;
   text-align: center;
+
    img {
     height: 64px;
     width: 64px;
@@ -333,12 +344,7 @@ div.k-form-field:nth-child(3) {
 
    .user-button {
     font-size: 12px;
-    width: 71px;
-    height: 30px;
-    margin-top: 11px;
-    background: var(--kendo-color-base-subtle);
-    border-radius: var(--kendo-border-radius-sm);
-    margin: 12px 0 9px 0;
+    margin-top: var(--kendo-spacing-3);
    }
 }
 
@@ -377,9 +383,11 @@ my-app { padding: 0 !important; }
 }
 
 .custom-toolbar {
-  position: relative;
+  position: fixed;
+  inset: 0 0 auto;
   z-index: 300;
   width: 100%;
+  min-height: var(--appbar-height);
 }
 
 
@@ -441,6 +449,11 @@ text-align: center;
 }
 
 .gauge-div {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  min-height: 0;
   text-align: center;
 }
 
@@ -450,6 +463,17 @@ text-align: center;
   font-weight: var(--kendo-font-weight-normal);
   font-size: var(--kendo-font-size-md);
   line-height: var(--kendo-line-height-md);
+}
+
+.dashboard-page > .k-tilelayout:not(.dashboard-detail-tiles) .k-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.dashboard-page > .k-tilelayout:not(.dashboard-detail-tiles) .k-card-body {
+  flex: 1 1 auto;
+  min-height: 0;
 }
 
 .card-buttons {
@@ -535,11 +559,13 @@ text-align: center;
 
 
 .listbox-card-container {
-   margin-top: 0;
+  margin-top: 0;
+
   .k-listview-content {
-    display: flex;
+    display: grid;
+    gap: var(--kendo-spacing-6);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     width: 100%;
-    flex-wrap: wrap;
   }
 }
 
@@ -917,7 +943,7 @@ text-align: center;
 }
 
 .product-card-item {
-  padding: var(--kendo-spacing-4);
+  min-width: 0;
 }
 
 .product-card {
@@ -941,6 +967,13 @@ text-align: center;
 
 .product-card-title {
   font-size: var(--kendo-font-size-lg);
+  margin: var(--kendo-spacing-4) 0 var(--kendo-spacing-1);
+}
+
+.product-card-subtitle {
+  color: var(--kendo-color-subtle);
+  font-size: var(--kendo-font-size-sm);
+  margin: 0;
 }
 
 .overflow {
@@ -1145,6 +1178,7 @@ text-align: center;
 
 /* Structural layout for the shared application shell and responsive pages. */
 .app-shell {
+  --appbar-height: calc(var(--kendo-spacing-4) * 4);
   min-height: 100vh;
   background: var(--kendo-color-app-surface);
 }
@@ -1192,7 +1226,11 @@ text-align: center;
 }
 
 .dashboard-gauge {
-  height: calc(var(--kendo-spacing-4) * 9.5);
+  align-items: center;
+  display: flex;
+  height: min(100%, calc(var(--kendo-spacing-4) * 9));
+  justify-content: center;
+  width: 100%;
 }
 
 .status-label {
@@ -1289,7 +1327,11 @@ text-align: center;
 }
 
 @media (max-width: 767px) {
-  .user-container {
+  .listbox-card-container .k-listview-content {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .drawer-user {
     display: none;
   }
 

@@ -34,7 +34,7 @@ const tiles = [
     },
     header: 'Tasks On Track',
     body: <div className="dashboard-card-content">
-      <p className="dashboard-card-content-number dashboard-stat--success">22 <span className="status-label">on track</span></p>
+      <p className="dashboard-card-content-number dashboard-stat--success">22</p>
       <div>
         <p className="footer">
         In Backlog: 43
@@ -51,7 +51,7 @@ const tiles = [
     },
     header: 'Overdue Tasks',
     body: <div className="dashboard-card-content">
-    <p className="dashboard-card-content-number dashboard-stat--error">7 <span className="status-label">overdue</span></p>
+    <p className="dashboard-card-content-number dashboard-stat--error">7</p>
     <div>
     <p className="footer">
     From Yesterday: 16
@@ -67,7 +67,7 @@ const tiles = [
     },
     header: 'Issues',
     body: <div className="dashboard-card-content">
-    <p className="dashboard-card-content-number dashboard-stat--warning">47 <span className="status-label">open</span></p>
+    <p className="dashboard-card-content-number dashboard-stat--warning">47</p>
     <div>
     <p className="footer">
     Closed By Team 15
@@ -84,9 +84,6 @@ const tiles = [
     header: 'Used Space',
     body: <div className="gauge-div">
     <ArcGaugeComponent/>
-    <p className="gauge-footer">
-    Closed By Team 15
-    </p>
   </div>,
 
 
@@ -113,9 +110,11 @@ export  const Dashboard = () => {
   ]);
   const secondSectionTiles = [
     {
+      header: 'Workspace trends',
       body: <DashboardChart/>,
     },
     {
+      header: 'Team performance',
       body: <DashboardGrid/>,
     },
   ];

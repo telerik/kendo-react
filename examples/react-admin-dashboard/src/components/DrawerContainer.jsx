@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { useLocation, useNavigate, Outlet, Link } from 'react-router-dom';
-import { Drawer, DrawerContent } from '@progress/kendo-react-layout';
+import { Drawer, DrawerContent, DrawerItem } from '@progress/kendo-react-layout';
 import { Button } from '@progress/kendo-react-buttons';
+import { SvgIcon } from '@progress/kendo-react-common';
 import { Alert } from './dashboard/Alert';
 import { menuIcon, gridIcon, globeIcon, aggregateFieldsIcon, gearIcon, bellIcon, questionCircleIcon } from '@progress/kendo-svg-icons';
 
@@ -42,7 +43,33 @@ export const items = [
     route: '/home/help',
     svgIcon: questionCircleIcon,
   },
+  {
+    isUserProfile: true,
+    disabled: true,
+  },
 ];
+
+const DrawerNavigationItem = ({ isUserProfile, ...itemProps }) => {
+  if (isUserProfile) {
+    return (
+      <li className="drawer-user" role="presentation">
+        <img src={require('../assets/people/user-avatar.jpg')} alt="Jaxons Danniels" />
+        <h1>Jaxons Danniels</h1>
+        <div className="user-email">jaxons.daniels@company.com</div>
+        <Link to="/">
+          <Button className="user-button">Sign Out</Button>
+        </Link>
+      </li>
+    );
+  }
+
+  return (
+    <DrawerItem {...itemProps}>
+      {itemProps.svgIcon && <SvgIcon icon={itemProps.svgIcon} />}
+      <span className="k-item-text">{itemProps.text}</span>
+    </DrawerItem>
+  );
+};
 
 export const DrawerContainer = (props) => {
   const navigate = useNavigate();
@@ -54,7 +81,9 @@ export const DrawerContainer = (props) => {
   };
 
   const onSelect = (e) => {
-    navigate(e.itemTarget.props.route);
+    if (e.itemTarget.props.route) {
+      navigate(e.itemTarget.props.route);
+    }
   };
 
   const setSelectedItem = (pathName) => {
@@ -82,15 +111,6 @@ export const DrawerContainer = (props) => {
 
      <div>
 
-     <div className='user-container' >
-        <img src={require('../assets/people/user-avatar.jpg')} alt="user avatar"/>
-       <h1>Jaxons Danniels</h1>
-       <div className="user-email">jaxons.daniels@company.com</div>
-       <Link to="/">
-       <Button className="user-button k-button k-button-md k-rounded-md k-button-solid k-button-solid-base"
-       >Sign Out</Button>
-       </Link>
-      </div>
       <Drawer
         expanded={expanded}
         position={'start'}
@@ -100,6 +120,7 @@ export const DrawerContainer = (props) => {
           ...item,
           selected: item.text === selected,
         }))}
+        item={DrawerNavigationItem}
         onSelect={onSelect}
         className="drawer"
       >

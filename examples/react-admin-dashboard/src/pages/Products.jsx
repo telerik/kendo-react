@@ -47,11 +47,8 @@ import { checkIcon, pencilIcon, eyeIcon, searchIcon } from '@progress/kendo-svg-
                src={require(`../assets/article-images/${item.Image}`)}
                className="product-card-image"
              />
-             <CardTitle
-               className="product-card-title"
-             />
-             <CardTitle>{item.Title}</CardTitle>
-             <CardTitle>{item.Subtitle}</CardTitle>
+             <CardTitle className="product-card-title">{item.Title}</CardTitle>
+             <p className="product-card-subtitle">{item.Subtitle}</p>
              <p className={isScroll ? 'overflow' : ''} contentEditable={toggle}  suppressContentEditableWarning={true}>
                Some quick example text to build on the card title and make up the
                bulk of the card content.
