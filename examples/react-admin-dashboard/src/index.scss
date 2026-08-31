@@ -251,6 +251,8 @@ div.k-form-field:nth-child(3) {
   .k-drawer-items {
     display: flex;
     flex-direction: column;
+    min-height: 0;
+    overflow-y: auto;
   }
 }
 
@@ -316,10 +318,15 @@ div.k-form-field:nth-child(3) {
 }
 
 .drawer-user {
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+  flex-shrink: 0;
   margin-top: auto;
   padding: var(--kendo-spacing-6) var(--kendo-spacing-4);
   border-top: 1px solid var(--kendo-color-border);
   box-sizing: border-box;
+  background: var(--kendo-color-app-surface);
   text-align: center;
 
    img {
