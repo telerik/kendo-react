@@ -142,7 +142,7 @@ const Header: React.FC = () => {
     <>
       <link id="theme-link" rel="stylesheet" href={theme} />
       <LocalizationProvider language={language}>
-        <AppBar themeColor="base">
+        <AppBar positionMode="sticky" themeColor="base">
           <AppBarSection
             className="header__start"
           >

@@ -94,7 +94,7 @@ const Header: React.FC = () => {
   return (
     <>
       <link id="theme-link" rel="stylesheet" href={theme} />
-      <AppBar themeColor="base">
+      <AppBar positionMode="sticky" themeColor="base">
         <AppBarSection
           className="header__primary-section"
         >
