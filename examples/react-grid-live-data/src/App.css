@@ -185,6 +185,13 @@ h3 {
   flex: 1 1 auto;
   flex-direction: column;
   min-width: 0;
+  overflow: hidden;
+}
+
+.holding-card__name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .holding-card__symbol,
@@ -322,6 +329,39 @@ h3 {
   height: var(--kendo-spacing-12);
   object-fit: cover;
   border-radius: var(--kendo-border-radius-sm);
+}
+
+.market-grid .ticker-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--kendo-spacing-2);
+}
+
+.market-grid .ticker-cell img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.market-grid .ticker-cell__symbol {
+  font-family: var(--kendo-font-family-monospace);
+  font-weight: var(--kendo-font-weight-semibold);
+}
+
+.market-grid .positive,
+.market-grid .negative {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--kendo-spacing-1);
+  font-weight: var(--kendo-font-weight-semibold);
+}
+
+.market-grid .positive {
+  color: var(--kendo-color-success);
+}
+
+.market-grid .negative {
+  color: var(--kendo-color-error);
 }
 
 @media (max-width: 87.5rem) {

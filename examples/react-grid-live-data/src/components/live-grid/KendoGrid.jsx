@@ -11,14 +11,14 @@ export const KendoGrid = props => {
   }, [props.refreshRate]);
   return <>
       <Grid className="market-grid" data={props.data} rowHeight={63} size="small">
-        <GridColumn field={'Ticker'} title="TICKER" cell={TickerCell} />
-        <GridColumn field={'Price'} title="LAST" filter={'numeric'} cell={PriceCell} />
-        <GridColumn field={'Change(%)'} title="CHG %" cell={ChangePercentCell} />
-        <GridColumn field={'Change'} title="CHG" cell={ChangeCell} />
-        <GridColumn field={'High(D)'} title="HIGH" cell={PriceCell} />
-        <GridColumn field={'Low(D)'} title="LOW" cell={PriceCell} />
-        <GridColumn field={'Volume'} title="VOL" cell={VolumeCell} />
-        <GridColumn title="RATING" format={'{0:c4}'} cell={RatingCell} />
+        <GridColumn field={'Ticker'} title="TICKER" cells={{ data: TickerCell }} />
+        <GridColumn field={'Price'} title="LAST" filter={'numeric'} cells={{ data: PriceCell }} />
+        <GridColumn field={'Change(%)'} title="CHG %" cells={{ data: ChangePercentCell }} />
+        <GridColumn field={'Change'} title="CHG" cells={{ data: ChangeCell }} />
+        <GridColumn field={'High(D)'} title="HIGH" cells={{ data: PriceCell }} />
+        <GridColumn field={'Low(D)'} title="LOW" cells={{ data: PriceCell }} />
+        <GridColumn field={'Volume'} title="VOL" cells={{ data: VolumeCell }} />
+        <GridColumn title="RATING" format={'{0:c4}'} cells={{ data: RatingCell }} />
       </Grid>
     </>;
 };
