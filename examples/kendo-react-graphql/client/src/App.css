@@ -85,7 +85,7 @@
 .products-grid {
   background: var(--kendo-color-surface);
   border: var(--kendo-spacing-1px) solid var(--kendo-color-border);
-  border-radius: var(--kendo-border-radius-md);
+  border-radius: var(--kendo-border-radius-xl);
 }
 
 .product-editor {
@@ -99,6 +99,11 @@
   flex: 1 1 auto;
   min-inline-size: 0;
   overflow: hidden;
+}
+
+.products-grid > .k-grid {
+  width: auto;
+  margin: 0 var(--kendo-spacing-6) var(--kendo-spacing-6);
 }
 
 .panel-heading {
