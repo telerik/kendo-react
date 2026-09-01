@@ -16,18 +16,8 @@ body {
   min-height: 100vh;
   font-family: var(--kendo-font-family);
   background:
-    radial-gradient(
-      ellipse at 100% 0,
-      color-mix(in oklch, var(--kendo-color-tertiary-subtle) 88%, transparent)
-        0%,
-      transparent 52%
-    ),
-    radial-gradient(
-      ellipse at 0 24%,
-      color-mix(in oklch, var(--kendo-color-secondary-subtle) 90%, transparent)
-        0%,
-      transparent 58%
-    ),
+    radial-gradient(ellipse at 100% 0, var(--kendo-color-secondary-subtle) 0%, transparent 52%),
+    radial-gradient(ellipse at 0 24%, var(--kendo-color-secondary-subtle) 0%, transparent 58%),
     var(--kendo-color-app-surface);
   background-attachment: fixed;
   color: var(--kendo-color-on-app-surface);
@@ -59,18 +49,14 @@ textarea:focus-visible,
   top: 32px;
   padding: var(--kendo-spacing-4);
   border: var(--kendo-spacing-1px) solid var(--kendo-color-border);
-  border-radius: var(--kendo-border-radius-md);
-  background: color-mix(
-    in oklch,
-    var(--kendo-color-surface) 72%,
-    var(--kendo-color-transparent)
-  );
+  border-radius: var(--kendo-border-radius-xxl);
+  background: color-mix(in oklch, var(--kendo-color-surface) 72%, transparent);
   box-shadow: var(--kendo-elevation-1);
   backdrop-filter: blur(var(--kendo-translucency-blur-base));
 }
 .navigation-title {
   margin: 0 0 var(--kendo-spacing-4);
-  color: var(--kendo-color-primary);
+  color: var(--kendo-color-secondary);
   font-size: var(--kendo-font-size-sm);
   font-weight: var(--kendo-font-weight-bold);
   text-transform: uppercase;
@@ -85,7 +71,7 @@ textarea:focus-visible,
   padding: var(--kendo-spacing-2) var(--kendo-spacing-3);
   border: 0;
   border-radius: var(--kendo-border-radius-sm);
-  background: var(--kendo-color-transparent);
+  background: transparent;
   color: var(--kendo-color-on-app-surface);
   font: inherit;
   font-weight: var(--kendo-font-weight-medium);
@@ -94,8 +80,8 @@ textarea:focus-visible,
 }
 .side-navigation button:hover,
 .side-navigation button.is-active {
-  background: var(--kendo-color-primary-subtle);
-  color: var(--kendo-color-primary-on-subtle);
+  background: var(--kendo-color-secondary-subtle);
+  color: var(--kendo-color-secondary-on-subtle);
 }
 .mobile-navigation-toggle {
   display: none;
@@ -110,7 +96,7 @@ textarea:focus-visible,
 }
 .eyebrow {
   margin: 0 0 var(--kendo-spacing-2);
-  color: var(--kendo-color-primary);
+  color: var(--kendo-color-secondary);
   font-size: var(--kendo-font-size-xs);
   font-weight: var(--kendo-font-weight-bold);
   letter-spacing: var(--kendo-letter-spacing-widest);
@@ -150,12 +136,8 @@ h2 {
   gap: var(--kendo-spacing-3);
   padding: var(--kendo-spacing-2) var(--kendo-spacing-3);
   border: var(--kendo-spacing-1px) solid var(--kendo-color-border);
-  border-radius: var(--kendo-border-radius-md);
-  background: color-mix(
-    in oklch,
-    var(--kendo-color-surface) 72%,
-    var(--kendo-color-transparent)
-  );
+  border-radius: var(--kendo-border-radius-xxl);
+  background: color-mix(in oklch, var(--kendo-color-surface) 72%, transparent);
   color: var(--kendo-color-subtle);
   font-weight: var(--kendo-font-weight-medium);
 }
@@ -166,12 +148,8 @@ h2 {
 .stacked-list,
 .empty-state {
   border: var(--kendo-spacing-1px) solid var(--kendo-color-border);
-  border-radius: var(--kendo-border-radius-md);
-  background: color-mix(
-    in oklch,
-    var(--kendo-color-surface) 72%,
-    var(--kendo-color-transparent)
-  );
+  border-radius: var(--kendo-border-radius-xxl);
+  background: color-mix(in oklch, var(--kendo-color-surface) 72%, transparent);
   box-shadow: var(--kendo-elevation-1);
   backdrop-filter: blur(var(--kendo-translucency-blur-base));
 }
@@ -206,16 +184,9 @@ h2 {
 .metric-card,
 .chart-card {
   border: var(--kendo-spacing-1px) solid var(--kendo-color-border);
-  background: color-mix(
-    in oklch,
-    var(--kendo-color-surface) 72%,
-    var(--kendo-color-transparent)
-  );
+  background: color-mix(in oklch, var(--kendo-color-surface) 72%, transparent);
   box-shadow: var(--kendo-elevation-1);
   backdrop-filter: blur(var(--kendo-translucency-blur-base));
-}
-.metric-card {
-  min-height: calc(var(--kendo-spacing-24) * 2.5);
 }
 .metric-card .k-card-title {
   margin: 0;
@@ -227,7 +198,7 @@ h2 {
 }
 .metric-value {
   margin: var(--kendo-spacing-4) 0 0;
-  color: var(--kendo-color-primary);
+  color: var(--kendo-color-secondary);
   font-size: calc(var(--kendo-font-size-xl) * 1.6);
   font-weight: var(--kendo-font-weight-bold);
 }
@@ -270,7 +241,7 @@ small {
   margin: var(--kendo-spacing-1) 0 0;
 }
 .k-grid {
-  background: var(--kendo-color-transparent);
+  background: transparent;
 }
 .k-grid td,
 .k-grid th {
@@ -344,8 +315,8 @@ small {
   height: var(--kendo-spacing-12);
   place-items: center;
   border-radius: var(--kendo-border-radius-full);
-  background: var(--kendo-color-primary-subtle);
-  color: var(--kendo-color-primary-on-subtle);
+  background: var(--kendo-color-secondary-subtle);
+  color: var(--kendo-color-secondary-on-subtle);
   font-size: var(--kendo-font-size-xl);
   font-weight: var(--kendo-font-weight-bold);
 }
@@ -405,7 +376,7 @@ small {
   max-width: 85%;
   margin: 0;
   padding: var(--kendo-spacing-3);
-  border-radius: var(--kendo-border-radius-md);
+  border-radius: var(--kendo-border-radius-xxl);
   font-size: var(--kendo-font-size-sm);
 }
 .assistant-message {
@@ -413,7 +384,7 @@ small {
 }
 .user-message {
   justify-self: end;
-  background: var(--kendo-color-primary-subtle);
+  background: var(--kendo-color-secondary-subtle);
 }
 .chat-form {
   display: grid;

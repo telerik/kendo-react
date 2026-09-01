@@ -350,7 +350,7 @@ function Dashboard() {
 
   const isDark = theme === "dark";
   const chartStyle = {
-    background: "var(--kendo-color-transparent)",
+    background: "transparent",
     color: "var(--kendo-color-on-app-surface)",
   };
   const chartLabelColor = "var(--kendo-color-subtle)";
@@ -482,7 +482,7 @@ function Dashboard() {
               <CardBody>
                 <Chart
                   style={chartStyle}
-                  chartArea={{ background: "var(--kendo-color-transparent)" }}
+                  chartArea={{ background: "transparent" }}
                 >
                   <ChartTitle text="API calls by day" color={chartTitleColor} />
                   <ChartLegend
@@ -520,7 +520,7 @@ function Dashboard() {
               <CardBody>
                 <Chart
                   style={chartStyle}
-                  chartArea={{ background: "var(--kendo-color-transparent)" }}
+                  chartArea={{ background: "transparent" }}
                 >
                   <ChartTitle text="Spend by model" color={chartTitleColor} />
                   <ChartLegend
