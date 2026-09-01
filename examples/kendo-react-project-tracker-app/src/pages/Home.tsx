@@ -68,14 +68,7 @@ export default function Home() {
                 </Card>
             </div>
             <div className="dashboard-card--calendar">
-                <Card className="dashboard-card">
-                    <CardHeader className="tracker-card-header">
-                        <CardTitle className="dashboard-card__title">Calendar</CardTitle>
-                    </CardHeader>
-                    <CardBody className="dashboard-card__calendar">
-                        <Calendar value={date} onChange={e => setDate(e.value)} tabIndex={0}/>
-                    </CardBody>
-                </Card>
+                <Calendar value={date} onChange={e => setDate(e.value)} tabIndex={0}/>
             </div>
             <div className="dashboard-card--teams">
                 <Card className="dashboard-card">

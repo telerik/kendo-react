@@ -23,14 +23,13 @@ body {
   background:
     radial-gradient(
       ellipse at 0% 0%,
-      color-mix(in srgb,       var(--kendo-color-secondary-subtle) 72%, transparent)
+      color-mix(in srgb, var(--kendo-color-secondary-subtle) 72%, transparent)
         0%,
       transparent 46%
     ),
     radial-gradient(
       ellipse at 100% 12%,
-      color-mix(in srgb,       var(--kendo-color-tertiary-subtle) 78%, transparent)
-        0%,
+      color-mix(in srgb, var(--kendo-color-tertiary-subtle) 78%, transparent) 0%,
       transparent 42%
     ),
     var(--tracker-page-surface);
@@ -88,7 +87,7 @@ a {
 }
 
 .tracker-appbar__search {
-  min-width: min(36rem, 100%);
+  min-width: min(36rem, 100%) !important;
 }
 
 .tracker-appbar__search-section {
@@ -249,7 +248,7 @@ a {
 }
 
 .dashboard-card--projects {
-  grid-column: span 1;
+  grid-column: span 2;
 }
 
 .dashboard-card--calendar {
@@ -699,7 +698,6 @@ a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .dashboard-card--projects,
   .dashboard-card--calendar,
   .dashboard-card--teams,
   .dashboard-card--todo,
