@@ -1,50 +1,30 @@
 "use client";
 import * as React from "react";
 
-import {
-  Sparkline,
-  ChartValueAxis,
-  ChartValueAxisItem,
-  ChartArea,
-} from "@progress/kendo-react-charts";
+import { Sparkline } from "@progress/kendo-react-charts";
 import { Badge } from "@progress/kendo-react-indicators";
 import { useInternationalization } from "@progress/kendo-react-intl";
 import { SvgIcon } from "@progress/kendo-react-common";
-import { starOutlineIcon, starIcon } from "@progress/kendo-svg-icons";
+import { starIcon } from "@progress/kendo-svg-icons";
 import Image from "next/image";
 
 import { images } from "./../resources/images";
 
 export const FullNameCell = (props) => {
-  const customerPhotoStyle = {
-    display: "inline-block",
-    width: 32,
-    height: 32,
-    borderRadius: "50%",
-    backgroundSize: "32px 35px",
-    backgroundPosition: "center center",
-    verticalAlign: "middle",
-    lineHeight: "32px",
-    boxShadow: "inset 0 0 1px #999, inset 0 0 10px rgba(0,0,0,.2)",
-    marginLeft: "5px",
-    backgroundImage: images[props.dataItem.imgId + props.dataItem.gender],
-  };
-
-  const customerName = {
-    display: "inline-block",
-    verticalAlign: "middle",
-    lineHeight: "32px",
-    paddingLeft: "10px",
-  };
-
   if (props.rowType === "groupHeader") {
     return null;
   }
 
   return (
     <td className={props.tdProps.className}>
-      <div style={customerPhotoStyle} />
-      <div style={customerName}>{props.dataItem.fullName}</div>
+      <div
+        className="employee-photo"
+        style={{
+          "--employee-photo":
+            images[props.dataItem.imgId + props.dataItem.gender],
+        }}
+      />
+      <div className="employee-name">{props.dataItem.fullName}</div>
     </td>
   );
 };
@@ -55,10 +35,14 @@ export const FlagCell = (props) => {
   }
 
   return (
-    <td style={{ textAlign: "center" }} className={props.tdProps.className}>
+    <td
+      className={[props.tdProps.className, "cell-content--center"]
+        .filter(Boolean)
+        .join(" ")}
+    >
       <Image
         src={images[props.dataItem.country]}
-        style={{ width: 30, verticalAlign: "middle", borderStyle: "none" }}
+        className="flag-icon"
         alt={props.dataItem.country}
         width={30}
         height={21}
@@ -82,8 +66,12 @@ export const RatingCell = (props) => {
         return (
           <SvgIcon
             key={idx}
-            icon={!isActive ? starIcon : starOutlineIcon}
-            style={!isActive ? { color: "#ffa600" } : undefined}
+            icon={starIcon}
+            className={
+              !isActive
+                ? "grid-rating__icon--filled"
+                : "grid-rating__icon--inactive"
+            }
           />
         );
       })}
@@ -92,23 +80,33 @@ export const RatingCell = (props) => {
 };
 
 export const OnlineCell = (props) => {
-  const badgeStyle = {
-    position: "relative",
-    display: "inline",
-  };
-
   if (props.rowType === "groupHeader") {
     return null;
   }
 
   return (
-    <td style={{ textAlign: "center" }} className={props.tdProps.className}>
+    <td
+      className={[props.tdProps.className, "cell-content--center"]
+        .filter(Boolean)
+        .join(" ")}
+      style={{ position: "relative" }}
+    >
       {props.dataItem.isOnline === true ? (
-        <Badge themeColor={"success"} shape={"rounded"} style={badgeStyle}>
+        <Badge
+          themeColor={"success"}
+          shape={"rounded"}
+          className="status-badge"
+          style={{ position: "relative", display: "inline" }}
+        >
           Online
         </Badge>
       ) : (
-        <Badge themeColor={"error"} shape={"rounded"} style={badgeStyle}>
+        <Badge
+          themeColor={"error"}
+          shape={"rounded"}
+          className="status-badge"
+          style={{ position: "relative", display: "inline" }}
+        >
           Offline
         </Badge>
       )}
@@ -129,11 +127,6 @@ export const EngagementCell = (props) => {
 };
 
 export const CurrencyCell = (props) => {
-  const redBoldStyle = {
-    color: "#d9534f",
-    fontWeight: 600,
-  };
-
   const intlService = useInternationalization();
 
   if (props.rowType === "groupHeader") {
@@ -142,7 +135,9 @@ export const CurrencyCell = (props) => {
 
   return (
     <td className={props.tdProps.className}>
-      <span style={props.dataItem.budget < 0 ? redBoldStyle : undefined}>
+      <span
+        className={props.dataItem.budget < 0 ? "currency-negative" : undefined}
+      >
         {intlService.formatNumber(props.dataItem.budget, "c")}
       </span>
     </td>

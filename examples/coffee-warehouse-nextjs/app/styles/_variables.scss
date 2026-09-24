@@ -1,11 +1,20 @@
 // Global variables here
-$background-color: #D4D6E4;
-$info-background: #151950;
-$react-color: #53d2fa;
-$link-color: #71A6FF;
-$white: #FFFFFF;
+$background-color: var(--kendo-color-app-surface);
+$surface-color: var(--kendo-color-surface);
+$surface-alt-color: var(--kendo-color-surface-alt);
+$surface-glass-color: color-mix(in srgb, var(--kendo-color-surface) calc(100% - var(--kendo-translucency-base)), transparent);
+$app-surface-glass-color: color-mix(in srgb, var(--kendo-color-app-surface) calc(100% - var(--kendo-translucency-base)), transparent);
+$info-background: var(--kendo-color-inverse);
+$react-color: var(--kendo-color-primary);
+$link-color: var(--kendo-color-info);
+$white: var(--kendo-color-on-inverse);
+$subtle-color: var(--kendo-color-subtle);
+$border-color: var(--kendo-color-border);
+$border-alt-color: var(--kendo-color-border-alt);
+$error-color: var(--kendo-color-error);
+$warning-color: var(--kendo-color-warning);
 
-$tiger-team: #FF6358;
-$lemon-team: #FFD246;
-$organic-team: #55AB1D;
-$ocean-team: #28B4C8;
+$tiger-team: var(--kendo-color-series-a);
+$lemon-team: var(--kendo-color-series-b);
+$organic-team: var(--kendo-color-series-c);
+$ocean-team: var(--kendo-color-series-d);
