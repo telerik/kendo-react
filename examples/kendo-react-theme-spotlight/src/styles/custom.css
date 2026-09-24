@@ -1,0 +1,546 @@
+/* ================================================================
+   Showcase chrome — custom styles built on Kendo CSS variables
+   ================================================================
+   Organized by component. Kendo selector overrides live at the end.
+   Layout utilities (grid, flex, spacing) are handled by Tailwind
+   directly in App.tsx — only styles that require CSS features
+   (animations, pseudo-elements, complex gradients, data-attribute
+   selectors, descendant :hover) remain here.
+   ================================================================ */
+
+
+/* ────────────────────────────────────────────────────────────────
+   1. Global
+   ──────────────────────────────────────────────────────────────── */
+
+html,
+body {
+    background: var(--kendo-color-surface);
+    color: var(--kendo-color-on-app-surface);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+
+/* ────────────────────────────────────────────────────────────────
+   2. Page wrapper + animated backdrop
+   ──────────────────────────────────────────────────────────────── */
+
+.showcase-page {
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.showcase-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    background:
+        radial-gradient(50rem 35rem at 12% 8%, color-mix(in oklch, var(--kendo-color-primary) 12%, transparent), transparent 65%),
+        radial-gradient(45rem 32rem at 55% 90%, color-mix(in oklch, var(--kendo-color-secondary) 10%, transparent), transparent 65%),
+        radial-gradient(40rem 30rem at 88% 18%, color-mix(in oklch, var(--kendo-color-tertiary) 10%, transparent), transparent 65%);
+    filter: blur(20px);
+    opacity: .7;
+}
+
+.showcase-aurora {
+    position: fixed;
+    inset: -10vh -10vw;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .6s ease;
+    background:
+        radial-gradient(60rem 40rem at 5% 2%,   color-mix(in oklch, var(--kendo-color-primary)   50%, transparent), transparent 55%),
+        radial-gradient(55rem 38rem at 96% 8%,  color-mix(in oklch, var(--kendo-color-tertiary)  45%, transparent), transparent 55%),
+        radial-gradient(65rem 45rem at 50% 100%, color-mix(in oklch, var(--kendo-color-secondary) 40%, transparent), transparent 60%),
+        radial-gradient(40rem 30rem at 80% 55%, color-mix(in oklch, var(--kendo-color-primary)   30%, transparent), transparent 55%),
+        radial-gradient(35rem 28rem at 20% 55%, color-mix(in oklch, var(--kendo-color-tertiary)  30%, transparent), transparent 55%);
+    filter: blur(80px) saturate(1.5);
+}
+
+.showcase-page[data-gradient] .showcase-aurora { opacity: .55; }
+.showcase-page[data-dark][data-gradient] .showcase-aurora { opacity: .45; }
+.showcase-page[data-gradient] .showcase-bg { opacity: .25; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   3. Hero
+   ──────────────────────────────────────────────────────────────── */
+
+.hero-glow {
+    position: absolute;
+    inset: -40% -10% auto -10%;
+    height: 120%;
+    background:
+        radial-gradient(40rem 24rem at 20% 30%, color-mix(in oklch, var(--kendo-color-primary) 30%, transparent), transparent 70%),
+        radial-gradient(36rem 22rem at 50% 80%, color-mix(in oklch, var(--kendo-color-secondary) 22%, transparent), transparent 70%),
+        radial-gradient(36rem 22rem at 80% 60%, color-mix(in oklch, var(--kendo-color-tertiary) 26%, transparent), transparent 70%);
+    filter: blur(60px);
+    opacity: .9;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.hero-title {
+    font-size: clamp(2.75rem, 6.5vw, 5.5rem);
+    font-weight: 800;
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+    margin: 1.5rem 0 1.5rem;
+    background: linear-gradient(120deg,
+        var(--kendo-color-on-app-surface) 18%,
+        var(--kendo-color-primary) 55%,
+        var(--kendo-color-tertiary) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    max-width: 22ch;
+}
+
+
+/* ────────────────────────────────────────────────────────────────
+   4. Bento container
+   ──────────────────────────────────────────────────────────────── */
+
+.bento-container {
+    position: relative;
+    padding: 2rem;
+    border-radius: var(--kendo-border-radius-xxxl, 1.5rem);
+    border: 1px solid var(--kendo-color-border);
+    background: var(--kendo-color-app-surface);
+    overflow: hidden;
+    isolation: isolate;
+    transition: background .4s ease;
+}
+
+.bento-glow {
+    position: absolute;
+    inset: -20%;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .5s ease;
+    background:
+        conic-gradient(from 210deg at 35% 35%,
+            color-mix(in oklch, var(--kendo-color-primary)   55%, transparent),
+            color-mix(in oklch, var(--kendo-color-secondary) 45%, transparent),
+            color-mix(in oklch, var(--kendo-color-tertiary)  50%, transparent),
+            color-mix(in oklch, var(--kendo-color-primary)   55%, transparent)),
+        radial-gradient(40rem 30rem at 80% 80%, color-mix(in oklch, var(--kendo-color-secondary) 45%, transparent), transparent 60%);
+    filter: blur(80px) saturate(1.7);
+    transform: scale(1.05);
+}
+
+.showcase-page[data-gradient] .bento-glow { opacity: .9; }
+
+.showcase-page[data-gradient] .bento-container {
+    background: color-mix(in oklch, var(--kendo-color-app-surface) 55%, transparent);
+    border-color: color-mix(in oklch, white 35%, transparent);
+}
+.showcase-page[data-dark][data-gradient] .bento-container {
+    background: color-mix(in oklch, var(--kendo-color-app-surface) 55%, transparent);
+    border-color: color-mix(in oklch, white 12%, transparent);
+}
+
+
+/* ────────────────────────────────────────────────────────────────
+   5. Bento grid — responsive spans now handled by Tailwind
+      (col-span-12 / md:col-span-6 / bento:col-span-N)
+   ──────────────────────────────────────────────────────────────── */
+
+
+/* ────────────────────────────────────────────────────────────────
+   6. Phone frame (BottomNavigation preview)
+   ──────────────────────────────────────────────────────────────── */
+
+.phone-frame__screen {
+    position: relative;
+    border-radius: var(--kendo-border-radius-xxl);
+    overflow: hidden;
+    background:
+        linear-gradient(to top, color-mix(in oklch, #a855f7 30%, transparent) 0%, transparent 60%),
+        var(--kendo-color-app-surface);
+    border: 1px solid var(--kendo-color-border);
+    display: flex;
+    flex-direction: column;
+    min-height: 28rem;
+    height: 100%;
+}
+
+
+/* ────────────────────────────────────────────────────────────────
+   7. KPI tile
+   ──────────────────────────────────────────────────────────────── */
+
+.kpi-tile {
+    --kendo-translucency-base: 0%;
+}
+
+
+/* ────────────────────────────────────────────────────────────────
+   8. Guide button
+   ──────────────────────────────────────────────────────────────── */
+
+@keyframes guide-btn-slide-in {
+    from { opacity: 0; transform: translateX(100%); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+.guide-btn {
+    position: fixed;
+    top: 1.25rem;
+    right: 1.5rem;
+    z-index: 10000;
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    padding: .65rem 1.1rem;
+    border-radius: 9999px;
+    border: 1px solid var(--kendo-color-border);
+    background: color-mix(in oklch, var(--kendo-color-app-surface) 88%, transparent);
+    backdrop-filter: blur(28px) saturate(1.6);
+    -webkit-backdrop-filter: blur(28px) saturate(1.6);
+    box-shadow:
+        0 4px 16px -4px rgba(15, 23, 42, .15),
+        0 0 0 1px color-mix(in oklch, white 40%, transparent) inset;
+    color: var(--kendo-color-on-app-surface);
+    font-size: .8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .2s;
+    animation: guide-btn-slide-in .6s cubic-bezier(.16, 1, .3, 1) 1s both;
+}
+
+.guide-btn:hover {
+    border-color: var(--kendo-color-primary);
+    background: color-mix(in oklch, var(--kendo-color-primary) 8%, var(--kendo-color-app-surface));
+    box-shadow: 0 0 0 3px color-mix(in oklch, var(--kendo-color-primary) 14%, transparent);
+}
+
+
+/* ────────────────────────────────────────────────────────────────
+   9. Floating toolbar (bottom center)
+   ──────────────────────────────────────────────────────────────── */
+
+@keyframes toolbar-slide-up {
+    from { opacity: 0; transform: translateX(-50%) translateY(100%); }
+    to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+@keyframes toolbar-hint-pop {
+    0%   { opacity: 0; transform: translateX(-50%) translateY(8px) scale(.9); }
+    15%  { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
+    85%  { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
+    100% { opacity: 0; transform: translateX(-50%) translateY(-4px) scale(.95); pointer-events: none; }
+}
+
+.floating-toolbar__hint {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 5.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10000;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    background: var(--kendo-color-primary);
+    color: var(--kendo-color-on-primary);
+    font-size: .8rem;
+    font-weight: 500;
+    white-space: nowrap;
+    box-shadow: 0 4px 16px -4px rgba(0, 0, 0, .25);
+    animation: toolbar-hint-pop 5s cubic-bezier(.16, 1, .3, 1) 1.4s both;
+    pointer-events: auto;
+    cursor: default;
+}
+
+.floating-toolbar__hint:hover { animation-play-state: paused; }
+
+.floating-toolbar__hint::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background: var(--kendo-color-primary);
+}
+
+.floating-toolbar {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    padding: .65rem 1.50rem .65rem .65rem;
+    border-radius: 9999px;
+    border: 1px solid var(--kendo-color-border);
+    background: color-mix(in oklch, var(--kendo-color-app-surface) 88%, transparent);
+    backdrop-filter: blur(28px) saturate(1.6);
+    box-shadow:
+        0 12px 40px -8px rgba(15, 23, 42, .22),
+        0 4px 12px -4px rgba(15, 23, 42, .08),
+        0 0 0 1px color-mix(in oklch, white 40%, transparent) inset;
+    font-size: .875rem;
+    animation: toolbar-slide-up .6s cubic-bezier(.16, 1, .3, 1) 1s both;
+}
+
+
+/* ────────────────────────────────────────────────────────────────
+   10. Color toolbar (vertical, right center)
+   ──────────────────────────────────────────────────────────────── */
+
+@keyframes color-toolbar-slide-in {
+    from { opacity: 0; transform: translateY(-50%) translateX(100%); }
+    to   { opacity: 1; transform: translateY(-50%) translateX(0); }
+}
+
+@keyframes color-hint-pop {
+    0%   { opacity: 0; transform: translateY(-50%) translateX(8px) scale(.9); }
+    15%  { opacity: 1; transform: translateY(-50%) translateX(0) scale(1); }
+    85%  { opacity: 1; transform: translateY(-50%) translateX(0) scale(1); }
+    100% { opacity: 0; transform: translateY(-50%) translateX(-4px) scale(.95); pointer-events: none; }
+}
+
+.color-toolbar {
+    position: fixed;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .75rem;
+    padding: .75rem;
+    box-sizing: border-box;
+    border-radius: 9999px;
+    border: 1px solid var(--kendo-color-border);
+    background: color-mix(in oklch, var(--kendo-color-app-surface) 88%, transparent);
+    backdrop-filter: blur(28px) saturate(1.6);
+    -webkit-backdrop-filter: blur(28px) saturate(1.6);
+    box-shadow:
+        0 12px 40px -8px rgba(15, 23, 42, .22),
+        0 4px 12px -4px rgba(15, 23, 42, .08),
+        0 0 0 1px color-mix(in oklch, white 40%, transparent) inset;
+    animation: color-toolbar-slide-in .6s cubic-bezier(.16, 1, .3, 1) 1s both;
+}
+
+.color-toolbar__hint {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    background: var(--kendo-color-primary);
+    color: var(--kendo-color-on-primary, #fff);
+    font-size: .8rem;
+    font-weight: 500;
+    white-space: nowrap;
+    box-shadow: 0 4px 16px -4px rgba(0, 0, 0, .25);
+    animation: color-hint-pop 5s cubic-bezier(.16, 1, .3, 1) 1.4s both;
+    pointer-events: auto;
+    cursor: default;
+}
+
+.color-toolbar__hint:hover { animation-play-state: paused; }
+
+.color-toolbar__hint::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background: var(--kendo-color-primary);
+}
+
+.color-toolbar__swatch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.color-toolbar__ball {
+    display: block;
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 50%;
+    border: 2px solid color-mix(in oklch, white 50%, transparent);
+}
+
+.color-toolbar__swatch:hover .color-toolbar__ball {
+    transform: scale(1.15);
+    box-shadow:
+        0 4px 14px -2px rgba(0, 0, 0, .3),
+        0 0 0 1px rgba(0, 0, 0, .06) inset;
+}
+
+.color-toolbar__input {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+}
+
+.color-toolbar__tip {
+    position: absolute;
+    right: calc(100% + .65rem);
+    white-space: nowrap;
+    font-size: .76rem;
+    font-weight: 600;
+    letter-spacing: .03em;
+    color: var(--kendo-color-on-app-surface);
+    background: color-mix(in oklch, var(--kendo-color-app-surface) 92%, transparent);
+    backdrop-filter: blur(14px);
+    padding: .32rem .62rem;
+    border-radius: .375rem;
+    border: 1px solid var(--kendo-color-border);
+    box-shadow: 0 2px 8px -2px rgba(0, 0, 0, .15);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(4px);
+    transition: opacity .2s, transform .2s;
+}
+
+.color-toolbar__swatch:hover .color-toolbar__tip {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* ────────────────────────────────────────────────────────────────
+   11. Responsive
+   ──────────────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+    .floating-toolbar {
+        flex-wrap: wrap;
+        max-width: calc(100vw - 2rem);
+        border-radius: 1.25rem;
+    }
+}
+
+
+/* ================================================================
+   Kendo Component Overrides
+   ================================================================
+   Styles that target Kendo UI selectors (.k-*) to adjust default
+   component behavior for this showcase layout.
+   ================================================================ */
+
+/* Card — compact header with inline actions */
+.k-card .card-head {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.k-card .card-head .k-card-title {
+    font-size: var(--kendo-font-size-md);
+    font-weight: var(--kendo-font-weight-semibold);
+}
+
+/* BottomNavigation — relative inside phone frame */
+.phone-frame .k-bottom-nav {
+    position: relative !important;
+    z-index: 2;
+    margin-top: auto;
+    margin: auto var(--kendo-spacing-3) var(--kendo-spacing-3);
+    width: auto;
+    border-radius: var(--kendo-border-radius-lg, .75rem);
+}
+
+.phone-frame .k-bottom-nav .k-bottom-nav-item {
+    min-width: unset;
+}
+
+.phone-frame__screen .k-actionsheet-container {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+}
+
+.phone-frame__screen .k-actionsheet-container .k-overlay {
+    position: absolute;
+    inset: 0;
+}
+
+.phone-frame__screen .k-actionsheet.phone-actionsheet {
+    width: auto;
+    height: 255px;
+    border-radius: var(--kendo-border-radius-xl);
+}
+
+/* Charts & StockCharts — fill parent height */
+.k-chart,
+.k-stockchart {
+    height: 100%;
+}
+
+/* Calendar — constrained width */
+.k-calendar {
+    max-width: 100%;
+    /* width: 520px; */
+}
+
+/* TabStrip — animation container full width */
+.k-tabstrip-content .k-animation-container {
+    width: 100%;
+    overflow: visible;
+}
+
+/* Window — always viewport-centred */
+.k-window {
+    position: fixed;
+}
+
+/* Dialog — viewport-centred with high z-index */
+.k-dialog-wrapper {
+    position: fixed;
+    inset: 0;
+    z-index: 10001;
+}
+
+/* ExternalDropZone — fixed height */
+.k-external-dropzone {
+    height: 243px;
+}
+
+/* Slider — fill available width inside floating toolbar */
+.floating-toolbar .k-slider {
+    flex: 1;
+    min-width: 8rem;
+}
+
+.k-drawer-container {
+    height: 100%;
+}
+
+.k-drawer {
+    border-top-left-radius: var(--kendo-border-radius-lg, .75rem);
+    border-bottom-left-radius: var(--kendo-border-radius-lg, .75rem);
+}

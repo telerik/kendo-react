@@ -106,6 +106,7 @@ This repository hosts sample applications that demonstrate the usage of KendoRea
 | 🤖 <a href="https://github.com/telerik/kendo-react/tree/master/examples/ai-usage-monitoring-dashboard">AI Usage Monitor</a>                          | AI metrics dashboard           |
 | ⚡ <a href="https://github.com/telerik/kendo-react/tree/master/examples/kendo-react-grid-performance">Grid Performance</a>                               | Performance optimization       |
 | 📊 <a href="https://github.com/telerik/kendo-react/tree/master/examples/kendo-react-sales-dashboard">Sales Dashboard</a>                             | Admin dashboard                |
+| 🎨 <a href="https://github.com/telerik/kendo-react/tree/master/examples/kendo-react-theme-spotlight">Theme Spotlight</a>                             | Full component showcase for theming |
 
 Explore all <a href="https://github.com/telerik/kendo-react/tree/master/examples">sample applications</a>.
 

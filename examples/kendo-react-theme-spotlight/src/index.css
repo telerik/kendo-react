@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-bento: 68.75rem; /* 1100px */
+}
