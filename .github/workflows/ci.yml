@@ -67,6 +67,8 @@ jobs:
               - 'examples/kendo-react-tailwind/**'
             kendo-unstyled-tailwind-v4:
               - 'examples/kendo-unstyled-tailwind-v4/**'
+            kendo-react-theme-spotlight:
+              - 'examples/kendo-react-theme-spotlight/**'
             react-health-app:
               - 'examples/react-health-app/**'
             ai-usage-monitoring-dashboard:
@@ -210,6 +212,12 @@ jobs:
       - name: Build Kendo React Unstyled Tailwind v4 app
         working-directory: ./examples/kendo-unstyled-tailwind-v4
         if: steps.changes.outputs.kendo-unstyled-tailwind-v4 == 'true'
+        run: |
+          npm ci
+          npm run build
+      - name: Build Kendo React Theme Spotlight app
+        working-directory: ./examples/kendo-react-theme-spotlight
+        if: steps.changes.outputs.kendo-react-theme-spotlight == 'true'
         run: |
           npm ci
           npm run build
