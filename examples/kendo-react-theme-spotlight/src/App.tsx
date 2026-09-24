@@ -2249,8 +2249,8 @@ const App: React.FC = () => {
     const themeLink = document.getElementById("kendo-theme") as HTMLLinkElement;
     if (themeLink) {
       themeLink.href = isDark
-        ? "https://unpkg.com/@progress/kendo-theme-meridian@14.0.0/dist/meridian-main-dark.css"
-        : "https://unpkg.com/@progress/kendo-theme-meridian@14.0.0/dist/meridian-main.css";
+        ? "https://unpkg.com/@progress/kendo-theme-meridian/dist/meridian-main-dark.css"
+        : "https://unpkg.com/@progress/kendo-theme-meridian/dist/meridian-main.css";
     }
   }, [isDark]);
 
