@@ -31,6 +31,7 @@ import esDateFields from "cldr-dates-full/main/es/dateFields.json";
 import { enMessages } from "./messages/en";
 import { frMessages } from "./messages/fr";
 import { esMessages } from "./messages/es";
+import { WarehouseShellProvider } from "./components/WarehouseShellContext";
 
 load(
   likelySubtags,
@@ -55,18 +56,24 @@ loadMessages(enMessages, "en");
 loadMessages(frMessages, "fr");
 
 import { Header } from "./components/Header";
+import { usePathname } from "next/navigation";
 
 export function GlobalizationAndHeader(props) {
   const [language, setLanguage] = React.useState("en");
+  const pathname = usePathname();
   const onButtonClick = (event) => {
     setLanguage(event.value.localeId);
   };
   return (
-    <LocalizationProvider language={language}>
-      <IntlProvider locale={language}>
-        <Header onButtonClick={onButtonClick} />
-        {props.children}
-      </IntlProvider>
-    </LocalizationProvider>
+    <WarehouseShellProvider>
+      <LocalizationProvider language={language}>
+        <IntlProvider locale={language}>
+          {!pathname.startsWith("/auth") && (
+            <Header onButtonClick={onButtonClick} />
+          )}
+          {props.children}
+        </IntlProvider>
+      </LocalizationProvider>
+    </WarehouseShellProvider>
   );
 }

@@ -1,91 +1,114 @@
 import { Badge, BadgeContainer } from "@progress/kendo-react-indicators";
 import { Button } from "@progress/kendo-react-buttons";
-import { cartIcon } from "@progress/kendo-svg-icons";
+import { SvgIcon } from "@progress/kendo-react-common";
+import { cartIcon, checkCircleIcon, warningTriangleIcon, xCircleIcon } from "@progress/kendo-svg-icons";
 import { CardListProps } from "../data/types";
 import { useNavigate } from "react-router-dom";
+import { Rating } from "@progress/kendo-react-inputs";
+import { useLanguageContext } from "../helpers/LanguageContext";
 
 export const CardsList = (props: CardListProps) => {
   const navigate = useNavigate();
+  const { t } = useLanguageContext();
 
-  const onButtonClick = (index: number) => {
-    navigate(`/product/${index + 1}`);
+  const onButtonClick = (id: number | undefined, index: number) => {
+    navigate(`/product/${id ?? index + 1}`);
   };
 
   return (
-    <section className="k-d-grid k-grid-cols-12 k-col-span-12 k-justify-content-center k-align-items-center k-gap-3">
+    <section id="product-results" className={`cards-list cards-list--${props.layout}`} aria-label={t.allProductsTitle}>
       {props.data.map((item, index) => {
+        const stockStatus = item.stockStatus ?? "in-stock";
+        const stockIcon = stockStatus === "in-stock"
+          ? checkCircleIcon
+          : stockStatus === "low-stock"
+            ? warningTriangleIcon
+            : xCircleIcon;
+        const stockLabel = stockStatus === "in-stock"
+          ? t.inStockLabel
+          : stockStatus === "low-stock"
+            ? `${t.lowStockLabel} ${item.stockCount ?? 0} ${t.leftLabel}`
+            : t.outOfStockLabel;
+        const rating = item.rating ?? 0;
+        const reviewCount = item.reviewCount ?? 0;
+
         return (
-          <div
-            key={index}
-            className={`${props.layout === 'grid' ? 'k-col-span-4' : 'k-col-span-3'} k-text-center k-border k-border-primary k-gap-1 k-pb-5`}
+          <article
+            key={item.id ?? index}
+            className={`cards-list__item cards-list__item--${props.layout}`}
           >
             {item.status !== null ? (
-              <BadgeContainer>
+              <BadgeContainer className="cards-list__media">
                 <div
-                  className="k-d-flex k-justify-content-center k-align-items-center k-rounded-lg"
+                  className="cards-list__image"
                   style={{
                     backgroundImage: `url(${item.img})`,
-                    width: "278px",
-                    height: "236px",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
                   }}
+                  role="img"
+                  aria-label={item.title}
                 ></div>
 
                 <Badge
                   themeColor="primary"
-                  className="k-text-uppercase"
+                  className="cards-list__badge"
                   position={"inside"}
                   align={{
                     horizontal: "start",
                     vertical: "top",
                   }}
-                  style={{zIndex: 1}}
                 >
                   {item.status}
                 </Badge>
               </BadgeContainer>
             ) : (
               <div
-                className="k-d-inline-block k-justify-content-center k-align-items-center k-rounded-lg"
+                className="cards-list__image"
                 style={{
                   backgroundImage: `url(${item.img})`,
-                  width: "278px",
-                  height: "236px",
                 }}
+                role="img"
+                aria-label={item.title}
               ></div>
             )}
-            <div>
-              <div className="k-pt-2">{item.title}</div>
-              <div className="k-d-flex k-justify-content-center k-gap-xl k-align-items-center k-pt-2">
-                <span>
-                  {item.oldPrice && (
+            <div className="cards-list__content">
+            <h3 className="cards-list__title">{item.title}</h3>
+            <div className="cards-list__meta">
+              <span className="cards-list__category">{item.category}</span>
+              <span className="cards-list__material">{item.material}</span>
+            </div>
+            <div className="cards-list__rating" aria-label={`${t.ratingLabel}: ${rating.toFixed(1)} ${t.outOfFiveLabel}, ${reviewCount} ${t.reviewsLabel}`}>
+              <Rating value={rating} max={5} precision="half" readonly={true} />
+              <span>{rating.toFixed(1)} {t.outOfFiveLabel}</span>
+              <span>{reviewCount} {t.reviewsLabel}</span>
+            </div>
+            <div className={`cards-list__stock cards-list__stock--${stockStatus}`}>
+              <SvgIcon icon={stockIcon} />
+              <span>{stockLabel}</span>
+            </div>
+            <div className="cards-list__actions">
+              <span>
+                {item.oldPrice && (
                     <span
-                      className="k-text-line-through"
-                      style={{
-                        paddingRight: "8px",
-                      }}
+                      className="cards-list__old-price"
                     >{`$${item.oldPrice}`}</span>
                   )}
-                  <span
-                    style={{
-                      color: "red",
-                    }}
-                  >{`$${item.newPrice}`}</span>
+                  <span className="cards-list__price">{`$${item.newPrice}`}</span>
                 </span>
                 <span>
                   <Button
                     fillMode={"outline"}
                     svgIcon={cartIcon}
-                    onClick={() => onButtonClick(index)}
+                    onClick={() => onButtonClick(item.id, index)}
                   >
-                    Buy
+                    {t.buyButtonText}
                   </Button>
                 </span>
               </div>
             </div>
-          </div>
+          </article>
         );
       })}
     </section>

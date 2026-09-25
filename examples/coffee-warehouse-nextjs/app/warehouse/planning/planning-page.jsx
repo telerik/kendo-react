@@ -9,6 +9,7 @@ import {
   CardTitle,
   CardSubtitle,
 } from "@progress/kendo-react-layout";
+import { Button } from "@progress/kendo-react-buttons";
 import { guid } from "@progress/kendo-react-common";
 
 import { Scheduler } from "../../components/Scheduler";
@@ -81,13 +82,20 @@ const Planning = (props) => {
         </h3>
         {orderEmployees.map((employee) => {
           return (
-            <div
+            <Button
               key={employee.id}
+              className="employee-toggle"
+              fillMode="flat"
+              aria-pressed={filterState[employee.id]}
               onClick={() => onEmployeeClick(employee.id)}
-              style={!filterState[employee.id] ? { opacity: 0.5 } : {}}
             >
-              <Card style={{ borderWidth: 0, cursor: "pointer" }}>
-                <CardHeader className="k-hbox">
+              <Card
+                style={{
+                  borderWidth: 0,
+                  opacity: filterState[employee.id] ? 1 : 0.5,
+                }}
+              >
+                <CardHeader className="planning-card-header">
                   <Avatar
                     type="image"
                     shape="circle"
@@ -123,7 +131,7 @@ const Planning = (props) => {
                   </div>
                 </CardHeader>
               </Card>
-            </div>
+            </Button>
           );
         })}
         <div className="card-component">

@@ -8,18 +8,6 @@ const headerBg = `${import.meta.env.BASE_URL}header-bg.svg`;
 import userImg from '../../images/user.jpg';
 import { Link } from 'react-router-dom';
 
-const customValueRender = (el: any, value: any) => (
-    <el.type
-        {...el.props}
-        className={classNames(el.props.className, "text-left pl-0")}
-    >
-        {value
-            ? (<>
-                <span className="text-left">Currency in {value.name}</span></>)
-            : null}
-
-    </el.type>)
-
 export const Header: React.FunctionComponent<any> = () => {
     const { currency, onCurrencyChange } = React.useContext(CurrencyContext);
     const data = [
@@ -38,37 +26,27 @@ export const Header: React.FunctionComponent<any> = () => {
     )
 
     return (
-        
+
         <header
-            className={classNames(styles.header, styles['currency-input'], 'py-3')}
+            className={styles.header}
             style={{ background: `url(${headerBg})` }}
         >
-            <div className="container pt-4 pb-2">
-                <div className="row">
-                    <div className="col-9">
-                        <h1 className="k-h1 mb-0 header-title">My Stocks Portfolio</h1>
+            <div className={classNames('container', styles.headerContent)}>
+                <div className={styles.headerRow}>
+                    <Link className={styles.brand} to="/">
+                        <h1 className={classNames(styles.title, "mb-0")}>My Stocks Portfolio</h1>
+                    </Link>
+                    <div className={styles.controls}>
                         <DropDownList
-                            popupSettings={{
-                                animate: {
-                                    closeDuration: 0
-                                }
-                            }}
                             data={data}
-                            style={{
-                                width: 200,
-                                border: 'none'
-                            }}
+                            style={{ width: 160 }}
                             value={data.find(c => c.value === currency)}
                             onChange={handleChange}
-                            valueRender={customValueRender}
                             textField="name"
+                            aria-label="Currency"
                         />
-                    </div>
-                    <div className="col-3">
-                        <div className="text-right">
-                            <Link to="/profile">
-                                <img src={userImg} alt="user" />
-                            </Link>
+                        <div className={styles.avatar}>
+                            <img src={userImg} alt="Collin Johnson" />
                         </div>
                     </div>
                 </div>

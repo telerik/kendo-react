@@ -6,11 +6,13 @@ import { Card, CardHeader, Avatar, CardTitle, CardSubtitle } from '@progress/ken
 import { guid } from '@progress/kendo-react-common';
 
 import { Scheduler } from './../components/Scheduler';
+import { PageHeader } from './../components/PageHeader';
 
 import { employees } from './../resources/employees';
 import { images } from './../resources/images';
 import { orders, ordersModelFields } from './../resources/orders';
 import { teams } from './../resources/teams';
+import { translate } from './../resources/localization';
 
 const orderEmployees = employees.filter(employee => employee.jobTitle === 'Sales Representative');
 const initialFilterState = { };
@@ -25,6 +27,14 @@ orderEmployees.forEach(employee => {
 
 const Planning = () => {
     const localizationService = useLocalization();
+    const localize = React.useCallback(
+        (key, ...values) => translate(localizationService, key, ...values),
+        [localizationService]
+    );
+    const localizedTeams = teams.map(team => ({
+        ...team,
+        teamName: localizationService.toLanguageString(`custom.team${team.teamID}`)
+    }));
     const [filterState, setFilterState] = React.useState(initialFilterState);
     const [data, setData] = React.useState(orders);
 
@@ -50,36 +60,49 @@ const Planning = () => {
         },
         [filterState, setFilterState]
     );
+    const onEmployeeKeyDown = React.useCallback(
+        (event, employeeId) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                onEmployeeClick(employeeId);
+            }
+        },
+        [onEmployeeClick]
+    );
 
     return (
-        <div id="Planning" className="planning-page main-content">
+        <main id="Planning" className="planning-page main-content">
+            <PageHeader title={localize('planningTitle')} description={localize('planningDescription')} meta={localize('planningDataPeriod')} />
             <div className="card-container grid">
-                <h3 className="card-title">{localizationService.toLanguageString('custom.teamCalendar')}</h3>
+                <div className="card-title"><h2>{localizationService.toLanguageString('custom.teamCalendar')}</h2><p>{localize('teamCalendarDescription')}</p></div>
                 {
 
                     orderEmployees.map(employee => {
+                        const teamColor = localizedTeams.find(({ teamID }) => teamID === employee.teamId).teamColor;
+
                         return (
                             <div
                                 key={employee.id}
                                 onClick={() => onEmployeeClick(employee.id)}
-                                style={!filterState[employee.id] ? {opacity: .5} : {}}
+                                onKeyDown={(event) => onEmployeeKeyDown(event, employee.id)}
+                                role="button"
+                                tabIndex={0}
+                                aria-pressed={filterState[employee.id]}
+                                aria-label={`${employee.fullName}: ${filterState[employee.id] ? localize('includedInSchedule') : localize('excludedFromSchedule')}`}
+                                className={`planning-employee${filterState[employee.id] ? '' : ' planning-employee--disabled'}`}
+                                style={{ '--planning-team-color': teamColor }}
                             >
-                                <Card style={{ borderWidth: 0, cursor: 'pointer'}}>
+                                <Card className="planning-employee-card">
                                     <CardHeader className="k-hbox" >
-                                        <Avatar type='image' shape='circle' size={'large'} style={{
-                                            borderWidth: 2,
-                                            borderColor: teams.find(({teamID}) => teamID === employee.teamId).teamColor,
-                                        }}>
-                                            <div className="k-avatar-image" style={{
+                                        <Avatar type='image' shape='circle' size={'large'} className="planning-employee-avatar">
+                                            <div className="k-avatar-image planning-employee-image" style={{
                                                 backgroundImage: images[employee.imgId + employee.gender],
-                                                backgroundSize: 'cover',
-                                                backgroundPosition: 'center center',
                                             }}
                                             />
                                         </Avatar>
                                         <div>
-                                            <CardTitle style={{color: teams.find(({teamID}) => teamID === employee.teamId).teamColor}}>{employee.fullName}</CardTitle>
-                                            <CardSubtitle>{employee.jobTitle}</CardSubtitle>
+                                            <CardTitle className="planning-employee-name">{employee.fullName}</CardTitle>
+                                            <CardSubtitle>{localize('salesRepresentative')}</CardSubtitle>
                                         </div>
                                     </CardHeader>
                                 </Card>
@@ -87,7 +110,7 @@ const Planning = () => {
                         );
                     })
                 }
-                
+
                 <div className="card-component" >
                     <Scheduler
                         data={data.filter(event => filterState[event.employeeID])}
@@ -95,8 +118,8 @@ const Planning = () => {
                         modelFields={ordersModelFields}
                         resources={[
                             {
-                                name: 'Teams',
-                                data: teams,
+                                name: localize('schedulerTeams'),
+                                data: localizedTeams,
                                 field: 'teamID',
                                 valueField: 'teamID',
                                 textField: 'teamName',
@@ -106,9 +129,8 @@ const Planning = () => {
                     />
                 </div>
             </div>
-        </div>
+            </main>
     );
 }
 
 export default Planning;
-

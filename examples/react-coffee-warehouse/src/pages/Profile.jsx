@@ -19,22 +19,36 @@ import { AppContext } from './../AppContext'
 import { countries } from './../resources/countries';
 import { teams } from './../resources/teams';
 
-import { requiredValidator, emailValidator, phoneValidator, biographyValidator } from './../validators'
-
-const countriesData = countries.map(country => country.name);
-const teamsData = teams.map(team => ({
-    value: team.teamID,
-    label: team.teamName
-}));
+import { createValidators } from './../validators'
+import { PageHeader } from './../components/PageHeader';
 
 const Profile = () => {
-        const {languageId, onLanguageChange, onProfileChange, ...formValues} = React.useContext(AppContext);
+        const {localeId, onLanguageChange, onProfileChange, ...formValues} = React.useContext(AppContext);
         const localizationService = useLocalization();
+        const countriesData = React.useMemo(() => {
+            const displayNames = typeof Intl.DisplayNames === 'function'
+                ? new Intl.DisplayNames([localeId || 'en-US'], { type: 'region' })
+                : null;
+            return countries.map(country => ({
+                code: country.code,
+                name: displayNames?.of(country.code) || country.name
+            }));
+        }, [localeId]);
+        const selectedCountry = countriesData.find(country => country.code === formValues.country);
+        const { requiredValidator, emailValidator, phoneValidator, biographyValidator } = React.useMemo(
+            () => createValidators(localizationService),
+            [localizationService]
+        );
+        const teamsData = React.useMemo(() => teams.map(team => ({
+            value: team.teamID,
+            label: localizationService.toLanguageString(`custom.team${team.teamID}`)
+        })), [localizationService]);
         const history = useNavigate();
 
         const onSubmit = React.useCallback(
             (dataItem) => {
-                onProfileChange({dataItem});
+                const country = typeof dataItem.country === 'string' ? dataItem.country : dataItem.country?.code;
+                onProfileChange({dataItem: {...dataItem, country}});
 
                 history('/');
             },
@@ -49,13 +63,18 @@ const Profile = () => {
         );
 
         return (
-            <div id="Profile" className="profile-page main-content">
+            <main id="Profile" className="profile-page main-content">
+                <PageHeader
+                    title={localizationService.toLanguageString('custom.profileTitle')}
+                    description={localizationService.toLanguageString('custom.profileDescription')}
+                />
                 <div className="card-container">
                     <div className="card-component">
                         <Form
                             onSubmit={onSubmit}
                             initialValues={{
-                                ...formValues
+                                ...formValues,
+                                country: selectedCountry
                             }}
                             render={(formRenderProps) => (
                                 <FormElement horizontal={true} style={{ maxWidth: 700 }}>
@@ -91,7 +110,7 @@ const Profile = () => {
                                         id={'email'}
                                         name={'email'}
                                         type={'email'}
-                                        placeholder={'e.g.: peter@gmail.com'}
+                                        placeholder={localizationService.toLanguageString('custom.emailPlaceholder')}
                                         label={localizationService.toLanguageString('custom.email')}
                                         validator={emailValidator}
                                         component={Input}
@@ -109,6 +128,8 @@ const Profile = () => {
                                         name={'country'}
                                         label={localizationService.toLanguageString('custom.country')}
                                         data={countriesData}
+                                        textField={'name'}
+                                        dataItemKey={'code'}
                                         component={DropDownList}
                                     />
                                     <Field
@@ -152,7 +173,7 @@ const Profile = () => {
                         />
                     </div>
                 </div>
-            </div>
+            </main>
         );
 }
 

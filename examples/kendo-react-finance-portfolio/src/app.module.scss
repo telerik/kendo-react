@@ -1,4 +1,13 @@
+.app {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
 .main {
-  min-height: 450px;
-  background-color: rgba(236, 238, 239, .5);
+  min-height: 0;
+  overflow: auto;
+  background-color: color-mix(in srgb, var(--kendo-color-surface) 50%, transparent);
 }

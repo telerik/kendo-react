@@ -1,40 +1,35 @@
 import * as React from "react";
 
 export const Weather = () => {
-   return <div className="k-d-flex-col k-align-items-center k-justify-content-around">
+   return <div className="weather">
     <div className="weather-data">
-   <div style={{
-      width: "100px",
-       height: "100px",
-   }}>
+   <div className="weather__icon">
       <img className="cloud-image" src={require("../../assets/cloud.png")} alt="cloud"/>
    </div>
-   <div className="k-state-disabled">Partly Cloudy</div>
-   <div style={{
-      fontFamily: 'Roboto',
-      fontSize: '70px',
-      fontWeight: '300',
-      color: '#0058E9'
-   }}>
+   <div className="weather__condition">Partly Cloudy</div>
+   <div className="weather__temperature">
      12 °C
    </div>
-   </div>  
+   </div>
 
-   <div className="weather-data-container k-d-flex-row k-align-items-center k-justify-content-center">
-      <div>
-        Humidity:<br/>
-        Dew:<br/>
-        Pressure:<br/>
-        Wind Speed:
+   <div className="weather-data-container">
+      <div className="weather-data-row">
+        <span>Humidity:</span>
+        <span>76%</span>
       </div>
-      <div>
-        76%<br/>
-        2˚C<br/>
-        1031mb<br/>
-        12km/h NW
+      <div className="weather-data-row">
+        <span>Dew:</span>
+        <span>2˚C</span>
+      </div>
+      <div className="weather-data-row">
+        <span>Pressure:</span>
+        <span>1031mb</span>
+      </div>
+      <div className="weather-data-row">
+        <span>Wind Speed:</span>
+        <span>12km/h NW</span>
       </div>
     </div>
-   
+
  </div>
 }
-

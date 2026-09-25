@@ -15,13 +15,13 @@ export const ConversionsChart = () => {
     value: secondValue,
     transitions: false,
   };
-  
+
   const arcCenterRenderer = () => {
     return (
       <h3>
         +3.1K
       </h3>
-      
+
     );
   };
 
@@ -36,63 +36,29 @@ export const ConversionsChart = () => {
     <div>
        <div className="circular-gauge-container">
         <div>
-        <CircularGauge {...arcOptions} arcCenterRender={arcCenterRenderer}  style={{height: '120px'}}
+        <CircularGauge {...arcOptions} arcCenterRender={arcCenterRenderer} className="conversion-gauge"
   scale={{
           startAngle: 250,
-        }}/> 
-        <div
-         style={{
-          marginLeft: '30px',
-          marginTop: '50px'
-         }}
-         >
-         <br/>
-        <h4 
-         style={{
-          fontSize: '20px',
-          color: '#666666'
-         }}
-        >Active Users</h4>
-        <br/>
-        <h3
-         style={{
-          fontSize: '20px',
-          color: '#666666'
-         }}
-         >1,500,200</h3>
+        }}/>
+        <div className="conversion-metric">
+        <h4>Active Users</h4>
+        <h3>1,500,200</h3>
         </div>
         </div>
-       
+
        <div>
-       <CircularGauge {...arcSecondOptions} arcCenterRender={secondArcCenterRenderer}  style={{height: '120px'}} color='#666666'
+       <CircularGauge {...arcSecondOptions} arcCenterRender={secondArcCenterRenderer} className="conversion-gauge conversion-gauge-muted"
      scale={{
           startAngle: 300,
         }}/>
-         <div
-           style={{
-            marginLeft: '30px',
-            marginTop: '50px'
-           }}
-         >
-          <br/>
-        <h4
-          style={{
-            fontSize: '20px',
-            color: '#666666'
-           }}
-         >Inactive Users</h4>
-        <br/>
-        <h3
-         style={{
-          fontSize: '20px',
-          color: '#666666'
-         }}
-        >1,500,200</h3>
+         <div className="conversion-metric">
+        <h4>Inactive Users</h4>
+        <h3>1,500,200</h3>
         </div>
        </div>
 
          <div>
-      
+
          </div>
     </div>
     </div>

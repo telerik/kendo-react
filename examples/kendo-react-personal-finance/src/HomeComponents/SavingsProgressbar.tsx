@@ -12,7 +12,7 @@ interface SavingsProgressbarProps {
 export default function SavingsProgressbar(props: SavingsProgressbarProps) {
     return (
         <>
-        <div className="k-d-flex k-justify-content-between">
+        <div className="app-progress-label">
           <label>{props.title}</label>
           <span>
             {displayCurrencyValue(props.value, props.currency)}

@@ -177,7 +177,7 @@ export const tasksData = [
     taskName: '#2213 Define project scope and objectives.',
     assignedTo: 'Fabiola.Cassin90',
     dueDate: '07/31/2025',
-    status: '🕒 Postponed',
+    status: 'Postponed',
     tags: ['Feature Development', 'Phase 1'],
     priority: 'High priority',
     projectId: 1
@@ -187,7 +187,7 @@ export const tasksData = [
     taskName: '#2214 Conduct market research to assess existing LMS solutions.',
     assignedTo: 'Marlon66',
     dueDate: '08/11/2025',
-    status: '✅ Completed',
+    status: 'Completed',
     tags: ['Research', 'Q1 Release'],
     priority: 'Medium priority',
     projectId: 2
@@ -197,7 +197,7 @@ export const tasksData = [
     taskName: '#5342 Identify target audience and their specific needs.',
     assignedTo: 'Maegan_Dietrich56',
     dueDate: '08/21/2025',
-    status: '⚠ Delayed',
+    status: 'Delayed',
     tags: ['Research', 'Client'],
     priority: 'Urgent',
     projectId: 3
@@ -207,7 +207,7 @@ export const tasksData = [
     taskName: '#7211 Create a project timeline with milestones and deliverables.',
     assignedTo: 'Howell69',
     dueDate: '07/17/2025',
-    status: '⏳ In Progress',
+    status: 'In Progress',
     tags: ['Feature Development', 'Sprint 1'],
     priority: 'High priority',
     projectId: 4
@@ -217,7 +217,7 @@ export const tasksData = [
     taskName: '#2215 Review and update the incident response plan to incorporate new threats and vulnerabilities.',
     assignedTo: 'Kory.Lockman',
     dueDate: '05/24/2025',
-    status: '❌ Cancelled',
+    status: 'Cancelled',
     tags: ['Feature Development', 'Internal'],
     priority: 'Low priority',
     projectId: 5
@@ -227,7 +227,7 @@ export const tasksData = [
     taskName: '#2811 Gather requirements from stakeholders through interviews or surveys.',
     assignedTo: 'Nolan.Kling13',
     dueDate: '07/01/2025',
-    status: '🔄 Pending Review',
+    status: 'Pending Review',
     tags: ['Feature Development', 'Innovation'],
     priority: 'Medium priority',
     projectId: 6
@@ -237,7 +237,7 @@ export const tasksData = [
     taskName: '#2812 Set up monitoring tools and analyze system performance metrics to identify and address potential bottlenecks.',
     assignedTo: 'Antoinette_Hills',
     dueDate: '12/15/2025',
-    status: '⚠ Delayed',
+    status: 'Delayed',
     tags: ['Research', 'Innovation'],
     priority: 'Low priority',
     projectId: 7
@@ -247,7 +247,7 @@ export const tasksData = [
     taskName: '#3516 Develop a budget for the project, including potential software and hardware needs.',
     assignedTo: 'Alden_Upton',
     dueDate: '05/03/2025',
-    status: '🚧 On Hold',
+    status: 'On Hold',
     tags: ['Feature Development', 'Maintenance'],
     priority: 'Routine',
     projectId: 8
@@ -257,7 +257,7 @@ export const tasksData = [
     taskName: '#1415 Conduct a SWOT analysis to assess strengths, weaknesses, opportunities, and threats.',
     assignedTo: 'Travis.Gerhold80',
     dueDate: '09/05/2025',
-    status: '✔ Approved',
+    status: 'Approved',
     tags: ['Feature Development', 'Java, Python, JavaScript, React, Node.js, SQL'],
     priority: 'Medium priority',
     projectId: 9
@@ -267,7 +267,7 @@ export const tasksData = [
     taskName: '#1536 Implement Content Management Features for Instructors.',
     assignedTo: 'Jamaal41',
     dueDate: '07/12/2025',
-    status: '✅ Completed',
+    status: 'Completed',
     tags: ['Bug Fix', 'Feature Development'],
     priority: 'High priority',
     projectId: 10
@@ -277,7 +277,7 @@ export const tasksData = [
     taskName: '#1541 Select a suitable technology stack or platform for the LMS.',
     assignedTo: 'Fabiola.Cassin90',
     dueDate: '07/31/2025',
-    status: '🚧 On Hold',
+    status: 'On Hold',
     tags: ['Feature Development', 'Innovation'],
     priority: 'High priority',
     projectId: 1
@@ -287,7 +287,7 @@ export const tasksData = [
     taskName: '#2216 Evaluate potential third-party integrations (e.g., payment gateways, content libraries).',
     assignedTo: 'Fabiola.Cassin90',
     dueDate: '08/11/2025',
-    status: '✅ Completed',
+    status: 'Completed',
     tags: ['Feature Development', 'Innovation'],
     priority: 'Urgent',
     projectId: 2
@@ -297,7 +297,7 @@ export const tasksData = [
     taskName: '#2217 Create wireframes for user interface (UI) elements and navigation.',
     assignedTo: 'Marlon66',
     dueDate: '08/21/2025',
-    status: '⏳ In Progress',
+    status: 'In Progress',
     tags: ['Feature Development', 'Sprint 1'],
     priority: 'Medium priority',
     projectId: 3

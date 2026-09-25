@@ -28,6 +28,8 @@ import 'hammerjs';
 import styles from './stock.module.scss';
 import { dataService } from '../../services';
 import { useInternationalization } from '@progress/kendo-react-intl';
+import { getKendoColor } from '../../styles/tokens';
+import { DataState } from '../DataState/DataState';
 
 const DEFAULT_RANGE = {
     start: new Date(2019, 9, 28),
@@ -112,7 +114,7 @@ const ChartTypePicker = (props: any) => {
         <DropDownList
             data={data}
             style={{
-                width: 130,
+                width: 170,
                 border: 'none'
             }}
             value={data.find(i => i.type === props.value)}
@@ -230,7 +232,7 @@ const ChartPredefinedRange = (props: any) => {
     React.useEffect(clear, [props.value, props.last, selected]);
     return (
         <div className={classNames("d-inline-block", styles['end-date-input'])}>
-            <ul className="k-reset d-flex">
+            <ul className={styles['range-list']}>
                 {options.map((item) =>
                     <li className="ml-3" key={item.name} >
                         <span
@@ -257,6 +259,9 @@ export const Stock = () => {
     const [range, setRange] = React.useState(DEFAULT_RANGE);
     const [interval, setInterval] = React.useState(DEFAULT_INTERVAL);
     const [type, setType] = React.useState<CHART_TYPES>(CHART_TYPES.candle);
+    const [status, setStatus] = React.useState<'loading' | 'ready' | 'error'>('loading');
+    const [errorMessage, setErrorMessage] = React.useState('');
+    const [retryKey, setRetryKey] = React.useState(0);
 
     const handleRangeChange = React.useMemo(
         () => (event: any) => {
@@ -273,11 +278,19 @@ export const Stock = () => {
     }
 
     const fetchData = React.useCallback(async () => {
-        const newData = await dataService.getSymbol(symbol);
-        setData(newData)
+        setStatus('loading');
+        setErrorMessage('');
+        try {
+            const newData = await dataService.getSymbol(symbol);
+            setData(newData);
+            setStatus('ready');
+        } catch (error) {
+            setStatus('error');
+            setErrorMessage(error instanceof Error ? error.message : 'The price history could not be loaded.');
+        }
     }, [symbol])
 
-    React.useEffect(() => { fetchData() }, [fetchData]);
+    React.useEffect(() => { fetchData() }, [fetchData, retryKey]);
 
 
     const chartComp: React.ReactNode = React.useMemo(() => {
@@ -322,7 +335,22 @@ export const Stock = () => {
             </div>
             <div className="row mt-3">
                 <div className="col" >
-                    {chartComp}
+                    {status === 'loading' && (
+                        <DataState kind="loading" title="Loading price history" message={`Fetching ${symbol} price history.`} />
+                    )}
+                    {status === 'error' && (
+                        <DataState
+                            kind="error"
+                            title="Price history unavailable"
+                            message={errorMessage}
+                            actionLabel="Try again"
+                            onAction={() => setRetryKey((key) => key + 1)}
+                        />
+                    )}
+                    {status === 'ready' && data.length === 0 && (
+                        <DataState kind="empty" title="No price history" message={`There is no chart data available for ${symbol}.`} />
+                    )}
+                    {status === 'ready' && data.length > 0 && chartComp}
                 </div>
             </div>
         </>
@@ -343,7 +371,7 @@ const AreaChart = (props: any) => {
             for (let i = 0; i < categories; i += step) {
                 if (index++ % 2 === 0) {
                     result.push({
-                        color: '#000',
+                        color: getKendoColor('on-app-surface'),
                         opacity: 0.03,
                         from: i,
                         to: i + step
@@ -366,14 +394,14 @@ const AreaChart = (props: any) => {
                 data={props.data}
                 type="area"
                 field="close"
-                color="#007BFF"
+                color={getKendoColor('primary')}
                 // eslint-disable-next-line
                 style={"smooth"}
                 categoryAxis="close"
                 axis="valueCloseAxis"
                 categoryField="date"
-                markers={{ visible: false, border: { color: "#007BFF" } }}
-                tooltip={{ background: "#007BFF", visible: true, format: "{0:c}" }}
+                markers={{ visible: false, border: { color: getKendoColor('primary') } }}
+                tooltip={{ background: getKendoColor('primary'), visible: true, format: "{0:c}" }}
             />
         </ChartSeries>
         <ChartValueAxis>
@@ -416,7 +444,7 @@ const LineChart = (props: any) => {
             for (let i = 0; i < categories; i += step) {
                 if (index++ % 2 === 0) {
                     result.push({
-                        color: '#000',
+                        color: getKendoColor('on-app-surface'),
                         opacity: 0.03,
                         from: i,
                         to: i + step
@@ -437,14 +465,14 @@ const LineChart = (props: any) => {
                 data={props.data}
                 type="line"
                 field="close"
-                color="#007BFF"
+                color={getKendoColor('primary')}
                 // eslint-disable-next-line react/style-prop-object
                 style={"smooth"}
                 categoryAxis="close"
                 axis="valueCloseAxis"
                 categoryField="date"
-                markers={{ visible: true, border: { color: '#007BFF' } }}
-                tooltip={{ background: "#007BFF", visible: true, format: "{0:c}" }}
+                markers={{ visible: true, border: { color: getKendoColor('primary') } }}
+                tooltip={{ background: getKendoColor('primary'), visible: true, format: "{0:c}" }}
             />
             <ChartSeriesItem
                 data={props.data}
@@ -539,7 +567,7 @@ const CandleChart = (props: any) => {
             for (let i = 0; i < categories; i += step) {
                 if (index++ % 2 === 0) {
                     result.push({
-                        color: '#000',
+                        color: getKendoColor('on-app-surface'),
                         opacity: 0.03,
                         from: i,
                         to: i + step

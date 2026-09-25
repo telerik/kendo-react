@@ -54,15 +54,19 @@ export const ShoppingCartList: React.FC = () => {
     setShoppingCart(updatedCart);
     localStorage.setItem('cart', JSON.stringify(updatedCart));
   };
+  const subtotal = shoppingCart.reduce(
+    (total, item) => total + item.newPrice * item.quantity,
+    0
+  );
 
   return (
     <LocalizationProvider language={language}>
       <>
         <Layout>
-          <div className="k-h2 k-font-bold k-text-black k-col-span-12 k-pt-5">
+          <div className="cart__title">
             {t.shoppingCartTitle}
           </div>
-          <div className="k-pb-5">
+          <div className="cart__back">
             <Button
               svgIcon={chevronLeftIcon}
               fillMode={'flat'}
@@ -75,21 +79,15 @@ export const ShoppingCartList: React.FC = () => {
           {shoppingCart.length > 0 ? (
             shoppingCart.map((item, index) => (
               <div
-                className="k-d-flex k-gap-5 k-justify-content-center k-border-y k-align-items-center k-pb-5"
+                className="cart__item"
                 key={item.id}
-                style={{
-                  height: '120px',
-                }}
               >
                 <img
-                  className="k-rounded-lg"
+                  className="cart__image"
                   src={item.img}
                   alt={item.title}
-                  style={{
-                    maxHeight: '120px',
-                  }}
                 />
-                <div className="k-d-flex k-justify-content-between k-w-full">
+                <div className="cart__item-details">
                   <span>{item.title}</span>
                   <span>{`$${item.newPrice.toLocaleString()}`}</span>
                   <span>
@@ -113,18 +111,22 @@ export const ShoppingCartList: React.FC = () => {
               </div>
             ))
           ) : (
-            <p>{t.emptyCartMessage}</p>
+            <div className="cart__empty">
+              <h2>Your cart is empty</h2>
+              <p>{t.emptyCartMessage}</p>
+              <Button themeColor="primary" onClick={onBackClick}>Continue shopping</Button>
+            </div>
           )}
         </Layout>
         {shoppingCart.length > 0 && (
           <Layout>
-            <Button
-              themeColor={'primary'}
-              size={'large'}
-              onClick={onProceedClick}
-            >
-              {t.proceedToCheckoutButtonText}
-            </Button>
+            <aside className="cart__summary" aria-label="Order summary">
+              <span>Subtotal</span>
+              <strong>${subtotal.toLocaleString()}</strong>
+              <Button themeColor={'primary'} size={'large'} onClick={onProceedClick}>
+                {t.proceedToCheckoutButtonText}
+              </Button>
+            </aside>
           </Layout>
         )}
       </>

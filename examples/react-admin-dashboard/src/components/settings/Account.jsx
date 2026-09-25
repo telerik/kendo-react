@@ -46,9 +46,9 @@ export const Account = () => {
     const handleReposition = (e) => {
       setData(e.value);
     };
-   return <div>
+   return <div className="settings-page">
       <div>
-         
+
       <TileLayout
       columns={5}
       rowHeight={255}

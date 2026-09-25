@@ -7,55 +7,39 @@ export const ProductCard = (props: ProductCardProps) => {
   return (
     <>
       <section
-        className="k-d-grid k-grid-cols-12 k-justify-content-center k-align-items-center k-col-span-12 k-gap-2"
-        style={{
-          paddingTop: "60px",
-        }}
+        className="product-card"
       >
         <div
-          className="k-rounded-lg k-col-span-5"
+          className="product-card__image"
           style={{
             backgroundImage: `url(${props.image})`,
             backgroundSize: "cover",
-            height: "385px",
-            width: "476px",
           }}
         ></div>
 
-        <div className="k-col-span-7 k-h-full">
+        <div className="product-card__details">
           <Breadcrumb data={props.breadCrumbItem}></Breadcrumb>
 
-          <div className="k-d-grid k-gap-6">
-            <span className="k-h2 k-text-black k-font-bold">{props.title}</span>
-            <div className="k-font-size-xl">{props.subtitle}</div>
-            <span className="k-d-flex k-align-items-center">
+          <div className="product-card__summary">
+            <span className="product-card__title">{props.title}</span>
+            <div className="product-card__subtitle">{props.subtitle}</div>
+            <span className="product-card__rating">
               <Rating value={props.rating}></Rating>
-              <span
-                style={{
-                  color: "red",
-                }}
-              >
+              <span className="product-card__reviews">
                 {props.reviews}
               </span>
             </span>
 
-            <div
-              className="k-font-size-xl"
-              style={{
-                color: "red",
-              }}
-            >
+            <div className="product-card__price">
               {`$${props.price}`}
             </div>
           </div>
 
-          <div className="k-font-size-sm k-pt-6">{props.description}</div>
-          <div className="k-d-flex k-gap-3 k-pt-6">
+          <div className="product-card__description">{props.description}</div>
+          <div className="product-card__actions">
             <NumericTextBox
               spinners={true}
-              style={{
-                width: "84px",
-              }}
+              style={{ width: "var(--kendo-spacing-21)" }}
               value={1}
             ></NumericTextBox>
             <Button themeColor={"primary"} onClick={props.addToCart}>

@@ -5,9 +5,8 @@ import {
   Routes,
   Route,
   HashRouter,
+  Navigate,
 } from 'react-router-dom';
-
-import { UserProfile } from './components/User/UserProfile';
 
 import styles from './app.module.scss';
 import { CurrencyContext, CURRENCY } from './context/CurrencyContext';
@@ -37,8 +36,6 @@ import gbDateFields from 'cldr-dates-full/main/en-GB/dateFields.json';
 import { load } from '@progress/kendo-react-intl';
 import { CustomIntlProvider } from './components/CustomIntlProvider';
 import { StockPage } from './pages/StockPage';
-import { HeatmapPage } from './pages/HeatmapPage';
-import { VirtualizedPage } from './pages/VirtualizedPage';
 import { SymbolsContext } from './context/SymbolsContext';
 
 load(
@@ -61,15 +58,12 @@ load(
 
 const Main = () => {
   return (
-      <Routes>
-        <Route path={"/"} element={<><Header /><StockPage /></>} />
-        <Route path={"/profile"} element={<UserProfile />} />
-        <Route path="/heatmap" element={<><Header /><HeatmapPage /></>} />
-        <Route path="/virtualized" element={<><Header /><VirtualizedPage /></>} />
-        <Route path={'/stocks'} element={<><Header /><StockPage /></>} />
-        <Route path={"/stocks/:symbol"} element={<><Header /><StockPage /></>} />
+    <Routes>
+      <Route path="/" element={<StockPage />} />
+      <Route path="/stocks" element={<StockPage />} />
+      <Route path="/stocks/:symbol" element={<StockPage />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
-
   )
 }
 
@@ -118,7 +112,7 @@ const App: React.FunctionComponent<any> = () => {
   );
 
   return (
-    <div className="App">
+    <div className={styles.app}>
       <CustomIntlProvider locale={locales[currency]}>
         <SymbolsContext.Provider value={{
           selectedSymbols,
@@ -129,6 +123,7 @@ const App: React.FunctionComponent<any> = () => {
           <SectorContext.Provider value={{ sector, onSectorChange: handleSectorChange }}>
             <CurrencyContext.Provider value={{ currency, onCurrencyChange: handleCurrencyChange }}>
               <HashRouter>
+                <Header />
                 <main className={styles.main}>
                   <Main />
                 </main>

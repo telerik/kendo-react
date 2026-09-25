@@ -1,30 +1,32 @@
 "use client";
 
 import * as React from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import {
   Drawer,
   DrawerContent,
-  DrawerSelectEvent,
 } from "@progress/kendo-react-layout";
-import { Button } from "@progress/kendo-react-buttons";
+import { useLocalization } from "@progress/kendo-react-intl";
 import {
   calendarIcon,
-  menuIcon,
   userIcon,
   infoCircleIcon,
   gridIcon,
+  gearIcon,
+  bellIcon,
+  questionCircleIcon,
 } from "@progress/kendo-svg-icons";
+import { useWarehouseShell } from "../components/WarehouseShellContext";
 
 const items = [
   {
-    text: "DashBoard",
+    messageKey: "dashboard",
     svgIcon: gridIcon,
     selected: true,
     route: "/warehouse/dashboard",
   },
   {
-    text: "Planning",
+    messageKey: "planning",
     svgIcon: calendarIcon,
     route: "/warehouse/planning",
   },
@@ -32,7 +34,27 @@ const items = [
     separator: true,
   },
   {
-    text: "Info",
+    messageKey: "profile",
+    svgIcon: userIcon,
+    route: "/warehouse/profile",
+  },
+  {
+    messageKey: "settings",
+    svgIcon: gearIcon,
+    route: "/warehouse/settings",
+  },
+  {
+    messageKey: "notifications",
+    svgIcon: bellIcon,
+    route: "/warehouse/notifications",
+  },
+  {
+    messageKey: "helpSupport",
+    svgIcon: questionCircleIcon,
+    route: "/warehouse/help",
+  },
+  {
+    messageKey: "info",
     svgIcon: infoCircleIcon,
     route: "/warehouse/info",
   },
@@ -40,48 +62,71 @@ const items = [
 
 export default function DrawerLayout(props) {
   const children = props.children;
-  const [expanded, setExpanded] = React.useState(true);
-  const [selected, setSelected] = React.useState("/warehouse/dashboard");
-
   const router = useRouter();
+  const pathname = usePathname();
+  const localizationService = useLocalization();
+  const { closeDrawer, expanded, isMobile } = useWarehouseShell();
+  const drawerRef = React.useRef(null);
 
-  const handleClick = () => {
-    setExpanded(!expanded);
-  };
+  React.useEffect(() => {
+    const drawer = drawerRef.current?.element?.querySelector(".warehouse-drawer");
+    if (!drawer) {
+      return;
+    }
 
-  const setSelectedItem = (pathName) => {
-    const currentPath = items.find((item) => item.route === pathName);
-    if (currentPath.text) {
-      return currentPath.text;
+    const isClosed = isMobile && !expanded;
+    drawer.toggleAttribute("aria-hidden", isClosed);
+    drawer.toggleAttribute("inert", isClosed);
+  }, [expanded, isMobile]);
+
+  const onSelect = (e) => {
+    const route = items[e.itemIndex]?.route;
+    if (!route) {
+      return;
+    }
+
+    router.push(route);
+    if (isMobile) {
+      closeDrawer();
     }
   };
 
-  const onSelect = (e) => {
-    router.push(e.itemTarget.props.route);
-    setSelected(e.itemTarget.props.route);
-  };
-
-  const selectedItem = setSelectedItem(selected);
-
   return (
-    <>
-      <div className="custom-toolbar">
-        <Button svgIcon={menuIcon} fillMode="flat" onClick={handleClick} />
-        <h3>Settings</h3>
-      </div>
+    <div
+      id="warehouse-navigation"
+      className="warehouse-navigation"
+    >
       <Drawer
+        ref={drawerRef}
         expanded={expanded}
         position={"start"}
-        mode={"push"}
-        mini={true}
-        items={items.map((item) => ({
-          ...item,
-          selected: item.text === selectedItem,
-        }))}
+        mode={isMobile ? "overlay" : "push"}
+        mini={!isMobile}
+        drawerClassName="warehouse-drawer"
+        items={items.map((item) => {
+          if (item.separator) {
+            return item;
+          }
+
+          const { messageKey, route, ...drawerItem } = item;
+          return {
+            ...drawerItem,
+            text: localizationService.toLanguageString(
+              `custom.${messageKey}`,
+              messageKey
+            ),
+            selected:
+              item.route === pathname ||
+              (pathname === "/warehouse" &&
+                item.route === "/warehouse/dashboard"),
+            tabIndex: isMobile && !expanded ? -1 : 0,
+          };
+        })}
+        onOverlayClick={closeDrawer}
         onSelect={onSelect}
       >
         <DrawerContent>{children}</DrawerContent>
       </Drawer>
-    </>
+    </div>
   );
 }

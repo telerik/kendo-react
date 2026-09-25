@@ -1,0 +1,7 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import StorePage from "../components/StorePage";
+---
+<Layout><Header client:load /><StorePage kind="notifications" client:only="react" /><Footer client:load /></Layout>

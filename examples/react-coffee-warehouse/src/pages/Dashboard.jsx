@@ -4,7 +4,7 @@ import * as React from 'react';
 import { ButtonGroup, Button } from '@progress/kendo-react-buttons';
 import { DateRangePicker } from '@progress/kendo-react-dateinputs';
 
-import { useLocalization } from '@progress/kendo-react-intl';
+import { useInternationalization, useLocalization } from '@progress/kendo-react-intl';
 import { filterBy } from '@progress/kendo-data-query';
 
 import { Grid, Column, ColumnMenu } from './../components/Grid';
@@ -12,6 +12,9 @@ import { Chart } from './../components/Chart';
 import { FullNameCell, FlagCell, OnlineCell, RatingCell, EngagementCell, CurrencyCell } from './../components/GridCells';
 
 import { AppContext } from './../AppContext'
+import { PageHeader } from './../components/PageHeader';
+import { KpiCard } from './../components/KpiCard';
+import { translate } from './../resources/localization';
 
 import { employees } from './../resources/employees';
 import { teams } from './../resources/teams';
@@ -22,6 +25,15 @@ const Dashboard = () => {
     const [isTrend, setIsTrend] = React.useState(true);
     const [isMyTeam, setIsMyTeam] = React.useState(true);
     const localizationService = useLocalization();
+    const intlService = useInternationalization();
+    const localize = React.useCallback(
+        (key, ...values) => translate(localizationService, key, ...values),
+        [localizationService]
+    );
+    const localizedTeams = teams.map(team => ({
+        ...team,
+        teamName: localizationService.toLanguageString(`custom.team${team.teamID}`)
+    }));
 
     const isChartChangeRef = React.useRef(false);
     const onChartRefresh = React.useCallback(
@@ -76,9 +88,20 @@ const Dashboard = () => {
     );
 
     return (
-        <div id="Dashboard" className="dashboard-page main-content">
+        <main id="Dashboard" className="dashboard-page main-content">
+            <PageHeader
+                title={localize('dashboardTitle')}
+                description={localize('dashboardDescription')}
+                meta={localize('dashboardDataPeriod')}
+            />
+            <section className="kpi-grid" aria-label={localize('performanceSummary')}>
+                <KpiCard label={localize('ordersShippedToday')} value={intlService.formatNumber(284)} detail={localize('ordersShippedDetail')} />
+                <KpiCard label={localize('onTimeFulfillment')} value={intlService.formatNumber(0.968, 'p1')} detail={localize('onTimeFulfillmentDetail')} />
+                <KpiCard label={localize('pickQueue')} value={intlService.formatNumber(37)} detail={localize('pickQueueDetail')} status="warning" />
+                <KpiCard label={localize('lowStockAlerts')} value={intlService.formatNumber(12)} detail={localize('lowStockAlertsDetail')} status="error" />
+            </section>
             <div className="card-container grid">
-                <h3 className="card-title">{localizationService.toLanguageString('custom.teamEfficiency')}</h3>
+                <div className="card-title"><h2>{localizationService.toLanguageString('custom.teamEfficiency')}</h2><p>{localize('teamEfficiencyDescription')}</p></div>
                 <div className="card-buttons">
                     <ButtonGroup>
                         <Button togglable={true} selected={isTrend} onClick={trendOnClick}>
@@ -98,7 +121,7 @@ const Dashboard = () => {
                         filterStart={range.start}
                         filterEnd={range.end}
                         groupByField={'teamID'}
-                        groupResourceData={teams}
+                        groupResourceData={localizedTeams}
                         groupTextField={'teamName'}
                         groupColorField={'teamColor'}
                         seriesCategoryField={'orderDate'}
@@ -109,7 +132,7 @@ const Dashboard = () => {
                 </div>
             </div>
             <div className="card-container grid">
-                <h3 className="card-title">{localizationService.toLanguageString('custom.teamMembers')}</h3>
+                <div className="card-title"><h2>{localizationService.toLanguageString('custom.teamMembers')}</h2><p>{localize('teamMembersDescription')}</p></div>
                 <div className="card-buttons">
                     <ButtonGroup>
                         <Button togglable={true} selected={isMyTeam} onClick={myTeamOnClick}>
@@ -141,9 +164,8 @@ const Dashboard = () => {
                     </Grid>
                 </div>
             </div>
-        </div>
+            </main>
     );
 }
 
 export default Dashboard;
-

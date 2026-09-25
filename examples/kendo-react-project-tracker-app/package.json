@@ -30,12 +30,12 @@
         "@progress/kendo-react-listview": "^15.0.0",
         "@progress/kendo-react-popup": "^15.0.0",
         "@progress/kendo-react-tooltip": "^15.0.0",
-        "@progress/kendo-svg-icons": "^5.0.0",
-        "@progress/kendo-theme-default": "^14.1.0",
+        "@progress/kendo-svg-icons": "5.4.0",
+        "@progress/kendo-theme-meridian": "14.5.0",
         "@tailwindcss/vite": "^4.0.9",
         "react": "^19.0.3",
-        "react-dom": "^19.0.3",
         "react-csv": "^2.2.2",
+        "react-dom": "^19.0.3",
         "tailwindcss": "^4.0.9"
     },
     "overrides": {
@@ -44,8 +44,8 @@
     },
     "devDependencies": {
         "@types/react": "^19.0.0",
-        "@types/react-dom": "^19.0.0",
         "@types/react-csv": "^1.1.10",
+        "@types/react-dom": "^19.0.0",
         "@vitejs/plugin-react": "^4.3.1",
         "gh-pages": "^6.1.1",
         "globals": "^15.9.0",

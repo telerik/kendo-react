@@ -128,18 +128,20 @@ export const FileManagerToolbar = (props) => {
           </DialogActionsBar>
         </Dialog >
       }
-      <ButtonGroup>
+      <ButtonGroup aria-label='Sort order'>
         <Button
           togglable={true}
           svgIcon={sortAscSmallIcon} 
           selected={props.sort[0].dir === 'asc'}
           onClick={handleAscBtnClick}
+          aria-label='Sort ascending'
         />
         <Button
           togglable={true}
           svgIcon={sortDescSmallIcon}
           selected={props.sort[0].dir === 'desc'}
           onClick={handleDescSortBtnClick}
+          aria-label='Sort descending'
         />
       </ButtonGroup>
       <SplitButton
@@ -148,18 +150,20 @@ export const FileManagerToolbar = (props) => {
         onItemClick={handleItemClick}
       >
       </SplitButton>
-      <ButtonGroup>
+      <ButtonGroup aria-label='Content view'>
         <Button
           togglable={true}
           svgIcon={gridLayoutIcon}
           selected={viewBtnGroup.gridView}
           onClick={handleGridViewChange}
+          aria-label='Grid view'
         />
         <Button
           togglable={true}
           svgIcon={gridIcon}
           selected={viewBtnGroup.listView}
           onClick={handleListViewChange}
+          aria-label='List view'
         />
       </ButtonGroup>
       <div className="k-spacer">&nbsp;</div>

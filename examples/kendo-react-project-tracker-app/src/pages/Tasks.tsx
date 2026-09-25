@@ -8,6 +8,8 @@ import { CSVLink } from "react-csv";
 import { useNavigate } from "react-router-dom";
 import { tasksData } from "./data";
 import { SvgIcon } from "@progress/kendo-react-common";
+import "./Tasks.css";
+import PageFooter from "../components/PageFooter";
 
 interface DataModel {
   id: string;
@@ -58,23 +60,21 @@ export default function Tasks() {
   };
 
   return (
-    <div
-      style={{ minHeight: "calc(100vh - 106px)" }}
-      className="flex flex-col p-10 gap-6"
-    >
+    <>
+    <main className="tracker-page tasks-page">
       <Breadcrumb
         data={breadcrumbItems}
         onItemSelect={handleItemSelect}
-        className="!bg-app-surface"
+        className="tracker-page__breadcrumb"
       />
 
-      <div className="flex flex-wrap items-center justify-between">
-        <h1 className="text-4xl">Tasks</h1>
+      <div className="tracker-page__toolbar">
+        <h1 className="tracker-page__heading">Tasks</h1>
         <Button themeColor="primary" fillMode="outline" svgIcon={plusIcon} onClick={addNewTask} title="Add new task">Add new task</Button>
       </div>
 
       <Grid
-        className="k-grid-no-scrollbar"
+        className="tasks-grid"
         data={data}
         autoProcessData={{
           filter: false,
@@ -134,6 +134,8 @@ export default function Tasks() {
           editable={false}
         />
       </Grid>
-    </div>
+    </main>
+    <PageFooter />
+    </>
   );
 }

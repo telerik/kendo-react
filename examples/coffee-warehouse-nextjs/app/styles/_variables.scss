@@ -1,11 +1,18 @@
-// Global variables here
-$background-color: #D4D6E4;
-$info-background: #151950;
-$react-color: #53d2fa;
-$link-color: #71A6FF;
-$white: #FFFFFF;
+:root {
+    --kendo-translucency-base: 25%;
+    --kendo-translucency-blur-base: 6px;
+    --kendo-translucency-blur-step: 2px;
+    --warehouse-header-height: 5rem;
+}
 
-$tiger-team: #FF6358;
-$lemon-team: #FFD246;
-$organic-team: #55AB1D;
-$ocean-team: #28B4C8;
+$background-color: var(--kendo-color-app-surface);
+$info-background: var(--kendo-color-inverse);
+$react-color: var(--kendo-color-secondary);
+$link-color: var(--kendo-color-info);
+$surface-color: var(--kendo-color-surface-alt);
+$on-dark-color: var(--kendo-color-on-inverse);
+
+$tiger-team: var(--kendo-color-series-a);
+$lemon-team: var(--kendo-color-series-b);
+$organic-team: var(--kendo-color-series-c);
+$ocean-team: var(--kendo-color-series-d);

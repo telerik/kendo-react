@@ -1,13 +1,14 @@
 import React from 'react';
 import { Drawer, DrawerContent } from "@progress/kendo-react-layout";
-import { folderIcon, homeIcon, listUnorderedSquareIcon, userIcon } from '@progress/kendo-svg-icons';
+import { folderIcon, homeIcon, listUnorderedSquareIcon, questionCircleIcon, userIcon } from '@progress/kendo-svg-icons';
 import { To, useLocation, useNavigate } from 'react-router-dom';
 
 const drawerItems = [
     { text: "Home", svgIcon: homeIcon, route: '/', selected: true, className: "rounded-md [.k-selected]:!bg-primary/8 [.k-selected]:!text-primary-emphasis" },
     { text: "Projects", svgIcon: folderIcon, route: '/projects', className: "rounded-md [.k-selected]:!bg-primary/8 [.k-selected]:!text-primary-emphasis"  },
     { text: "Tasks", svgIcon: listUnorderedSquareIcon, route: '/tasks', className: "rounded-md [.k-selected]:!bg-primary/8 [.k-selected]:!text-primary-emphasis"  },
-    { text: "Team Management", svgIcon: userIcon, route: '/team-management', className: "rounded-md [.k-selected]:!bg-primary/8 [.k-selected]:!text-primary-emphasis"  }
+    { text: "Team Management", svgIcon: userIcon, route: '/team-management', className: "rounded-md [.k-selected]:!bg-primary/8 [.k-selected]:!text-primary-emphasis"  },
+    { text: "Help & Support", svgIcon: questionCircleIcon, route: '/help', className: "rounded-md [.k-selected]:!bg-primary/8 [.k-selected]:!text-primary-emphasis"  }
 ];
 
 interface DrawerComponentProps {
@@ -39,16 +40,15 @@ const DrawerComponent: React.FC<DrawerComponentProps> = ({ children }) => {
     <Drawer
       expanded={true}
       mode="push"
-      drawerClassName="!flex-none !sticky !bg-surface-alt !px-2 !py-10 !w-16 md:!w-60 [&_.k-drawer-wrapper]:!w-12 md:[&_.k-drawer-wrapper]:!w-56 !top-[70px] !h-[calc(100vh_-_70px)]"
+      drawerClassName="tracker-drawer"
       items={drawerItems.map(item => ({
         ...item,
         selected: item.text === selected,
       }))}
       onSelect={onSelect}
-      width={223}
     >
-      <DrawerContent>
-        <div role="main">
+      <DrawerContent className="tracker-drawer__content">
+        <div role="main" className="tracker-drawer__main">
           {children}
         </div>
       </DrawerContent>

@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import { ProductCard } from "../components/ProductCard";
 import { useTranslatedListData } from "../data/listData";
 import { DataModel } from "../data/types";
@@ -24,6 +24,10 @@ export const ProductDetails = () => {
   const { addItemToCart } = useCart();
   const productToAdd = translatedListData.find((item) => item.id === productId);
   const navigate = useNavigate();
+
+  if (!productToAdd) {
+    return <Navigate to="/not-found" replace />;
+  }
 
   const addToCart = () => {
     if (productToAdd) {
@@ -65,13 +69,13 @@ export const ProductDetails = () => {
     <>
       <Layout>
         <ProductCard
-          title={productToAdd?.title}
-          image={productToAdd?.img}
+          title={productToAdd.title}
+          image={productToAdd.img}
           subtitle={t.productSubtitle}
           breadCrumbItem={BreakcrumbData}
-          rating={productToAdd?.rating}
+          rating={productToAdd.rating}
           reviews={t.reviewsText.replace("{0}", "208")}
-          price={productToAdd?.newPrice}
+          price={productToAdd.newPrice}
           description={descriptionText}
           addToCart={addToCart}
         />

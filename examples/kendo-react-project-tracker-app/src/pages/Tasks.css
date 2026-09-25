@@ -1,0 +1,7 @@
+.tasks-grid .k-grid-content {
+    scrollbar-width: none;
+}
+
+.tasks-grid .k-grid-content::-webkit-scrollbar {
+    display: none;
+}

@@ -26,21 +26,21 @@ export default function TransactionDetail({
   return (
     <>
       {status && (
-        <div className="k-d-grid k-gap-3">
+        <div className="app-detail app-detail--status">
           <Label editorId={"editorId"}>{label}</Label>
           <StatusBadge dataItem={{ orderStatus: value }} height={28} />
         </div>
       )}
 
       {label === "Payment Method" && getPaymentMethodImage(value) && (
-        <div className="k-d-grid k-gap-2.5">
+        <div className="app-detail app-detail--payment">
           <Label editorId={"editorId"}>{label}</Label>
           <img src={getPaymentMethodImage(value)} alt="Payment Method" />
         </div>
       )}
 
       {!status && label !== "Payment Method" && (
-        <div className="k-d-grid k-gap-1">
+        <div className="app-detail">
           <Label editorId={"editorId"}>{label}</Label>
           {label === "Time" ? (
             <DateInput

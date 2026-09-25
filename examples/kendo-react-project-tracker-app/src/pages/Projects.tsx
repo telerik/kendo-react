@@ -13,6 +13,7 @@ import { SvgIcon } from "@progress/kendo-react-common";
 import { useNavigate } from "react-router-dom";
 import { Badge } from "@progress/kendo-react-indicators";
 import { projectsData } from "./data";
+import PageFooter from "../components/PageFooter";
 
 const breadcrumbItems: BreadcrumbLinkProps[] = [
   { id: "home", icon: <SvgIcon icon={homeIcon} /> },
@@ -29,67 +30,55 @@ export default function Projects() {
   };
 
   return (
-    <div
-      style={{ minHeight: "calc(100vh - 106px)" }}
-      className="flex flex-col p-10 gap-6"
-    >
+    <>
+    <main className="tracker-page">
       <Breadcrumb
         data={breadcrumbItems}
         onItemSelect={handleItemSelect}
-        className="!bg-app-surface"
+        className="tracker-page__breadcrumb"
       />
 
-      <div className="flex flex-wrap items-center justify-between">
-        <h1 className="text-4xl">Projects</h1>
+      <div className="tracker-page__toolbar">
+        <h1 className="tracker-page__heading">Projects</h1>
       </div>
 
-      <GridLayout className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" style={{ gap: "var(--kendo-spacing-4) var(--kendo-spacing-6)" }}>
-        {projectsData.map((project, index) => {
-          return (
-            <div key={index} className="bg-surface-alt border-1 border-border rounded-lg">
-              <div className="px-4 py-3">
-                <div className="font-medium">{project.ProjectName}</div>
-                <div className="mt-2 flex flex-wrap items-center justify-between">
-                  <span className="text-sm text-subtle">
-                    Due Date: <span className="font-medium">{project.DueDate}</span>
-                  </span>
-                  <Badge themeColor={
-                    project.Priority === "Urgent"
-                      ? "error"
-                      : project.Priority === "Medium priority"
-                        ? "warning"
-                        : project.Priority === "Low priority"
-                          ? "success"
-                          : project.Priority === "Routine"
-                            ? "tertiary"
-                            : "primary"
-                  } rounded="full" position="inside" className="!relative !z-0">{project.Priority}</Badge>
+      <GridLayout className="tracker-grid">
+        {projectsData.map((project) => (
+          <button
+            key={project.ProjectID}
+            type="button"
+            onClick={() => navigate(`/projects/${project.ProjectID}`)}
+            className="tracker-card--project tracker-action"
+            aria-label={`Open ${project.ProjectName}`}
+          >
+            <div className="tracker-card--project__section">
+              <div className="tracker-emphasis">{project.ProjectName}</div>
+              <div className="tracker-card--project__meta">
+                <span className="tracker-card--project__label">Due date: <span className="tracker-emphasis">{project.DueDate}</span></span>
+                <Badge themeColor={project.Priority === "Urgent" ? "error" : project.Priority === "Medium priority" ? "warning" : project.Priority === "Low priority" ? "success" : project.Priority === "Routine" ? "tertiary" : "primary"} rounded="full" position="inside" className="tracker-badge">{project.Priority}</Badge>
+              </div>
+            </div>
+            <div className="tracker-card--project__section">
+              <div>
+                <div className="tracker-card--project__label">Project manager</div>
+                <div className="tracker-card--project__person">
+                  <Avatar type="image" size="small" border={false}><img src={project.AvatarSrc} alt={project.ProjectManager} /></Avatar>
+                  <span className="tracker-card--project__person-name">{project.ProjectManager}</span>
                 </div>
               </div>
-              <div className="flex flex-col gap-2 px-4 py-3">
-                <div>
-                  <div className="text-sm text-subtle">Project Manager</div>
-                  <div className="flex items-center">
-                    <Avatar type={'image'} size="small" className="mr-1" border={false}>
-                      <img src={project.AvatarSrc}  alt={project.ProjectManager} />
-                    </Avatar>
-                    <span className="truncate">Marlon66</span>
-                  </div>
-                </div>
-                <div>
-                  <div className="text-sm text-subtle">Stakeholder(s)</div>
-                  <div className="flex items-center">
-                    <Avatar type={'image'} size="small" className="mr-1">
-                      <img src={project.AvatarSrc} alt={project.Stakeholders} />
-                    </Avatar>
-                    <span className="truncate">Monserrat49</span>
-                  </div>
+              <div>
+                <div className="tracker-card--project__label">Stakeholder</div>
+                <div className="tracker-card--project__person">
+                  <Avatar type="image" size="small"><img src={project.AvatarSrc} alt={project.Stakeholders} /></Avatar>
+                  <span className="tracker-card--project__person-name">{project.Stakeholders}</span>
                 </div>
               </div>
             </div>
-          )
-        })}
+          </button>
+        ))}
       </GridLayout>
-    </div>
+    </main>
+    <PageFooter />
+    </>
   );
 }

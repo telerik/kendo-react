@@ -4,19 +4,19 @@ import AIPrompt from "./AIPrompt";
 
 export default function AIChat() {
   return (
-    <Card className="k-p-4 k-gap-6 k-rounded-xxl k-h-full">
-      <div className={"k-d-grid k-gap-6"}>
+    <Card className="app-card">
+      <div className="app-card__content app-card__content--spacious">
         <div
           style={{
             fontSize: "20px",
             letterSpacing: "wide",
             fontWeight: "500",
           }}
-          className="k-gap-2"
+          className="app-card__title"
         >
           Chat with Roby
         </div>
-        <div className="k-d-grid k-gap-6">
+        <div className="app-details">
           <AIPrompt />
         </div>
       </div>

@@ -100,28 +100,18 @@ export default function CashFlowChart() {
   };
 
   return (
-    <Card className="k-p-4 k-gap-4 k-rounded-xxl k-gap-3.5 k-h-full">
-      <div className={"k-d-grid k-gap-4"}>
-        <div
-          className={
-            "k-d-flex k-align-items-center k-gap-2 k-justify-content-between"
-          }
-        >
-          <div
-            style={{
-              fontSize: "20px",
-              letterSpacing: "wide",
-              fontWeight: "500",
-            }}
-          >
+    <Card className="app-card app-card--section">
+      <div className="app-card__content">
+        <div className="cashflow__header">
+          <div className="app-card__title">
             Money Cashflow
           </div>
-          <div className="k-d-flex k-align-items-center k-gap-6">
+          <div className="cashflow__legend">
             {series.map((item, idx) => {
               if (item && item.visible) {
                 return (
                   <div
-                    className="k-d-flex k-align-items-center k-gap-1"
+                    className="cashflow__legend-item"
                     key={idx}
                   >
                     <div

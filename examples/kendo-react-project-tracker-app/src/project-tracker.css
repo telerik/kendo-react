@@ -1,0 +1,795 @@
+:root {
+  --tracker-page-padding: var(--kendo-spacing-10);
+  --tracker-page-gap: var(--kendo-spacing-6);
+  --tracker-card-radius: var(--kendo-border-radius-xxl);
+  --tracker-surface: var(--kendo-color-surface-alt);
+  --tracker-page-surface: var(--kendo-color-app-surface);
+  --tracker-muted: var(--kendo-color-subtle);
+  --tracker-border: var(--kendo-color-border);
+  --tracker-focus: var(--kendo-color-info);
+  --kendo-translucency-base: 28%;
+  --kendo-translucency-blur-base: 6px;
+  --kendo-translucency-blur-step: 2px;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  background:
+    radial-gradient(
+      ellipse at 0% 0%,
+      color-mix(in srgb, var(--kendo-color-secondary-subtle) 72%, transparent)
+        0%,
+      transparent 46%
+    ),
+    radial-gradient(
+      ellipse at 100% 12%,
+      color-mix(in srgb, var(--kendo-color-tertiary-subtle) 78%, transparent) 0%,
+      transparent 42%
+    ),
+    var(--tracker-page-surface);
+  background-attachment: fixed;
+  color: var(--kendo-color-on-app-surface);
+  font-family: var(--kendo-font-family);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.tracker-app-shell {
+  height: 100dvh;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.tracker-app-shell > .k-drawer-container {
+  display: flex;
+  flex: 1 1 auto;
+  height: 100%;
+  min-height: 0;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.tracker-appbar {
+  flex: none;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: var(--kendo-spacing-4);
+  background: color-mix(in srgb, var(--tracker-surface) 72%, transparent);
+  border-bottom: 1px solid var(--tracker-border);
+  backdrop-filter: blur(var(--kendo-translucency-blur-base, 6px));
+  z-index: 2;
+}
+
+.tracker-appbar__brand {
+  display: flex;
+  align-items: center;
+}
+
+.tracker-appbar__logo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.tracker-appbar__logo--compact {
+  display: none;
+}
+
+.tracker-appbar__search {
+  min-width: min(36rem, 100%) !important;
+}
+
+.tracker-appbar__search-section {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 100%;
+  justify-content: center;
+}
+
+.tracker-appbar__profile {
+  display: flex;
+  align-items: center;
+  gap: var(--kendo-spacing-2);
+}
+
+.tracker-appbar__profile-anchor {
+  display: flex;
+  cursor: pointer;
+}
+
+.tracker-appbar__profile-popover {
+  max-width: calc(100vw - (2 * var(--kendo-spacing-4)));
+}
+
+.tracker-drawer {
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--tracker-surface) 72%, transparent);
+  border-right: 1px solid var(--tracker-border);
+  backdrop-filter: blur(var(--kendo-translucency-blur-base, 6px));
+}
+
+.tracker-drawer .k-drawer-wrapper {
+  height: 100%;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.tracker-drawer__content {
+  flex: 1 1 auto;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.tracker-card-header {
+  border: 0;
+}
+
+.tracker-drawer .k-drawer-item {
+  border-radius: var(--kendo-border-radius-md);
+}
+
+.tracker-drawer .k-drawer-item.k-selected {
+  color: var(--kendo-color-primary);
+  background: color-mix(in srgb, var(--kendo-color-primary) 8%, transparent);
+}
+
+.tracker-drawer__main {
+  min-width: 0;
+  min-height: 100%;
+}
+
+.tracker-page {
+  box-sizing: border-box;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--tracker-page-gap);
+  padding: var(--tracker-page-padding);
+}
+
+.tracker-page--dashboard {
+  background: linear-gradient(
+    119deg,
+    color-mix(
+      in srgb,
+      var(--tracker-page-surface) 96%,
+      var(--kendo-color-primary) 4%
+    ),
+    color-mix(
+      in srgb,
+      var(--tracker-page-surface) 90%,
+      var(--kendo-color-info) 10%
+    )
+  );
+}
+
+.tracker-page__breadcrumb {
+  align-self: flex-start;
+  background: transparent;
+}
+
+.tracker-page__header,
+.tracker-page__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--kendo-spacing-4);
+}
+
+.tracker-page__title {
+  margin: 0;
+  color: var(--tracker-muted);
+  font-size: clamp(var(--kendo-font-size-xl), 3vw, var(--kendo-font-size-xxl));
+  line-height: var(--kendo-line-height-sm);
+}
+
+.tracker-page__heading {
+  margin: 0;
+  font-size: clamp(var(--kendo-font-size-xl), 3vw, var(--kendo-font-size-xxl));
+  line-height: var(--kendo-line-height-sm);
+}
+
+.tracker-page__subtitle {
+  margin: var(--kendo-spacing-2) 0 0;
+  color: var(--tracker-muted);
+}
+
+.tracker-section-title {
+  margin: 0 0 var(--kendo-spacing-4);
+  font-size: var(--kendo-font-size-lg);
+  font-weight: var(--kendo-font-weight-semibold);
+}
+
+.tracker-footer {
+  flex: none;
+  padding: var(--kendo-spacing-2);
+  color: var(--tracker-muted);
+  text-align: center;
+  background: var(--tracker-surface);
+  border-top: 1px solid var(--tracker-border);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(14rem, 1fr) minmax(14rem, 1fr) minmax(
+      15rem,
+      1fr
+    );
+  gap: var(--tracker-page-gap);
+  min-width: 0;
+}
+
+.dashboard-card {
+  min-width: 0;
+  border-radius: var(--tracker-card-radius);
+}
+
+.dashboard-card__title {
+  font-weight: var(--kendo-font-weight-medium);
+}
+
+.dashboard-card--projects {
+  grid-column: span 2;
+}
+
+.dashboard-card--calendar {
+  grid-column: span 1;
+}
+
+.dashboard-card--teams,
+.dashboard-card--todo,
+.dashboard-card--tasks {
+  min-height: 28rem;
+}
+
+.dashboard-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kendo-spacing-2);
+}
+
+.dashboard-card__calendar {
+  padding-top: 0;
+}
+
+.dashboard-card__calendar .k-calendar {
+  width: 100%;
+}
+
+.dashboard-card__scroll {
+  min-height: 0;
+  overflow: auto;
+}
+
+.tracker-grid__table {
+  min-height: 0;
+}
+
+.dashboard-project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+  gap: var(--kendo-spacing-2);
+}
+
+.dashboard-project {
+  min-width: 0;
+}
+
+.dashboard-project__body {
+  display: flex;
+  min-height: 8rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dashboard-project__title {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 0;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+
+.dashboard-team__link,
+.tracker-card__link {
+  display: block;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.dashboard-team__body,
+.tracker-card__body {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: var(--kendo-spacing-2);
+}
+
+.tracker-card__copy {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.tracker-card__title,
+.tracker-card__subtitle {
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dashboard-card__footer,
+.tracker-card__footer {
+  border: 0;
+  padding: var(--kendo-spacing-2);
+}
+
+.tracker-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--kendo-spacing-4) var(--kendo-spacing-6);
+  min-width: 0;
+}
+
+.tracker-grid--list {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.tracker-card {
+  min-width: 0;
+}
+
+.tracker-card__body {
+  min-height: 5rem;
+}
+
+.tracker-card__actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+.tracker-card__avatar {
+  flex: none;
+}
+
+.tracker-card--project {
+  padding: 0;
+  text-align: left;
+  background: var(--tracker-surface);
+  border: 1px solid var(--tracker-border);
+  border-radius: var(--kendo-border-radius-lg);
+  transition: background-color var(--kendo-transition-duration, 160ms)
+    var(--kendo-easing-standard);
+}
+
+.tracker-card--project:hover {
+  background: color-mix(
+    in srgb,
+    var(--kendo-color-primary) 8%,
+    var(--tracker-surface)
+  );
+}
+
+.tracker-card--project:focus-visible,
+.tracker-action:focus-visible {
+  outline: var(--kendo-spacing-1) solid var(--tracker-focus);
+  outline-offset: var(--kendo-spacing-1);
+}
+
+.tracker-card--project__section {
+  padding: var(--kendo-spacing-4);
+}
+
+.tracker-emphasis {
+  font-weight: var(--kendo-font-weight-medium);
+}
+
+.tracker-badge {
+  position: relative;
+  z-index: 0;
+}
+
+.tracker-chip-avatar {
+  margin-right: var(--kendo-spacing-1);
+}
+
+.tracker-card--project__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--kendo-spacing-2);
+  margin-top: var(--kendo-spacing-2);
+}
+
+.tracker-card--project__label {
+  color: var(--tracker-muted);
+  font-size: var(--kendo-font-size-sm);
+}
+
+.tracker-card--project__person {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: var(--kendo-spacing-1);
+  margin-top: var(--kendo-spacing-1);
+}
+
+.tracker-card--project__person-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tasks-page .k-grid,
+.tracker-project-detail .k-grid {
+  width: 100%;
+  min-width: 0;
+}
+
+.tracker-project-detail section {
+  min-width: 0;
+  overflow-x: auto;
+}
+
+.tasks-grid .k-grid-content {
+  scrollbar-width: none;
+}
+
+.tasks-grid .k-grid-content::-webkit-scrollbar {
+  display: none;
+}
+
+.tasks-grid .k-grid-header,
+.tasks-grid .k-grid-content {
+  overflow-x: auto;
+}
+
+.task-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(18rem, 1fr);
+  gap: var(--tracker-page-gap);
+  min-width: 0;
+}
+
+.task-editor,
+.task-description {
+  min-width: 0;
+}
+
+.task-description .k-textarea {
+  min-height: clamp(16rem, 42vh, 30rem);
+}
+
+.task-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--kendo-spacing-1);
+  padding: var(--kendo-spacing-2) var(--kendo-spacing-4);
+  background: var(--tracker-surface);
+  border: 1px solid var(--tracker-border);
+  border-top: 0;
+  border-radius: 0 0 var(--tracker-card-radius) var(--tracker-card-radius);
+}
+
+.task-actions__secondary {
+  margin-left: auto;
+}
+
+.task-panels {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: var(--kendo-spacing-2);
+}
+
+.task-panel {
+  border-radius: var(--tracker-card-radius);
+}
+
+.task-panel .k-floatinglabel-container {
+  display: flex;
+}
+
+.task-panel__field {
+  display: flex;
+}
+
+.new-task-editor {
+  width: min(100%, 45rem);
+  margin: 0 auto;
+}
+
+.settings-content {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(14rem, 1fr);
+  min-width: 0;
+}
+
+.settings-form {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: var(--kendo-spacing-6);
+}
+
+.settings-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--kendo-spacing-6);
+}
+
+.settings-fields__field--start {
+  grid-column-start: 1;
+}
+
+.settings-section-title {
+  margin: 0;
+  color: var(--tracker-muted);
+  font-size: var(--kendo-font-size-lg);
+  font-weight: var(--kendo-font-weight-bold);
+}
+
+.settings-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--kendo-spacing-2);
+  margin-top: var(--kendo-spacing-4);
+}
+
+.settings-preference-list {
+  display: grid;
+  gap: var(--kendo-spacing-6);
+}
+
+.settings-preference {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--kendo-spacing-4);
+}
+
+.tracker-modal__details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kendo-spacing-4);
+}
+
+.tracker-modal__person {
+  display: flex;
+  align-items: center;
+  gap: var(--kendo-spacing-2);
+}
+
+.tracker-modal__person-copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kendo-spacing-1);
+}
+
+.tracker-modal__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--kendo-spacing-1);
+}
+
+.tracker-modal__label {
+  color: var(--tracker-muted);
+}
+
+.tracker-modal__link {
+  text-decoration: underline;
+  text-decoration-thickness: var(--kendo-border-width, 1px);
+  text-underline-offset: var(--kendo-spacing-1);
+}
+
+.support-feed,
+.support-panel {
+  width: min(100%, 45rem);
+}
+
+.support-feed {
+  overflow: hidden;
+  border: 1px solid var(--tracker-border);
+  border-radius: var(--kendo-border-radius-md);
+  background: var(--tracker-surface);
+}
+
+.support-feed__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--kendo-spacing-4);
+  padding: var(--kendo-spacing-4);
+  border-bottom: 1px solid var(--tracker-border);
+}
+
+.support-feed__item:last-child {
+  border-bottom: 0;
+}
+
+.support-feed__group {
+  margin: 0;
+  color: var(--tracker-muted);
+  font-size: var(--kendo-font-size-xs);
+  font-weight: var(--kendo-font-weight-medium);
+}
+
+.support-feed__message {
+  margin: var(--kendo-spacing-1) 0 0;
+}
+
+.support-panel__content {
+  padding: var(--kendo-spacing-4);
+}
+
+.not-found {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.not-found__content {
+  width: min(100%, 24rem);
+}
+
+.not-found__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--kendo-spacing-3);
+  margin-top: var(--kendo-spacing-6);
+}
+
+.tracker-avatar--primary {
+  background: var(--kendo-color-primary);
+}
+
+.tracker-avatar--secondary {
+  background: var(--kendo-color-secondary);
+}
+
+.tracker-avatar--tertiary {
+  background: var(--kendo-color-tertiary);
+}
+
+.tracker-avatar--info {
+  background: var(--kendo-color-info);
+}
+
+.tracker-avatar--success {
+  background: var(--kendo-color-success);
+}
+
+.tracker-avatar--warning {
+  background: var(--kendo-color-warning);
+}
+
+@media (max-width: 991px) {
+  :root {
+    --tracker-page-padding: var(--kendo-spacing-6);
+  }
+
+  .dashboard-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-card--calendar,
+  .dashboard-card--teams,
+  .dashboard-card--todo,
+  .dashboard-card--tasks {
+    grid-column: span 1;
+  }
+
+  .dashboard-card--todo,
+  .dashboard-card--tasks {
+    min-height: 24rem;
+  }
+
+  .task-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .settings-content {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .tracker-appbar__logo {
+    display: none;
+  }
+
+  .tracker-appbar__logo--compact {
+    display: block;
+  }
+
+  .tracker-appbar__search-section {
+    display: none;
+  }
+
+  .tracker-page__header,
+  .tracker-page__toolbar {
+    align-items: flex-start;
+  }
+
+  .tracker-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dashboard-card--projects,
+  .dashboard-card--calendar,
+  .dashboard-card--teams,
+  .dashboard-card--todo,
+  .dashboard-card--tasks {
+    grid-column: span 1;
+  }
+
+  .settings-fields {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  :root {
+    --tracker-page-padding: var(--kendo-spacing-4);
+    --tracker-page-gap: var(--kendo-spacing-4);
+  }
+
+  .tracker-appbar {
+    padding: var(--kendo-spacing-3);
+  }
+
+  .tracker-appbar__profile {
+    gap: var(--kendo-spacing-1);
+  }
+
+  .tracker-page__title,
+  .tracker-page__heading {
+    font-size: var(--kendo-font-size-xl);
+  }
+
+  .tracker-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .task-actions__secondary {
+    margin-left: 0;
+  }
+
+  .settings-preference {
+    align-items: flex-start;
+  }
+
+  .support-feed__item {
+    align-items: flex-start;
+  }
+}

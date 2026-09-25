@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { useLocation, useNavigate, Outlet, Link } from 'react-router-dom';
-import { Drawer, DrawerContent } from '@progress/kendo-react-layout';
+import { Drawer, DrawerContent, DrawerItem } from '@progress/kendo-react-layout';
 import { Button } from '@progress/kendo-react-buttons';
+import { SvgIcon } from '@progress/kendo-react-common';
 import { Alert } from './dashboard/Alert';
-import { menuIcon, gridIcon, globeIcon, aggregateFieldsIcon, gearIcon } from '@progress/kendo-svg-icons';
+import { menuIcon, gridIcon, globeIcon, aggregateFieldsIcon, gearIcon, bellIcon, questionCircleIcon } from '@progress/kendo-svg-icons';
 
 
 export const items = [
@@ -33,18 +34,42 @@ export const items = [
     svgIcon: gearIcon,
   },
   {
-    route: '/home/billing',
-    disabled: true,
-  },
-  {
+    text: 'Notifications',
     route: '/home/notifications',
-    disabled: true,
+    svgIcon: bellIcon,
   },
   {
-    route: '/home/about',
+    text: 'Help & support',
+    route: '/home/help',
+    svgIcon: questionCircleIcon,
+  },
+  {
+    isUserProfile: true,
     disabled: true,
   },
 ];
+
+const DrawerNavigationItem = ({ isUserProfile, ...itemProps }) => {
+  if (isUserProfile) {
+    return (
+      <li className="drawer-user" role="presentation">
+        <img src={require('../assets/people/user-avatar.jpg')} alt="Jaxons Danniels" />
+        <h1>Jaxons Danniels</h1>
+        <div className="user-email">jaxons.daniels@company.com</div>
+        <Link to="/">
+          <Button className="user-button">Sign Out</Button>
+        </Link>
+      </li>
+    );
+  }
+
+  return (
+    <DrawerItem {...itemProps}>
+      {itemProps.svgIcon && <SvgIcon icon={itemProps.svgIcon} />}
+      <span className="k-item-text">{itemProps.text}</span>
+    </DrawerItem>
+  );
+};
 
 export const DrawerContainer = (props) => {
   const navigate = useNavigate();
@@ -56,42 +81,36 @@ export const DrawerContainer = (props) => {
   };
 
   const onSelect = (e) => {
-    navigate(e.itemTarget.props.route);
+    if (e.itemTarget.props.route) {
+      navigate(e.itemTarget.props.route);
+    }
   };
 
   const setSelectedItem = (pathName) => {
     let currentPath = items.find((item) => item.route === pathName);
-    if (currentPath.text) {
+    if (currentPath?.text) {
       return currentPath.text;
     }
+    return 'Dashboard';
   };
 
   const selected = setSelectedItem(location.pathname);
 
   return (
-    <div>
-      <div className="custom-toolbar">
-        <Button svgIcon={menuIcon} onClick={handleClick} />
+    <div className="app-shell">
+      <header className="custom-toolbar">
+        <Button svgIcon={menuIcon} onClick={handleClick} aria-label="Toggle navigation" title="Toggle navigation" />
         <span className="overview">{selected === 'Dashboard'? 'Overview' : selected}</span>
-        <div className="right-widget">
+        <div className="toolbar-actions">
           <div className="alert-container">
           <Alert/>
           </div>
-          <Link to="/home/about" style={{color: '#424242', fontWeight: '400', fontSize: '14px', fontFamily: 'Roboto', marginTop: '3px'}}>About</Link>             
+          <Link to="/home/about" className="toolbar-link">About</Link>
         </div>
-      </div>
+      </header>
 
      <div>
 
-     <div className='user-container' > 
-        <img src={require('../assets/people/user-avatar.jpg')} alt="user avatar"/> 
-       <h1>Jaxons Danniels</h1> 
-       <div className="user-email">jaxons.daniels@company.com</div> 
-       <Link to="/"  style={{ textDecoration: 'none' }}>
-       <Button className="user-button k-button k-button-md k-rounded-md k-button-solid k-button-solid-base" 
-       >Sign Out</Button> 
-       </Link>
-      </div>
       <Drawer
         expanded={expanded}
         position={'start'}
@@ -101,13 +120,16 @@ export const DrawerContainer = (props) => {
           ...item,
           selected: item.text === selected,
         }))}
+        item={DrawerNavigationItem}
         onSelect={onSelect}
         className="drawer"
       >
-        <DrawerContent>{props.children}<Outlet/> </DrawerContent>
+        <DrawerContent>
+          <main className="app-content">{props.children}<Outlet/></main>
+        </DrawerContent>
       </Drawer>
      </div>
- 
+
     </div>
 
   );

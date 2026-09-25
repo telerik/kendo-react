@@ -1,5 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import '@progress/kendo-theme-meridian/dist/all.css';
 import App from './App';
 
 import * as serviceWorker from './serviceWorker';

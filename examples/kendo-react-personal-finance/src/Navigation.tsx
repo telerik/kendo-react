@@ -1,6 +1,7 @@
 import * as React from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Drawer, DrawerContent, DrawerSelectEvent } from "@progress/kendo-react-layout";
+import type { RouteSelection } from "./App";
 import {
   menuIcon,
   gridIcon,
@@ -9,9 +10,21 @@ import {
   chartColumnStackedIcon,
   sparklesIcon,
   gearIcon,
+  bellIcon,
+  questionCircleIcon,
+  userIcon,
+  fileReportIcon,
+  walletIcon,
 } from "@progress/kendo-svg-icons";
 
-const items = [
+interface NavigationItem {
+  text?: string;
+  svgIcon?: typeof menuIcon;
+  route?: string;
+  separator?: boolean;
+}
+
+const items: NavigationItem[] = [
   {
     text: "Menu",
     svgIcon: menuIcon,
@@ -21,7 +34,6 @@ const items = [
   },
   {
     text: "Home",
-    selected: true,
     route: `${import.meta.env.BASE_URL}`,
     svgIcon: gridIcon,
   },
@@ -46,56 +58,99 @@ const items = [
     svgIcon: sparklesIcon,
   },
   {
+    text: "Account detail",
+    route: `${import.meta.env.BASE_URL}accounts/checking`,
+    svgIcon: walletIcon,
+  },
+  {
+    text: "Budgets",
+    route: `${import.meta.env.BASE_URL}budgets`,
+    svgIcon: chartColumnStackedIcon,
+  },
+  {
+    text: "Statements",
+    route: `${import.meta.env.BASE_URL}statements`,
+    svgIcon: fileReportIcon,
+  },
+  {
+    text: "Cards",
+    route: `${import.meta.env.BASE_URL}cards`,
+    svgIcon: walletIcon,
+  },
+  {
     separator: true,
+  },
+  {
+    text: "Notifications",
+    route: `${import.meta.env.BASE_URL}notifications`,
+    svgIcon: bellIcon,
+  },
+  {
+    text: "Profile",
+    route: `${import.meta.env.BASE_URL}profile`,
+    svgIcon: userIcon,
   },
   {
     text: "Settings",
     route: `${import.meta.env.BASE_URL}settings`,
     svgIcon: gearIcon,
   },
+  {
+    text: "Help & Support",
+    route: `${import.meta.env.BASE_URL}help`,
+    svgIcon: questionCircleIcon,
+  },
 ];
-const DrawerContainer = (props: any) => {
-  const goToRoute = props.goToRoute; 
-  const navigate = useNavigate();
-  const [expanded, setExpanded] = React.useState(false);
-  const [selected, setSelected] = React.useState(
-    items.findIndex((x) => x.selected === true)
-  );
+interface DrawerContainerProps {
+  goToRoute?: RouteSelection;
+  children: React.ReactNode;
+}
 
-  const onSelect = React.useCallback((e: DrawerSelectEvent) => {
-    if (e.itemIndex === 0) {
+const DrawerContainer = (props: DrawerContainerProps) => {
+  const goToRoute = props.goToRoute;
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [expanded, setExpanded] = React.useState(window.innerWidth >= 992);
+  const selected = items.findIndex((item) => item.route === location.pathname);
+
+  const selectRoute = React.useCallback((itemIndex: number, route?: string) => {
+    if (itemIndex === 0) {
       setExpanded((prev) => !prev);
       return;
     }
 
-    navigate(e.itemTarget.props.route);
-    setSelected(e.itemIndex);
+    if (route) {
+      navigate(route);
+    }
+    setExpanded(false);
   }, [navigate]);
 
   React.useEffect(() => {
     if (goToRoute) {
-    onSelect(goToRoute)
+      selectRoute(goToRoute.itemIndex, goToRoute.itemTarget.props.route);
     }
-  }, [goToRoute]);
+  }, [goToRoute, selectRoute]);
   return (
     <>
       <Drawer
-        style={{ height: "100%", minWidth: '576px' }}
+        className="app-drawer"
+        style={{ height: "100%" }}
         expanded={expanded}
         position={"start"}
         mode={"overlay"}
         mini={true}
-        miniWidth={80}
+        miniWidth={64}
+        width={240}
         items={items.map((item, index) => ({
           ...item,
           selected: index === selected,
         }))}
-        onSelect={onSelect}
+        onSelect={(event: DrawerSelectEvent) => selectRoute(event.itemIndex, event.itemTarget.props.route)}
         onOverlayClick={() => {
           setExpanded(false);
         }}
       >
-        <DrawerContent style={{maxWidth: 1140, margin: 'auto', paddingLeft: '80px'}}>{props.children}</DrawerContent>
+        <DrawerContent className="app-drawer-content">{props.children}</DrawerContent>
       </Drawer>
     </>
   );

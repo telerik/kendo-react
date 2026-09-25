@@ -10,7 +10,7 @@ import {
 import { Badge } from "@progress/kendo-react-indicators";
 import { useInternationalization } from "@progress/kendo-react-intl";
 import { SvgIcon } from "@progress/kendo-react-common";
-import { starOutlineIcon, starIcon } from "@progress/kendo-svg-icons";
+import { starIcon } from "@progress/kendo-svg-icons";
 import Image from "next/image";
 
 import { images } from "./../resources/images";
@@ -18,23 +18,24 @@ import { images } from "./../resources/images";
 export const FullNameCell = (props) => {
   const customerPhotoStyle = {
     display: "inline-block",
-    width: 32,
-    height: 32,
+    width: "var(--kendo-spacing-8)",
+    height: "var(--kendo-spacing-8)",
     borderRadius: "50%",
-    backgroundSize: "32px 35px",
+    backgroundSize: "var(--kendo-spacing-8) 35px",
     backgroundPosition: "center center",
     verticalAlign: "middle",
-    lineHeight: "32px",
-    boxShadow: "inset 0 0 1px #999, inset 0 0 10px rgba(0,0,0,.2)",
-    marginLeft: "5px",
+    lineHeight: "var(--kendo-spacing-8)",
+    boxShadow:
+      "inset 0 0 var(--kendo-spacing-1px) var(--kendo-color-border), inset 0 0 var(--kendo-spacing-10) color-mix(in srgb, var(--kendo-color-on-app-surface) var(--kendo-translucency-base), transparent)",
+    marginLeft: "var(--kendo-spacing-1)",
     backgroundImage: images[props.dataItem.imgId + props.dataItem.gender],
   };
 
   const customerName = {
     display: "inline-block",
     verticalAlign: "middle",
-    lineHeight: "32px",
-    paddingLeft: "10px",
+    lineHeight: "var(--kendo-spacing-8)",
+    paddingLeft: "var(--kendo-spacing-2\\.5)",
   };
 
   if (props.rowType === "groupHeader") {
@@ -82,8 +83,9 @@ export const RatingCell = (props) => {
         return (
           <SvgIcon
             key={idx}
-            icon={!isActive ? starIcon : starOutlineIcon}
-            style={!isActive ? { color: "#ffa600" } : undefined}
+            icon={starIcon}
+            variant={!isActive ? "solid" : "outline"}
+            style={!isActive ? { color: "var(--kendo-color-warning)" } : undefined}
           />
         );
       })}
@@ -130,8 +132,8 @@ export const EngagementCell = (props) => {
 
 export const CurrencyCell = (props) => {
   const redBoldStyle = {
-    color: "#d9534f",
-    fontWeight: 600,
+    color: "var(--kendo-color-error)",
+    fontWeight: "var(--kendo-font-weight-semibold)",
   };
 
   const intlService = useInternationalization();

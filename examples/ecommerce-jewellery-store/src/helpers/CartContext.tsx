@@ -5,7 +5,8 @@ import React from 'react';
 interface CartContextType {
     cart: CartContextDescriptor[];
     addItemToCart: (product: ListDataDescriptor) => void;
-    updateIndividualCartItem: (cart: CartContextDescriptor) => void;
+    updateIndividualCartItem: (id: string | number, quantity: number) => void;
+    removeItemFromCart: (id: string | number) => void;
 }
 
 const ShoppingCartContext = createContext<CartContextType | null>(null);
@@ -31,18 +32,27 @@ export const CartProvider = ({ children }: CartProviderProps) => {
         }
     };
 
-    const updateCartItem = React.useCallback((id: any) => {
+    const updateCartItem = React.useCallback((id: string | number, quantity: number) => {
         setShoppingCart(shoppingCart.map(item => {
             if (item.product.id === Number(id)) {
-                return {...item, quantity: item.quantity + 1};
+                return {...item, quantity};
             }
 
             return item
         }))
     }, [shoppingCart]);
 
+    const removeItemFromCart = React.useCallback((id: string | number) => {
+        setShoppingCart(shoppingCart.filter(item => item.product.id !== Number(id)));
+    }, [shoppingCart]);
+
     return (
-        <ShoppingCartContext.Provider value={{ cart: shoppingCart, addItemToCart, updateIndividualCartItem: updateCartItem }}>
+        <ShoppingCartContext.Provider value={{
+            cart: shoppingCart,
+            addItemToCart,
+            updateIndividualCartItem: updateCartItem,
+            removeItemFromCart,
+        }}>
             {children}
         </ShoppingCartContext.Provider>
     );

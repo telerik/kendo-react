@@ -16,38 +16,34 @@ export const CategoryList: React.FC<CategoryListProps> = ({ data, title, subtitl
 
     return (
         <>
-            <div className="k-h2 k-font-bold k-text-black k-col-span-12 k-text-center">
+            <div className="category-list__title">
                 {title}
             </div>
             <div
-                className="k-font-size-xl k-p-5 k-col-span-12 k-text-center"
+                className="category-list__subtitle"
                 style={{
-                    paddingBottom: "1rem",
+                    paddingBottom: "var(--kendo-spacing-4)",
                 }}
             >
                 {subtitle}
             </div>
-            <div className="k-d-grid k-grid-cols-12 k-col-span-12 k-gap-5">
+            <div className="category-list__items">
                 {data.map((card, index) => {
                     return (
-                        <div key={index} className={`k-col-span-${colSpan} k-text-center`}>
+                        <div key={index} className={`category-list__item category-list__item--span-${colSpan}`}>
                             <img
                                 height={"319px"}
                                 width={"100%"}
                                 style={{
                                     minWidth: "360px",
-                                    paddingBottom: "1rem",
+                                    paddingBottom: "var(--kendo-spacing-4)",
                                 }}
                                 src={card.img}
                             />
-                            <span className="k-pt-md">
+                            <span className="category-list__label">
                                 {card.collectionText}
                             </span>
-                            <div
-                                style={{
-                                    paddingTop: "1rem",
-                                }}
-                            >
+                            <div className="category-list__action">
                                 <Button themeColor={"primary"} size={"large"} onClick={() => onNavigate(card)}>
                                     {t.buyNowButtonText} 
                                 </Button>

@@ -124,7 +124,8 @@ const AdminView: React.FC = () => {
     dataItem,
     field,
   }) => {
-    const imageUrl = field && field in dataItem ? (dataItem as Record<string, any>)[field] : dataItem.URL;
+    const candidate = field && field in dataItem ? (dataItem as unknown as Record<string, unknown>)[field] : dataItem.URL;
+    const imageUrl = typeof candidate === "string" ? candidate : dataItem.URL;
     return (
       <td>
         <img src={imageUrl} alt="Product" style={{ width: "100px", height: "auto" }} />

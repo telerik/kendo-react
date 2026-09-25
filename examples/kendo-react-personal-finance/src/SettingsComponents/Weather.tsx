@@ -3,21 +3,21 @@ import { Card } from "@progress/kendo-react-layout";
 
 export default function Weather(props: any) {
   return (
-    <Card className="k-p-4 k-gap-6 k-rounded-xxl k-h-full">
-      <div className={"k-d-grid k-gap-6"}>
+    <Card className="app-card">
+      <div className="app-card__content app-card__content--spacious">
         <div
           style={{
             fontSize: "20px",
             letterSpacing: "wide",
             fontWeight: "500",
           }}
-          className="k-gap-2"
+          className="app-card__title"
         >
           Weather
         </div>
       </div>
 
-      <div className="k-d-grid k-gap-2 k-justify-content-center k-align-items-center k-text-center">
+      <div className="weather__summary">
         <img
           src="./images/cloud.png"
           alt="Weather Icon"
@@ -37,12 +37,12 @@ export default function Weather(props: any) {
         </div>
       </div>
       <div
-        className="k-w-full"
+        className="weather__divider"
         style={{
           borderBottom: "1px solid var(--kendo-color-border)",
         }}
       ></div>
-      <div className="k-d-grid k-gap-2 k-justify-content-center k-align-items-center k-text-center">
+      <div className="weather__details">
         <div style={{ fontSize: "12px", fontWeight: "400", color: "var(--kendo-color-on-app-surface)" }}>
           Humidity: 56%
         </div>

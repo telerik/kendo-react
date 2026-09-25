@@ -14,6 +14,7 @@ import {
   userIcon,
   cartIcon,
   paletteIcon,
+  bellIcon,
 } from "@progress/kendo-svg-icons";
 import { isAdmin } from "../helpers/adminStore";
 import { useStore } from "@nanostores/react";
@@ -84,7 +85,7 @@ const Header: React.FC = () => {
   );
 
   const [theme, setTheme] = useState<string>(
-    "https://unpkg.com/@progress/kendo-theme-default@10.3.1/dist/default-main.css"
+    "https://unpkg.com/@progress/kendo-theme-meridian@14.5.0/dist/meridian-main.css"
   );
 
   useEffect(() => {
@@ -112,6 +113,9 @@ const Header: React.FC = () => {
   const handleCartClick = () => {
     window.location.href = "/kendo-react/kendo-react-e-commerce-astro-app/shoppingcart";
   };
+  const handleAccountClick = () => {
+    window.location.href = "/kendo-react/kendo-react-e-commerce-astro-app/account";
+  };
 
   const handleSwitchChange = () => {
     isAdmin.set(!isAdminValue);
@@ -138,25 +142,24 @@ const Header: React.FC = () => {
     <>
       <link id="theme-link" rel="stylesheet" href={theme} />
       <LocalizationProvider language={language}>
-        <AppBar themeColor="base">
+        <AppBar positionMode="sticky" themeColor="base">
           <AppBarSection
-            className="k-flex-basis-0 k-flex-grow k-gap-2 k-align-items-center"
-            style={{ paddingLeft: "50px" }}
+            className="header__start"
           >
             <a
               href="/kendo-react/kendo-react-e-commerce-astro-app/"
-              className="k-d-sm-flex"
-              style={{ marginRight: "50px" }}
+              className="header__logo"
             >
               <img
                 src="/kendo-react/kendo-react-e-commerce-astro-app/vilora-logo.png"
-                alt="Logo"
+                alt="Vilora home"
               />
             </a>
             <Menu items={menuItems} onSelect={handleMenuSelect} />
           </AppBarSection>
-          <AppBarSection className="k-flex-basis-0 k-flex-grow k-justify-content-end k-gap-1.5">
+          <AppBarSection className="header__end">
             <TextBox
+              aria-label="Search products"
               placeholder={t.searchPlaceholder}
               prefix={() => (
                 <>
@@ -168,15 +171,18 @@ const Header: React.FC = () => {
                   <InputSeparator />
                 </>
               )}
-              style={{ width: 300 }}
+              className="header__search"
             />
-            <Button svgIcon={userIcon} fillMode="flat" className="k-ml-2" />
+            <Button svgIcon={userIcon} fillMode="flat" className="header__icon-button" aria-label="Account" title="Account" onClick={handleAccountClick} />
             <Button
               svgIcon={cartIcon}
               fillMode="flat"
-              className="k-ml-2"
+              className="header__icon-button"
               onClick={handleCartClick}
+              aria-label="Shopping cart"
+              title="Shopping cart"
             />
+            <Button svgIcon={bellIcon} fillMode="flat" className="header__icon-button" aria-label="Notifications" title="Notifications" onClick={() => { window.location.href = "/kendo-react/kendo-react-e-commerce-astro-app/notifications"; }} />
             <DropDownButton
               svgIcon={paletteIcon}
               items={themeItems}

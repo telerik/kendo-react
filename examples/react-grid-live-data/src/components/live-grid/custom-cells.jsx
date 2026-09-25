@@ -1,49 +1,55 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { trends, nFormatter } from './utils';
-import { classNames } from '@progress/kendo-react-common';
+import { classNames, SvgIcon } from '@progress/kendo-react-common';
 import { useInternationalization } from '@progress/kendo-react-intl';
+import { caretAltDownIcon, caretAltUpIcon } from '@progress/kendo-svg-icons';
+
+const TrendIcon = ({ value }) => {
+  if (value === 0) {
+    return null;
+  }
+
+  return (
+    <SvgIcon
+      icon={value > 0 ? caretAltUpIcon : caretAltDownIcon}
+      size="small"
+      aria-hidden="true"
+    />
+  );
+};
+
 export const PriceCell = props => {
   const intl = useInternationalization();
-  const {
-    dataItem,
-    field,
-    className
-  } = props;
+  const { dataItem, field } = props;
   const fieldName = field || '';
-  return <td className={className} colSpan={props.colSpan}>
+  return <td {...props.tdProps}>
       <div>
-        <span>{intl.formatNumber(dataItem[fieldName], 'n5')}</span>
+        <span>{intl.formatNumber(dataItem[fieldName], 'n2')}</span>
       </div>
     </td>;
 };
 export const ChangeCell = props => {
   const intl = useInternationalization();
-  const {
-    dataItem,
-    field,
-    className
-  } = props;
+  const { dataItem, field } = props;
   const currentTrends = trends(dataItem);
   const fieldName = field || '';
-  return <td className={className} colSpan={props.colSpan}>
+  return <td {...props.tdProps}>
       <div className={classNames(currentTrends)}>
-        {intl.formatNumber(dataItem[fieldName], 'n5')}
+        <TrendIcon value={dataItem[fieldName]} />
+        {dataItem[fieldName] > 0 ? '+' : ''}{intl.formatNumber(dataItem[fieldName], 'n2')}
       </div>
     </td>;
 };
 export const ChangePercentCell = props => {
   const intl = useInternationalization();
-  const {
-    dataItem,
-    field,
-    className
-  } = props;
+  const { dataItem, field } = props;
   const currentTrends = trends(dataItem);
   const fieldName = field || '';
-  return <td className={className} colSpan={props.colSpan}>
+  return <td {...props.tdProps}>
       <div className={classNames(currentTrends)}>
-        {intl.formatNumber(dataItem[fieldName], '0.##')}%
+        <TrendIcon value={dataItem[fieldName]} />
+        {dataItem[fieldName] > 0 ? '+' : ''}{intl.formatNumber(dataItem[fieldName], 'n2')}%
       </div>
     </td>;
 };
@@ -59,15 +65,7 @@ export const RatingCell = props => {
   } else {
     value = 'Buy';
   }
-  let color;
-  if (value === 'Sell' || value === 'Strong Sell') {
-    color = 'red';
-  } else if (value === 'buy') {
-    color = 'green';
-  } else {
-    color = 'black';
-  }
-  return <td>
+  return <td {...props.tdProps}>
       <div className={classNames(currentTrends) + ' rating-cell'}>
         {value}
       </div>
@@ -76,19 +74,17 @@ export const RatingCell = props => {
 export const TickerCell = props => {
   const fieldName = props.field || '';
   let value = props.dataItem[fieldName];
-  return <td>
-      <img alt={`KendoReact Grid ${value} icon`} src={require(`../../assets/${value}.png`)} />
-      <span style={{
-      color: '#4B5FFA',
-      marginLeft: '5px',
-      fontWeight: 'bold'
-    }}>
-        {value}
-      </span>
+  return <td {...props.tdProps}>
+      <div className="ticker-cell">
+        <img alt={`${value} currency`} src={require(`../../assets/${value}.png`)} />
+        <span className="ticker-cell__symbol">
+          {value}
+        </span>
+      </div>
     </td>;
 };
 export const VolumeCell = props => {
   const fieldName = props.field || '';
   let value = props.dataItem[fieldName];
-  return <td>{nFormatter(value)}</td>;
+  return <td {...props.tdProps}>{nFormatter(value)}</td>;
 };

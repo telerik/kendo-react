@@ -55,7 +55,7 @@ const Home: React.FC = () => {
 
       {isAdmin ? (
         <Layout>
-          <div className="k-mt-8"> 
+          <div className="home__admin">
             <AdminView />
           </div>
         </Layout>
@@ -63,8 +63,7 @@ const Home: React.FC = () => {
         <>
           <Layout>
             <section
-              className="k-d-grid k-grid-cols-12 k-justify-content-center k-align-items-center k-col-span-12"
-              style={{ paddingTop: "60px" }}
+              className="home__category-section"
             >
               <CategoryList
                 title={t.bestsellersTitle}

@@ -25,10 +25,19 @@ export const ListView = (props) => {
     });
   };
 
-  
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>, item: DataModel) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      props.onItemClick({
+        dataItem: item,
+        event
+      });
+    }
+  };
+
   return (
-    <div className="k-listview k-selectable k-filemanager-listview">
-      <div className="k-listview-content k-d-flex k-flex-row k-flex-wrap">
+    <div className="k-listview k-selectable k-filemanager-listview" role="listbox" aria-label="Files">
+      <div className="k-listview-content file-manager-listview__content">
         {props.data && 
           props.data.data.map((item: any, i: number) => {
             const name = getName(item.path);
@@ -36,9 +45,13 @@ export const ListView = (props) => {
       
             return (
                 <div key={`${name}/${i}`} className={classNames("k-listview-item", { "k-selected": item.selected })}
+                  role="option"
+                  aria-selected={Boolean(item.selected)}
+                  tabIndex={0}
                   onClick={event => handleClick(event, item)}
                   onDoubleClick={event => handleDoubleClick(event, item)}
                   onContextMenu={event => handleContextMenu(event, item)}
+                  onKeyDown={event => handleKeyDown(event, item)}
                 >
                   <span className="k-file-preview">
                     <SvgIcon icon={svgIcon} size='xxxlarge'/>

@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import '@progress/kendo-theme-meridian/dist/all.css';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
