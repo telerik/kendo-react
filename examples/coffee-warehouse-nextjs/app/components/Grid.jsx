@@ -15,7 +15,7 @@ import { ExcelExport } from "@progress/kendo-react-excel-export";
 import { Input } from "@progress/kendo-react-inputs";
 import { useLocalization } from "@progress/kendo-react-intl";
 import { filePdfIcon, fileExcelIcon } from "@progress/kendo-svg-icons";
-import { filterBy } from '@progress/kendo-data-query';
+import { filterBy } from "@progress/kendo-data-query";
 const noMessage = "message not defined";
 
 export const Column = GridColumn;
@@ -60,33 +60,34 @@ export const Grid = (props) => {
 
   const handleFilterChange = React.useCallback(
     (event) => {
-        let filter = {
-            logic: 'or',
-            filters: [
-                { field: 'contactName', operator: 'contains', value: event.value },
-                { field: 'jobTitle', operator: 'contains', value: event.value },
-                { field: 'budget', operator: 'contains', value: event.value },
-                { field: 'phone', operator: 'contains', value: event.value },
-                { field: 'address', operator: 'contains', value: event.value }
-            ]
-        };
-        setFilter(filter);
+      let filter = {
+        logic: "or",
+        filters: [
+          { field: "contactName", operator: "contains", value: event.value },
+          { field: "jobTitle", operator: "contains", value: event.value },
+          { field: "budget", operator: "contains", value: event.value },
+          { field: "phone", operator: "contains", value: event.value },
+          { field: "address", operator: "contains", value: event.value },
+        ],
+      };
+      setFilter(filter);
     },
-    [setFilter]
+    [setFilter],
   );
 
   const onSelectionChange = React.useCallback((event) => {
-      setSelect(event.select);
+    setSelect(event.select);
   }, []);
 
   const onHeaderSelectionChange = React.useCallback((event) => {
-      setSelect(event.select);
+    setSelect(event.select);
   }, []);
 
   const GridElement = (
     <KendoGrid
       {...others}
       rowHeight={40}
+      style={{ height: "500px" }}
       pageable={true}
       defaultSkip={0}
       defaultTake={10}
@@ -94,13 +95,13 @@ export const Grid = (props) => {
       groupable={true}
       filter={filter}
       data={filteredData}
-      dataItemKey={'id'}
+      dataItemKey={"id"}
       autoProcessData={true}
       selectable={{
         enabled: true,
         drag: false,
         cell: false,
-        mode: 'single'
+        mode: "single",
       }}
       select={select}
       onSelectionChange={onSelectionChange}
@@ -111,13 +112,13 @@ export const Grid = (props) => {
           onChange={handleFilterChange}
           placeholder={localizationService.toLanguageString(
             "custom.gridSearch",
-            noMessage
+            noMessage,
           )}
         />
         <Button svgIcon={fileExcelIcon} onClick={onExcelExport}>
           {localizationService.toLanguageString(
             "custom.exportExcel",
-            noMessage
+            noMessage,
           )}
         </Button>
         <Button

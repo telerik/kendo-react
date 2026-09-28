@@ -16,14 +16,17 @@ a {
     background-color: $background-color;
 
     .k-drawer {
-        box-shadow: 0 0 10px rgba(0,0,0,.2);
-        border-right-width: 0 !important;
+        background-color: $surface-glass-color;
+        backdrop-filter: blur(var(--kendo-translucency-blur-base));
+        -webkit-backdrop-filter: blur(var(--kendo-translucency-blur-base));
+        box-shadow: var(--kendo-elevation-3);
+        border-right-color: $border-color;
     }
 
     &.k-drawer-push .k-drawer {
         position: sticky;
-        top: 80px;
-        height: calc(100vh - 80px);
+        top: var(--kendo-spacing-20);
+        height: calc(100vh - var(--kendo-spacing-20));
     }
 
     .k-drawer-item {
@@ -32,32 +35,31 @@ a {
 }
 
 .card-container {
-    background-color: $white;
-    padding: 40px 0;
+    background-color: $surface-glass-color;
+    backdrop-filter: blur(var(--kendo-translucency-blur-base));
+    -webkit-backdrop-filter: blur(var(--kendo-translucency-blur-base));
+    padding: var(--kendo-spacing-10) 0;
     text-align: center;
 
     &.grid {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        column-gap: 10px;
-        row-gap: 1em;
-    }
-
-    .card-title {
-
+        column-gap: calc(var(--kendo-spacing-base) * 2.5);
+        row-gap: var(--kendo-spacing-4);
     }
 
     .card-buttons {
         .k-button {
-            min-width: 105px;
+            min-width: calc(var(--kendo-spacing-base) * 26.25);
         }
     }
 
     .card-ranges {
         .k-daterangepicker {
-            .k-textbox-container, .k-floating-label-container {
-                padding-top: 0; 
-                min-width: 105px;
+            .k-textbox-container,
+            .k-floating-label-container {
+                padding-top: 0;
+                min-width: calc(var(--kendo-spacing-base) * 26.25);
             }
 
             .k-floating-label {
@@ -75,7 +77,7 @@ a {
 @media (min-width: 480px) {
     .card-container {
         text-align: initial;
-        padding: 30px;
+        padding: calc(var(--kendo-spacing-base) * 7.5);
 
         &.grid {
             grid-template-columns: repeat(2, 1fr);
@@ -98,21 +100,16 @@ a {
             grid-row: 1;
         }
     }
+}
 
- }
-
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
     .card-container {
-        margin: 25px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0,0,0,.2);
+        margin: calc(var(--kendo-spacing-base) * 6.25);
+        border-radius: var(--kendo-border-radius-md);
+        box-shadow: var(--kendo-elevation-2);
 
         &.grid {
             grid-template-columns: repeat(3, 1fr);
-        }
-
-        .card-title {
-
         }
 
         .card-buttons {
@@ -135,7 +132,7 @@ a {
 
 // Header
 .header {
-    height: 80px;
+    height: var(--kendo-spacing-20);
     position: sticky;
     top: 0;
     z-index: 3;
@@ -150,14 +147,14 @@ a {
     }
 
     .menu-button {
-        flex: 0 0 50px;
+        flex: 0 0 calc(var(--kendo-spacing-base) * 12.5);
         text-align: center;
     }
 
     .hamburger-icon {
-        background-image:  url('./../assets/hamburger-icon.svg');
+        background-image: url("./../assets/hamburger-icon.svg");
         background-repeat: no-repeat;
-        width: 20px;
+        width: var(--kendo-spacing-5);
         cursor: pointer;
     }
 
@@ -166,16 +163,20 @@ a {
         flex: 1 0 auto;
         flex-direction: column;
         align-items: flex-start;
-        margin-left: 25px;
+        margin-left: calc(var(--kendo-spacing-base) * 6.25);
+    }
+
+    .header-language-label {
+        padding: var(--kendo-spacing-5);
     }
 
     .k-avatar {
         display: block;
-        width: 40px;
-        height: 40px;
-        flex-basis: 40px;
-        margin: 0 25px;
-        box-shadow: 0 0 0px 1px $white;
+        width: var(--kendo-spacing-10);
+        height: var(--kendo-spacing-10);
+        flex-basis: var(--kendo-spacing-10);
+        margin: 0 calc(var(--kendo-spacing-base) * 6.25);
+        box-shadow: 0 0 0 1px $white;
     }
 
     .settings {
@@ -189,10 +190,11 @@ a {
             flex-direction: row;
             align-items: center;
         }
+
         .vl {
             border-left: 1px solid $white;
-            height: 25px;
-            margin: 6px 15px;
+            height: calc(var(--kendo-spacing-base) * 6.25);
+            margin: calc(var(--kendo-spacing-base) * 1.5) calc(var(--kendo-spacing-base) * 3.75);
         }
     }
 }
@@ -204,10 +206,10 @@ a {
             flex: 0 0 auto;
             align-items: center;
         }
-        
+
         .k-dropdown {
-            max-width: 90px;
-            margin-left: 15px;
+            max-width: calc(var(--kendo-spacing-base) * 22.5);
+            margin-left: calc(var(--kendo-spacing-base) * 3.75);
         }
     }
 }
@@ -218,21 +220,26 @@ a {
         padding-top: 0;
     }
 
+    .dashboard-grid {
+        height: calc(var(--kendo-spacing-base) * 112.5);
+    }
+
     .k-grid-toolbar .k-textbox {
-        margin-bottom: 10px;
+        margin-bottom: calc(var(--kendo-spacing-base) * 2.5);
     }
 
     .k-grid .k-virtual-content,
     .k-grid .k-virtual-content > div {
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
         &::-webkit-scrollbar {
             display: none;
         }
     }
-    
+
     .k-badge {
-        z-index: 1
+        z-index: 1;
     }
 }
 
@@ -242,7 +249,7 @@ a {
             margin-bottom: 0;
             float: left;
         }
-    
+
         .k-grid-toolbar .k-button {
             float: right;
         }
@@ -252,33 +259,149 @@ a {
 @media (min-width: 768px) {
     .dashboard-page {
         .card-container:last-of-type {
-            padding-top: 30px;
+            padding-top: calc(var(--kendo-spacing-base) * 7.5);
         }
     }
 }
-// Planning page 
+
+.chart {
+    height: calc(var(--kendo-spacing-base) * 75);
+}
+
+.chart-tooltip__date {
+    text-transform: uppercase;
+}
+
+.chart-tooltip__value {
+    text-align: center;
+}
+
+.employee-photo {
+    display: inline-block;
+    width: var(--kendo-spacing-8);
+    height: var(--kendo-spacing-8);
+    border-radius: var(--kendo-border-radius-full);
+    background-image: var(--employee-photo);
+    background-size: calc(var(--kendo-spacing-base) * 8) calc(var(--kendo-spacing-base) * 8.75);
+    background-position: center center;
+    vertical-align: middle;
+    line-height: var(--kendo-spacing-8);
+    box-shadow: inset 0 0 1px $border-alt-color, inset 0 0 calc(var(--kendo-spacing-base) * 2.5) color-mix(in srgb, var(--kendo-color-inverse) 20%, transparent);
+    margin-left: calc(var(--kendo-spacing-base) * 1.25);
+}
+
+.employee-name {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: var(--kendo-spacing-8);
+    padding-left: calc(var(--kendo-spacing-base) * 2.5);
+}
+
+.cell-content--center {
+    text-align: center;
+}
+
+.flag-icon {
+    width: calc(var(--kendo-spacing-base) * 7.5);
+    vertical-align: middle;
+    border-style: none;
+}
+
+.grid-rating__icon--filled {
+    color: $warning-color;
+}
+
+.grid-rating__icon--inactive {
+    color: $subtle-color;
+}
+
+.status-badge {
+    position: relative;
+    display: inline;
+}
+
+.currency-negative {
+    color: $error-color;
+    font-weight: var(--kendo-font-weight-semibold);
+}
+
+.dashboard-skeleton {
+    width: 100%;
+    margin: calc(var(--kendo-spacing-base) * 12.5);
+    background: $surface-alt-color;
+}
+
+.dashboard-skeleton--summary {
+    height: calc(var(--kendo-spacing-base) * 86.25);
+}
+
+.dashboard-skeleton--details {
+    height: calc(var(--kendo-spacing-base) * 125);
+}
+
+// Planning page
 .planning-page {
     .card-container {
         grid-template-columns: repeat(1, 1fr);
     }
-    .card-title{
+
+    .card-title {
         grid-column: 1 / -1;
     }
-    .k-hbox {
-        padding: 0 20px;
-        background: transparent;
-        align-items: center;
+
+    .employee-card {
+        &.employee-card--inactive {
+            opacity: 0.5;
+        }
     }
+
+    .employee-card__surface {
+        border-width: 0;
+        cursor: pointer;
+        background-color: $surface-glass-color;
+        backdrop-filter: blur(var(--kendo-translucency-blur-base));
+        -webkit-backdrop-filter: blur(var(--kendo-translucency-blur-base));
+        box-shadow: var(--kendo-elevation-1);
+        transition: box-shadow var(--kendo-transition-subtle), background-color var(--kendo-transition-subtle);
+    }
+
+    .employee-card__header {
+        display: flex;
+        align-items: center;
+        gap: var(--kendo-spacing-4);
+        padding: 0 var(--kendo-spacing-5);
+        background: transparent;
+    }
+
+    .employee-card__avatar {
+        border-width: 2px;
+        border-color: var(--employee-team-color);
+    }
+
+    .employee-card__avatar-image {
+        width: 100%;
+        height: 100%;
+        background-image: var(--employee-image);
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .employee-card__title {
+        color: var(--employee-team-color);
+    }
+
     .k-card-title {
-        font-size: 15px;
-        margin-bottom: -6px;
+        font-size: calc(var(--kendo-font-size) * 0.9375);
+        margin-bottom: calc(var(--kendo-spacing-base) * -1.5);
         text-align: left;
     }
+
     .k-card-subtitle {
         margin-top: 0;
         text-transform: uppercase;
-        font-size: 11px;
+        font-size: calc(var(--kendo-font-size) * 0.6875);
     }
+
     .disabled {
         opacity: 0.5;
     }
@@ -294,7 +417,7 @@ a {
 
 @media (min-width: 768px) {
     .planning-page {
-        .k-hbox {
+        .employee-card__header {
             padding: 0;
             border-width: 0;
         }
@@ -325,7 +448,7 @@ a {
 
     .k-form .k-form-field {
         display: block;
-        padding: 0 15px;
+        padding: 0 calc(var(--kendo-spacing-base) * 3.75);
     }
 
     .k-form-field:first-of-type .k-form-field-wrap {
@@ -333,7 +456,7 @@ a {
     }
 
     .k-form-field:first-of-type .k-avatar {
-        margin: 0 auto 1rem;
+        margin: 0 auto var(--kendo-spacing-4);
     }
 
     .k-form.k-form-horizontal .k-label {
@@ -341,7 +464,7 @@ a {
     }
 
     hr {
-        margin-top: 1rem;
+        margin-top: var(--kendo-spacing-4);
         opacity: 0.2;
     }
 
@@ -349,7 +472,7 @@ a {
         justify-content: center;
 
         & > * {
-            min-width: 140px;
+            min-width: calc(var(--kendo-spacing-base) * 35);
         }
     }
 }
@@ -370,65 +493,71 @@ a {
     }
 }
 
- @media (min-width: 768px) { 
+@media (min-width: 768px) {
     .profile-page {
         .k-form {
             margin: 0 auto;
             padding: 0;
         }
+
         .k-form .k-form-field {
             padding: 0;
         }
     }
- }
-
+}
 
 // Info page
 .info-page {
     background-color: $info-background;
     color: $white;
 
-    h1, h2, h3, .component-link {
-        font-family: Metric,Helvetica,Arial,sans-serif;
+    h1,
+    h2,
+    h3,
+    .component-link {
+        font-family: Metric, Helvetica, Arial, sans-serif;
     }
+
     a:not(.k-button) {
         color: $link-color;
     }
-    
+
     .content {
-        padding-top: 40px;
+        padding-top: var(--kendo-spacing-10);
         margin: 0 auto;
         position: relative;
-        max-width: 820px;
+        max-width: calc(var(--kendo-spacing-base) * 205);
     }
 
     .kendoka {
         text-align: center;
+
         img {
-            max-width: 280px;
+            max-width: calc(var(--kendo-spacing-base) * 70);
         }
     }
 
     .section-1 {
         text-align: center;
+
         h1 {
-            font-size: 48px;
-            font-weight: bold;
+            font-size: calc(var(--kendo-font-size) * 3);
+            font-weight: var(--kendo-font-weight-bold);
             color: $react-color;
         }
 
         h2 {
-            font-size: 30px;
-            margin-bottom: 53px;
+            font-size: calc(var(--kendo-font-size) * 1.875);
+            margin-bottom: calc(var(--kendo-spacing-base) * 13.25);
         }
 
         .button-group {
-            margin-bottom: 30px;
+            margin-bottom: calc(var(--kendo-spacing-base) * 7.5);
 
             .k-button {
                 display: block;
-                margin: 10px auto;
-                min-width: 145px;
+                margin: calc(var(--kendo-spacing-base) * 2.5) auto;
+                min-width: calc(var(--kendo-spacing-base) * 36.25);
                 width: 60%;
             }
         }
@@ -440,22 +569,22 @@ a {
             align-content: center;
 
             .github-text {
-                margin-left: 15px;
+                margin-left: calc(var(--kendo-spacing-base) * 3.75);
             }
         }
     }
 
     .section-2 {
         text-align: center;
-        margin-top: 40px;
-        padding: 0 15px;
+        margin-top: var(--kendo-spacing-10);
+        padding: 0 calc(var(--kendo-spacing-base) * 3.75);
     }
 
     .section-3 {
         -webkit-columns: 2;
         column-count: 2;
-        margin-top: 40px;
-        padding: 0 15px;
+        margin-top: var(--kendo-spacing-10);
+        padding: 0 calc(var(--kendo-spacing-base) * 3.75);
 
         ul {
             list-style: none;
@@ -466,92 +595,98 @@ a {
 
     .package-item {
         display: inline-block;
-        margin-top: 20px;
+        margin-top: var(--kendo-spacing-5);
     }
 
     .package-title a {
-        font-size: 17px;
-        color: #CCCCCC;
+        font-size: calc(var(--kendo-font-size) * 1.0625);
+        color: color-mix(in srgb, $white 80%, transparent);
         text-transform: uppercase;
     }
 
     .component-link {
-        padding: 5px 0;
-        
+        padding: calc(var(--kendo-spacing-base) * 1.25) 0;
+
         a {
-            font-size: 20px;
+            font-size: calc(var(--kendo-font-size) * 1.25);
         }
     }
 
     .footer {
-        background-image: url('../assets/info-background.svg');
+        background-image: url("../assets/info-background.svg");
         background-repeat: no-repeat;
-        height: 320px;
+        height: calc(var(--kendo-spacing-base) * 80);
     }
 }
 
-@media (min-width: 480px) { 
+@media (min-width: 480px) {
     .info-page {
         .content {
-            padding: 40px 40px 0;
+            padding: var(--kendo-spacing-10) var(--kendo-spacing-10) 0;
         }
+
         .kendoka {
             img {
-                max-width: 348px;
+                max-width: calc(var(--kendo-spacing-base) * 87);
             }
         }
 
         .section-1 {
             h1 {
-                font-size: 71px;
+                font-size: calc(var(--kendo-font-size) * 4.4375);
             }
 
             h2 {
-                font-size: 38px;
+                font-size: calc(var(--kendo-font-size) * 2.375);
             }
 
             .button-group {
                 .k-button {
                     display: inline-block;
-                    margin-right: 10px;
+                    margin-right: calc(var(--kendo-spacing-base) * 2.5);
                     width: auto;
                 }
             }
         }
+
         .section-3 {
             -webkit-columns: 3;
             column-count: 3;
         }
     }
 }
+
 @media (max-width: 480px) {
     .k-form-horizontal .k-form-field-wrap {
         max-width: 100%;
     }
-    
 }
 
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
     .info-page {
         .content {
-            padding: 120px 40px 0;
+            padding: calc(var(--kendo-spacing-base) * 30) var(--kendo-spacing-10) 0;
         }
+
         .kendoka {
             position: absolute;
             right: 0;
-            top: 2em;
+            top: var(--kendo-spacing-8);
             text-align: left;
         }
+
         .section-1,
         .section-2 {
             text-align: left;
             padding: 0;
         }
+
         .section-3 {
             -webkit-columns: 4;
             column-count: 4;
             padding: 0;
         }
+
         .footer {
             background-size: cover;
         }
@@ -559,11 +694,15 @@ a {
 }
 
 .custom-toolbar {
-    padding: 15px 5px;
     display: flex;
     align-items: center;
+    padding: calc(var(--kendo-spacing-base) * 3.75) calc(var(--kendo-spacing-base) * 1.25);
+    background-color: $app-surface-glass-color;
+    backdrop-filter: blur(var(--kendo-translucency-blur-base));
+    -webkit-backdrop-filter: blur(var(--kendo-translucency-blur-base));
+    box-shadow: var(--kendo-elevation-1);
 
     h3 {
-        margin-left: 8px;
+        margin-left: var(--kendo-spacing-2);
     }
 }

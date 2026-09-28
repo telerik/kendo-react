@@ -13,19 +13,26 @@
   "dependencies": {
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "@progress/kendo-react-buttons": "^14.4.1",
-    "@progress/kendo-react-charts": "^14.4.1",
-    "@progress/kendo-react-dateinputs": "^14.4.1",
-    "@progress/kendo-react-dropdowns": "^14.4.1",
-    "@progress/kendo-react-grid": "^14.4.1",
-    "@progress/kendo-react-inputs": "^14.4.1",
-    "@progress/kendo-react-intl": "^14.4.1",
-    "@progress/kendo-react-layout": "^14.4.1",
+    "@progress/kendo-react-buttons": "15.1.0",
+    "@progress/kendo-react-charts": "15.1.0",
+    "@progress/kendo-react-dateinputs": "15.1.0",
+    "@progress/kendo-react-dropdowns": "15.1.0",
+    "@progress/kendo-react-grid": "15.1.0",
+    "@progress/kendo-react-inputs": "15.1.0",
+    "@progress/kendo-react-intl": "15.1.0",
+    "@progress/kendo-react-layout": "15.1.0",
+    "@progress/kendo-svg-icons": "5.4.0",
     "@progress/kendo-drawing": "latest",
-    "@progress/kendo-theme-default": "^13.1.1"
+    "@progress/kendo-theme-meridian": "14.4.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.4",
     "@vitejs/plugin-react": "latest",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.4.0",
     "vite": "latest"
   }
 }

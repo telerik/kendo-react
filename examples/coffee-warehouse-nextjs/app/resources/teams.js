@@ -2,21 +2,21 @@ export const teams = [
   {
     teamID: 1,
     teamName: "Tiger Team",
-    teamColor: "#FF6358",
+    teamColor: "var(--kendo-color-series-a)",
   },
   {
     teamID: 2,
     teamName: "Lemon Team",
-    teamColor: "#F7C62F",
+    teamColor: "var(--kendo-color-series-b)",
   },
   {
     teamID: 3,
     teamName: "Organic Team",
-    teamColor: "#55AB1D",
+    teamColor: "var(--kendo-color-series-c)",
   },
   {
     teamID: 4,
     teamName: "Ocean Team",
-    teamColor: "#28B4C8",
+    teamColor: "var(--kendo-color-series-d)",
   },
 ];

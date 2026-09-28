@@ -52,10 +52,10 @@ export const Chart = (props) => {
   const ChartTooltipRender = ({ point }) => {
     return (
       <div>
-        <div style={{ textTransform: "uppercase" }}>
+        <div className="chart-tooltip__date">
           {intlService.formatDate(point.category, MONTH_FORMAT)}
         </div>
-        <div style={{ textAlign: "center" }}>
+        <div className="chart-tooltip__value">
           {intlService.formatNumber(point.value, { locale: locales.locale })}
         </div>
       </div>
@@ -63,11 +63,11 @@ export const Chart = (props) => {
   };
 
   return (
-    <KendoChart style={{ height: 300 }} onRefresh={onRefresh}>
+    <KendoChart className="chart" onRefresh={onRefresh}>
       <ChartLegend
         position="bottom"
         orientation="horizontal"
-        background={"#f4f5f8"}
+        background={"var(--kendo-color-base-subtle)"}
         padding={{ left: 80 }}
         labels={{ padding: { right: 80 } }}
       />
