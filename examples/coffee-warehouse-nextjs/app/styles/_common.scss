@@ -528,19 +528,10 @@ a {
     .card-title{
         grid-column: 1 / -1;
     }
-    .planning-card-header {
-        display: flex;
-        align-items: center;
-        padding: 0 var(--kendo-spacing-5);
-        background: transparent;
-    }
-    .k-card-title {
+    .planning-employee-name {
         font-size: var(--kendo-font-size-sm);
-        margin-bottom: calc(-1 * var(--kendo-spacing-1\.5));
-        text-align: left;
     }
-    .k-card-subtitle {
-        margin-top: 0;
+    .planning-employee-role {
         text-transform: uppercase;
         font-size: var(--kendo-font-size-xs);
     }
@@ -553,15 +544,6 @@ a {
     .planning-page {
         .card-container {
             grid-template-columns: repeat(2, 1fr);
-        }
-    }
-}
-
-@media (min-width: 768px) {
-    .planning-page {
-        .planning-card-header {
-            padding: 0;
-            border-width: 0;
         }
     }
 }
@@ -856,24 +838,42 @@ a {
     }
 }
 
-.employee-toggle.k-button {
+.planning-page .planning-employee-toggle.k-button {
+    justify-self: start;
+    max-width: 100%;
     height: auto;
-    justify-content: flex-start;
-    padding: 0;
-    border: 0;
-    border-radius: 0;
-    background: transparent;
-    box-shadow: none;
+    padding: var(--kendo-spacing-2);
+    border: var(--kendo-spacing-1px) solid var(--kendo-color-border);
+    border-radius: var(--kendo-border-radius-xxl);
+    background: var(--kendo-color-surface-alt);
+    box-shadow: var(--kendo-elevation-1);
     text-align: left;
 }
 
-.employee-toggle.k-button:hover,
-.employee-toggle.k-button:focus {
-    background: transparent;
-    box-shadow: none;
+.planning-employee-toggle .k-button-text {
+    display: flex;
+    align-items: center;
+    gap: var(--kendo-spacing-2);
+    min-width: 0;
 }
 
-.employee-toggle:focus-visible {
+.planning-employee-details {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.planning-employee-toggle[aria-pressed="false"] {
+    opacity: 0.5;
+}
+
+.planning-page .planning-employee-toggle.k-button:hover,
+.planning-page .planning-employee-toggle.k-button:focus {
+    background: var(--kendo-color-surface-alt);
+    box-shadow: var(--kendo-elevation-1);
+}
+
+.planning-employee-toggle:focus-visible {
     outline: 2px solid var(--kendo-color-info);
     outline-offset: var(--kendo-spacing-1);
 }
