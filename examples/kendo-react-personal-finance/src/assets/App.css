@@ -693,17 +693,32 @@ header .k-picker-solid {
         min-width: 0;
     }
 
-    .app-drawer-content,
     .footer {
         margin-left: 0;
     }
 
     .app-drawer-content {
-        width: auto;
+        margin-left: var(--app-drawer-rail-width);
+        width: calc(100% - var(--app-drawer-rail-width));
     }
 }
 
 @media (max-width: 767px) {
+    .app-header {
+        padding-inline: var(--kendo-spacing-5);
+    }
+
+    .app-header__profile,
+    .app-header__search,
+    .app-header__actions {
+        flex: 1 1 100%;
+    }
+
+    .app-header__actions {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
     .app-page-title,
     .app-page-grid,
     .app-page-grid--twelve,

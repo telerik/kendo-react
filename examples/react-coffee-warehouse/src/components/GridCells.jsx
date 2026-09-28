@@ -7,14 +7,13 @@ import {
     ChartArea
 } from '@progress/kendo-react-charts';
 import { Badge } from '@progress/kendo-react-indicators';
+import { Rating } from '@progress/kendo-react-inputs';
 import {
     useInternationalization
 } from '@progress/kendo-react-intl';
 import { useLocalization } from '@progress/kendo-react-intl';
 
 import { images } from './../resources/images';
-import { SvgIcon } from '@progress/kendo-react-common';
-import { starIcon } from '@progress/kendo-svg-icons';
 
 export const FullNameCell = (props) => {
     if (props.rowType === 'groupHeader') {
@@ -49,8 +48,7 @@ export const FlagCell = (props) => {
 };
 
 export const RatingCell = (props) => {
-    const MAX_STARS = 5;
-    const rating = props.dataItem.rating;
+    const localizationService = useLocalization();
 
     if (props.rowType === 'groupHeader') {
         return null;
@@ -58,18 +56,14 @@ export const RatingCell = (props) => {
 
     return (
         <td>
-            {
-                [...new Array(MAX_STARS)].map((_, idx) => {
-                    const isActive = rating <= idx;
-                    return (
-                        <SvgIcon
-                            key={idx}
-                            className={!isActive ? 'grid-cell-rating' : undefined}
-                            icon={starIcon}
-                        />
-                    );
-                })
-            }
+            <Rating
+                className="grid-cell-rating"
+                value={props.dataItem.rating}
+                max={5}
+                readonly={true}
+                tabIndex={-1}
+                ariaLabel={localizationService.toLanguageString('custom.rating')}
+            />
         </td>
     );
 };

@@ -35,8 +35,13 @@ body {
   z-index: 1000;
 }
 
-.switch-width {
-  width: 4.5rem !important;
+.header__actions .k-switch.switch-width {
+  width: var(--kendo-spacing-24);
+}
+
+.switch-width .k-switch-label-on,
+.switch-width .k-switch-label-off {
+  font-size: var(--kendo-font-size-xs);
 }
 
 .sized-parent {

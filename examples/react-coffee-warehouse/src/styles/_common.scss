@@ -300,6 +300,25 @@ a {
     .k-badge {
         z-index: 1
     }
+
+    .grid-cell-rating {
+        .k-rating-container {
+            margin-inline: 0;
+        }
+
+        .k-rating-item {
+            padding: 0;
+
+            .k-svg-icon {
+                width: var(--kendo-spacing-4);
+                height: var(--kendo-spacing-4);
+            }
+
+            &.k-selected {
+                color: var(--kendo-color-warning-on-surface);
+            }
+        }
+    }
 }
 
 @media (min-width: 480px) {
@@ -343,7 +362,7 @@ a {
     }
 
     .planning-employee-avatar {
-        border-width: var(--kendo-spacing-2);
+        border-width: var(--kendo-spacing-1);
         border-color: var(--planning-team-color);
     }
 
@@ -392,8 +411,13 @@ a {
 
 @media (min-width: 768px) {
     .planning-page {
+        .planning-employee {
+            justify-self: start;
+            max-width: 100%;
+        }
+
         .k-hbox {
-            padding: 0;
+            padding: 0 var(--kendo-spacing-2);
             border-width: 0;
         }
     }
@@ -607,10 +631,6 @@ a {
             width: calc(var(--kendo-spacing-base) * 7.5);
             vertical-align: middle;
             border-style: none;
-        }
-
-        .grid-cell-rating {
-            color: var(--kendo-color-warning);
         }
 
         .grid-cell-badge {
@@ -854,9 +874,15 @@ a {
 
     .k-card-body {
         display: flex;
+        flex-wrap: wrap;
         align-items: flex-start;
         justify-content: space-between;
         gap: var(--kendo-spacing-4);
+
+        > div {
+            flex: 1;
+            min-width: min(100%, 28rem);
+        }
     }
 
     h2 {

@@ -24,7 +24,7 @@ function Footer() {
       </a>
       </div>
       <div className="footer__copyright">
-        <div style={{fontSize: '14px', fontWeight: 400, letterSpacing: 0}} >Copyright © 2025 Progress Software. All rights reserved.</div>
+        <div style={{fontSize: '14px', fontWeight: 400, letterSpacing: 0}} >Copyright © 2026 Progress Software. All rights reserved.</div>
       </div>
     </div>
   );

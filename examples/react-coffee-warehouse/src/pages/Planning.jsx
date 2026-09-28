@@ -33,7 +33,7 @@ const Planning = () => {
     );
     const localizedTeams = teams.map(team => ({
         ...team,
-        teamName: localizationService.toLanguageString(`custom.team${team.teamID}`)
+        teamName: localizationService.toLanguageString(`custom.${team.teamKey}`)
     }));
     const [filterState, setFilterState] = React.useState(initialFilterState);
     const [data, setData] = React.useState(orders);

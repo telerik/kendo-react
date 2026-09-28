@@ -231,7 +231,7 @@ a {
 .dashboard-grid {
   display: grid;
   grid-template-columns: minmax(14rem, 1fr) minmax(14rem, 1fr) minmax(
-      15rem,
+      25rem,
       1fr
     );
   gap: var(--tracker-page-gap);
@@ -253,6 +253,8 @@ a {
 
 .dashboard-card--calendar {
   grid-column: span 1;
+  min-width: 0;
+  overflow-x: auto;
 }
 
 .dashboard-card--teams,
@@ -282,6 +284,10 @@ a {
 
 .tracker-grid__table {
   min-height: 0;
+}
+
+.dashboard-card--tasks .tracker-grid__table {
+  min-width: 20rem;
 }
 
 .dashboard-project-list {
@@ -689,19 +695,27 @@ a {
   background: var(--kendo-color-warning);
 }
 
+@media (max-width: 1240px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-card--calendar {
+    grid-column: span 2;
+  }
+
+  .dashboard-card--tasks {
+    grid-column: span 2;
+  }
+}
+
 @media (max-width: 991px) {
   :root {
     --tracker-page-padding: var(--kendo-spacing-6);
   }
 
-  .dashboard-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .dashboard-card--calendar,
   .dashboard-card--teams,
-  .dashboard-card--todo,
-  .dashboard-card--tasks {
+  .dashboard-card--todo {
     grid-column: span 1;
   }
 

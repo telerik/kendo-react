@@ -122,7 +122,7 @@ export default function Home() {
                     <CardBody className="dashboard-card__scroll">
                         <Grid className="tracker-grid__table" data={tasksData} navigatable={true}>
                             <GridColumn field="taskName" title="Task Name" />
-                            <GridColumn field="status" title="Status" />
+                            <GridColumn field="status" title="Status" width="140px" />
                         </Grid>
                     </CardBody>
                     <CardFooter className="dashboard-card__footer">

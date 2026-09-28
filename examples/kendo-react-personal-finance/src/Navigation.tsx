@@ -113,6 +113,13 @@ const DrawerContainer = (props: DrawerContainerProps) => {
   const [expanded, setExpanded] = React.useState(window.innerWidth >= 992);
   const selected = items.findIndex((item) => item.route === location.pathname);
 
+  React.useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 992px)");
+    const onResize = (event: MediaQueryListEvent) => setExpanded(event.matches);
+    mediaQuery.addEventListener("change", onResize);
+    return () => mediaQuery.removeEventListener("change", onResize);
+  }, []);
+
   const selectRoute = React.useCallback((itemIndex: number, route?: string) => {
     if (itemIndex === 0) {
       setExpanded((prev) => !prev);

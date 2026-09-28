@@ -41,7 +41,7 @@ const Profile = () => {
         );
         const teamsData = React.useMemo(() => teams.map(team => ({
             value: team.teamID,
-            label: localizationService.toLanguageString(`custom.team${team.teamID}`)
+            label: localizationService.toLanguageString(`custom.${team.teamKey}`)
         })), [localizationService]);
         const history = useNavigate();
 
@@ -146,7 +146,7 @@ const Profile = () => {
                                         component={Switch}
                                     />
                                     <Field
-                                        labelId={'teamlabel'}
+                                        id={'teamId'}
                                         name={'teamId'}
                                         layout={'horizontal'}
                                         label={localizationService.toLanguageString('custom.team')}

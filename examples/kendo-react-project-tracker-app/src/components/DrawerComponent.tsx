@@ -18,6 +18,14 @@ interface DrawerComponentProps {
 const DrawerComponent: React.FC<DrawerComponentProps> = ({ children }) => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [compact, setCompact] = React.useState(() => window.matchMedia('(max-width: 767px)').matches);
+
+  React.useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 767px)');
+    const onChange = (event: MediaQueryListEvent) => setCompact(event.matches);
+    mediaQuery.addEventListener('change', onChange);
+    return () => mediaQuery.removeEventListener('change', onChange);
+  }, []);
 
   const onSelect = (e: { itemTarget: { props: { route: To; }; }; itemIndex: React.SetStateAction<number>; }) => {
     navigate(e.itemTarget.props.route);
@@ -38,7 +46,8 @@ const DrawerComponent: React.FC<DrawerComponentProps> = ({ children }) => {
   }
   return (
     <Drawer
-      expanded={true}
+      expanded={!compact}
+      mini={true}
       mode="push"
       drawerClassName="tracker-drawer"
       items={drawerItems.map(item => ({

@@ -141,6 +141,30 @@ a {
     }
 }
 
+@media (min-width: 768px) and (max-width: 1100px) {
+    .dashboard-page .card-container {
+        .card-buttons {
+            grid-column: 2 / -1;
+        }
+
+        .card-ranges {
+            grid-column: 1 / -1;
+            grid-row: 2;
+            justify-self: stretch;
+
+            .k-daterangepicker {
+                display: flex;
+                width: 100%;
+
+                > .k-floating-label-container {
+                    flex: 1 1 0;
+                    min-width: 0;
+                }
+            }
+        }
+    }
+}
+
 @media (min-width: 576px) {
     .card-container {
         text-align: initial;
@@ -832,10 +856,21 @@ a {
     }
 }
 
-.employee-toggle {
+.employee-toggle.k-button {
     height: auto;
+    justify-content: flex-start;
     padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
     text-align: left;
+}
+
+.employee-toggle.k-button:hover,
+.employee-toggle.k-button:focus {
+    background: transparent;
+    box-shadow: none;
 }
 
 .employee-toggle:focus-visible {

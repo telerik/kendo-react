@@ -32,7 +32,7 @@ const Dashboard = () => {
     );
     const localizedTeams = teams.map(team => ({
         ...team,
-        teamName: localizationService.toLanguageString(`custom.team${team.teamID}`)
+        teamName: localizationService.toLanguageString(`custom.${team.teamKey}`)
     }));
 
     const isChartChangeRef = React.useRef(false);
