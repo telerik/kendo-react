@@ -94,12 +94,12 @@ export const FilterComponent: React.FC<FilterComponentProps> = ({ updateUI }) =>
   };
 
   return (
-    <section className="k-d-flex k-justify-content-between k-align-items-center">
-      <span className="k-d-flex k-align-items-center">
-        <span className="k-d-flex k-align-items-center k-pr-2">
+    <section className="filter-bar">
+      <span className="filter-bar__group">
+        <span className="filter-bar__label">
           <SvgIcon icon={filterIcon}></SvgIcon> {t.filterLabel}
         </span>
-        <span className="k-pr-2">
+        <span className="filter-bar__control">
           <MultiSelect
             data={chips}
             value={categoryValue}
@@ -108,12 +108,12 @@ export const FilterComponent: React.FC<FilterComponentProps> = ({ updateUI }) =>
             style={{ minWidth: "119px" }}
           />
         </span>
-        <span className="k-pr-2">
+        <span className="filter-bar__control">
           <DropDownList value={materialValue} data={materials} onChange={onMaterialChange} />
         </span>
       </span>
-      <span className="k-d-flex k-align-items-center">
-        <span className="k-d-flex k-align-items-center k-pr-2">
+      <span className="filter-bar__group">
+        <span className="filter-bar__label">
           <SvgIcon icon={sortAscIcon}></SvgIcon> {t.sortByLabel}
         </span>
         <span>

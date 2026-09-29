@@ -16,7 +16,7 @@ Official references:
 
 - **React 19** + **Vite 8**
 - **KendoReact** — Grid, Charts, DropDownList, DatePicker, Card, Switch, Input, Button
-- **Kendo Default Theme** (`@progress/kendo-theme-default`)
+- **Kendo Meridian Theme** (`@progress/kendo-theme-meridian`) with SVG icon support
 
 ## Features
 

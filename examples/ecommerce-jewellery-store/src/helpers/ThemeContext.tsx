@@ -6,17 +6,17 @@ interface ThemeContextProps {
 }
 
 const ThemeContext = createContext<ThemeContextProps>({
-  theme: "https://unpkg.com/@progress/kendo-theme-default@14.1.0/dist/default-main.css",
+  theme: "https://unpkg.com/@progress/kendo-theme-meridian@14.5.0/dist/meridian-main.css",
   setTheme: () => {},
 });
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [theme, setThemeState] = useState<string>(() =>
-    typeof window !== "undefined"
-      ? localStorage.getItem("theme") ||
-        "https://unpkg.com/@progress/kendo-theme-default@14.1.0/dist/default-main.css"
-      : "https://unpkg.com/@progress/kendo-theme-default@14.1.0/dist/default-main.css"
-  );
+  const meridianMain =
+    "https://unpkg.com/@progress/kendo-theme-meridian@14.5.0/dist/meridian-main.css";
+  const [theme, setThemeState] = useState<string>(() => {
+    const savedTheme = typeof window !== "undefined" ? localStorage.getItem("theme") : null;
+    return savedTheme?.includes("@progress/kendo-theme-meridian") ? savedTheme : meridianMain;
+  });
 
   const setTheme = (newTheme: string) => {
     setThemeState(newTheme);

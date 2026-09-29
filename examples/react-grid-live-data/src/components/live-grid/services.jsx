@@ -1,14 +1,15 @@
 import React from 'react';
 import { FinancialData } from './financial-data';
 export const updateRandomPrices = data => {
-  const newData = data.slice();
-  for (let i = Math.round(Math.random() * 10); i < newData.length; i += Math.round(Math.random() * 10)) {
+  const newData = data.map(item => ({ ...item }));
+  const interval = Math.max(1, Math.round(Math.random() * 10));
+  for (let i = Math.round(Math.random() * 10); i < newData.length; i += interval) {
     randomizeObjectData(newData[i]);
   }
   return newData;
 };
 export const updateAllPrices = data => {
-  const newData = data.slice();
+  const newData = data.map(item => ({ ...item }));
   for (const dataRow of newData) {
     randomizeObjectData(dataRow);
   }
@@ -54,9 +55,10 @@ export const DataProvider = props => {
     clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => setData(oldData => updateRandomPrices(oldData)), interval);
   }, []);
+  React.useEffect(() => () => clearInterval(intervalRef.current), []);
   return React.Children.map(props.children, child => {
     if (!React.isValidElement(child)) {
-      return;
+      return null;
     }
     return <child.type {...child.props} data={data} onDataReset={onDataReset} onStartLiveUpdate={onStartLiveUpdate} />;
   });

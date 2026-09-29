@@ -10,6 +10,9 @@ import React from "react";
 import { MaskedTextBox, TextBox } from "@progress/kendo-react-inputs";
 import { FloatingLabel, Hint } from "@progress/kendo-react-labels";
 import { MultiSelect } from "@progress/kendo-react-dropdowns";
+import PageFooter from "../components/PageFooter";
+
+const teamThemeColors = ["primary", "secondary", "tertiary", "base"] as const;
 
 interface DataModel {
   id: string;
@@ -90,15 +93,15 @@ export default function Team() {
 
   return (
       <>
-         <div style={{minHeight: 'calc(100vh - 106px)'}} className="flex flex-col p-10 gap-6">
-               <Breadcrumb data={breadcrumbItems} onItemSelect={handleItemSelect} className="!bg-app-surface" />
+         <main className="tracker-page">
+               <Breadcrumb data={breadcrumbItems} onItemSelect={handleItemSelect} className="tracker-page__breadcrumb" />
 
                <div>
-                  <h1 className="text-4xl">{teamsData.map(team => { return team.teamCode === params.teamId ? team.teamName : '' })}</h1>
-                  <h2 className="text-subtle">{teamsData.map(team => { return team.teamCode === params.teamId ? team.teamMembers.length : '' })} members</h2>
+                  <h1 className="tracker-page__heading">{teamsData.map(team => { return team.teamCode === params.teamId ? team.teamName : '' })}</h1>
+                  <h2 className="tracker-page__subtitle">{teamsData.map(team => { return team.teamCode === params.teamId ? team.teamMembers.length : '' })} members</h2>
                </div>
 
-               <div className="flex justify-between items-start gap-6">
+               <div className="tracker-page__toolbar">
                    <ButtonGroup>
                        <Button svgIcon={groupIcon} togglable={true} selected={isGridView}
                          onClick={() => handleViewChange('grid')} title="Grid View button"/>
@@ -107,17 +110,17 @@ export default function Team() {
                    </ButtonGroup>
                </div>
 
-              <GridLayout className={`${isGridView ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4' : 'grid-cols-1'}`} style={{ gap: "var(--kendo-spacing-4) var(--kendo-spacing-6)" }}>
+              <GridLayout className={`tracker-grid${isGridView ? '' : ' tracker-grid--list'}`}>
                 {team.teamMembers.map((member, index) => {
-                    return <Card key={index}>
-                    <CardBody className="flex items-center">
-                      <Avatar className="bg-[#028282]">{getInitials(member.teamMember)}</Avatar>
-                      <div className="overflow-hidden">
-                        <CardTitle className="font-medium truncate">{member.teamMember}</CardTitle>
-                        <CardSubtitle className="text-subtle m-0 truncate">{member.title}</CardSubtitle>
+                    return <Card key={index} className="tracker-card">
+                    <CardBody className="tracker-card__body">
+                      <Avatar themeColor={teamThemeColors[index % teamThemeColors.length]}>{getInitials(member.teamMember)}</Avatar>
+                      <div className="tracker-card__copy">
+                        <CardTitle className="tracker-card__title">{member.teamMember}</CardTitle>
+                        <CardSubtitle className="tracker-card__subtitle">{member.title}</CardSubtitle>
                       </div>
                     </CardBody>
-                    <CardFooter className="border-0 p-2">
+                    <CardFooter className="tracker-card__footer">
                         <Button svgIcon={detailSectionIcon} fillMode="flat" onClick={() => openDetailsWindow(member)}>Details</Button>
                     </CardFooter>
                     </Card>
@@ -126,41 +129,41 @@ export default function Team() {
                 })}
                </GridLayout>
 
-               <div className="flex justify-end mt-auto">
+               <div className="tracker-card__actions">
                   <FloatingActionButton svgIcon={plusIcon} text="Add new member" size="small" alignOffset={{ x: 40, y: 75 }} onClick={addNewMember} />
                </div>
 
               {openWindow &&
-                  <Window title={windowContent.teamMember + ' Details'} initialWidth={480} onClose={() => setOpenWindow(false)}>
-                    <div className="flex flex-col gap-4">
-                          <div className="flex gap-2 items-center">
-                              <Avatar className="bg-[#028282]">JS</Avatar>
-                              <div className="flex flex-col gap-1">
-                                  <span className="text-lg font-medium">{windowContent.teamMember}</span>
-                                  <span className="text-subtle">{windowContent.title}</span>
+              <Window title={windowContent.teamMember + ' Details'} onClose={() => setOpenWindow(false)}>
+                    <div className="tracker-modal__details">
+                          <div className="tracker-modal__person">
+                              <Avatar themeColor="primary">JS</Avatar>
+                              <div className="tracker-modal__person-copy">
+                                  <span className="tracker-emphasis">{windowContent.teamMember}</span>
+                                  <span className="tracker-page__subtitle">{windowContent.title}</span>
                               </div>
                           </div>
-                          <div className="flex gap-1">
-                              <span className="color-subtle">Team:</span>
-                              <span className="underline">{team.teamName}</span>
+                          <div className="tracker-modal__row">
+                              <span className="tracker-modal__label">Team:</span>
+                              <span className="tracker-modal__link">{team.teamName}</span>
                           </div>
-                          <div className="flex gap-1">
-                              <span className="color-subtle">Email:</span>
-                              <span className="underline">{getEmail(windowContent.teamMember)}</span>
+                          <div className="tracker-modal__row">
+                              <span className="tracker-modal__label">Email:</span>
+                              <span className="tracker-modal__link">{getEmail(windowContent.teamMember)}</span>
                           </div>
-                          <div className="flex gap-1">
-                              <span className="color-subtle">Phone Number:</span>
+                          <div className="tracker-modal__row">
+                              <span className="tracker-modal__label">Phone Number:</span>
                               <span>(436)-256-140-482</span>
                           </div>
-                          <div className="flex gap-1">
-                              <span className="color-subtle">Reports to:</span>
-                              <span className="underline">{team.teamMembers[0].teamMember}</span>
+                          <div className="tracker-modal__row">
+                              <span className="tracker-modal__label">Reports to:</span>
+                              <span className="tracker-modal__link">{team.teamMembers[0].teamMember}</span>
                           </div>
                       </div>
                   </Window>}
 
-                  {openDialog && <Dialog title="Add Member" width={450} onClose={() => setOpenDialog(false)}>
-                      <div className="flex flex-col gap-4">
+                  {openDialog && <Dialog title="Add Member" onClose={() => setOpenDialog(false)}>
+                      <div className="tracker-modal__details">
                         <FloatingLabel label="First Name" editorId={'first-name'} editorValue={fNValue}>
                           <TextBox aria-label="First Name" size="large" value={fNValue} onChange={e => setFNValue(e.value as string)} />
                             </FloatingLabel>
@@ -190,10 +193,8 @@ export default function Team() {
                         </Button>
                     </DialogActionsBar>
                   </Dialog>}
-           </div>
-           <div className="bg-surface-alt color-subtle p-2 text-center">
-               <span>Copyright &#169; 2025 Progress Software. All rights reserved.</span>
-           </div>
+           </main>
+           <PageFooter />
        </>
   )
 }

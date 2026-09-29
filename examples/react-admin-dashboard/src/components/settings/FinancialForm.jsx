@@ -19,20 +19,20 @@ export const FinancialForm = () => {
       text: "Bulgaria",
       id: 3
     }];
-  
+
     const [state, setState] = React.useState({
       value: {
         text: "USA",
         id: 1,
       },
     });
-  
+
     const handleChange = (event) => {
       setState({
         value: event.target.value,
       });
     };
-    
+
   return <div>
      <Form
     initialValues={{
@@ -41,61 +41,40 @@ export const FinancialForm = () => {
     phone: '(+1) 1234-567-89-01'
   }}
    render={(formRenderProps) => (
-    
-     <FormElement
-       style={{
-         width: '100%',
-         background: '#fafafa',
-         padding: '16px 0',
-         border: '1px solid rgba(0, 0, 0, 0.08)',
-       }}
-     >
+
+     <FormElement className="settings-form financial-form">
        <fieldset className={'k-form-fieldset'}>
-       <br/>
-      <div>
+      <div className="financial-field">
         <div>
         <Label >Card Holder</Label>
         <Field  component={Input} name={"cardHolder"} type={"text"}/>
 
       </div>
-        </div> 
+        </div>
 
       <div className="triple-inputs">
 
-      <div style={{
-       width: '300px'
-      }}>
+      <div className="financial-field financial-field-card">
         <Label >Card Number</Label>
         <Field  component={Input} name={"cardNumber"} type={"text"}/>
 
       </div>
 
-      <div 
-      style={{
-         width: '300px'
-        }}
-      >
+      <div className="financial-field financial-field-expiration">
         <Label >Expiration Date</Label>
         <DateInput
-         width="100%"
         />
 
       </div>
-      <div
-       style={{
-         width: '200px'
-       }}
-      >
+      <div className="financial-field financial-field-cvc">
         <Label >CVC</Label>
         <Field  component={Input}  type={"password"}/>
 
       </div>
       </div>
-     
-      <div style={{
-         marginTop: '50px'
-      }}> 
-      <div className="left">
+
+      <div className="financial-secondary-fields">
+      <div className="financial-field">
       <div>
         <Label >Country</Label>
         <DropDownList
@@ -108,28 +87,24 @@ export const FinancialForm = () => {
       </div>
    </div>
 
-   <div className="right">
+   <div className="financial-field">
         <div>
         <Label >ZIP/ Postal Code</Label>
         <Field  component={Input}  type={"text"}/>
       </div>
-   </div> 
+   </div>
 
       </div>
-      
+
       <div>
-         
+
         </div>
        </fieldset>
      </FormElement>
    )}
  />
-   <div className="right" style={{
-      marginTop: '20px'
-   }}>
-        <button type={'submit'} className="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base" style={{
-       marginRight: '12px'
-   }} >
+   <div className="form-actions">
+        <button type={'submit'} className="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base secondary-action" >
           Cancel
         </button>
        <button type={'submit'} className="k-selected k-button k-button-md k-button-rectangle k-rounded-md k-button-solid k-button-solid-primary k-form-submit">

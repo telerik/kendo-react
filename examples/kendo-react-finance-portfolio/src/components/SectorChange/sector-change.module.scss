@@ -1,0 +1,12 @@
+.sectorField {
+  display: flex;
+  align-items: center;
+  gap: var(--kendo-spacing-2);
+  margin-inline-start: auto;
+}
+
+.sectorLabel {
+  color: var(--kendo-color-subtle);
+  font-size: var(--kendo-font-size-sm);
+  font-weight: var(--kendo-font-weight-medium);
+}

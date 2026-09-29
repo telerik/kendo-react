@@ -26,7 +26,7 @@ const Header: React.FC = () => {
   const { theme, setTheme } = useThemeContext();
   const { setLanguage, t } = useLanguageContext();
 
-  const handleThemeChange = (event: any) => {
+  const handleThemeChange = (event: { item: { themeName: string } }) => {
     const selectedTheme = themeItems.find((item) => item.themeName === event.item.themeName);
     if (selectedTheme) {
       setTheme(selectedTheme.link);
@@ -65,13 +65,18 @@ const Header: React.FC = () => {
       setLanguage(selectedLanguage);
     } 
   };
+
+  const translateMenuItem = (label: string) => {
+    const translation = t[`menu${label}`];
+    return typeof translation === "string" ? translation : label;
+  };
   
   const translatedItems = items.map((item) => ({
     ...item,
-    text: t[`menu${item.text}`] || item.text,
+    text: translateMenuItem(item.text),
     items: item.items?.map((subItem) => ({
       ...subItem,
-      text: t[`menu${subItem.text}`] || subItem.text,
+      text: translateMenuItem(subItem.text),
     })),
   }));
 
@@ -89,18 +94,17 @@ const Header: React.FC = () => {
   return (
     <>
       <link id="theme-link" rel="stylesheet" href={theme} />
-      <AppBar themeColor="base">
+      <AppBar positionMode="sticky" themeColor="base">
         <AppBarSection
-          className="k-flex-basis-0 k-flex-grow k-gap-2 k-align-items-center"
-          style={{ paddingLeft: "50px" }}
+          className="header__primary-section"
         >
-          <a href="#" onClick={(e) => { e.preventDefault(); navigate('/'); }} className="k-d-sm-flex" style={{ marginRight: "50px" }}>
+          <a href="#" onClick={(e) => { e.preventDefault(); navigate('/'); }} className="header__logo">
             <img src={viloraLogo} alt="Logo" />
           </a>
           <Menu items={translatedItems} onSelect={handleMenuSelect} />
         </AppBarSection>
 
-        <AppBarSection className="k-flex-basis-0 k-flex-grow k-justify-content-end k-gap-1.5">
+        <AppBarSection className="header__actions">
           <TextBox
             placeholder={t.searchPlaceholder}
             prefix={() => (
@@ -115,8 +119,8 @@ const Header: React.FC = () => {
             )}
             style={{ width: 300 }}
           />
-          <Button svgIcon={userIcon} fillMode="flat" className="k-ml-2" />
-          <Button svgIcon={cartIcon} fillMode="flat" className="k-ml-2" onClick={handleCartClick} />
+          <Button svgIcon={userIcon} fillMode="flat" className="header__icon-action" aria-label="Account" />
+          <Button svgIcon={cartIcon} fillMode="flat" className="header__icon-action" aria-label="Shopping cart" onClick={handleCartClick} />
           <DropDownButton
             svgIcon={paletteIcon}
             items={themeItems}

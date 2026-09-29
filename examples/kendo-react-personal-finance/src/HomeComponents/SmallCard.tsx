@@ -13,22 +13,22 @@ export default function SmallCard(props: SmallCardProps) {
 const positive = props.percentage >= 0 ? true : false;
   return (
     <>
-      <Card className="k-rounded-xxl k-gap-1.5 k-p-4 k-h-full">
+      <Card className="app-card app-card--compact">
         <div
           style={{ fontSize: "20px", letterSpacing: "wide" }}
-          className={"k-pt-1px k-pb-1px k-pr-0 k-pl-0 k-gap-4"}
+          className="small-card__topic"
         >
           {props.topic}
         </div>
         <div
           style={{ fontSize: "24px", letterSpacing: "wide" }}
-          className={"k-pt-1px k-pb-1px k-pr-0 k-pl-0 k-gap-6"}
+          className="small-card__amount"
         >
           {props.amount}
         </div>
         <div
           style={{ fontSize: "14px", letterSpacing: "wide" }}
-          className={"k-pt-1px k-pb-1px k-pr-0 k-pl-0 k-gap-6"}
+          className="small-card__comparison"
         >
           <span className={positive ? 'positive': 'negative'}>{positive && '+'}{props.percentage}%</span> than the last month
         </div>

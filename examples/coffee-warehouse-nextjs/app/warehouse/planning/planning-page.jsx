@@ -2,13 +2,8 @@
 import * as React from "react";
 
 import { useLocalization } from "@progress/kendo-react-intl";
-import {
-  Card,
-  CardHeader,
-  Avatar,
-  CardTitle,
-  CardSubtitle,
-} from "@progress/kendo-react-layout";
+import { Avatar } from "@progress/kendo-react-layout";
+import { Button } from "@progress/kendo-react-buttons";
 import { guid } from "@progress/kendo-react-common";
 
 import { Scheduler } from "../../components/Scheduler";
@@ -80,50 +75,48 @@ const Planning = (props) => {
           {localizationService.toLanguageString("custom.teamCalendar")}
         </h3>
         {orderEmployees.map((employee) => {
+          const teamColor = teams.find(
+            ({ teamID }) => teamID === employee.teamId
+          ).teamColor;
+
           return (
-            <div
+            <Button
               key={employee.id}
+              className="planning-employee-toggle"
+              aria-pressed={filterState[employee.id]}
               onClick={() => onEmployeeClick(employee.id)}
-              style={!filterState[employee.id] ? { opacity: 0.5 } : {}}
             >
-              <Card style={{ borderWidth: 0, cursor: "pointer" }}>
-                <CardHeader className="k-hbox">
-                  <Avatar
-                    type="image"
-                    shape="circle"
-                    size={"large"}
-                    style={{
-                      borderWidth: 2,
-                      borderColor: teams.find(
-                        ({ teamID }) => teamID === employee.teamId
-                      ).teamColor,
-                    }}
-                  >
-                    <div
-                      className="k-avatar-image"
-                      style={{
-                        backgroundImage:
-                          images[employee.imgId + employee.gender],
-                        backgroundSize: "cover",
-                        backgroundPosition: "center center",
-                      }}
-                    />
-                  </Avatar>
-                  <div>
-                    <CardTitle
-                      style={{
-                        color: teams.find(
-                          ({ teamID }) => teamID === employee.teamId
-                        ).teamColor,
-                      }}
-                    >
-                      {employee.fullName}
-                    </CardTitle>
-                    <CardSubtitle>{employee.jobTitle}</CardSubtitle>
-                  </div>
-                </CardHeader>
-              </Card>
-            </div>
+              <Avatar
+                type="image"
+                shape="circle"
+                size={"large"}
+                style={{
+                  borderWidth: 2,
+                  borderColor: teamColor,
+                }}
+              >
+                <div
+                  className="k-avatar-image"
+                  style={{
+                    backgroundImage:
+                      images[employee.imgId + employee.gender],
+                    backgroundSize: "cover",
+                    backgroundPosition: "center center",
+                  }}
+                />
+              </Avatar>
+              <span className="planning-employee-details">
+                <span
+                  className="planning-employee-name"
+                  style={{ color: teamColor }}
+                >
+                  {employee.fullName}
+                </span>
+                <span className="planning-employee-role">
+                  {employee.jobTitle}
+                </span>
+              </span>
+            </Button>
           );
         })}
         <div className="card-component">

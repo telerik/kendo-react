@@ -36,6 +36,8 @@ export function DoctorProfileProvider({ children }: Readonly<{ children: ReactNo
     return <DoctorProfileContext.Provider value={value}>{children}</DoctorProfileContext.Provider>;
 }
 
+// The hook shares this module with its provider to keep the context private.
+// eslint-disable-next-line react-refresh/only-export-components
 export function useDoctorProfile() {
     const ctx = useContext(DoctorProfileContext);
     if (!ctx) throw new Error('useDoctorProfile must be used inside DoctorProfileProvider');

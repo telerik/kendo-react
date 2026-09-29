@@ -63,7 +63,7 @@ const Home: React.FC = () => {
 
   return (
     <LocalizationProvider language={selectedLang}>
-      <div className="k-m-auto" style={{ maxWidth: 1280 }}>
+      <div className="app-constrained-content">
         <BackgroundImage
           title={t.title}
           subtitle={t.subtitle}
@@ -73,7 +73,7 @@ const Home: React.FC = () => {
 
         {isAdminValue ? (
           <Layout>
-            <div className="k-mt-8">
+            <div className="home__admin">
               <AdminView />
             </div>
           </Layout>
@@ -81,8 +81,7 @@ const Home: React.FC = () => {
           <>
             <Layout>
               <section
-                className="k-d-grid k-grid-cols-12 k-justify-content-center k-align-items-center k-col-span-12"
-                style={{ paddingTop: "60px" }}
+                className="home__categories"
               >
                 <CategoryList
                   title={t.bestsellersTitle}

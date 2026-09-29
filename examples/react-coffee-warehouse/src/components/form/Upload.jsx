@@ -5,11 +5,13 @@ import { Upload as KendoUpload } from '@progress/kendo-react-upload';
 import { FieldWrapper } from '@progress/kendo-react-form';
 import { Label, Error, Hint } from '@progress/kendo-react-labels';
 import { Avatar } from '@progress/kendo-react-layout';
+import { useLocalization } from '@progress/kendo-react-intl';
 
 import userAvatar from '../../assets/user-avatar.jpg';
 
 export const Upload = (fieldRenderProps) => {
     const {valid, value, id, optional, label, hint, validationMessage, touched, ...others} = fieldRenderProps;
+    const localizationService = useLocalization();
     const imgRef = React.useRef(null);
     const hasImage = value && value.length > 0;
     const showValidationMessage = touched && validationMessage;
@@ -48,8 +50,8 @@ export const Upload = (fieldRenderProps) => {
                 <Avatar style={{width: 100, height: 100, flexBasis: 100}} shape={'circle'} type={'image'}>
                     {
                         hasImage ?
-                            <img style={{width: 100, height: 100}} ref={imgRef} src={'#'} alt={'User Avatar'} /> :
-                            <img style={{width: 100, height: 100}} src={userAvatar} alt="user-avatar"/>
+                            <img style={{width: 100, height: 100}} ref={imgRef} src={'#'} alt={localizationService.toLanguageString('custom.userAvatar')} /> :
+                            <img style={{width: 100, height: 100}} src={userAvatar} alt={localizationService.toLanguageString('custom.userAvatar')}/>
                     }
                 </Avatar>
             </Label>

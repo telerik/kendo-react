@@ -2,23 +2,11 @@ import * as React from 'react';
 import { classNames } from '@progress/kendo-react-common';
 import { DropDownList } from '@progress/kendo-react-dropdowns';
 import { SECTOR, SectorContext } from '../../context/SectorContext';
+import styles from './sector-change.module.scss';
 
 export interface ChangeSectorProps {
     className?: string;
 }
-
-
-const customValueRender = (el: any, value: any) => (
-    <el.type
-        {...el.props}
-        className={classNames(el.props.className, "text-left pl-0")}
-    >
-        {value
-            ? (<>
-                <span className="text-left">Sector: <strong>{value.name}</strong></span></>)
-            : null}
-
-    </el.type>)
 
 export const ChangeSector = (props: ChangeSectorProps) => {
     const { sector, onSectorChange } = React.useContext(SectorContext);
@@ -38,17 +26,15 @@ export const ChangeSector = (props: ChangeSectorProps) => {
     )
 
     return (
-        <div className={classNames(props.className)}>
+        <div className={classNames(styles.sectorField, props.className)}>
+            <span className={styles.sectorLabel}>Sector</span>
             <DropDownList
                 textField="name"
-                style={{
-                    border: 'none',
-                    width: 'auto'
-                }}
+                style={{ width: 160 }}
                 value={data.find(s => s.sector === sector)}
                 onChange={handleChange}
                 data={data}
-                valueRender={customValueRender}
+                aria-label="Sector"
             />
         </div>
     )

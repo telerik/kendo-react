@@ -2,16 +2,16 @@ import { Chip } from "@progress/kendo-react-buttons";
 import React from "react";
 
 export default function StatusBadge(props: any) {
-  const backgroundColor = () => {
+  const statusClass = () => {
     switch (props.dataItem.orderStatus) {
       case "Pending":
-        return "#FFE19C";
+        return "finance-status--pending";
       case "Published":
-        return "#A7DB97";
+        return "finance-status--completed";
       case "Postponed":
-        return "#D77B8B";
+        return "finance-status--over";
       default:
-        return "#CCCCCC"; // Gray for unknown status
+        return "finance-status--unknown";
     }
   };
 
@@ -20,7 +20,8 @@ export default function StatusBadge(props: any) {
       <Chip
         text={props.dataItem.orderStatus}
         rounded={"large"}
-        style={{ backgroundColor: backgroundColor(), color: "#121710", height: height, width: "fit-content" }}
+        className={statusClass()}
+        style={{ height: height, width: "fit-content" }}
       />
   );
 }

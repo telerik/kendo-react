@@ -18,8 +18,8 @@ export const Symbol = (props: SymbolProps) => {
         : 'down'
 
     const color = direction === 'down'
-        ? '#d9534f'
-        : '#5cb85c';
+        ? 'var(--kendo-color-error)'
+        : 'var(--kendo-color-success)';
 
     return target && props.data
         ? ReactDOM.createPortal(
@@ -32,4 +32,3 @@ export const Symbol = (props: SymbolProps) => {
         )
         : null
 }
-

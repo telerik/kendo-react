@@ -1,5 +1,14 @@
+:root {
+  --kendo-font-family: sans-serif;
+  --kendo-translucency-base: 28%;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  background-color: var(--kendo-color-app-surface);
+  color: var(--kendo-color-on-app-surface);
+  font-family: var(--kendo-font-family);
+  font-size: var(--kendo-font-size);
+  line-height: var(--kendo-line-height);
 }

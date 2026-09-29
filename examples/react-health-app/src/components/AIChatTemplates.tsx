@@ -22,6 +22,6 @@ export const AIHeaderTemplate = () => (
   <div className="ai-chat-header">
     <SvgIcon className="ai-chat-header-icon" icon={aiSparklesIcon} />
     <h3 className="ai-chat-header-title">AI Assistant</h3>
-    <div className="k-spacer" />
+    <div className="ai-chat-header-spacer" />
   </div>
 );

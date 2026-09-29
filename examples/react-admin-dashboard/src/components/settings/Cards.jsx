@@ -5,116 +5,34 @@ import { FinancialForm } from "../settings/FinancialForm";
 
 export const Cards = () => {
 
-    
+
    return <div>
    <div>
-      <div className={'k-card-deck'}>
-        <Card
-          style={{
-            width: 293,
-            height: 163,
-          }}
-        >
+      <div className="billing-card-deck">
+          <Card className="billing-card">
           <CardBody>
-            <CardTitle
-             style={{
-              fontFamily: 'Roboto',
-              fontWeight: '400',
-              fontSize: '20px',
-             }}
-            >Starter</CardTitle>
-            <CardTitle
-             style={{
-               fontFamily: 'Roboto',
-               fontWeight: '300',
-               fontSize: '28px',
-               lineHeight: '37px',
-               textAlign: 'center',
-               marginTop: '22px'
-             }}
-            >Free</CardTitle>
-            <p style={{
-               marginTop: '40px',
-               color: '#8F8F8F',
-               fontSize: '12px'
-            }}>STARTER PLAN FOR INDIVIDUALS</p>
+           <CardTitle className="billing-card-name">Starter</CardTitle>
+           <CardTitle className="billing-card-price">Free</CardTitle>
+           <p className="billing-card-description">STARTER PLAN FOR INDIVIDUALS</p>
           </CardBody>
         </Card>
-        <Card
-          style={{
-            width: 293,
-            height: 163,
-          }}
-        >
-          <CardBody>
-            <CardTitle
-               style={{
-                  fontFamily: 'Roboto',
-                  fontWeight: '400',
-                  fontSize: '20px',
-                 }}
-            >Team </CardTitle>
-            <CardTitle
-               style={{
-                  fontFamily: 'Roboto',
-                  fontWeight: '300',
-                  fontSize: '28px',
-                  lineHeight: '37px',
-                  textAlign: 'center',
-                  marginTop: '22px'
-               }}
-            >$20/Month</CardTitle>
-            <p
-             style={{
-               marginTop: '40px',
-               color: '#8F8F8F',
-               fontSize: '12px'
-            }}
-            >COLLABORATE UP TO 16 PEOPLE</p>
+        <Card className="billing-card">
+         <CardBody>
+           <CardTitle className="billing-card-name">Team </CardTitle>
+           <CardTitle className="billing-card-price">$20/Month</CardTitle>
+           <p className="billing-card-description">COLLABORATE UP TO 16 PEOPLE</p>
           </CardBody>
         </Card>
-        <Card
-          style={{
-            width: 293,
-            height: 163,
-            fontFamily: 'Roboto',
-            fontWeight: '400',
-            fontSize: '20px',
-          }}
-        >
-          <CardBody>
-            <CardTitle
-             style={{
-               fontFamily: 'Roboto',
-               fontWeight: '400',
-               fontSize: '20px',
-             }}
-            >Enterprise</CardTitle>
-            <CardTitle
-            style={{
-               fontFamily: 'Roboto',
-               fontWeight: '300',
-               fontSize: '28px',
-               lineHeight: '37px',
-               textAlign: 'center',
-               marginTop: '22px'
-             }}
-            >$40/Month</CardTitle>
-            <p
-             style={{
-               marginTop: '40px',
-               color: '#8F8F8F',
-               fontSize: '12px'
-            }}
-            >FOR BIGGER BUSINESSES</p>
+        <Card className="billing-card">
+         <CardBody>
+           <CardTitle className="billing-card-name">Enterprise</CardTitle>
+           <CardTitle className="billing-card-price">$40/Month</CardTitle>
+           <p className="billing-card-description">FOR BIGGER BUSINESSES</p>
           </CardBody>
         </Card>
 
-        <br/>
     </div>
     </div>
-    <br></br>
-    <br></br>
 
  <FinancialForm/>
    </div>

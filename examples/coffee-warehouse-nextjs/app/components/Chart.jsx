@@ -20,6 +20,58 @@ import { locales } from "./../resources/locales";
 
 const MONTH_FORMAT = "MMMM yyyy";
 
+const resolveKendoColor = (color) => {
+  const tokenMatch = /^var\((--kendo-[^)]+)\)$/.exec(color);
+  if (!tokenMatch) {
+    return color;
+  }
+  if (typeof window === "undefined") {
+    return undefined;
+  }
+
+  const resolvedColor = getComputedStyle(document.documentElement)
+    .getPropertyValue(tokenMatch[1])
+    .trim();
+  const canvas = document.createElement("canvas");
+  const context = canvas.getContext("2d");
+
+  if (!context || !resolvedColor) {
+    return undefined;
+  }
+
+  context.fillStyle = resolvedColor;
+  return context.fillStyle || undefined;
+};
+
+const resolveKendoLength = (token) => {
+  if (typeof window === "undefined" || !document.body) {
+    return undefined;
+  }
+
+  const tokenValue = getComputedStyle(document.documentElement)
+    .getPropertyValue(token)
+    .trim();
+  if (!tokenValue) {
+    return undefined;
+  }
+
+  const probe = document.createElement("div");
+  probe.style.position = "absolute";
+  probe.style.visibility = "hidden";
+  probe.style.width = tokenValue;
+  document.body.appendChild(probe);
+  const computedWidth = getComputedStyle(probe).width;
+  const acceptedValue =
+    probe.style.width &&
+    !/^(auto|inherit|initial|unset|revert)$/i.test(tokenValue);
+  probe.remove();
+
+  const resolvedValue = parseFloat(computedWidth);
+  return acceptedValue && /px$/.test(computedWidth) && Number.isFinite(resolvedValue)
+    ? resolvedValue
+    : undefined;
+};
+
 export const Chart = (props) => {
   if (typeof window !== "undefined") {
     importHammerJs();
@@ -40,6 +92,22 @@ export const Chart = (props) => {
   } = props;
 
   const intlService = useInternationalization();
+  const [resolvedChartTokens, setResolvedChartTokens] = React.useState({});
+
+  React.useEffect(() => {
+    const nextTokens = {
+      series: groupResourceData.reduce((colors, resource) => {
+        colors[resource[groupByField]] = resolveKendoColor(
+          resource[groupColorField]
+        );
+        return colors;
+      }, {}),
+      surface: resolveKendoColor("var(--kendo-color-surface)"),
+      legendPadding: resolveKendoLength("--kendo-spacing-20"),
+    };
+    setResolvedChartTokens(nextTokens);
+  }, [groupByField, groupColorField, groupResourceData]);
+
   const filteredData = filterBy(data, {
     logic: "and",
     filters: [
@@ -67,9 +135,17 @@ export const Chart = (props) => {
       <ChartLegend
         position="bottom"
         orientation="horizontal"
-        background={"#f4f5f8"}
-        padding={{ left: 80 }}
-        labels={{ padding: { right: 80 } }}
+        background={resolvedChartTokens.surface}
+        padding={
+          resolvedChartTokens.legendPadding === undefined
+            ? undefined
+            : { left: resolvedChartTokens.legendPadding }
+        }
+        labels={
+          resolvedChartTokens.legendPadding === undefined
+            ? undefined
+            : { padding: { right: resolvedChartTokens.legendPadding } }
+        }
       />
       <ChartTooltip render={ChartTooltipRender} />
       <ChartSeries>
@@ -86,7 +162,7 @@ export const Chart = (props) => {
               field={seriesField}
               categoryField={seriesCategoryField}
               data={group.items}
-              color={groupResource[groupColorField]}
+              color={resolvedChartTokens.series?.[group.value]}
             ></ChartSeriesItem>
           );
         })}

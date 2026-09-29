@@ -26,7 +26,7 @@ const ContactsRadioButtons: React.FC = () => {
     );
 
     return (
-      <div className="k-d-flex k-gap-4">
+      <div className="contacts__radios">
         <RadioButton
           name="group1"
           value="new"

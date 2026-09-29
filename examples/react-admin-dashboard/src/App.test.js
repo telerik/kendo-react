@@ -1,8 +1,25 @@
 import { render, screen } from '@testing-library/react';
+import { HashRouter } from 'react-router-dom';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('renders the sign-in page', () => {
+  render(
+    <HashRouter>
+      <App />
+    </HashRouter>
+  );
+
+  expect(screen.getByAltText('sign in icon')).toBeInTheDocument();
+});
+
+test('renders a not-found page for unknown routes', () => {
+  window.location.hash = '#/missing-page';
+
+  render(
+    <HashRouter>
+      <App />
+    </HashRouter>
+  );
+
+  expect(screen.getByRole('heading', { name: 'Page not found' })).toBeInTheDocument();
 });

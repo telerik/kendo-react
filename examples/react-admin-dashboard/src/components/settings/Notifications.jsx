@@ -44,9 +44,9 @@ export const Notifications = () => {
 
       },
     ];
-    
 
-   return <div>          
+
+   return <div className="settings-page">
       <TileLayout
       columns={5}
       rowHeight={255}

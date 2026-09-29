@@ -1,6 +1,7 @@
 import React from "react";
 import { Avatar } from "@progress/kendo-react-layout";
 import { AutoComplete, AutoCompleteChangeEvent, DropDownList } from "@progress/kendo-react-dropdowns";
+import type { RouteSelection } from "./App";
 import { checkLocalStorageData } from "./data/localStorageUtils";
 import { Button } from "@progress/kendo-react-buttons";
 import { InputPrefix, InputSeparator } from "@progress/kendo-react-inputs";
@@ -8,7 +9,7 @@ import { SvgIcon } from "@progress/kendo-react-common";
 import { searchIcon } from "@progress/kendo-svg-icons";
 
 interface HeaderProps {
-  onNavigateTo: (data: { itemIndex: number; itemTarget: object }) => void;
+  onNavigateTo: (data: RouteSelection) => void;
   onCurrencyChange: (event: any) => void; 
 }
 
@@ -17,26 +18,34 @@ function Header(props: HeaderProps) {
   const name = personalInfo.name;
 
   const searchItems = [
-    { itemIndex: 2, text: "Transactions Overview", route: `${import.meta.env.BASE_URL}` },
-    { itemIndex: 3, text: "Transactions Details", route: `${import.meta.env.BASE_URL}transactions` },
+    { itemIndex: 2, text: "Account Overview", route: `${import.meta.env.BASE_URL}` },
+    { itemIndex: 3, text: "Transactions", route: `${import.meta.env.BASE_URL}transactions` },
     { itemIndex: 4, text: "Investments", route: `${import.meta.env.BASE_URL}investments` },
     { itemIndex: 5, text: "Analytics", route: `${import.meta.env.BASE_URL}analytics` },
+    { itemIndex: 7, text: "Account detail", route: `${import.meta.env.BASE_URL}accounts/checking` },
+    { itemIndex: 8, text: "Budgets", route: `${import.meta.env.BASE_URL}budgets` },
+    { itemIndex: 9, text: "Statements", route: `${import.meta.env.BASE_URL}statements` },
+    { itemIndex: 10, text: "Cards", route: `${import.meta.env.BASE_URL}cards` },
+    { itemIndex: 12, text: "Notifications", route: `${import.meta.env.BASE_URL}notifications` },
+    { itemIndex: 13, text: "Profile", route: `${import.meta.env.BASE_URL}profile` },
+    { itemIndex: 14, text: "Settings", route: `${import.meta.env.BASE_URL}settings` },
+    { itemIndex: 15, text: "Help & Support", route: `${import.meta.env.BASE_URL}help` },
   ];
 
-  const navigateTo = React.useCallback((itemIndex: number, itemTarget: object) => {
-    props.onNavigateTo({ itemIndex, itemTarget: { ...itemTarget, route: `${import.meta.env.BASE_URL}${itemTarget.props.route}` } });
+  const navigateTo = React.useCallback((itemIndex: number, route: string) => {
+    props.onNavigateTo({ itemIndex, itemTarget: { props: { route } } });
   }, [props]);
 
   const onSearchChange = React.useCallback((event: AutoCompleteChangeEvent) => {
     const dataItem = searchItems.find((item) => item.text === event.value);
     if (dataItem) {
-        navigateTo(dataItem.itemIndex, { props: { route: dataItem.route } });
+        navigateTo(dataItem.itemIndex, dataItem.route);
     }
   }, [searchItems, navigateTo]);
 
   return (
-    <header className="k-d-flex k-px-lg-15 k-px-md-15 k-px-sm-5 k-px-xs-5 k-py-6.5 k-gap-4 k-flex-wrap k-justify-content-between k-align-items-center">
-      <div className="k-d-flex-row k-shrink-0 k-flex-basis-0 k-flex-grow k-gap-2 k-align-items-center">
+    <header className="app-header">
+      <div className="app-header__profile">
         <Avatar size="large">
           <img
             src="./images/avatar-image.jpeg"
@@ -44,17 +53,17 @@ function Header(props: HeaderProps) {
             style={{ verticalAlign: "top" }}
           />
         </Avatar>
-        <div className="k-d-flex k-d-flex-col k-flex-nowrap k-gap-3 k-align-items-start">
-          <span className="k-font-size-xl !k-m-0 k-font-bold k-white-space-nowrap k-h-6 k-align-middle">
+        <div className="app-header__greeting">
+          <span className="app-header__name">
             Hi, {name}
           </span>
-          <span className="k-font-size-md !k-m-0 k-font-medium k-white-space-nowrap">
+          <span className="app-header__welcome">
             Welcome back
           </span>
         </div>
       </div>
-      <div className="k-flex-basis-0 k-shrink-0 k-flex-grow">
-        <div className="k-d-flex">
+      <div className="app-header__search">
+        <div>
           <AutoComplete
             style={{ width: "100%", minWidth: "215px", maxWidth: "360px" }}
             size={"small"}
@@ -64,7 +73,7 @@ function Header(props: HeaderProps) {
             textField={"text"}
             dataItemKey={"itemIndex"}
             prefix={() => (
-              <div className="k-d-flex k-align-items-center">
+              <div className="app-header__search-prefix">
                 <InputPrefix orientation="vertical">
                   <SvgIcon icon={searchIcon} />
                 </InputPrefix>
@@ -76,24 +85,24 @@ function Header(props: HeaderProps) {
           />
         </div>
       </div>
-      <div className="k-d-flex k-flex-basis-0 k-shrink-0 k-flex-grow k-justify-content-end k-justify-content-sm-start k-gap-4">
+      <div className="app-header__actions">
         <Button
           size={"small"}
           fillMode={"solid"}
           themeColor={"primary"}
           rounded={"large"}
-          onClick={() => navigateTo(6, { props: { route: `${import.meta.env.BASE_URL}ai-assistant` } })}
+          onClick={() => navigateTo(6, `${import.meta.env.BASE_URL}ai-assistant`)}
         >
           AI ASSISTANT
         </Button>
         <DropDownList
           style={{
-            backgroundColor: "#F5F5F5",
+            backgroundColor: "var(--kendo-color-surface-alt)",
             width: "105px",
-            border: "1px solid var(--kendo-color-opacity-border, #E0E0E0A8)",
-            fontSize: "16px",
-            fontWeight: 400,
-            color: "#000000",
+            border: "1px solid var(--kendo-color-border)",
+            fontSize: "var(--kendo-font-size)",
+            fontWeight: "var(--kendo-font-weight-normal)",
+            color: "var(--kendo-color-on-surface)",
           }}
           rounded={"large"}
           data={["USD", "EUR"]}

@@ -1,0 +1,13 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import StorePage from "../../components/StorePage";
+
+export function getStaticPaths() {
+  return [{ params: { id: "VL-10482" } }];
+}
+
+const { id } = Astro.params;
+---
+<Layout><Header client:load /><StorePage kind="order" orderId={id} client:only="react" /><Footer client:load /></Layout>

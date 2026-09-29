@@ -1,604 +1,244 @@
-import { AppBar, AppBarSection, AppBarSpacer, Avatar, Card,
-  CardTitle,
+import * as React from 'react';
+import {
+  AppBar,
+  AppBarSection,
+  AppBarSpacer,
+  Avatar,
+  Card,
   CardBody,
-  CardHeader, } from '@progress/kendo-react-layout';
+  CardHeader,
+  CardTitle
+} from '@progress/kendo-react-layout';
 import { Badge, BadgeContainer } from '@progress/kendo-react-indicators';
-import {PortfolioChart} from './components/PortfolioChart';
-import { KendoGrid } from './components/live-grid/KendoGrid';
-import {DataProvider} from './components/live-grid/services';
-import { Button, Chip, ChipList } from "@progress/kendo-react-buttons";
-import { caretAltUpIcon, fileTxtIcon, bellIcon} from "@progress/kendo-svg-icons";
+import { Button, ChipList } from '@progress/kendo-react-buttons';
 import { SvgIcon } from '@progress/kendo-react-common';
+import {
+  bellIcon,
+  caretAltDownIcon,
+  caretAltUpIcon,
+  fileTxtIcon,
+  linkIcon
+} from '@progress/kendo-svg-icons';
+import { PortfolioChart } from './components/PortfolioChart';
+import { KendoGrid } from './components/live-grid/KendoGrid';
+import { DataProvider } from './components/live-grid/services';
+import bitcoin from './assets/BITCOINLARGER.png';
+import busd from './assets/BUSD-lg.png';
+import ethereum from './assets/ETHERIUM-lg.png';
+import eur from './assets/EUR-lg.png';
+import inch from './assets/INCH-lg.png';
+import kendoka from './assets/kendoka.png';
+import ox from './assets/OX-larger.png';
+import shib from './assets/SHIB-lg.png';
+import tether from './assets/TETHERUS-lg.png';
+import usd from './assets/USD-lg.png';
+import xec from './assets/XEC-lg.png';
 
-function App() {
+const holdings = [
+  { symbol: 'BTC', name: 'Bitcoin', value: '$48,500.51', change: '+$9,247.91 (23.56%)', trend: 'positive', image: bitcoin },
+  { symbol: 'OX', name: 'OpenExchange', value: '$4,062.86', change: '+$1,972.91 (94.40%)', trend: 'positive', image: ox },
+  { symbol: 'USDT', name: 'Tether', value: '$183.81', change: '+$74.67 (68.41%)', trend: 'positive', image: tether },
+  { symbol: 'SHIB', name: 'Shiba Inu', value: '$1.31', change: '-$0.06 (-4.56%)', trend: 'negative', image: shib }
+];
 
-  const rate = [
-    {
-      text: "+10%",
-      value: "+10%",
-      disabled: true,
-      svgIcon: caretAltUpIcon
-    }
-  ];
+const transactions = [
+  { symbol: 'BTC', action: 'Received', amount: '+0.4558 BTC', time: 'Today, 13:15', image: bitcoin },
+  { symbol: 'USDT', action: 'Purchased', amount: '-$2,396.54', time: 'Today, 12:32', image: tether },
+  { symbol: 'XEC', action: 'Purchased', amount: '-$420.00', time: 'Yesterday, 16:04', image: xec },
+  { symbol: 'USD', action: 'Received', amount: '+$0.4558', time: 'Yesterday, 11:10', image: usd },
+  { symbol: 'BUSD', action: 'Received', amount: '+1.557 BUSD', time: '22 Nov, 18:26', image: busd },
+  { symbol: 'ETH', action: 'Received', amount: '+$165.16', time: '21 Nov, 09:59', image: ethereum },
+  { symbol: 'EUR', action: 'Received', amount: '+$366.20', time: '20 Nov, 13:15', image: eur },
+  { symbol: '1INCH', action: 'Received', amount: '+14.004 1INCH', time: '19 Nov, 08:41', image: inch }
+];
+
+const news = [
+  { headline: 'Markets digest the latest digital-asset policy proposals', source: 'Market Watch', time: '42 min ago', image: 'https://telerik.github.io/kendo-angular/grid-live-data/assets/news/CryptoBid.jpg', alt: 'Digital asset market analysis' },
+  { headline: 'Institutional demand reshapes the crypto custody landscape', source: 'Ledger Report', time: '2 hr ago', image: 'https://telerik.github.io/kendo-angular/grid-live-data/assets/news/CryptoInvestigation.jpg', alt: 'Crypto custody analysis' },
+  { headline: 'Bitcoin volatility eases as trading volumes normalize', source: 'Coin Journal', time: '4 hr ago', image: 'https://telerik.github.io/kendo-angular/grid-live-data/assets/news/BitcoinRegulation.jpg', alt: 'Bitcoin market chart' }
+];
+
+function ChangeIndicator({ change, trend }) {
+  const isPositive = trend === 'positive';
 
   return (
-    <div>
- <div >
-  <div>
-  <AppBar>
-        <AppBarSpacer style={{
-        width: 4
-      }} />
+    <p className={`change-indicator ${trend}`}>
+      <SvgIcon icon={isPositive ? caretAltUpIcon : caretAltDownIcon} size="small" />
+      <span>{change}</span>
+    </p>
+  );
+}
 
+function HoldingCard({ holding }) {
+  return (
+    <Card className="holding-card">
+      <CardHeader className="holding-card__header">
+        <Avatar type="image" className="asset-avatar">
+          <img src={holding.image} alt={`${holding.name} logo`} />
+        </Avatar>
+        <div className="holding-card__identity">
+          <span className="holding-card__symbol">{holding.symbol}</span>
+          <span className="holding-card__name">{holding.name}</span>
+        </div>
+        <div className="holding-card__amount">
+          <strong>{holding.value}</strong>
+          <ChangeIndicator change={holding.change} trend={holding.trend} />
+        </div>
+      </CardHeader>
+    </Card>
+  );
+}
+
+function TransactionList() {
+  return (
+    <section aria-labelledby="transactions-heading">
+      <div className="section-heading">
+        <h2 id="transactions-heading">Recent transactions</h2>
+        <Button fillMode="flat" themeColor="primary">View all</Button>
+      </div>
+      <ul className="transaction-list">
+        {transactions.map((transaction) => (
+          <li key={`${transaction.symbol}-${transaction.time}`} className="transaction">
+            <Avatar type="image" className="asset-avatar">
+              <img src={transaction.image} alt="" />
+            </Avatar>
+            <div className="transaction__details">
+              <span className="transaction__symbol">{transaction.symbol}</span>
+              <span className="transaction__action">{transaction.action}</span>
+            </div>
+            <div className="transaction__amount">
+              <span>{transaction.amount}</span>
+              <time>{transaction.time}</time>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+function NewsFeed() {
+  return (
+    <section aria-labelledby="news-heading">
+      <div className="section-heading">
+        <h2 id="news-heading">Portfolio news</h2>
+        <Button fillMode="flat" themeColor="primary">View all</Button>
+      </div>
+      <ul className="news-list">
+        {news.map((article) => (
+          <li key={article.headline}>
+            <article className="news-item">
+              <div>
+                <h3>{article.headline}</h3>
+                <p>{article.source} <span aria-hidden="true">·</span> <time>{article.time}</time></p>
+              </div>
+              <img src={article.image} alt={article.alt} />
+            </article>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+function App() {
+  const rate = [{ text: '+10%', value: '+10%', disabled: true, svgIcon: caretAltUpIcon }];
+
+  return (
+    <div className="app-shell">
+      <AppBar className="app-bar">
         <AppBarSection>
-          <p className="title">CryptoVault</p>
+          <a className="brand" href="#portfolio" aria-label="CryptoVault portfolio dashboard">CryptoVault</a>
         </AppBarSection>
-
-        <AppBarSpacer style={{
-        width: 32
-      }} />
-        
+        <nav className="primary-nav" aria-label="Primary navigation">
+          <a href="#portfolio" aria-current="page">Portfolio</a>
+          <a href="#market">Markets</a>
+          <a href="#transactions-heading">Activity</a>
+        </nav>
         <AppBarSpacer />
-        <AppBarSection>
-        <img alt="github icon" style={{
-            height: '30px',
-            width: '30px',
-            marginRight: '10px'
-           }} src='https://telerik.github.io/kendo-angular/grid-live-data/assets/github-icon.svg' />
-        <Button className="k-button k-button-md k-rounded-md k-button-flat k-button-flat-base">
-        <BadgeContainer>
-          
-            </BadgeContainer>
+        <AppBarSection className="app-bar__actions">
+          <span className="market-status"><span className="market-status__dot" />Market open</span>
+          <a className="icon-link" href="https://github.com/telerik/kendo-react" aria-label="View KendoReact on GitHub">
+            <SvgIcon icon={linkIcon} size="large" />
+          </a>
+          <a className="icon-link" href="https://www.telerik.com/kendo-react-ui/components/grid/get-started/" aria-label="Open Grid documentation">
+            <SvgIcon icon={fileTxtIcon} size="large" />
+          </a>
+          <Button fillMode="flat" themeColor="base" aria-label="Open notifications">
             <BadgeContainer>
-              <a href='https://www.telerik.com/kendo-react-ui/components/grid/get-started/' style={{color: '#FFF'}}><SvgIcon icon={fileTxtIcon} size='xxlarge'/></a>
-            </BadgeContainer>
-          </Button>
-            <span className="k-appbar-separator" />
-        <Button className="k-button k-button-md k-rounded-md k-button-flat k-button-flat-base">
-            <BadgeContainer>
-              <SvgIcon icon={bellIcon} size='xlarge'/>
+              <SvgIcon icon={bellIcon} size="large" />
               <Badge shape="dot" themeColor="info" size="small" position="inside" />
             </BadgeContainer>
           </Button>
-          <Avatar type="image">
-            <img src={require('./assets/kendoka.png')} alt="KendoReact Layout Kendoka Avatar" />
+          <Avatar type="image" className="profile-avatar">
+            <img src={kendoka} alt="Account profile" />
           </Avatar>
         </AppBarSection>
       </AppBar>
-  </div>
-</div>
 
-<div id="page">
-  <div id="content">
-      <p className='my-portfolio-title'>My portfolio</p>
-    <div className="card-container">
-    <Card>
-    <CardHeader style={{
-      display: 'flex',
-      alignItems: 'center',
-      border: 0,
-    }}>
-      <Avatar type="image" className="right-panel-avatar">
-        <img src={require('./assets/BITCOINLARGER.png')} alt="KendoReact Layout Kendoka Avatar" />
-      </Avatar>
-      <div style={{ flex: 1, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-        <div>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <p className='right-panel-card-title' style={{ margin: 0 }}>BTC</p>
-            <p className='top-card-subtitle' style={{ margin: 0 }}>Bitcoin</p>
-          </div>
-        </div>
-        <div style={{ textAlign: 'right' }}>
-          <p style={{ margin: 0, color: 'black', fontWeight: 'bold' }}>$48,500.51</p>
-          <p style={{ margin: 0 }} className="positive">$9,247.91 (23.56%)</p>
-        </div>
-      </div>
-    </CardHeader>
-  </Card>
-  <Card>
-    <CardHeader style={{
-      display: 'flex',
-      alignItems: 'center',
-      border: 0,
-    }}>
-      <Avatar type="image" className="right-panel-avatar">
-        <img src={require('./assets/OX-larger.png')} alt="KendoReact Layout Kendoka Avatar" />
-      </Avatar>
-      <div style={{ flex: 1, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-        <div>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <p className='right-panel-card-title' style={{ margin: 0 }}>OX</p>
-            <p className='top-card-subtitle' style={{ margin: 0 }}>OpenExchange</p>
-          </div>
-        </div>
-        <div style={{ textAlign: 'right' }}>
-          <p style={{ margin: 0, color: 'black', fontWeight: 'bold'  }}>$4,062.86</p>
-          <p style={{ margin: 0 }} className="positive">$1,972.91 (94.4%)</p>
-        </div>
-      </div>
-    </CardHeader>
-  </Card>
-  <Card>
-    <CardHeader style={{
-      display: 'flex',
-      alignItems: 'center',
-      border: 0,
-    }}>
-      <Avatar type="image" className="right-panel-avatar">
-        <img src={require('./assets/TETHERUS-lg.png')} alt="KendoReact Layout Kendoka Avatar" />
-      </Avatar>
-      <div style={{ flex: 1, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-        <div>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <p className='right-panel-card-title' style={{ margin: 0 }}>THETH</p>
-            <p className='top-card-subtitle' style={{ margin: 0 }}>Tether</p>
-          </div>
-        </div>
-        <div style={{ textAlign: 'right' }}>
-          <p style={{ margin: 0, color: 'black', fontWeight: 'bold'  }}>$183.81</p>
-          <p style={{ margin: 0 }} className="positive">$74.67 (68.41%)</p>
-        </div>
-      </div>
-    </CardHeader>
-  </Card>
-  <Card>
-    <CardHeader style={{
-      display: 'flex',
-      alignItems: 'center',
-      border: 0,
-    }}>
-      <Avatar type="image" className="right-panel-avatar">
-        <img src={require('./assets/SHIB-lg.png')} alt="KendoReact Layout Kendoka Avatar" />
-      </Avatar>
-      <div style={{ flex: 1, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-        <div>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <p className='right-panel-card-title' style={{ margin: 0 }}>SHIB</p>
-            <p className='top-card-subtitle' style={{ margin: 0 }}>ShibaInu</p>
-          </div>
-        </div>
-        <div style={{ textAlign: 'right' }}>
-          <p style={{ margin: 0, color: 'black', fontWeight: 'bold'  }}>$1.31</p>
-          <p style={{ margin: 0 }} className="negative">$0.06 (-4.56%)</p>
-        </div>
-      </div>
-    </CardHeader>
-  </Card>
-    </div> 
-
-    <p className='my-portfolio-title'>Total portfolio</p>
-    <PortfolioChart/>
-
-    <p className='my-portfolio-title'>Explore the market</p>
-    <DataProvider>
-        <KendoGrid refreshRate={500} />
-      </DataProvider>
-  </div>
-
-  <div id="sideBar">
-    <div className="side-bar-content" style={{
-      width: '100%'
-    }}>
-      <br/>
-      <div className='balance'>
-      <p className='right-panel-title'>My Cards</p>
-    <Card className="panel-card" style={{
-      width: '370px'
-    }}> 
-        <CardBody>
-          <CardTitle style={{
-            color: 'white',
-            fontSize: '25px',
-            fontWeight: 400,
-          }}>Balance</CardTitle>
-          <p className='card-balance-currency'>
-          $430,933
-          </p>
-         <br/>
-          <p style={{
-            color: 'white',
-            fontSize: '16px',
-            fontWeight: 400,
-            lineHeight: '10px'
-          }}>
-            Monthly profit
-          </p>
-
-          <span className="card-profit-text">
-          $12,649
-         <span className="interest-chip" style={{
-          float: 'right',
-         }}>
-        <ChipList
-        data={rate}
-        selection={"single"}
-        chip={(props) => (
-          <Chip
-          style={{
-            backgroundColor: 'rgba(75,95,250,.5)',
-            borderRadius: '25px',
-            color: 'white'
-          }}
-            {...props}
-            svgIcon={props.dataItem.svgIcon}
-          />
-        )}
-      />
-         </span>
-          </span>
-        </CardBody>
-      </Card>
-      <br/>
-      <p className="right-panel-title">
-           Recent transactions
-        </p>
-
-        <Card className="right-panel-card" >
-        <CardHeader style={{
-          display: 'flex',
-          lineHeight: '0.1',
-          border: 0,
-          padding: '25px 0 0' 
-        }}>
-        <Avatar type="image" className="right-panel-avatar">
-            <img src={require('./assets/BITCOINLARGER.png')} alt="KendoReact Layout Kendoka Avatar" />
-          </Avatar>
-            <div style={{
-              marginTop: '12px',
-            }}>
-         
-            <div>
-            <p className='right-panel-card-title'>BTC
-              <span style={{
-                position: 'absolute',
-                right: '0',
-              }}>+0.4558 BTC</span>
-            </p>
+      <main id="portfolio" className="dashboard">
+        <div className="dashboard__main">
+          <section aria-labelledby="portfolio-heading">
+            <div className="page-heading">
+              <div>
+                <h1 id="portfolio-heading">My portfolio</h1>
+                <p>Live values update every half second.</p>
+              </div>
+              <span className="last-updated">Live market data</span>
             </div>
-           
-            <p className='right-panel-card-subtitle'>
-            Receive
-            <span style={{
-                position: 'absolute',
-                right: '0',
-              }}> Today, 13:15</span>
-            </p>
-          </div>
-        </CardHeader>
-      </Card>
-
-      <Card className="right-panel-card">
-        <CardHeader style={{
-          display: 'flex',
-          lineHeight: '0.1',
-          border: 0,
-          padding: '25px 0 0' 
-        }}>
-        <Avatar type="image" className="right-panel-avatar">
-            <img src={require('./assets/TETHERUS-lg.png')} alt="KendoReact Layout Kendoka Avatar" />
-          </Avatar>
-            <div style={{
-              marginTop: '12px',
-            }}>
-         
-            <div>
-            <p className='right-panel-card-title '>THETH
-              <span style={{
-                position: 'absolute',
-                right: '0',
-              }}>248.45$</span>
-            </p>
+            <div className="holdings-grid">
+              {holdings.map((holding) => <HoldingCard key={holding.symbol} holding={holding} />)}
             </div>
-           
-            <p className='right-panel-card-subtitle'>
-            Buy 2396.54$
-            <span style={{
-                position: 'absolute',
-                right: '0',
-                paddingRight: '0px'
-              }}> Today, 13:15</span>
-            </p>
-          </div>
-        </CardHeader>
-      </Card>
+          </section>
 
-      <Card className="right-panel-card" >
-        <CardHeader style={{
-          display: 'flex',
-          lineHeight: '0.1',
-          border: 0,
-          padding: '25px 0 0' 
-        }}>
-        <Avatar type="image" className="right-panel-avatar">
-            <img src={require('./assets/XEC-lg.png')} alt="KendoReact Layout Kendoka Avatar" />
-          </Avatar>
-            <div style={{
-              marginTop: '12px',
-            }}>
-         
-            <div>
-            <p className='right-panel-card-title '>XEC
-              <span style={{
-                position: 'absolute',
-                right: '0',
-              }}>1455.55$</span>
-            </p>
+          <section className="chart-section" aria-labelledby="performance-heading">
+            <div className="section-heading">
+              <div>
+                <h2 id="performance-heading">Portfolio performance</h2>
+                <p>Portfolio value over the last seven days</p>
+              </div>
+              <ChipList data={rate} selection="single" aria-label="Portfolio performance change" />
             </div>
-           
-            <p className='right-panel-card-subtitle'>
-            Buy -420$
-            <span style={{
-                position: 'absolute',
-                right: '0',
-                paddingRight: '0px'
-              }}> Today, 13:15</span>
-            </p>
-          </div>
-        </CardHeader>
-      </Card>
+            <PortfolioChart />
+          </section>
 
-      <Card className="right-panel-card" >
-        <CardHeader style={{
-          display: 'flex',
-          lineHeight: '0.1',
-          border: 0,
-          padding: '25px 0 0' 
-        }}>
-        <Avatar type="image" className="right-panel-avatar">
-            <img src={require('./assets/USD-lg.png')} alt="KendoReact Layout Kendoka Avatar" />
-          </Avatar>
-            <div style={{
-              marginTop: '12px',
-            }}>
-         
-            <div>
-            <p className='right-panel-card-title '>USD
-              <span style={{
-                position: 'absolute',
-                right: '0',
-              }}>+0.4558 BTC</span>
-            </p>
+          <section id="market" className="market-section" aria-labelledby="market-heading">
+            <div className="section-heading">
+              <div>
+                <h2 id="market-heading">Explore the market</h2>
+                <p>Live quotes, intraday range, volume, and analyst signal</p>
+              </div>
+              <span className="live-status"><span className="market-status__dot" />Updating live</span>
             </div>
-           
-            <p className='right-panel-card-subtitle'>
-            Receive
-            <span style={{
-                position: 'absolute',
-                right: '0',
-                paddingRight: '18px'
-              }}> Today, 13:15</span>
-            </p>
-          </div>
-        </CardHeader>
-      </Card>
+            <DataProvider>
+              <KendoGrid refreshRate={500} />
+            </DataProvider>
+          </section>
+        </div>
 
-      <Card className="right-panel-card" >
-        <CardHeader style={{
-          display: 'flex',
-          lineHeight: '0.1',
-          border: 0,
-          padding: '25px 0 0' 
-        }}>
-        <Avatar type="image" className="right-panel-avatar">
-            <img src={require('./assets/BUSD-lg.png')} alt="KendoReact Layout Kendoka Avatar" />
-          </Avatar>
-            <div style={{
-              marginTop: '12px',
-            }}>
-         
-            <div>
-            <p className='right-panel-card-title '>BUSD
-              <span style={{
-                position: 'absolute',
-                right: '0',
-              }}>+1.557 BUSD</span>
-            </p>
+        <aside className="dashboard__sidebar" aria-label="Portfolio activity">
+          <section aria-labelledby="balance-heading">
+            <div className="section-heading">
+              <h2 id="balance-heading">Available balance</h2>
             </div>
-           
-            <p className='right-panel-card-subtitle'>
-            Receive
-            <span style={{
-                position: 'absolute',
-                right: '0',
-                paddingRight: '18px'
-              }}> Today, 13:15</span>
-            </p>
-          </div>
-        </CardHeader>
-      </Card>
-
-      <Card className="right-panel-card" >
-        <CardHeader style={{
-          display: 'flex',
-          lineHeight: '0.1',
-          border: 0,
-          padding: '25px 0 0' 
-        }}>
-        <Avatar type="image" className="right-panel-avatar">
-            <img src={require('./assets/ETHERIUM-lg.png')} alt="KendoReact Layout Kendoka Avatar" />
-          </Avatar>
-            <div style={{
-              marginTop: '12px',
-            }}>
-         
-            <div>
-            <p className='right-panel-card-title '>ETHER
-              <span style={{
-                position: 'absolute',
-                right: '0',
-              }}>165.16$</span>
-            </p>
-            </div>
-           
-            <p className='right-panel-card-subtitle'>
-            Receive
-            <span style={{
-                position: 'absolute',
-                right: '0',
-              }}> 23 Nov 2021, 09.59</span>
-            </p>
-          </div>
-        </CardHeader>
-      </Card>
-      <Card className="right-panel-card" >
-        <CardHeader style={{
-          display: 'flex',
-          lineHeight: '0.1',
-          border: 0,
-          padding: '25px 0 0' 
-        }}>
-        <Avatar type="image" className="right-panel-avatar">
-            <img src={require('./assets/EUR-lg.png')} alt="KendoReact Layout Kendoka Avatar" />
-          </Avatar>
-            <div style={{
-              marginTop: '12px',
-            }}>
-         
-            <div>
-            <p className='right-panel-card-title '>EUR
-              <span style={{
-                position: 'absolute',
-                right: '0',
-              }}>366.2$</span>
-            </p>
-            </div>
-           
-            <p className='right-panel-card-subtitle'>
-            Receive
-            <span style={{
-                position: 'absolute',
-                right: '0',
-              }}> Today, 13:15</span>
-            </p>
-          </div>
-        </CardHeader>
-      </Card>
-         <Card className="right-panel-card" >
-        <CardHeader style={{
-          display: 'flex',
-          lineHeight: '0.1',
-          border: 0,
-          padding: '25px 0 0' 
-        }}>
-        <Avatar type="image" className="right-panel-avatar">
-            <img src={require('./assets/INCH-lg.png')} alt="KendoReact Layout Kendoka Avatar" />
-          </Avatar>
-            <div style={{
-              marginTop: '12px',
-            }}>
-         
-            <div>
-            <p className='right-panel-card-title '>INCH
-              <span style={{
-                position: 'absolute',
-                right: '0',
-              }}>+14.004 INCH</span>
-            </p>
-            </div>
-           
-            <p className='right-panel-card-subtitle'>
-            Receive
-            <span style={{
-                position: 'absolute',
-                right: '0',
-              }}> Today, 13:15</span>
-            </p>
-          </div>
-        </CardHeader>
-      </Card>
-      </div>
-   
-    </div>
-    <p className='my-portfolio-title' style={{ flex: 1 }}>News Feed</p>
-    <div style={{ display: 'flex', alignItems: 'center' }}>
-  <div style={{ flex: 1, marginTop: "10px" }}>
-    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-      <p className="news-feed k-card-title" style={{fontSize: '18px'}}>Crypto bid to buy US constitution copy at action fails</p>
-    </div>
-  </div>
-
-  <div className="right-panel-avatar">
-    <img src='https://telerik.github.io/kendo-angular/grid-live-data/assets/news/CryptoBid.jpg' alt="crypto bid" width="120px" height="70px" />
-  </div>
-
-</div>
-<br></br>
-<div style={{ display: 'flex', alignItems: 'center', marginTop: "10px" }}>
-  <div style={{ flex: 1, marginTop: "10px" }}>
-    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-      <p className="news-feed k-card-title" style={{fontSize: '18px'}}>The Missing Cryptoqueen and ONE COIN
-</p>
-    </div>
-  </div>
-  <div className="right-panel-avatar">
-    <img src='https://telerik.github.io/kendo-angular/grid-live-data/assets/news/CryptoInvestigation.jpg' alt="crypto bid" width="120px" height="70px" />
-  </div>
-</div>
-<br></br>
-<div style={{ display: 'flex', alignItems: 'center', marginTop: "10px" }}>
-  <div style={{ flex: 1, marginTop: "10px" }}>
-    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-      <p className="news-feed k-card-title" style={{fontSize: '18px'}}>The Missing Cryptoqueen and ONE COIN</p>
-    </div>
-  </div>
-
-  <div className="right-panel-avatar">
-    <img src='https://telerik.github.io/kendo-angular/grid-live-data/assets/news/Cryptoqueen.jpg' alt="crypto bid" width="120px" height="70px" />
-  </div>
-
-</div>
-<br></br>
-<div style={{ display: 'flex', alignItems: 'center', marginTop: "10px" }}>
-  <div style={{ flex: 1, marginTop: "10px" }}>
-    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-      <p className="news-feed k-card-title" style={{fontSize: '18px'}}>LA's Staples Center to be <br></br> renamed after cryptocurrency firm</p>
-    </div>
-  </div>
-  <div className="right-panel-avatar">
-    <img src='https://telerik.github.io/kendo-angular/grid-live-data/assets/news/StaplesCenter.jpg' alt="crypto bid" width="120px" height="70px" />
-  </div>
-
-</div>
-<br></br>
-<div style={{ display: 'flex', alignItems: 'center', marginTop: "10px" }}>
-  <div style={{ flex: 1, marginTop: "10px" }}>
-    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-      <p className="news-feed k-card-title" style={{fontSize: '18px'}}>Squid Game crypto token collapses in apparent scam</p>
-    </div>
-  </div>
-  <div className="right-panel-avatar">
-    <img src='https://telerik.github.io/kendo-angular/grid-live-data/assets/news/SquidGame.jpg' alt="crypto bid" width="120px" height="70px" />
-  </div>
-
-</div>
-<br></br>
-<div style={{ display: 'flex', alignItems: 'center', marginTop: "10px" }}>
-  <div style={{ flex: 1, marginTop: "10px" }}>
-    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-      <p className="news-feed k-card-title" style={{fontSize: '18px'}}>Bitcoin: Bank deputy calls for urgent crypto regulation</p>
-    </div>
-  </div>
-  <div className="right-panel-avatar">
-    <img src='https://telerik.github.io/kendo-angular/grid-live-data/assets/news/BitcoinRegulation.jpg' alt="crypto bid" width="120px" height="70px" />
-  </div>
-</div>
-<br></br>
-<div style={{ display: 'flex', alignItems: 'center', marginTop: "10px" }}>
-  
-  <div style={{ flex: 1, marginTop: "10px" }}>
-    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-      <p className="news-feed k-card-title" style={{fontSize: '18px'}}>Lincolnshire boy has £2m of cryptocurrency seized by police</p>
-    </div>
-  </div>
-
-  <div className="right-panel-avatar">
-    <img src='https://telerik.github.io/kendo-angular/grid-live-data/assets/news/SeizedCryptocurrency.jpg' alt="crypto bid" width="120px" height="70px" />
-  </div>
-
-</div>
-<br/>
-  </div>
-</div>
+            <Card className="balance-card">
+              <CardBody>
+                <CardTitle>Portfolio balance</CardTitle>
+                <p className="balance-card__value">$430,933.00</p>
+                <div className="balance-card__footer">
+                  <div>
+                    <span>Monthly profit</span>
+                    <strong>$12,649.00</strong>
+                  </div>
+                  <ChipList data={rate} selection="single" aria-label="Monthly profit increased by 10 percent" />
+                </div>
+              </CardBody>
+            </Card>
+          </section>
+          <TransactionList />
+          <NewsFeed />
+        </aside>
+      </main>
     </div>
   );
 }

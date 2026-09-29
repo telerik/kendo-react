@@ -22,11 +22,11 @@ const ThankYou: React.FC = () => {
         subtitle={t?.thankYou?.subtitle}
       />
       <Layout>
-        <div className="k-d-flex k-flex-col k-justify-content-center k-align-items-center k-h-100 k-text-center">
+        <div className="thank-you">
           <h1>{t?.thankYou?.thankYouMessage}</h1>
           <p>{t?.thankYou?.orderSubmittedMessage}</p>
           <Button
-            className="k-mt-6"
+            className="thank-you__action"
             onClick={onBacktoShoppingClick}
             themeColor={"primary"}
             size={"large"}

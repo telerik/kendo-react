@@ -11,19 +11,19 @@ export default function Transactions() {
   };
 
   return (
-    <Card className="k-p-4 k-gap-6 k-rounded-xxl k-h-full" style={{ minHeight: 410 }}>
-      <div className={"k-d-grid k-gap-6"}>
+    <Card className="app-card" style={{ minHeight: 410 }}>
+      <div className="app-card__content app-card__content--spacious">
         <div
           style={{
             fontSize: "20px",
             letterSpacing: "wide",
             fontWeight: "500",
           }}
-          className="k-gap-2"
+          className="app-card__title"
         >
           Stock Chart
         </div>
-        <div className="k-d-grid k-gap-6">
+        <div className="app-details">
           <TabStrip selected={selected} onSelect={handleSelect}>
             <TabStripTab title="Solar Flux">
               <StockChartComponent data={solarFluxData} />

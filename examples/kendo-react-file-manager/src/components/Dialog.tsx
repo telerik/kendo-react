@@ -5,14 +5,13 @@ import { getName } from '../helpers/helperMethods';
 import { Button } from "@progress/kendo-react-buttons";
 
 export const EditDialog = (props) => {
-  const [inputValue, setInputValue] = React.useState(props.editValue);
+  const [inputValue, setInputValue] = React.useState(() => getName(props.editValue.path) || '');
 
-  const handleDialogClick = (event) => {
+  const handleDialogClick = (type: 'rename' | 'cancel') => {
     props.onDialogClick({
-      event,
       path: props.editValue.path,
-      value: typeof (inputValue) === 'string' ? inputValue : inputValue.path,
-      type: event.target.value
+      value: inputValue,
+      type
     });
   };
 
@@ -29,24 +28,23 @@ export const EditDialog = (props) => {
       <p style={{ width: '350px', margin: '25px', textAlign: 'center' }}>Enter new name for the file.</p>
       <Input
         maxLength={40}
-        value={getName(inputValue.path)}
+        value={inputValue}
         style={{ width: '350px', margin: '25px', textAlign: 'center' }}
         className={'k-textbox'}
         onChange={handleInputChange}
       />
       <DialogActionsBar>
-        <Button value={'rename'} themeColor='primary' onClick={handleDialogClick}>Rename</Button>
-        <Button value={'cancel'} themeColor='base' onClick={handleDialogClick}>Cancel</Button>
+        <Button themeColor='primary' onClick={() => handleDialogClick('rename')}>Rename</Button>
+        <Button themeColor='base' onClick={() => handleDialogClick('cancel')}>Cancel</Button>
       </DialogActionsBar>
     </DialogComponent>
   );
 }
 
 export const DeleteDialog = (props) => {
-  const handleDialogClick = (event) => {
+  const handleDialogClick = (type: 'delete' | 'cancel') => {
     props.onDialogClick({
-      event,
-      type: event.target.value
+      type
     });
   };
 
@@ -58,8 +56,8 @@ export const DeleteDialog = (props) => {
     <DialogComponent title={'Please confirm'} onClose={handleDialogClose}>
       <p style={{ width: '350px', margin: '25px', textAlign: 'center' }}>Are you sure you want to delete the selected file? You cannot undo this action.</p>
       <DialogActionsBar>
-        <Button value={'delete'} themeColor='primary' onClick={handleDialogClick}>Delete</Button>
-        <Button value={'cancel'} themeColor='base' onClick={handleDialogClick}>Cancel</Button>
+        <Button themeColor='error' fillMode='outline' onClick={() => handleDialogClick('delete')}>Delete</Button>
+        <Button themeColor='base' onClick={() => handleDialogClick('cancel')}>Cancel</Button>
       </DialogActionsBar>
     </DialogComponent>
   );

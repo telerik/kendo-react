@@ -1,6 +1,7 @@
 import React from 'react';
 import { Badge, BadgeContainer } from '@progress/kendo-react-indicators';
 import { Button } from '@progress/kendo-react-buttons';
+import { Rating } from '@progress/kendo-react-inputs';
 import { cartIcon } from '@progress/kendo-svg-icons';
 import { CardListProps } from '../data/types';
 
@@ -34,30 +35,24 @@ export const CardsList: React.FC<CardListProps> = (props) => {
 
   return (
     <LocalizationProvider language={language}>
-      <section className="k-d-grid k-grid-cols-12 k-col-span-12 k-justify-content-center k-align-items-center k-gap-3">
+      <section className="cards-list">
         {props.data.map((item, index) => {
           return (
             <div
               key={index}
-              className={`${props.layout === 'grid' ? 'k-col-span-4' : 'k-col-span-3'} k-text-center k-border k-border-primary k-gap-1 k-pb-5`}
+              className={`cards-list__item cards-list__item--${props.layout}`}
             >
               {item.status ? (
                 <BadgeContainer>
                   <div
-                    className="k-d-flex k-justify-content-center k-align-items-center k-rounded-lg"
-                    style={{
-                      backgroundImage: `url(${item.img})`,
-                      width: '278px',
-                      height: '236px',
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                      backgroundRepeat: 'no-repeat',
-                    }}
+                    className="cards-list__image"
+                    role="img"
+                    aria-label={t[item.title] || item.title}
                   ></div>
                   {item.status && (
                     <Badge
                       themeColor="primary"
-                      className="k-text-uppercase"
+                      className="cards-list__status"
                       position={'inside'}
                       align={{
                         horizontal: 'start',
@@ -71,30 +66,26 @@ export const CardsList: React.FC<CardListProps> = (props) => {
                 </BadgeContainer>
               ) : (
                 <div
-                  className="k-d-inline-block k-justify-content-center k-align-items-center k-rounded-lg"
-                  style={{
-                    backgroundImage: `url(${item.img})`,
-                    width: '278px',
-                    height: '236px',
-                  }}
+                  className="cards-list__image"
+                  role="img"
+                  aria-label={t[item.title] || item.title}
                 ></div>
               )}
               <div>
-                <div className="k-pt-2">{t[item.title] || item.title}</div>
-                <div className="k-d-flex k-justify-content-center k-gap-xl k-align-items-center k-pt-2">
+                <div className="cards-list__title">{t[item.title] || item.title}</div>
+                <div className="cards-list__meta">
+                  <Rating value={item.rating} readonly aria-label={`${item.rating} out of 5 stars`} />
+                  <span>{item.status ? t.statuses[item.status] || item.status : "In stock"}</span>
+                </div>
+                <div className="cards-list__actions">
                   <span>
                     {item.oldPrice && (
                       <span
-                        className="k-text-line-through"
-                        style={{
-                          paddingRight: '8px',
-                        }}
+                        className="cards-list__old-price"
                       >{`$${item.oldPrice}`}</span>
                     )}
                     <span
-                      style={{
-                        color: 'red',
-                      }}
+                      className="cards-list__price"
                     >{`$${item.newPrice}`}</span>
                   </span>
                   <span>

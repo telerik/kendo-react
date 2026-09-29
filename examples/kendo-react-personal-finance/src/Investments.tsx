@@ -11,15 +11,15 @@ const Investments: React.FC = () => {
     
     return (
  <>
-      <h1 className="k-px-md-15 k-p-5 k-m-0">Investments</h1>
-      <div className="k-d-grid k-grid-cols-1 k-grid-cols-md-9 k-gap-5 k-p-md-5 k-px-md-15 k-p-5">
-        <div className="k-col-span-9 k-col-span-xl-4 k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-4">
+      <h1 className="app-page-title">Investments</h1>
+      <div className="app-page-grid--nine">
+        <div className="app-column app-span-4">
             <TotalInvestments />
         </div>
-        <div className="k-col-span-9 k-col-span-xl-5 k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-4">
+        <div className="app-column app-span-5">
             <TopMovers currency={currency} />
         </div>
-        <div className="k-col-span-9 k-col-span-md-9">
+        <div className="app-span-all">
             <StockChart />
         </div>
       </div>

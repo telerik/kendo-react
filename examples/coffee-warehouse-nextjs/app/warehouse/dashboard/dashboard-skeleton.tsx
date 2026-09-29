@@ -9,8 +9,8 @@ export default function DashBoardSkeleton() {
           style={{
             width: "100%",
             height: "345px",
-            margin: "50px",
-            background: "white",
+            margin: "var(--kendo-spacing-12)",
+            background: "var(--kendo-color-surface-alt)",
           }}
         />
       <Skeleton
@@ -18,8 +18,8 @@ export default function DashBoardSkeleton() {
         style={{
           width: "100%",
           height: "500px",
-          margin: "50px",
-          background: "white",
+          margin: "var(--kendo-spacing-12)",
+          background: "var(--kendo-color-surface-alt)",
         }}
       />
     </Fragment>

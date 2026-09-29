@@ -45,38 +45,38 @@ const Contacts: React.FC = () => {
   return (
     <LocalizationProvider language={language}>
       <Layout>
-        <div className="k-d-flex k-flex-col k-align-items-center k-py-12 k-px-4 k-gap-10">
-          <div className="k-d-grid k-grid-cols-12 k-gap-8 k-w-full">
-            <div className="k-col-span-6 k-col-start-1">
+        <div className="contacts__content">
+          <div className="contacts__grid">
+            <div className="contacts__form">
               <h1>{t.getInTouchTitle}</h1>
               <p>{t.getInTouchSubtitle}</p>
               <Form
                 render={() => (
                   <FormElement>
-                    <div className="k-form-layout k-d-grid k-gap-y-6 k-gap-x-4">
-                      <FieldWrapper className="k-col-span-1">
+                    <div className="k-form-layout contacts__form-grid">
+                      <FieldWrapper>
                         <Label>{t.fullNameLabel}</Label>
                         <Field name="fullName" component={CardHolder} />
                       </FieldWrapper>
-                      <FieldWrapper className="k-col-span-1">
+                      <FieldWrapper>
                         <Label>{t.emailLabel}</Label>
                         <Field name="email" component={EmailInput} />
                       </FieldWrapper>
-                      <FieldWrapper className="k-col-span-1">
+                      <FieldWrapper>
                         <Label>{t.phoneNumberLabel}</Label>
                         <Field name="phoneNumber" component={PhoneInput} />
                       </FieldWrapper>
-                      <div className="k-d-flex k-flex-col k-align-items-start k-gap-4">
+                      <div className="contacts__options">
                         <p>{t.typeOfCustomerLabel}</p>
                         <ContactsRadioButtons />
                       </div>
-                      <FieldWrapper className="k-col-span-1">
+                      <FieldWrapper>
                         <Field name="city" component={CityInput} />
                       </FieldWrapper>
-                      <FieldWrapper className="k-col-span-1">
+                      <FieldWrapper>
                         <Field name="appointment" component={AppointmentInput} />
                       </FieldWrapper>
-                      <FieldWrapper className="k-col-span-1">
+                      <FieldWrapper>
                         <Label>{t.dateLabel}</Label>
                         <Field name="date" component={DateChooserInput} />
                       </FieldWrapper>
@@ -85,14 +85,14 @@ const Contacts: React.FC = () => {
                 )}
               />
               <Button
-                className="k-mt-6"
+                className="contacts__submit"
                 onClick={onSubmitClick}
                 themeColor="primary"
               >
                 {t.bookSlotButton}
               </Button>
             </div>
-            <div className="k-col-span-5 k-col-start-8 k-d-flex k-flex-col k-align-items-start">
+            <div className="contacts__visual">
               <img
                 src="/kendo-react/kendo-react-e-commerce-astro-app/contactsImage.png"
                 alt={t.contactsImageAlt}

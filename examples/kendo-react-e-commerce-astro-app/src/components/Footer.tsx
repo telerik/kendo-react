@@ -40,24 +40,21 @@ const Footer: React.FC = () => {
 
   return (
     <LocalizationProvider language={language}>
-      <section className="k-py-10 k-px-12 footer">
-        <div className="k-d-flex k-flex-wrap k-justify-content-between k-gap-8 k-text-align-left">
-          <div
-            className="k-flex-basis-250 k-flex-grow-1 k-mb-4 k-mt-6"
-            style={{ marginLeft: "50px" }}
-          >
-            <a href="/" className="k-d-block k-mb-4 k-text-align-center">
-              <img src="/kendo-react/kendo-react-e-commerce-astro-app/vilora-logo.png" alt="Logo" />
+      <section className="footer">
+        <div className="footer__content">
+          <div className="footer__brand">
+            <a href="/" className="footer__column">
+              <img src="/kendo-react/kendo-react-e-commerce-astro-app/vilora-logo.png" alt="Vilora home" />
             </a>
             <p>{t.cookiesText}</p>
             <p>{t.rightsReservedText}</p>
             <p>{t.subscribeText}</p>
-            <Label editorId="email" className="k-sr-only">
+            <Label editorId="email" className="footer__visually-hidden">
               {t.emailPlaceholder}
             </Label>
             <TextBox
               placeholder={t.emailPlaceholder}
-              className="k-w-full !k-mb-3"
+              className="footer__subscribe"
               suffix={() => (
                 <InputSuffix>
                   <InputSeparator />
@@ -68,30 +65,27 @@ const Footer: React.FC = () => {
               )}
             />
             <p>{t.followUsText}</p>
-            <div className="k-d-flex k-gap-2 k-align-items-center">
+            <div className="footer__socials">
               <p
-                className="k-d-flex k-align-items-center"
-                style={{ gap: "10px" }}
+                className="footer__social"
               >
                 <SvgIcon icon={facebookIcon} size="xlarge" /> Facebook
               </p>
               <p
-                className="k-d-flex k-align-items-center"
-                style={{ gap: "10px" }}
+                className="footer__social"
               >
                 <SvgIcon icon={xLogoIcon} size="xlarge" /> X
               </p>
               <p
-                className="k-d-flex k-align-items-center"
-                style={{ gap: "10px" }}
+                className="footer__social"
               >
                 <SvgIcon icon={linkedinIcon} size="xlarge" /> LinkedIn
               </p>
             </div>
           </div>
 
-          <div className="k-flex-basis-200 k-flex-grow-1 k-d-flex k-flex-col k-gap-4 k-mt-6 k-text-align-center">
-            <h4 className="k-color-primary k-font-bold">
+          <div className="footer__column">
+            <h4 className="footer__heading">
               {t.customerCareTitle}
             </h4>
             {Array.isArray(t.customerCareLinks) && t.customerCareLinks.length > 0 ? (
@@ -105,8 +99,8 @@ const Footer: React.FC = () => {
             )}
           </div>
 
-          <div className="k-flex-basis-200 k-flex-grow-1 k-d-flex k-flex-col k-gap-4 k-mt-6 k-text-align-center">
-            <h4 className="k-color-primary k-font-bold">
+          <div className="footer__column">
+            <h4 className="footer__heading">
               {t.ourCompanyTitle}
             </h4>
             {Array.isArray(t.ourCompanyLinks) && t.ourCompanyLinks.length > 0 ? (
@@ -120,11 +114,8 @@ const Footer: React.FC = () => {
             )}
           </div>
 
-          <div
-            className="k-flex-basis-200 k-flex-grow-1 k-d-flex k-flex-col k-gap-4 k-mt-6 k-text-align-center"
-            style={{ marginRight: "150px" }}
-          >
-            <h4 className="k-color-primary k-font-bold">
+          <div className="footer__column">
+            <h4 className="footer__heading">
               {t.legalPrivacyTitle}
             </h4>
             {Array.isArray(t.legalPrivacyLinks) && t.legalPrivacyLinks.length > 0 ? (

@@ -9,18 +9,17 @@ export const PortfolioChart = () => {
 
   const defaultTooltipRender = ({ point }) => `$${point.value}`;
 
-  return <Chart>
+  return <Chart aria-label="Portfolio value chart">
         <ChartTooltip render={defaultTooltipRender}/>
-        <ChartTitle/>
+        <ChartTitle text="Portfolio value" visible={false} />
         <ChartCategoryAxis>
           <ChartCategoryAxisItem categories={categories} />
         </ChartCategoryAxis>
         <ChartSeries>
-          
+
           <ChartSeriesItem type="area" data={firstSeries} line={{
           style: 'smooth'
         }} />
         </ChartSeries>
       </Chart>
 };
- 

@@ -11,32 +11,32 @@ const series = [
   {
     category: 'Infrastructure',
     value: 6000,
-    color: '#4B5FFA',
+    color: 'var(--kendo-color-primary)',
   },
   {
     category: 'Services',
     value: 6000,
-    color: '#2196F3',
+    color: 'var(--kendo-color-info)',
   },
   {
     category: 'R&D',
     value: 6000,
-    color: '#43A047',
+    color: 'var(--kendo-color-success)',
   },
   {
     category: 'Outsourcing',
     value: 6000,
-    color: '#FFC107',
+    color: 'var(--kendo-color-warning)',
   },
   {
     category: 'Marketing',
     value: 6000,
-    color: '#FF5722',
+    color: 'var(--kendo-color-error)',
   },
   {
     category: 'Strategy',
     value: 6000,
-    color: '#E91E63',
+    color: 'var(--kendo-color-secondary)',
   },
 ];
 

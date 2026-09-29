@@ -52,7 +52,7 @@ export default function Dashboard() {
   const navigate = useNavigate();
   const { profile } = useDoctorProfile();
   const isViewProfileIconOnly = useMediaQuery(
-    "(max-width: 899px), (min-width: 1440px) and (max-width: 1759px)",
+    "(max-width: 991px)",
   );
 
   const [showNoteWindow, setShowNoteWindow] = useState(false);

@@ -20,6 +20,7 @@ const notifTypeStyles: Record<string, { bgClass: string; icon: string }> = {
 interface NotificationPanelProps {
   notifications: Notification[];
   onMarkAllRead: () => void;
+  onViewAll: () => void;
   anchor: HTMLDivElement | null;
   show: boolean;
 }
@@ -27,6 +28,7 @@ interface NotificationPanelProps {
 export default function NotificationPanel({
   notifications,
   onMarkAllRead,
+  onViewAll,
   anchor,
   show,
 }: Readonly<NotificationPanelProps>) {
@@ -42,6 +44,9 @@ export default function NotificationPanel({
         <h3>Notifications</h3>
         <Button fillMode="flat" size="small" onClick={onMarkAllRead}>
           Mark all read
+        </Button>
+        <Button fillMode="flat" size="small" onClick={onViewAll}>
+          View all
         </Button>
       </div>
       {notifications.map((n) => {

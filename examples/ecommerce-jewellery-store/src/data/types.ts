@@ -13,10 +13,19 @@ export type ListDataDescriptor = {
     status: string | null;
     title: string;
     rating?: number;
+    reviewCount?: number;
+    stockStatus?: "in-stock" | "low-stock" | "out-of-stock";
+    stockCount?: number;
     category: string;
     material: string;
     oldPrice: number | null;
     newPrice: number;
+};
+
+export type ProductFilters = {
+    categories: string[];
+    material: string;
+    status: string;
 };
 
 export type BackgroundImageProps = {
@@ -66,9 +75,13 @@ export interface GridTranslations {
     statuses: { [key: string]: string };
     categories: { [key: string]: string };
     materials: { [key: string]: string };
+    gridViewLabel: string;
+    listViewLabel: string;
     diamondWeddingRing: string;
     silverBraceletWithCross: string;
-    [key: string]: any; 
+    // Translation content is dynamic because language files include page-specific sections.
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    [key: string]: any;
   }
   
   export type LanguageContextType = {
@@ -78,7 +91,7 @@ export interface GridTranslations {
   };
 
 export type CardListProps = {
-    data: any[];
+    data: ListDataDescriptor[];
     layout: "grid" | "list";
 }
 
@@ -105,7 +118,7 @@ export type SizedParentProps = {
 };
 
 export type CategoryListProps = {
-    data: any[];
+    data: CardDescriptor[];
     title: string;
     subtitle: string;
     colSpan?: number;

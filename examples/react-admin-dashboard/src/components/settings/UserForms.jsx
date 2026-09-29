@@ -34,7 +34,7 @@ export const UserForm = () => {
       value: event.target.value,
     });
   };
-  
+
    return   <div>
        <Form
    initialValues={{
@@ -44,40 +44,33 @@ export const UserForm = () => {
     phone: '(+1) 1234-567-89-01'
   }}
    render={(formRenderProps) => (
-    
-     <FormElement
-       style={{
-         width: '100%',
-         background: '#fafafa',
-         padding: '16px 0',
-         border: '1px solid rgba(0, 0, 0, 0.08)',
-       }}
-     >
-       <fieldset className={'k-form-fieldset'}>    
-   <div className="left col-12 col-md-6 example-col">
+
+     <FormElement className="settings-form user-form">
+       <fieldset className={'k-form-fieldset'}>
+   <div className="settings-field">
         <div>
         <Label >Username</Label>
         <Field  component={Input} name={"username"} type={"text"} />
       </div>
-        </div> 
+        </div>
 
-        <div className="right col-12 col-md-6 example-col">
+        <div className="settings-field">
       <div>
         <Label >Email Address</Label>
         <Field  component={Input} name={"email"} type={"email"}/>
       </div>
         </div>
-      
 
-        <div className="bottom-side">
-        <div className="left col-12 col-md-6 example-col">
+
+        <div className="settings-field-row">
+        <div className="settings-field">
         <div>
         <Label >Nickname</Label>
         <Field  component={Input} name={"nickname"} type={"text"}/>
       </div>
-        </div> 
+        </div>
 
-        <div className="right col-12 col-md-6 example-col">
+        <div className="settings-field">
       <div>
         <Label >Phone Number</Label>
         <Field  component={Input} name={"phone"} type={"text"} />
@@ -85,15 +78,11 @@ export const UserForm = () => {
       </div>
 
         </div>
- 
+
        </fieldset>
      </FormElement>
    )}
  />
-
- <br></br>
- <br></br>
- <br></br>
 
  <Form
    initialValues={{
@@ -101,18 +90,11 @@ export const UserForm = () => {
     phone: '(+1) 1234-567-89-01'
   }}
    render={(formRenderProps) => (
-    
-     <FormElement
-       style={{
-         width: '100%',
-         background: '#fafafa',
-         padding: '16px 0',
-         border: '1px solid rgba(0, 0, 0, 0.08)',
-       }}
-     >
+
+     <FormElement className="settings-form user-form">
        <fieldset className={'k-form-fieldset'}>
 
-   <div className="left col-12 col-md-6 example-col">
+   <div className="settings-field">
         <div>
         <Label >Birth Date</Label>
         <DateInput
@@ -120,9 +102,9 @@ export const UserForm = () => {
          name={"birthdate"}
         />
       </div>
-        </div> 
+        </div>
 
-        <div className="right col-12 col-md-6 example-col">
+        <div className="settings-field">
       <div>
         <Label >Country</Label>
         <DropDownList
@@ -134,16 +116,16 @@ export const UserForm = () => {
       />
       </div>
         </div>
-      
-        <div className="bottom-side">
-        <div className="left col-12 col-md-6 example-col">
+
+        <div className="settings-field-row">
+        <div className="settings-field">
         <div>
         <Label >Website</Label>
         <Field  component={Input} name={"website"} type={"text"}/>
       </div>
-        </div> 
+        </div>
 
-        <div className="right col-12 col-md-6 example-col">
+        <div className="settings-field">
       <div>
         <Label >Phone Number</Label>
         <Field  component={Input} name={"phone"} type={"text"} />
@@ -155,10 +137,6 @@ export const UserForm = () => {
    )}
  />
 
-  <br></br>
-  <br></br>
-  <br></br>
-
   <Form
    initialValues={{
     password: 'password'
@@ -166,55 +144,46 @@ export const UserForm = () => {
   onSubmit={handleSubmit}
 
    render={(formRenderProps) => (
-    
-     <FormElement
-       style={{
-         width: '100%',
-         background: '#fafafa',
-         padding: '16px 0',
-         border: '1px solid rgba(0, 0, 0, 0.08)',
-       }}
-     >
+
+     <FormElement className="settings-form user-form password-form">
        <fieldset className={'k-form-fieldset'}>
 
-   <div className="col-12 col-md-6 example-col">
-     <br></br>
+   <div className="settings-field">
         <Label >Current Password</Label>
         <Field  component={Input} name={"password"} type="password" />
        </div>
 
-      <br/>
-       <div className="col-12 col-md-6 example-col">
+       <div className="settings-field">
         <Label >New Password</Label>
         <Field  component={Input}  type="password" />
        </div>
-       
-     <div className="mb-3">
+
+     <div className="settings-option">
        <div className="switch-parent">
       <p>Enable 2-step authentication</p>
       <Switch  />
     </div>
     </div>
 
-    <div className="mb-3">
+    <div className="settings-option">
        <div className="switch-parent">
       <p>Enable 2-step authentication</p>
       <Switch  />
     </div>
     </div>
- 
- 
+
+
        </fieldset>
 
-       <div className="k-form-buttons f-buttons">
+       <div className="k-form-buttons form-actions">
         <div>
         <span>Public Profile</span>
 
-       <Switch className="switch"/>
+       <Switch className="settings-switch"/>
         </div>
 
         <div>
-        <button type={'submit'} className="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base" disabled={!formRenderProps.allowSubmit} style={{marginRight: 10}}>
+        <button type={'submit'} className="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base secondary-action" disabled={!formRenderProps.allowSubmit}>
           Cancel
         </button>
        <button type={'submit'} className="k-selected k-button k-button-md k-button-rectangle k-rounded-md k-button-solid k-button-solid-primary k-form-submit" disabled={!formRenderProps.allowSubmit}>
@@ -224,7 +193,7 @@ export const UserForm = () => {
         </div>
      </FormElement>
    )}
- /> 
- 
+ />
+
    </div>
    }

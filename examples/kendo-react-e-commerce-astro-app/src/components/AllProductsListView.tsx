@@ -75,8 +75,7 @@ export const AllProductsListView: React.FC = () => {
       <>
         <Layout>
           <section
-            className="k-d-grid k-grid-cols-12 k-justify-content-center k-align-items-center k-col-span-12"
-            style={{ paddingTop: "60px" }}
+            className="products__feature"
           >
             <OrderedImgText
               title={t.allProductsTitle}
@@ -100,7 +99,7 @@ export const AllProductsListView: React.FC = () => {
         </Layout>
 
         <Layout>
-          <section className="k-d-flex k-justify-content-between k-align-items-center k-py-4">
+          <section className="product-toolbar">
             <Breadcrumb data={breadcrumbData} />
             <ButtonGroup>
               <Button
@@ -108,12 +107,16 @@ export const AllProductsListView: React.FC = () => {
                 svgIcon={gridLayoutIcon}
                 selected={currentLayout === "grid"}
                 onClick={() => setCurrentLayout("grid")}
+                aria-label="Grid view"
+                title="Grid view"
               />
               <Button
                 fillMode="flat"
                 svgIcon={layout2By2Icon}
                 selected={currentLayout === "list"}
                 onClick={() => setCurrentLayout("list")}
+                aria-label="List view"
+                title="List view"
               />
             </ButtonGroup>
           </section>

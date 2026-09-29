@@ -45,33 +45,29 @@ const PaymentDetails: React.FC = () => {
   return (
     <LocalizationProvider language={language}>
       <Layout>
-        <div className="k-d-flex k-flex-col k-align-items-center k-py-12 k-px-4 k-gap-10">
-          <div className="k-d-grid k-grid-cols-12 k-gap-8 k-w-full">
-            <div className="k-col-span-6 k-col-start-1">
+        <div className="payment-details__content">
+          <div className="payment-details__grid">
+            <div className="payment-details__form">
               <h1>{t.paymentDetailsTitle}</h1>
               <p>{t.paymentDetailsSubtitle}</p>
-              <div className="k-d-flex k-flex-col k-align-items-start k-gap-4">
+              <div className="payment-details__options">
                 <div
-                  className="k-display-flex k-align-items-center k-mb-4"
-                  style={{ width: '200px' }}
+                  className="payment-details__method"
                 >
                   <RadioButton value="creditCard" label={t.paymentMethodCreditCard} />
                 </div>
                 <img
                   src="/kendo-react/kendo-react-e-commerce-astro-app/creditCards.png"
                   alt={t.creditCardOptionsAlt}
-                  className="k-mb-4"
-                  style={{ width: 'auto', height: 'auto', maxWidth: '100%' }}
+                  className="payment-details__card-image"
                 />
                 <div
-                  className="k-display-flex k-align-items-center k-mb-4"
-                  style={{ width: '200px' }}
+                  className="payment-details__method"
                 >
                   <RadioButton value="bankTransfer" label={t.paymentMethodBankTransfer} />
                 </div>
                 <div
-                  className="k-display-flex k-align-items-center k-mb-4"
-                  style={{ width: '200px' }}
+                  className="payment-details__method"
                 >
                   <RadioButton value="applePay" label={t.paymentMethodApplePay} />
                 </div>
@@ -79,22 +75,22 @@ const PaymentDetails: React.FC = () => {
               <Form
                 render={() => (
                   <FormElement>
-                    <div className="k-form-layout k-d-grid k-gap-y-6 k-gap-x-4">
-                      <FieldWrapper className="k-col-span-1">
+                    <div className="k-form-layout payment-details__form-grid">
+                      <FieldWrapper>
                         <Label>{t.cardNumberLabel}</Label>
                         <Field name="cardNumber" component={CardNumber} />
                       </FieldWrapper>
-                      <div className="k-d-flex k-gap-4 k-w-full">
-                        <FieldWrapper className="k-col-span-1 k-w-1/2">
+                      <div className="payment-details__row">
+                        <FieldWrapper>
                           <Label>{t.expiryDateLabel}</Label>
                           <Field name="expiryDate" component={ExpiryDate} />
                         </FieldWrapper>
-                        <FieldWrapper className="k-col-span-1 k-w-1/2">
+                        <FieldWrapper>
                           <Label>{t.cvvLabel}</Label>
                           <Field name="cvv" component={PasswordInput} />
                         </FieldWrapper>
                       </div>
-                      <FieldWrapper className="k-col-span-1">
+                      <FieldWrapper>
                         <Label>{t.cardHolderLabel}</Label>
                         <Field name="cardHolder" component={CardHolder} />
                       </FieldWrapper>
@@ -103,23 +99,23 @@ const PaymentDetails: React.FC = () => {
                 )}
               />
               <Button
-                className="k-mt-6"
+                className="payment-details__submit"
                 onClick={onSubmitClick}
                 themeColor="primary"
               >
                 {t.submitOrderButton}
               </Button>
             </div>
-            <div className="k-col-span-5 k-col-start-8 k-d-flex k-flex-col k-align-items-start">
-              <h2 className="k-mb-4">{t.subTotalLabel}</h2>
+            <div className="payment-details__summary">
+              <h2>{t.subTotalLabel}</h2>
               <p>{t.usDollarsLabel}</p>
-              <h3 className="k-mb-2">{t.vatLabel}</h3>
+              <h3>{t.vatLabel}</h3>
               <p>{t.usDollarsLabel}</p>
-              <h3 className="k-mb-2 k-mt-4">{t.shippingMethodLabel}</h3>
+              <h3>{t.shippingMethodLabel}</h3>
               <p>{t.standardFreeDeliveryLabel}</p>
-              <h3 className="k-mb-2 k-mt-4">{t.giftWrappingLabel}</h3>
+              <h3>{t.giftWrappingLabel}</h3>
               <p>{t.includedGiftWrappingLabel}</p>
-              <h3 className="k-mb-2 k-mt-4">{t.totalLabel}</h3>
+              <h3>{t.totalLabel}</h3>
               <p>{t.usDollarsLabel}</p>
             </div>
           </div>

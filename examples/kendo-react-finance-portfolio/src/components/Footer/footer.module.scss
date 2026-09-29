@@ -1,7 +1,7 @@
 .footer {
-  color: white;
-  padding: 0.25rem;
+  color: var(--kendo-color-on-primary);
+  padding: var(--kendo-spacing-1);
   p {
-    font-size: 14px;
+    font-size: var(--kendo-font-size-sm);
   }
 }

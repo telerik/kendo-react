@@ -48,41 +48,40 @@ export const Testemonials = () => {
 
   return (
     <LocalizationProvider language={language}>
-      <div className="k-d-flex k-flex-col k-align-items-center k-py-12 k-px-10 k-mx-auto">
-        <div className="k-d-flex k-flex-col k-align-items-center k-gap-4 k-mb-10">
+      <div className="testimonials">
+        <div className="testimonials__heading">
           <h2 className="k-h2">{t.testimonialsTitle || 'What Our Customers Say'}</h2>
-          <p className="k-font-size-xl k-color-subtle">
+          <p className="testimonials__subtitle">
             {t.testimonialsSubtitle || 'Discover stories from our satisfied customers.'}
           </p>
         </div>
-        <div className="k-d-grid k-grid-cols-3 k-gap-5 k-mb-6">
+        <div className="testimonials__grid">
           {testemonialsData.map((item, index) => (
             <div
               key={index}
-              className="k-d-flex k-flex-col k-border-solid k-border k-bg-surface k-bg-app-surface k-rounded-lg k-border-border"
+              className="testimonials__card"
             >
-              <div className="k-d-grid k-grid-cols-3 k-justify-items-center k-px-4 k-py-3 k-gap-y-3">
-                <div className="k-col-start-1 k-col-end-4 k-d-grid k-grid-cols-3 k-justify-items-center k-w-full">
+              <div className="testimonials__card-header">
+                <div className="testimonials__avatar">
                   <Avatar
                     themeColor="primary"
                     size="large"
-                    className="k-col-start-2 k-col-end-3"
                     type="image"
                   >
-                    <img src={item.image} className="k-bg-cover" alt={item.name} />
+                    <img src={item.image} alt={item.name} />
                   </Avatar>
                 </div>
-                <p className="k-paragraph k-col-start-1 k-col-end-4">
+                <p className="testimonials__name">
                   {item.name}
                 </p>
                 <Rating
                   value={item.rating}
                   precision="half"
-                  className="k-col-start-1 k-col-end-4"
+                  className="testimonials__rating"
                 />
               </div>
-              <div className="k-p-4">
-                <p className="k-paragraph">{item.description}</p>
+              <div className="testimonials__body">
+                <p>{item.description}</p>
               </div>
             </div>
           ))}

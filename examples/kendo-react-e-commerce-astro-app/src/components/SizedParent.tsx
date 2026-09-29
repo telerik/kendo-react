@@ -4,7 +4,7 @@ import { SizedParentProps } from "../data/types";
 
 export const SizedParent = (props: SizedParentProps) => {
   return (
-    <div className="kr-mw-1280 k-m-auto"
+    <div className="app-constrained-content"
     >
       {props.children}
     </div>

@@ -205,9 +205,38 @@ export const useTranslatedListData = (): ListDataDescriptor[] => {
       oldPrice: null,
       newPrice: 270,
     },
-  ].map((item, index) => ({
-    ...item,
-    id: index + 1,
-    rating: Math.floor(Math.random() * 5) + 3,
-  }));
+  ].map((item, index) => {
+    const ratings = [4.8, 4.5, 4.2, 4.7, 4.3, 4.6, 4.9, 4.1, 4.4, 4.7, 4, 4.6, 4.8, 4.3, 4.5, 4.2, 4.7, 4.9, 4.1, 4.4];
+    const reviewCounts = [124, 86, 58, 112, 74, 91, 203, 47, 65, 138, 39, 83, 156, 62, 104, 51, 119, 177, 44, 72];
+    const stock = [
+      { stockStatus: "low-stock" as const, stockCount: 5 },
+      { stockStatus: "in-stock" as const, stockCount: 12 },
+      { stockStatus: "in-stock" as const, stockCount: 8 },
+      { stockStatus: "out-of-stock" as const, stockCount: 0 },
+      { stockStatus: "in-stock" as const, stockCount: 6 },
+      { stockStatus: "low-stock" as const, stockCount: 3 },
+      { stockStatus: "in-stock" as const, stockCount: 14 },
+      { stockStatus: "in-stock" as const, stockCount: 9 },
+      { stockStatus: "low-stock" as const, stockCount: 2 },
+      { stockStatus: "in-stock" as const, stockCount: 11 },
+      { stockStatus: "out-of-stock" as const, stockCount: 0 },
+      { stockStatus: "in-stock" as const, stockCount: 7 },
+      { stockStatus: "low-stock" as const, stockCount: 4 },
+      { stockStatus: "in-stock" as const, stockCount: 10 },
+      { stockStatus: "in-stock" as const, stockCount: 13 },
+      { stockStatus: "out-of-stock" as const, stockCount: 0 },
+      { stockStatus: "in-stock" as const, stockCount: 6 },
+      { stockStatus: "low-stock" as const, stockCount: 2 },
+      { stockStatus: "in-stock" as const, stockCount: 8 },
+      { stockStatus: "in-stock" as const, stockCount: 15 },
+    ];
+
+    return {
+      ...item,
+      id: index + 1,
+      rating: ratings[index],
+      reviewCount: reviewCounts[index],
+      ...stock[index],
+    };
+  });
 };

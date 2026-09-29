@@ -8,6 +8,7 @@ import { SectorContext } from '../../context/SectorContext';
 import { filterBy } from "@progress/kendo-data-query";
 import styles from './add.module.scss';
 import { plusIcon, trashIcon } from '@progress/kendo-svg-icons';
+import { DataState } from '../DataState/DataState';
 
 export interface AddRemoveSymbolProps {
     className?: string;
@@ -32,7 +33,6 @@ const customItemRender = (el: any, value: any) => (
 const customValueRender = (el: any) => (
     <el.type
         {...el.props}
-        style={{paddingInline: 0}}
     >
         Add new
     </el.type>)
@@ -41,7 +41,10 @@ export const AddRemoveSymbol = (props: AddRemoveSymbolProps) => {
     const { sector } = React.useContext(SectorContext);
     const { symbols, onSymbolsChange, onSymbolsRemove } = React.useContext(SymbolsContext);
     const [filter, setFilter] = React.useState<string>("");
-    const [allSymbols, setAllSymbols] = React.useState([]);
+    const [allSymbols, setAllSymbols] = React.useState<any[]>([]);
+    const [status, setStatus] = React.useState<'loading' | 'ready' | 'error'>('loading');
+    const [errorMessage, setErrorMessage] = React.useState('');
+    const [retryKey, setRetryKey] = React.useState(0);
 
     const handleRemoveClick = React.useCallback(
         () => {
@@ -54,8 +57,16 @@ export const AddRemoveSymbol = (props: AddRemoveSymbolProps) => {
 
     const fetchData = React.useCallback(
         async () => {
-            const newData = await dataService.getSectorSymbol(sector);
-            setAllSymbols(newData);
+            setStatus('loading');
+            setErrorMessage('');
+            try {
+                const newData = await dataService.getSectorSymbol(sector);
+                setAllSymbols(newData);
+                setStatus('ready');
+            } catch (error) {
+                setStatus('error');
+                setErrorMessage(error instanceof Error ? error.message : 'The symbol list could not be loaded.');
+            }
         },
         [sector]
     );
@@ -78,24 +89,27 @@ export const AddRemoveSymbol = (props: AddRemoveSymbolProps) => {
         [onSymbolsChange, symbols, sector]
     )
 
-    React.useEffect(() => { fetchData() }, [sector, fetchData]);
+    React.useEffect(() => { fetchData() }, [fetchData, retryKey]);
+
+    const filteredSymbols = filterBy(allSymbols, {
+        logic: 'or',
+        filters: [
+            { field: 'symbol', operator: "contains", value: filter },
+            { field: "name", operator: 'contains', value: filter }
+        ]
+    });
 
     return (
-        <div className={classNames(props.className)}>
+        <div className={classNames(styles.symbolActions, props.className)}>
             <DropDownList
+                className={styles.symbolPicker}
                 svgIcon={plusIcon}
-                style={{ backgroundColor: 'white', width: "110px", flexDirection: 'row-reverse' }}
                 value={null}
                 onChange={handleSymbolsAdd}
-                data={filterBy(allSymbols, {
-                    logic: 'or',
-                    filters: [
-                        { field: 'symbol', operator: "contains", value: filter },
-                        { field: "name", operator: 'contains', value: filter }
-                    ]
-                })}
+                data={filteredSymbols}
                 filterable={true}
                 onFilterChange={handleFilterChange}
+                aria-label="Add a symbol to this sector"
                 popupSettings={{
                     className: "popup-animation",
                     width: '300px'
@@ -104,8 +118,20 @@ export const AddRemoveSymbol = (props: AddRemoveSymbolProps) => {
                 itemRender={customItemRender}
             />
 
-            &nbsp;
-            <Button svgIcon={trashIcon} fillMode={"flat"} style={{ color: '#D9534F' }} onClick={handleRemoveClick}>Remove</Button>
+            <Button className={styles.removeButton} svgIcon={trashIcon} fillMode={"flat"} onClick={handleRemoveClick}>Remove</Button>
+            {status === 'loading' && <DataState kind="loading" title="Loading symbols" message="Fetching available securities." />}
+            {status === 'error' && (
+                <DataState
+                    kind="error"
+                    title="Symbols unavailable"
+                    message={errorMessage}
+                    actionLabel="Try again"
+                    onAction={() => setRetryKey((key) => key + 1)}
+                />
+            )}
+            {status === 'ready' && filter.trim() && filteredSymbols.length === 0 && (
+                <DataState kind="no-results" title="No symbols found" message={`No securities match “${filter}”.`} />
+            )}
 
         </div>
     )

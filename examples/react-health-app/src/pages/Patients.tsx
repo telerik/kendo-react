@@ -126,9 +126,7 @@ export default function Patients() {
   const gridRef = useRef<GridHandle | null>(null);
   const navigate = useNavigate();
   const [showAiPanel, setShowAiPanel] = useState(false);
-  const isViewProfileIconOnly = useMediaQuery(
-    "(max-width: 899px), (min-width: 1440px) and (max-width: 1759px)",
-  );
+  const isViewProfileIconOnly = useMediaQuery("(max-width: 991px)");
 
   const handleGridExportButtonClick = () => {
     gridRef.current?.exportAsPdf();
@@ -152,6 +150,13 @@ export default function Patients() {
                 onClick={() => setShowAiPanel(!showAiPanel)}
               >
                 AI Assistance
+              </Button>
+              <Button
+                themeColor="primary"
+                rounded="full"
+                onClick={() => navigate("/intake")}
+              >
+                New Patient
               </Button>
               <Button
                 svgIcon={exportButtonIcon}

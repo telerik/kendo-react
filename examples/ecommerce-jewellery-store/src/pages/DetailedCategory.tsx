@@ -61,10 +61,7 @@ export const DetailedCategory = () => {
     <>
       <Layout>
         <section
-          className="k-d-grid k-grid-cols-12 k-justify-content-center k-align-items-center k-col-span-12"
-          style={{
-            paddingTop: "60px",
-          }}
+          className="category__hero"
         >
           <OrderedImgText
             title={t.aureliaTitle || "AURELIA Collection"}
@@ -89,7 +86,7 @@ export const DetailedCategory = () => {
         </CustomSection>
       </Layout>
       <Layout>
-        <section className="k-d-flex k-justify-content-between">
+        <section className="category__toolbar">
           <Breadcrumb data={BreakcrumbData} />
           <ButtonGroup>
             <Button fillMode={"flat"} svgIcon={gridLayoutIcon}></Button>

@@ -146,21 +146,13 @@ const BudgetCell = props => {
   const field = props.field || '';
   const value = props.dataItem[field];
   const navigationAttributes = useTableKeyboardNavigation(props.id);
-  return <td style={{
-    color: value > 0 ? props.myProp[0].color : props.myProp[1].color
-  }} colSpan={props.colSpan} role={'gridcell'} aria-colindex={props.ariaColumnIndex} aria-selected={props.isSelected} {...{
+  return <td className={`${props.tdProps.className || ''} budget-cell ${value > 0 ? 'budget-positive' : 'budget-negative'}`} colSpan={props.colSpan} role={'gridcell'} aria-colindex={props.ariaColumnIndex} aria-selected={props.isSelected} {...{
     [GRID_COL_INDEX_ATTRIBUTE]: props.columnIndex
-  }} {...navigationAttributes} className={props.tdProps.className}>
+  }} {...navigationAttributes}>
       ${value === null ? '' : props.dataItem[field].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
     </td>;
 };
-const customData = [{
-  color: ''
-}, {
-  color: 'red'
-}];
-
-const CustomBudgetCell = props => <BudgetCell {...props} myProp={customData} />;
+const CustomBudgetCell = props => <BudgetCell {...props} />;
 
 let _pdfExport;
 const exportExcel = () => {
@@ -176,11 +168,11 @@ const firstTeamOnClick = React.useCallback(
    () => {
        setIsFirstTeam(true);
        setPerson('Joey.png')
- 
+
    },
    [setIsFirstTeam]
  );
- 
+
  const secondTeamOnClick = React.useCallback(
    () => {
       setIsFirstTeam(!true);
@@ -231,9 +223,7 @@ const firstTeamOnClick = React.useCallback(
                 <TextBox
                   value={filterValue}
                   onChange={onFilterChange}
-                  style={{
-                    width: '200px',
-                  }}
+                  className="grid-filter"
                   placeholder='Search in all columns'
                 />
               <Button title="Export to Excel" className="k-grid-excel k-button k-button-md k-rounded-md k-button-solid k-button-solid-base" onClick={exportExcel}>
@@ -249,7 +239,7 @@ const firstTeamOnClick = React.useCallback(
           </Column>
           <Column field="JobTitle" title="Job Title" />
           <Column title="Performance">
-            <Column field="Rating" title="Rating" cells={{ data: RatingCell }} width="300px" />
+            <Column field="Rating" title="Rating" cells={{ data: RatingCell }} />
           </Column>
           <Column field="Budget" title="Budget" cells={{ data: CustomBudgetCell }} />
         </Grid>
@@ -263,7 +253,7 @@ const firstTeamOnClick = React.useCallback(
           </Column>
           <Column field="JobTitle" title="Job Title" />
           <Column title="Performance">
-            <Column field="Rating" title="Rating" cells={{ data: RatingCell }} width="300px" />
+            <Column field="Rating" title="Rating" cells={{ data: RatingCell }} />
           </Column>
           <Column field="Budget" title="Budget" cells={{ data: CustomBudgetCell }} />
         </Grid>}

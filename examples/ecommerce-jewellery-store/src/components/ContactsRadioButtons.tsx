@@ -15,7 +15,7 @@ const ContactsRadioButtons: React.FC  = () => {
     );
 
     return (
-      <div className="k-d-flex k-gap-4">
+      <div className="contacts-radio-buttons">
         <RadioButton name="group1" value="new" checked={selectedValue === 'new'} label="New" onChange={handleChange} />
         <br />
         <RadioButton name="group2" value="existing" checked={selectedValue === 'existing'} label="Existing" onChange={handleChange} />

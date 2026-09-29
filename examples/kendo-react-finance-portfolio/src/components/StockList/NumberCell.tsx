@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { GridCellProps } from '@progress/kendo-react-grid';
+import { getStockValue, StockCellProps } from './StockCellProps';
 
 const nFormatter = (num: number) => {
     if (num >= 1000000000) {
@@ -14,11 +14,10 @@ const nFormatter = (num: number) => {
     return num;
 }
 
-export const NumberCell = (props: GridCellProps) => {
-    const value = props.field && props.dataItem[props.field];
-    return (
-        <td>
-            {nFormatter(value)}
-        </td>
-    )
+export const NumberCell = (props: StockCellProps) => {
+    const value = getStockValue(props.dataItem, props.field);
+    const numericValue = typeof value === 'number' ? value : Number(value);
+    return props.asCard
+        ? <span>{nFormatter(numericValue)}</span>
+        : <td>{nFormatter(numericValue)}</td>;
 }

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { priorities, projectManagers, projectsData, tasksData, taskTags } from "./data";
 import { Button } from "@progress/kendo-react-buttons";
 import { Avatar, Breadcrumb, BreadcrumbLinkMouseEvent, ExpansionPanel, ExpansionPanelContent } from "@progress/kendo-react-layout";
-import { homeIcon, folderIcon, trashIcon, checkIcon } from "@progress/kendo-svg-icons";
+import { homeIcon, checkIcon } from "@progress/kendo-svg-icons";
 import { SvgIcon } from "@progress/kendo-react-common";
 import { Reveal } from '@progress/kendo-react-animation';
 import React, { ReactElement } from "react";
@@ -12,6 +12,7 @@ import { DropDownList, ListItemProps, MultiSelect, TagData } from "@progress/ken
 import { DateInput } from "@progress/kendo-react-dateinputs";
 import { FloatingLabel } from "@progress/kendo-react-labels";
 import { Badge } from "@progress/kendo-react-indicators";
+import PageFooter from "../components/PageFooter";
 
 interface DataModel {
   id: string;
@@ -63,7 +64,7 @@ export default function Task() {
 
   const tagRender = (tagData: TagData, li: ReactElement<any>) => React.cloneElement(li, li.props, [
     <span key={assignees.indexOf(tagData.data[0])} className="k-chip-label">
-    <Avatar rounded="full" type="image" size="small" className="k-chip-avatar mr-1">
+    <Avatar rounded="full" type="image" size="small" className="k-chip-avatar tracker-chip-avatar">
       <img src={projectManagers.map(manager => manager.name === tagData.data[0] ? manager.avatarSrc : "").filter(src => src !== "")[0]} alt="user-image" />
     </Avatar>
     {tagData.data[0]}
@@ -74,7 +75,7 @@ export default function Task() {
     console.log(itemProps);
     const itemChildren = (
       <span key={index}>
-        <Avatar rounded="full" type="image" size="small" className="mr-1">
+        <Avatar rounded="full" type="image" size="small" className="tracker-chip-avatar">
             <img src={projectManagers.map(manager => manager.name === itemProps.dataItem ? manager.avatarSrc : "").filter(src => src !== "")[0]} alt="user-image" />
           </Avatar>
             {li.props.children as any} {index}
@@ -94,7 +95,7 @@ export default function Task() {
           key={value}
           rounded="full"
           position="inside"
-          className="!relative !z-0"
+          className="tracker-badge"
           themeColor={
             value === "Urgent"
               ? "error"
@@ -119,7 +120,7 @@ export default function Task() {
       <Badge
       rounded="full"
       position="inside"
-      className="!relative !z-0"
+      className="tracker-badge"
       themeColor={
         itemProps.dataItem === "Urgent"
           ? "error"
@@ -141,78 +142,72 @@ export default function Task() {
 
   return (
       <>
-          <div style={{minHeight: 'calc(100vh - 106px)'}} className="flex flex-col p-10 gap-6">
-            <Breadcrumb data={breadcrumbItems} onItemSelect={handleItemSelect} className="!bg-app-surface" />
+          <main className="tracker-page">
+            <Breadcrumb data={breadcrumbItems} onItemSelect={handleItemSelect} className="tracker-page__breadcrumb" />
 
-            <h1 className="text-4xl">New Task</h1>
+            <h1 className="tracker-page__heading">New Task</h1>
 
-            <div className="grid grid-cols-12 gap-6">
-                  <div className="col-span-6 lg:col-span-8">
-                      <TextArea rows={30} className="rounded-t-2xl"/>
-                      <div className="bg-surface-alt border-1 border-t-0 border-border rounded-b-2xl px-4 py-2">
-                          <div className="hidden lg:flex gap-1">
-                              <Button svgIcon={checkIcon} themeColor="primary" size="large" title="Save changes">Save changes</Button>
-                              <Button svgIcon={folderIcon} fillMode="flat" size="large" className="ml-auto" title="Archive task">Archive Task</Button>
-                              <Button svgIcon={trashIcon} fillMode="flat" themeColor="error" size="large" title="Delete task">Delete task</Button>
-                          </div>
-                          <div className="flex lg:hidden gap-1">
-                              <Button svgIcon={checkIcon} themeColor="primary" size="large" title="Save changes">Save changes</Button>
-                              <Button svgIcon={folderIcon} fillMode="flat" size="large" className="ml-auto" title="Archive task">Archive Task</Button>
-                              <Button svgIcon={trashIcon} fillMode="flat" themeColor="error" size="large" title="Delete task">Delete task</Button>
-                          </div>
+            <div className="new-task-editor">
+                  <div>
+                      <div className="task-description">
+                      <TextArea className="task-description__input"/>
+                      <div className="task-actions">
+                          <Button svgIcon={checkIcon} themeColor="primary" size="large" title="Save changes">Save changes</Button>
+                              <Button fillMode="flat" size="large" className="task-actions__secondary" onClick={() => navigate('/tasks')} title="Cancel task creation">Cancel</Button>
+                      </div>
                       </div>
                   </div>
 
-                  <div className="col-span-6 lg:col-span-4 flex flex-col gap-2">
-                      <ExpansionPanel title="Project" expanded={projExpanded} onAction={() => setProjExpanded(!projExpanded)} className="rounded-2xl">
+                  <div className="task-panels">
+                      <ExpansionPanel title="Project" expanded={projExpanded} onAction={() => setProjExpanded(!projExpanded)} className="task-panel">
                           <Reveal>
                             {projExpanded && <ExpansionPanelContent>
-                              <FloatingLabel label="Choose project" editorId={'project'} editorValue={project} className="flex">
+                              <FloatingLabel label="Choose project" editorId={'project'} editorValue={project} className="task-panel__field">
                                   <DropDownList size="large" value={project} onChange={e => setProject(e.value as string)} data={projects} />
                                 </FloatingLabel>
                               </ExpansionPanelContent>}
                           </Reveal>
                         </ExpansionPanel>
-                        <ExpansionPanel title="Assigned to" expanded={assigneeExpanded} onAction={() => setAssigneeExpanded(!assigneeExpanded)} className="rounded-2xl">
+                        <ExpansionPanel title="Assigned to" expanded={assigneeExpanded} onAction={() => setAssigneeExpanded(!assigneeExpanded)} className="task-panel">
                           <Reveal>
                               {assigneeExpanded && <ExpansionPanelContent>
-                                <FloatingLabel label="Select assignee(s)" editorId={'assignee'} editorValue={assigneeExpanded} className="flex">
+                                <FloatingLabel label="Select assignee(s)" editorId={'assignee'} editorValue={assigneeExpanded} className="task-panel__field">
                                     <MultiSelect size="large" data={assignees} value={assignee} onChange={e => setAssignee([...e.value] as string[])} tagRender={tagRender} itemRender={itemRender} />
                                 </FloatingLabel>
                               </ExpansionPanelContent>}
                           </Reveal>
                       </ExpansionPanel>
-                      <ExpansionPanel title="Due Date" expanded={dateExpanded} onAction={() => setDateExpanded(!dateExpanded)} className="rounded-2xl">
+                      <ExpansionPanel title="Due Date" expanded={dateExpanded} onAction={() => setDateExpanded(!dateExpanded)} className="task-panel">
                           <Reveal>
                               {dateExpanded && <ExpansionPanelContent>
-                                <FloatingLabel label="Set due date" editorId={'due-date'} editorValue={dateExpanded} className="flex">
+                                <FloatingLabel label="Set due date" editorId={'due-date'} editorValue={dateExpanded} className="task-panel__field">
                                     <DateInput size="large" value={dueDate} onChange={e => setDueDate(e.value as Date)} />
                                 </FloatingLabel>
                               </ExpansionPanelContent>}
                           </Reveal>
                       </ExpansionPanel>
-                      <ExpansionPanel title="Priority" expanded={priorityExpanded} onAction={() => setPriorityExpanded(!priorityExpanded)} className="rounded-2xl">
+                      <ExpansionPanel title="Priority" expanded={priorityExpanded} onAction={() => setPriorityExpanded(!priorityExpanded)} className="task-panel">
                           <Reveal>
                             {priorityExpanded && <ExpansionPanelContent>
-                                <FloatingLabel label="Choose project" editorId={'priority'} editorValue={priority} className="flex">
+                                <FloatingLabel label="Choose project" editorId={'priority'} editorValue={priority} className="task-panel__field">
                                   <DropDownList size="large" value={priority} onChange={e => setPriority(e.value as string)} data={priorities} valueRender={priorityValueRender} itemRender={priorityItemRender} />
                                 </FloatingLabel>
                               </ExpansionPanelContent>}
                           </Reveal>
                         </ExpansionPanel>
-                      <ExpansionPanel title="Status" expanded={statusExpanded} onAction={() => setStatusExpanded(!statusExpanded)} className="rounded-2xl">
+                      <ExpansionPanel title="Status" expanded={statusExpanded} onAction={() => setStatusExpanded(!statusExpanded)} className="task-panel">
                           <Reveal>
                               {statusExpanded && <ExpansionPanelContent>
-                                <FloatingLabel label="Select status" editorId={'status'} editorValue={statusExpanded} className="flex">
+                                <FloatingLabel label="Select status" editorId={'status'} editorValue={statusExpanded} className="task-panel__field">
                                     <DropDownList size="large" data={statuses} value={status} onChange={e => setStatus(e.value as string)} />
                                 </FloatingLabel>
                               </ExpansionPanelContent>}
                           </Reveal>
                       </ExpansionPanel>
-                      <ExpansionPanel title="Tags" expanded={tagsExpanded} onAction={() => setTagsExpanded(!tagsExpanded)} className="rounded-2xl">
+                      <ExpansionPanel title="Tags" expanded={tagsExpanded} onAction={() => setTagsExpanded(!tagsExpanded)} className="task-panel">
                           <Reveal>
                               {tagsExpanded && <ExpansionPanelContent>
-                                <FloatingLabel label="Select tags" editorId={'tags'} editorValue={tagsExpanded} className="flex">
+                                <FloatingLabel label="Select tags" editorId={'tags'} editorValue={tagsExpanded} className="task-panel__field">
                                     <MultiSelect size="large" data={taskTags} value={tag} onChange={e => setTag([...e.value] as string[])} />
                                 </FloatingLabel>
                               </ExpansionPanelContent>}
@@ -221,10 +216,8 @@ export default function Task() {
                   </div>
               </div>
 
-          </div>
-           <div className="bg-surface-alt color-subtle p-2 text-center">
-               <span>Copyright &#169; 2025 Progress Software. All rights reserved.</span>
-           </div>
+          </main>
+          <PageFooter />
        </>
   )
 }

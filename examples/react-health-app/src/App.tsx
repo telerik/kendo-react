@@ -7,6 +7,17 @@ import Schedule from './pages/Schedule';
 import Patients from './pages/Patients';
 import PatientProfile from './pages/PatientProfile';
 import ClinicalAnalytics from './pages/ClinicalAnalytics';
+import {
+    Auth,
+    HelpSupport,
+    Intake,
+    Labs,
+    Messages,
+    NotFound,
+    Notifications,
+    Providers,
+    Settings,
+} from './pages/HealthcarePages';
 
 export default function App() {
     return (
@@ -19,6 +30,17 @@ export default function App() {
                         <Route path="patients" element={<Patients />} />
                         <Route path="patients/:id" element={<PatientProfile />} />
                         <Route path="analytics" element={<ClinicalAnalytics />} />
+                        <Route path="labs" element={<Labs />} />
+                        <Route path="messages" element={<Messages />} />
+                        <Route path="providers" element={<Providers />} />
+                        <Route path="intake" element={<Intake />} />
+                        <Route path="settings" element={<Settings />} />
+                        <Route path="profile" element={<Settings />} />
+                        <Route path="notifications" element={<Notifications />} />
+                        <Route path="help" element={<HelpSupport />} />
+                        <Route path="login" element={<Auth mode="login" />} />
+                        <Route path="register" element={<Auth mode="register" />} />
+                        <Route path="*" element={<NotFound />} />
                     </Route>
                 </Routes>
             </DoctorProfileProvider>

@@ -72,9 +72,126 @@ export default function DashBoard(props) {
     () => setIsMyTeam(false),
     [setIsMyTeam]
   );
+  const onlineMembers = data.filter((employee) => employee.isOnline).length;
+  const filteredOrders = filterBy(orders, {
+    logic: "and",
+    filters: [
+      { field: "orderDate", operator: "gt", value: range.start },
+      { field: "orderDate", operator: "lt", value: range.end },
+    ],
+  });
+  const trackedOrderValue = filteredOrders.reduce(
+    (total, order) => total + order.orderTotal,
+    0
+  );
 
   return (
-    <div id="Dashboard" className="dashboard-page main-content">
+    <main id="Dashboard" className="dashboard-page main-content">
+      <section className="dashboard-page-header" aria-labelledby="dashboard-title">
+        <div>
+          <p className="eyebrow">
+            {localizationService.toLanguageString(
+              "custom.warehouseOperations",
+              noMessage
+            )}
+          </p>
+          <h1 id="dashboard-title">
+            {localizationService.toLanguageString(
+              "custom.dashboard",
+              noMessage
+            )}
+          </h1>
+          <p className="dashboard-page-header__description">
+            {localizationService.toLanguageString(
+              "custom.dashboardDescription",
+              noMessage
+            )}
+          </p>
+        </div>
+        <div
+          className="dashboard-page-header__meta"
+          aria-label={localizationService.toLanguageString(
+            "custom.sampleDetails",
+            noMessage
+          )}
+        >
+          <span>
+            {localizationService.toLanguageString(
+              "custom.samplePeriod",
+              noMessage
+            )}
+          </span>
+          <span>
+            {localizationService.toLanguageString(
+              "custom.lastUpdated",
+              noMessage
+            )}
+          </span>
+        </div>
+      </section>
+      <section
+        className="dashboard-summary"
+        aria-label={localizationService.toLanguageString(
+          "custom.dashboardSummary",
+          noMessage
+        )}
+      >
+        <article className="summary-card">
+          <span className="summary-card__label">
+            {localizationService.toLanguageString(
+              "custom.ordersTracked",
+              noMessage
+            )}
+          </span>
+          <strong>
+            {filteredOrders.length.toLocaleString(
+              localizationService.language || "en"
+            )}
+          </strong>
+          <span className="summary-card__note">
+            {localizationService.toLanguageString(
+              "custom.ordersTrackedDescription",
+              noMessage
+            )}
+          </span>
+        </article>
+        <article className="summary-card">
+          <span className="summary-card__label">
+            {localizationService.toLanguageString(
+              "custom.onlineMembers",
+              noMessage
+            )}
+          </span>
+          <strong>
+            {onlineMembers.toLocaleString(localizationService.language || "en")}
+          </strong>
+          <span className="summary-card__note">
+            {localizationService.toLanguageString(
+              "custom.onlineMembersDescription",
+              noMessage
+            )}
+          </span>
+        </article>
+        <article className="summary-card">
+          <span className="summary-card__label">
+            {localizationService.toLanguageString(
+              "custom.orderValue",
+              noMessage
+            )}
+          </span>
+          <strong>
+            {trackedOrderValue.toLocaleString(localizationService.language || "en", {
+              maximumFractionDigits: 0,
+            })}
+          </strong>
+          <span className="summary-card__note">
+            {localizationService.toLanguageString(
+              "custom.orderValueDescription",
+              noMessage
+            )}
+          </span>
+        </article>
+      </section>
       <div className="card-container grid">
         <h3 className="card-title">
           {localizationService.toLanguageString(
@@ -267,6 +384,6 @@ export default function DashBoard(props) {
           </Grid>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
